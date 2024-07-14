@@ -5,7 +5,9 @@ VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Root", "Root\Root.csproj", "{0A5234E1-243B-45B7-A672-94C1C9A04B59}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BindingShort", "BindingShort\BindingShort.csproj", "{AF57D77C-1E3D-413A-8250-C3E93449FDB4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BindingShort", "BindingShort\BindingShort.csproj", "{AF57D77C-1E3D-413A-8250-C3E93449FDB4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwitchingViewsMVVM", "SwitchingViewsMVVM\SwitchingViewsMVVM.csproj", "{899EFC2E-A23B-458D-9C6A-73FC4ED7A005}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{AF57D77C-1E3D-413A-8250-C3E93449FDB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AF57D77C-1E3D-413A-8250-C3E93449FDB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AF57D77C-1E3D-413A-8250-C3E93449FDB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{899EFC2E-A23B-458D-9C6A-73FC4ED7A005}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{899EFC2E-A23B-458D-9C6A-73FC4ED7A005}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{899EFC2E-A23B-458D-9C6A-73FC4ED7A005}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{899EFC2E-A23B-458D-9C6A-73FC4ED7A005}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
