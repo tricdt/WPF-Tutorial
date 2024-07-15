@@ -33,7 +33,7 @@ namespace AsyncCommands.ViewModels
         public ICommand LoginCommand { get; }
         public LoginViewModel()
         {
-            LoginCommand = new LoginCommand(this, new AuthenticationService());
+            LoginCommand = new LoginCommand(this, new AuthenticationService(), (ex) => StatusMessage = ex.Message);
         }
     }
 }

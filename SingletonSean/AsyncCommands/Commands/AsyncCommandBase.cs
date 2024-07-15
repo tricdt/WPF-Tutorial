@@ -4,7 +4,13 @@ namespace AsyncCommands.Commands
 {
     public abstract class AsyncCommandBase : ICommand
     {
+        private readonly Action<Exception> _onException;
         private bool _isExcuting;
+
+        protected AsyncCommandBase(Action<Exception> onException)
+        {
+            _onException = onException;
+        }
 
         public bool IsExcuting
         {
@@ -26,7 +32,14 @@ namespace AsyncCommands.Commands
         public async void Execute(object parameter)
         {
             IsExcuting = true;
-            await ExcuteAsync(parameter);
+            try
+            {
+                await ExcuteAsync(parameter);
+            }
+            catch (Exception ex)
+            {
+                _onException.Invoke(ex);
+            }
             IsExcuting = false;
         }
 
