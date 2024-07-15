@@ -33,7 +33,17 @@ namespace AsyncCommands.ViewModels
         public ICommand LoginCommand { get; }
         public LoginViewModel()
         {
-            LoginCommand = new LoginCommand(this, new AuthenticationService(), (ex) => StatusMessage = ex.Message);
+            //LoginCommand = new LoginCommand(this, new AuthenticationService(), (ex) => StatusMessage = ex.Message);
+            LoginCommand = new AsyncRelayCommand(Login, (ex) => StatusMessage = ex.Message);
+        }
+
+        private async Task Login()
+        {
+            StatusMessage = "Logging in...";
+            throw new Exception("Login Failed...");
+            await new AuthenticationService().Login(UserName);
+
+            StatusMessage = "Successfully logged in.";
         }
     }
 }
