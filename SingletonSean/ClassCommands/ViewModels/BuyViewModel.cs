@@ -78,7 +78,8 @@ namespace ClassCommands.ViewModels
                 "pillow"
             };
             CalculatePriceCommand = new CallbackCommand(CalculatePrice, () => IsValidBuy);
-            BuyCommand = new CallbackCommand(Buy, () => IsValidBuy);
+            //BuyCommand = new CallbackCommand(Buy, () => IsValidBuy);
+            BuyCommand = new BuyCommand(this, ownedItemsStore);
         }
 
         private void Buy()

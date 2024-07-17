@@ -2,7 +2,7 @@
 
 namespace ClassCommands.Stores
 {
-    public class OwnedItemsStore
+    public class OwnedItemsStore : IOwnedItemsStore
     {
         private readonly List<OwnedItem> _ownedItems;
 
