@@ -1,4 +1,4 @@
-﻿using ClassCommands.ViewModels
+﻿using ClassCommands.ViewModels;
 
 using System.Windows;
 namespace ClassCommands

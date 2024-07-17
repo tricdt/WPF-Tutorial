@@ -12,6 +12,7 @@ namespace AsyncCommands.Commands
             _onException = onException;
         }
 
+
         public bool IsExcuting
         {
             get { return _isExcuting; }
