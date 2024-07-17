@@ -75,9 +75,9 @@ namespace SimpleViewModels.ViewModels
         public ICommand CalculatePriceCommand { get; }
         public ICommand BuyCommand { get; }
 
-        public BuyViewModel(PriceService priceService)
+        public BuyViewModel(CreateCommand<BuyViewModel> createCalculatePriceCommand,
+            CreateCommand<BuyViewModel> createBuyCommand)
         {
-            _priceService = priceService;
 
             BuyableItems = new ObservableCollection<string>
             {
@@ -88,8 +88,8 @@ namespace SimpleViewModels.ViewModels
                 "pillow"
             };
 
-            CalculatePriceCommand = new CallbackCommand(CalculatePrice, () => CanCalculatePrice);
-            BuyCommand = new CallbackCommand(Buy, () => IsValidBuy);
+            CalculatePriceCommand = createCalculatePriceCommand(this);
+            BuyCommand = createBuyCommand(this);
         }
 
         private void CalculatePrice()
@@ -129,7 +129,7 @@ namespace SimpleViewModels.ViewModels
             return price * Quantity;
         }
 
-        private void ClearMessages()
+        public void ClearMessages()
         {
             StatusMessage = string.Empty;
             ErrorMessage = string.Empty;
