@@ -7,7 +7,7 @@ using System.Windows.Input;
 
 namespace ClassCommands.ViewModels
 {
-    public class BuyViewModel : ViewModelBase
+    public class BuyViewModel : ViewModelBase, ICalculatePriceViewModel
     {
         private readonly OwnedItemsStore _ownedItemsStore;
         private readonly PriceService _priceService;
@@ -65,10 +65,9 @@ namespace ClassCommands.ViewModels
         public bool CanCalculatePrice => IsValidBuy;
         public ICommand CalculatePriceCommand { get; }
         public ICommand BuyCommand { get; }
-        public BuyViewModel(OwnedItemsStore ownedItemsStore, PriceService priceService)
+        public BuyViewModel(IOwnedItemsStore ownedItemsStore, IPriceService priceService)
         {
-            _ownedItemsStore = ownedItemsStore;
-            _priceService = priceService;
+
             BuyableItems = new ObservableCollection<string>
             {
                 "apple",
@@ -77,9 +76,10 @@ namespace ClassCommands.ViewModels
                 "burrito",
                 "pillow"
             };
-            CalculatePriceCommand = new CallbackCommand(CalculatePrice, () => IsValidBuy);
+            //CalculatePriceCommand = new CallbackCommand(CalculatePrice, () => IsValidBuy);
             //BuyCommand = new CallbackCommand(Buy, () => IsValidBuy);
             BuyCommand = new BuyCommand(this, ownedItemsStore);
+            CalculatePriceCommand = new CalculatePriceCommand(this, priceService);
         }
 
         private void Buy()
