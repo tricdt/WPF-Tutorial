@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ValidationMVVM.Views"
+             xmlns:validationrules ="clr-namespace:ValidationMVVM.ValidationRules"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid MaxWidth="1000" Margin="50 25">
@@ -30,10 +31,18 @@
                 Text="IP Address: " />
 
             <TextBox
+                x:Name="tbIPAddress"
                 Grid.Column="1"
                 Margin="5 0 0 0"
-                Padding="2"
-                Text="{Binding IPAddressInput, UpdateSourceTrigger=PropertyChanged}" />
+                Padding="2">
+                <TextBox.Text>
+                    <Binding Path="IPAddressInput" UpdateSourceTrigger="PropertyChanged">
+                        <Binding.ValidationRules>
+                            <validationrules:IPAddressValidationRule />
+                        </Binding.ValidationRules>
+                    </Binding>
+                </TextBox.Text>
+            </TextBox>
         </Grid>
 
         <Button
@@ -42,6 +51,16 @@
             Padding="10 5"
             HorizontalAlignment="Left"
             Command="{Binding SubmitIPAddressCommand}"
-            Content="Submit" />
+            Content="Submit">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding ElementName=tbIPAddress, Path=(Validation.HasError)}" Value="True">
+                            <Setter Property="IsEnabled" Value="False" />
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
     </Grid>
 </UserControl>
