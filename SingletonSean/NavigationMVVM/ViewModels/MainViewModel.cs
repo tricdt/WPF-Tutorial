@@ -1,11 +1,19 @@
-﻿namespace NavigationMVVM.ViewModels
+﻿using NavigationMVVM.Stores;
+namespace NavigationMVVM.ViewModels
 {
     public class MainViewModel : ViewModelBase
     {
-        public ViewModelBase CurrentViewModel { get; }
-        public MainViewModel()
+        private readonly NavigationStore _navigationStore;
+        public ViewModelBase CurrentViewModel => _navigationStore.CurrentViewModel;
+        public MainViewModel(NavigationStore navigationStore)
         {
-            CurrentViewModel = new HomeViewModel();
+            _navigationStore = navigationStore;
+            _navigationStore.CurrentViewModelChanged += _navigationStore_CurrentViewModelChanged;
+        }
+
+        private void _navigationStore_CurrentViewModelChanged()
+        {
+            OnPropertyChanged(nameof(CurrentViewModel));
         }
     }
 }
