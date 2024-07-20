@@ -4,7 +4,15 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NavigationMVVM"
+        xmlns:viewmodels ="clr-namespace:NavigationMVVM.ViewModels"
+        xmlns:views ="clr-namespace:NavigationMVVM.Views"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <ContentControl Content="{Binding CurrentViewModel}"/>
+    <ContentControl Content="{Binding CurrentViewModel}">
+        <ContentControl.Resources>
+            <DataTemplate DataType="{x:Type viewmodels:HomeViewModel}">
+                <views:HomeView/>
+            </DataTemplate>
+        </ContentControl.Resources>
+    </ContentControl>
 </Window>
