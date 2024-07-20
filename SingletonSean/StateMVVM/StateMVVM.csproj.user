@@ -10,6 +10,12 @@
     <Compile Update="Components\Layout.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Components\Post.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Components\PostListing.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\PostHomeView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -19,6 +25,12 @@
   </ItemGroup>
   <ItemGroup>
     <Page Update="Components\Layout.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Components\Post.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Components\PostListing.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
