@@ -9,17 +9,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BindingShort", "BindingShor
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwitchingViewsMVVM", "SwitchingViewsMVVM\SwitchingViewsMVVM.csproj", "{899EFC2E-A23B-458D-9C6A-73FC4ED7A005}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncCommands", "AsyncCommands\AsyncCommands.csproj", "{F90DAF12-C32E-457A-948A-E5944E3990A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsyncCommands", "AsyncCommands\AsyncCommands.csproj", "{F90DAF12-C32E-457A-948A-E5944E3990A1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassCommands", "ClassCommands\ClassCommands.csproj", "{143FD065-1416-40DE-BD63-C554332957CE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassCommands", "ClassCommands\ClassCommands.csproj", "{143FD065-1416-40DE-BD63-C554332957CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleViewModels", "SimpleViewModels\SimpleViewModels.csproj", "{2C14C45B-DCAA-492D-9E50-97725183FB27}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleViewModels", "SimpleViewModels\SimpleViewModels.csproj", "{2C14C45B-DCAA-492D-9E50-97725183FB27}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventCommands", "EventCommands\EventCommands.csproj", "{419B3D15-54C3-46B1-832E-89E4DE26995E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventCommands", "EventCommands\EventCommands.csproj", "{419B3D15-54C3-46B1-832E-89E4DE26995E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LayoutComponents", "LayoutComponents\LayoutComponents.csproj", "{C19F0FDF-7B3C-4403-8C30-56A40AF03313}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LayoutComponents", "LayoutComponents\LayoutComponents.csproj", "{C19F0FDF-7B3C-4403-8C30-56A40AF03313}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidationMVVM", "ValidationMVVM\ValidationMVVM.csproj", "{F58B9262-20A6-49B2-B5BA-4346404F7863}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ValidationMVVM", "ValidationMVVM\ValidationMVVM.csproj", "{F58B9262-20A6-49B2-B5BA-4346404F7863}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StateMVVM", "StateMVVM\StateMVVM.csproj", "{3F8EBFD4-2449-4B63-ACA3-AB4ECA3F0FC1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{F58B9262-20A6-49B2-B5BA-4346404F7863}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F58B9262-20A6-49B2-B5BA-4346404F7863}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F58B9262-20A6-49B2-B5BA-4346404F7863}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F8EBFD4-2449-4B63-ACA3-AB4ECA3F0FC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F8EBFD4-2449-4B63-ACA3-AB4ECA3F0FC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F8EBFD4-2449-4B63-ACA3-AB4ECA3F0FC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F8EBFD4-2449-4B63-ACA3-AB4ECA3F0FC1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
