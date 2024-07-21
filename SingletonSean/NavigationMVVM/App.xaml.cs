@@ -11,7 +11,8 @@ namespace NavigationMVVM
         protected override void OnStartup(StartupEventArgs e)
         {
             NavigationStore navigationStore = new NavigationStore();
-            navigationStore.CurrentViewModel = new HomeViewModel(navigationStore);
+            AccountStore accountStore = new AccountStore();
+            navigationStore.CurrentViewModel = new HomeViewModel(accountStore, navigationStore);
             MainWindow = new MainWindow()
             {
                 DataContext = new MainViewModel(navigationStore)

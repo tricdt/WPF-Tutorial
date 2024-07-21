@@ -1,5 +1,4 @@
 ﻿using NavigationMVVM.Stores;
-using NavigationMVVM.ViewModels;
 namespace NavigationMVVM.Commands
 {
     public class NavigationAccountCommand : CommandBase
@@ -11,7 +10,7 @@ namespace NavigationMVVM.Commands
         }
         public override void Execute(object parameter)
         {
-            _navigationStore.CurrentViewModel = new AccountViewModel(_navigationStore);
+            //_navigationStore.CurrentViewModel = new AccountViewModel(_navigationStore);
         }
     }
 }

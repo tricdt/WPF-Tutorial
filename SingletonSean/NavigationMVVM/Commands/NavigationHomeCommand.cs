@@ -1,5 +1,4 @@
 ﻿using NavigationMVVM.Stores;
-using NavigationMVVM.ViewModels;
 namespace NavigationMVVM.Commands
 {
     class NavigationHomeCommand : CommandBase
@@ -13,7 +12,7 @@ namespace NavigationMVVM.Commands
 
         public override void Execute(object parameter)
         {
-            _navigationStore.CurrentViewModel = new HomeViewModel(_navigationStore);
+            //_navigationStore.CurrentViewModel = new HomeViewModel(_navigationStore);
         }
     }
 }
