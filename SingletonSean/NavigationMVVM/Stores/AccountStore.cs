@@ -13,5 +13,7 @@ namespace NavigationMVVM.Stores
                 _currentAccount = value;
             }
         }
+
+        public bool IsLoggedIn => CurrentAccount != null;
     }
 }
