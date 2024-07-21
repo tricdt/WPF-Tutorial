@@ -35,7 +35,7 @@ namespace NavigationMVVM.ViewModels
         }
 
         public ICommand LoginCommand { get; }
-        public LoginViewModel(AccountStore accountStore, NavigationService<AccountViewModel> accountNavigationService)
+        public LoginViewModel(AccountStore accountStore, INavigationService<AccountViewModel> accountNavigationService)
         {
             //LoginCommand = new LoginCommand(this, new Services.NavigationService<AccountViewModel>(navigationStore, () => new AccountViewModel(accountStore, navigationStore)));
             //NavigationService<AccountViewModel> navigationService = new NavigationService<AccountViewModel>(navigationStore, () => new AccountViewModel(accountStore, navigationStore));

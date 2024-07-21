@@ -5,6 +5,9 @@
     <Compile Update="Components\BindablePasswordBox.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Components\Layout.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Components\NavigationBar.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -23,6 +26,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Components\BindablePasswordBox.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Components\Layout.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Components\NavigationBar.xaml">
