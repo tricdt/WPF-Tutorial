@@ -6,11 +6,11 @@ namespace NavigationMVVM.ViewModels
     public class HomeViewModel : ViewModelBase
     {
         public string WelcomeMessage => "Welcome to my application.";
-        public NavigationBarViewModel NavigationBarViewModel { get; }
+        //public NavigationBarViewModel NavigationBarViewModel { get; }
         public ICommand NavigateLoginCommand { get; }
-        public HomeViewModel(NavigationBarViewModel navigationBarViewModel, INavigationService<LoginViewModel> loginNavigationService)
+        public HomeViewModel(INavigationService<LoginViewModel> loginNavigationService)
         {
-            NavigationBarViewModel = navigationBarViewModel;
+            //NavigationBarViewModel = navigationBarViewModel;
             //NavigateAccountCommand = new NavigationAccountCommand(navigationStore);
             //NavigateAccountCommand = new NavigateCommand<AccountViewModel>(navigationStore, () => new AccountViewModel(navigationStore));
             //NavigateLoginCommand = new NavigateCommand<LoginViewModel>(navigationStore, () => new LoginViewModel());

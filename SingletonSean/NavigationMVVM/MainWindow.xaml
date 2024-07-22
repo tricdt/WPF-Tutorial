@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:NavigationMVVM"
         xmlns:viewmodels ="clr-namespace:NavigationMVVM.ViewModels"
         xmlns:views ="clr-namespace:NavigationMVVM.Views"
+        xmlns:components ="clr-namespace:NavigationMVVM.Components"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <ContentControl Content="{Binding CurrentViewModel}">
@@ -18,6 +19,9 @@
             </DataTemplate>
             <DataTemplate DataType="{x:Type viewmodels:LoginViewModel}">
                 <views:LoginView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewmodels:LayoutViewModel}">
+                <components:Layout/>
             </DataTemplate>
         </ContentControl.Resources>
     </ContentControl>
