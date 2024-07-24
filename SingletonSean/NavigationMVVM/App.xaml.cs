@@ -26,7 +26,7 @@ namespace NavigationMVVM
         }
         protected override void OnStartup(StartupEventArgs e)
         {
-            INavigationService<HomeViewModel> homeNavigationService = CreateHomeNavigationService();
+            INavigationService homeNavigationService = CreateHomeNavigationService();
             homeNavigationService.Navigate();
             MainWindow = new MainWindow()
             {
@@ -35,21 +35,21 @@ namespace NavigationMVVM
             MainWindow.Show();
             base.OnStartup(e);
         }
-        private INavigationService<HomeViewModel> CreateHomeNavigationService()
+        private INavigationService CreateHomeNavigationService()
         {
             return new LayoutNavigationService<HomeViewModel>(
                 _navigationStore,
                 () => new HomeViewModel(CreateLoginNavigationService()), CreateNavigationBarViewModel);
         }
 
-        private INavigationService<LoginViewModel> CreateLoginNavigationService()
+        private INavigationService CreateLoginNavigationService()
         {
             return new NavigationService<LoginViewModel>(
                 _navigationStore,
                 () => new LoginViewModel(_accountStore, CreateAccountNavigationService()));
         }
 
-        private INavigationService<AccountViewModel> CreateAccountNavigationService()
+        private INavigationService CreateAccountNavigationService()
         {
             return new LayoutNavigationService<AccountViewModel>(
                 _navigationStore,

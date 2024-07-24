@@ -3,7 +3,7 @@ using NavigationMVVM.ViewModels;
 
 namespace NavigationMVVM.Services
 {
-    public class LayoutNavigationService<TViewModel> : INavigationService<TViewModel> where TViewModel : ViewModelBase
+    public class LayoutNavigationService<TViewModel> : INavigationService where TViewModel : ViewModelBase
     {
         private readonly NavigationStore _navigationStore;
         private readonly Func<TViewModel> _createViewModel;
