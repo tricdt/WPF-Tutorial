@@ -25,7 +25,7 @@
                 <components:Layout/>
             </DataTemplate>
         </Grid.Resources>
-        <custom:Modal Panel.ZIndex="100" IsOpen="{Binding IsOpen}">
+        <custom:Modal Panel.ZIndex="1" IsOpen="{Binding IsOpen}">
             <ContentControl Content="{Binding CurrentModalViewModel}"/>
         </custom:Modal>
         <ContentControl Content="{Binding CurrentViewModel}"/>

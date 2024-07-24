@@ -17,6 +17,7 @@ namespace NavigationMVVM
             _accountStore = new AccountStore();
             _navigationStore = new NavigationStore();
             _modalNavigationStore = new ModalNavigationStore();
+
         }
         private NavigationBarViewModel CreateNavigationBarViewModel()
         {
