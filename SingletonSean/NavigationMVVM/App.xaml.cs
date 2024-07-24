@@ -11,10 +11,12 @@ namespace NavigationMVVM
     {
         private readonly AccountStore _accountStore;
         private readonly NavigationStore _navigationStore;
+        private readonly ModalNavigationStore _modalNavigationStore;
         public App()
         {
             _accountStore = new AccountStore();
             _navigationStore = new NavigationStore();
+            _modalNavigationStore = new ModalNavigationStore();
         }
         private NavigationBarViewModel CreateNavigationBarViewModel()
         {
@@ -30,7 +32,7 @@ namespace NavigationMVVM
             homeNavigationService.Navigate();
             MainWindow = new MainWindow()
             {
-                DataContext = new MainViewModel(_navigationStore)
+                DataContext = new MainViewModel(_navigationStore, _modalNavigationStore)
             };
             MainWindow.Show();
             base.OnStartup(e);
@@ -44,9 +46,13 @@ namespace NavigationMVVM
 
         private INavigationService CreateLoginNavigationService()
         {
-            return new NavigationService<LoginViewModel>(
-                _navigationStore,
-                () => new LoginViewModel(_accountStore, CreateAccountNavigationService()));
+            //return new NavigationService<LoginViewModel>(
+            //    _navigationStore,
+            //    () => new LoginViewModel(_accountStore, CreateAccountNavigationService()));
+            CompositeNavigationService navigationService = new CompositeNavigationService(
+                new CloseModalNavigationService(_modalNavigationStore),
+                CreateAccountNavigationService());
+            return new ModalNavigationService<LoginViewModel>(_modalNavigationStore, () => new LoginViewModel(_accountStore, navigationService));
         }
 
         private INavigationService CreateAccountNavigationService()

@@ -18,7 +18,7 @@ namespace NavigationMVVM.ViewModels
             //NavigateHomeCommand = new NavigationHomeCommand(_navigationStore);
             //NavigateHomeCommand = new NavigateCommand<HomeViewModel>(navigationStore, () => new HomeViewModel(navigationStore));
             //NavigateHomeCommand = new NavigateCommand<HomeViewModel>(new Services.NavigationService<HomeViewModel>(navigationStore, () => new HomeViewModel(accountStore, navigationStore)));
-            NavigateHomeCommand = new NavigateCommand<HomeViewModel>(homeNavigationService);
+            NavigateHomeCommand = new NavigateCommand(homeNavigationService);
             _accountStore.CurrentAccountChange += OnCurrentAccountChanged;
         }
 

@@ -16,7 +16,7 @@ namespace NavigationMVVM.ViewModels
             //NavigateLoginCommand = new NavigateCommand<LoginViewModel>(navigationStore, () => new LoginViewModel());
             //NavigateLoginCommand = new NavigateCommand<LoginViewModel>(new NavigationService<LoginViewModel>(navigationStore, () => new LoginViewModel(accountStore, navigationStore)));
 
-            NavigateLoginCommand = new NavigateCommand<LoginViewModel>(loginNavigationService);
+            NavigateLoginCommand = new NavigateCommand(loginNavigationService);
         }
     }
 }

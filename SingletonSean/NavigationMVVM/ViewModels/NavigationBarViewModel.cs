@@ -19,9 +19,9 @@ namespace NavigationMVVM.ViewModels
             INavigationService loginNavigationService)
         {
             _accountStore = accountStore;
-            NavigateHomeCommand = new NavigateCommand<HomeViewModel>(homeNavigationService);
-            NavigateAccountCommand = new NavigateCommand<AccountViewModel>(accountNavigationService);
-            NavigateLoginCommand = new NavigateCommand<LoginViewModel>(loginNavigationService);
+            NavigateHomeCommand = new NavigateCommand(homeNavigationService);
+            NavigateAccountCommand = new NavigateCommand(accountNavigationService);
+            NavigateLoginCommand = new NavigateCommand(loginNavigationService);
             LogoutCommand = new LogoutCommand(_accountStore);
             _accountStore.CurrentAccountChange += OnCurrentAccountChanged;
         }
