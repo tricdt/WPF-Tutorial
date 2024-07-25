@@ -1,22 +1,23 @@
-﻿namespace StateMVVM.ViewModels
+﻿using StateMVVM.Stores;
+
+namespace StateMVVM.ViewModels
 {
     public class MainViewModel : ViewModelBase
     {
-        private ViewModelBase _currentViewModel;
+        private readonly NavigationStore _navigationStore;
 
-        public ViewModelBase CurrentViewModel
+        public MainViewModel(NavigationStore navigationStore)
         {
-            get { return _currentViewModel; }
-            set
-            {
-                _currentViewModel = value;
-                OnPropertyChanged(nameof(CurrentViewModel));
-            }
+            _navigationStore = navigationStore;
+            _navigationStore.CurrentViewModelChanged += OnCurrentViewModelChanged;
         }
 
-        public MainViewModel()
+        private void OnCurrentViewModelChanged()
         {
-            CurrentViewModel = new LayoutViewModel();
+            OnPropertyChanged(nameof(CurrentViewModel));
         }
+
+        public ViewModelBase CurrentViewModel => _navigationStore.CurrentViewModel;
+
     }
 }
