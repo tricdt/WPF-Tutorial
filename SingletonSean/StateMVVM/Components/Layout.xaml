@@ -6,7 +6,52 @@
              xmlns:local="clr-namespace:StateMVVM.Components"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-        <Label Content="Layout View"/>
-    </Grid>
+    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Grid
+                Grid.Row="0"
+                Background="CornflowerBlue"
+                DataContext="{Binding NavigationBarViewModel}"
+                TextBlock.Foreground="White">
+                <Grid MaxWidth="800" Margin="20 10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="auto" />
+                        <ColumnDefinition Width="auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock
+                        Grid.Column="0"
+                        VerticalAlignment="Center"
+                        FontSize="16"
+                        Text="State Management Demo" />
+
+                    <Button
+                        Grid.Column="1"
+                        Margin="10 0 0 0"
+                        Padding="10 5"
+                        Command="{Binding NavigatePostHomeCommand}"
+                        Content="Home" />
+
+                    <Button
+                        Grid.Column="2"
+                        Margin="10 0 0 0"
+                        Padding="10 5"
+                        Command="{Binding NavigatePostListingCommand}"
+                        Content="Posts" />
+                </Grid>
+            </Grid>
+
+            <ContentControl
+                Grid.Row="1"
+                MaxWidth="800"
+                Margin="20"
+                Content="{Binding ContentViewModel}" />
+        </Grid>
+    </ScrollViewer>
 </UserControl>

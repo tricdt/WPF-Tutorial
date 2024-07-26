@@ -1,5 +1,4 @@
-﻿using StateMVVM.ViewModels;
-
+﻿using MVVMEssentials.ViewModels;
 namespace StateMVVM.Stores
 {
     public class NavigationStore
@@ -16,5 +15,6 @@ namespace StateMVVM.Stores
                 CurrentViewModelChanged?.Invoke();
             }
         }
+
     }
 }

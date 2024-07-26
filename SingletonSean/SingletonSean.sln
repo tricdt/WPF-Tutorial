@@ -25,6 +25,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NavigationMVVM", "Navigatio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StateMVVM", "StateMVVM\StateMVVM.csproj", "{8C497A35-545C-49B5-BC68-0A2FF1864C3A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVVMEssentials", "MVVMEssentials\MVVMEssentials.csproj", "{328C879F-0614-43DF-B818-A56A8999BF9B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{8C497A35-545C-49B5-BC68-0A2FF1864C3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C497A35-545C-49B5-BC68-0A2FF1864C3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8C497A35-545C-49B5-BC68-0A2FF1864C3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{328C879F-0614-43DF-B818-A56A8999BF9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{328C879F-0614-43DF-B818-A56A8999BF9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{328C879F-0614-43DF-B818-A56A8999BF9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{328C879F-0614-43DF-B818-A56A8999BF9B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

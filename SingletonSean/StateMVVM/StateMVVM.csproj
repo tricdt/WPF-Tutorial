@@ -9,8 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Commands\" />
-    <Folder Include="Services\" />
+    <ProjectReference Include="..\MVVMEssentials\MVVMEssentials.csproj" />
   </ItemGroup>
 
 </Project>
