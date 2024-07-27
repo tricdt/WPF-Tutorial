@@ -1,4 +1,5 @@
 ﻿using MVVMEssentials.ViewModels;
+using StateMVVM.Commands;
 using System.Windows.Input;
 
 namespace StateMVVM.ViewModels
@@ -36,6 +37,7 @@ namespace StateMVVM.ViewModels
         public ICommand CreatePostCommand { get; }
         public CreatePostViewModel()
         {
+            CreatePostCommand = new CreatePostCommand(this);
         }
     }
 }

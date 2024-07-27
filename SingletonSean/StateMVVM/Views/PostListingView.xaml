@@ -16,7 +16,7 @@
         <TextBlock
             Grid.Row="0"
             FontSize="28"
-            Text="Posts" />
+            Text="PostListing" />
 
         <Grid Grid.Row="1" Margin="0 20 0 0">
             <Grid>
