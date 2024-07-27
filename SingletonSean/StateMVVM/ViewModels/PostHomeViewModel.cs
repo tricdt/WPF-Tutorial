@@ -3,9 +3,13 @@ namespace StateMVVM.ViewModels
 {
     public class PostHomeViewModel : ViewModelBase
     {
-        public PostHomeViewModel()
-        {
+        public CreatePostViewModel CreatePostViewModel { get; }
+        public RecentPostListingViewModel RecentPostListingViewModel { get; }
 
+        public PostHomeViewModel(CreatePostViewModel createPostViewModel, RecentPostListingViewModel recentPostListingViewModel)
+        {
+            CreatePostViewModel = createPostViewModel;
+            RecentPostListingViewModel = recentPostListingViewModel;
         }
     }
 }

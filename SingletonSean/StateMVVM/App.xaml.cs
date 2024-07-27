@@ -34,7 +34,7 @@ namespace StateMVVM
         }
         private PostHomeViewModel CreatePostHomeViewModel()
         {
-            return new PostHomeViewModel();
+            return new PostHomeViewModel(new CreatePostViewModel(), new RecentPostListingViewModel());
         }
         private NavigationBarViewModel CreateNavigationBarViewModel()
         {
