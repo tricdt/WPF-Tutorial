@@ -23,9 +23,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ValidationMVVM", "Validatio
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NavigationMVVM", "NavigationMVVM\NavigationMVVM.csproj", "{E4AE5A37-9017-483A-AFE9-FB41108E91B3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StateMVVM", "StateMVVM\StateMVVM.csproj", "{8C497A35-545C-49B5-BC68-0A2FF1864C3A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StateMVVM", "StateMVVM\StateMVVM.csproj", "{8C497A35-545C-49B5-BC68-0A2FF1864C3A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVVMEssentials", "MVVMEssentials\MVVMEssentials.csproj", "{328C879F-0614-43DF-B818-A56A8999BF9B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MVVMEssentials", "MVVMEssentials\MVVMEssentials.csproj", "{328C879F-0614-43DF-B818-A56A8999BF9B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollectionViewFilteringMVVM", "CollectionViewFilteringMVVM\CollectionViewFilteringMVVM.csproj", "{3B25D644-66F9-4980-8AA1-155FE2A25E30}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,10 @@ Global
 		{328C879F-0614-43DF-B818-A56A8999BF9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{328C879F-0614-43DF-B818-A56A8999BF9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{328C879F-0614-43DF-B818-A56A8999BF9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B25D644-66F9-4980-8AA1-155FE2A25E30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B25D644-66F9-4980-8AA1-155FE2A25E30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B25D644-66F9-4980-8AA1-155FE2A25E30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B25D644-66F9-4980-8AA1-155FE2A25E30}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
