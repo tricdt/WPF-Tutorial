@@ -1,4 +1,5 @@
-﻿using CommunicationMVVM.ViewModels;
+﻿using CommunicationMVVM.Stores;
+using CommunicationMVVM.ViewModels;
 using System.Windows;
 namespace CommunicationMVVM
 {
@@ -9,11 +10,18 @@ namespace CommunicationMVVM
     {
         protected override void OnStartup(StartupEventArgs e)
         {
+            ProductStore productStore = new ProductStore();
+
+            CreateProductViewModel createProductViewModel = new CreateProductViewModel(productStore);
+            ProductListingViewModel productListingViewModel = new ProductListingViewModel(productStore);
+            MainViewModel mainViewModel = new MainViewModel(createProductViewModel, productListingViewModel);
+
             MainWindow = new MainWindow()
             {
-                DataContext = new MainViewModel()
+                DataContext = mainViewModel
             };
             MainWindow.Show();
+
             base.OnStartup(e);
         }
     }
