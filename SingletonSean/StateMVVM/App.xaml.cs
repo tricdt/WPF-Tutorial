@@ -11,10 +11,12 @@ namespace StateMVVM
     {
         private readonly NavigationStore _navigationStore;
         private readonly PostStore _postStore;
+        private readonly MessageStore _messageStore;
         public App()
         {
             _navigationStore = new NavigationStore();
             _postStore = new PostStore(new Services.PostService());
+            _messageStore = new MessageStore();
         }
         protected override void OnStartup(StartupEventArgs e)
         {
@@ -32,11 +34,11 @@ namespace StateMVVM
         {
             return new LayoutNavigationService<PostHomeViewModel>(_navigationStore,
                 CreatePostHomeViewModel,
-                CreateNavigationBarViewModel);
+                CreateNavigationBarViewModel, CreateGlobalMessageViewModel);
         }
         private PostHomeViewModel CreatePostHomeViewModel()
         {
-            return new PostHomeViewModel(new CreatePostViewModel(_postStore), RecentPostListingViewModel.LoadViewModel(_postStore));
+            return new PostHomeViewModel(new CreatePostViewModel(_postStore, _messageStore), RecentPostListingViewModel.LoadViewModel(_postStore, _messageStore));
         }
         private NavigationBarViewModel CreateNavigationBarViewModel()
         {
@@ -50,12 +52,16 @@ namespace StateMVVM
         {
             return new LayoutNavigationService<PostListingViewModel>(_navigationStore,
                 CreatePostListingViewModel,
-                CreateNavigationBarViewModel);
+                CreateNavigationBarViewModel, CreateGlobalMessageViewModel);
         }
 
         private PostListingViewModel CreatePostListingViewModel()
         {
-            return PostListingViewModel.LoadViewModel(_postStore);
+            return PostListingViewModel.LoadViewModel(_postStore, _messageStore);
+        }
+        private GlobalMessageViewModel CreateGlobalMessageViewModel()
+        {
+            return new GlobalMessageViewModel(_messageStore);
         }
     }
 

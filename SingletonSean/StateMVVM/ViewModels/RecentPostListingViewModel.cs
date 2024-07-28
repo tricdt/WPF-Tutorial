@@ -1,6 +1,8 @@
 ﻿using MVVMEssentials.ViewModels;
+using StateMVVM.Commands;
 using StateMVVM.Stores;
 using System.Collections.ObjectModel;
+using System.Windows.Input;
 namespace StateMVVM.ViewModels
 {
     public class RecentPostListingViewModel : ViewModelBase
@@ -9,13 +11,16 @@ namespace StateMVVM.ViewModels
         private readonly PostStore _postStore;
         public IEnumerable<PostViewModel> Posts => _posts;
         public bool HasPosts => _posts.Count > 0;
-        public RecentPostListingViewModel(PostStore postStore)
+        public ICommand LoadPostsCommand { get; }
+        public RecentPostListingViewModel(PostStore postStore, MessageStore messageStore)
         {
             _postStore = postStore;
             _posts = new ObservableCollection<PostViewModel>();
             _posts.CollectionChanged += Posts_CollectionChanged;
             _postStore.PostCreated += PostStore_PostCreated;
             _postStore.PostsLoaded += UpdatePosts;
+            //LoadPostsCommand = new LoadPostsCommand(_postStore);
+            LoadPostsCommand = new LoadPostsCommand(_postStore, messageStore);
             UpdatePosts();
         }
 
@@ -48,12 +53,12 @@ namespace StateMVVM.ViewModels
             OnPropertyChanged(nameof(Posts));
         }
 
-        public static RecentPostListingViewModel LoadViewModel(PostStore postStore, Action<Task> onLoaded = null)
+        public static RecentPostListingViewModel LoadViewModel(PostStore postStore, MessageStore messageStore)
         {
-            RecentPostListingViewModel viewModel = new RecentPostListingViewModel(postStore);
+            RecentPostListingViewModel viewModel = new RecentPostListingViewModel(postStore, messageStore);
 
-            viewModel.LoadPosts().ContinueWith(t => onLoaded?.Invoke(t));
-
+            //viewModel.LoadPosts().ContinueWith(t => onLoaded?.Invoke(t));
+            viewModel.LoadPostsCommand.Execute(null);
             return viewModel;
         }
 

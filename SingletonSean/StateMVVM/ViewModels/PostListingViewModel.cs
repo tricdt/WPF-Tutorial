@@ -1,8 +1,10 @@
 ﻿using MVVMEssentials.ViewModels;
+using StateMVVM.Commands;
 using StateMVVM.Models;
 using StateMVVM.Stores;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
+using System.Windows.Input;
 namespace StateMVVM.ViewModels
 {
     public class PostListingViewModel : ViewModelBase
@@ -12,14 +14,16 @@ namespace StateMVVM.ViewModels
         public IEnumerable<PostViewModel> Posts => _posts;
 
         public bool HasPosts => _posts.Count > 0;
-
-        public PostListingViewModel(PostStore postStore)
+        public ICommand LoadPostsCommand { get; }
+        public PostListingViewModel(PostStore postStore, MessageStore messageStore)
         {
             _postStore = postStore;
             _posts = new ObservableCollection<PostViewModel>();
             _posts.CollectionChanged += Posts_CollectionChanged;
             _postStore.PostCreated += PostStore_PostCreated;
             _postStore.PostsLoaded += UpdatePosts;
+            //LoadPostsCommand = new LoadPostsCommand(_postStore);
+            LoadPostsCommand = new LoadPostsCommand(_postStore, messageStore);
             UpdatePosts();
         }
 
@@ -56,12 +60,12 @@ namespace StateMVVM.ViewModels
                 throw;
             }
         }
-        public static PostListingViewModel LoadViewModel(PostStore postStore, Action<Task> onLoaded = null)
+        public static PostListingViewModel LoadViewModel(PostStore postStore, MessageStore messageStore)
         {
-            PostListingViewModel viewModel = new PostListingViewModel(postStore);
+            PostListingViewModel viewModel = new PostListingViewModel(postStore, messageStore);
 
-            viewModel.LoadPosts().ContinueWith(t => onLoaded?.Invoke(t));
-
+            //viewModel.LoadPosts().ContinueWith(t => onLoaded?.Invoke(t));
+            viewModel.LoadPostsCommand.Execute(null);
             return viewModel;
         }
         public override void Dispose()
