@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommunicationMVVM", "Commun
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConditionalRendering", "ConditionalRendering\ConditionalRendering.csproj", "{D65BE3AD-2039-486C-936C-97FAD8A896B1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomObservableCollections", "CustomObservableCollections\CustomObservableCollections.csproj", "{8209FD61-1986-4233-A401-CBDCF28C53BB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +101,10 @@ Global
 		{D65BE3AD-2039-486C-936C-97FAD8A896B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D65BE3AD-2039-486C-936C-97FAD8A896B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D65BE3AD-2039-486C-936C-97FAD8A896B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8209FD61-1986-4233-A401-CBDCF28C53BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8209FD61-1986-4233-A401-CBDCF28C53BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8209FD61-1986-4233-A401-CBDCF28C53BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8209FD61-1986-4233-A401-CBDCF28C53BB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
