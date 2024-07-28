@@ -10,9 +10,11 @@ namespace StateMVVM
     public partial class App : Application
     {
         private readonly NavigationStore _navigationStore;
+        private readonly PostStore _postStore;
         public App()
         {
             _navigationStore = new NavigationStore();
+            _postStore = new PostStore(new Services.PostService());
         }
         protected override void OnStartup(StartupEventArgs e)
         {
@@ -34,7 +36,7 @@ namespace StateMVVM
         }
         private PostHomeViewModel CreatePostHomeViewModel()
         {
-            return new PostHomeViewModel(new CreatePostViewModel(), new RecentPostListingViewModel());
+            return new PostHomeViewModel(new CreatePostViewModel(_postStore), RecentPostListingViewModel.LoadViewModel(_postStore));
         }
         private NavigationBarViewModel CreateNavigationBarViewModel()
         {
@@ -53,7 +55,7 @@ namespace StateMVVM
 
         private PostListingViewModel CreatePostListingViewModel()
         {
-            return new PostListingViewModel();
+            return PostListingViewModel.LoadViewModel(_postStore);
         }
     }
 
