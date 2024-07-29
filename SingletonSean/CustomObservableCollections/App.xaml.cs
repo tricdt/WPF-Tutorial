@@ -1,5 +1,5 @@
-﻿using System.Windows;
-
+﻿using CustomObservableCollections.ViewModels;
+using System.Windows;
 namespace CustomObservableCollections
 {
     /// <summary>
@@ -9,7 +9,10 @@ namespace CustomObservableCollections
     {
         protected override void OnStartup(StartupEventArgs e)
         {
-            MainWindow = new MainWindow();
+            MainWindow = new MainWindow()
+            {
+                DataContext = new DriveThruViewModel()
+            };
             MainWindow.Show();
             base.OnStartup(e);
         }
