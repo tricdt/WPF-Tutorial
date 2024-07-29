@@ -1,4 +1,5 @@
 ﻿using CustomObservableCollections.Commands;
+using CustomObservableCollections.Utilities;
 using MVVMEssentials.ViewModels;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
@@ -8,7 +9,7 @@ namespace CustomObservableCollections.ViewModels
     public class DriveThruViewModel : ViewModelBase
     {
         private readonly ObservableCollection<string> _items;
-        private readonly Queue<OrderViewModel> _orders;
+        private readonly ObservableQueue<OrderViewModel> _orders;
         public IEnumerable<string> Items => _items;
         public IEnumerable<OrderViewModel> Orders => _orders;
         private string _selectedItem;
@@ -31,7 +32,7 @@ namespace CustomObservableCollections.ViewModels
         public DriveThruViewModel()
         {
             _items = new ObservableCollection<string>();
-            _orders = new Queue<OrderViewModel>();
+            _orders = new ObservableQueue<OrderViewModel>();
             SubmitOrderCommand = new SubmitOrderCommand(this);
             GiveOrderCommand = new GiveOrderCommand(this);
             _items.Add("Chicken");
@@ -47,8 +48,8 @@ namespace CustomObservableCollections.ViewModels
         {
             if (_orders.Count > 0)
             {
-                _orders.Dequeue();
-                //_orders.TryDequeue(out OrderViewModel order);
+                //_orders.Dequeue();
+                _orders.TryDequeue(out OrderViewModel order);
             }
         }
     }
