@@ -4,10 +4,10 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EffectiveValidation"
-        xmlns:views ="clr-namespace:EffectiveValidation.Views"
+        xmlns:updateAddress ="clr-namespace:EffectiveValidation.UpdateAddress"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <views:UpdateAddressView/>
-    </Grid>
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <updateAddress:UpdateAddressView />
+    </ScrollViewer>
 </Window>

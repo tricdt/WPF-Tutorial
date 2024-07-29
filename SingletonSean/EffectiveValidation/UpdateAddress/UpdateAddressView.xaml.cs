@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace EffectiveValidation.Views
+namespace EffectiveValidation.UpdateAddress
 {
     /// <summary>
     /// Interaction logic for UpdateAddressView.xaml
