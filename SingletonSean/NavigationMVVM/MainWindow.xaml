@@ -24,6 +24,12 @@
             <DataTemplate DataType="{x:Type viewmodels:LayoutViewModel}">
                 <components:Layout/>
             </DataTemplate>
+            <DataTemplate DataType="{x:Type viewmodels:PeopleListingViewModel}">
+                <views:PeopleListingView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewmodels:AddPersonViewModel}">
+                <views:AddPersonView/>
+            </DataTemplate>
         </Grid.Resources>
         <custom:Modal Panel.ZIndex="1" IsOpen="{Binding IsOpen}">
             <ContentControl Content="{Binding CurrentModalViewModel}"/>

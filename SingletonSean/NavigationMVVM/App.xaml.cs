@@ -21,6 +21,7 @@ namespace NavigationMVVM
             //_modalNavigationStore = new ModalNavigationStore();
             IServiceCollection services = new ServiceCollection();
             services.AddSingleton<AccountStore>();
+            services.AddSingleton<PeopleStore>();
             services.AddSingleton<NavigationStore>();
             services.AddSingleton<ModalNavigationStore>();
             services.AddSingleton<INavigationService>(s => CreateHomeNavigationService(s));
@@ -29,6 +30,13 @@ namespace NavigationMVVM
             services.AddTransient<AccountViewModel>(s => new AccountViewModel(s.GetRequiredService<AccountStore>(), CreateHomeNavigationService(s)));
             services.AddTransient<LoginViewModel>(CreateLoginViewModel);
             services.AddTransient<NavigationBarViewModel>(CreateNavigationBarViewModel);
+            services.AddTransient<PeopleListingViewModel>(s => new PeopleListingViewModel(
+              s.GetRequiredService<PeopleStore>(),
+              CreateAddPersonNavigationService(s)));
+            services.AddTransient<AddPersonViewModel>(s => new AddPersonViewModel(
+                s.GetRequiredService<PeopleStore>(),
+                s.GetRequiredService<CloseModalNavigationService>()
+                ));
             services.AddSingleton<MainViewModel>();
             services.AddSingleton<MainWindow>(s => new MainWindow()
             {
@@ -36,14 +44,7 @@ namespace NavigationMVVM
             });
             _serviceProvider = services.BuildServiceProvider();
         }
-        private NavigationBarViewModel CreateNavigationBarViewModel(IServiceProvider serviceProvider)
-        {
-            return new NavigationBarViewModel(serviceProvider.GetRequiredService<AccountStore>(),
-                                               CreateHomeNavigationService(serviceProvider),
-                                               CreateAccountNavigationService(serviceProvider),
-                                               CreateLoginNavigationService(serviceProvider)
-                                               );
-        }
+
         protected override void OnStartup(StartupEventArgs e)
         {
             //INavigationService homeNavigationService = CreateHomeNavigationService(serviceProvider);
@@ -86,6 +87,30 @@ namespace NavigationMVVM
             CompositeNavigationService navigationService = new CompositeNavigationService(serviceProvider.GetRequiredService<CloseModalNavigationService>(),
                 CreateAccountNavigationService(serviceProvider));
             return new LoginViewModel(serviceProvider.GetRequiredService<AccountStore>(), navigationService);
+        }
+
+        private NavigationBarViewModel CreateNavigationBarViewModel(IServiceProvider serviceProvider)
+        {
+            return new NavigationBarViewModel(serviceProvider.GetRequiredService<AccountStore>(),
+                                               CreateHomeNavigationService(serviceProvider),
+                                               CreateAccountNavigationService(serviceProvider),
+                                               CreateLoginNavigationService(serviceProvider),
+                                               CreatePeopleListingNavigationService(serviceProvider)
+                                               );
+        }
+
+        private INavigationService CreatePeopleListingNavigationService(IServiceProvider serviceProvider)
+        {
+            return new LayoutNavigationService<PeopleListingViewModel>(
+                serviceProvider.GetRequiredService<NavigationStore>(),
+                () => serviceProvider.GetRequiredService<PeopleListingViewModel>(),
+                () => serviceProvider.GetRequiredService<NavigationBarViewModel>());
+        }
+        private INavigationService CreateAddPersonNavigationService(IServiceProvider serviceProvider)
+        {
+            return new ModalNavigationService<AddPersonViewModel>(
+                serviceProvider.GetRequiredService<ModalNavigationStore>(),
+                () => serviceProvider.GetRequiredService<AddPersonViewModel>());
         }
     }
 
