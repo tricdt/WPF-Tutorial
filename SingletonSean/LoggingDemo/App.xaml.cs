@@ -16,6 +16,7 @@ namespace LoggingDemo
                 builder.ClearProviders();
                 builder.AddDebug();
                 builder.SetMinimumLevel(LogLevel.Error);
+                builder.AddFilter("LoggingDemo.Commands", LogLevel.Debug);
             });
             ILogger<MakeSandwichCommand> makeSandwichCommandLogger = loggerFactory.CreateLogger<MakeSandwichCommand>();
             MakeSandwichCommand makeSandwichCommand = new MakeSandwichCommand(makeSandwichCommandLogger);
