@@ -1,10 +1,8 @@
 ﻿using LoggingDemo.Commands;
 using LoggingDemo.ViewModels;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Serilog;
 using System.Windows;
-using System.Windows.Input;
 namespace LoggingDemo
 {
     /// <summary>
@@ -12,45 +10,26 @@ namespace LoggingDemo
     /// </summary>
     public partial class App : Application
     {
-        private readonly IHost _host;
-        public App()
-        {
-            _host = Host.CreateDefaultBuilder()
-            .ConfigureLogging(builder =>
-            {
-                builder.ClearProviders();
-                builder.AddDebug();
-                builder.SetMinimumLevel(LogLevel.Error);
-                builder.AddFilter("LoggingDemo.Commands", LogLevel.Debug);
-            })
-            .ConfigureServices(services =>
-            {
-                services.AddSingleton<ICommand, MakeSandwichCommand>();
-                services.AddSingleton<MainViewModel>();
-                services.AddSingleton<MainWindow>(s => new MainWindow()
-                {
-                    DataContext = s.GetRequiredService<MainViewModel>()
-                });
-            })
-            .Build();
-        }
         protected override void OnStartup(StartupEventArgs e)
         {
-            //ILoggerFactory loggerFactory = LoggerFactory.Create(builder =>
-            //{
-            //    builder.ClearProviders();
-            //    builder.AddDebug();
-            //    builder.SetMinimumLevel(LogLevel.Error);
-            //    builder.AddFilter("LoggingDemo.Commands", LogLevel.Debug);
-            //});
-            _host.Start();
-            MainWindow = _host.Services.GetRequiredService<MainWindow>();
+            ILoggerFactory loggerFactory = LoggerFactory.Create(builder =>
+            {
+                LoggerConfiguration loggerConfiguration = new LoggerConfiguration()
+                .WriteTo.File("test.txt", rollingInterval: RollingInterval.Day)
+                .MinimumLevel.Error()
+                .MinimumLevel.Override("LoggingDemo.Commands", Serilog.Events.LogEventLevel.Debug);
+                ;
+                builder.AddSerilog(loggerConfiguration.CreateLogger());
+            });
+            ILogger<MakeSandwichCommand> makeSandwichCommandLogger = loggerFactory.CreateLogger<MakeSandwichCommand>();
+            MakeSandwichCommand makeSandwichCommand = new MakeSandwichCommand(makeSandwichCommandLogger);
+            MainWindow = new MainWindow()
+            {
+                DataContext = new MainViewModel(makeSandwichCommand)
+            };
             MainWindow.Show();
-
-
             base.OnStartup(e);
         }
-
     }
 
 }
