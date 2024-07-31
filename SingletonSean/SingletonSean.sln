@@ -39,7 +39,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EffectiveValidation", "Effe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ItemsControlDemo", "ItemsControlDemo\ItemsControlDemo.csproj", "{422FC9AA-4945-4EB2-A238-ED2C93769FA1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggingDemo", "LoggingDemo\LoggingDemo.csproj", "{1CAFC46A-9AD0-4BD0-B937-5E18F58720AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoggingDemo", "LoggingDemo\LoggingDemo.csproj", "{1CAFC46A-9AD0-4BD0-B937-5E18F58720AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimationDemo", "AnimationDemo\AnimationDemo.csproj", "{EF4CBF30-B43F-40CD-8C61-A9B1877AFF2D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -123,6 +125,10 @@ Global
 		{1CAFC46A-9AD0-4BD0-B937-5E18F58720AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1CAFC46A-9AD0-4BD0-B937-5E18F58720AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1CAFC46A-9AD0-4BD0-B937-5E18F58720AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF4CBF30-B43F-40CD-8C61-A9B1877AFF2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF4CBF30-B43F-40CD-8C61-A9B1877AFF2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF4CBF30-B43F-40CD-8C61-A9B1877AFF2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF4CBF30-B43F-40CD-8C61-A9B1877AFF2D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
