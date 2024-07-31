@@ -16,7 +16,7 @@ namespace LoggingDemo.Commands
         {
             _makeSandwichCommandLogger.LogInformation("Creating a sandwich.");
             MessageBox.Show("Successfully made sandwich.", "Done", MessageBoxButton.OK);
-            _makeSandwichCommandLogger.LogInformation("Successfully created a sandwich.");
+            _makeSandwichCommandLogger.LogError("Failed to create a sandwich.");
         }
     }
 }
