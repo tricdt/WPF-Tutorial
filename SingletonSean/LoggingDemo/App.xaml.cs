@@ -1,7 +1,10 @@
 ﻿using LoggingDemo.Commands;
 using LoggingDemo.ViewModels;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using System.Windows;
+using System.Windows.Input;
 namespace LoggingDemo
 {
     /// <summary>
@@ -9,21 +12,39 @@ namespace LoggingDemo
     /// </summary>
     public partial class App : Application
     {
-        protected override void OnStartup(StartupEventArgs e)
+        private readonly IHost _host;
+        public App()
         {
-            ILoggerFactory loggerFactory = LoggerFactory.Create(builder =>
+            _host = Host.CreateDefaultBuilder()
+            .ConfigureLogging(builder =>
             {
                 builder.ClearProviders();
                 builder.AddDebug();
                 builder.SetMinimumLevel(LogLevel.Error);
                 builder.AddFilter("LoggingDemo.Commands", LogLevel.Debug);
-            });
-            ILogger<MakeSandwichCommand> makeSandwichCommandLogger = loggerFactory.CreateLogger<MakeSandwichCommand>();
-            MakeSandwichCommand makeSandwichCommand = new MakeSandwichCommand(makeSandwichCommandLogger);
-            MainWindow = new MainWindow()
+            })
+            .ConfigureServices(services =>
             {
-                DataContext = new MainViewModel(makeSandwichCommand)
-            };
+                services.AddSingleton<ICommand, MakeSandwichCommand>();
+                services.AddSingleton<MainViewModel>();
+                services.AddSingleton<MainWindow>(s => new MainWindow()
+                {
+                    DataContext = s.GetRequiredService<MainViewModel>()
+                });
+            })
+            .Build();
+        }
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            //ILoggerFactory loggerFactory = LoggerFactory.Create(builder =>
+            //{
+            //    builder.ClearProviders();
+            //    builder.AddDebug();
+            //    builder.SetMinimumLevel(LogLevel.Error);
+            //    builder.AddFilter("LoggingDemo.Commands", LogLevel.Debug);
+            //});
+            _host.Start();
+            MainWindow = _host.Services.GetRequiredService<MainWindow>();
             MainWindow.Show();
 
 
