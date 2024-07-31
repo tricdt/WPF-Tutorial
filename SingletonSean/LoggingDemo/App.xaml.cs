@@ -1,5 +1,6 @@
 ﻿using LoggingDemo.Commands;
 using LoggingDemo.ViewModels;
+using Microsoft.Extensions.Logging;
 using System.Windows;
 namespace LoggingDemo
 {
@@ -8,9 +9,15 @@ namespace LoggingDemo
     /// </summary>
     public partial class App : Application
     {
-        MakeSandwichCommand makeSandwichCommand = new MakeSandwichCommand();
         protected override void OnStartup(StartupEventArgs e)
         {
+            ILoggerFactory loggerFactory = LoggerFactory.Create(builder =>
+            {
+                builder.ClearProviders();
+                builder.AddDebug();
+            });
+            ILogger<MakeSandwichCommand> makeSandwichCommandLogger = loggerFactory.CreateLogger<MakeSandwichCommand>();
+            MakeSandwichCommand makeSandwichCommand = new MakeSandwichCommand(makeSandwichCommandLogger);
             MainWindow = new MainWindow()
             {
                 DataContext = new MainViewModel(makeSandwichCommand)
