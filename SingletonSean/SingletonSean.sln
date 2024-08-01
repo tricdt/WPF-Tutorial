@@ -41,7 +41,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ItemsControlDemo", "ItemsCo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoggingDemo", "LoggingDemo\LoggingDemo.csproj", "{1CAFC46A-9AD0-4BD0-B937-5E18F58720AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimationDemo", "AnimationDemo\AnimationDemo.csproj", "{EF4CBF30-B43F-40CD-8C61-A9B1877AFF2D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnimationDemo", "AnimationDemo\AnimationDemo.csproj", "{EF4CBF30-B43F-40CD-8C61-A9B1877AFF2D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reservoom", "Reservoom\Reservoom.csproj", "{1924749C-2985-4035-A70E-E5000DFF3AD7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -129,6 +131,10 @@ Global
 		{EF4CBF30-B43F-40CD-8C61-A9B1877AFF2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF4CBF30-B43F-40CD-8C61-A9B1877AFF2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF4CBF30-B43F-40CD-8C61-A9B1877AFF2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1924749C-2985-4035-A70E-E5000DFF3AD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1924749C-2985-4035-A70E-E5000DFF3AD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1924749C-2985-4035-A70E-E5000DFF3AD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1924749C-2985-4035-A70E-E5000DFF3AD7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
