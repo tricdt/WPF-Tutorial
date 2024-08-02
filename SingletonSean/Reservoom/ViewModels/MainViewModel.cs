@@ -1,15 +1,22 @@
-﻿using Reservoom.Models;
-
+﻿using Reservoom.Stores;
 namespace Reservoom.ViewModels
 {
     public class MainViewModel : ViewModelBase
     {
-        public ViewModelBase CurrentViewModel { get; }
+        private readonly NavigationStore _navigationStore;
+        public ViewModelBase CurrentViewModel => _navigationStore.CurrentViewModel;
 
-        public MainViewModel(Hotel hotel)
+        public MainViewModel(NavigationStore navigationStore)
         {
+            _navigationStore = navigationStore;
+            _navigationStore.CurrentViewModelChanged += OnCurrentViewModelChanged;
             //CurrentViewModel = new ReservationListingViewModel();
-            CurrentViewModel = new MakeReservationViewModel(hotel);
+
+        }
+
+        private void OnCurrentViewModelChanged()
+        {
+            OnPropertyChanged(nameof(CurrentViewModel));
         }
     }
 }
