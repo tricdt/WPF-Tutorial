@@ -5,19 +5,20 @@
         private readonly ReservationBook _reservationBook;
 
         public string Name { get; }
-        public Hotel(string name)
+        public Hotel(string name, ReservationBook reservationBook)
         {
             Name = name;
 
-            _reservationBook = new ReservationBook();
+            _reservationBook = reservationBook;
         }
-        public IEnumerable<Reservation> GetReservations()
+        public IEnumerable<Reservation> GetAllReservations()
         {
-            return _reservationBook.GetReservations();
+            return _reservationBook.GetAllReservations();
         }
         public void MakeReservation(Reservation reservation)
         {
             _reservationBook.AddReservation(reservation);
         }
+
     }
 }

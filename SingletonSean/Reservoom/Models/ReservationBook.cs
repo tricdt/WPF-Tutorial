@@ -9,7 +9,7 @@ namespace Reservoom.Models
         {
             _reservations = new List<Reservation>();
         }
-        public IEnumerable<Reservation> GetReservations()
+        public IEnumerable<Reservation> GetAllReservations()
         {
             return _reservations;
         }

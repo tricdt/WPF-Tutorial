@@ -14,7 +14,7 @@ namespace Reservoom
         private readonly NavigationStore _navigationStore;
         public App()
         {
-            _hotel = new Hotel("SingletonSean Suites");
+            _hotel = new Hotel("SingletonSean Suites", new ReservationBook());
             _navigationStore = new NavigationStore();
         }
         protected override void OnStartup(StartupEventArgs e)
@@ -33,7 +33,7 @@ namespace Reservoom
         }
         private ReservationListingViewModel CreateReservationListingViewModel()
         {
-            return new ReservationListingViewModel(new NavigationService(_navigationStore, CreateMakeReservationViewModel));
+            return new ReservationListingViewModel(_hotel, new NavigationService(_navigationStore, CreateMakeReservationViewModel));
         }
     }
 
