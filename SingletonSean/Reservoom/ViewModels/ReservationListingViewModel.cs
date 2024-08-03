@@ -1,6 +1,6 @@
 ﻿using Reservoom.Commands;
 using Reservoom.Models;
-using Reservoom.Stores;
+using Reservoom.Services;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
 namespace Reservoom.ViewModels
@@ -10,13 +10,13 @@ namespace Reservoom.ViewModels
         private readonly ObservableCollection<ReservationViewModel> _reservations;
         public IEnumerable<ReservationViewModel> Reservations => _reservations;
         public ICommand MakeReservationCommand { get; }
-        public ReservationListingViewModel(NavigationStore navigationStore, Func<ViewModelBase> createViewModel)
+        public ReservationListingViewModel(NavigationService navigationService)
         {
             _reservations = new ObservableCollection<ReservationViewModel>();
             _reservations.Add(new ReservationViewModel(new Reservation(new RoomID(1, 2), "SingletonSean", DateTime.MinValue, DateTime.MaxValue)));
             _reservations.Add(new ReservationViewModel(new Reservation(new RoomID(3, 2), "Joe", DateTime.MinValue, DateTime.MaxValue)));
             _reservations.Add(new ReservationViewModel(new Reservation(new RoomID(2, 4), "Mary", DateTime.MinValue, DateTime.MaxValue)));
-            MakeReservationCommand = new NavigateCommand(navigationStore, createViewModel);
+            MakeReservationCommand = new NavigateCommand(navigationService);
         }
     }
 }

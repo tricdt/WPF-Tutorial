@@ -1,4 +1,5 @@
 ﻿using Reservoom.Models;
+using Reservoom.Services;
 using Reservoom.Stores;
 using Reservoom.ViewModels;
 using System.Windows;
@@ -18,7 +19,7 @@ namespace Reservoom
         }
         protected override void OnStartup(StartupEventArgs e)
         {
-            _navigationStore.CurrentViewModel = new ReservationListingViewModel(_navigationStore, CreateMakeReservationViewModel);
+            _navigationStore.CurrentViewModel = CreateMakeReservationViewModel();
             MainWindow = new MainWindow()
             {
                 DataContext = new MainViewModel(_navigationStore)
@@ -28,11 +29,11 @@ namespace Reservoom
         }
         private MakeReservationViewModel CreateMakeReservationViewModel()
         {
-            return new MakeReservationViewModel(_hotel, _navigationStore, CreateReservationListingViewModel);
+            return new MakeReservationViewModel(_hotel, new NavigationService(_navigationStore, CreateReservationListingViewModel));
         }
         private ReservationListingViewModel CreateReservationListingViewModel()
         {
-            return new ReservationListingViewModel(_navigationStore, CreateMakeReservationViewModel);
+            return new ReservationListingViewModel(new NavigationService(_navigationStore, CreateMakeReservationViewModel));
         }
     }
 
