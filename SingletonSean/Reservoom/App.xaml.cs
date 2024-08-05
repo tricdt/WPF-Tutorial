@@ -16,6 +16,7 @@ namespace Reservoom
     public partial class App : Application
     {
         private readonly Hotel _hotel;
+        private readonly HotelStore _hotelStore;
         private readonly NavigationStore _navigationStore;
         private const string CONNECTION_STRING = "Data Source=ODEGAARD\\SQLEXPRESS;Initial Catalog=Reservoom;Integrated Security=True;Trust Server Certificate=True";
         private readonly ReservoomDbContextFactory _reservoomDbContextFactory;
@@ -27,6 +28,7 @@ namespace Reservoom
             IReservationConflictValidator reservationConflictValidator = new DatabaseReservationConflictValidator(_reservoomDbContextFactory);
             ReservationBook reservationBook = new ReservationBook(reservationProvider, reservationCreator, reservationConflictValidator);
             _hotel = new Hotel("SingletonSean Suites", reservationBook);
+            _hotelStore = new HotelStore(_hotel);
             _navigationStore = new NavigationStore();
         }
         protected override void OnStartup(StartupEventArgs e)
@@ -46,11 +48,11 @@ namespace Reservoom
         }
         private MakeReservationViewModel CreateMakeReservationViewModel()
         {
-            return new MakeReservationViewModel(_hotel, new NavigationService(_navigationStore, CreateReservationListingViewModel));
+            return new MakeReservationViewModel(_hotelStore, new NavigationService(_navigationStore, CreateReservationListingViewModel));
         }
         private ReservationListingViewModel CreateReservationListingViewModel()
         {
-            return ReservationListingViewModel.LoadViewModel(_hotel, new NavigationService(_navigationStore, CreateMakeReservationViewModel));
+            return ReservationListingViewModel.LoadViewModel(_hotelStore, new NavigationService(_navigationStore, CreateMakeReservationViewModel));
         }
     }
 

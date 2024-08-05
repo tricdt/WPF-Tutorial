@@ -1,21 +1,21 @@
-﻿using Reservoom.Exceptions;
-using Reservoom.Models;
+﻿using Reservoom.Models;
 using Reservoom.Services;
+using Reservoom.Stores;
 using Reservoom.ViewModels;
 using System.Windows;
 namespace Reservoom.Commands
 {
-    public class MakeReservationCommand : CommandBase
+    public class MakeReservationCommand : AsyncCommandBase
     {
         private readonly MakeReservationViewModel _makeReservationViewModel;
-        private readonly Hotel _hotel;
+        private readonly HotelStore _hotelStore;
         private readonly NavigationService _navigationService;
 
-        public MakeReservationCommand(MakeReservationViewModel makeReservationViewModel, Hotel hotel, NavigationService navigationService)
+        public MakeReservationCommand(MakeReservationViewModel makeReservationViewModel, HotelStore hotelStore, NavigationService navigationService)
         {
             _navigationService = navigationService;
             _makeReservationViewModel = makeReservationViewModel;
-            _hotel = hotel;
+            _hotelStore = hotelStore;
             _makeReservationViewModel.PropertyChanged += OnViewModelPropertyChanged;
         }
 
@@ -27,7 +27,7 @@ namespace Reservoom.Commands
             }
         }
 
-        public override void Execute(object parameter)
+        public override async Task ExecuteAsync(object parameter)
         {
             Reservation reservation = new Reservation(
                 new RoomID(_makeReservationViewModel.FloorNumber, _makeReservationViewModel.RoomNumber),
@@ -36,14 +36,14 @@ namespace Reservoom.Commands
                 _makeReservationViewModel.EndDate);
             try
             {
-                _hotel.MakeReservation(reservation);
+                await _hotelStore.MakeReservation(reservation);
 
                 MessageBox.Show("Successfully reserved room.", "Success",
                     MessageBoxButton.OK, MessageBoxImage.Information);
                 _navigationService.Navigate();
 
             }
-            catch (ReservationConflictException)
+            catch (Exception)
             {
                 MessageBox.Show("This room is already taken.", "Error",
                     MessageBoxButton.OK, MessageBoxImage.Error);
