@@ -48,7 +48,7 @@ namespace Reservoom.ViewModels
             }
         }
 
-        private DateTime _startDate = new DateTime(2021, 1, 1);
+        private DateTime _startDate = new DateTime(2024, 8, 1);
         public DateTime StartDate
         {
             get
@@ -62,7 +62,7 @@ namespace Reservoom.ViewModels
             }
         }
 
-        private DateTime _endDate = new DateTime(2021, 1, 8);
+        private DateTime _endDate = new DateTime(2024, 8, 30);
         public DateTime EndDate
         {
             get

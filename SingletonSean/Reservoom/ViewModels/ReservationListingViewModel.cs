@@ -11,6 +11,7 @@ namespace Reservoom.ViewModels
         private readonly Hotel _hotel;
         public IEnumerable<ReservationViewModel> Reservations => _reservations;
         public ICommand MakeReservationCommand { get; }
+        public ICommand LoadReservationCommand { get; }
         public ReservationListingViewModel(Hotel hotel, NavigationService navigationService)
         {
             _hotel = hotel;
@@ -19,16 +20,23 @@ namespace Reservoom.ViewModels
             //_reservations.Add(new ReservationViewModel(new Reservation(new RoomID(3, 2), "Joe", DateTime.MinValue, DateTime.MaxValue)));
             //_reservations.Add(new ReservationViewModel(new Reservation(new RoomID(2, 4), "Mary", DateTime.MinValue, DateTime.MaxValue)));
             MakeReservationCommand = new NavigateCommand(navigationService);
-            UpdateReservations();
+            LoadReservationCommand = new LoadReservationsCommand(this, hotel);
+            //UpdateReservations();
         }
-        private void UpdateReservations()
+        public void UpdateReservations(IEnumerable<Reservation> reservations)
         {
             _reservations.Clear();
-            foreach (Reservation reservation in _hotel.GetAllReservations())
+            foreach (Reservation reservation in reservations)
             {
                 ReservationViewModel reservationViewModel = new ReservationViewModel(reservation);
                 _reservations.Add(reservationViewModel);
             }
+        }
+        public static ReservationListingViewModel LoadViewModel(Hotel hotel, NavigationService navigationService)
+        {
+            ReservationListingViewModel viewModel = new ReservationListingViewModel(hotel, navigationService);
+            viewModel.LoadReservationCommand.Execute(null);
+            return viewModel;
         }
     }
 }
