@@ -8,15 +8,17 @@
         xmlns:viewmodels ="clr-namespace:Reservoom.ViewModels"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid MaxWidth="600" Margin="20 10">
-        <Grid.Resources>
-            <DataTemplate DataType="{x:Type viewmodels:ReservationListingViewModel}">
-                <views:ReservationListingView/>
-            </DataTemplate>
-            <DataTemplate DataType="{x:Type viewmodels:MakeReservationViewModel}">
-                <views:MakeReservationView/>
-            </DataTemplate>
-        </Grid.Resources>
-        <ContentControl Content="{Binding CurrentViewModel}"/>
-    </Grid>
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <Grid MaxWidth="600" Margin="20 10">
+            <Grid.Resources>
+                <DataTemplate DataType="{x:Type viewmodels:ReservationListingViewModel}">
+                    <views:ReservationListingView/>
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type viewmodels:MakeReservationViewModel}">
+                    <views:MakeReservationView/>
+                </DataTemplate>
+            </Grid.Resources>
+            <ContentControl Content="{Binding CurrentViewModel}"/>
+        </Grid>
+    </ScrollViewer>
 </Window>

@@ -17,9 +17,6 @@ namespace Reservoom.ViewModels
         {
             _hotelStore = hotelStore;
             _reservations = new ObservableCollection<ReservationViewModel>();
-            //_reservations.Add(new ReservationViewModel(new Reservation(new RoomID(1, 2), "SingletonSean", DateTime.MinValue, DateTime.MaxValue)));
-            //_reservations.Add(new ReservationViewModel(new Reservation(new RoomID(3, 2), "Joe", DateTime.MinValue, DateTime.MaxValue)));
-            //_reservations.Add(new ReservationViewModel(new Reservation(new RoomID(2, 4), "Mary", DateTime.MinValue, DateTime.MaxValue)));
             MakeReservationCommand = new NavigateCommand(navigationService);
             LoadReservationCommand = new LoadReservationsCommand(this, hotelStore);
             //UpdateReservations();
