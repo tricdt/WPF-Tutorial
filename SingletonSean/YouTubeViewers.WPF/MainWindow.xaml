@@ -5,9 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:YouTubeViewers.WPF"
         xmlns:views ="clr-namespace:YouTubeViewers.WPF.Views"
+        xmlns:custom ="clr-namespace:ModalControl;assembly=ModalControl"
+        xmlns:viewmodels ="clr-namespace:YouTubeViewers.WPF.ViewModels"
         mc:Ignorable="d"
         Title="YouTube Viewers" Height="450" Width="800">
-    <Grid>
-        <views:YouTubeViewersView MaxWidth="1000" Margin="25"/>
-    </Grid>
+    <Window.Resources>
+        <DataTemplate DataType="{x:Type viewmodels:AddYouTubeViewerViewModel}">
+            <views:AddYouTubeViewerView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodels:EditYouTubeViewerViewModel}">
+            <views:EditYouTubeViewerView/>
+        </DataTemplate>
+    </Window.Resources>
+    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+        <Grid>
+            <custom:Modal Panel.ZIndex="1" IsOpen="{Binding IsModalOpen}">
+                <ContentControl Margin="50 25" Content="{Binding CurrentModalViewModel}"/>
+            </custom:Modal>
+            <views:YouTubeViewersView MaxWidth="1000" Margin="25"/>
+        </Grid>
+    </ScrollViewer>
+
 </Window>

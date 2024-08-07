@@ -13,6 +13,12 @@
     <Compile Update="Components\YouTubeViewersListing.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\AddYouTubeViewerView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\EditYouTubeViewerView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\YouTubeViewersView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -25,6 +31,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\AddYouTubeViewerView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\EditYouTubeViewerView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\YouTubeViewersView.xaml">
