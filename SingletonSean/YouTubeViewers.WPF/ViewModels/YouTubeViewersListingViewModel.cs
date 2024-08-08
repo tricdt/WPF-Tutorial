@@ -10,8 +10,8 @@ namespace YouTubeViewers.WPF.ViewModels
         {
             _youTubeViewersListingItemViewModels = new ObservableCollection<YouTubeViewersListingItemViewModel>();
             _youTubeViewersListingItemViewModels.Add(new YouTubeViewersListingItemViewModel("Sala"));
-            _youTubeViewersListingItemViewModels.Add(new YouTubeViewersListingItemViewModel("Sala1"));
-            _youTubeViewersListingItemViewModels.Add(new YouTubeViewersListingItemViewModel("Sala2"));
+            _youTubeViewersListingItemViewModels.Add(new YouTubeViewersListingItemViewModel("SingletonSean"));
+            _youTubeViewersListingItemViewModels.Add(new YouTubeViewersListingItemViewModel("TriNguyen"));
         }
     }
 }
