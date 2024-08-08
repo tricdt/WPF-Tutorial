@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using YouTubeViewers.WPF.Stores;
 using YouTubeViewers.WPF.ViewModels;
 namespace YouTubeViewers.WPF
 {
@@ -7,11 +8,17 @@ namespace YouTubeViewers.WPF
     /// </summary>
     public partial class App : Application
     {
+        private readonly SelectedYouTubeViewerStore _selectedYouTubeViewerStore;
+        public App()
+        {
+            _selectedYouTubeViewerStore = new SelectedYouTubeViewerStore();
+        }
         protected override void OnStartup(StartupEventArgs e)
         {
+
             MainWindow = new MainWindow()
             {
-                DataContext = new MainViewModel(new Stores.ModalNavigationStore(), new YouTubeViewersViewModel())
+                DataContext = new MainViewModel(new ModalNavigationStore(), new YouTubeViewersViewModel(_selectedYouTubeViewerStore))
             };
             MainWindow.Show();
             base.OnStartup(e);

@@ -1,13 +1,14 @@
-﻿namespace YouTubeViewers.WPF.ViewModels
+﻿using YouTubeViewers.WPF.Stores;
+namespace YouTubeViewers.WPF.ViewModels
 {
     public class YouTubeViewersViewModel : ViewModelBase
     {
         public YouTubeViewersListingViewModel YouTubeViewersListingViewModel { get; }
         public YouTubeViewersDetailsViewModel YouTubeViewersDetailsViewModel { get; }
-        public YouTubeViewersViewModel()
+        public YouTubeViewersViewModel(SelectedYouTubeViewerStore selectedYouTubeViewerStore)
         {
-            YouTubeViewersListingViewModel = new YouTubeViewersListingViewModel();
-            YouTubeViewersDetailsViewModel = new YouTubeViewersDetailsViewModel();
+            YouTubeViewersListingViewModel = new YouTubeViewersListingViewModel(selectedYouTubeViewerStore);
+            YouTubeViewersDetailsViewModel = new YouTubeViewersDetailsViewModel(selectedYouTubeViewerStore);
         }
     }
 }
