@@ -12,7 +12,33 @@
                 BorderThickness="1"
                 CornerRadius="5"
                 SnapsToDevicePixels="True">
-            <Grid></Grid>
+            <Grid>
+                <Grid.OpacityMask>
+                    <VisualBrush Visual="{Binding ElementName=border}" />
+                </Grid.OpacityMask>
+                <Border
+                    x:Name="border"
+                    Background="White"
+                    CornerRadius="5" />
+                <ListView
+                    BorderThickness="0"
+                    ItemsSource="{Binding YouTubeViewersListingItemViewModels}"
+                    ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                    SelectedItem="{Binding SelectedYouTubeViewerListingItemViewModel}"
+                    SelectionMode="Single">
+                    <ListView.ItemContainerStyle>
+                        <Style TargetType="ListViewItem">
+                            <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                            <Setter Property="AutomationProperties.AutomationId" Value="{Binding Username, StringFormat={}{0}_YouTubeViewerListingItem}" />
+                        </Style>
+                    </ListView.ItemContainerStyle>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <local:YouTubeViewersListingItem />
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
         </Border>
     </Grid>
 </UserControl>
