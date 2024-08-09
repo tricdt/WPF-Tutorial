@@ -12,7 +12,7 @@ namespace YouTubeViewers.WPF.ViewModels
             set { _youTubeViewer = value; }
         }
 
-        public string Username { get; }
+        public string Username => _youTubeViewer.Username;
         private bool _isDeleting;
         public bool IsDeleting
         {
@@ -31,7 +31,7 @@ namespace YouTubeViewers.WPF.ViewModels
 
         public YouTubeViewersListingItemViewModel(YouTubeViewer youTubeViewer)
         {
-            Username = youTubeViewer.Username;
+            _youTubeViewer = youTubeViewer;
             IsDeleting = false;
         }
     }
