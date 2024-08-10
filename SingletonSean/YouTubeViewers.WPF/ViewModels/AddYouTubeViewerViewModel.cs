@@ -1,4 +1,6 @@
-﻿using YouTubeViewers.WPF.Stores;
+﻿using System.Windows.Input;
+using YouTubeViewers.WPF.Commands;
+using YouTubeViewers.WPF.Stores;
 
 namespace YouTubeViewers.WPF.ViewModels
 {
@@ -8,7 +10,9 @@ namespace YouTubeViewers.WPF.ViewModels
         public YouTubeViewerDetailsFormViewModel YouTubeViewerDetailsFormViewModel { get; }
         public AddYouTubeViewerViewModel(ModalNavigationStore modalNavigationStore)
         {
-
+            ICommand submitCommand = new AddYouTubeViewerCommand();
+            ICommand cancelCommand = new CloseModalCommand(modalNavigationStore);
+            YouTubeViewerDetailsFormViewModel = new YouTubeViewerDetailsFormViewModel(submitCommand, cancelCommand);
         }
     }
 }
