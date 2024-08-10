@@ -1,5 +1,5 @@
 ﻿using System.Collections.ObjectModel;
-using YouTubeViewers.WPF.Models;
+using YouTubeViewers.Domain.Models;
 using YouTubeViewers.WPF.Stores;
 namespace YouTubeViewers.WPF.ViewModels
 {
