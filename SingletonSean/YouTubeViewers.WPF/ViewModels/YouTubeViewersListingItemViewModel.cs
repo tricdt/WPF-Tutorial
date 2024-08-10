@@ -1,5 +1,7 @@
 ﻿using System.Windows.Input;
+using YouTubeViewers.WPF.Commands;
 using YouTubeViewers.WPF.Models;
+using YouTubeViewers.WPF.Stores;
 namespace YouTubeViewers.WPF.ViewModels
 {
     public class YouTubeViewersListingItemViewModel : ViewModelBase
@@ -29,8 +31,9 @@ namespace YouTubeViewers.WPF.ViewModels
         public ICommand EditCommand { get; }
         public ICommand DeleteCommand { get; }
 
-        public YouTubeViewersListingItemViewModel(YouTubeViewer youTubeViewer)
+        public YouTubeViewersListingItemViewModel(YouTubeViewer youTubeViewer, ModalNavigationStore modalNavigationStore)
         {
+            EditCommand = new OpenEditYouTubeViewerCommand(this, modalNavigationStore);
             _youTubeViewer = youTubeViewer;
             IsDeleting = false;
         }

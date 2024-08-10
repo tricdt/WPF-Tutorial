@@ -22,7 +22,7 @@
                        Style="{StaticResource PageHeader}"
                        Text="YouTube Viewers" />
 
-            <Button Grid.Column="1" Content="Add" VerticalAlignment="Center" Padding="15 5"/>
+            <Button Grid.Column="1" Content="Add" VerticalAlignment="Center" Padding="15 5" Command="{Binding AddYouTubeViewersCommand}"/>
         </Grid>
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>

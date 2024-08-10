@@ -1,14 +1,18 @@
-﻿using YouTubeViewers.WPF.Stores;
+﻿using System.Windows.Input;
+using YouTubeViewers.WPF.Commands;
+using YouTubeViewers.WPF.Stores;
 namespace YouTubeViewers.WPF.ViewModels
 {
     public class YouTubeViewersViewModel : ViewModelBase
     {
         public YouTubeViewersListingViewModel YouTubeViewersListingViewModel { get; }
         public YouTubeViewersDetailsViewModel YouTubeViewersDetailsViewModel { get; }
-        public YouTubeViewersViewModel(SelectedYouTubeViewerStore selectedYouTubeViewerStore)
+        public ICommand AddYouTubeViewersCommand { get; }
+        public YouTubeViewersViewModel(SelectedYouTubeViewerStore selectedYouTubeViewerStore, ModalNavigationStore modalNavigationStore)
         {
-            YouTubeViewersListingViewModel = new YouTubeViewersListingViewModel(selectedYouTubeViewerStore);
+            YouTubeViewersListingViewModel = new YouTubeViewersListingViewModel(selectedYouTubeViewerStore, modalNavigationStore);
             YouTubeViewersDetailsViewModel = new YouTubeViewersDetailsViewModel(selectedYouTubeViewerStore);
+            AddYouTubeViewersCommand = new OpenAddYouTubeViewerCommand(modalNavigationStore);
         }
     }
 }

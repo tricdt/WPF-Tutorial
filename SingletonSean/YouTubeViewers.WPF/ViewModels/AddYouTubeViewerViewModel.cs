@@ -1,8 +1,11 @@
-﻿namespace YouTubeViewers.WPF.ViewModels
+﻿using YouTubeViewers.WPF.Stores;
+
+namespace YouTubeViewers.WPF.ViewModels
 {
     public class AddYouTubeViewerViewModel : ViewModelBase
     {
-        public AddYouTubeViewerViewModel()
+        private readonly ModalNavigationStore _modalNavigationStore;
+        public AddYouTubeViewerViewModel(ModalNavigationStore modalNavigationStore)
         {
 
         }
