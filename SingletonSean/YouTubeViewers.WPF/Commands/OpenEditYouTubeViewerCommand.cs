@@ -1,4 +1,5 @@
-﻿using YouTubeViewers.WPF.Stores;
+﻿using YouTubeViewers.WPF.Models;
+using YouTubeViewers.WPF.Stores;
 using YouTubeViewers.WPF.ViewModels;
 
 namespace YouTubeViewers.WPF.Commands
@@ -15,7 +16,8 @@ namespace YouTubeViewers.WPF.Commands
 
         public override void Execute(object parameter)
         {
-            EditYouTubeViewerViewModel editYouTubeViewerViewModel = new EditYouTubeViewerViewModel();
+            YouTubeViewer youTubeViewer = _youTubeViewersListingItemViewModel.YouTubeViewer;
+            EditYouTubeViewerViewModel editYouTubeViewerViewModel = new EditYouTubeViewerViewModel(youTubeViewer, _modalNavigationStore);
             _modalNavigationStore.CurrentViewModel = editYouTubeViewerViewModel;
         }
     }

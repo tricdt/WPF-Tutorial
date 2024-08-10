@@ -7,6 +7,9 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Components\YouTubeViewerDetailsForm.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Components\YouTubeViewersDetails.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -27,6 +30,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Components\YouTubeViewerDetailsForm.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Components\YouTubeViewersDetails.xaml">
       <SubType>Designer</SubType>
     </Page>
