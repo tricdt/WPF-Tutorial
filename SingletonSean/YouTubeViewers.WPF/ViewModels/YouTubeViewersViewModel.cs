@@ -8,11 +8,13 @@ namespace YouTubeViewers.WPF.ViewModels
         public YouTubeViewersListingViewModel YouTubeViewersListingViewModel { get; }
         public YouTubeViewersDetailsViewModel YouTubeViewersDetailsViewModel { get; }
         public ICommand AddYouTubeViewersCommand { get; }
-        public YouTubeViewersViewModel(SelectedYouTubeViewerStore selectedYouTubeViewerStore, ModalNavigationStore modalNavigationStore)
+        public YouTubeViewersViewModel(SelectedYouTubeViewerStore selectedYouTubeViewerStore,
+            ModalNavigationStore modalNavigationStore,
+            YouTubeViewersStore youTubeViewersStore)
         {
             YouTubeViewersListingViewModel = new YouTubeViewersListingViewModel(selectedYouTubeViewerStore, modalNavigationStore);
             YouTubeViewersDetailsViewModel = new YouTubeViewersDetailsViewModel(selectedYouTubeViewerStore);
-            AddYouTubeViewersCommand = new OpenAddYouTubeViewerCommand(modalNavigationStore);
+            AddYouTubeViewersCommand = new OpenAddYouTubeViewerCommand(modalNavigationStore, youTubeViewersStore);
         }
     }
 }

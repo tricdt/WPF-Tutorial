@@ -23,6 +23,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\YouTubeViewers.Domain\YouTubeViewers.Domain.csproj" />
+    <ProjectReference Include="..\YouTubeViewers.EntityFramework\YouTubeViewers.EntityFramework.csproj" />
   </ItemGroup>
 
 </Project>

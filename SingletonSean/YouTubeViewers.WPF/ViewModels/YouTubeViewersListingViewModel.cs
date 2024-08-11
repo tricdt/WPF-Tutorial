@@ -27,9 +27,9 @@ namespace YouTubeViewers.WPF.ViewModels
         {
             _selectedYouTubeViewerStore = selectedYouTubeViewerStore;
             _youTubeViewersListingItemViewModels = new ObservableCollection<YouTubeViewersListingItemViewModel>();
-            _youTubeViewersListingItemViewModels.Add(new YouTubeViewersListingItemViewModel(new YouTubeViewer("Sala", true, false), modalNavigationStore));
-            _youTubeViewersListingItemViewModels.Add(new YouTubeViewersListingItemViewModel(new YouTubeViewer("SingletonSean", false, true), modalNavigationStore));
-            _youTubeViewersListingItemViewModels.Add(new YouTubeViewersListingItemViewModel(new YouTubeViewer("TriNguyen", true, false), modalNavigationStore));
+            _youTubeViewersListingItemViewModels.Add(new YouTubeViewersListingItemViewModel(new YouTubeViewer(new Guid(), "Sala", true, false), modalNavigationStore));
+            _youTubeViewersListingItemViewModels.Add(new YouTubeViewersListingItemViewModel(new YouTubeViewer(new Guid(), "SingletonSean", false, true), modalNavigationStore));
+            _youTubeViewersListingItemViewModels.Add(new YouTubeViewersListingItemViewModel(new YouTubeViewer(new Guid(), "TriNguyen", true, false), modalNavigationStore));
         }
     }
 }

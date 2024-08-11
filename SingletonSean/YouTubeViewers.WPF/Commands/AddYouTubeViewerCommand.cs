@@ -1,10 +1,31 @@
-﻿namespace YouTubeViewers.WPF.Commands
+﻿
+using YouTubeViewers.Domain.Models;
+using YouTubeViewers.WPF.Stores;
+using YouTubeViewers.WPF.ViewModels;
+
+namespace YouTubeViewers.WPF.Commands
 {
-    public class AddYouTubeViewerCommand : CommandBase
+    public class AddYouTubeViewerCommand : AsyncCommandBase
     {
-        public override void Execute(object parameter)
+        private readonly AddYouTubeViewerViewModel _addYouTubeViewerViewModel;
+        private readonly YouTubeViewersStore _youTubeViewersStore;
+        private readonly ModalNavigationStore _modalNavigationStore;
+
+        public AddYouTubeViewerCommand(AddYouTubeViewerViewModel addYouTubeViewerViewModel,
+            YouTubeViewersStore youTubeViewersStore,
+            ModalNavigationStore modalNavigationStore)
         {
-            throw new NotImplementedException();
+            _addYouTubeViewerViewModel = addYouTubeViewerViewModel;
+            _youTubeViewersStore = youTubeViewersStore;
+            _modalNavigationStore = modalNavigationStore;
+        }
+
+        public override async Task ExecuteAsync(object parameter)
+        {
+            YouTubeViewerDetailsFormViewModel formViewModel = _addYouTubeViewerViewModel.YouTubeViewerDetailsFormViewModel;
+            YouTubeViewer youTubeViewer = new YouTubeViewer(Guid.NewGuid(), formViewModel.Username, formViewModel.IsSubscribed, formViewModel.IsSubscribed);
+            await _youTubeViewersStore.Add(youTubeViewer);
+            _modalNavigationStore.Close();
         }
     }
 }
