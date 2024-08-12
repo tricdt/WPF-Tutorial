@@ -36,7 +36,7 @@ namespace YouTubeViewers.WPF
 
             MainWindow = new MainWindow()
             {
-                DataContext = new MainViewModel(_modalNavigationStore, new YouTubeViewersViewModel(_selectedYouTubeViewerStore, _modalNavigationStore, _youtubeViewersStore))
+                DataContext = new MainViewModel(_modalNavigationStore, YouTubeViewersViewModel.LoadViewModel(_selectedYouTubeViewerStore, _modalNavigationStore, _youtubeViewersStore))
             };
             MainWindow.Show();
             base.OnStartup(e);
