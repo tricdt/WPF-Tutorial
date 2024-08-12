@@ -14,12 +14,14 @@ namespace YouTubeViewers.WPF.ViewModels
 
         public YouTubeViewersListingItemViewModel SelectedYouTubeViewerListingItemViewModel
         {
-            get { return _selectedYouTubeViewerListingItemViewModel; }
+            get
+            {
+                return _youTubeViewersListingItemViewModels
+                    .FirstOrDefault(y => y.YouTubeViewer?.Id == _selectedYouTubeViewerStore.SelectedYoutubeViewer?.Id);
+            }
             set
             {
-                _selectedYouTubeViewerListingItemViewModel = value;
-                OnPropertyChanged(nameof(SelectedYouTubeViewerListingItemViewModel));
-                _selectedYouTubeViewerStore.SelectedYoutubeViewer = _selectedYouTubeViewerListingItemViewModel?.YouTubeViewer;
+                _selectedYouTubeViewerStore.SelectedYoutubeViewer = value?.YouTubeViewer;
             }
         }
 
@@ -34,9 +36,21 @@ namespace YouTubeViewers.WPF.ViewModels
             _youTubeViewersStore = youTubeViewersStore;
             _youTubeViewersStore.YouTubeViewersLoaded += _youTubeViewersStore_YouTubeViewersLoaded;
             _youTubeViewersStore.YouTubeViewerAdded += _youTubeViewersStore_YouTubeViewerAdded;
+            _youTubeViewersListingItemViewModels.CollectionChanged += YouTubeViewersListingItemViewModels_CollectionChanged;
+            _selectedYouTubeViewerStore.SelectedYouTubeViewerChanged += SelectedYouTubeViewerStore_SelectedYouTubeViewerChanged;
             //_youTubeViewersListingItemViewModels.Add(new YouTubeViewersListingItemViewModel(new YouTubeViewer(new Guid(), "Sala", true, false), modalNavigationStore));
             //_youTubeViewersListingItemViewModels.Add(new YouTubeViewersListingItemViewModel(new YouTubeViewer(new Guid(), "SingletonSean", false, true), modalNavigationStore));
             //_youTubeViewersListingItemViewModels.Add(new YouTubeViewersListingItemViewModel(new YouTubeViewer(new Guid(), "TriNguyen", true, false), modalNavigationStore));
+        }
+
+        private void SelectedYouTubeViewerStore_SelectedYouTubeViewerChanged()
+        {
+            OnPropertyChanged(nameof(SelectedYouTubeViewerListingItemViewModel));
+        }
+
+        private void YouTubeViewersListingItemViewModels_CollectionChanged(object? sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+        {
+            OnPropertyChanged(nameof(SelectedYouTubeViewerListingItemViewModel));
         }
 
         private void _youTubeViewersStore_YouTubeViewerAdded(YouTubeViewer youTubeViewer)

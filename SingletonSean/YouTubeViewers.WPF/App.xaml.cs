@@ -20,12 +20,13 @@ namespace YouTubeViewers.WPF
         {
             string CONNECTION_STRING = "Data Source=ODEGAARD\\SQLEXPRESS;Initial Catalog=YoutubeViewer;Integrated Security=True;Trust Server Certificate=True";
             _youtubeViewersDbContextFactory = new YouTubeViewersDbContextFactory(new DbContextOptionsBuilder().UseSqlServer(CONNECTION_STRING).Options);
-            _selectedYouTubeViewerStore = new SelectedYouTubeViewerStore();
             _modalNavigationStore = new ModalNavigationStore();
             _youtubeViewersStore = new YouTubeViewersStore(new GetAllYouTubeViewersQuery(_youtubeViewersDbContextFactory),
                 new CreateYouTubeViewerCommand(_youtubeViewersDbContextFactory),
                 new UpdateYouTubeViewerCommand(_youtubeViewersDbContextFactory),
                 new DeleteYouTubeViewerCommand(_youtubeViewersDbContextFactory));
+            _selectedYouTubeViewerStore = new SelectedYouTubeViewerStore(_youtubeViewersStore);
+
         }
         protected override void OnStartup(StartupEventArgs e)
         {
