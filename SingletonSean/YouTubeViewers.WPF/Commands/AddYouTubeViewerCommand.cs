@@ -23,7 +23,7 @@ namespace YouTubeViewers.WPF.Commands
         public override async Task ExecuteAsync(object parameter)
         {
             YouTubeViewerDetailsFormViewModel formViewModel = _addYouTubeViewerViewModel.YouTubeViewerDetailsFormViewModel;
-            YouTubeViewer youTubeViewer = new YouTubeViewer(Guid.NewGuid(), formViewModel.Username, formViewModel.IsSubscribed, formViewModel.IsSubscribed);
+            YouTubeViewer youTubeViewer = new YouTubeViewer(Guid.NewGuid(), formViewModel.Username, formViewModel.IsSubscribed, formViewModel.IsMember);
             await _youTubeViewersStore.Add(youTubeViewer);
             _modalNavigationStore.Close();
         }

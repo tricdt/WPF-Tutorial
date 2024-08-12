@@ -30,7 +30,7 @@ namespace YouTubeViewers.WPF.Stores
         public async Task Load()
         {
             IEnumerable<YouTubeViewer> youTubeViewers = await _getAllYouTubeViewersQuery.Execute();
-
+            await Task.Delay(1000);
             _youTubeViewers.Clear();
             _youTubeViewers.AddRange(youTubeViewers);
 
