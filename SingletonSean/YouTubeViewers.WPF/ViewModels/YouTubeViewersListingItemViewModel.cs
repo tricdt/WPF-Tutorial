@@ -32,10 +32,16 @@ namespace YouTubeViewers.WPF.ViewModels
 
         public YouTubeViewersListingItemViewModel(YouTubeViewer youTubeViewer, ModalNavigationStore modalNavigationStore, YouTubeViewersStore youTubeViewersStore)
         {
-            EditCommand = new OpenEditYouTubeViewerCommand(this, modalNavigationStore);
+            EditCommand = new OpenEditYouTubeViewerCommand(this, modalNavigationStore, youTubeViewersStore);
             DeleteCommand = new DeleteYouTubeViewerCommand(this, youTubeViewersStore);
             _youTubeViewer = youTubeViewer;
             IsDeleting = false;
+        }
+        public void Update(YouTubeViewer youTubeViewer)
+        {
+            YouTubeViewer = youTubeViewer;
+
+            OnPropertyChanged(nameof(Username));
         }
     }
 }
