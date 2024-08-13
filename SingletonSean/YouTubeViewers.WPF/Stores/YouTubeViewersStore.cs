@@ -15,6 +15,7 @@ namespace YouTubeViewers.WPF.Stores
         public IEnumerable<YouTubeViewer> YouTubeViewers => _youTubeViewers;
         public event Action YouTubeViewersLoaded;
         public event Action<YouTubeViewer> YouTubeViewerAdded;
+        public event Action<Guid> YouTubeViewerDeleted;
 
         public YouTubeViewersStore(IGetAllYouTubeViewersQuery getAllYouTubeViewersQuery,
             ICreateYouTubeViewerCommand createYouTubeViewerCommand,
@@ -42,6 +43,15 @@ namespace YouTubeViewers.WPF.Stores
             await _createYouTubeViewerCommand.Execute(youTubeViewer);
             _youTubeViewers.Add(youTubeViewer);
             YouTubeViewerAdded?.Invoke(youTubeViewer);
+        }
+
+        public async Task Delete(Guid id)
+        {
+            await _deleteYouTubeViewerCommand.Execute(id);
+
+            _youTubeViewers.RemoveAll(y => y.Id == id);
+
+            YouTubeViewerDeleted?.Invoke(id);
         }
     }
 }
