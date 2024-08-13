@@ -17,8 +17,20 @@ namespace YouTubeViewers.WPF.Commands
 
         public override async Task ExecuteAsync(object parameter)
         {
+            _youTubeViewersListingItemViewModel.IsDeleting = true;
             YouTubeViewer youTubeViewer = _youTubeViewersListingItemViewModel.YouTubeViewer;
-            await _youTubeViewersStore.Delete(youTubeViewer.Id);
+            try
+            {
+                await Task.Delay(5000);
+                await _youTubeViewersStore.Delete(youTubeViewer.Id);
+            }
+            catch (Exception)
+            {
+            }
+            finally
+            {
+                _youTubeViewersListingItemViewModel.IsDeleting = false;
+            }
         }
     }
 }
