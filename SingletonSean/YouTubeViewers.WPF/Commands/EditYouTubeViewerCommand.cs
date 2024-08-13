@@ -21,9 +21,22 @@ namespace YouTubeViewers.WPF.Commands
         public override async void Execute(object parameter)
         {
             YouTubeViewerDetailsFormViewModel formViewModel = _editYouTubeViewerViewModel.YouTubeViewerDetailsFormViewModel;
+            formViewModel.IsSubmitting = true;
             YouTubeViewer youTubeViewer = new YouTubeViewer(_editYouTubeViewerViewModel.YouTubeViewerId, formViewModel.Username, formViewModel.IsSubscribed, formViewModel.IsMember);
-            await _youTubeViewersStore.Update(youTubeViewer);
-            _modalNavigationStore.Close();
+            try
+            {
+                await Task.Delay(5000);
+                await _youTubeViewersStore.Update(youTubeViewer);
+                _modalNavigationStore.Close();
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                formViewModel.IsSubmitting = false;
+            }
         }
     }
 }
