@@ -47,7 +47,6 @@ namespace YouTubeViewers.WPF.Stores
         public async Task Delete(Guid id)
         {
             await _deleteYouTubeViewerCommand.Execute(id);
-
             _youTubeViewers.RemoveAll(y => y.Id == id);
 
             YouTubeViewerDeleted?.Invoke(id);
