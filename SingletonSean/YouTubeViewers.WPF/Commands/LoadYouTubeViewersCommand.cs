@@ -17,9 +17,21 @@ namespace YouTubeViewers.WPF.Commands
         public override async Task ExecuteAsync(object parameter)
         {
             _youTubeViewersViewModel.IsLoading = true;
-            Task.Delay(5000);
-            await _youTubeViewersStore.Load();
-            _youTubeViewersViewModel.IsLoading = false;
+            _youTubeViewersViewModel.ErrorMessage = null;
+            try
+            {
+                Task.Delay(5000);
+                await _youTubeViewersStore.Load();
+            }
+            catch (Exception)
+            {
+                _youTubeViewersViewModel.ErrorMessage = "Failed to load YouTube viewers. Please restart the application.";
+            }
+            finally
+            {
+                _youTubeViewersViewModel.IsLoading = false;
+            }
+
         }
     }
 }

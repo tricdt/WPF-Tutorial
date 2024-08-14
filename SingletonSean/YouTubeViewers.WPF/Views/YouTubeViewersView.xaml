@@ -21,6 +21,10 @@
                 </Style>
             </StackPanel.Style>
             <custom:LoadingSpinner Diameter="100" IsLoading="True" Thickness="3"/>
+            <TextBlock
+                Margin="0,10,0,0"
+                Text="Loading YouTube Viewers..."
+                TextAlignment="Center" />
         </StackPanel>
         <Grid>
             <Grid.Style>
@@ -33,30 +37,57 @@
                     </Style.Triggers>
                 </Style>
             </Grid.Style>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="auto" />
-                <RowDefinition Height="*" />
-            </Grid.RowDefinitions>
-            <Grid Grid.Row="0">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="auto" />
-                </Grid.ColumnDefinitions>
+            <Grid>
+                <Grid.Style>
+                    <Style TargetType="Grid">
+                        <Setter Property="Visibility" Value="Collapsed" />
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding HasErrorMessage}" Value="True">
+                                <Setter Property="Visibility" Value="Visible" />
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Grid.Style>
 
-                <TextBlock Grid.Column="0"
-                   Style="{StaticResource PageHeader}"
-                   Text="YouTube Viewers" />
-
-                <Button Grid.Column="1" Content="Add" VerticalAlignment="Center" Padding="15 5" Command="{Binding AddYouTubeViewersCommand}"/>
+                <TextBlock
+                    VerticalAlignment="Center"
+                    Style="{StaticResource ErrorMessage}"
+                    Text="{Binding ErrorMessage}"
+                    TextAlignment="Center" />
             </Grid>
-            <Grid Grid.Row="1">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="2*" />
-                </Grid.ColumnDefinitions>
-                <components:YouTubeViewersListing Grid.Column="0" DataContext="{Binding YouTubeViewersListingViewModel}"/>
-                <components:YouTubeViewersDetails Grid.Column="1" Margin="20,0,0,0" DataContext="{Binding YouTubeViewersDetailsViewModel}"/>
+            <Grid>
+                <Grid.Style>
+                    <Style TargetType="Grid">
+                        <Setter Property="Visibility" Value="Collapsed" />
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding HasErrorMessage}" Value="False">
+                                <Setter Property="Visibility" Value="Visible" />
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Grid.Style>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="auto" />
+                    </Grid.ColumnDefinitions>
 
+                    <TextBlock Grid.Column="0" Style="{StaticResource PageHeader}" Text="YouTube Viewers" />
+
+                    <Button Grid.Column="1" Content="Add" VerticalAlignment="Center" Padding="15 5" Command="{Binding AddYouTubeViewersCommand}"/>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="2*" />
+                    </Grid.ColumnDefinitions>
+                    <components:YouTubeViewersListing Grid.Column="0" DataContext="{Binding YouTubeViewersListingViewModel}"/>
+                    <components:YouTubeViewersDetails Grid.Column="1" Margin="20,0,0,0" DataContext="{Binding YouTubeViewersDetailsViewModel}"/>
+                </Grid>
             </Grid>
         </Grid>
     </Grid>

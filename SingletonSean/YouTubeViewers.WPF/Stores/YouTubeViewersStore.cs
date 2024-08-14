@@ -34,7 +34,6 @@ namespace YouTubeViewers.WPF.Stores
             await Task.Delay(1000);
             _youTubeViewers.Clear();
             _youTubeViewers.AddRange(youTubeViewers);
-
             YouTubeViewersLoaded?.Invoke();
         }
 
