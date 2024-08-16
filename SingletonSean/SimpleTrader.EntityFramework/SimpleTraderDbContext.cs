@@ -13,10 +13,6 @@ namespace SimpleTrader.EntityFramework
             modelBuilder.Entity<AssetTransaction>().OwnsOne(a => a.Stock);
             base.OnModelCreating(modelBuilder);
         }
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer("Data Source=ODEGAARD\\SQLEXPRESS;Initial Catalog=SimpleTraderDB;Integrated Security=True;Trust Server Certificate=True");
-            base.OnConfiguring(optionsBuilder);
-        }
+        public SimpleTraderDbContext(DbContextOptions options) : base(options) { }
     }
 }

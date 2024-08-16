@@ -12,7 +12,7 @@ using SimpleTrader.EntityFramework;
 namespace SimpleTrader.EntityFramework.Migrations
 {
     [DbContext(typeof(SimpleTraderDbContext))]
-    [Migration("20240815082313_init")]
+    [Migration("20240816013408_init")]
     partial class init
     {
         /// <inheritdoc />
