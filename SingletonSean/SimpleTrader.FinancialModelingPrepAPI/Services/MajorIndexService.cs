@@ -29,9 +29,9 @@ namespace SimpleTrader.FinancialModelingPrepAPI.Services
                 case MajorIndexType.DowJones:
                     return "AAPL";
                 case MajorIndexType.Nasdaq:
-                    return "IIXIX";
+                    return "HIINX";
                 case MajorIndexType.SP500:
-                    return "IINX";
+                    return "AACI";
                 default:
                     return "AAPL";
             }

@@ -10,7 +10,7 @@ namespace SimpleTrader.WPF
     {
         protected override void OnStartup(StartupEventArgs e)
         {
-            new MajorIndexService().GetMajorIndex(Domain.Models.MajorIndexType.DowJones).ContinueWith(task =>
+            new MajorIndexService().GetMajorIndex(Domain.Models.MajorIndexType.Nasdaq).ContinueWith(task =>
             {
                 var index = task.Result;
             });
