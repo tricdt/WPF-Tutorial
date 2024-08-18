@@ -20,6 +20,7 @@ namespace SimpleTrader.FinancialModelingPrepAPI.Services
             List<MajorIndex> majorIndexs = await _client.GetAsync<List<MajorIndex>>(uri);
             MajorIndex majorIndex = majorIndexs[0];
             majorIndex.Type = indexType;
+            majorIndex.IndexName = quote.symbol;
             majorIndex.Changes = Convert.ToDouble(quote.change);
             return majorIndex;
         }
