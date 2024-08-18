@@ -1,6 +1,8 @@
-﻿namespace SimpleTrader.WPF.ViewModels
+﻿using SimpleTrader.WPF.Models;
+
+namespace SimpleTrader.WPF.ViewModels
 {
-    public class ViewModelBase
+    public class ViewModelBase : ObservableObject
     {
     }
 }
