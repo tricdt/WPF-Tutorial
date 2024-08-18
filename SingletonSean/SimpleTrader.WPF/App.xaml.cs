@@ -7,6 +7,7 @@ namespace SimpleTrader.WPF
     /// </summary>
     public partial class App : Application
     {
+
         protected override void OnStartup(StartupEventArgs e)
         {
             //new MajorIndexService().GetMajorIndex(Domain.Models.MajorIndexType.Nasdaq).ContinueWith(task =>

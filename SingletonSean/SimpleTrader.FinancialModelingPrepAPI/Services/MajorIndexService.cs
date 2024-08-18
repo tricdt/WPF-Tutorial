@@ -1,26 +1,27 @@
-﻿using Newtonsoft.Json;
-using SimpleTrader.Domain.Models;
+﻿using SimpleTrader.Domain.Models;
 using SimpleTrader.Domain.Services;
-using System.Net.Http;
 namespace SimpleTrader.FinancialModelingPrepAPI.Services
 {
     public class MajorIndexService : IMajorIndexService
     {
+        private readonly FinancialModelingPrepHttpClient _client;
+
+        public MajorIndexService(FinancialModelingPrepHttpClient client)
+        {
+            _client = client;
+        }
+
         public async Task<MajorIndex> GetMajorIndex(MajorIndexType indexType)
         {
-            using (HttpClient client = new HttpClient())
-            {
-                string _apikey = "UbaYiNzmGPpOt4JR3965DmMzL4664AlI";
-                string uri = "https://financialmodelingprep.com/api/v3/quote-order/" + GetUriSuffix(indexType);
+            string uri = "quote-order/" + GetUriSuffix(indexType);
 
-                HttpResponseMessage response = await client.GetAsync($"{uri}?apikey={_apikey}");
-                string jsonResponse = await response.Content.ReadAsStringAsync();
-                Quote quoteResponse = JsonConvert.DeserializeObject<List<Quote>>(jsonResponse)[0];
-                MajorIndex majorIndex = JsonConvert.DeserializeObject<List<MajorIndex>>(jsonResponse)[0];
-                majorIndex.Type = indexType;
-                majorIndex.Changes = Convert.ToDouble(quoteResponse.change);
-                return majorIndex;
-            }
+            List<Quote> quotes = await _client.GetAsync<List<Quote>>(uri);
+            Quote quote = quotes[0];
+            List<MajorIndex> majorIndexs = await _client.GetAsync<List<MajorIndex>>(uri);
+            MajorIndex majorIndex = majorIndexs[0];
+            majorIndex.Type = indexType;
+            majorIndex.Changes = Convert.ToDouble(quote.change);
+            return majorIndex;
         }
         private string GetUriSuffix(MajorIndexType indexType)
         {
