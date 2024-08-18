@@ -1,5 +1,4 @@
-﻿using SimpleTrader.FinancialModelingPrepAPI.Services;
-using SimpleTrader.WPF.ViewModels;
+﻿using SimpleTrader.WPF.ViewModels;
 using System.Windows;
 namespace SimpleTrader.WPF
 {
@@ -10,10 +9,10 @@ namespace SimpleTrader.WPF
     {
         protected override void OnStartup(StartupEventArgs e)
         {
-            new MajorIndexService().GetMajorIndex(Domain.Models.MajorIndexType.Nasdaq).ContinueWith(task =>
-            {
-                var index = task.Result;
-            });
+            //new MajorIndexService().GetMajorIndex(Domain.Models.MajorIndexType.Nasdaq).ContinueWith(task =>
+            //{
+            //    var index = task.Result;
+            //});
             MainWindow = new MainWindow()
             {
                 DataContext = new MainViewModel()
