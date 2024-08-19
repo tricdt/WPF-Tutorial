@@ -1,4 +1,9 @@
-﻿using SimpleTrader.WPF.ViewModels;
+﻿using SimpleTrader.Domain.Models;
+using SimpleTrader.Domain.Services;
+using SimpleTrader.Domain.Services.TransactionServices;
+using SimpleTrader.EntityFramework.Services;
+using SimpleTrader.FinancialModelingPrepAPI.Services;
+using SimpleTrader.WPF.ViewModels;
 using System.Windows;
 namespace SimpleTrader.WPF
 {
@@ -10,10 +15,9 @@ namespace SimpleTrader.WPF
 
         protected override void OnStartup(StartupEventArgs e)
         {
-            //new MajorIndexService().GetMajorIndex(Domain.Models.MajorIndexType.Nasdaq).ContinueWith(task =>
-            //{
-            //    var index = task.Result;
-            //});
+            IDataService<Account> accountService = new AccountDataService(new EntityFramework.SimpleTraderDbContextFactory());
+            IStockPriceService stockPriceService = new StockPriceService(new FinancialModelingPrepAPI.FinancialModelingPrepHttpClient(new System.Net.Http.HttpClient(), new FinancialModelingPrepAPI.Models.FinancialModelingPrepAPIKey("")));
+            IBuyStockService buyStockService = new BuyStockService(stockPriceService, accountService);
             MainWindow = new MainWindow()
             {
                 DataContext = new MainViewModel()
