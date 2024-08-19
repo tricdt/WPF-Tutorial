@@ -30,7 +30,10 @@ namespace SimpleTrader.EntityFramework.Services
         {
             using (SimpleTraderDbContext context = _contextFactory.CreateDbContext())
             {
-                Account entity = await context.Accounts.Include(a => a.AssetTransactions).FirstOrDefaultAsync((e) => e.Id == id);
+                Account entity = await context.Accounts
+                 .Include(a => a.AccountHolder)
+                 .Include(a => a.AssetTransactions)
+                 .FirstOrDefaultAsync((e) => e.Id == id);
                 return entity;
             }
         }

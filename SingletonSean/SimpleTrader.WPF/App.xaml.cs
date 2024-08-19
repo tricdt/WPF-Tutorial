@@ -12,12 +12,15 @@ namespace SimpleTrader.WPF
     /// </summary>
     public partial class App : Application
     {
-
-        protected override void OnStartup(StartupEventArgs e)
+        string _api_key = "UbaYiNzmGPpOt4JR3965DmMzL4664AlI";
+        string baseUrl = "https://financialmodelingprep.com/api/v3/";
+        protected override async void OnStartup(StartupEventArgs e)
         {
             IDataService<Account> accountService = new AccountDataService(new EntityFramework.SimpleTraderDbContextFactory());
-            IStockPriceService stockPriceService = new StockPriceService(new FinancialModelingPrepAPI.FinancialModelingPrepHttpClient(new System.Net.Http.HttpClient(), new FinancialModelingPrepAPI.Models.FinancialModelingPrepAPIKey("")));
+            IStockPriceService stockPriceService = new StockPriceService(new FinancialModelingPrepAPI.FinancialModelingPrepHttpClient(new System.Net.Http.HttpClient() { BaseAddress = new Uri(baseUrl) }, new FinancialModelingPrepAPI.Models.FinancialModelingPrepAPIKey(_api_key)));
             IBuyStockService buyStockService = new BuyStockService(stockPriceService, accountService);
+            Account buyer = await accountService.Get(1);
+            buyStockService.BuyStock(buyer, "AAPL", 1);
             MainWindow = new MainWindow()
             {
                 DataContext = new MainViewModel()
