@@ -8,8 +8,8 @@ namespace SimpleTrader.WPF.Commands
         string _api_key = "UbaYiNzmGPpOt4JR3965DmMzL4664AlI";
         string baseUrl = "https://financialmodelingprep.com/api/v3/";
         private readonly INavigator _navigator;
-        private readonly ISimpleTraderViewModelAbstractFactory _viewModelFactory;
-        public UpdateCurrentViewModelCommand(INavigator navigator, ISimpleTraderViewModelAbstractFactory viewModelFactory)
+        private readonly ISimpleTraderViewModelFactory _viewModelFactory;
+        public UpdateCurrentViewModelCommand(INavigator navigator, ISimpleTraderViewModelFactory viewModelFactory)
         {
             _navigator = navigator;
             _viewModelFactory = viewModelFactory;

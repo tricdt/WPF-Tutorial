@@ -47,10 +47,12 @@ namespace SimpleTrader.WPF
             services.AddSingleton<IStockPriceService, StockPriceService>();
             services.AddSingleton<IBuyStockService, BuyStockService>();
             services.AddSingleton<IMajorIndexService, MajorIndexService>();
-            services.AddSingleton<ISimpleTraderViewModelFactory<PortfolioViewModel>, PortfolioViewModelFactory>();
-            services.AddSingleton<ISimpleTraderViewModelFactory<HomeViewModel>, HomeViewModelFactory>();
-            services.AddSingleton<ISimpleTraderViewModelFactory<MajorIndexListingViewModel>, MajorIndexListingViewModelFactory>();
-            services.AddSingleton<ISimpleTraderViewModelAbstractFactory, SimpleTraderViewModelAbstractFactory>();
+            services.AddTransient<PortfolioViewModel>();
+            services.AddTransient<MajorIndexListingViewModel>();
+            services.AddTransient<HomeViewModel>(CreateHomeViewModel);
+            services.AddSingleton<CreateViewModel<PortfolioViewModel>>(s => () => s.GetRequiredService<PortfolioViewModel>());
+            services.AddSingleton<CreateViewModel<HomeViewModel>>(s => () => s.GetRequiredService<HomeViewModel>());
+            services.AddSingleton<ISimpleTraderViewModelFactory, SimpleTraderViewModelFactory>();
             services.AddScoped<INavigator, Navigator>();
             services.AddScoped<MainViewModel>();
             services.AddScoped<MainWindow>(s => new MainWindow()
@@ -58,6 +60,11 @@ namespace SimpleTrader.WPF
                 DataContext = s.GetRequiredService<MainViewModel>()
             });
             return services.BuildServiceProvider();
+        }
+
+        private HomeViewModel CreateHomeViewModel(IServiceProvider service)
+        {
+            return new HomeViewModel(MajorIndexListingViewModel.LoadMajorIndexViewModel(service.GetRequiredService<IMajorIndexService>()));
         }
     }
 
