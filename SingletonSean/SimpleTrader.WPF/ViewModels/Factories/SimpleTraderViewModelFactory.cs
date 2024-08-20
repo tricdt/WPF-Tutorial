@@ -6,12 +6,15 @@ namespace SimpleTrader.WPF.ViewModels.Factories
     {
         private readonly CreateViewModel<HomeViewModel> _createHomeViewModel;
         private readonly CreateViewModel<PortfolioViewModel> _createPortfolioViewModel;
+        private readonly CreateViewModel<BuyViewModel> _createBuyViewModel;
 
         public SimpleTraderViewModelFactory(CreateViewModel<HomeViewModel> createHomeViewModel,
-            CreateViewModel<PortfolioViewModel> createPortfolioViewModel)
+            CreateViewModel<PortfolioViewModel> createPortfolioViewModel,
+            CreateViewModel<BuyViewModel> createBuyViewModel)
         {
             _createHomeViewModel = createHomeViewModel;
             _createPortfolioViewModel = createPortfolioViewModel;
+            _createBuyViewModel = createBuyViewModel;
         }
 
         public ViewModelBase CreateViewModel(ViewType viewType)
@@ -22,6 +25,8 @@ namespace SimpleTrader.WPF.ViewModels.Factories
                     return _createHomeViewModel();
                 case ViewType.Portfolio:
                     return _createPortfolioViewModel();
+                case ViewType.Buy:
+                    return _createBuyViewModel();
                 default:
                     throw new ArgumentException("The ViewType does not have a ViewModel.", "viewType");
             }

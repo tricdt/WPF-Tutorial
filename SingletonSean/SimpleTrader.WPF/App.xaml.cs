@@ -49,9 +49,11 @@ namespace SimpleTrader.WPF
             services.AddSingleton<IMajorIndexService, MajorIndexService>();
             services.AddTransient<PortfolioViewModel>();
             services.AddTransient<MajorIndexListingViewModel>();
-            services.AddTransient<HomeViewModel>(CreateHomeViewModel);
+            services.AddSingleton<HomeViewModel>(CreateHomeViewModel);
+            services.AddSingleton<BuyViewModel>();
             services.AddSingleton<CreateViewModel<PortfolioViewModel>>(s => () => s.GetRequiredService<PortfolioViewModel>());
             services.AddSingleton<CreateViewModel<HomeViewModel>>(s => () => s.GetRequiredService<HomeViewModel>());
+            services.AddSingleton<CreateViewModel<BuyViewModel>>(s => () => s.GetRequiredService<BuyViewModel>());
             services.AddSingleton<ISimpleTraderViewModelFactory, SimpleTraderViewModelFactory>();
             services.AddScoped<INavigator, Navigator>();
             services.AddScoped<MainViewModel>();
