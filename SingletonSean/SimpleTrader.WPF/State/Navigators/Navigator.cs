@@ -8,6 +8,7 @@ namespace SimpleTrader.WPF.State.Navigators
 {
     public class Navigator : ObservableObject, INavigator
     {
+        public event Action CurrentViewModelChanged;
         private ViewModelBase _currentViewModel;
         public ViewModelBase CurrentViewModel
         {
@@ -18,7 +19,7 @@ namespace SimpleTrader.WPF.State.Navigators
             set
             {
                 _currentViewModel = value;
-                OnPropertyChanged(nameof(CurrentViewModel));
+                CurrentViewModelChanged?.Invoke();
             }
         }
 

@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using SimpleTrader.Domain.Models;
 using SimpleTrader.Domain.Services;
 using SimpleTrader.Domain.Services.TransactionServices;
@@ -7,6 +8,7 @@ using SimpleTrader.EntityFramework.Services;
 using SimpleTrader.FinancialModelingPrepAPI;
 using SimpleTrader.FinancialModelingPrepAPI.Models;
 using SimpleTrader.FinancialModelingPrepAPI.Services;
+using SimpleTrader.WPF.HostBuilders;
 using SimpleTrader.WPF.State.Navigators;
 using SimpleTrader.WPF.ViewModels;
 using SimpleTrader.WPF.ViewModels.Factories;
@@ -19,10 +21,27 @@ namespace SimpleTrader.WPF
     /// </summary>
     public partial class App : Application
     {
+        private readonly IHost _host;
+        public App()
+        {
+            _host = CreateHostBuilder().Build();
+        }
+        public static IHostBuilder CreateHostBuilder(string[] args = null)
+        {
+            return Host.CreateDefaultBuilder(args)
+                .AddConfiguration()
+                .AddFinanceAPI()
+                .AddDbContext()
+                .AddServices()
+                .AddStores()
+                .AddViewModels()
+                .AddViews();
+        }
         string _api_key = "UbaYiNzmGPpOt4JR3965DmMzL4664AlI";
         string baseUrl = "https://financialmodelingprep.com/api/v3/";
         protected override async void OnStartup(StartupEventArgs e)
         {
+            _host.Start();
             IServiceProvider serviceProvider = CreateServiceProvider();
             //IDataService<Account> accountService = new AccountDataService(new EntityFramework.SimpleTraderDbContextFactory());
             //IStockPriceService stockPriceService = new StockPriceService(new FinancialModelingPrepAPI.FinancialModelingPrepHttpClient(new System.Net.Http.HttpClient() { BaseAddress = new Uri(baseUrl) }, new FinancialModelingPrepAPI.Models.FinancialModelingPrepAPIKey(_api_key)));
