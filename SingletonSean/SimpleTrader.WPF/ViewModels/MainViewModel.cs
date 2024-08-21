@@ -1,14 +1,21 @@
-﻿using SimpleTrader.WPF.State.Navigators;
+﻿using SimpleTrader.WPF.Commands;
+using SimpleTrader.WPF.State.Navigators;
+using SimpleTrader.WPF.ViewModels.Factories;
+using System.Windows.Input;
 namespace SimpleTrader.WPF.ViewModels
 {
     public class MainViewModel : ViewModelBase
     {
-        public INavigator Navigator { get; set; }
-        public MainViewModel(INavigator navigator)
+        private readonly INavigator _navigator;
+        private readonly ISimpleTraderViewModelFactory _viewModelFactory;
+        public ICommand UpdateCurrentViewModelCommand { get; }
+        public MainViewModel(INavigator navigator, ISimpleTraderViewModelFactory viewModelFactory)
         {
-            Navigator = navigator;
-            Navigator.UpdateCurrentViewModelCommand.Execute(ViewType.Home);
-            Navigator.CurrentViewModelChanged += Navigator_CurrentViewModelChanged;
+            _navigator = navigator;
+            _viewModelFactory = viewModelFactory;
+            _navigator.UpdateCurrentViewModelCommand.Execute(ViewType.Home);
+            _navigator.CurrentViewModelChanged += Navigator_CurrentViewModelChanged;
+            UpdateCurrentViewModelCommand = new UpdateCurrentViewModelCommand(_navigator, _viewModelFactory);
         }
 
         private void Navigator_CurrentViewModelChanged()
@@ -16,8 +23,8 @@ namespace SimpleTrader.WPF.ViewModels
             OnPropertyChanged(nameof(CurrentViewModel));
         }
 
-        public ViewModelBase CurrentViewModel => Navigator.CurrentViewModel;
+        public ViewModelBase CurrentViewModel => _navigator.CurrentViewModel;
 
-
+        public bool IsLoggedIn => true;
     }
 }
