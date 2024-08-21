@@ -15,10 +15,12 @@ namespace SimpleTrader.WPF.HostBuilders
                 services.AddSingleton<MajorIndexListingViewModel>();
                 services.AddSingleton<HomeViewModel>(CreateHomeViewModel);
                 services.AddSingleton<BuyViewModel>();
-                services.AddScoped<MainViewModel>();
+                services.AddSingleton<MainViewModel>();
+                services.AddSingleton<SellViewModel>();
                 services.AddSingleton((Func<IServiceProvider, CreateViewModel<PortfolioViewModel>>)(s => () => s.GetRequiredService<PortfolioViewModel>()));
                 services.AddSingleton((Func<IServiceProvider, CreateViewModel<HomeViewModel>>)(s => () => s.GetRequiredService<HomeViewModel>()));
                 services.AddSingleton((Func<IServiceProvider, CreateViewModel<BuyViewModel>>)(s => () => s.GetRequiredService<BuyViewModel>()));
+                services.AddSingleton<CreateViewModel<SellViewModel>>(s => () => s.GetRequiredService<SellViewModel>());
                 services.AddSingleton<ISimpleTraderViewModelFactory, SimpleTraderViewModelFactory>();
             });
             return host;

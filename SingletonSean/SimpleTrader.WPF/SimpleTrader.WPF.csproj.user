@@ -25,6 +25,9 @@
     <Compile Update="Views\PortfolioView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\SellView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Controls\MajorIndexCard.xaml">
@@ -52,6 +55,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\PortfolioView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\SellView.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
