@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.Hosting;
+﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using SimpleTrader.WPF.ViewModels;
 
 namespace SimpleTrader.WPF.HostBuilders
 {
@@ -6,7 +8,13 @@ namespace SimpleTrader.WPF.HostBuilders
     {
         public static IHostBuilder AddViews(this IHostBuilder host)
         {
-            host.ConfigureServices(services => { });
+            host.ConfigureServices(services =>
+            {
+                services.AddSingleton<MainWindow>(s => new MainWindow()
+                {
+                    DataContext = s.GetRequiredService<MainViewModel>()
+                });
+            });
             return host;
         }
     }
