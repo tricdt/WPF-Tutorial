@@ -8,8 +8,7 @@ namespace SimpleTrader.WPF.ViewModels
         {
             Navigator = navigator;
             Navigator.UpdateCurrentViewModelCommand.Execute(ViewType.Home);
-            Navigator.WhenNavigationChanged.Subscribe(v => { CurrentViewModel = v; });
-            //Navigator.CurrentViewModelChanged += Navigator_CurrentViewModelChanged;
+            Navigator.CurrentViewModelChanged += Navigator_CurrentViewModelChanged;
         }
 
         private void Navigator_CurrentViewModelChanged()
@@ -17,19 +16,8 @@ namespace SimpleTrader.WPF.ViewModels
             OnPropertyChanged(nameof(CurrentViewModel));
         }
 
-        //public ViewModelBase CurrentViewModel => Navigator.CurrentViewModel;
-        private ViewModelBase _currentViewModel;
+        public ViewModelBase CurrentViewModel => Navigator.CurrentViewModel;
 
-        public ViewModelBase CurrentViewModel
-        {
-            get { return _currentViewModel; }
-            set
-            {
-                _currentViewModel = value;
-                OnPropertyChanged(nameof(CurrentViewModel));
-
-            }
-        }
 
     }
 }
