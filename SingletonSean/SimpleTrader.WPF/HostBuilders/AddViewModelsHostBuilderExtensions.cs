@@ -17,6 +17,7 @@ namespace SimpleTrader.WPF.HostBuilders
                 services.AddSingleton<BuyViewModel>();
                 services.AddSingleton<MainViewModel>();
                 services.AddSingleton<SellViewModel>();
+                services.AddSingleton<LoginViewModel>();
                 services.AddSingleton((Func<IServiceProvider, CreateViewModel<PortfolioViewModel>>)(s => () => s.GetRequiredService<PortfolioViewModel>()));
                 services.AddSingleton((Func<IServiceProvider, CreateViewModel<HomeViewModel>>)(s => () => s.GetRequiredService<HomeViewModel>()));
                 services.AddSingleton((Func<IServiceProvider, CreateViewModel<BuyViewModel>>)(s => () => s.GetRequiredService<BuyViewModel>()));

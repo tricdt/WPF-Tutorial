@@ -22,6 +22,9 @@
             <DataTemplate DataType="{x:Type viewmodels:SellViewModel}">
                 <views:SellView/>
             </DataTemplate>
+            <DataTemplate DataType="{x:Type viewmodels:LoginViewModel}">
+                <views:LoginView/>
+            </DataTemplate>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

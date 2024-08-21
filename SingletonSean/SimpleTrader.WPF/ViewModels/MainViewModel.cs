@@ -13,9 +13,9 @@ namespace SimpleTrader.WPF.ViewModels
         {
             _navigator = navigator;
             _viewModelFactory = viewModelFactory;
-            _navigator.UpdateCurrentViewModelCommand.Execute(ViewType.Home);
             _navigator.CurrentViewModelChanged += Navigator_CurrentViewModelChanged;
             UpdateCurrentViewModelCommand = new UpdateCurrentViewModelCommand(_navigator, _viewModelFactory);
+            UpdateCurrentViewModelCommand.Execute(ViewType.Login);
         }
 
         private void Navigator_CurrentViewModelChanged()
