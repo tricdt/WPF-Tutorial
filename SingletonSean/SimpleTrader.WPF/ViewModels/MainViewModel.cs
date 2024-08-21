@@ -1,5 +1,4 @@
 ﻿using SimpleTrader.WPF.State.Navigators;
-
 namespace SimpleTrader.WPF.ViewModels
 {
     public class MainViewModel : ViewModelBase
@@ -9,7 +8,8 @@ namespace SimpleTrader.WPF.ViewModels
         {
             Navigator = navigator;
             Navigator.UpdateCurrentViewModelCommand.Execute(ViewType.Home);
-            Navigator.CurrentViewModelChanged += Navigator_CurrentViewModelChanged;
+            Navigator.WhenNavigationChanged.Subscribe(v => { CurrentViewModel = v; });
+            //Navigator.CurrentViewModelChanged += Navigator_CurrentViewModelChanged;
         }
 
         private void Navigator_CurrentViewModelChanged()
@@ -17,7 +17,19 @@ namespace SimpleTrader.WPF.ViewModels
             OnPropertyChanged(nameof(CurrentViewModel));
         }
 
-        public ViewModelBase CurrentViewModel => Navigator.CurrentViewModel;
+        //public ViewModelBase CurrentViewModel => Navigator.CurrentViewModel;
+        private ViewModelBase _currentViewModel;
+
+        public ViewModelBase CurrentViewModel
+        {
+            get { return _currentViewModel; }
+            set
+            {
+                _currentViewModel = value;
+                OnPropertyChanged(nameof(CurrentViewModel));
+
+            }
+        }
 
     }
 }

@@ -14,5 +14,6 @@ namespace SimpleTrader.WPF.State.Navigators
         ViewModelBase CurrentViewModel { get; set; }
         ICommand UpdateCurrentViewModelCommand { get; }
         event Action CurrentViewModelChanged;
+        IObservable<ViewModelBase> WhenNavigationChanged { get; }
     }
 }
