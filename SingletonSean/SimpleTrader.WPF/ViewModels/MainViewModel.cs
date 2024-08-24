@@ -25,6 +25,11 @@ namespace SimpleTrader.WPF.ViewModels
 
         public ViewModelBase CurrentViewModel => _navigator.CurrentViewModel;
 
-        public bool IsLoggedIn => true;
+        public bool IsLoggedIn => false;
+        public override void Dispose()
+        {
+            _navigator.CurrentViewModelChanged -= Navigator_CurrentViewModelChanged;
+            base.Dispose();
+        }
     }
 }
