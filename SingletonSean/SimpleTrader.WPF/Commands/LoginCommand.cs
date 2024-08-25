@@ -1,4 +1,5 @@
-﻿using SimpleTrader.WPF.State.Authenticators;
+﻿using SimpleTrader.Domain.Exceptions;
+using SimpleTrader.WPF.State.Authenticators;
 using SimpleTrader.WPF.State.Navigators;
 using SimpleTrader.WPF.ViewModels;
 namespace SimpleTrader.WPF.Commands
@@ -32,8 +33,25 @@ namespace SimpleTrader.WPF.Commands
 
         public override async Task ExecuteAsync(object parameter)
         {
-            await _authenticator.Login(_loginViewModel.Username, _loginViewModel.Password);
-            _renavigator.Renavigate();
+            _loginViewModel.ErrorMessage = string.Empty;
+            try
+            {
+                await _authenticator.Login(_loginViewModel.Username, _loginViewModel.Password);
+                _renavigator.Renavigate();
+            }
+            catch (UserNotFoundException)
+            {
+                _loginViewModel.ErrorMessage = "Username does not exist.";
+            }
+            catch (InvalidPasswordException)
+            {
+                _loginViewModel.ErrorMessage = "Incorrect password.";
+            }
+            catch (Exception)
+            {
+                _loginViewModel.ErrorMessage = "Login failed.";
+            }
+
         }
     }
 }

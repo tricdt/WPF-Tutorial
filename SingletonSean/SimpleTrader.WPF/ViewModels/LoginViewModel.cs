@@ -7,7 +7,7 @@ namespace SimpleTrader.WPF.ViewModels
 {
     public class LoginViewModel : ViewModelBase
     {
-        private string _username = "SingletonSean";
+        private string _username = "tricdt1";
         public string Username
         {
             get
@@ -22,7 +22,7 @@ namespace SimpleTrader.WPF.ViewModels
             }
         }
 
-        private string _password;
+        private string _password = "123456";
         public string Password
         {
             get
@@ -41,10 +41,22 @@ namespace SimpleTrader.WPF.ViewModels
 
         public ICommand LoginCommand { get; }
         public ICommand ViewRegisterCommand { get; }
+        public MessageViewModel ErrorMessageViewModel { get; }
+        public string ErrorMessage
+        {
+            set => ErrorMessageViewModel.Message = value;
+        }
+
         public LoginViewModel(IRenavigator loginRenavigator, IRenavigator registerRenavigator, IAuthenticator authenticator)
         {
             LoginCommand = new LoginCommand(this, loginRenavigator, authenticator);
             ViewRegisterCommand = new RenavigateCommand(registerRenavigator);
+            ErrorMessageViewModel = new MessageViewModel();
+        }
+        public override void Dispose()
+        {
+            ErrorMessageViewModel.Dispose();
+            base.Dispose();
         }
     }
 }
