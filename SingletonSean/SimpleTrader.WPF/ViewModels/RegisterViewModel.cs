@@ -1,4 +1,5 @@
 ﻿using SimpleTrader.WPF.Commands;
+using SimpleTrader.WPF.State.Authenticators;
 using SimpleTrader.WPF.State.Navigators;
 using System.Windows.Input;
 
@@ -6,7 +7,7 @@ namespace SimpleTrader.WPF.ViewModels
 {
     public class RegisterViewModel : ViewModelBase
     {
-        private string _email;
+        private string _email = "salaelectronics@gmail.com";
         public string Email
         {
             get
@@ -21,7 +22,7 @@ namespace SimpleTrader.WPF.ViewModels
             }
         }
 
-        private string _username;
+        private string _username = "odergaard";
         public string Username
         {
             get
@@ -36,7 +37,7 @@ namespace SimpleTrader.WPF.ViewModels
             }
         }
 
-        private string _password;
+        private string _password = "123456";
         public string Password
         {
             get
@@ -51,7 +52,7 @@ namespace SimpleTrader.WPF.ViewModels
             }
         }
 
-        private string _confirmPassword;
+        private string _confirmPassword = "123456";
         public string ConfirmPassword
         {
             get
@@ -65,16 +66,22 @@ namespace SimpleTrader.WPF.ViewModels
                 OnPropertyChanged(nameof(CanRegister));
             }
         }
-
+        public MessageViewModel ErrorMessageViewModel { get; }
+        public string ErrorMessage
+        {
+            set => ErrorMessageViewModel.Message = value;
+        }
         public bool CanRegister => !string.IsNullOrEmpty(Email) &&
             !string.IsNullOrEmpty(Username) &&
             !string.IsNullOrEmpty(Password) &&
             !string.IsNullOrEmpty(ConfirmPassword);
         public ICommand RegisterCommand { get; }
         public ICommand ViewLoginCommand { get; }
-        public RegisterViewModel(IRenavigator registerRenavigator, IRenavigator loginRenavigator)
+        public RegisterViewModel(IRenavigator registerRenavigator, IRenavigator loginRenavigator, IAuthenticator authenticator)
         {
             ViewLoginCommand = new RenavigateCommand(loginRenavigator);
+            RegisterCommand = new RegisterCommand(this, authenticator, loginRenavigator);
+            ErrorMessageViewModel = new MessageViewModel();
         }
     }
 }

@@ -15,6 +15,7 @@ namespace SimpleTrader.WPF.State.Authenticators
             _accountStore = accountStore;
         }
 
+
         public Account CurrentAccount
         {
             get

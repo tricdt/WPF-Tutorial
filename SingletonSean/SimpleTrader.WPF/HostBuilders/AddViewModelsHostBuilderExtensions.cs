@@ -38,7 +38,8 @@ namespace SimpleTrader.WPF.HostBuilders
         private static RegisterViewModel CreateRegisterViewModel(IServiceProvider service)
         {
             return new RegisterViewModel(service.GetRequiredService<ViewModelDelegateRenavigator<LoginViewModel>>(),
-                service.GetRequiredService<ViewModelDelegateRenavigator<LoginViewModel>>());
+                service.GetRequiredService<ViewModelDelegateRenavigator<LoginViewModel>>(),
+                service.GetRequiredService<IAuthenticator>());
         }
 
         private static LoginViewModel CreateLoginViewModel(IServiceProvider service)
