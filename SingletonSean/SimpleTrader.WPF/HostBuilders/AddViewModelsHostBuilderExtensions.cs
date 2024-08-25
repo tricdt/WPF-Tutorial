@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using SimpleTrader.Domain.Services;
+using SimpleTrader.WPF.State.Authenticators;
 using SimpleTrader.WPF.State.Navigators;
 using SimpleTrader.WPF.ViewModels;
 using SimpleTrader.WPF.ViewModels.Factories;
@@ -44,7 +45,8 @@ namespace SimpleTrader.WPF.HostBuilders
         {
             return new LoginViewModel(
                 service.GetRequiredService<ViewModelDelegateRenavigator<HomeViewModel>>(),
-                service.GetRequiredService<ViewModelDelegateRenavigator<RegisterViewModel>>());
+                service.GetRequiredService<ViewModelDelegateRenavigator<RegisterViewModel>>(),
+                service.GetRequiredService<IAuthenticator>());
         }
 
         private static HomeViewModel CreateHomeViewModel(IServiceProvider service)

@@ -5,11 +5,17 @@ namespace SimpleTrader.EntityFramework
 {
     public class SimpleTraderDbContextFactory : IDesignTimeDbContextFactory<SimpleTraderDbContext>
     {
+        private readonly Action<DbContextOptionsBuilder> _configureDbContext;
         public SimpleTraderDbContext CreateDbContext(string[] args = null)
         {
-            var options = new DbContextOptionsBuilder<SimpleTraderDbContext>();
-            options.UseSqlServer("Data Source=ODEGAARD\\SQLEXPRESS;Initial Catalog=SimpleTraderDB;Integrated Security=True;Trust Server Certificate=True");
+
+            DbContextOptionsBuilder<SimpleTraderDbContext> options = new DbContextOptionsBuilder<SimpleTraderDbContext>();
+            _configureDbContext(options);
             return new SimpleTraderDbContext(options.Options);
+        }
+        public SimpleTraderDbContextFactory(Action<DbContextOptionsBuilder> configureDbContext)
+        {
+            _configureDbContext = configureDbContext;
         }
     }
 }

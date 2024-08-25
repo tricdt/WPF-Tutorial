@@ -1,5 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using SimpleTrader.WPF.State.Accounts;
+using SimpleTrader.WPF.State.Authenticators;
 using SimpleTrader.WPF.State.Navigators;
 namespace SimpleTrader.WPF.HostBuilders
 {
@@ -10,7 +12,8 @@ namespace SimpleTrader.WPF.HostBuilders
             host.ConfigureServices(services =>
             {
                 services.AddSingleton<INavigator, Navigator>();
-
+                services.AddSingleton<IAuthenticator, Authenticator>();
+                services.AddSingleton<IAccountStore, AccountStore>();
             });
             return host;
         }
