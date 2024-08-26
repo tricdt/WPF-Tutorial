@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using NavigationMVVM.HostBuilders;
+using NavigationMVVM.Services;
 using System.Windows;
 namespace NavigationMVVM
 {
@@ -32,6 +33,8 @@ namespace NavigationMVVM
             _host.Start();
             MainWindow = _host.Services.GetRequiredService<MainWindow>();
             MainWindow.Show();
+            INavigationService navigationService = _host.Services.GetRequiredService<INavigationService>();
+            navigationService.Navigate();
             base.OnStartup(e);
         }
     }

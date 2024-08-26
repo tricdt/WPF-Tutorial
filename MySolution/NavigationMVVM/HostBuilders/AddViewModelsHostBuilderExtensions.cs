@@ -11,6 +11,8 @@ namespace NavigationMVVM.HostBuilders
             hostBuilder.ConfigureServices(services =>
             {
                 services.AddSingleton<MainViewModel>();
+                services.AddSingleton<HomeViewModel>();
+                services.AddSingleton<CreateViewModel<HomeViewModel>>(s => () => s.GetRequiredService<HomeViewModel>());
             });
             return hostBuilder;
         }

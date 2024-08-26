@@ -18,8 +18,7 @@ namespace NavigationMVVM.Stores
         public event Action CurrentViewModelChanged;
         public NavigationStore()
         {
-            CurrentViewModel = new AddPersonViewModel();
+            CurrentViewModel = new HomeViewModel();
         }
-
     }
 }
