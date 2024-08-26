@@ -34,7 +34,7 @@ namespace NavigationMVVM
             _host.Start();
             MainWindow = _host.Services.GetRequiredService<MainWindow>();
             MainWindow.Show();
-            INavigationService navigationService = _host.Services.GetRequiredService<NavigationService<HomeViewModel>>();
+            INavigationService navigationService = _host.Services.GetRequiredService<LayoutNavigationService<HomeViewModel>>();
             navigationService.Navigate();
             base.OnStartup(e);
         }

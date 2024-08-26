@@ -7,6 +7,12 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Components\Layout.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Components\NavigationBar.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\AccountView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -24,6 +30,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Components\Layout.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Components\NavigationBar.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>

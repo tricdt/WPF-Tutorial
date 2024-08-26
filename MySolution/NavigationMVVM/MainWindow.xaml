@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:NavigationMVVM"
         xmlns:viewmodels="clr-namespace:NavigationMVVM.ViewModels"
         xmlns:views="clr-namespace:NavigationMVVM.Views"
+        xmlns:components="clr-namespace:NavigationMVVM.Components"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
@@ -24,6 +25,9 @@
             </DataTemplate>
             <DataTemplate DataType="{x:Type viewmodels:AddPersonViewModel}">
                 <views:AddPersonView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewmodels:LayoutViewModel}">
+                <components:Layout/>
             </DataTemplate>
         </Grid.Resources>
         <ContentControl Content="{Binding CurrentViewModel}"/>
