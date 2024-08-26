@@ -17,5 +17,9 @@ namespace NavigationMVVM.Stores
         }
         public bool IsOpen => CurrentModalViewModel != null;
         public event Action CurrentModalViewModelChanged;
+        public void Close()
+        {
+            CurrentModalViewModel = null;
+        }
     }
 }

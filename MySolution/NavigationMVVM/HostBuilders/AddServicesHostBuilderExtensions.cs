@@ -13,6 +13,7 @@ namespace NavigationMVVM.HostBuilders
             {
                 services.AddSingleton<LayoutNavigationService<HomeViewModel>>();
                 services.AddSingleton<ModalNavigationService<LoginViewModel>>();
+                services.AddSingleton<CloseModalNavigationService>();
             });
             return hostBuilder;
         }
