@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Hosting;
 using NavigationMVVM.HostBuilders;
 using NavigationMVVM.Services;
+using NavigationMVVM.ViewModels;
 using System.Windows;
 namespace NavigationMVVM
 {
@@ -33,7 +34,7 @@ namespace NavigationMVVM
             _host.Start();
             MainWindow = _host.Services.GetRequiredService<MainWindow>();
             MainWindow.Show();
-            INavigationService navigationService = _host.Services.GetRequiredService<INavigationService>();
+            INavigationService navigationService = _host.Services.GetRequiredService<NavigationService<HomeViewModel>>();
             navigationService.Navigate();
             base.OnStartup(e);
         }
