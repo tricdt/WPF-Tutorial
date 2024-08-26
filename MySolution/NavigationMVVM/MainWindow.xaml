@@ -7,6 +7,7 @@
         xmlns:viewmodels="clr-namespace:NavigationMVVM.ViewModels"
         xmlns:views="clr-namespace:NavigationMVVM.Views"
         xmlns:components="clr-namespace:NavigationMVVM.Components"
+        xmlns:custom="clr-namespace:ModalControl;assembly=ModalControl"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
@@ -30,6 +31,9 @@
                 <components:Layout/>
             </DataTemplate>
         </Grid.Resources>
+        <custom:Modal Panel.ZIndex="1" IsOpen="{Binding IsModalOpen}">
+            <ContentControl Content="{Binding CurrentModalViewModel}"/>
+        </custom:Modal>
         <ContentControl Content="{Binding CurrentViewModel}"/>
     </Grid>
 </Window>

@@ -24,7 +24,7 @@ namespace NavigationMVVM.HostBuilders
 
         private static HomeViewModel CreateHomeViewModel(IServiceProvider s)
         {
-            return new HomeViewModel(s.GetRequiredService<NavigationService<LoginViewModel>>());
+            return new HomeViewModel(s.GetRequiredService<ModalNavigationService<LoginViewModel>>());
         }
     }
 }

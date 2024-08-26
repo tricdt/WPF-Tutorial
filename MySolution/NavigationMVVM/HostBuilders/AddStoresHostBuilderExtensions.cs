@@ -10,6 +10,7 @@ namespace NavigationMVVM.HostBuilders
             hostBuilder.ConfigureServices(services =>
             {
                 services.AddSingleton<NavigationStore>();
+                services.AddSingleton<ModalNavigationStore>();
             });
             return hostBuilder;
         }
