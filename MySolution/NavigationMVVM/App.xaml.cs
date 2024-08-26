@@ -11,7 +11,7 @@ namespace NavigationMVVM
         {
             MainWindow = new MainWindow()
             {
-                DataContext = new MainViewModel()
+                DataContext = new MainViewModel(new Stores.NavigationStore())
             };
             MainWindow.Show();
             base.OnStartup(e);
