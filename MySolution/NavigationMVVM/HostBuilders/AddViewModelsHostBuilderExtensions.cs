@@ -13,10 +13,12 @@ namespace NavigationMVVM.HostBuilders
             {
                 services.AddSingleton<MainViewModel>();
                 services.AddSingleton<NavigationBarViewModel>();
+                services.AddSingleton<AccountViewModel>();
                 services.AddSingleton<HomeViewModel>(s => CreateHomeViewModel(s));
                 services.AddSingleton<LoginViewModel>(s => CreateLoginViewModel(s));
                 services.AddSingleton<CreateViewModel<HomeViewModel>>(s => () => s.GetRequiredService<HomeViewModel>());
                 services.AddSingleton<CreateViewModel<LoginViewModel>>(s => () => s.GetRequiredService<LoginViewModel>());
+                services.AddSingleton<CreateViewModel<AccountViewModel>>(s => () => s.GetRequiredService<AccountViewModel>());
                 services.AddSingleton<CreateViewModel<NavigationBarViewModel>>(s => () => s.GetRequiredService<NavigationBarViewModel>());
             });
             return hostBuilder;
@@ -24,7 +26,7 @@ namespace NavigationMVVM.HostBuilders
 
         private static LoginViewModel CreateLoginViewModel(IServiceProvider s)
         {
-            CompositeNavigationService navigationService = new CompositeNavigationService(s.GetRequiredService<CloseModalNavigationService>(), s.GetRequiredService<LayoutNavigationService<HomeViewModel>>());
+            CompositeNavigationService navigationService = new CompositeNavigationService(s.GetRequiredService<CloseModalNavigationService>(), s.GetRequiredService<LayoutNavigationService<AccountViewModel>>());
 
             return new LoginViewModel(navigationService);
         }
