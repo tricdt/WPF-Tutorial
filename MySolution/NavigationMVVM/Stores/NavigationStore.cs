@@ -2,6 +2,14 @@
 
 namespace NavigationMVVM.Stores
 {
+    public enum ViewType
+    {
+        Login,
+        Home,
+        People,
+        Account,
+        Logout
+    }
     public class NavigationStore
     {
         private ViewModelBase _currentViewModel;

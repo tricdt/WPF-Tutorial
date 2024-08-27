@@ -5,6 +5,5 @@
              xmlns:views="clr-namespace:NavigationMVVM.Views"
              xmlns:local="clr-namespace:NavigationMVVM">
     <Application.Resources>
-
     </Application.Resources>
 </Application>
