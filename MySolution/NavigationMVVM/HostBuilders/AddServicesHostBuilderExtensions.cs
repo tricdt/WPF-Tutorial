@@ -15,6 +15,7 @@ namespace NavigationMVVM.HostBuilders
                 services.AddSingleton<ModalNavigationService<LoginViewModel>>();
                 services.AddSingleton<CloseModalNavigationService>();
                 services.AddSingleton<LayoutNavigationService<AccountViewModel>>();
+                services.AddSingleton<LayoutNavigationService<PeopleListingViewModel>>();
             });
             return hostBuilder;
         }
