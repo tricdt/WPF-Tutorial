@@ -11,7 +11,7 @@ namespace NavigationMVVM.Stores
             set
             {
                 _currentAccount = value;
-                CurrentAccountChanged();
+                CurrentAccountChanged?.Invoke();
             }
         }
 

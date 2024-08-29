@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using NavigationMVVM.Services;
+using NavigationMVVM.Stores;
 using NavigationMVVM.ViewModels;
 
 namespace NavigationMVVM.HostBuilders
@@ -30,14 +31,14 @@ namespace NavigationMVVM.HostBuilders
         {
             return new NavigationBarViewModel(s.GetRequiredService<LayoutNavigationService<HomeViewModel>>(),
                 s.GetRequiredService<LayoutNavigationService<AccountViewModel>>(), s.GetRequiredService<ModalNavigationService<LoginViewModel>>(),
-                s.GetRequiredService<LayoutNavigationService<PeopleListingViewModel>>());
+                s.GetRequiredService<LayoutNavigationService<PeopleListingViewModel>>(), s.GetRequiredService<AccountStore>());
         }
 
         private static LoginViewModel CreateLoginViewModel(IServiceProvider s)
         {
             CompositeNavigationService navigationService = new CompositeNavigationService(s.GetRequiredService<CloseModalNavigationService>(), s.GetRequiredService<LayoutNavigationService<AccountViewModel>>());
 
-            return new LoginViewModel(navigationService);
+            return new LoginViewModel(navigationService, s.GetRequiredService<AccountStore>());
         }
 
         private static HomeViewModel CreateHomeViewModel(IServiceProvider s)

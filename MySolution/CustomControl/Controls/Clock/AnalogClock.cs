@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
-namespace CustomControl.Controls
+namespace CustomControl.Controls.Clock
 {
     public class AnalogClock : Control
     {

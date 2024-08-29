@@ -11,6 +11,7 @@ namespace NavigationMVVM.HostBuilders
             {
                 services.AddSingleton<NavigationStore>();
                 services.AddSingleton<ModalNavigationStore>();
+                services.AddSingleton<AccountStore>();
             });
             return hostBuilder;
         }
