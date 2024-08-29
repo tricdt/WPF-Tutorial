@@ -1,5 +1,5 @@
-﻿using System.Windows;
-
+﻿using CustomControl.Controls;
+using System.Windows;
 namespace CustomControl
 {
     /// <summary>
@@ -10,11 +10,9 @@ namespace CustomControl
         public MainWindow()
         {
             InitializeComponent();
+            this.DataContext = new Items();
         }
 
-        private void AnalogClock_TimeChanged(object sender, RoutedPropertyChangedEventArgs<DateTime> e)
-        {
-            Console.WriteLine(e.NewValue);
-        }
+
     }
 }
