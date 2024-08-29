@@ -1,5 +1,4 @@
-﻿using CustomControl.Controls;
-using System.Windows;
+﻿using System.Windows;
 namespace CustomControl
 {
     /// <summary>
@@ -10,7 +9,6 @@ namespace CustomControl
         public MainWindow()
         {
             InitializeComponent();
-            this.DataContext = new Items();
         }
 
 
