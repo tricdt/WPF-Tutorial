@@ -7,27 +7,25 @@
         mc:Ignorable="d"
         Title="Custom Control" Height="450" Width="800">
     <Window.Resources>
-
+        <ControlTemplate x:Key="template">
+            <Canvas>
+                <Canvas.RenderTransform>
+                    <RotateTransform Angle="20"/>
+                </Canvas.RenderTransform>
+                <Ellipse Height="100" Width="150"
+                         Fill="{Binding RelativeSource={RelativeSource TemplatedParent},Path=Background}">
+                </Ellipse>
+                <ContentPresenter Margin="35" 
+                                  Content="{Binding RelativeSource={RelativeSource TemplatedParent},Path=Content}"/>
+            </Canvas>
+        </ControlTemplate>
     </Window.Resources>
     <Grid>
         <Canvas Name="Parent0">
-            <Border Name="Parent1"
-                    Width="{Binding RelativeSource={RelativeSource Self}, Path=Parent.ActualWidth}"
-                    Height="{Binding RelativeSource={RelativeSource Self}, Path=Parent.ActualHeight}">
-                <Canvas Name="Parent2">
-                    <Border Name="Parent3"
-                            Width="{Binding RelativeSource={RelativeSource Self}, Path=Parent.ActualWidth}"
-                            Height="{Binding RelativeSource={RelativeSource Self}, Path=Parent.ActualHeight}">
-                        <Canvas Name="Parent4">
-                            <TextBlock FontSize="16" Margin="5" Text="Display the name of the ancestor"/>
-                            <TextBlock FontSize="16" Margin="50"
-                                       Text="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Border},AncestorLevel=2},Path=Name}" Width="200"/>
-                            <!--<TextBlock FontSize="16" Margin="50"
-                                       Text="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Border},AncestorLevel=1},Path=Name}" Width="200"/>-->
-                        </Canvas>
-                    </Border>
-                </Canvas>
-            </Border>
+            <Button Margin="50" Template="{StaticResource template}" Height="0"
+                    Canvas.Left="0" Canvas.Top="0" Width="0">
+                <TextBlock FontSize="22">Click me</TextBlock>
+            </Button>
         </Canvas>
     </Grid>
     
