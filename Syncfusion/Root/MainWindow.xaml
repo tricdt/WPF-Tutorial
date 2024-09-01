@@ -9,6 +9,9 @@
         Title="MainWindow" Height="450" Width="800">
     <Window.Resources>
         <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="ResourceDictionary.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
             <Brush x:Key="backgroundBrush">#DCE8F3</Brush>
             <Style x:Key="borderYellowNoLine" TargetType="Border">
                 <Setter Property="Background" Value="LightYellow"/>
@@ -23,17 +26,7 @@
             <Style x:Key="groupBoxStyleYellow" TargetType="GroupBox" BasedOn="{StaticResource groupBoxStyle}">
                 <Setter Property="Background" Value="LightYellow"/>
             </Style>
-            <Style x:Key="borderRedNoLine" TargetType="Border">
-                <Setter Property="Background" Value="PaleVioletRed"/>
-                <Setter Property="BorderThickness" Value="0"/>
-            </Style>
-            <Style x:Key="groupBoxStyleRedBorder" TargetType="GroupBox">
-                <Setter Property="Margin" Value="3"/>
-                <Setter Property="Padding" Value="5,5,5,5"/>
-                <Setter Property="Background" Value="PaleVioletRed"/>
-                <Setter Property="BorderBrush" Value="Blue"/>
-                <Setter Property="BorderThickness" Value="1"/>
-            </Style>
+          
         </ResourceDictionary>
     </Window.Resources>
     <Grid Margin="10">
@@ -57,7 +50,9 @@
             </GroupBox>
         </Border>
         <Border Grid.Row="2" Grid.Column="0" Style="{StaticResource borderRedNoLine}">
-            
+            <GroupBox Header="Styles Example Two" Style="{StaticResource groupBoxStyleRedBorder}">
+                <Label>Styles defined in a dictionary in the application assembly</Label>
+            </GroupBox>
         </Border>
     </Grid>
 </Window>
