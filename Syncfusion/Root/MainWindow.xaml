@@ -10,8 +10,8 @@
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Root;component/ResourceDictionary.xaml"/>
-                <ResourceDictionary Source="ResourceLib;component/View/ResourceDictionary.xaml"/>
+                <ResourceDictionary Source="/Root;component/ResourceDictionary.xaml"/>
+                <ResourceDictionary Source="/ResourceLib;component/View/ResourceDictionary.xaml"/>
             </ResourceDictionary.MergedDictionaries>
             <Brush x:Key="backgroundBrush">#DCE8F3</Brush>
             <Style x:Key="borderYellowNoLine" TargetType="Border">
