@@ -4,9 +4,46 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Root"
+        xmlns:System="clr-namespace:System;assembly=mscorlib"  
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
+    <Window.Resources>
+        <ResourceDictionary>
+            <Brush x:Key="backgroundBrush">#DCE8F3</Brush>
+            <Style x:Key="borderYellowNoLine" TargetType="Border">
+                <Setter Property="Background" Value="LightYellow"/>
+                <Setter Property="BorderThickness" Value="0"/>
+            </Style>
+            <Style x:Key="groupBoxStyle" TargetType="GroupBox">
+                <Setter Property="Margin" Value="3"/>
+                <Setter Property="Padding" Value="5,5,5,5"/>
+                <Setter Property="Background" Value="{StaticResource ResourceKey=backgroundBrush}"/>
+                <Setter Property="BorderBrush" Value="Black"/>
+            </Style>
+            <Style x:Key="groupBoxStyleYellow" TargetType="GroupBox" BasedOn="{StaticResource groupBoxStyle}">
+                <Setter Property="Background" Value="LightYellow"/>
+            </Style>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Border Grid.Row="0" Grid.Column="0" Style="{StaticResource borderYellowNoLine}">
+            <GroupBox Header="Styles Example One" Style="{StaticResource groupBoxStyleYellow}">
+                <Label>Styles defined in the window XAML</Label>
+            </GroupBox>
+        </Border>
     </Grid>
 </Window>
