@@ -27,7 +27,7 @@
             <Style x:Key="groupBoxStyleYellow" TargetType="GroupBox" BasedOn="{StaticResource groupBoxStyle}">
                 <Setter Property="Background" Value="LightYellow"/>
             </Style>
-          
+            <System:Double x:Key="ButtonWidth">200</System:Double>
         </ResourceDictionary>
     </Window.Resources>
     <Grid Margin="10">
@@ -60,5 +60,6 @@
                 <Label>Styles defined in a dictionary in another Assembly</Label>
             </GroupBox>
         </Border>
+        <Button Grid.Row="6" Grid.Column="0" Content="Press Me" Width="{StaticResource ButtonWidth}" HorizontalAlignment="Left"/>
     </Grid>
 </Window>
