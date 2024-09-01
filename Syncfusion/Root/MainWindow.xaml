@@ -10,7 +10,8 @@
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="ResourceDictionary.xaml"/>
+                <ResourceDictionary Source="Root;component/ResourceDictionary.xaml"/>
+                <ResourceDictionary Source="ResourceLib;component/View/ResourceDictionary.xaml"/>
             </ResourceDictionary.MergedDictionaries>
             <Brush x:Key="backgroundBrush">#DCE8F3</Brush>
             <Style x:Key="borderYellowNoLine" TargetType="Border">
@@ -52,6 +53,11 @@
         <Border Grid.Row="2" Grid.Column="0" Style="{StaticResource borderRedNoLine}">
             <GroupBox Header="Styles Example Two" Style="{StaticResource groupBoxStyleRedBorder}">
                 <Label>Styles defined in a dictionary in the application assembly</Label>
+            </GroupBox>
+        </Border>
+        <Border Grid.Row="4" Grid.Column="0" Style="{StaticResource borderGreenNoLine}">
+            <GroupBox Header="Styles Example Three" Style="{StaticResource groupBoxStyleGreenBorder}">
+                <Label>Styles defined in a dictionary in another Assembly</Label>
             </GroupBox>
         </Border>
     </Grid>
