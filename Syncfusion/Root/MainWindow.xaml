@@ -27,6 +27,7 @@
             <Style x:Key="groupBoxStyleYellow" TargetType="GroupBox" BasedOn="{StaticResource groupBoxStyle}">
                 <Setter Property="Background" Value="LightYellow"/>
             </Style>
+   
             <System:Double x:Key="ButtonWidth">200</System:Double>
         </ResourceDictionary>
     </Window.Resources>
@@ -61,5 +62,20 @@
             </GroupBox>
         </Border>
         <Button Grid.Row="6" Grid.Column="0" Content="Press Me" Width="{StaticResource ButtonWidth}" HorizontalAlignment="Left"/>
+        <GroupBox Grid.Row="8" Grid.Column="0" Name="_borderBottom" Header="Override a resource dictionary style">
+            <GroupBox.Style>
+                <Style TargetType="GroupBox" BasedOn="{StaticResource groupBoxStyle}">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding ElementName=_checkBoxYellowBackground, Path=IsChecked}" Value="true">
+                            <Setter Property="Background"  Value="LightYellow" />
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding ElementName=_checkBoxYellowBackground, Path=IsChecked}" Value="false">
+                            <Setter Property="Background"  Value="LightCoral" />
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </GroupBox.Style>
+            <CheckBox Grid.Row="8" Grid.Column="0" x:Name="_checkBoxYellowBackground" Content="Yellow Background"/>
+        </GroupBox>
     </Grid>
 </Window>
