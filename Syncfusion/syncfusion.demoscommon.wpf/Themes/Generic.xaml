@@ -9,32 +9,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="local:DemoControl">
-                    <Grid Margin="{TemplateBinding Margin}" Background="{DynamicResource SecondaryBackground}">
-                        <Grid Margin="10">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="auto"/>
-                                <RowDefinition Height="auto"/>
-                                <RowDefinition Height="*"/>
-                                <RowDefinition Height="auto"/>
-                            </Grid.RowDefinitions>
-                            <ListView Grid.Row="0" x:Name="SubdemoList"
-                                      ItemContainerStyle="{StaticResource SubDemoListViewItemStyle}"
-                                      ItemsSource="{TemplateBinding SubCategoryDemos}"
-                                      SelectedItem="{Binding Path=SubCategorySelectedItem, Mode=TwoWay, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type local:DemoControl}}}"
-                                      >
-                                      
-                            </ListView>
-                            <StackPanel Grid.Row="1">
-                                
-                            </StackPanel>
-                            <Border Grid.Row="2">
-                                
-                            </Border>
-                            <StackPanel Grid.Row="3">
-                                
-                            </StackPanel>
-                        </Grid>
-                    </Grid>
+                    <Button Content="Text" Background="Red"/>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>

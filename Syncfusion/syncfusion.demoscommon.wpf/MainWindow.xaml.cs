@@ -7,6 +7,11 @@ namespace syncfusion.demoscommon.wpf
     /// </summary>
     public partial class MainWindow : ChromelessWindow
     {
+        public MainWindow(DemoBrowserViewModel viewModel)
+        {
+            this.DataContext = viewModel;
+            InitializeComponent();
+        }
         public MainWindow()
         {
             InitializeComponent();

@@ -1,6 +1,6 @@
 ﻿using System.Windows;
-
-namespace syncfusion.demoscommon.wpf
+using syncfusion.demoscommon.wpf;
+namespace syncfusion.datagriddemos.wpf
 {
     /// <summary>
     /// Interaction logic for App.xaml

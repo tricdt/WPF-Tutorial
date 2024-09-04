@@ -7,8 +7,8 @@
         xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
         syncfusion:SfSkinManager.Theme="{syncfusion:SkinManagerExtension ThemeName=Windows11Light}"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <local:DemoControl Margin="1">
+        Title="MainWindowFromSyncfusion" Height="450" Width="800">
+    <local:DemoControl>
 
     </local:DemoControl>
 </syncfusion:ChromelessWindow>
