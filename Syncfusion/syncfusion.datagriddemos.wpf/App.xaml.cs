@@ -1,5 +1,5 @@
-﻿using System.Windows;
-using syncfusion.demoscommon.wpf;
+﻿using syncfusion.demoscommon.wpf;
+using System.Windows;
 namespace syncfusion.datagriddemos.wpf
 {
     /// <summary>
@@ -9,7 +9,7 @@ namespace syncfusion.datagriddemos.wpf
     {
         protected override void OnStartup(StartupEventArgs e)
         {
-            var window = new MainWindow(new DemoBrowserViewModel());
+            var window = new MainWindow(new DataGridDemosViewModel());
             window.Show();
             base.OnStartup(e);
         }
