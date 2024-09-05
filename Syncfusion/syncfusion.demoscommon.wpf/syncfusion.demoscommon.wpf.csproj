@@ -18,6 +18,9 @@
     <Reference Include="Syncfusion.SfInput.Wpf">
       <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\WPF\26.1.35\precompiledassemblies\net6.0\Syncfusion.SfInput.Wpf.dll</HintPath>
     </Reference>
+    <Reference Include="Syncfusion.SfNavigationDrawer.WPF">
+      <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\WPF\26.1.35\precompiledassemblies\net6.0\Syncfusion.SfNavigationDrawer.WPF.dll</HintPath>
+    </Reference>
     <Reference Include="Syncfusion.SfShared.Wpf">
       <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\WPF\26.1.35\precompiledassemblies\net6.0\Syncfusion.SfShared.Wpf.dll</HintPath>
     </Reference>
@@ -30,11 +33,15 @@
     <Reference Include="Syncfusion.Themes.FluentLight.WPF">
       <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\WPF\26.1.35\precompiledassemblies\net6.0\Syncfusion.Themes.FluentLight.WPF.dll</HintPath>
     </Reference>
+    <Reference Include="Syncfusion.Themes.SystemTheme.WPF">
+      <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\WPF\26.1.35\precompiledassemblies\net6.0\Syncfusion.Themes.SystemTheme.WPF.dll</HintPath>
+    </Reference>
     <Reference Include="Syncfusion.Themes.Windows11Dark.WPF">
       <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\WPF\26.1.35\precompiledassemblies\net6.0\Syncfusion.Themes.Windows11Dark.WPF.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.Themes.Windows11Light.WPF">
       <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\WPF\26.1.35\precompiledassemblies\net6.0\Syncfusion.Themes.Windows11Light.WPF.dll</HintPath>
+      <Private></Private>
     </Reference>
     <Reference Include="Syncfusion.Tools.Wpf">
       <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\WPF\26.1.35\precompiledassemblies\net6.0\Syncfusion.Tools.Wpf.dll</HintPath>
