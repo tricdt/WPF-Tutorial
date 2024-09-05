@@ -2,7 +2,7 @@
 using System.Windows;
 using System.Windows.Data;
 
-namespace syncfusion.demoscommon.wpf.Converters
+namespace syncfusion.demoscommon.wpf
 {
     /// <summary>
     /// This class converts a Visibility enumeration to a boolean value.

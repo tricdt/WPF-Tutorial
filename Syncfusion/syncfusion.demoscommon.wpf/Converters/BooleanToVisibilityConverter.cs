@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace syncfusion.demoscommon.wpf.Converters
+namespace syncfusion.demoscommon.wpf
 {
     /// <summary>
     /// Convert between boolean and visibility

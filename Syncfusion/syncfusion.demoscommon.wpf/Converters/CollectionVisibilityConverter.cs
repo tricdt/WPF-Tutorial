@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace syncfusion.demoscommon.wpf.Converters
+namespace syncfusion.demoscommon.wpf
 {
     /// <summary>
     /// This class converts a collection size to visibility.

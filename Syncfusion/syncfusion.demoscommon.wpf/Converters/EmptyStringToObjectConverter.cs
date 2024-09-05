@@ -1,4 +1,4 @@
-﻿namespace syncfusion.demoscommon.wpf.Converters
+﻿namespace syncfusion.demoscommon.wpf
 {
     /// <summary>
     /// This class converts a string value into a an object (if the value is null or empty returns the false value).

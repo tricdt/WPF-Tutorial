@@ -1,7 +1,7 @@
 ﻿using System.Globalization;
 using System.Windows.Data;
 
-namespace syncfusion.demoscommon.wpf.Converters
+namespace syncfusion.demoscommon.wpf
 {
     /// <summary>
     /// Returns <see cref="System.Windows.Visibility.Visible"/> when object is not null and <see cref="System.Windows.Visibility.Collapsed"/> when object is null.

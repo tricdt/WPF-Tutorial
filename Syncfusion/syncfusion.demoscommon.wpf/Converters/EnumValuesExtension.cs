@@ -4,7 +4,7 @@ using System.Reflection;
 using System.Windows.Data;
 using System.Windows.Markup;
 
-namespace syncfusion.demoscommon.wpf.Converters
+namespace syncfusion.demoscommon.wpf
 {    /// <summary>
      /// A markup extension that returns a collection of values of a specific <see langword="enum"/>
      /// </summary>

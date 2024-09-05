@@ -1,7 +1,14 @@
 ﻿using Syncfusion.Windows.Shared;
 using System.Windows;
+using System.Windows.Navigation;
 namespace syncfusion.demoscommon.wpf
 {
+    public static class DemosNavigationService
+    {
+        public static NavigationService RootNavigationService { get; set; }
+        public static NavigationService DemoNavigationService { get; set; }
+        public static Window MainWindow { get; set; }
+    }
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
@@ -9,8 +16,11 @@ namespace syncfusion.demoscommon.wpf
     {
         public MainWindow(DemoBrowserViewModel viewModel)
         {
-            this.DataContext = viewModel;
             InitializeComponent();
+            this.DataContext = viewModel;
+            DemosNavigationService.MainWindow = this;
+            DemosNavigationService.RootNavigationService = this.ROOTFRAME.NavigationService;
+            DemosNavigationService.RootNavigationService.Navigate(new ProductsListView() { DataContext = this });
         }
         public MainWindow()
         {

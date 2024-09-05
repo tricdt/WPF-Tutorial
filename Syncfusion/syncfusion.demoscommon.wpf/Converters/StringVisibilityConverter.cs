@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace syncfusion.demoscommon.wpf.Converters
+namespace syncfusion.demoscommon.wpf
 {
     /// <summary>
     /// This class converts a string value into a Visibility value (if the value is null or empty returns a collapsed value).

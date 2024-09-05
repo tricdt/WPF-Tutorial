@@ -146,8 +146,8 @@
             VerticalAlignment="Center"
             AnimationType="Cupertino"
             Background="Transparent"
-            IsBusy="True"
-            Visibility="Visible">
+            IsBusy="{Binding IsShowCaseDemoBusy, Mode=TwoWay}"
+            Visibility="{Binding IsShowCaseDemoBusy, Converter={StaticResource BooleanToVisibilityConverter}}">
             <syncfusion:SfBusyIndicator.HeaderTemplate>
                 <DataTemplate>
                     <Grid>
@@ -160,7 +160,8 @@
                 </DataTemplate>
             </syncfusion:SfBusyIndicator.HeaderTemplate>
         </syncfusion:SfBusyIndicator>
-        <Border Opacity="0.5" Background="Black" Visibility="Visible"/>
+        <Border Opacity="0.5" Background="Black" 
+                Visibility="{Binding BlurVisibility, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
     </Grid>
 
 </syncfusion:ChromelessWindow>

@@ -2,7 +2,7 @@
 using System.Windows;
 using System.Windows.Data;
 
-namespace syncfusion.demoscommon.wpf.Converters
+namespace syncfusion.demoscommon.wpf
 {
     public class PrefixSuffixConverter : DependencyObject, IValueConverter
     {
