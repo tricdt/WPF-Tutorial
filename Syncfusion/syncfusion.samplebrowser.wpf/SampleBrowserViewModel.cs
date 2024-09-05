@@ -2,7 +2,7 @@
 
 namespace syncfusion.samplebrowser.wpf
 {
-    public class SampleBrowserViewModel : DemoBrowserViewModel
+    public class SamplesViewModel : DemoBrowserViewModel
     {
     }
 }

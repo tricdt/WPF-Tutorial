@@ -14,6 +14,9 @@
     <Reference Include="Syncfusion.SfBusyIndicator.WPF">
       <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\WPF\26.1.35\precompiledassemblies\net6.0\Syncfusion.SfBusyIndicator.WPF.dll</HintPath>
     </Reference>
+    <Reference Include="Syncfusion.SfNavigationDrawer.WPF">
+      <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\WPF\26.1.35\precompiledassemblies\net6.0\Syncfusion.SfNavigationDrawer.WPF.dll</HintPath>
+    </Reference>
     <Reference Include="Syncfusion.SfSkinManager.WPF">
       <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\WPF\26.1.35\precompiledassemblies\net6.0\Syncfusion.SfSkinManager.WPF.dll</HintPath>
     </Reference>

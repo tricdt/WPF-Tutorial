@@ -10,7 +10,7 @@ namespace syncfusion.samplebrowser.wpf
     {
         protected override void OnStartup(StartupEventArgs e)
         {
-            var window = new MainWindow(new SampleBrowserViewModel());
+            var window = new MainWindow(new SamplesViewModel());
             window.Show();
             base.OnStartup(e);
         }

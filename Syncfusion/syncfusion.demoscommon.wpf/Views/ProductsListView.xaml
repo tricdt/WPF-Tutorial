@@ -31,6 +31,9 @@
         ExpandedModeThresholdWidth="700"
         AutoChangeDisplayMode="True"
         syncfusionskin:SfSkinManager.Theme="{StaticResource theme}"
+        SelectedItem="{Binding SelectedItem, Mode=TwoWay}"
+        ItemsSource="{Binding HeaderItems}"
+        ContentView="{Binding NavigationContent}"
         IconMemberPath="NavigationIcon"
         DisplayMemberPath="NavigationItem">
         <syncfusion:SfNavigationDrawer.ItemContainerStyle>

@@ -20,7 +20,7 @@ namespace syncfusion.demoscommon.wpf
             this.DataContext = viewModel;
             DemosNavigationService.MainWindow = this;
             DemosNavigationService.RootNavigationService = this.ROOTFRAME.NavigationService;
-            DemosNavigationService.RootNavigationService.Navigate(new ProductsListView() { DataContext = this });
+            DemosNavigationService.RootNavigationService.Navigate(new ProductsListView() { DataContext = viewModel });
         }
         public MainWindow()
         {
