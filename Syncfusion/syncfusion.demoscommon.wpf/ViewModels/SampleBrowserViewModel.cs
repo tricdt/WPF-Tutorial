@@ -5,7 +5,7 @@ using System.Windows.Media;
 
 namespace syncfusion.demoscommon.wpf
 {
-    public class DemoBrowserViewModel : NotificationObject
+    public abstract class DemoBrowserViewModel : NotificationObject
     {
         /// <summary>
         /// Property to store busy status of sample browser while launch the show case demo.
@@ -189,8 +189,14 @@ namespace syncfusion.demoscommon.wpf
 
             return products;
         }
+
+        /// <summary>
+        /// Gets or sets the collection of product demos.
+        /// </summary>
+        public List<ProductDemo> ProductDemos { get; set; }
         public DemoBrowserViewModel()
         {
+            ProductDemos = GetDemosDetails();
             WhatsNewDemos = PopulateWhatsNewDemos();
             PopulateWhatsNewDemos();
             NavigationItems();
@@ -199,5 +205,12 @@ namespace syncfusion.demoscommon.wpf
                 this.SelectedItem = this.GetType().Name != "SamplesViewModel" ? this.HeaderItems.Last() : this.HeaderItems.First();
             }
         }
+
+        /// <summary>
+        /// Maintains the product demo collection
+        /// </summary>
+        /// <returns>Product demos</returns>
+        public abstract List<ProductDemo> GetDemosDetails();
+
     }
 }

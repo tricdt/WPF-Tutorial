@@ -8,7 +8,9 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
   <ItemGroup>
+    <ProjectReference Include="..\syncfusion.datagriddemos.wpf\syncfusion.datagriddemos.wpf.csproj" />
     <ProjectReference Include="..\syncfusion.demoscommon.wpf\syncfusion.demoscommon.wpf.csproj" />
+    <ProjectReference Include="..\syncfusion.gridcontroldemos.wpf\syncfusion.gridcontroldemos.wpf.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Syncfusion.SfBusyIndicator.WPF">

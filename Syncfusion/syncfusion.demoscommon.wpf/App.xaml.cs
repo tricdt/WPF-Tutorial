@@ -9,7 +9,7 @@ namespace syncfusion.demoscommon.wpf
     {
         protected override void OnStartup(StartupEventArgs e)
         {
-            var window = new MainWindow(new DemoBrowserViewModel());
+            var window = new MainWindow();
             window.Show();
             base.OnStartup(e);
         }
