@@ -1,5 +1,4 @@
-﻿using syncfusion.demoscommon.wpf.SamplePages;
-using Syncfusion.UI.Xaml.NavigationDrawer;
+﻿using Syncfusion.UI.Xaml.NavigationDrawer;
 using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Media;
@@ -167,11 +166,10 @@ namespace syncfusion.demoscommon.wpf
             };
             if (this.GetType().Name != "SamplesViewModel")
             {
-                //if (this.WhatsNewDemos.Any())
-                //{
-                //    this.HeaderItems.Add(whatsNew);
-                //}
-                this.HeaderItems.Add(whatsNew);
+                if (this.WhatsNewDemos.Any())
+                {
+                    this.HeaderItems.Add(whatsNew);
+                }
                 this.HeaderItems.Add(allComponents);
             }
             else
@@ -193,6 +191,7 @@ namespace syncfusion.demoscommon.wpf
         }
         public DemoBrowserViewModel()
         {
+            WhatsNewDemos = PopulateWhatsNewDemos();
             PopulateWhatsNewDemos();
             NavigationItems();
             if (this.HeaderItems.Any())
