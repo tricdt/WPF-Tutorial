@@ -1,4 +1,6 @@
-﻿using System.Collections.ObjectModel;
+﻿using syncfusion.demoscommon.wpf.SamplePages;
+using Syncfusion.UI.Xaml.NavigationDrawer;
+using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Media;
 
@@ -48,7 +50,36 @@ namespace syncfusion.demoscommon.wpf
                 this.RaisePropertyChanged(nameof(SelectedItem));
             }
         }
-
+        private void OnSelectionChanged()
+        {
+            string pagename = string.Empty;
+            if (this.SelectedItem == null)
+                return;
+            if (this.SelectedItem is NavigationViewModel navigationViewModel)
+            {
+                pagename = navigationViewModel.NavigationItem.ToString();
+            }
+            else if (this.SelectedItem is NavigationItem navigationItem)
+            {
+                pagename = navigationItem.Header.ToString();
+            }
+            if (pagename == "Home")
+            {
+                NavigationContent = new HomePage();
+            }
+            else if (pagename == "What's New")
+            {
+                NavigationContent = new WhatsNew();
+            }
+            else if (pagename == "Showcase")
+            {
+                NavigationContent = new ShowcaseApplication();
+            }
+            else if (pagename == "All Controls")
+            {
+                NavigationContent = new AllComponentsPage();
+            }
+        }
         /// <summary>
         /// Gets or set the pageview of the items of NavigationDrawer
         /// </summary>
@@ -85,10 +116,7 @@ namespace syncfusion.demoscommon.wpf
         /// </summary>
         public List<DemoInfo> WhatsNewDemos { get; set; }
 
-        private void OnSelectionChanged()
-        {
-            throw new NotImplementedException();
-        }
+
 
         private void NavigationItems()
         {
@@ -167,6 +195,10 @@ namespace syncfusion.demoscommon.wpf
         {
             PopulateWhatsNewDemos();
             NavigationItems();
+            if (this.HeaderItems.Any())
+            {
+                this.SelectedItem = this.GetType().Name != "SamplesViewModel" ? this.HeaderItems.Last() : this.HeaderItems.First();
+            }
         }
     }
 }
