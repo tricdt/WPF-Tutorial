@@ -1,6 +1,8 @@
 ﻿using Syncfusion.UI.Xaml.NavigationDrawer;
+using Syncfusion.Windows.Shared;
 using System.Collections.ObjectModel;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 
@@ -212,6 +214,7 @@ namespace syncfusion.demoscommon.wpf
         public List<ProductDemo> ProductDemos { get; set; }
         public DemoBrowserViewModel()
         {
+            clickCommand = new DelegateCommand<object>(OnClicked);
             ProductDemos = GetDemosDetails();
             WhatsNewDemos = PopulateWhatsNewDemos();
             PopulateWhatsNewDemos();
@@ -219,6 +222,36 @@ namespace syncfusion.demoscommon.wpf
             if (this.HeaderItems.Any())
             {
                 this.SelectedItem = this.GetType().Name != "SamplesViewModel" ? this.HeaderItems.Last() : this.HeaderItems.First();
+            }
+        }
+
+        private void OnClicked(object paramater)
+        {
+            if (paramater is RadioButton)
+            {
+                RadioButton button = (RadioButton)paramater;
+                UserControl userControl = VisualUtils.FindAncestor(button, typeof(UserControl)) as UserControl;
+                if (userControl != null)
+                {
+                    ListView listView = VisualUtils.FindDescendant(userControl, typeof(ListView)) as ListView;
+                    if (listView != null)
+                    {
+                        listView.GroupStyle.Clear();
+                        DataTemplate FirstTemplate = userControl.Resources["ListViewTemplate"] as DataTemplate;
+                        DataTemplate SecondTemplate = userControl.Resources["GalleryViewTemplate"] as DataTemplate;
+                        GroupStyle groupstyle1 = userControl.Resources["ListViewGroupStyle"] as GroupStyle;
+                        GroupStyle groupstyle2 = userControl.Resources["GalleryViewGroupStyle"] as GroupStyle;
+                        listView.ItemTemplate = button.Name.ToString() == "galleryViewButton" ? SecondTemplate : FirstTemplate;
+                        if (button.Name.ToString() == "galleryViewButton")
+                        {
+                            listView.GroupStyle.Add(groupstyle2);
+                        }
+                        else
+                        {
+                            listView.GroupStyle.Add(groupstyle1);
+                        }
+                    }
+                }
             }
         }
 
