@@ -17,8 +17,9 @@ namespace syncfusion.datagriddemos.wpf
     {
         public DataGridProductDemos()
         {
+
             this.Product = "DataGrid";
-            this.ProductCategory = "GRID";
+            this.ProductCategory = "GRIDS";
             this.ListViewImagePathData = new System.Windows.Shapes.Path()
             {
                 Data = Geometry.Parse("M12 1H2C1.44772 1 1 1.44772 1 2V4H13V2C13 1.44772 12.5523 1 12 1ZM9 5H5V8H9V5ZM10 8V5H13V8H10ZM9 9H5V13H9V9ZM10 13V9H13V12C13 12.5523 12.5523 13 12 13H10ZM2 14C0.89543 14 0 13.1046 0 12V2C0 0.89543 0.895431 0 2 0H12C13.1046 0 14 0.895431 14 2V12C14 13.1046 13.1046 14 12 14H2ZM1 5H4V8H1V5ZM1 9H4V13H2C1.44772 13 1 12.5523 1 12V9Z"),

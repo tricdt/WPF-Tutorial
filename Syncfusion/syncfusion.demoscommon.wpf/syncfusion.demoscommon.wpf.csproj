@@ -10,6 +10,7 @@
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Assets\App.ico" />
+    <None Remove="Assets\ProductCategoryImages\Grids.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Syncfusion.SfBusyIndicator.WPF">
@@ -51,5 +52,6 @@
     <Resource Include="Assets\App.ico">
       <CopyToOutputDirectory></CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Assets\ProductCategoryImages\Grids.png" />
   </ItemGroup>
 </Project>
