@@ -1,6 +1,7 @@
 ﻿using Syncfusion.UI.Xaml.NavigationDrawer;
 using System.Collections.ObjectModel;
 using System.Windows;
+using System.Windows.Input;
 using System.Windows.Media;
 
 namespace syncfusion.demoscommon.wpf
@@ -115,7 +116,22 @@ namespace syncfusion.demoscommon.wpf
         /// </summary>
         public List<DemoInfo> WhatsNewDemos { get; set; }
 
-
+        /// <summary>
+        /// Maintains the command for the ShowAll ,Explore All Controls ,ListView and GalleryView Buttons
+        /// </summary>
+        private ICommand clickCommand;
+        public ICommand ClickCommand
+        {
+            get
+            {
+                return clickCommand;
+            }
+            set
+            {
+                clickCommand = value;
+                this.RaisePropertyChanged(nameof(ClickCommand));
+            }
+        }
 
         private void NavigationItems()
         {

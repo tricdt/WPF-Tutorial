@@ -384,8 +384,7 @@
                           ScrollViewer.VerticalScrollBarVisibility="Auto"
                           ItemsSource="{Binding Source={StaticResource productDemosSource}}"
                           ItemContainerStyle="{StaticResource ListStyle}"
-                          ItemTemplate="{StaticResource GalleryViewTemplate}">
-                          
+                          ItemTemplate="{StaticResource ListViewTemplate}">
                 </ListView>
             </Grid>
         </Grid>
