@@ -12,6 +12,9 @@
     <None Remove="Assets\App.ico" />
     <None Remove="Assets\GalleryViewImages\DataGrid.png" />
     <None Remove="Assets\GalleryViewImages\GridControl.png" />
+    <None Remove="Assets\GalleryViewImages\PivotGrid.png" />
+    <None Remove="Assets\GalleryViewImages\PropertyGrid.png" />
+    <None Remove="Assets\GalleryViewImages\TreeGrid.png" />
     <None Remove="Assets\ProductCategoryImages\Grids.png" />
   </ItemGroup>
   <ItemGroup>
@@ -56,6 +59,9 @@
     </Resource>
     <Resource Include="Assets\GalleryViewImages\DataGrid.png" />
     <Resource Include="Assets\GalleryViewImages\GridControl.png" />
+    <Resource Include="Assets\GalleryViewImages\PivotGrid.png" />
+    <Resource Include="Assets\GalleryViewImages\PropertyGrid.png" />
+    <Resource Include="Assets\GalleryViewImages\TreeGrid.png" />
     <Resource Include="Assets\ProductCategoryImages\Grids.png" />
   </ItemGroup>
 </Project>

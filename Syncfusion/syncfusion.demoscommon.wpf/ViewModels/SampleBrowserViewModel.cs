@@ -1,6 +1,7 @@
 ﻿using Syncfusion.UI.Xaml.NavigationDrawer;
 using Syncfusion.Windows.Shared;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -252,6 +253,36 @@ namespace syncfusion.demoscommon.wpf
                         }
                     }
                 }
+            }
+            if (paramater.ToString() == "ShowAllShowcase")
+            {
+                if (this.HeaderItems.Count > 0)
+                {
+                    this.SelectedItem = this.HeaderItems.ElementAt(2);
+                }
+            }
+            else if (paramater.ToString() == "ExploreAllControls")
+            {
+                if (this.HeaderItems.Count > 0)
+                {
+                    this.SelectedItem = this.HeaderItems.Last();
+                }
+            }
+            else if (paramater.ToString() == "Buy Now")
+            {
+                System.Diagnostics.Process.Start(new ProcessStartInfo("https://www.syncfusion.com/sales/products/wpf") { UseShellExecute = true });
+            }
+            else if (paramater.ToString() == "Document")
+            {
+                System.Diagnostics.Process.Start(new ProcessStartInfo("https://help.syncfusion.com/wpf/welcome-to-syncfusion-essential-wpf") { UseShellExecute = true });
+            }
+            else if (paramater.ToString() == "Support")
+            {
+                System.Diagnostics.Process.Start(new ProcessStartInfo("https://support.syncfusion.com/create") { UseShellExecute = true });
+            }
+            else if (paramater.ToString() == "Source Code in GitHub")
+            {
+                System.Diagnostics.Process.Start(new ProcessStartInfo("https://github.com/syncfusion/wpf-demos") { UseShellExecute = true });
             }
         }
 
