@@ -146,7 +146,159 @@
                     </Style>
                 </GroupStyle.ContainerStyle>
             </GroupStyle>
-
+            <DataTemplate x:Key="GalleryViewTemplate">
+                <Border x:Name="itemTile" Margin="0,1,0,1" BorderBrush="#F5F5F5" BorderThickness="1" CornerRadius="4">
+                    <Grid Width="400">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Image Source="{Binding GalleryViewImageSource}"
+                          Width="50"
+                          Height="50"
+                          Margin="12,12,0,12"
+                          HorizontalAlignment="Center"
+                          VerticalAlignment="Top"
+                          Stretch="UniformToFill" />
+                        <Grid Grid.Column="1"
+                         Margin="8,8,0,8">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <TextBlock x:Name="titleText"
+                                  Grid.Column="0"
+                                  Height="20"
+                                  FontSize="14"
+                                  Margin="0,0,0,2"
+                                  FontWeight="SemiBold"
+                                  Foreground="#000000"
+                                  Text="{Binding Product}" />
+                            <syncfusion:SfBadge Grid.Column="1">
+                                <syncfusion:SfBadge.Template>
+                                    <ControlTemplate>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Border x:Name="Badge"
+                                               Height="20" 
+                                               Visibility="Collapsed"
+                                               CornerRadius="10">
+                                                <TextBlock x:Name="previewText"
+                                                      FontSize="12"
+                                                      Text="Preview"
+                                                      VerticalAlignment="Center"
+                                                      Padding="6,4,6,4"/>
+                                            </Border>
+                                            <Border x:Name="Badge1"
+                                               Height="20" 
+                                               Margin="4,0,8,0"
+                                               CornerRadius="10">
+                                                <TextBlock x:Name="tagText"
+                                                      FontSize="12"
+                                                      Text="{Binding Tag}"
+                                                      VerticalAlignment="Center"
+                                                      Padding="6,4,6,4"/>
+                                            </Border>
+                                        </StackPanel>
+                                        <ControlTemplate.Triggers>
+                                            <DataTrigger Binding="{Binding IsPreview}" Value="True">
+                                                <Setter TargetName="Badge" Property="Visibility" Value="Visible"/>
+                                                <Setter TargetName="Badge" Property="Background" Value="#FAE41C" />
+                                                <Setter TargetName="previewText" Property="Foreground" Value="#0A0A0A" />
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Tag}" Value="None">
+                                                <Setter TargetName="Badge1" Property="Visibility" Value="Collapsed" />
+                                                <Setter TargetName="Badge" Property="Margin" Value="0,0,8,0" />
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Tag}" Value="New">
+                                                <Setter TargetName="Badge1" Property="Background" Value="#059013" />
+                                                <Setter TargetName="Badge1" Property="Margin" Value="4,0,12,0" />
+                                                <Setter TargetName="tagText" Property="Foreground" Value="#FFFFFF" />
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Tag}" Value="Updated">
+                                                <Setter TargetName="Badge1" Property="Background" Value="#0A70BE" />
+                                                <Setter TargetName="tagText" Property="Foreground" Value="#FFFFFF" />
+                                            </DataTrigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </syncfusion:SfBadge.Template>
+                            </syncfusion:SfBadge>
+                            <TextBlock x:Name="description" 
+                                  Grid.Row="1"
+                                  Height="56"
+                                  Grid.ColumnSpan="2" 
+                                  Foreground="#000000"
+                                  Opacity="0.6063"
+                                  Margin="0,0,12,0" 
+                                  FontSize="14"
+                                  FontWeight="Normal"
+                                  TextTrimming="WordEllipsis"
+                                  TextWrapping="Wrap"
+                                  Text="{Binding ControlDescription}"/>
+                        </Grid>
+                    </Grid>
+                </Border>
+                <DataTemplate.Triggers>
+                    <Trigger SourceName="itemTile" Property="IsMouseOver" Value="True">
+                        <Setter TargetName="itemTile" Property="Background" Value="#F5F5F5"/>
+                    </Trigger>
+                    <DataTrigger Binding="{Binding Path=IsSelected, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ListViewItem}}}" Value="True">
+                        <Setter TargetName="itemTile" Property="Background" Value="#ECECEC"/>
+                    </DataTrigger>
+                    <DataTrigger Binding="{Binding Path=IsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ListViewItem}}}" Value="False">
+                        <Setter TargetName="itemTile" Property="Background" Value="#FBFBFB"/>
+                        <Setter TargetName="titleText" Property="Foreground" Value="{StaticResource Disabled.Foreground}"/>
+                        <Setter TargetName="description" Property="Foreground" Value="{StaticResource Disabled.Foreground}"/>
+                    </DataTrigger>
+                </DataTemplate.Triggers>
+            </DataTemplate>
+            <GroupStyle x:Key="GalleryViewGroupStyle">
+                <GroupStyle.Panel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel HorizontalAlignment="Stretch" Orientation="Horizontal" VerticalAlignment="Stretch" />
+                    </ItemsPanelTemplate>
+                </GroupStyle.Panel>
+                <GroupStyle.ContainerStyle>
+                    <Style TargetType="{x:Type GroupItem}">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type GroupItem}">
+                                    <Border Margin="0,0,16,16">
+                                        <Grid Width="400">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="*"/>
+                                            </Grid.RowDefinitions>
+                                            <Border BorderBrush="#F5F5F5"
+                                                    BorderThickness="0,0,0,1"
+                                                    Margin="0,0,0,8"
+                                                    CornerRadius="0,0,0,14" >
+                                                <Border HorizontalAlignment="Left"
+                                                        Height="28"
+                                                        Width="Auto"
+                                                        BorderBrush="#F5F5F5"
+                                                        BorderThickness="1"
+                                                        Background="#FAFAFA"
+                                                        CornerRadius="14,14,0,14">
+                                                    <TextBlock Padding="12,4,12,5"
+                                                               HorizontalAlignment="Left"
+                                                               FontSize="14"
+                                                               FontWeight="SemiBold"
+                                                               Text="{Binding Name}" />
+                                                </Border>
+                                            </Border>
+                                            <ItemsPresenter Grid.Row="1"/>
+                                        </Grid>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </GroupStyle.ContainerStyle>
+            </GroupStyle>
         </ResourceDictionary>
     </UserControl.Resources>
     <Grid Background="#F2F6FF">
@@ -232,7 +384,7 @@
                           ScrollViewer.VerticalScrollBarVisibility="Auto"
                           ItemsSource="{Binding Source={StaticResource productDemosSource}}"
                           ItemContainerStyle="{StaticResource ListStyle}"
-                          ItemTemplate="{StaticResource ListViewTemplate }">
+                          ItemTemplate="{StaticResource GalleryViewTemplate}">
                           
                 </ListView>
             </Grid>

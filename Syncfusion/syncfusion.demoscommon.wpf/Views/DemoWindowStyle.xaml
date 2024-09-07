@@ -5,6 +5,7 @@
     <local:BoolNegationConverter x:Key="BoolNegationConverter"/>
     <local:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
     <local:StringVisibilityConverter x:Key="StringVisibilityConverter"/>
+    <SolidColorBrush x:Key="Disabled.Foreground" Color="#000000" Opacity="0.38" />
     <syncfusion:TemplateToVisibilityConverter x:Key="dropDownTemplateConvertor"/>
     <!--Style used for SubDemos ListViewItem-->
     <Style x:Key="SubDemoListViewItemStyle" TargetType="{x:Type ListViewItem}">

@@ -10,7 +10,7 @@ namespace syncfusion.demoscommon.wpf
         public AllComponentsPage()
         {
             InitializeComponent();
-            listView.GroupStyle.Add(this.Resources["ListViewGroupStyle"] as GroupStyle);
+            listView.GroupStyle.Add(this.Resources["GalleryViewGroupStyle"] as GroupStyle);
         }
     }
 }

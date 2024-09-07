@@ -10,6 +10,8 @@
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Assets\App.ico" />
+    <None Remove="Assets\GalleryViewImages\DataGrid.png" />
+    <None Remove="Assets\GalleryViewImages\GridControl.png" />
     <None Remove="Assets\ProductCategoryImages\Grids.png" />
   </ItemGroup>
   <ItemGroup>
@@ -52,6 +54,8 @@
     <Resource Include="Assets\App.ico">
       <CopyToOutputDirectory></CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Assets\GalleryViewImages\DataGrid.png" />
+    <Resource Include="Assets\GalleryViewImages\GridControl.png" />
     <Resource Include="Assets\ProductCategoryImages\Grids.png" />
   </ItemGroup>
 </Project>
