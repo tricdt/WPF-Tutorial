@@ -1,20 +1,24 @@
-﻿using Syncfusion.UI.Xaml.NavigationDrawer;
+﻿using Syncfusion.SfSkinManager;
+using Syncfusion.UI.Xaml.NavigationDrawer;
 using Syncfusion.Windows.Shared;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
+using System.IO;
+using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
-
+using System.Xml;
 namespace syncfusion.demoscommon.wpf
 {
     public abstract class DemoBrowserViewModel : NotificationObject
     {
+        public static string DefaultThemeName = "Windows11Light";
+        private bool isShowCaseDemoBusy = false;
         /// <summary>
         /// Property to store busy status of sample browser while launch the show case demo.
         /// </summary>
-        private bool isShowCaseDemoBusy = false;
         public bool IsShowCaseDemoBusy
         {
             get { return isShowCaseDemoBusy; }
@@ -25,10 +29,11 @@ namespace syncfusion.demoscommon.wpf
             }
         }
 
+
+        private Visibility blurVisibility = Visibility.Collapsed;
         /// <summary>
         /// Property to store visibility state of blur layer in sample browser.
         /// </summary>
-        private Visibility blurVisibility = Visibility.Collapsed;
         public Visibility BlurVisibility
         {
             get { return blurVisibility; }
@@ -39,10 +44,11 @@ namespace syncfusion.demoscommon.wpf
             }
         }
 
+
+        private object selectedItem;
         /// <summary>
         /// Gets or set the selecteditem of the NavigationDrawer
         /// </summary>
-        private object selectedItem;
         public object SelectedItem
         {
             get { return selectedItem; }
@@ -83,10 +89,11 @@ namespace syncfusion.demoscommon.wpf
                 NavigationContent = new AllComponentsPage();
             }
         }
+
+        private object navigationContent;
         /// <summary>
         /// Gets or set the pageview of the items of NavigationDrawer
         /// </summary>
-        private object navigationContent;
         public object NavigationContent
         {
             get { return navigationContent; }
@@ -97,10 +104,11 @@ namespace syncfusion.demoscommon.wpf
             }
         }
 
+
+        private ObservableCollection<NavigationViewModel> headerItems;
         /// <summary>
         /// Gets or set the HeaderItems Collection
         /// </summary>
-        private ObservableCollection<NavigationViewModel> headerItems;
         public ObservableCollection<NavigationViewModel> HeaderItems
         {
             get
@@ -113,6 +121,267 @@ namespace syncfusion.demoscommon.wpf
                 this.RaisePropertyChanged(nameof(HeaderItems));
             }
         }
+
+
+        private bool isWindowMode = true;
+        /// <summary>
+        /// Gets or sets the property value indicating whether the products demos launch in separate window
+        /// </summary>
+        public bool IsWindowMode
+        {
+            get { return isWindowMode; }
+            set
+            {
+                isWindowMode = value;
+                RaisePropertyChanged("IsWindowMode");
+            }
+        }
+        private ObservableCollection<Themes> themelist = new ObservableCollection<Themes>()
+        {
+            new Themes{ThemeName="Windows11Light", DisplayName="Light" , ThemeType="Windows 11 Themes", EllipseFill=(Brush)new BrushConverter().ConvertFromString("#FFFFFF") , EllipseStroke=(Brush)new BrushConverter().ConvertFromString("#E5E5E5"), PathFill=(Brush)new BrushConverter().ConvertFromString("#005FB8")},
+            new Themes{ThemeName="Windows11Dark" , DisplayName="Dark" , ThemeType="Windows 11 Themes",EllipseFill=(Brush)new BrushConverter().ConvertFromString("#202020") , EllipseStroke=(Brush)new BrushConverter().ConvertFromString("#333333"), PathFill=(Brush)new BrushConverter().ConvertFromString("#60CDFF")},
+            new Themes{ThemeName="Material3Light", DisplayName="Light" , ThemeType="Material 3 Themes", EllipseFill=(Brush)new BrushConverter().ConvertFromString("#FFFFFF") , EllipseStroke=(Brush)new BrushConverter().ConvertFromString("#EDEDED"), PathFill=(Brush)new BrushConverter().ConvertFromString("#6750A4")},
+            new Themes{ThemeName="Material3Dark", DisplayName="Dark" , ThemeType="Material 3 Themes", EllipseFill=(Brush)new BrushConverter().ConvertFromString("#141218") , EllipseStroke=(Brush)new BrushConverter().ConvertFromString("#403C49"), PathFill=(Brush)new BrushConverter().ConvertFromString("#CFBDFE")},
+            new Themes{ThemeName="Office2019White", DisplayName="White",ThemeType="Office 2019 Themes",EllipseFill=(Brush)new BrushConverter().ConvertFromString("#FFFFFF") , EllipseStroke=(Brush)new BrushConverter().ConvertFromString("#E9E9E9"), PathFill=(Brush)new BrushConverter().ConvertFromString("#0077FF")},
+            new Themes{ThemeName="Office2019Black", DisplayName="Black",ThemeType="Office 2019 Themes",EllipseFill=(Brush)new BrushConverter().ConvertFromString("#020202") , EllipseStroke=(Brush)new BrushConverter().ConvertFromString("#262626"), PathFill=(Brush)new BrushConverter().ConvertFromString("#008FA3")},
+            new Themes{ThemeName="Office2019Colorful", DisplayName="Colorful",ThemeType="Office 2019 Themes" ,EllipseFill=(Brush)new BrushConverter().ConvertFromString("#FFFFFF") , EllipseStroke=(Brush)new BrushConverter().ConvertFromString("#E9E9E9"), PathFill=(Brush)new BrushConverter().ConvertFromString("#0077FF")},
+            new Themes{ThemeName="Office2019DarkGray", DisplayName="Dark Gray",ThemeType="Office 2019 Themes",EllipseFill=(Brush)new BrushConverter().ConvertFromString("#949494") , EllipseStroke=(Brush)new BrushConverter().ConvertFromString("#949494"), PathFill=(Brush)new BrushConverter().ConvertFromString("#0077FF")},
+            new Themes{ThemeName="Office2019HighContrast",DisplayName="High Contrast Black",ThemeType="Office 2019 Themes" ,EllipseFill=(Brush)new BrushConverter().ConvertFromString("#000000") , EllipseStroke=(Brush)new BrushConverter().ConvertFromString("#000000"), PathFill=(Brush)new BrushConverter().ConvertFromString("#FFD600")},
+            new Themes{ThemeName="Office2019HighContrastWhite", DisplayName="High Contrast White",ThemeType="Office 2019 Themes" ,EllipseFill=(Brush)new BrushConverter().ConvertFromString("#FFFFFF") , EllipseStroke=(Brush)new BrushConverter().ConvertFromString("#E9E9E9"), PathFill=(Brush)new BrushConverter().ConvertFromString("#5419B4")},
+            new Themes{ThemeName="FluentLight", DisplayName="Light" , ThemeType="Fluent Themes", EllipseFill=(Brush)new BrushConverter().ConvertFromString("#FFFFFF") , EllipseStroke=(Brush)new BrushConverter().ConvertFromString("#E9E9E9"), PathFill=(Brush)new BrushConverter().ConvertFromString("#0077FF")},
+            new Themes{ThemeName="FluentDark" ,DisplayName="Dark" , ThemeType="Fluent Themes",EllipseFill=(Brush)new BrushConverter().ConvertFromString("#313131") , EllipseStroke=(Brush)new BrushConverter().ConvertFromString("#000000"), PathFill=(Brush)new BrushConverter().ConvertFromString("#0077FF")},
+            new Themes{ThemeName="SystemTheme", DisplayName="System Theme", ThemeType="System Theme",EllipseFill=(Brush)new BrushConverter().ConvertFromString("#FFFFFF") , EllipseStroke=(Brush)new BrushConverter().ConvertFromString("#888888"), PathFill=(Brush)new BrushConverter().ConvertFromString("#000000")}
+
+        };
+        private string selectedthemename = DemoBrowserViewModel.DefaultThemeName;
+        /// <summary>
+        /// Gets or sets the selected <see cref="VisualStyles"/> of application.
+        /// </summary>
+        public string SelectedThemeName
+        {
+            get
+            {
+                return selectedthemename;
+            }
+            set
+            {
+                selectedthemename = value;
+            }
+        }
+        private Themes selectedTheme;
+
+        public Themes SelectedTheme
+        {
+            get { return selectedTheme; }
+            set
+            {
+                selectedTheme = value;
+                if (selectedTheme != null)
+                {
+                    SelectedThemeName = selectedTheme.ThemeName;
+                }
+                RaisePropertyChanged(nameof(SelectedThemeName));
+            }
+        }
+        private List<Palette> PaletteList = new List<Palette>();
+        private ObservableCollection<Palette> palettes;
+        /// <summary>
+        /// Gets or sets the property value indicating the list of colorpalette for the selected Theme.
+        /// </summary>
+        public ObservableCollection<Palette> Palettes
+        {
+            get { return palettes; }
+            set
+            {
+                palettes = value;
+                RaisePropertyChanged("Palettes");
+            }
+        }
+        private Palette selectedpalette;
+
+        public Palette SelectedPalette
+        {
+            get { return selectedpalette; }
+            set
+            {
+                selectedpalette = value;
+                if (SelectedPalette != null && SelectedPalette.Name != null)
+                {
+                    OnPaletteChanged(selectedthemename);
+                }
+                RaisePropertyChanged("SelectedPalette");
+
+            }
+        }
+
+        private void OnPaletteChanged(string ThemeName)
+        {
+            switch (ThemeName)
+            {
+                case "Windows11Light":
+                    {
+                        changePalette("Syncfusion.Themes.Windows11Light.WPF.Windows11LightThemeSettings, Syncfusion.Themes.Windows11Light.WPF", "Syncfusion.Themes.Windows11Light.WPF.Windows11Palette, Syncfusion.Themes.Windows11Light.WPF", ThemeName);
+                        break;
+                    }
+                case "Windows11Dark":
+                    {
+                        changePalette("Syncfusion.Themes.Windows11Dark.WPF.Windows11DarkThemeSettings, Syncfusion.Themes.Windows11Dark.WPF", "Syncfusion.Themes.Windows11Dark.WPF.Windows11Palette, Syncfusion.Themes.Windows11Dark.WPF", ThemeName);
+                        break;
+                    }
+                case "FluentLight":
+                    {
+                        changePalette("Syncfusion.Themes.FluentLight.WPF.FluentLightThemeSettings, Syncfusion.Themes.FluentLight.WPF", "Syncfusion.Themes.FluentLight.WPF.FluentPalette, Syncfusion.Themes.FluentLight.WPF", ThemeName);
+                        break;
+                    }
+                case "FluentDark":
+                    {
+                        changePalette("Syncfusion.Themes.FluentDark.WPF.FluentDarkThemeSettings, Syncfusion.Themes.FluentDark.WPF", "Syncfusion.Themes.FluentDark.WPF.FluentPalette, Syncfusion.Themes.FluentDark.WPF", ThemeName);
+                        break;
+                    }
+                case "Material3Light":
+                    {
+                        changePalette("Syncfusion.Themes.Material3Light.WPF.Material3LightThemeSettings, Syncfusion.Themes.Material3Light.WPF", "Syncfusion.Themes.Material3Light.WPF.Material3Palette, Syncfusion.Themes.Material3Light.WPF", ThemeName);
+                        break;
+                    }
+                case "Material3Dark":
+                    {
+                        changePalette("Syncfusion.Themes.Material3Dark.WPF.Material3DarkThemeSettings, Syncfusion.Themes.Material3Dark.WPF", "Syncfusion.Themes.Material3Dark.WPF.Material3Palette, Syncfusion.Themes.Material3Dark.WPF", ThemeName);
+                        break;
+                    }
+                case "Office2019Colorful":
+                    {
+                        changePalette("Syncfusion.Themes.Office2019Colorful.WPF.Office2019ColorfulThemeSettings, Syncfusion.Themes.Office2019Colorful.WPF", "Syncfusion.Themes.Office2019Colorful.WPF.Office2019Palette, Syncfusion.Themes.Office2019Colorful.WPF", ThemeName);
+                        break;
+                    }
+                case "Office2019Black":
+                    {
+                        changePalette("Syncfusion.Themes.Office2019Black.WPF.Office2019BlackThemeSettings, Syncfusion.Themes.Office2019Black.WPF", "Syncfusion.Themes.Office2019Black.WPF.Office2019Palette, Syncfusion.Themes.Office2019Black.WPF", ThemeName);
+                        break;
+                    }
+                case "Office2019White":
+                    {
+                        changePalette("Syncfusion.Themes.Office2019White.WPF.Office2019WhiteThemeSettings, Syncfusion.Themes.Office2019White.WPF", "Syncfusion.Themes.Office2019White.WPF.Office2019Palette, Syncfusion.Themes.Office2019White.WPF", ThemeName);
+                        break;
+                    }
+                case "Office2019DarkGray":
+                    {
+                        changePalette("Syncfusion.Themes.Office2019DarkGray.WPF.Office2019DarkGrayThemeSettings, Syncfusion.Themes.Office2019DarkGray.WPF", "Syncfusion.Themes.Office2019DarkGray.WPF.Office2019Palette, Syncfusion.Themes.Office2019DarkGray.WPF", ThemeName);
+                        break;
+
+                    }
+                case "Office2019HighContrast":
+                    {
+                        changePalette("Syncfusion.Themes.Office2019HighContrast.WPF.Office2019HighContrastThemeSettings, Syncfusion.Themes.Office2019HighContrast.WPF", "Syncfusion.Themes.Office2019HighContrast.WPF.HighContrastPalette, Syncfusion.Themes.Office2019HighContrast.WPF", ThemeName);
+                        break;
+                    }
+                case "Office2019HighContrastWhite":
+                    {
+                        changePalette("Syncfusion.Themes.Office2019HighContrastWhite.WPF.Office2019HighContrastWhiteThemeSettings, Syncfusion.Themes.Office2019HighContrastWhite.WPF", "Syncfusion.Themes.Office2019HighContrastWhite.WPF.HighContrastPalette, Syncfusion.Themes.Office2019HighContrastWhite.WPF", ThemeName);
+                        break;
+                    }
+
+            }
+        }
+
+        /// <summary>
+        /// Method helps to Change the Color palette for the SelectedTheme
+        /// </summary>
+        /// <param name="themeType">Type of the theme</param>
+        /// <param name="theme">Name of the selected theme</param>
+        private void changePalette(string themeType, string paletteType, string theme)
+        {
+            object themeSettings = Activator.CreateInstance(Type.GetType(themeType));
+            themeSettings.GetType().GetRuntimeProperty("Palette").SetValue(themeSettings, Enum.Parse(Type.GetType(paletteType), SelectedPalette.Name));
+            SfSkinManager.RegisterThemeSettings(theme, (IThemeSetting)themeSettings);
+        }
+
+        private Brush titleBarBackground = new SolidColorBrush(Color.FromRgb(43, 87, 154));
+        /// <summary>
+        /// Gets or set the title bar background
+        /// </summary>
+        public Brush TitleBarBackground
+        {
+            get { return titleBarBackground; }
+            set
+            {
+                titleBarBackground = value;
+                this.RaisePropertyChanged("TitleBarBackground");
+            }
+        }
+
+        private Brush titleBarForeground = new SolidColorBrush(Color.FromRgb(255, 255, 255));
+        /// <summary>
+        /// Gets or set the title bar foreground
+        /// </summary>
+        public Brush TitleBarForeground
+        {
+            get { return titleBarForeground; }
+            set
+            {
+                titleBarForeground = value;
+                this.RaisePropertyChanged("TitleBarForeground");
+            }
+        }
+
+
+        private ProductDemo _selectedproduct;
+        /// <summary>
+        /// Gets or sets the selected <see cref="ProductDemo"/> product.
+        /// </summary>
+        public ProductDemo SelectedProduct
+        {
+            get { return _selectedproduct; }
+            set
+            {
+                _selectedproduct = value;
+                OnSelectedProductChanged();
+                this.RaisePropertyChanged("SelectedProduct");
+            }
+        }
+
+        private void OnSelectedProductChanged()
+        {
+            if (this.SelectedProduct == null)
+                return;
+            selectedthemename = DemoBrowserViewModel.DefaultThemeName;
+            // Fluent theme is the default theme.
+            selectedTheme = themelist.FirstOrDefault(theme => theme.ThemeName == "Windows11Light");
+            Palettes = new ObservableCollection<Palette>(PaletteList.Where(x => (x.Theme.Equals(selectedthemename))).ToList<Palette>());
+            SelectedPalette = Palettes.Where(x => x.Name.Equals("Default")).ToList<Palette>()[0];
+            UpdateTitleBarBackgroundandForeground(selectedthemename);
+            ProductDemosWindow productDemo = null;
+            if (this.isWindowMode)
+            {
+                productDemo = new ProductDemosWindow(this);
+                productDemo.Owner = DemosNavigationService.MainWindow;
+                SfSkinManager.SetTheme(productDemo, new Theme() { ThemeName = SelectedThemeName });
+            }
+            DemosNavigationService.MainWindow.Dispatcher.BeginInvoke(new Action(() =>
+            {
+                if (productDemo != null)
+                {
+                    productDemo.ShowDialog();
+                }
+            }), System.Windows.Threading.DispatcherPriority.Background);
+        }
+
+        private void UpdateTitleBarBackgroundandForeground(string selectedTheme)
+        {
+            if (selectedTheme == "SystemTheme")
+            {
+                TitleBarBackground = SystemColors.HighlightBrush;
+                TitleBarForeground = SystemColors.HighlightTextBrush;
+            }
+            else
+            {
+
+                TitleBarBackground = SelectedPalette.PrimaryBackground;
+                TitleBarForeground = SelectedPalette.PrimaryForeground;
+            }
+        }
+
+
+
 
         /// <summary>
         /// Gets or sets the collection of WhatsNewDemos
@@ -213,17 +482,46 @@ namespace syncfusion.demoscommon.wpf
         /// Gets or sets the collection of product demos.
         /// </summary>
         public List<ProductDemo> ProductDemos { get; set; }
-        public DemoBrowserViewModel()
+
+
+
+        private void PopulatePaletteList()
         {
-            clickCommand = new DelegateCommand<object>(OnClicked);
-            ProductDemos = GetDemosDetails();
-            WhatsNewDemos = PopulateWhatsNewDemos();
-            PopulateWhatsNewDemos();
-            NavigationItems();
-            if (this.HeaderItems.Any())
+            var paletteDetails = new List<Palette>();
+            var xml = File.ReadAllText(@"Models/PaletteList.xml");
+            XmlDocument Doc = new XmlDocument();
+            Doc.LoadXml(xml);
+            XmlNodeList xmlnode = Doc.GetElementsByTagName("Palettes");
+            for (int i = 0; i <= xmlnode.Count - 1; i++)
             {
-                this.SelectedItem = this.GetType().Name != "SamplesViewModel" ? this.HeaderItems.Last() : this.HeaderItems.First();
+                foreach (var node in xmlnode[i].ChildNodes)
+                {
+                    var element = node as XmlElement;
+                    string name = null, theme = null, primaryBackground = null, primaryForeground = null, primaryBackgroundAlt = null, displayname = null;
+
+                    if (element == null || element.Attributes.Count <= 0)
+                        continue;
+
+                    name = element.HasAttribute("Name") ? element.Attributes["Name"].Value : string.Empty;
+                    theme = element.HasAttribute("Theme") ? element.Attributes["Theme"].Value : string.Empty;
+
+                    primaryBackground = element.HasAttribute("PrimaryBackground") ? element.Attributes["PrimaryBackground"].Value : string.Empty;
+                    primaryForeground = element.HasAttribute("PrimaryForeground") ? element.Attributes["PrimaryForeground"].Value : string.Empty;
+                    primaryBackgroundAlt = element.HasAttribute("PrimaryBackgroundAlt") ? element.Attributes["PrimaryBackgroundAlt"].Value : string.Empty;
+                    displayname = element.HasAttribute("DisplayName") ? element.Attributes["DisplayName"].Value : string.Empty;
+                    var palette = new Palette()
+                    {
+                        Name = name,
+                        Theme = theme,
+                        DisplayName = displayname,
+                        PrimaryBackground = (Brush)new BrushConverter().ConvertFromString(primaryBackground),
+                        PrimaryForeground = (Brush)new BrushConverter().ConvertFromString(primaryForeground),
+                        PrimaryBackgroundAlt = (Brush)new BrushConverter().ConvertFromString(primaryBackgroundAlt)
+                    };
+                    paletteDetails.Add(palette);
+                }
             }
+            PaletteList = paletteDetails;
         }
 
         private void OnClicked(object paramater)
@@ -291,6 +589,18 @@ namespace syncfusion.demoscommon.wpf
         /// </summary>
         /// <returns>Product demos</returns>
         public abstract List<ProductDemo> GetDemosDetails();
-
+        public DemoBrowserViewModel()
+        {
+            clickCommand = new DelegateCommand<object>(OnClicked);
+            ProductDemos = GetDemosDetails();
+            WhatsNewDemos = PopulateWhatsNewDemos();
+            PopulateWhatsNewDemos();
+            PopulatePaletteList();
+            NavigationItems();
+            if (this.HeaderItems.Any())
+            {
+                this.SelectedItem = this.GetType().Name != "SamplesViewModel" ? this.HeaderItems.Last() : this.HeaderItems.First();
+            }
+        }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Syncfusion.Windows.Shared;
 using System.Windows;
+using System.Windows.Automation.Peers;
 using System.Windows.Navigation;
 namespace syncfusion.demoscommon.wpf
 {
@@ -21,7 +22,22 @@ namespace syncfusion.demoscommon.wpf
             DemosNavigationService.MainWindow = this;
             DemosNavigationService.RootNavigationService = this.ROOTFRAME.NavigationService;
             DemosNavigationService.RootNavigationService.Navigate(new ProductsListView() { DataContext = viewModel });
+            this.ROOTFRAME.NavigationService.Navigated += NavigationService_Navigated;
         }
+
+        private void NavigationService_Navigated(object sender, NavigationEventArgs e)
+        {
+            if (DemosNavigationService.RootNavigationService.CanGoForward)
+            {
+                (this.DataContext as DemoBrowserViewModel).SelectedProduct = null;
+            }
+        }
+
+        protected override AutomationPeer OnCreateAutomationPeer()
+        {
+            return new FakeWindowsPeer(this);
+        }
+
         public MainWindow()
         {
             InitializeComponent();
@@ -30,6 +46,16 @@ namespace syncfusion.demoscommon.wpf
         private void DemoControl_Loaded(object sender, RoutedEventArgs e)
         {
 
+        }
+    }
+    public class FakeWindowsPeer : WindowAutomationPeer
+    {
+        public FakeWindowsPeer(Window window)
+            : base(window)
+        { }
+        protected override List<AutomationPeer> GetChildrenCore()
+        {
+            return null;
         }
     }
 }
