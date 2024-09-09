@@ -63,11 +63,5 @@ namespace syncfusion.demoscommon.wpf
             var viewModel = this.DataContext as DemoBrowserViewModel;
             viewModel.BlurVisibility = Visibility.Visible;
         }
-
-        public ProductDemosWindow()
-        {
-            InitializeComponent();
-        }
-
     }
 }

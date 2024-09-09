@@ -351,6 +351,34 @@ namespace syncfusion.demoscommon.wpf
             }
         }
 
+        private bool themepanelvisibility = false;
+
+        /// <summary>
+        /// Gets or sets the property used to Indicates the visibility of the ThemePanel
+        /// </summary>
+        public bool ThemePanelVisibility
+        {
+            get { return themepanelvisibility; }
+            set
+            {
+                themepanelvisibility = value;
+                RaisePropertyChanged(nameof(ThemePanelVisibility));
+            }
+        }
+
+        private ICommand themepanelvisibilitycommand;
+        public ICommand ThemePanelVisibilityCommand
+        {
+            get
+            {
+                themepanelvisibilitycommand = new DelegateCommand<object>(ChangeVisibilityofThemepanel);
+                return themepanelvisibilitycommand;
+            }
+        }
+        private void ChangeVisibilityofThemepanel(object obj)
+        {
+            ThemePanelVisibility = false;
+        }
         private void OnSelectedProductChanged()
         {
             if (this.SelectedProduct == null)

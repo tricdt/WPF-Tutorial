@@ -37,7 +37,7 @@
             <ColumnDefinition Width="240" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-        <Border>
+        <Border BorderThickness="0,0,1,0" Style="{StaticResource BorderStyle}">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
@@ -150,6 +150,53 @@
                     </ItemsControl.GroupStyle>
                 </ListView>
             </Grid>
+        </Border>
+        <local:DemosFrame
+            x:Name="DEMOSFRAME"
+            Grid.Column="1"
+            JournalOwnership="OwnsJournal"
+            NavigationUIVisibility="Hidden" />
+        <Border BorderBrush="{DynamicResource BorderAlt}" 
+                Margin="0,0,-320,0" x:Name="ThemePanel"
+                HorizontalAlignment="Right" VerticalAlignment="Stretch"
+                BorderThickness="1,0,0,0"
+                Grid.Column="1">
+            <Border.Effect>
+                <DropShadowEffect Direction="180" BlurRadius="20" ShadowDepth="-10" Opacity="0.3" Color="#1F000000"/>
+            </Border.Effect>
+            <Grid Grid.Column="1"  Background="{Binding Path= Background ,RelativeSource={RelativeSource AncestorType=syncfusion:ChromelessWindow}}" x:Name="Theme" HorizontalAlignment="Right" Width="300"  VerticalAlignment="Stretch">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="51"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <DockPanel Grid.Row="0" >
+                    <Separator  DockPanel.Dock="Bottom"/>
+                    <Label Margin="16,4,16,4"  FontSize="14" DockPanel.Dock="Left" FontWeight="SemiBold"  VerticalContentAlignment="Center"  HorizontalContentAlignment="Left" Content="Themes"/>
+                    <Button DockPanel.Dock="Right" x:Name="Close" Width="24" Height="24" Style="{DynamicResource WPFGlyphButtonStyle}" Command="{Binding ThemePanelVisibilityCommand}" CommandParameter="{Binding Name ,RelativeSource={RelativeSource Mode=Self}}" HorizontalAlignment="Right" Margin="0,0,5,0" >
+                        <Path  Fill="{Binding Path=Foreground, Mode=OneWay, RelativeSource={RelativeSource AncestorType={x:Type Button}}}" Data="M11.2919 12.5L12.5 11.2919L7.70805 6.5L12.5 1.70805L11.2919 0.5L6.5 5.29195L1.70805 0.5L0.5 1.70805L5.29195 6.5L0.5 11.2919L1.70805 12.5L6.5 7.70805L11.2919 12.5Z" />
+                    </Button>
+                </DockPanel>
+                <ScrollViewer x:Name="ThemePanelScrollViewer" VerticalScrollBarVisibility="Auto"   Grid.Row="1">
+                    <Grid Grid.Row="1"></Grid>
+                </ScrollViewer>
+            </Grid>
+            <Border.Style>
+                <Style TargetType="{x:Type Border}">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding ThemePanelVisibility}" Value="true">
+                            <DataTrigger.EnterActions>
+                                <BeginStoryboard Storyboard="{StaticResource SlideIn}"/>
+                            </DataTrigger.EnterActions>
+                            <DataTrigger.ExitActions>
+                                <BeginStoryboard Storyboard="{StaticResource SlideOut}"/>
+                            </DataTrigger.ExitActions>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Border.Style>
+            <Border.RenderTransform>
+                <TranslateTransform/>
+            </Border.RenderTransform>
         </Border>
     </Grid>
 </UserControl>
