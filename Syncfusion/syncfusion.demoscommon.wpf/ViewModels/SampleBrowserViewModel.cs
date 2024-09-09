@@ -338,6 +338,18 @@ namespace syncfusion.demoscommon.wpf
                 this.RaisePropertyChanged("SelectedProduct");
             }
         }
+        private bool isProductDemoBusy = false;
+        /// Property to store busy status of sample browser while switching between themes.
+        /// </summary>
+        public bool IsProductDemoBusy
+        {
+            get { return isProductDemoBusy; }
+            set
+            {
+                isProductDemoBusy = value;
+                RaisePropertyChanged("IsProductDemoBusy");
+            }
+        }
 
         private void OnSelectedProductChanged()
         {

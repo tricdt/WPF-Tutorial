@@ -31,6 +31,23 @@ namespace syncfusion.datagriddemos.wpf
             this.ControlDescription = "The DataGrid is a high-performance grid control that displays tabular and hierarchical data. It supports sorting, grouping, filtering, etc.";
             this.HeaderImageSource = new BitmapImage(new Uri(@"/syncfusion.demoscommon.wpf;component/Assets/ProductCategoryImages/Grids.png", UriKind.RelativeOrAbsolute));
             this.GalleryViewImageSource = new BitmapImage(new Uri(@"/syncfusion.demoscommon.wpf;component/Assets/GalleryViewImages/DataGrid.png", UriKind.RelativeOrAbsolute));
+            List<Documentation> gettingStartedDocumentation = new List<Documentation>();
+            gettingStartedDocumentation.Add(new Documentation { Content = "DataGrid - API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.SfDataGrid.html") });
+            gettingStartedDocumentation.Add(new Documentation { Content = "DataGrid - GettingStarted Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/getting-started") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Getting Started", GroupName = "GETTING STARTED", Description = "This sample showcases the basic features in SfDataGrid by simple ObservableCollection binding.", DemoViewType = typeof(GettingStarted), Documentations = gettingStartedDocumentation });
+
+            List<Documentation> dataBindingDocumentation = new List<Documentation>();
+            dataBindingDocumentation.Add(new Documentation { Content = "DataGrid - DataBinding Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/data-binding") });
+            dataBindingDocumentation.Add(new Documentation { Content = "DataGrid - Binding With DataTable Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/data-binding#binding-with-datatable") });
+            dataBindingDocumentation.Add(new Documentation { Content = "DataGrid - Binding with Dynamic Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/data-binding#binding-with-dynamic-data-object") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Data Binding", GroupName = "DATA BINDING", Description = "This sample showcases the data binding capabilities in SfDataGrid with data sources such as DataTable and Custom Collection such as List, BindingList and ObservableCollection.", DemoViewType = typeof(DataBindingDemo), ThemeMode = ThemeMode.None, Documentations = dataBindingDocumentation });
+
+            List<Documentation> complexAndIndexerPropertiesDocumentation = new List<Documentation>();
+            complexAndIndexerPropertiesDocumentation.Add(new Documentation { Content = "DataGrid - Complex Properties Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/data-binding#binding-complex-properties") });
+            complexAndIndexerPropertiesDocumentation.Add(new Documentation { Content = "DataGrid - Indexer Properties Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/data-binding#binding-indexer-properties") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Complex and Indexer Properties", GroupName = "DATA BINDING", Description = "This sample showcases the complex and indexer properties binding capabilities in SfDataGrid. SfDataGrid supports to bind complex and indexer properties to its columns at any level.", DemoViewType = typeof(ComplexPropertyBindingDemo), Documentations = complexAndIndexerPropertiesDocumentation });
+
+
         }
     }
 }
