@@ -18,6 +18,11 @@
                     <dat:PropertyGroupDescription PropertyName="GroupName" />
                 </CollectionViewSource.GroupDescriptions>
             </CollectionViewSource>
+            <CollectionViewSource x:Key="ThemeList" Source="{Binding Path=DataContext.ThemeList, ElementName=ThemeList}">
+                <CollectionViewSource.GroupDescriptions>
+                    <dat:PropertyGroupDescription PropertyName="ThemeType" />
+                </CollectionViewSource.GroupDescriptions>
+            </CollectionViewSource>
         </ResourceDictionary>
     </UserControl.Resources>
     <Grid>
@@ -51,6 +56,7 @@
                     Grid.Row="1"
                     SelectionMode="Single"
                     ItemsSource="{Binding Source={StaticResource cvs}}"
+                    SelectedItem="{Binding SelectedSample, Mode=TwoWay}"
                     BorderThickness="0,0,0,0">
                     <ListView.ItemTemplate>
                         <DataTemplate>
@@ -176,8 +182,102 @@
                         <Path  Fill="{Binding Path=Foreground, Mode=OneWay, RelativeSource={RelativeSource AncestorType={x:Type Button}}}" Data="M11.2919 12.5L12.5 11.2919L7.70805 6.5L12.5 1.70805L11.2919 0.5L6.5 5.29195L1.70805 0.5L0.5 1.70805L5.29195 6.5L0.5 11.2919L1.70805 12.5L6.5 7.70805L11.2919 12.5Z" />
                     </Button>
                 </DockPanel>
-                <ScrollViewer x:Name="ThemePanelScrollViewer" VerticalScrollBarVisibility="Auto"   Grid.Row="1">
-                    <Grid Grid.Row="1"></Grid>
+                <ScrollViewer x:Name="ThemePanelScrollViewer" VerticalScrollBarVisibility="Auto" Grid.Row="1">
+                    <Grid Grid.Row="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <ListView Grid.Row="0" Name="ThemeList"
+                                  ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                                  ItemsSource="{Binding Source={StaticResource ThemeList}}"
+                                  SelectedItem="{Binding SelectedTheme ,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}">
+                            <ListView.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <WrapPanel Width="300"  HorizontalAlignment='Stretch'  ItemWidth="150" ItemHeight="32" />
+                                </ItemsPanelTemplate>
+                            </ListView.ItemsPanel>
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="4.2"/>
+                                            <ColumnDefinition Width="16"/>
+                                            <ColumnDefinition Width="9"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Ellipse Width="16" Grid.Column="1"  HorizontalAlignment="Left" VerticalAlignment="Center" Height="16" Fill="{Binding EllipseFill}" Stroke="{Binding EllipseStroke}"/>
+                                        <Path Margin="8,0,0,0" Grid.Column="1"  HorizontalAlignment="Left" VerticalAlignment="Center"  Data="M0 16C4.41828 16 8 12.4183 8 8C8 3.58172 4.41828 0 0 0L0 16Z" Fill="{Binding PathFill}"/>
+                                        <TextBlock  HorizontalAlignment="Left" VerticalAlignment="Center"  Grid.Column="3" FontSize="12" Text="{Binding DisplayName}" />
+                                    </Grid>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                            <ItemsControl.GroupStyle>
+                                <GroupStyle>
+                                    <GroupStyle.ContainerStyle>
+                                        <Style TargetType="{x:Type GroupItem}">
+                                            <Setter Property="Margin" Value="0" />
+                                            <Setter Property="Template">
+                                                <Setter.Value>
+                                                    <ControlTemplate TargetType="{x:Type GroupItem}">
+                                                        <HeaderedContentControl IsTabStop="False">
+                                                            <HeaderedContentControl.Header>
+                                                                <Border Margin="0,4" Background="{DynamicResource ContentBackgroundAlt1 }">
+                                                                    <TextBlock
+                                                                        Margin="8,4,16,4"
+                                                                        FontSize="12"
+                                                                        FontWeight="SemiBold"
+                                                                        Text="{Binding Path=Name}" />
+                                                                </Border>
+                                                            </HeaderedContentControl.Header>
+                                                            <HeaderedContentControl.Content>
+                                                                <ItemsPresenter x:Name="ItemsHost" />
+                                                            </HeaderedContentControl.Content>
+                                                        </HeaderedContentControl>
+                                                    </ControlTemplate>
+                                                </Setter.Value>
+                                            </Setter>
+                                        </Style>
+                                    </GroupStyle.ContainerStyle>
+                                </GroupStyle>
+                            </ItemsControl.GroupStyle>
+                        </ListView>
+                        <Grid Grid.Row="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="48"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <DockPanel>
+                                <Separator Visibility="{Binding ColorPaletteVisibility ,Converter={StaticResource BooleanToVisibilityConverter}}" Margin="2,2,2,5" DockPanel.Dock="Bottom"/>
+                                <Label Content="Choose Palette" Margin="16,0" VerticalAlignment="Center" Visibility="{Binding ColorPaletteVisibility, Converter={StaticResource BooleanToVisibilityConverter}}" FontWeight="SemiBold" FontSize="14"/>
+                            </DockPanel>
+                            <ListView Name="PaletteList" ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                                      ItemsSource="{Binding Palettes}"
+                                      Visibility="{Binding ColorPaletteVisibility ,Converter={StaticResource BooleanToVisibilityConverter}}" Grid.Row="1" 
+                                      SelectedItem="{Binding SelectedPalette ,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}">
+                                <ListView.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <WrapPanel Width="300"   ItemWidth="150" ItemHeight="32" />
+                                    </ItemsPanelTemplate>
+                                </ListView.ItemsPanel>
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="2"/>
+                                                <ColumnDefinition Width="16"/>
+                                                <ColumnDefinition Width="9"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Ellipse Grid.Column="1"  HorizontalAlignment="Left" VerticalAlignment="Center" Width="16" Height="16" Fill="{Binding PrimaryBackgroundAlt}"/>
+                                            <Path HorizontalAlignment="Left " Grid.Column="1" VerticalAlignment="Center"  Margin="8,0,0,0"  Data="M0 16C4.41828 16 8 12.4183 8 8C8 3.58172 4.41828 0 0 0L0 16Z" Fill="{Binding PrimaryBackground}"/>
+                                            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center"  Grid.Column="3" FontSize="12" Text="{Binding DisplayName}" />
+                                        </Grid>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                        </Grid>
+                    </Grid>
                 </ScrollViewer>
             </Grid>
             <Border.Style>

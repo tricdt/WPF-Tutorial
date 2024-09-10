@@ -14,6 +14,7 @@ namespace syncfusion.demoscommon.wpf
 {
     public abstract class DemoBrowserViewModel : NotificationObject
     {
+        public Action ThemeChanged;
         public static string DefaultThemeName = "Windows11Light";
         private bool isShowCaseDemoBusy = false;
         /// <summary>
@@ -153,6 +154,30 @@ namespace syncfusion.demoscommon.wpf
             new Themes{ThemeName="SystemTheme", DisplayName="System Theme", ThemeType="System Theme",EllipseFill=(Brush)new BrushConverter().ConvertFromString("#FFFFFF") , EllipseStroke=(Brush)new BrushConverter().ConvertFromString("#888888"), PathFill=(Brush)new BrushConverter().ConvertFromString("#000000")}
 
         };
+        public ObservableCollection<Themes> ThemeList
+        {
+            get { return themelist; }
+            set
+            {
+                themelist = value;
+                RaisePropertyChanged("ThemeList");
+
+            }
+        }
+        private bool colorpalettevisibility = true;
+
+        /// <summary>
+        /// Gets or sets the property value indicating whether the colorpalette combobox should be visible or not
+        /// </summary>
+        public bool ColorPaletteVisibility
+        {
+            get { return colorpalettevisibility; }
+            set
+            {
+                colorpalettevisibility = value;
+                RaisePropertyChanged("ColorPaletteVisibility");
+            }
+        }
         private string selectedthemename = DemoBrowserViewModel.DefaultThemeName;
         /// <summary>
         /// Gets or sets the selected <see cref="VisualStyles"/> of application.
@@ -166,8 +191,39 @@ namespace syncfusion.demoscommon.wpf
             set
             {
                 selectedthemename = value;
+                if (selectedthemename == "SystemTheme")
+                {
+                    ColorPaletteVisibility = false;
+                }
+                else
+                {
+                    ColorPaletteVisibility = true;
+                    Palettes = new ObservableCollection<Palette>(PaletteList.Where(x => (x.Theme.Equals(selectedthemename))).ToList<Palette>());
+                    SelectedPalette = Palettes.Where(x => x.Name.Equals("Default")).ToList<Palette>()[0];
+                }
+                OnThemeChanged(selectedthemename);
             }
         }
+
+        private void OnThemeChanged(string selectedTheme)
+        {
+            var productDemosWindow = Application.Current.Windows.OfType<ProductDemosWindow>();
+            foreach (var window in productDemosWindow)
+            {
+                SfSkinManager.SetTheme(window, new Theme() { ThemeName = SelectedThemeName });
+            }
+            UpdateTitleBarBackgroundandForeground(selectedTheme);
+            var navigationService = DemosNavigationService.DemoNavigationService;
+            if (navigationService != null && navigationService.Content != null)
+            {
+
+            }
+            if (ThemeChanged != null)
+            {
+                ThemeChanged();
+            }
+        }
+
         private Themes selectedTheme;
 
         public Themes SelectedTheme
@@ -211,6 +267,17 @@ namespace syncfusion.demoscommon.wpf
                 }
                 RaisePropertyChanged("SelectedPalette");
 
+            }
+        }
+
+        private DemoInfo _selectedsample = null;
+        public DemoInfo SelectedSample
+        {
+            get => _selectedsample;
+            set
+            {
+                _selectedsample = value;
+                RaisePropertyChanged(nameof(SelectedSample));
             }
         }
 
@@ -280,6 +347,10 @@ namespace syncfusion.demoscommon.wpf
                         break;
                     }
 
+            }
+            if (SelectedSample != null)
+            {
+                OnThemeChanged(ThemeName);
             }
         }
 

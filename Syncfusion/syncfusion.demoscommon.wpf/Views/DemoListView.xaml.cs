@@ -1,4 +1,5 @@
-﻿using System.Windows.Controls;
+﻿using Syncfusion.SfSkinManager;
+using System.Windows.Controls;
 
 namespace syncfusion.demoscommon.wpf
 {
@@ -10,6 +11,29 @@ namespace syncfusion.demoscommon.wpf
         public DemoListView()
         {
             InitializeComponent();
+            DemosNavigationService.DemoNavigationService = this.DEMOSFRAME.NavigationService;
+            this.DataContextChanged += DemoListView_DataContextChanged;
+        }
+        private DemoBrowserViewModel viewModel;
+        private void DemoListView_DataContextChanged(object sender, System.Windows.DependencyPropertyChangedEventArgs e)
+        {
+            viewModel = this.DataContext as DemoBrowserViewModel;
+            if (viewModel != null)
+            {
+                viewModel.ThemeChanged = ThemeChanged;
+            }
+        }
+
+        private void ThemeChanged()
+        {
+            if (viewModel.SelectedThemeName.Contains("Fluent"))
+            {
+                SfSkinManager.SetTheme(ThemePanel, new FluentTheme() { ThemeName = viewModel.SelectedThemeName, HoverEffectMode = HoverEffect.Background });
+            }
+            else
+            {
+                SfSkinManager.SetTheme(ThemePanel, new Theme() { ThemeName = viewModel.SelectedThemeName });
+            }
         }
     }
 }
