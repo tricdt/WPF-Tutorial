@@ -270,6 +270,47 @@ namespace syncfusion.demoscommon.wpf
             }
         }
 
+        private ICommand navigateAllProducts;
+        /// <summary>
+        /// Maintains the command for Navigate all product button.
+        /// </summary>
+        public ICommand NavigateAllProductsCommand
+        {
+            get
+            {
+                if (navigateAllProducts == null)
+                {
+                    navigateAllProducts = new DelegateCommand<object>(NavigateAllProducts);
+                }
+                return navigateAllProducts;
+            }
+        }
+
+        private void NavigateAllProducts(object param)
+        {
+            if (IsWindowMode)
+            {
+                WindowCollection windows = Application.Current.Windows;
+                foreach (Window window in windows)
+                {
+                    if (window is ProductDemosWindow)
+                    {
+                        window.Close();
+                        this.SelectedItem = this.HeaderItems.Last();
+                    }
+                }
+            }
+            else
+            {
+                if (DemosNavigationService.RootNavigationService.CanGoBack)
+                {
+                    DemosNavigationService.RootNavigationService.GoBack();
+                }
+            }
+            this.SelectedProduct = null;
+            this.SelectedSample = null;
+        }
+
         private DemoInfo _selectedsample = null;
         public DemoInfo SelectedSample
         {

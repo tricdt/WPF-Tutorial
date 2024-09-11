@@ -44,6 +44,13 @@ namespace syncfusion.demoscommon.wpf
             if (viewModel != null)
             {
                 viewModel.SelectedProduct = null;
+                viewModel.SelectedSample = null;
+                viewModel.ThemePanelVisibility = false;
+                viewModel.ThemeChanged = null;
+                viewModel.SelectedTheme = null;
+                viewModel.SelectedPalette = null;
+                viewModel.TitleBarBackground = null;
+                viewModel.TitleBarForeground = null;
             }
             if (this.TitleBarTemplate != null)
                 this.TitleBarTemplate = null;

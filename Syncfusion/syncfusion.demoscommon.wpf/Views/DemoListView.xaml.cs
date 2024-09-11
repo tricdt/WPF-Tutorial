@@ -1,5 +1,7 @@
 ﻿using Syncfusion.SfSkinManager;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
+using System.Windows.Input;
 
 namespace syncfusion.demoscommon.wpf
 {
@@ -33,6 +35,16 @@ namespace syncfusion.demoscommon.wpf
             else
             {
                 SfSkinManager.SetTheme(ThemePanel, new Theme() { ThemeName = viewModel.SelectedThemeName });
+            }
+        }
+
+        private void OnAllProductsPreviewMouseLeftButtonUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            RepeatButton button = (RepeatButton)sender;
+            ICommand command = button.Command = viewModel.NavigateAllProductsCommand;
+            if (command != null && command.CanExecute(null))
+            {
+                command.Execute(null);
             }
         }
     }

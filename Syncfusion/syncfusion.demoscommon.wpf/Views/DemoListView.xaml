@@ -48,8 +48,51 @@
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
-                <RepeatButton>
-                    
+                <RepeatButton x:Name="AllProducts"
+                              BorderThickness="0"
+                              Margin="2,4,4,2" 
+                              Background="Transparent"
+                              Height="36"
+                              HorizontalContentAlignment="Stretch"
+                              PreviewMouseLeftButtonUp="OnAllProductsPreviewMouseLeftButtonUp">
+                    <Border CornerRadius="8" Background="Transparent">
+                        <Grid Background="Transparent">
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="30"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Path Width="16"
+                                Height="15"                            
+                                Margin="10,10,0,10"
+                                Data="M7.5 0.5L0.5 7.5M0.5 7.5L7.5 14.5M0.5 7.5H15.5" 
+                                StrokeLineJoin="Round" 
+                                StrokeStartLineCap="Round" 
+                                StrokeEndLineCap="Round" 
+                                Stroke="{DynamicResource ContentForeground}"                         
+                                RenderTransformOrigin="0.5,0.5"
+                                Stretch="Uniform">
+                                <Path.RenderTransform>
+                                    <TransformGroup>
+                                        <TransformGroup.Children>
+                                            <RotateTransform Angle="0" />
+                                            <ScaleTransform ScaleX="1" ScaleY="1" />
+                                        </TransformGroup.Children>
+                                    </TransformGroup>
+                                </Path.RenderTransform>
+                            </Path>
+                            <TextBlock x:Name="textblock"
+                                        Grid.Column="1"
+                                        Margin="10,0,0,0"
+                                        VerticalAlignment="Center"
+                                        FontSize="14"
+                                        LineHeight="18" 
+                                        FontWeight="Regular"
+                                        Text="All Controls" />
+                        </Grid>
+                    </Border>
                 </RepeatButton>
                 <ListView
                     x:Name="DemosList"
