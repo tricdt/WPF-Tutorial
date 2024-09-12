@@ -9,7 +9,9 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="local:DemoControl">
-                    <Button Content="Text" Background="BlueViolet"/>
+                    <Grid Background="Red">
+                        <Button Background="Red"/>
+                    </Grid>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>

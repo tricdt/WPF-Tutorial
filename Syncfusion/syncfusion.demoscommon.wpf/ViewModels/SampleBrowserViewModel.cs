@@ -7,6 +7,7 @@ using System.IO;
 using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Data;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Xml;
@@ -311,6 +312,19 @@ namespace syncfusion.demoscommon.wpf
             this.SelectedSample = null;
         }
 
+        private bool isThemeInheritMode = true;
+        /// <summary>
+        /// Gets or sets the property value indicating whether the selected sample thememode  is inherit or not.
+        /// </summary>
+        public bool IsThemeInheritMode
+        {
+            get { return isThemeInheritMode; }
+            set
+            {
+                isThemeInheritMode = value;
+                RaisePropertyChanged("IsThemeInheritMode");
+            }
+        }
         private DemoInfo _selectedsample = null;
         public DemoInfo SelectedSample
         {
@@ -318,8 +332,57 @@ namespace syncfusion.demoscommon.wpf
             set
             {
                 _selectedsample = value;
+                OnSelectedSampleChanged(_selectedsample);
                 RaisePropertyChanged(nameof(SelectedSample));
             }
+        }
+
+        private void OnSelectedSampleChanged(DemoInfo demoInfo)
+        {
+            if (demoInfo == null) return;
+            if (demoInfo.ShowBusyIndicator)
+            {
+                IsProductDemoBusy = true;
+            }
+            var olddemo = DemosNavigationService.DemoNavigationService.Content as IDisposable;
+            if (demoInfo.DemoLauchMode == DemoLauchMode.Window || (SelectedProduct != null && SelectedProduct.DemoLauchMode == DemoLauchMode.Window))
+            {
+                var demoLauncherView = new DemoLauncherView(demoInfo.DemoViewType) { DataContext = this };
+                SfSkinManager.SetTheme(demoLauncherView, new Theme() { ThemeName = SelectedThemeName });
+                DemosNavigationService.DemoNavigationService.Navigate(demoLauncherView);
+
+            }
+            else
+            {
+                var demoControl = DemoLaucherExtension.LauchDemo<DemoControl>(this, demoInfo);
+                if (demoControl != null && DemosNavigationService.DemoNavigationService != null)
+                {
+                    demoControl.SubCategoryDemos = demoInfo.SubCategoryDemos;
+                    Binding binding = new Binding();
+                    binding.Path = new PropertyPath("SubCategorySelectedItem");
+                    binding.Source = this;
+                    binding.Mode = BindingMode.TwoWay;
+                    BindingOperations.SetBinding(demoControl, DemoControl.SubCategorySelectedItemProperty, binding);
+
+                    demoControl.ControlName = this.SelectedProduct != null ? this.SelectedProduct.Product : string.Empty;
+                    demoControl.Title = demoInfo.SampleName;
+                    demoControl.Description = demoInfo.Description;
+                    demoControl.DocumentsItemSource = demoInfo.Documentations;
+                    if (demoControl.Resources["WPFHyperlinkStyle"] != null)
+                    {
+                        demoControl.HyperLinkStyle = demoControl.Resources["WPFHyperlinkStyle"] as Style;
+                    }
+                    DemosNavigationService.DemoNavigationService.Navigate(demoControl);
+                }
+            }
+            if (olddemo != null)
+                olddemo.Dispose();
+
+            DemosNavigationService.MainWindow.Dispatcher.BeginInvoke(new Action(() =>
+            {
+                IsProductDemoBusy = false;
+            }),
+            System.Windows.Threading.DispatcherPriority.ApplicationIdle);
         }
 
         private void OnPaletteChanged(string ThemeName)
@@ -507,6 +570,21 @@ namespace syncfusion.demoscommon.wpf
                 productDemo = new ProductDemosWindow(this);
                 productDemo.Owner = DemosNavigationService.MainWindow;
                 SfSkinManager.SetTheme(productDemo, new Theme() { ThemeName = SelectedThemeName });
+            }
+            else
+            {
+                if (DemosNavigationService.RootNavigationService.CanGoForward)
+                {
+                    DemosNavigationService.RootNavigationService.GoForward();
+                }
+                else
+                {
+                    DemosNavigationService.RootNavigationService.Navigate(new DemoListView() { DataContext = this });
+                }
+            }
+            if (ThemeChanged != null)
+            {
+                ThemeChanged();
             }
             DemosNavigationService.MainWindow.Dispatcher.BeginInvoke(new Action(() =>
             {

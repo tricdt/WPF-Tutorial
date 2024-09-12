@@ -124,7 +124,7 @@
 	
     <Palette DisplayName="Default" Name="Default" PrimaryBackground="#255AAA" PrimaryForeground="#FFFFFF" Theme="Office2019Black" PrimaryBackgroundAlt="#020202"/>
 	<Palette DisplayName="Red" Name="Red" PrimaryBackground="#983F3E" PrimaryForeground="#FFFFFF"  PrimaryBackgroundAlt="#6A2C2B" Theme="Office2019Black"/>
-    <Palette  DisplayName="Blue" Name="Blue" PrimaryBackground="#2E78CD" PrimaryForeground="#FFFFFF" PrimaryBackgroundAlt="#21538F" Theme="Office2019Black"/>
+    <Palette DisplayName="Blue" Name="Blue" PrimaryBackground="#2E78CD" PrimaryForeground="#FFFFFF" PrimaryBackgroundAlt="#21538F" Theme="Office2019Black"/>
 	<Palette DisplayName="Green"  Name="Green" PrimaryBackground="#3A714A" PrimaryForeground="#FFFFFF" PrimaryBackgroundAlt="#284F34" Theme="Office2019Black"/>
     <Palette DisplayName="Red orange" Name="RedOrange" PrimaryBackground="#C84721" PrimaryForeground="#FFFFFF" PrimaryBackgroundAlt="#8B3217" Theme="Office2019Black"/>
     <Palette DisplayName="Violet" Name="Violet" PrimaryBackground="#6C27A4" PrimaryForeground="#FFFFFF" PrimaryBackgroundAlt="#4C1B72"  Theme="Office2019Black"/>
@@ -138,7 +138,7 @@
     <Palette DisplayName="Deep blue" Name="DeepBlue" PrimaryBackground="#345795" PrimaryForeground="#FFFFFF"  PrimaryBackgroundAlt="#253D68"  Theme="Office2019Black"/>
     <Palette DisplayName="Light blue" Name="LightBlue" PrimaryBackground="#2E6DB8" PrimaryForeground="#FFFFFF" PrimaryBackgroundAlt="#214C80" Theme="Office2019Black"/>
 	
-    <Palette DisplayName="Default" Name="Default" PrimaryBackground="#2A579A" PrimaryForeground="#FFFFFF" Theme="Office2019White" PrimaryBackgroundAlt="#FFFFFF"/>
+    <Palette DisplayName="Default" Name="Default" PrimaryBackground="#2A579A" PrimaryForeground="#FFFFFF" Theme="Office2019White" PrimaryBackgroundAlt="#FFFFFF" />
     <Palette DisplayName="Red" Name="Red" PrimaryBackground="#983F3E" PrimaryForeground="#FFFFFF"  PrimaryBackgroundAlt="#6A2C2B" Theme="Office2019White"/>
     <Palette  DisplayName="Blue" Name="Blue" PrimaryBackground="#2E78CD" PrimaryForeground="#FFFFFF" PrimaryBackgroundAlt="#21538F" Theme="Office2019White"/>
 	<Palette DisplayName="Green" Name="Green" PrimaryBackground="#3A714A" PrimaryForeground="#FFFFFF" PrimaryBackgroundAlt="#284F34" Theme="Office2019White"/>
