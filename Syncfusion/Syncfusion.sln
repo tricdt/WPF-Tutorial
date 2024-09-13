@@ -13,11 +13,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "syncfusion.gridcontroldemos
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "syncfusion.samplebrowser.wpf", "syncfusion.samplebrowser.wpf\syncfusion.samplebrowser.wpf.csproj", "{98984BD6-1751-4DD8-971C-C85B82BEAD29}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "syncfusion.treegriddemos.wpf", "syncfusion.treegriddemos.wpf\syncfusion.treegriddemos.wpf.csproj", "{014657C8-4304-45CC-894A-F2254565ABA8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "syncfusion.treegriddemos.wpf", "syncfusion.treegriddemos.wpf\syncfusion.treegriddemos.wpf.csproj", "{014657C8-4304-45CC-894A-F2254565ABA8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "syncfusion.pivotgriddemos.wpf", "syncfusion.pivotgriddemos.wpf\syncfusion.pivotgriddemos.wpf.csproj", "{97C6A300-D63F-4FDA-B176-A3746C56D806}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "syncfusion.pivotgriddemos.wpf", "syncfusion.pivotgriddemos.wpf\syncfusion.pivotgriddemos.wpf.csproj", "{97C6A300-D63F-4FDA-B176-A3746C56D806}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "syncfusion.propertygriddemos.wpf", "syncfusion.propertygriddemos.wpf\syncfusion.propertygriddemos.wpf.csproj", "{FDD9C2A7-93F0-4618-B3BB-615ED86833AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "syncfusion.propertygriddemos.wpf", "syncfusion.propertygriddemos.wpf\syncfusion.propertygriddemos.wpf.csproj", "{FDD9C2A7-93F0-4618-B3BB-615ED86833AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "syncfusion.chartdemos.wpf", "syncfusion.chartdemos.wpf\syncfusion.chartdemos.wpf.csproj", "{30D77F6C-0C73-4ED5-9F7F-5E7D088E636B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{FDD9C2A7-93F0-4618-B3BB-615ED86833AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FDD9C2A7-93F0-4618-B3BB-615ED86833AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FDD9C2A7-93F0-4618-B3BB-615ED86833AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30D77F6C-0C73-4ED5-9F7F-5E7D088E636B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30D77F6C-0C73-4ED5-9F7F-5E7D088E636B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30D77F6C-0C73-4ED5-9F7F-5E7D088E636B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30D77F6C-0C73-4ED5-9F7F-5E7D088E636B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

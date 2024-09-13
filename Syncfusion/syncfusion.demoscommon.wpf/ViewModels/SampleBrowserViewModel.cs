@@ -217,7 +217,23 @@ namespace syncfusion.demoscommon.wpf
             var navigationService = DemosNavigationService.DemoNavigationService;
             if (navigationService != null && navigationService.Content != null)
             {
-
+                if (navigationService.Content is DemoLauncherView || navigationService.Content is DemoListView ||
+                       (SelectedSample != null &&
+                       navigationService.Content is DemoControl &&
+                       SelectedSample.ThemeMode == ThemeMode.Inherit))
+                {
+                    SfSkinManager.SetTheme(navigationService.Content as DependencyObject, new Theme() { ThemeName = SelectedThemeName });
+                }
+                if (navigationService.Content is DemoControl demoControl && SelectedSample?.ThemeMode == ThemeMode.Inherit &&
+                        demoControl.Resources["WPFHyperlinkStyle"] is Style hyperlinkStyle && hyperlinkStyle != null)
+                {
+                    demoControl.HyperLinkStyle = hyperlinkStyle;
+                }
+                else if (navigationService.Content is DemoLauncherView demoLauncherView &&
+                    demoLauncherView.Resources["WPFHyperlinkStyle"] is Style launcherHyperlinkStyle && launcherHyperlinkStyle != null)
+                {
+                    demoLauncherView.HyperLinkStyle = launcherHyperlinkStyle;
+                }
             }
             if (ThemeChanged != null)
             {
@@ -325,6 +341,29 @@ namespace syncfusion.demoscommon.wpf
                 RaisePropertyChanged("IsThemeInheritMode");
             }
         }
+        private DemoInfo subCategorySelectedItem;
+        /// <summary>
+        /// Gets or sets the selected sub demo in the demo window
+        /// </summary>
+        public DemoInfo SubCategorySelectedItem
+        {
+            get { return subCategorySelectedItem; }
+            set
+            {
+                subCategorySelectedItem = value;
+                this.RaisePropertyChanged(nameof(SubCategorySelectedItem));
+                OnSubCategorySelectedItemChanged();
+            }
+        }
+
+        private void OnSubCategorySelectedItemChanged()
+        {
+            if (this.SubCategorySelectedItem == null)
+                return;
+            this.SubCategorySelectedItem.SubCategoryDemos = this.SelectedSample.SubCategoryDemos;
+            this.SelectedSample = this.SubCategorySelectedItem;
+        }
+
         private DemoInfo _selectedsample = null;
         public DemoInfo SelectedSample
         {
@@ -332,6 +371,16 @@ namespace syncfusion.demoscommon.wpf
             set
             {
                 _selectedsample = value;
+                if (_selectedsample == null || _selectedsample.SubCategoryDemos == null)
+                {
+                    this.SubCategorySelectedItem = null;
+                }
+                else if (_selectedsample.SubCategoryDemos != null
+                && _selectedsample.SubCategoryDemos.Count > 0 && (this.subCategorySelectedItem == null ||
+                !_selectedsample.SubCategoryDemos.Contains(this.SubCategorySelectedItem)))
+                {
+                    this.SubCategorySelectedItem = _selectedsample.SubCategoryDemos.FirstOrDefault();
+                }
                 OnSelectedSampleChanged(_selectedsample);
                 RaisePropertyChanged(nameof(SelectedSample));
             }

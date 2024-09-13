@@ -1,4 +1,5 @@
-﻿using syncfusion.datagriddemos.wpf;
+﻿using syncfusion.chartdemos.wpf;
+using syncfusion.datagriddemos.wpf;
 using syncfusion.demoscommon.wpf;
 using syncfusion.gridcontroldemos.wpf;
 using syncfusion.pivotgriddemos.wpf;
@@ -16,6 +17,7 @@ namespace syncfusion.samplebrowser.wpf
             productdemos.Add(new TreeGridProductDemos());
             productdemos.Add(new PivotGridProductDemos());
             productdemos.Add(new PropertyGridProductDemos());
+            productdemos.Add(new ChartProductDemos());
             return productdemos;
         }
     }

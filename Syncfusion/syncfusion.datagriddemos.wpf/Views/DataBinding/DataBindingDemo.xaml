@@ -6,6 +6,7 @@
              xmlns:local="clr-namespace:syncfusion.datagriddemos.wpf"
              xmlns:democommon="clr-namespace:syncfusion.demoscommon.wpf;assembly=syncfusion.demoscommon.wpf"
              mc:Ignorable="d" 
+             Background="Green"
              d:DesignHeight="450" d:DesignWidth="800">
 
 </democommon:DemoControl>

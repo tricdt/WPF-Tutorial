@@ -10,9 +10,6 @@ namespace syncfusion.datagriddemos.wpf
         public GettingStarted()
         {
             InitializeComponent();
-        }
-        public GettingStarted(string themename)
-        {
 
         }
     }
