@@ -15,6 +15,61 @@ namespace syncfusion.demoscommon.wpf
         {
             SfSkinManager.SetTheme(this, new Theme() { ThemeName = themename });
         }
+        Grid ROOT;
+        ContentPresenter SAMPLEVIEW;
+        Grid OPTIONSVIEW;
+        Border OPTIONSBORDER;
+        public override void OnApplyTemplate()
+        {
+            ROOT = GetTemplateChild("ROOT") as Grid;
+            SAMPLEVIEW = GetTemplateChild("SAMPLEVIEW") as ContentPresenter;
+            OPTIONSVIEW = GetTemplateChild("OPTIONSVIEW") as Grid;
+            OPTIONSBORDER = GetTemplateChild("OPTIONSBORDER") as Border;
+            if (Options == null)
+            {
+                OPTIONSVIEW.Visibility = Visibility.Collapsed;
+                ROOT.ColumnDefinitions[1].Width = new GridLength(0);
+            }
+            else
+            {
+                if (OptionsPosition == Dock.Right)
+                {
+                    ROOT.ColumnDefinitions[1].Width = OptionsSize;
+                    OPTIONSVIEW.Margin = new Thickness(5, 0, 0, 0);
+                    OPTIONSBORDER.BorderThickness = new Thickness(1, 0, 0, 0);
+                }
+                else if (OptionsPosition == Dock.Left)
+                {
+                    ROOT.ColumnDefinitions.RemoveAt(1);
+                    ROOT.ColumnDefinitions.Insert(0, new ColumnDefinition() { Width = OptionsSize });
+                    OPTIONSVIEW.Margin = new Thickness(0, 0, 5, 0);
+                    OPTIONSBORDER.BorderThickness = new Thickness(0, 0, 1, 0);
+                    Grid.SetColumn(SAMPLEVIEW, 1);
+                    Grid.SetColumn(OPTIONSVIEW, 0);
+                }
+                else if (OptionsPosition == Dock.Top)
+                {
+                    ROOT.ColumnDefinitions.Clear();
+                    ROOT.RowDefinitions.Add(new RowDefinition() { Height = OptionsSize });
+                    ROOT.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(1, GridUnitType.Star) });
+                    OPTIONSVIEW.Margin = new Thickness(0, 0, 0, 5);
+                    OPTIONSBORDER.BorderThickness = new Thickness(0, 0, 0, 1);
+                    Grid.SetRow(SAMPLEVIEW, 1);
+                    Grid.SetRow(OPTIONSVIEW, 0);
+                }
+                else if (OptionsPosition == Dock.Bottom)
+                {
+                    ROOT.ColumnDefinitions.Clear();
+                    ROOT.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(1, GridUnitType.Star) });
+                    ROOT.RowDefinitions.Add(new RowDefinition() { Height = OptionsSize });
+                    OPTIONSVIEW.Margin = new Thickness(0, 5, 0, 0);
+                    OPTIONSBORDER.BorderThickness = new Thickness(0, 1, 0, 0);
+                    Grid.SetRow(SAMPLEVIEW, 0);
+                    Grid.SetRow(OPTIONSVIEW, 1);
+                }
+            }
+            base.OnApplyTemplate();
+        }
         public void Dispose()
         {
             // Dispose of unmanaged resources.
