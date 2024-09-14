@@ -28,12 +28,12 @@
     <ProjectReference Include="..\syncfusion.demoscommon.wpf\syncfusion.demoscommon.wpf.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Behaviors\" />
     <Folder Include="Helpers\" />
     <Folder Include="Commands\" />
     <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.135" />
     <PackageReference Include="syncfusion.ui.wpf.net" Version="26.1.35" />
   </ItemGroup>
   <ItemGroup>

@@ -179,6 +179,17 @@ namespace syncfusion.demoscommon.wpf
                 RaisePropertyChanged("ColorPaletteVisibility");
             }
         }
+        private bool themebuttonvisibility = true;
+
+        public bool ThemeButtonVisibility
+        {
+            get { return themebuttonvisibility; }
+            set
+            {
+                themebuttonvisibility = value;
+                RaisePropertyChanged(nameof(ThemeButtonVisibility));
+            }
+        }
         private string selectedthemename = DemoBrowserViewModel.DefaultThemeName;
         /// <summary>
         /// Gets or sets the selected <see cref="VisualStyles"/> of application.
@@ -389,6 +400,18 @@ namespace syncfusion.demoscommon.wpf
         private void OnSelectedSampleChanged(DemoInfo demoInfo)
         {
             if (demoInfo == null) return;
+            if (demoInfo.ThemeMode != ThemeMode.Inherit)
+            {
+                IsThemeInheritMode = false;
+                ThemeButtonVisibility = false;
+                if (ThemePanelVisibility)
+                    ThemePanelVisibility = false;
+            }
+            else
+            {
+                IsThemeInheritMode = true;
+                ThemeButtonVisibility = true;
+            }
             if (demoInfo.ShowBusyIndicator)
             {
                 IsProductDemoBusy = true;
