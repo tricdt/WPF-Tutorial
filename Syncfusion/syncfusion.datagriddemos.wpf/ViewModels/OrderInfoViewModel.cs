@@ -8,10 +8,26 @@ namespace syncfusion.datagriddemos.wpf
         {
             SetShipCity();
             this.PopulateData();
+            this._ordersDetails = GetOrdersDetails(50);
         }
         static int countrycount = 0;
         static int discountcount = 2;
         Random r = new Random();
+        private ObservableCollection<OrderInfo> _ordersDetails;
+
+        /// <summary>
+        /// Gets or sets the orders details.
+        /// </summary>
+        /// <value>The orders details.</value>
+        public ObservableCollection<OrderInfo> OrdersDetails
+        {
+            get { return _ordersDetails; }
+            set
+            {
+                _ordersDetails = value;
+                RaisePropertyChanged("OrdersDetails");
+            }
+        }
         private ObservableCollection<OrderInfo> _orderList = new ObservableCollection<OrderInfo>();
 
         /// <summary>
@@ -39,6 +55,31 @@ namespace syncfusion.datagriddemos.wpf
 
 
         public Dictionary<string, string[]> ShipCity = new Dictionary<string, string[]>();
+        public ObservableCollection<OrderInfo> GetOrdersDetails(int count)
+        {
+            ObservableCollection<OrderInfo> orderInfoCollection = new ObservableCollection<OrderInfo>();
+
+            for (int i = 0; i < count; i++)
+            {
+                var shipcountry = ShipCountry[r.Next(0, 5)];
+                var shipcitycoll = ShipCity[shipcountry];
+
+                OrderInfo orderInfo = new OrderInfo();
+                orderInfo.CustomerID = CustomerID[r.Next(0, 9)];
+                orderInfo.OrderID = 10000 + i;
+                orderInfo.Customers = new CustomerInfo();
+                orderInfo.Customers.CustomerName = EmployeeName[r.Next(0, 15)];
+                orderInfo.Customers.City = shipcitycoll[r.Next(shipcitycoll.Length - 1)];
+                orderInfo.Customers.Country = shipcountry;
+                orderInfo.ShippersInfo = new ShipperDetails[1];
+                orderInfo.ShippersInfo[0] = new ShipperDetails();
+                orderInfo.ShippersInfo[0].CompanyName = CompanyName[r.Next(0, 2)];
+                orderInfo.ShippersInfo[0].ShipperID = r.Next(1, 5);
+
+                orderInfoCollection.Add(orderInfo);
+            }
+            return orderInfoCollection;
+        }
         private void PopulateData()
         {
             for (int i = 0; i < 100; i++)
@@ -164,7 +205,27 @@ namespace syncfusion.datagriddemos.wpf
 
         public void Dispose()
         {
-            throw new NotImplementedException();
+            if (this.OrderList != null)
+            {
+                this.OrderList.Clear();
+                this.OrderList = null;
+            }
+            if (this.OrdersDetails != null)
+            {
+                this.OrdersDetails.Clear();
+                this.OrdersDetails = null;
+            }
+            if (this.ComboBoxItemsSource != null)
+            {
+                this.ComboBoxItemsSource.Clear();
+                this.ComboBoxItemsSource = null;
+            }
+
+            if (this.ShipCity != null)
+            {
+                this.ShipCity.Clear();
+                this.ShipCity = null;
+            }
         }
         #region Collection
         string[] CustomerID = new string[]
