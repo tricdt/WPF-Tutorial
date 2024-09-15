@@ -7,6 +7,9 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Views\Data Presentation\SortingDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\DataBinding\ComplexPropertyBindingDemo.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -30,6 +33,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Views\Data Presentation\SortingDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Views\DataBinding\ComplexPropertyBindingDemo.xaml">
       <SubType>Designer</SubType>
     </Page>
