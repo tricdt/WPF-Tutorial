@@ -52,6 +52,11 @@ namespace syncfusion.datagriddemos.wpf
             sortingDocumentation.Add(new Documentation { Content = "DataGrid - Sorting Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/sorting") });
             this.Demos.Add(new DemoInfo() { SampleName = "Sorting", GroupName = "DATA PRESENTATION", Description = "This sample showcases the sorting capabilities of data in SfDataGrid. The SfDataGrid control allows you to sort the data against one or more columns and provides some sorting functionalities like Tristate Sorting, Showing Sort Orders or Sort Numbers.", DemoViewType = typeof(SortingDemo), Documentations = sortingDocumentation });
 
+            List<Documentation> groupingDocumentation = new List<Documentation>();
+            groupingDocumentation.Add(new Documentation { Content = "DataGrid - AllowGrouping API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.SfDataGrid.html#Syncfusion_UI_Xaml_Grid_SfDataGrid_AllowGrouping") });
+            groupingDocumentation.Add(new Documentation { Content = "DataGrid - AllowFrozenGroupHeaders API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.SfDataGrid.html#Syncfusion_UI_Xaml_Grid_SfDataGrid_AllowFrozenGroupHeaders") });
+            groupingDocumentation.Add(new Documentation { Content = "DataGrid - Grouping Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/grouping") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Grouping", GroupName = "DATA PRESENTATION", Description = "This sample showcases the grouping capabilities of data in SfDataGrid. The SfDataGrid enables you to grouping the data by one or more columns.", DemoViewType = typeof(GroupingDemo), Documentations = groupingDocumentation });
         }
     }
 }
