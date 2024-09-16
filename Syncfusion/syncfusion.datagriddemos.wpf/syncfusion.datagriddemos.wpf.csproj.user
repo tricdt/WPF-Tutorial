@@ -10,6 +10,9 @@
     <Compile Update="Views\Data Presentation\GroupingDemo.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\Data Presentation\IntervalGroupingDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\Data Presentation\SortingDemo.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -40,6 +43,9 @@
   </ItemGroup>
   <ItemGroup>
     <Page Update="Views\Data Presentation\GroupingDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Data Presentation\IntervalGroupingDemo.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Data Presentation\SortingDemo.xaml">

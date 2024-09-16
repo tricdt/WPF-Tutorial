@@ -62,6 +62,11 @@ namespace syncfusion.datagriddemos.wpf
             summaryDocumentation.Add(new Documentation { Content = "Summaries Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/summaries") });
             this.Demos.Add(new DemoInfo() { SampleName = "Summaries", GroupName = "DATA PRESENTATION", Description = "This sample showcases the summary calculation capabilities of data in SfDataGrid. SfDataGrid provides three kinds of summary row collections, namely GroupSummaryRows, TableSummaryRows, and CaptionSummaryRows.", DemoViewType = typeof(SummariesDemo), Documentations = summaryDocumentation });
 
+            List<Documentation> intervalGroupingDocumentation = new List<Documentation>();
+            intervalGroupingDocumentation.Add(new Documentation { Content = "DataGrid - GroupColumnDescription_Comparer API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.GroupColumnDescription.html#Syncfusion_UI_Xaml_Grid_GroupColumnDescription_Comparer") });
+            intervalGroupingDocumentation.Add(new Documentation { Content = "DataGrid - GroupColumnDescription_Comparer API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.GroupColumnDescription.html#Syncfusion_UI_Xaml_Grid_GroupColumnDescription_Converter") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Interval Grouping", GroupName = "DATA PRESENTATION", Description = "This sample showcases the interval grouping capabilities of data in SfDataGrid. The SfDataGrid Supports the interval grouping by enable the interval grouping logic.", DemoViewType = typeof(IntervalGroupingDemo), Documentations = intervalGroupingDocumentation });
+
         }
     }
 }
