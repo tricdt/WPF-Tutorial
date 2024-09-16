@@ -10,6 +10,17 @@ namespace syncfusion.datagriddemos.wpf
         public DataTablePage()
         {
             InitializeComponent();
+            this.Unloaded += DataTablePage_Unloaded;
+        }
+
+        private void DataTablePage_Unloaded(object sender, System.Windows.RoutedEventArgs e)
+        {
+            if (this.sfDataGrid != null)
+            {
+                this.sfDataGrid.Dispose();
+                this.sfDataGrid = null;
+            }
+            this.Unloaded -= DataTablePage_Unloaded;
         }
     }
 }

@@ -10,6 +10,17 @@ namespace syncfusion.datagriddemos.wpf
         public ObservableCollectionPage()
         {
             InitializeComponent();
+            this.Unloaded += ObservableCollectionPage_Unloaded;
+        }
+
+        private void ObservableCollectionPage_Unloaded(object sender, System.Windows.RoutedEventArgs e)
+        {
+            if (this.syncgrid != null)
+            {
+                this.syncgrid.Dispose();
+                this.syncgrid = null;
+            }
+            this.Unloaded -= ObservableCollectionPage_Unloaded;
         }
     }
 }

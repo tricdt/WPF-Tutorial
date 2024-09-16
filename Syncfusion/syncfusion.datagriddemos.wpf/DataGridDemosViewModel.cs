@@ -71,6 +71,10 @@ namespace syncfusion.datagriddemos.wpf
             customGroupingDocumentation.Add(new Documentation { Content = "DataGrid - Custom Grouping Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/grouping#custom-grouping") });
             this.Demos.Add(new DemoInfo() { SampleName = "Custom Grouping", GroupName = "DATA PRESENTATION", Description = "This sample showcases the custom grouping capabilities in SfDataGrid. The SfDataGrid supports custom grouping which enables you to implement custom grouping logic, if the standard grouping techniques does not meet your requirements.", DemoViewType = typeof(CustomGroupingDemo), Documentations = customGroupingDocumentation });
 
+            List<Documentation> sortBySummaryDocumentation = new List<Documentation>();
+            sortBySummaryDocumentation.Add(new Documentation { Content = "DataGrid - Sort by Summary Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/grouping#sorting-groups-based-on-summary-values") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Sort by Summary", GroupName = "DATA PRESENTATION", Description = "This sample showcases the sort by summary capabilities of data in SfDataGrid.", DemoViewType = typeof(SortBySummaryDemo), Documentations = sortBySummaryDocumentation });
+
         }
     }
 }

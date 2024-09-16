@@ -7,9 +7,22 @@ namespace syncfusion.datagriddemos.wpf
     /// </summary>
     public partial class CustomGroupingDemo : DemoControl
     {
-        public CustomGroupingDemo()
+        public CustomGroupingDemo(string themename) : base(themename)
         {
             InitializeComponent();
+        }
+        protected override void Dispose(bool disposing)
+        {
+            if (this.DataContext != null)
+                this.DataContext = null;
+
+            //Release all managed resources
+            if (this.sfGrid != null)
+            {
+                this.sfGrid.Dispose();
+                this.sfGrid = null;
+            }
+            base.Dispose(disposing);
         }
     }
 }

@@ -10,6 +10,17 @@ namespace syncfusion.datagriddemos.wpf
         public ListViewPage()
         {
             InitializeComponent();
+            this.Unloaded += ListViewPage_Unloaded;
+        }
+
+        private void ListViewPage_Unloaded(object sender, System.Windows.RoutedEventArgs e)
+        {
+            if (this.syncgrid != null)
+            {
+                this.syncgrid.Dispose();
+                this.syncgrid = null;
+            }
+            this.Unloaded -= ListViewPage_Unloaded;
         }
     }
 }
