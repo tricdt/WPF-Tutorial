@@ -67,6 +67,10 @@ namespace syncfusion.datagriddemos.wpf
             intervalGroupingDocumentation.Add(new Documentation { Content = "DataGrid - GroupColumnDescription_Comparer API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.GroupColumnDescription.html#Syncfusion_UI_Xaml_Grid_GroupColumnDescription_Converter") });
             this.Demos.Add(new DemoInfo() { SampleName = "Interval Grouping", GroupName = "DATA PRESENTATION", Description = "This sample showcases the interval grouping capabilities of data in SfDataGrid. The SfDataGrid Supports the interval grouping by enable the interval grouping logic.", DemoViewType = typeof(IntervalGroupingDemo), Documentations = intervalGroupingDocumentation });
 
+            List<Documentation> customGroupingDocumentation = new List<Documentation>();
+            customGroupingDocumentation.Add(new Documentation { Content = "DataGrid - Custom Grouping Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/grouping#custom-grouping") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Custom Grouping", GroupName = "DATA PRESENTATION", Description = "This sample showcases the custom grouping capabilities in SfDataGrid. The SfDataGrid supports custom grouping which enables you to implement custom grouping logic, if the standard grouping techniques does not meet your requirements.", DemoViewType = typeof(CustomGroupingDemo), Documentations = customGroupingDocumentation });
+
         }
     }
 }

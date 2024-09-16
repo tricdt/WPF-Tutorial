@@ -28,7 +28,6 @@
     <ProjectReference Include="..\syncfusion.demoscommon.wpf\syncfusion.demoscommon.wpf.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Helpers\" />
     <Folder Include="Commands\" />
     <Folder Include="Resources\" />
   </ItemGroup>

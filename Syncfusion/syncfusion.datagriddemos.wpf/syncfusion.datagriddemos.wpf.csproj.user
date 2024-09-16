@@ -7,6 +7,9 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Views\Data Presentation\CustomGroupingDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\Data Presentation\GroupingDemo.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -42,6 +45,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Views\Data Presentation\CustomGroupingDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Views\Data Presentation\GroupingDemo.xaml">
       <SubType>Designer</SubType>
     </Page>
