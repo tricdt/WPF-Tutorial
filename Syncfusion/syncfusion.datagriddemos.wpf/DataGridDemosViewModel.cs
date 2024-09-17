@@ -75,6 +75,11 @@ namespace syncfusion.datagriddemos.wpf
             sortBySummaryDocumentation.Add(new Documentation { Content = "DataGrid - Sort by Summary Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/grouping#sorting-groups-based-on-summary-values") });
             this.Demos.Add(new DemoInfo() { SampleName = "Sort by Summary", GroupName = "DATA PRESENTATION", Description = "This sample showcases the sort by summary capabilities of data in SfDataGrid.", DemoViewType = typeof(SortBySummaryDemo), Documentations = sortBySummaryDocumentation });
 
+            List<Documentation> filteringDocumentation = new List<Documentation>();
+            filteringDocumentation.Add(new Documentation { Content = "DataGrid - ViewFilter API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.Data.CollectionViewAdv.html#Syncfusion_Data_CollectionViewAdv_Filter") });
+            filteringDocumentation.Add(new Documentation { Content = "DataGrid - ViewFilter Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/filtering#view-filtering") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Filtering", GroupName = "FILTERING", Description = "This sample showcases the filtering capabilities of data in SfDataGrid.", DemoViewType = typeof(FilteringDemo), Documentations = filteringDocumentation });
+
         }
     }
 }
