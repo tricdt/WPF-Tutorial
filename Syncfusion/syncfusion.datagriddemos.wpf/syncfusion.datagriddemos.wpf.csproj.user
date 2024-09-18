@@ -49,6 +49,9 @@
     <Compile Update="Views\Filtering\FilteringDemo.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\Filtering\FilterRowDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\GettingStarted\GettingStarted.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -94,6 +97,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Filtering\FilteringDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Filtering\FilterRowDemo.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\GettingStarted\GettingStarted.xaml">
