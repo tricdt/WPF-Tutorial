@@ -80,6 +80,11 @@ namespace syncfusion.datagriddemos.wpf
             filteringDocumentation.Add(new Documentation { Content = "DataGrid - ViewFilter Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/filtering#view-filtering") });
             this.Demos.Add(new DemoInfo() { SampleName = "Filtering", GroupName = "FILTERING", Description = "This sample showcases the filtering capabilities of data in SfDataGrid.", DemoViewType = typeof(FilteringDemo), Documentations = filteringDocumentation });
 
+            List<Documentation> advanceFilteringDocumentation = new List<Documentation>();
+            advanceFilteringDocumentation.Add(new Documentation { Content = "DataGrid - AllowFiltering API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.SfDataGrid.html#Syncfusion_UI_Xaml_Grid_SfDataGrid_AllowFiltering") });
+            advanceFilteringDocumentation.Add(new Documentation { Content = "DataGrid - AdvanceFiltering Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/filtering#advanced-filter-ui") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Advanced Filtering", GroupName = "FILTERING", Description = "This sample showcases the Excel inspired filtering capabilities of data in SfDataGrid.", DemoViewType = typeof(ExcelLikeFilteringDemo), ThemeMode = ThemeMode.None, Documentations = advanceFilteringDocumentation });
+
         }
     }
 }
