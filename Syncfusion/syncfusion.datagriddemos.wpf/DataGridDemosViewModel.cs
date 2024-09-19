@@ -90,7 +90,11 @@ namespace syncfusion.datagriddemos.wpf
             filterRowDocumentation.Add(new Documentation { Content = "DataGrid - FilterRow Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/filterrow") });
             this.Demos.Add(new DemoInfo() { SampleName = "Filter Row", GroupName = "FILTERING", Description = "This sample showcases the filter row functionalities of SfDataGrid.", DemoViewType = typeof(FilterRowDemo), Documentations = filterRowDocumentation });
 
+
             this.Demos.Add(new DemoInfo() { SampleName = "Filter Status Bar", GroupName = "FILTERING", Description = "This sample showcases the Filter Status Bar at the bottom of SfDataGrid which displays the filter conditions in simple context.", DemoViewType = typeof(FilterStatusBarDemo), ThemeMode = ThemeMode.None });
+            List<Documentation> customFilterRowDocumentation = new List<Documentation>();
+            customFilterRowDocumentation.Add(new Documentation { Content = "DataGrid - Custom Filter Row Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/filterrow#customizing-filter-row-cell") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Custom Filter Row", GroupName = "FILTERING", Description = "This sample showcases the customization of filter row editors and drop-down options in SfDataGrid.", DemoViewType = typeof(CustomFilterRowDemo), Documentations = customFilterRowDocumentation });
 
         }
     }
