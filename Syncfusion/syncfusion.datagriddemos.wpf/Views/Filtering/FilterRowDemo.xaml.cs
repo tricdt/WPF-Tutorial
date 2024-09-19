@@ -2,9 +2,6 @@
 
 namespace syncfusion.datagriddemos.wpf
 {
-    /// <summary>
-    /// Interaction logic for FilterRowDemo.xaml
-    /// </summary>
     public partial class FilterRowDemo : DemoControl
     {
         public FilterRowDemo(string themename) : base(themename)
