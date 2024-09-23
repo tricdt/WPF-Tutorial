@@ -106,6 +106,12 @@ namespace syncfusion.datagriddemos.wpf
             masterDetailsViewDocumentation.Add(new Documentation { Content = "DetailsViewDataGrid - API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.DetailsViewDataGrid.html") });
             masterDetailsViewDocumentation.Add(new Documentation { Content = "DetailsView DataGrid - Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/master-details-view") });
             this.Demos.Add(new DemoInfo() { SampleName = "Master Details View", GroupName = "MASTER DETAIL", Description = "This sample showcases the MasterDetailsView capability of SfDataGrid. The SfDataGrid displays hierarchical data in the form of nested tables using master-detail view configuration. In a hierarchical view, all tables in the data source are interconnected by means of relations.", DemoViewType = typeof(MasterDetailsViewDemo), Documentations = masterDetailsViewDocumentation });
+
+            List<Documentation> detailsViewTemplateDocumentation = new List<Documentation>();
+            detailsViewTemplateDocumentation.Add(new Documentation { Content = "DetailsView DataGrid - TemplateViewDefinition API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.TemplateViewDefinition.html") });
+            detailsViewTemplateDocumentation.Add(new Documentation { Content = "DetailsView DataGrid - DetailsView Template Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/record-template-view") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Details View Template", GroupName = "MASTER DETAIL", Description = "This sample showcases the SfDataGrid with a DetailsView Template. It displays major values in each row and detailed information in the details section when the row is expanded. It can be used to load specific details for each row using RowTemplate property of TemplateViewDefinition. ", DemoViewType = typeof(DetailsViewTemplateDemo), ThemeMode = ThemeMode.None, Documentations = detailsViewTemplateDocumentation });
+
         }
     }
 }
