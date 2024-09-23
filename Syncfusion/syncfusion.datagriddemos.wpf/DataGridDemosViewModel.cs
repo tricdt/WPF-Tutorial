@@ -124,6 +124,10 @@ namespace syncfusion.datagriddemos.wpf
             columnTypesDocumentation.Add(new Documentation { Content = "DetailsView DataGrid - ColumnTypes Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/column-types") });
             this.Demos.Add(new DemoInfo() { SampleName = "Column Types", GroupName = "MASTER DETAIL", Description = "This sample showcases the different column types capabilities in DetailsViewDataGrid. The SfDataGrid allows you to create various types of columns like Editable, Non-Editable and DropDown columns in DetailsViewDataGrid also.", DemoViewType = typeof(DetailsViewColumnTypesDemo), Documentations = columnTypesDocumentation });
 
+            List<Documentation> conditionalFormattingDocumentation = new List<Documentation>();
+            conditionalFormattingDocumentation.Add(new Documentation { Content = "DetailsView DataGrid - ConditionalFormatting Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/conditional-styling") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Conditional Formatting", GroupName = "MASTER DETAIL", Description = "This sample showcases the conditional formatting capabilities of DetailsViewDataGrid. SfDataGrid control allows you to format the styles of cells and rows based on certain conditions by using converter and StyleSelector in DetailsViewDataGrid.", DemoViewType = typeof(ConditionalFormattingDetailsViewDataGridDemo), ThemeMode = ThemeMode.None, Documentations = conditionalFormattingDocumentation });
+
         }
     }
 }
