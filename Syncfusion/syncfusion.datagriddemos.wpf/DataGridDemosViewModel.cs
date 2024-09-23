@@ -116,6 +116,10 @@ namespace syncfusion.datagriddemos.wpf
             dataTableBindingDocumentation.Add(new Documentation { Content = "DetailsView DataGrid - DataTable Binding Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/data-binding#binding-with-datatable") });
             this.Demos.Add(new DemoInfo() { SampleName = "DataTable Binding", GroupName = "MASTER DETAIL", Description = "This sample showcases the datatable binding capability of DetailsViewDataGrid. The DetailsViewDataGrid supports data sources such as DataTable and custom collection such as List, BindingList, ObservableCollection.", DemoViewType = typeof(DetailsViewDataTableBindingDemo), Documentations = dataTableBindingDocumentation });
 
+            List<Documentation> stackedHeadersDocumentation = new List<Documentation>();
+            stackedHeadersDocumentation.Add(new Documentation { Content = "DetailsView DataGrid - StackedHeaders Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/stacked-headers") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Stacked Headers", GroupName = "MASTER DETAIL", Description = "This sample showcases the stacked headers capability in DetailsViewDataGrid of SfDataGrid.", DemoViewType = typeof(DetailsViewStackedHeaderRowsDemo), Documentations = stackedHeadersDocumentation });
+
         }
     }
 }
