@@ -102,6 +102,10 @@ namespace syncfusion.datagriddemos.wpf
             searchDocumentation.Add(new Documentation { Content = "DataGrid - Search Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/search") });
             this.Demos.Add(new DemoInfo() { SampleName = "Search", GroupName = "FILTERING", Description = "This sample showcases the search support of SfDataGrid. This allows you to search the DataGrid with options to filter and highlight the search text in cells.", DemoViewType = typeof(SearchPanelDemo), ThemeMode = ThemeMode.None, Documentations = searchDocumentation });
 
+            List<Documentation> masterDetailsViewDocumentation = new List<Documentation>();
+            masterDetailsViewDocumentation.Add(new Documentation { Content = "DetailsViewDataGrid - API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.DetailsViewDataGrid.html") });
+            masterDetailsViewDocumentation.Add(new Documentation { Content = "DetailsView DataGrid - Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/master-details-view") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Master Details View", GroupName = "MASTER DETAIL", Description = "This sample showcases the MasterDetailsView capability of SfDataGrid. The SfDataGrid displays hierarchical data in the form of nested tables using master-detail view configuration. In a hierarchical view, all tables in the data source are interconnected by means of relations.", DemoViewType = typeof(MasterDetailsViewDemo), Documentations = masterDetailsViewDocumentation });
         }
     }
 }
