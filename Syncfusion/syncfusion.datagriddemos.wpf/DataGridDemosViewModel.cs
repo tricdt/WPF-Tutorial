@@ -112,6 +112,10 @@ namespace syncfusion.datagriddemos.wpf
             detailsViewTemplateDocumentation.Add(new Documentation { Content = "DetailsView DataGrid - DetailsView Template Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/record-template-view") });
             this.Demos.Add(new DemoInfo() { SampleName = "Details View Template", GroupName = "MASTER DETAIL", Description = "This sample showcases the SfDataGrid with a DetailsView Template. It displays major values in each row and detailed information in the details section when the row is expanded. It can be used to load specific details for each row using RowTemplate property of TemplateViewDefinition. ", DemoViewType = typeof(DetailsViewTemplateDemo), ThemeMode = ThemeMode.None, Documentations = detailsViewTemplateDocumentation });
 
+            List<Documentation> dataTableBindingDocumentation = new List<Documentation>();
+            dataTableBindingDocumentation.Add(new Documentation { Content = "DetailsView DataGrid - DataTable Binding Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/data-binding#binding-with-datatable") });
+            this.Demos.Add(new DemoInfo() { SampleName = "DataTable Binding", GroupName = "MASTER DETAIL", Description = "This sample showcases the datatable binding capability of DetailsViewDataGrid. The DetailsViewDataGrid supports data sources such as DataTable and custom collection such as List, BindingList, ObservableCollection.", DemoViewType = typeof(DetailsViewDataTableBindingDemo), Documentations = dataTableBindingDocumentation });
+
         }
     }
 }
