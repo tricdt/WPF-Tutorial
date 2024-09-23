@@ -73,7 +73,6 @@
         </syncfusion:SfDataGrid>
         <local:FilterStatusBar x:Name="FilterStatusBar"
                                Grid.Row="1"
-                               DataGrid="{Binding ElementName=sfgrid, UpdateSourceTrigger=PropertyChanged}"
-                               />
+                               DataGrid="{Binding ElementName=sfgrid, UpdateSourceTrigger=PropertyChanged}"/>
     </Grid>
 </democommon:DemoControl>

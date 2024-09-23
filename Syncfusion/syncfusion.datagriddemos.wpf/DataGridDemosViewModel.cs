@@ -92,9 +92,15 @@ namespace syncfusion.datagriddemos.wpf
 
 
             this.Demos.Add(new DemoInfo() { SampleName = "Filter Status Bar", GroupName = "FILTERING", Description = "This sample showcases the Filter Status Bar at the bottom of SfDataGrid which displays the filter conditions in simple context.", DemoViewType = typeof(FilterStatusBarDemo), ThemeMode = ThemeMode.None });
+
             List<Documentation> customFilterRowDocumentation = new List<Documentation>();
             customFilterRowDocumentation.Add(new Documentation { Content = "DataGrid - Custom Filter Row Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/filterrow#customizing-filter-row-cell") });
             this.Demos.Add(new DemoInfo() { SampleName = "Custom Filter Row", GroupName = "FILTERING", Description = "This sample showcases the customization of filter row editors and drop-down options in SfDataGrid.", DemoViewType = typeof(CustomFilterRowDemo), Documentations = customFilterRowDocumentation });
+
+            List<Documentation> searchDocumentation = new List<Documentation>();
+            searchDocumentation.Add(new Documentation { Content = "DataGrid - Search API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.SearchHelper.html#Syncfusion_UI_Xaml_Grid_SearchHelper_Search_System_String_") });
+            searchDocumentation.Add(new Documentation { Content = "DataGrid - Search Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/search") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Search", GroupName = "FILTERING", Description = "This sample showcases the search support of SfDataGrid. This allows you to search the DataGrid with options to filter and highlight the search text in cells.", DemoViewType = typeof(SearchPanelDemo), ThemeMode = ThemeMode.None, Documentations = searchDocumentation });
 
         }
     }

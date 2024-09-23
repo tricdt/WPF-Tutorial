@@ -55,12 +55,21 @@
     <Compile Update="Views\Filtering\FilterStatusBarDemo.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\Filtering\SearchPanelDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\GettingStarted\GettingStarted.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Resources\Generic.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\Search.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Generic.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Data Presentation\CustomGroupingDemo.xaml">
@@ -112,6 +121,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Filtering\FilterStatusBarDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Filtering\SearchPanelDemo.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\GettingStarted\GettingStarted.xaml">

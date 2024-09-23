@@ -86,4 +86,9 @@
     <Resource Include="Assets\datagrid\UK.jpg" />
     <Resource Include="Assets\datagrid\US.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Page Update="Resources\Search.xaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Page>
+  </ItemGroup>
 </Project>
