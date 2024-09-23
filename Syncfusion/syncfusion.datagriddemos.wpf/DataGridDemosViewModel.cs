@@ -120,6 +120,10 @@ namespace syncfusion.datagriddemos.wpf
             stackedHeadersDocumentation.Add(new Documentation { Content = "DetailsView DataGrid - StackedHeaders Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/stacked-headers") });
             this.Demos.Add(new DemoInfo() { SampleName = "Stacked Headers", GroupName = "MASTER DETAIL", Description = "This sample showcases the stacked headers capability in DetailsViewDataGrid of SfDataGrid.", DemoViewType = typeof(DetailsViewStackedHeaderRowsDemo), Documentations = stackedHeadersDocumentation });
 
+            List<Documentation> columnTypesDocumentation = new List<Documentation>();
+            columnTypesDocumentation.Add(new Documentation { Content = "DetailsView DataGrid - ColumnTypes Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/column-types") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Column Types", GroupName = "MASTER DETAIL", Description = "This sample showcases the different column types capabilities in DetailsViewDataGrid. The SfDataGrid allows you to create various types of columns like Editable, Non-Editable and DropDown columns in DetailsViewDataGrid also.", DemoViewType = typeof(DetailsViewColumnTypesDemo), Documentations = columnTypesDocumentation });
+
         }
     }
 }
