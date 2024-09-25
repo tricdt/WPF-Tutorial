@@ -138,6 +138,12 @@ namespace syncfusion.datagriddemos.wpf
             dataVirtualizationDocumentation.Add(new Documentation { Content = "DataGrid - DataVirtualization Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/data-virtualization") });
             this.Demos.Add(new DemoInfo() { SampleName = "Data Virtualization", GroupName = "DATA VIRTUALIZATION", Description = "This sample showcases the data virtualization capability of SfDataGrid. Data Virtualization support enables you to work with the huge data sources. SfDataGrid control creates records on-demand by automatically enabling data virtualization when EnableDataVirtualization property set to true.", DemoViewType = typeof(DataVirtualizationDemo), Documentations = dataVirtualizationDocumentation });
 
+            List<Documentation> dataPagingDocumentation = new List<Documentation>();
+            dataPagingDocumentation.Add(new Documentation { Content = "DataGrid - SfDataPager API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Controls.DataPager.SfDataPager.html") });
+            dataPagingDocumentation.Add(new Documentation { Content = "DataGrid - DataPaging Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/paging") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Data Paging", GroupName = "DATA VIRTUALIZATION", Description = "This sample showcases the paging capability of SfDataGrid. Paging support is achieved by using SfDataPager control which return pages of data with entries where selection of the pages can be done using the numbered buttons. Paging loads the entire data collection to the SfDataPager and bind the PagedSource property of the SfDataPager to the ItemsSource property of SfDataGrid.", DemoViewType = typeof(DataPagingDemo), Documentations = dataPagingDocumentation });
+
+
         }
     }
 }
