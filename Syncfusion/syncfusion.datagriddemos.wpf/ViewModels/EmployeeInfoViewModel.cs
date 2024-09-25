@@ -102,6 +102,15 @@ namespace syncfusion.datagriddemos.wpf
                 Salary = new decimal(Math.Round(r.NextDouble() * 6000.5, 2))
             };
         }
+        internal List<EmployeeInfo> GetEmployeesList(int count)
+        {
+            var employees = new List<EmployeeInfo>();
+            for (var i = 1; i < count; i++)
+            {
+                employees.Add(GetEmployee(i));
+            }
+            return employees;
+        }
         public bool FilerRecords(object o)
         {
             double res;

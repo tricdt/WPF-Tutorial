@@ -143,6 +143,9 @@ namespace syncfusion.datagriddemos.wpf
             dataPagingDocumentation.Add(new Documentation { Content = "DataGrid - DataPaging Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/paging") });
             this.Demos.Add(new DemoInfo() { SampleName = "Data Paging", GroupName = "DATA VIRTUALIZATION", Description = "This sample showcases the paging capability of SfDataGrid. Paging support is achieved by using SfDataPager control which return pages of data with entries where selection of the pages can be done using the numbered buttons. Paging loads the entire data collection to the SfDataPager and bind the PagedSource property of the SfDataPager to the ItemsSource property of SfDataGrid.", DemoViewType = typeof(DataPagingDemo), Documentations = dataPagingDocumentation });
 
+            List<Documentation> onDemandPagingDocumentation = new List<Documentation>();
+            onDemandPagingDocumentation.Add(new Documentation { Content = "DataGrid - On-DemandPaging Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/paging#load-data-in-on-demand") });
+            this.Demos.Add(new DemoInfo() { SampleName = "On-Demand Paging", GroupName = "DATA VIRTUALIZATION", Description = "This sample showcases the on-demand paging capabilities of SfDataGrid. On-demand paging supports current page item source adds by on demand basis. The entire data is not needed to be fetched from the data source and we can get high performance even if there are millions of records. Also we can load millions of records in an efficient way.", DemoViewType = typeof(OnDemandPagingDemo), Documentations = onDemandPagingDocumentation });
 
         }
     }
