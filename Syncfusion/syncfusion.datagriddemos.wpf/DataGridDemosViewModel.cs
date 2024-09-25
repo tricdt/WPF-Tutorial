@@ -128,6 +128,11 @@ namespace syncfusion.datagriddemos.wpf
             conditionalFormattingDocumentation.Add(new Documentation { Content = "DetailsView DataGrid - ConditionalFormatting Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/conditional-styling") });
             this.Demos.Add(new DemoInfo() { SampleName = "Conditional Formatting", GroupName = "MASTER DETAIL", Description = "This sample showcases the conditional formatting capabilities of DetailsViewDataGrid. SfDataGrid control allows you to format the styles of cells and rows based on certain conditions by using converter and StyleSelector in DetailsViewDataGrid.", DemoViewType = typeof(ConditionalFormattingDetailsViewDataGridDemo), ThemeMode = ThemeMode.None, Documentations = conditionalFormattingDocumentation });
 
+            List<Documentation> excelEportingDocumentation = new List<Documentation>();
+            excelEportingDocumentation.Add(new Documentation { Content = "DetailsView DataGrid - ExportToExcel API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.Converter.GridExcelExportExtension.html#Syncfusion_UI_Xaml_Grid_Converter_GridExcelExportExtension_ExportToExcel_Syncfusion_UI_Xaml_Grid_SfDataGrid_Syncfusion_Data_ICollectionViewAdv_Syncfusion_UI_Xaml_Grid_Converter_ExcelExportingOptions_") });
+            excelEportingDocumentation.Add(new Documentation { Content = "DetailsView DataGrid - Excel Exporting Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/export-to-excel") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Excel Exporting", GroupName = "MASTER DETAIL", Description = "This sample showcases the excel exporting capability of MasterDetailsView in SfDataGrid.", DemoViewType = typeof(MasterDetailsExportingDemo), Documentations = excelEportingDocumentation });
+
         }
     }
 }

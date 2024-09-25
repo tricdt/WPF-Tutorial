@@ -76,6 +76,9 @@
     <Compile Update="Views\Master-Detail\DetailsViewTemplateDemo.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\Master-Detail\MasterDetailsExportingDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\Master-Detail\MasterDetailsViewDemo.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -160,6 +163,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Master-Detail\DetailsViewTemplateDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Master-Detail\MasterDetailsExportingDemo.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Master-Detail\MasterDetailsViewDemo.xaml">
