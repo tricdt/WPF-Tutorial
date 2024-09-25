@@ -133,6 +133,11 @@ namespace syncfusion.datagriddemos.wpf
             excelEportingDocumentation.Add(new Documentation { Content = "DetailsView DataGrid - Excel Exporting Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/export-to-excel") });
             this.Demos.Add(new DemoInfo() { SampleName = "Excel Exporting", GroupName = "MASTER DETAIL", Description = "This sample showcases the excel exporting capability of MasterDetailsView in SfDataGrid.", DemoViewType = typeof(MasterDetailsExportingDemo), Documentations = excelEportingDocumentation });
 
+            List<Documentation> dataVirtualizationDocumentation = new List<Documentation>();
+            dataVirtualizationDocumentation.Add(new Documentation { Content = "DataGrid - EnableDataVirtualization API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.SfDataGrid.html#Syncfusion_UI_Xaml_Grid_SfDataGrid_EnableDataVirtualization") });
+            dataVirtualizationDocumentation.Add(new Documentation { Content = "DataGrid - DataVirtualization Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/data-virtualization") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Data Virtualization", GroupName = "DATA VIRTUALIZATION", Description = "This sample showcases the data virtualization capability of SfDataGrid. Data Virtualization support enables you to work with the huge data sources. SfDataGrid control creates records on-demand by automatically enabling data virtualization when EnableDataVirtualization property set to true.", DemoViewType = typeof(DataVirtualizationDemo), Documentations = dataVirtualizationDocumentation });
+
         }
     }
 }

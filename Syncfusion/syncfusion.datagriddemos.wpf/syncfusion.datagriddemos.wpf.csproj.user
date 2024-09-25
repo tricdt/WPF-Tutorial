@@ -25,6 +25,9 @@
     <Compile Update="Views\Data Presentation\SummariesDemo.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\Data Virtualization\DataVirtualizationDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\DataBinding\ComplexPropertyBindingDemo.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -109,6 +112,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Data Presentation\SummariesDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Data Virtualization\DataVirtualizationDemo.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\DataBinding\ComplexPropertyBindingDemo.xaml">
