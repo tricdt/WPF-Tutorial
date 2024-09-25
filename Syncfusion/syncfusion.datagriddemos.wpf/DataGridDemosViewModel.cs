@@ -147,6 +147,11 @@ namespace syncfusion.datagriddemos.wpf
             onDemandPagingDocumentation.Add(new Documentation { Content = "DataGrid - On-DemandPaging Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/paging#load-data-in-on-demand") });
             this.Demos.Add(new DemoInfo() { SampleName = "On-Demand Paging", GroupName = "DATA VIRTUALIZATION", Description = "This sample showcases the on-demand paging capabilities of SfDataGrid. On-demand paging supports current page item source adds by on demand basis. The entire data is not needed to be fetched from the data source and we can get high performance even if there are millions of records. Also we can load millions of records in an efficient way.", DemoViewType = typeof(OnDemandPagingDemo), Documentations = onDemandPagingDocumentation });
 
+            List<Documentation> editingDocumentation = new List<Documentation>();
+            editingDocumentation.Add(new Documentation { Content = "DataGrid - AllowEditing API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.SfGridBase.html#Syncfusion_UI_Xaml_Grid_SfGridBase_AllowEditing") });
+            editingDocumentation.Add(new Documentation { Content = "DataGrid - EditTrigger API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.SfGridBase.html#Syncfusion_UI_Xaml_Grid_SfGridBase_EditTrigger") });
+            editingDocumentation.Add(new Documentation { Content = "DataGrid - Editing Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/editing") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Editing", GroupName = "EDITING", Description = "This sample showcases the editing capability in SfDataGrid. SfDataGrid provided options to trigger the edit mode by either with single or double click.", DemoViewType = typeof(EditingAndDataValidationDemo), Documentations = editingDocumentation });
         }
     }
 }

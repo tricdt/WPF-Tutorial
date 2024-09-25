@@ -52,6 +52,9 @@
     <Compile Update="Views\DataBinding\ObservableCollectionPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\Editing\EditingAndDataValidationDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\Filtering\CustomFilterRowDemo.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -145,6 +148,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\DataBinding\ObservableCollectionPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Editing\EditingAndDataValidationDemo.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Filtering\CustomFilterRowDemo.xaml">
