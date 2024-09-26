@@ -155,6 +155,11 @@ namespace syncfusion.datagriddemos.wpf
             this.Demos.Add(new DemoInfo() { SampleName = "Editable Columns", GroupName = "EDITING", Description = "This sample showcases the editable columns capability of SfDataGrid. SfDataGrid provides different editable columns such as GridTextColumn, GridNumericColumn, GridCurrencyColumn, GridPercentColumn, GridMaskColumn, GridTimeSpanColumn, GridTemplateColumn and GridUnboundColumn.", DemoViewType = typeof(GridColumnsDemo) });
             this.Demos.Add(new DemoInfo() { SampleName = "Dropdown and Read Only Columns", GroupName = "EDITING", Description = "This sample showcases the dropdown and readonly columns capability of SfDataGrid. The SfDataGrid supports various types of dropdown and readonly columns like DateTimeColumn, ComboboxColumn, MultiColumnDropDownList, TemplateColumn, ImageColumn and HyperLinkColumn.", DemoViewType = typeof(GridDropDownAndReadOnlyColumnsDemo) });
 
+            List<Documentation> comboBoxColumnDocumentation = new List<Documentation>();
+            comboBoxColumnDocumentation.Add(new Documentation { Content = "DataGrid - GridComboBoxColumn API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.GridComboBoxColumn.html") });
+            comboBoxColumnDocumentation.Add(new Documentation { Content = "DataGrid - ComboBox Column Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/column-types#gridcomboboxcolumn") });
+            this.Demos.Add(new DemoInfo() { SampleName = "ComboBox Column", GroupName = "EDITING", Description = "This sample showcases the loading of different ItemsSource for different rows in GridComboBoxColumn based on data object.", DemoViewType = typeof(ComboBoxColumnsDemo), Documentations = comboBoxColumnDocumentation });
+
         }
     }
 }
