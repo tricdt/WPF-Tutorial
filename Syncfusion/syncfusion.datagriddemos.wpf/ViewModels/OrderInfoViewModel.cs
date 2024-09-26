@@ -9,6 +9,7 @@ namespace syncfusion.datagriddemos.wpf
             SetShipCity();
             this.PopulateData();
             this._ordersDetails = GetOrdersDetails(50);
+            this.suppliers = PopulateDataForShip(40);
         }
         static int countrycount = 0;
         static int discountcount = 2;
@@ -45,6 +46,20 @@ namespace syncfusion.datagriddemos.wpf
                 _orderList = value;
             }
         }
+        private ObservableCollection<SupplierDetails> suppliers;
+
+        public ObservableCollection<SupplierDetails> Suppliers
+        {
+            get
+            {
+                return suppliers;
+            }
+            set
+            {
+                suppliers = value;
+                RaisePropertyChanged("Suppliers");
+            }
+        }
         private List<string> _comboBoxItemsSource = new List<string>();
 
         public List<string> ComboBoxItemsSource
@@ -79,6 +94,24 @@ namespace syncfusion.datagriddemos.wpf
                 orderInfoCollection.Add(orderInfo);
             }
             return orderInfoCollection;
+        }
+        private ObservableCollection<SupplierDetails> PopulateDataForShip(int count)
+        {
+            ObservableCollection<SupplierDetails> SupplierInfo = new ObservableCollection<SupplierDetails>();
+            for (int i = 0; i < count; i++)
+            {
+                var shipcountry = ShipCountry[r.Next(0, 5)];
+                var shipcitycoll = ShipCity[shipcountry];
+                int j = i % 2 == 0 ? 0 : 1;
+
+                SupplierDetails s = new SupplierDetails();
+                s.SupplierID = i + 1;
+                s.SupplierName = SupplierName[j];
+                s.SupplierCity = shipcitycoll[r.Next(shipcitycoll.Length - 1)];
+                SupplierInfo.Add(s);
+            }
+
+            return SupplierInfo;
         }
         private void PopulateData()
         {

@@ -153,6 +153,7 @@ namespace syncfusion.datagriddemos.wpf
             editingDocumentation.Add(new Documentation { Content = "DataGrid - Editing Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/editing") });
             this.Demos.Add(new DemoInfo() { SampleName = "Editing", GroupName = "EDITING", Description = "This sample showcases the editing capability in SfDataGrid. SfDataGrid provided options to trigger the edit mode by either with single or double click.", DemoViewType = typeof(EditingAndDataValidationDemo), Documentations = editingDocumentation });
             this.Demos.Add(new DemoInfo() { SampleName = "Editable Columns", GroupName = "EDITING", Description = "This sample showcases the editable columns capability of SfDataGrid. SfDataGrid provides different editable columns such as GridTextColumn, GridNumericColumn, GridCurrencyColumn, GridPercentColumn, GridMaskColumn, GridTimeSpanColumn, GridTemplateColumn and GridUnboundColumn.", DemoViewType = typeof(GridColumnsDemo) });
+            this.Demos.Add(new DemoInfo() { SampleName = "Dropdown and Read Only Columns", GroupName = "EDITING", Description = "This sample showcases the dropdown and readonly columns capability of SfDataGrid. The SfDataGrid supports various types of dropdown and readonly columns like DateTimeColumn, ComboboxColumn, MultiColumnDropDownList, TemplateColumn, ImageColumn and HyperLinkColumn.", DemoViewType = typeof(GridDropDownAndReadOnlyColumnsDemo) });
 
         }
     }
