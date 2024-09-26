@@ -106,6 +106,9 @@
     <Compile Update="Views\Rows\AddNewRowDemo.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\Rows\AutoRowHeightDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\Rows\StackedHeaderRowsDemo.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -220,6 +223,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Rows\AddNewRowDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Rows\AutoRowHeightDemo.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Rows\StackedHeaderRowsDemo.xaml">

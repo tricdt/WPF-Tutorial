@@ -170,6 +170,11 @@ namespace syncfusion.datagriddemos.wpf
             stackedheadersDocumentation.Add(new Documentation { Content = "DataGrid - Stacked Headers Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/stacked-headers") });
             this.Demos.Add(new DemoInfo() { SampleName = "Stacked headers", GroupName = "ROWS", Description = "This sample showcases the stacked headers capability in DetailsViewDataGrid of SfDataGrid.", DemoViewType = typeof(StackedHeaderRowsDemo), Documentations = stackedheadersDocumentation });
 
+            List<Documentation> autoRowHeightDocumentation = new List<Documentation>();
+            autoRowHeightDocumentation.Add(new Documentation { Content = "DataGrid - QueryRowHeight API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.SfDataGrid.html#Syncfusion_UI_Xaml_Grid_SfDataGrid_QueryRowHeight") });
+            autoRowHeightDocumentation.Add(new Documentation { Content = "DataGrid - Auto Row Height Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/row-height-customization?cs-save-lang=1&cs-lang=csharp#fit-the-row-height-based-on-its-content") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Auto RowHeight", GroupName = "ROWS", Description = "This sample showcases the auto row height feature of SfDataGrid which improves the readability of the content and occurs on-demand basis. It does not affect the loading performance of the SfDataGrid and provides support to change the height of the row based on its content on-demand based for all columns or certain columns of SfDataGrid.", DemoViewType = typeof(AutoRowHeightDemo), Documentations = autoRowHeightDocumentation });
+
         }
     }
 }
