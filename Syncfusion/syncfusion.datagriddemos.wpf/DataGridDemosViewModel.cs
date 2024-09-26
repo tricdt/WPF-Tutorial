@@ -160,6 +160,11 @@ namespace syncfusion.datagriddemos.wpf
             comboBoxColumnDocumentation.Add(new Documentation { Content = "DataGrid - ComboBox Column Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/column-types#gridcomboboxcolumn") });
             this.Demos.Add(new DemoInfo() { SampleName = "ComboBox Column", GroupName = "EDITING", Description = "This sample showcases the loading of different ItemsSource for different rows in GridComboBoxColumn based on data object.", DemoViewType = typeof(ComboBoxColumnsDemo), Documentations = comboBoxColumnDocumentation });
 
+            List<Documentation> addNewRowDocumentation = new List<Documentation>();
+            addNewRowDocumentation.Add(new Documentation { Content = "DataGrid - AddNewRowPosition API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.SfDataGrid.html#Syncfusion_UI_Xaml_Grid_SfDataGrid_AddNewRowPosition") });
+            addNewRowDocumentation.Add(new Documentation { Content = "DataGrid - AddNewRow Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/data-manipulation#add-new-rows") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Add New Row", GroupName = "ROWS", Description = "This sample showcases adding the new record at runtime in SfDataGrid by AddNewRow feature. The AddNewRow is displayed, above or below the rows in the SfDataGrid based on AddNewRowPosition property.", DemoViewType = typeof(AddNewRowDemo), Documentations = addNewRowDocumentation });
+
         }
     }
 }

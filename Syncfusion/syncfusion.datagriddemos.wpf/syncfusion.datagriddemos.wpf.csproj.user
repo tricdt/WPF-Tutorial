@@ -103,6 +103,9 @@
     <Compile Update="Views\Master-Detail\MasterDetailsViewDemo.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\Rows\AddNewRowDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Resources\Generic.xaml">
@@ -211,6 +214,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Master-Detail\MasterDetailsViewDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Rows\AddNewRowDemo.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
