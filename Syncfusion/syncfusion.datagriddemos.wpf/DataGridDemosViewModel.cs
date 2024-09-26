@@ -165,6 +165,11 @@ namespace syncfusion.datagriddemos.wpf
             addNewRowDocumentation.Add(new Documentation { Content = "DataGrid - AddNewRow Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/data-manipulation#add-new-rows") });
             this.Demos.Add(new DemoInfo() { SampleName = "Add New Row", GroupName = "ROWS", Description = "This sample showcases adding the new record at runtime in SfDataGrid by AddNewRow feature. The AddNewRow is displayed, above or below the rows in the SfDataGrid based on AddNewRowPosition property.", DemoViewType = typeof(AddNewRowDemo), Documentations = addNewRowDocumentation });
 
+            List<Documentation> stackedheadersDocumentation = new List<Documentation>();
+            stackedheadersDocumentation.Add(new Documentation { Content = "DataGrid - StackedHeaderRow API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.StackedHeaderRow.html") });
+            stackedheadersDocumentation.Add(new Documentation { Content = "DataGrid - Stacked Headers Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/stacked-headers") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Stacked headers", GroupName = "ROWS", Description = "This sample showcases the stacked headers capability in DetailsViewDataGrid of SfDataGrid.", DemoViewType = typeof(StackedHeaderRowsDemo), Documentations = stackedheadersDocumentation });
+
         }
     }
 }
