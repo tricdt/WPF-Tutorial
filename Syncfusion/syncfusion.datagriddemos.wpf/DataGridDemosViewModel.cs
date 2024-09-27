@@ -185,6 +185,11 @@ namespace syncfusion.datagriddemos.wpf
             unboundColumnDocumentation.Add(new Documentation { Content = "DataGrid - UnBound Columns Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/unbound-column") });
             this.Demos.Add(new DemoInfo() { SampleName = "Unbound column", GroupName = "COLUMNS", Description = "This sample showcases the unbound column capability of SfDataGrid. SfDataGrid supports the addition of extra columns to the data source columns. These additional columns are called as unbound columns, as they do not belong to the data source. Unbound column has two features like Expression and Format and these unbound fields are used when you want to add additional or custom information to each record. An unbound column is sorted, grouped, and filtered like other GridColumns.", DemoViewType = typeof(UnBoundColumnsDemo), Documentations = unboundColumnDocumentation });
 
+            List<Documentation> columnSizerDocumentation = new List<Documentation>();
+            columnSizerDocumentation.Add(new Documentation { Content = "DataGrid - ColumnSizer API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.SfDataGrid.html#Syncfusion_UI_Xaml_Grid_SfDataGrid_ColumnSizer") });
+            columnSizerDocumentation.Add(new Documentation { Content = "DataGrid - Column Sizer Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/autosize-columns") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Column Sizer", GroupName = "COLUMNS", Description = "This sample showcases the different types of column sizer capabilities in SfDataGrid. The SfDataGrid provides in-built feature for customizing the width of the column based on the data present in the cell by defining the ColumnSizer property. This property has different ColumnSizer options like Auto, AutoWithLastColumnFill, SizeToCells, SizeToHeader, Star and None.", DemoViewType = typeof(ColumnSizerDemo), Documentations = columnSizerDocumentation });
+
         }
     }
 }
