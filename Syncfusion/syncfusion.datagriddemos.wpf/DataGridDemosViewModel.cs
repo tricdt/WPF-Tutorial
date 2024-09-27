@@ -180,6 +180,11 @@ namespace syncfusion.datagriddemos.wpf
             unboundRowDocumentation.Add(new Documentation { Content = "DataGrid - UnBound Rows Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/unbound-rows") });
             this.Demos.Add(new DemoInfo() { SampleName = "Unbound Row", GroupName = "ROWS", Description = "This sample showcases unbound rows support of SfDataGrid. The SfDataGrid provides support to place the Unbound Row at the top and the bottom of record rows and also have the option to place them above or below the Table summary row.", DemoViewType = typeof(UnBoundRowDemo), Documentations = unboundRowDocumentation });
 
+            List<Documentation> unboundColumnDocumentation = new List<Documentation>();
+            unboundColumnDocumentation.Add(new Documentation { Content = "DataGrid - GridUnBoundColumn API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.GridUnBoundColumn.html") });
+            unboundColumnDocumentation.Add(new Documentation { Content = "DataGrid - UnBound Columns Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/unbound-column") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Unbound column", GroupName = "COLUMNS", Description = "This sample showcases the unbound column capability of SfDataGrid. SfDataGrid supports the addition of extra columns to the data source columns. These additional columns are called as unbound columns, as they do not belong to the data source. Unbound column has two features like Expression and Format and these unbound fields are used when you want to add additional or custom information to each record. An unbound column is sorted, grouped, and filtered like other GridColumns.", DemoViewType = typeof(UnBoundColumnsDemo), Documentations = unboundColumnDocumentation });
+
         }
     }
 }
