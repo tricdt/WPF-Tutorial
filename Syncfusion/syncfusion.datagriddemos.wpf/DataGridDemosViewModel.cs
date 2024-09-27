@@ -175,6 +175,11 @@ namespace syncfusion.datagriddemos.wpf
             autoRowHeightDocumentation.Add(new Documentation { Content = "DataGrid - Auto Row Height Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/row-height-customization?cs-save-lang=1&cs-lang=csharp#fit-the-row-height-based-on-its-content") });
             this.Demos.Add(new DemoInfo() { SampleName = "Auto RowHeight", GroupName = "ROWS", Description = "This sample showcases the auto row height feature of SfDataGrid which improves the readability of the content and occurs on-demand basis. It does not affect the loading performance of the SfDataGrid and provides support to change the height of the row based on its content on-demand based for all columns or certain columns of SfDataGrid.", DemoViewType = typeof(AutoRowHeightDemo), Documentations = autoRowHeightDocumentation });
 
+            List<Documentation> unboundRowDocumentation = new List<Documentation>();
+            unboundRowDocumentation.Add(new Documentation { Content = "DataGrid - UnBoundRows API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.SfDataGrid.html#Syncfusion_UI_Xaml_Grid_SfDataGrid_UnBoundRows") });
+            unboundRowDocumentation.Add(new Documentation { Content = "DataGrid - UnBound Rows Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/unbound-rows") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Unbound Row", GroupName = "ROWS", Description = "This sample showcases unbound rows support of SfDataGrid. The SfDataGrid provides support to place the Unbound Row at the top and the bottom of record rows and also have the option to place them above or below the Table summary row.", DemoViewType = typeof(UnBoundRowDemo), Documentations = unboundRowDocumentation });
+
         }
     }
 }
