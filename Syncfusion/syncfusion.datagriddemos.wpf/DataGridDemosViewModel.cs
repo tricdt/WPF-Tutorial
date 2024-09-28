@@ -190,6 +190,10 @@ namespace syncfusion.datagriddemos.wpf
             columnSizerDocumentation.Add(new Documentation { Content = "DataGrid - Column Sizer Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/autosize-columns") });
             this.Demos.Add(new DemoInfo() { SampleName = "Column Sizer", GroupName = "COLUMNS", Description = "This sample showcases the different types of column sizer capabilities in SfDataGrid. The SfDataGrid provides in-built feature for customizing the width of the column based on the data present in the cell by defining the ColumnSizer property. This property has different ColumnSizer options like Auto, AutoWithLastColumnFill, SizeToCells, SizeToHeader, Star and None.", DemoViewType = typeof(ColumnSizerDemo), Documentations = columnSizerDocumentation });
 
+            List<Documentation> cellMergeDocumentation = new List<Documentation>();
+            cellMergeDocumentation.Add(new Documentation { Content = "DataGrid - Merge Cell Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/merge-cells") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Cell Merge", GroupName = "COLUMNS", Description = "This sample showcases the merged cells based on data in SfDataGrid by QueryCoveredRange event.", DemoViewType = typeof(CellMergeDemo), Documentations = cellMergeDocumentation });
+
         }
     }
 }
