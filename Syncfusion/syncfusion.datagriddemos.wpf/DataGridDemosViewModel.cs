@@ -195,6 +195,11 @@ namespace syncfusion.datagriddemos.wpf
             this.Demos.Add(new DemoInfo() { SampleName = "Cell Merge", GroupName = "COLUMNS", Description = "This sample showcases the merged cells based on data in SfDataGrid by QueryCoveredRange event.", DemoViewType = typeof(CellMergeDemo), Documentations = cellMergeDocumentation });
             this.Demos.Add(new DemoInfo() { SampleName = "Auto Cell Merge", GroupName = "COLUMNS", Description = "This sample showcases the Merged cell feature of SfDataGrid.", DemoViewType = typeof(AutoCellMergeDemo) });
 
+            List<Documentation> dataValidationDocumentation = new List<Documentation>();
+            dataValidationDocumentation.Add(new Documentation { Content = "DataGrid - DataValidation API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.SfGridBase.html#Syncfusion_UI_Xaml_Grid_SfGridBase_GridValidationMode") });
+            dataValidationDocumentation.Add(new Documentation { Content = "DataGrid - Data Validation Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/data-validation") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Data Validation", GroupName = "DATA VALIDATION", Description = "This sample showcases the data validation capability in SfDataGrid by implementing IDataErrorInfo interface.", DemoViewType = typeof(DataValidationDemo), Documentations = dataValidationDocumentation });
+
         }
     }
 }
