@@ -133,6 +133,9 @@
     <Compile Update="Views\Rows\UnBoundRowDemo.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\Selections\SelectionDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Resources\Generic.xaml">
@@ -271,6 +274,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Rows\UnBoundRowDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Selections\SelectionDemo.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

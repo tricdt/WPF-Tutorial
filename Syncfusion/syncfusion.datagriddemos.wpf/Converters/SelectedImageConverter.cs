@@ -1,6 +1,7 @@
 
 using System.Globalization;
 using System.Windows.Data;
+using System.Windows.Media.Animation;
 namespace syncfusion.datagriddemos.wpf
 {
     public class SelectedImageConverter : IValueConverter
@@ -25,6 +26,22 @@ namespace syncfusion.datagriddemos.wpf
                 return @"/syncfusion.datagriddemos.wpf;component/Assets/datagrid/Male.png";
             else if (value.ToString() == "2")
                 return @"/syncfusion.datagriddemos.wpf;component/Assets/datagrid/Female.png";
+            else
+            {
+                if (parameter is Storyboard)
+                {
+                    (parameter as Storyboard).Begin();
+                }
+                if (value != null && value is ProductInfo)
+                {
+                    var product = value as ProductInfo;
+                    return @"/syncfusion.demoscommon.wpf;component/Assets/Gadgets/" + product.ProductModel + ".png";
+                }
+                else if (value != null && parameter.ToString() == "Availability" && (bool)value)
+                    return @"/syncfusion.demoscommon.wpf;component/Assets/yes.png";
+                else if (value != null && parameter.ToString() == "Availability")
+                    return @"/syncfusion.demoscommon.wpf;component/Assets/no.png";
+            }
             return null;
         }
 
