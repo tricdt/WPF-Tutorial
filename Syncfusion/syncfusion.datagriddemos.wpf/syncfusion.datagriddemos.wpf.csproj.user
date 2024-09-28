@@ -37,6 +37,9 @@
     <Compile Update="Views\Data Presentation\SummariesDemo.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\Data Validation\CustomValidationDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\Data Validation\DataValidationDemo.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -169,6 +172,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Data Presentation\SummariesDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Data Validation\CustomValidationDemo.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Data Validation\DataValidationDemo.xaml">

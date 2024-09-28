@@ -200,6 +200,10 @@ namespace syncfusion.datagriddemos.wpf
             dataValidationDocumentation.Add(new Documentation { Content = "DataGrid - Data Validation Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/data-validation") });
             this.Demos.Add(new DemoInfo() { SampleName = "Data Validation", GroupName = "DATA VALIDATION", Description = "This sample showcases the data validation capability in SfDataGrid by implementing IDataErrorInfo interface.", DemoViewType = typeof(DataValidationDemo), Documentations = dataValidationDocumentation });
 
+            List<Documentation> customValidationDocumentation = new List<Documentation>();
+            customValidationDocumentation.Add(new Documentation { Content = "DataGrid - Custom Validation Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/data-validation#custom-validation-through-events") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Custom Validation", GroupName = "DATA VALIDATION", Description = "This sample showcases the custom validation capability based on certain conditions in SfDataGrid.", DemoViewType = typeof(CustomValidationDemo), Documentations = customValidationDocumentation });
+
         }
     }
 }
