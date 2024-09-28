@@ -193,6 +193,7 @@ namespace syncfusion.datagriddemos.wpf
             List<Documentation> cellMergeDocumentation = new List<Documentation>();
             cellMergeDocumentation.Add(new Documentation { Content = "DataGrid - Merge Cell Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/merge-cells") });
             this.Demos.Add(new DemoInfo() { SampleName = "Cell Merge", GroupName = "COLUMNS", Description = "This sample showcases the merged cells based on data in SfDataGrid by QueryCoveredRange event.", DemoViewType = typeof(CellMergeDemo), Documentations = cellMergeDocumentation });
+            this.Demos.Add(new DemoInfo() { SampleName = "Auto Cell Merge", GroupName = "COLUMNS", Description = "This sample showcases the Merged cell feature of SfDataGrid.", DemoViewType = typeof(AutoCellMergeDemo) });
 
         }
     }
