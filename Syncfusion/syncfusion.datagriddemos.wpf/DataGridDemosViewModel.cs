@@ -214,6 +214,11 @@ namespace syncfusion.datagriddemos.wpf
             cellSelectionDocumentation.Add(new Documentation { Content = "DataGrid - Cell Selection Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/selection#cell-selection") });
             this.Demos.Add(new DemoInfo() { SampleName = "Cell Selection", GroupName = "SELECTIONS", Description = "This sample showcases the cell selection capability of SfDataGrid. SfDataGrid control provides an interactive support for selecting cells in different mode with smooth and ease manner by SelectionUnit as Cell or Any and NavigationMode should be Cell. SfDataGrid allows you to select more than one cell at a time by using SelectionMode property of SfDataGrid. This property provides options like Single, Multiple, Extended and None.", DemoViewType = typeof(CellSelectionDemo), Documentations = cellSelectionDocumentation });
 
+            List<Documentation> checkboxSelectoColumnDocumentation = new List<Documentation>();
+            checkboxSelectoColumnDocumentation.Add(new Documentation { Content = "DataGrid - GridCheckBoxSelectorColumn API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.GridCheckBoxSelectorColumn.html") });
+            checkboxSelectoColumnDocumentation.Add(new Documentation { Content = "DataGrid - GridCheckBoxSelector Column Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/column-types#gridcheckboxselectorcolumn") });
+            this.Demos.Add(new DemoInfo() { SampleName = "CheckBox Selector Column", GroupName = "SELECTIONS", Description = "This sample showcases the DataGrid with a grid check-box-selector column. It displays check boxes for all the rows to allow users to select or deselect them by clicking on them.", DemoViewType = typeof(CheckBoxSelectorColumnDemo), Documentations = checkboxSelectoColumnDocumentation });
+
         }
     }
 }
