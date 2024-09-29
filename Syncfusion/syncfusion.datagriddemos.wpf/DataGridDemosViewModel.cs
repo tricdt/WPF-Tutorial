@@ -219,6 +219,8 @@ namespace syncfusion.datagriddemos.wpf
             checkboxSelectoColumnDocumentation.Add(new Documentation { Content = "DataGrid - GridCheckBoxSelector Column Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/column-types#gridcheckboxselectorcolumn") });
             this.Demos.Add(new DemoInfo() { SampleName = "CheckBox Selector Column", GroupName = "SELECTIONS", Description = "This sample showcases the DataGrid with a grid check-box-selector column. It displays check boxes for all the rows to allow users to select or deselect them by clicking on them.", DemoViewType = typeof(CheckBoxSelectorColumnDemo), Documentations = checkboxSelectoColumnDocumentation });
 
+            this.Demos.Add(new DemoInfo() { SampleName = "Real time updates", GroupName = "PERFORMANCE", Description = "This sample showcases real time updates capability of SfDataGrid. SfDataGrid has a high performance standard, where you can make the grid to work with large amounts of data with few property settings, without a performance hit. It provides complete support for Virtual Mode, where the data will be loaded only on demand and thus saves the memory consumption and provides quick response. It also handles very high frequency updates and refresh scenarios.", DemoViewType = typeof(PerformanceDemo) });
+
         }
     }
 }
