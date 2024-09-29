@@ -24,6 +24,8 @@ namespace syncfusion.datagriddemos.wpf
         {
             if (this.AssociatedObject.DataContext is StocksViewModel)
                 (this.AssociatedObject.DataContext as StocksViewModel).StartTimer();
+            else
+                (this.AssociatedObject.DataContext as TradingGridViewModel).StartTimer();
 
         }
 
@@ -36,7 +38,8 @@ namespace syncfusion.datagriddemos.wpf
         {
             if (this.AssociatedObject.DataContext is StocksViewModel)
                 (this.AssociatedObject.DataContext as StocksViewModel).StopTimer();
-
+            else
+                (this.AssociatedObject.DataContext as TradingGridViewModel).StopTimer();
         }
 
         /// <summary>

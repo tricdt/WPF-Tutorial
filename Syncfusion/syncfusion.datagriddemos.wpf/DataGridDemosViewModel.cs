@@ -225,6 +225,10 @@ namespace syncfusion.datagriddemos.wpf
             scrollPerformanceDocumentation.Add(new Documentation { Content = "DataGrid - Scroll Performance Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/performance#improving-scrolling-performance") });
             this.Demos.Add(new DemoInfo() { SampleName = "Scroll Performance", GroupName = "PERFORMANCE", Description = "This sample illustrates the loading and scrolling performance of SfDataGrid.", DemoViewType = typeof(ScrollPerformanceDemo), Documentations = scrollPerformanceDocumentation });
 
+            List<Documentation> traderGridDocumentation = new List<Documentation>();
+            traderGridDocumentation.Add(new Documentation { Content = "DataGrid - ScrollMode API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.SfDataGrid.html#Syncfusion_UI_Xaml_Grid_SfDataGrid_ScrollMode") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Trader Grid", GroupName = "PERFORMANCE", Description = "This sample illustrates the frequent updates that occur in random cells across the Grid, while keeping the CPU usage to a minimum in the SfDataGrid.", DemoViewType = typeof(TradingGridDemo), Documentations = traderGridDocumentation });
+
         }
     }
 }
