@@ -19,6 +19,78 @@ namespace syncfusion.datagriddemos.wpf
             }
         }
 
+        #region Public Members
+
+        private double _Average;
+        private int _Count;
+        private int _NumCount;
+        private double _Min;
+        private double _Max;
+        private double _Sum;
+
+        /// <summary>
+        /// Gets or sets the Average value of the cells.
+        /// </summary>
+        /// <value>The Average Value.</value>
+        public double Average
+        {
+            get { return _Average; }
+            set { _Average = value; RaisePropertyChanged("Average"); }
+        }
+
+        /// <summary>
+        /// Gets or sets the Count of the cells.
+        /// </summary>
+        /// <value>The Count.</value>
+        public int Count
+        {
+            get { return _Count; }
+            set { _Count = value; RaisePropertyChanged("Count"); }
+        }
+
+        /// <summary>
+        /// Gets or sets the Numerical Count of the cells.
+        /// </summary>
+        /// <value>The Numerical Count.</value>
+        public int NumCount
+        {
+            get { return _NumCount; }
+            set { _NumCount = value; RaisePropertyChanged("NumCount"); }
+        }
+
+        /// <summary>
+        /// Gets or sets the Minimum value of the cells.
+        /// </summary>
+        /// <value>The Minimum Value.</value>
+        public double Min
+        {
+            get { return _Min; }
+            set { _Min = value; RaisePropertyChanged("Min"); }
+        }
+
+        /// <summary>
+        /// Gets or sets the Maximum value of the cells.
+        /// </summary>
+        /// <value>The Maximum Value.</value>
+        public double Max
+        {
+            get { return _Max; }
+            set { _Max = value; RaisePropertyChanged("Max"); }
+        }
+
+        /// <summary>
+        /// Gets or sets the Sum of the cells.
+        /// </summary>
+        /// <value>The Sum.</value>
+        public double Sum
+        {
+            get { return _Sum; }
+            set { _Sum = value; RaisePropertyChanged("Sum"); }
+        }
+
+        #endregion
+
+
         public ObservableCollection<SalesByDate> GetSalesInfo()
         {
             var sales = new ObservableCollection<SalesByDate>();

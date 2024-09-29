@@ -210,6 +210,10 @@ namespace syncfusion.datagriddemos.wpf
             rowSelectionDocumentation.Add(new Documentation { Content = "DataGrid - Row Selection Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/selection#row-selection") });
             this.Demos.Add(new DemoInfo() { SampleName = "Row Selection", GroupName = "SELECTIONS", Description = "This sample showcases the cell selection capability of SfDataGrid. SfDataGrid control provides an interactive support for selecting cells in different mode with smooth and ease manner by SelectionUnit as Cell or Any and NavigationMode should be Cell. SfDataGrid allows you to select more than one cell at a time by using SelectionMode property of SfDataGrid. This property provides options like Single, Multiple, Extended and None.", DemoViewType = typeof(SelectionDemo), Documentations = rowSelectionDocumentation });
 
+            List<Documentation> cellSelectionDocumentation = new List<Documentation>();
+            cellSelectionDocumentation.Add(new Documentation { Content = "DataGrid - Cell Selection Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/selection#cell-selection") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Cell Selection", GroupName = "SELECTIONS", Description = "This sample showcases the cell selection capability of SfDataGrid. SfDataGrid control provides an interactive support for selecting cells in different mode with smooth and ease manner by SelectionUnit as Cell or Any and NavigationMode should be Cell. SfDataGrid allows you to select more than one cell at a time by using SelectionMode property of SfDataGrid. This property provides options like Single, Multiple, Extended and None.", DemoViewType = typeof(CellSelectionDemo), Documentations = cellSelectionDocumentation });
+
         }
     }
 }
