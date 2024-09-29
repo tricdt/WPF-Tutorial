@@ -124,6 +124,9 @@
     <Compile Update="Views\Performance\PerformanceDemo.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\Performance\ScrollPerformanceDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\Rows\AddNewRowDemo.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -274,6 +277,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Performance\PerformanceDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Performance\ScrollPerformanceDemo.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Rows\AddNewRowDemo.xaml">

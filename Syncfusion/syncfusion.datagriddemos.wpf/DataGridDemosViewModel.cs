@@ -221,6 +221,10 @@ namespace syncfusion.datagriddemos.wpf
 
             this.Demos.Add(new DemoInfo() { SampleName = "Real time updates", GroupName = "PERFORMANCE", Description = "This sample showcases real time updates capability of SfDataGrid. SfDataGrid has a high performance standard, where you can make the grid to work with large amounts of data with few property settings, without a performance hit. It provides complete support for Virtual Mode, where the data will be loaded only on demand and thus saves the memory consumption and provides quick response. It also handles very high frequency updates and refresh scenarios.", DemoViewType = typeof(PerformanceDemo) });
 
+            List<Documentation> scrollPerformanceDocumentation = new List<Documentation>();
+            scrollPerformanceDocumentation.Add(new Documentation { Content = "DataGrid - Scroll Performance Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/performance#improving-scrolling-performance") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Scroll Performance", GroupName = "PERFORMANCE", Description = "This sample illustrates the loading and scrolling performance of SfDataGrid.", DemoViewType = typeof(ScrollPerformanceDemo), Documentations = scrollPerformanceDocumentation });
+
         }
     }
 }
