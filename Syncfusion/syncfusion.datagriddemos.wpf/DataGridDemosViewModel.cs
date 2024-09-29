@@ -229,6 +229,11 @@ namespace syncfusion.datagriddemos.wpf
             traderGridDocumentation.Add(new Documentation { Content = "DataGrid - ScrollMode API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.SfDataGrid.html#Syncfusion_UI_Xaml_Grid_SfDataGrid_ScrollMode") });
             this.Demos.Add(new DemoInfo() { SampleName = "Trader Grid", GroupName = "PERFORMANCE", Description = "This sample illustrates the frequent updates that occur in random cells across the Grid, while keeping the CPU usage to a minimum in the SfDataGrid.", DemoViewType = typeof(TradingGridDemo), Documentations = traderGridDocumentation });
 
+            List<Documentation> alternateRowStyleDocumentation = new List<Documentation>();
+            alternateRowStyleDocumentation.Add(new Documentation { Content = "DataGrid - AlternateRowStyle API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.SfDataGrid.html#Syncfusion_UI_Xaml_Grid_SfDataGrid_AlternatingRowStyle") });
+            alternateRowStyleDocumentation.Add(new Documentation { Content = "DataGrid - Alternate RowStyle Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/styles-and-templates#alternating-row-style") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Alternate Row Style", GroupName = "APPEARANCE", Description = "This sample showcases the alternate row style capability of SfDataGrid. By default, the style is applied for every alternative second row and change it by using AlternationCount property.", DemoViewType = typeof(AlternateRowStyleDemo), ThemeMode = ThemeMode.None, Documentations = alternateRowStyleDocumentation });
+
         }
     }
 }

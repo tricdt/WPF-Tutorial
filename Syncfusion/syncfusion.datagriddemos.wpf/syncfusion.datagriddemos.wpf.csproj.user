@@ -7,6 +7,9 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Views\Appearance\AlternateRowStyleDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\Columns\AutoCellMergeDemo.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -160,6 +163,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Appearance\AlternateRowStyleDemo.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Columns\AutoCellMergeDemo.xaml">
