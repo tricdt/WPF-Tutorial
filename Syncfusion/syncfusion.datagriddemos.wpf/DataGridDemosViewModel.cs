@@ -244,6 +244,10 @@ namespace syncfusion.datagriddemos.wpf
             freezePanesDocumentation.Add(new Documentation { Content = "DataGrid - FreezePanes Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/rows#freeze-panes") });
             this.Demos.Add(new DemoInfo() { SampleName = "Freeze Panes", GroupName = "APPEARANCE", Description = "This sample showcases the freeze panes capability of SfDataGrid. The SfDataGrid provides support to freeze rows and columns at the top and also at the bottom similar to Excel Freeze Panes with the help of FrozenRowCount, FooterRowsCount, FrozenColumnCount and FooterColumnCount.", DemoViewType = typeof(FreezePanesDemo), Documentations = freezePanesDocumentation });
 
+            List<Documentation> conditionalCellStyleDocumentation = new List<Documentation>();
+            conditionalCellStyleDocumentation.Add(new Documentation { Content = "DataGrid - Conditional CellStyle Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/conditional-styling#cell-style") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Conditional Cell Style", GroupName = "APPEARANCE", Description = "This sample showcases the conditional formatting capability of SfDataGrid. The SfDataGrid control allows you to format the styles of cells and rows based on certain conditions by using Converter and StyleSelector.", DemoViewType = typeof(ConditionalFormattingDemo), ThemeMode = ThemeMode.None, Documentations = conditionalCellStyleDocumentation });
+
         }
     }
 }
