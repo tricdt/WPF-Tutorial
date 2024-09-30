@@ -10,6 +10,9 @@
     <Compile Update="Views\Appearance\AlternateRowStyleDemo.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\Appearance\FreezePanesDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\Appearance\StylingDemo.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -169,6 +172,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Appearance\AlternateRowStyleDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Appearance\FreezePanesDemo.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Appearance\StylingDemo.xaml">

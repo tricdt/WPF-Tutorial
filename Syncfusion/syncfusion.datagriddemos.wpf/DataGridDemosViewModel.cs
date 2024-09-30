@@ -240,6 +240,10 @@ namespace syncfusion.datagriddemos.wpf
             stylingDocumentation.Add(new Documentation { Content = "DataGrid - Styling Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/styles-and-templates") });
             this.Demos.Add(new DemoInfo() { SampleName = "Styling", GroupName = "APPEARANCE", Description = "This sample showcases the styling capability of SfDataGrid.", DemoViewType = typeof(StylingDemo), ThemeMode = ThemeMode.None, Documentations = stylingDocumentation });
 
+            List<Documentation> freezePanesDocumentation = new List<Documentation>();
+            freezePanesDocumentation.Add(new Documentation { Content = "DataGrid - FreezePanes Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/rows#freeze-panes") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Freeze Panes", GroupName = "APPEARANCE", Description = "This sample showcases the freeze panes capability of SfDataGrid. The SfDataGrid provides support to freeze rows and columns at the top and also at the bottom similar to Excel Freeze Panes with the help of FrozenRowCount, FooterRowsCount, FrozenColumnCount and FooterColumnCount.", DemoViewType = typeof(FreezePanesDemo), Documentations = freezePanesDocumentation });
+
         }
     }
 }
