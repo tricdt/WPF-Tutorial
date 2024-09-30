@@ -234,6 +234,12 @@ namespace syncfusion.datagriddemos.wpf
             alternateRowStyleDocumentation.Add(new Documentation { Content = "DataGrid - Alternate RowStyle Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/styles-and-templates#alternating-row-style") });
             this.Demos.Add(new DemoInfo() { SampleName = "Alternate Row Style", GroupName = "APPEARANCE", Description = "This sample showcases the alternate row style capability of SfDataGrid. By default, the style is applied for every alternative second row and change it by using AlternationCount property.", DemoViewType = typeof(AlternateRowStyleDemo), ThemeMode = ThemeMode.None, Documentations = alternateRowStyleDocumentation });
 
+            List<Documentation> stylingDocumentation = new List<Documentation>();
+            stylingDocumentation.Add(new Documentation { Content = "DataGrid - GridLinesVisibility API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.SfGridBase.html#Syncfusion_UI_Xaml_Grid_SfGridBase_GridLinesVisibility") });
+            stylingDocumentation.Add(new Documentation { Content = "DataGrid - HeaderLineVisibility API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.SfGridBase.html#Syncfusion_UI_Xaml_Grid_SfGridBase_HeaderLinesVisibility") });
+            stylingDocumentation.Add(new Documentation { Content = "DataGrid - Styling Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/styles-and-templates") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Styling", GroupName = "APPEARANCE", Description = "This sample showcases the styling capability of SfDataGrid.", DemoViewType = typeof(StylingDemo), ThemeMode = ThemeMode.None, Documentations = stylingDocumentation });
+
         }
     }
 }
