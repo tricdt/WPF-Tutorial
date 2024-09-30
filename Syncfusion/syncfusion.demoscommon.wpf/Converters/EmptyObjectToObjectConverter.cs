@@ -55,7 +55,6 @@ namespace syncfusion.demoscommon.wpf
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
             var isEmpty = CheckValueIsEmpty(value);
-
             if (TypeConverterHelper.ChanngeTypeToBool(parameter))
             {
                 isEmpty = !isEmpty;

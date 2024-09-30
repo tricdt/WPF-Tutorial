@@ -1,5 +1,4 @@
 ﻿using syncfusion.demoscommon.wpf;
-
 namespace syncfusion.datagriddemos.wpf
 {
     /// <summary>
@@ -10,6 +9,7 @@ namespace syncfusion.datagriddemos.wpf
         public StylingDemo()
         {
             InitializeComponent();
+            //Syncfusion.Windows.Tools.Controls.SortDirectionToVisibilityConverter
         }
         protected override void Dispose(bool disposing)
         {
