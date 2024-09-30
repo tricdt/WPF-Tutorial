@@ -248,6 +248,10 @@ namespace syncfusion.datagriddemos.wpf
             conditionalCellStyleDocumentation.Add(new Documentation { Content = "DataGrid - Conditional CellStyle Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/conditional-styling#cell-style") });
             this.Demos.Add(new DemoInfo() { SampleName = "Conditional Cell Style", GroupName = "APPEARANCE", Description = "This sample showcases the conditional formatting capability of SfDataGrid. The SfDataGrid control allows you to format the styles of cells and rows based on certain conditions by using Converter and StyleSelector.", DemoViewType = typeof(ConditionalFormattingDemo), ThemeMode = ThemeMode.None, Documentations = conditionalCellStyleDocumentation });
 
+            List<Documentation> cellAnimationDocumentation = new List<Documentation>();
+            cellAnimationDocumentation.Add(new Documentation { Content = "DataGrid - Cell Animation Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/styles-and-templates#animating-the-data-cell-when-property-changes") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Cell Animation", GroupName = "APPEARANCE", Description = "This sample showcases the cell animation capability to animate the cells in SfDataGrid. SfDataGrid provides support to animate the cell when the underlying property gets changed by using the behaviors with the help of ColorAnimation.", DemoViewType = typeof(CellAnimationDemo), ThemeMode = ThemeMode.None, Documentations = cellAnimationDocumentation });
+
         }
     }
 }
