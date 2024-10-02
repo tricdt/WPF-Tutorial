@@ -118,6 +118,9 @@
     <Compile Update="Views\GettingStarted\GettingStarted.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\Interactive Features\ContextMenuDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\Master-Detail\ConditionalFormattingDetailsViewDataGridDemo.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -292,6 +295,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\GettingStarted\GettingStarted.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Interactive Features\ContextMenuDemo.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Master-Detail\ConditionalFormattingDetailsViewDataGridDemo.xaml">

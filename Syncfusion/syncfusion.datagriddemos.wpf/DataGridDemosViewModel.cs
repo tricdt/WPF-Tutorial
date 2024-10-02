@@ -256,6 +256,10 @@ namespace syncfusion.datagriddemos.wpf
             conditionalRowStylesDocumentation.Add(new Documentation { Content = "DataGrid - Conditional RowStyle Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/conditional-styling#row-style") });
             this.Demos.Add(new DemoInfo() { SampleName = "Conditional Row Style", GroupName = "APPEARANCE", Description = "This sample showcases the row style customization in SfDataGrid by StyleSelector.", DemoViewType = typeof(RowStyleDemo), ThemeMode = ThemeMode.None, Documentations = conditionalRowStylesDocumentation });
 
+            List<Documentation> contextMenuDocumentation = new List<Documentation>();
+            contextMenuDocumentation.Add(new Documentation { Content = "DataGrid - Context Menu Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/context-menu") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Context Menu", GroupName = "INTERACTIVE FEATURES", Description = "This sample showcases the context menu capabilities of SfDataGrid. ContextMenu in SfDataGrid is entirely customizable menu for the extensible functionalities of the Grid. ContextMenu is enabled for various parts of the Grid with the appropriate APIs. SfDataGrid has a set of APIs that allows access to the context menu in various parts of the Grid.", DemoViewType = typeof(ContextMenuDemo), ThemeMode = ThemeMode.None, Documentations = contextMenuDocumentation });
+
         }
     }
 }
