@@ -118,6 +118,9 @@
     <Compile Update="Views\GettingStarted\GettingStarted.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\Interactive Features\ColumnChooserDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\Interactive Features\ContextMenuDemo.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -297,7 +300,13 @@
     <Page Update="Views\GettingStarted\GettingStarted.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Views\Interactive Features\ColumnChooserDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Views\Interactive Features\ContextMenuDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Interactive Features\CustomColumnChooser.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Master-Detail\ConditionalFormattingDetailsViewDataGridDemo.xaml">

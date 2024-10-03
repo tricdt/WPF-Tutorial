@@ -260,6 +260,10 @@ namespace syncfusion.datagriddemos.wpf
             contextMenuDocumentation.Add(new Documentation { Content = "DataGrid - Context Menu Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/context-menu") });
             this.Demos.Add(new DemoInfo() { SampleName = "Context Menu", GroupName = "INTERACTIVE FEATURES", Description = "This sample showcases the context menu capabilities of SfDataGrid. ContextMenu in SfDataGrid is entirely customizable menu for the extensible functionalities of the Grid. ContextMenu is enabled for various parts of the Grid with the appropriate APIs. SfDataGrid has a set of APIs that allows access to the context menu in various parts of the Grid.", DemoViewType = typeof(ContextMenuDemo), ThemeMode = ThemeMode.None, Documentations = contextMenuDocumentation });
 
+            List<Documentation> columnChooserDocumentation = new List<Documentation>();
+            columnChooserDocumentation.Add(new Documentation { Content = "DataGrid - Column Chooser Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/interactive-features#column-chooser") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Column Chooser", GroupName = "INTERACTIVE FEATURES", Description = "This sample showcases the column chooser capability of SfDatagrid. Column Chooser allows you to add or remove columns dynamically from the current Grid view using drag-and-drop operations.", DemoViewType = typeof(ColumnChooserDemo), DemoLauchMode = DemoLauchMode.Window, ThemeMode = ThemeMode.None, Documentations = columnChooserDocumentation });
+
         }
     }
 }

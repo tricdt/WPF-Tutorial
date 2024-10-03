@@ -25,6 +25,9 @@
     <Compile Update="Views\DemoListView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\ErrorWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\ProductsListView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -55,6 +58,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\DemoWindowStyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\ErrorWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\ProductDemosWindow.xaml">

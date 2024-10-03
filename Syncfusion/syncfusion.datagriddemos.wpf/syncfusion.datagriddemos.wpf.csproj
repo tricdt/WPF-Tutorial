@@ -68,6 +68,9 @@
     <Reference Include="Syncfusion.Themes.Windows11Light.WPF">
       <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\WPF\26.1.35\precompiledassemblies\net6.0\Syncfusion.Themes.Windows11Light.WPF.dll</HintPath>
     </Reference>
+    <Reference Include="Syncfusion.Tools.Wpf">
+      <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\WPF\26.1.35\precompiledassemblies\net6.0\Syncfusion.Tools.WPF.dll</HintPath>
+    </Reference>
     <Reference Include="Syncfusion.XlsIO.Base">
       <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\WPF\26.1.35\Assemblies\4.6.2\Syncfusion.XlsIO.Base.dll</HintPath>
     </Reference>

@@ -11,6 +11,10 @@ namespace syncfusion.datagriddemos.wpf
             this._ordersDetails = GetOrdersDetails(50);
             this.suppliers = PopulateDataForShip(40);
         }
+        public OrderInfoViewModel(ObservableCollection<OrderInfo> totalColumns)
+        {
+            ColumnCollection = totalColumns;
+        }
         static int countrycount = 0;
         static int discountcount = 2;
         Random r = new Random();
@@ -67,8 +71,71 @@ namespace syncfusion.datagriddemos.wpf
             get { return _comboBoxItemsSource; }
             set { _comboBoxItemsSource = value; }
         }
+        public ObservableCollection<OrderInfo> ColumnCollection
+        {
+            get;
+            set;
+        }
+        private bool showColumnChooser = true;
 
+        public bool ShowColumnChooser
+        {
+            get
+            {
+                return showColumnChooser;
+            }
+            set
+            {
+                showColumnChooser = value;
+                RaisePropertyChanged("ShowColumnChooser");
+            }
+        }
 
+        private bool useDefaultColumnChooser = true;
+
+        public bool UseDefaultColumnChooser
+        {
+            get
+            {
+                return useDefaultColumnChooser;
+            }
+            set
+            {
+                useDefaultColumnChooser = value;
+                RaisePropertyChanged("UseDefaultColumnChooser");
+            }
+        }
+
+        private bool useCustomColumnChooser;
+
+        public bool UseCustomColumnChooser
+        {
+            get
+            {
+                return useCustomColumnChooser;
+            }
+            set
+            {
+                useCustomColumnChooser = value;
+                RaisePropertyChanged("UseCustomColumnChooser");
+            }
+        }
+
+        public DelegateCommand<object> _ColumnChooserCommand;
+
+        /// <summary>
+        /// Gets the column chooser command.
+        /// </summary>
+        /// <value>The column chooser command.</value>
+        public DelegateCommand<object> ColumnChooserCommand
+        {
+            get { return _ColumnChooserCommand; }
+            set
+            {
+                _ColumnChooserCommand = value;
+                RaisePropertyChanged("ColumnChooserCommand");
+            }
+        }
         public Dictionary<string, string[]> ShipCity = new Dictionary<string, string[]>();
         public ObservableCollection<OrderInfo> GetOrdersDetails(int count)
         {

@@ -422,7 +422,6 @@ namespace syncfusion.demoscommon.wpf
                 var demoLauncherView = new DemoLauncherView(demoInfo.DemoViewType) { DataContext = this };
                 SfSkinManager.SetTheme(demoLauncherView, new Theme() { ThemeName = SelectedThemeName });
                 DemosNavigationService.DemoNavigationService.Navigate(demoLauncherView);
-
             }
             else
             {
