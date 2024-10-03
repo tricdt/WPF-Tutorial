@@ -270,6 +270,11 @@ namespace syncfusion.datagriddemos.wpf
             clipBoardOperationDocumentation.Add(new Documentation { Content = "DataGrid - ClipBoard Operation Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/clipboard-operations") });
             this.Demos.Add(new DemoInfo() { SampleName = "Clipboard Operation", GroupName = "INTERACTIVE FEATURES", Description = "This sample showcases the clipboard operation capabilities of SfDataGrid. The SfDataGrid, provides an interactive support to perform cut, copy and paste operations by using GridCopyOption and GridPasteOption properties. The GridCopyOption provides options like None, CopyData, CutData, IncludeHeaders, and IncludeFormat and the GridPasteOption provides options like None, PasteData, IncludeFirstLine.", DemoViewType = typeof(CutCopyPasteDemo), Documentations = clipBoardOperationDocumentation });
 
+            List<Documentation> dragAndDropDocumentation = new List<Documentation>();
+            dragAndDropDocumentation.Add(new Documentation { Content = "DataGrid - AllowDraggingRows API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.SfDataGrid.html#Syncfusion_UI_Xaml_Grid_SfDataGrid_AllowDraggingRows") });
+            dragAndDropDocumentation.Add(new Documentation { Content = "DataGrid - Drag and Drop Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/drag-and-drop") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Drag and Drop", GroupName = "INTERACTIVE FEATURES", Description = "This sample showcases the built-in row drag and drop capability of SfDataGrid.", DemoViewType = typeof(DragAndDropDemo), Documentations = dragAndDropDocumentation });
+
         }
     }
 }
