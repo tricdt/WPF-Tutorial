@@ -264,6 +264,12 @@ namespace syncfusion.datagriddemos.wpf
             columnChooserDocumentation.Add(new Documentation { Content = "DataGrid - Column Chooser Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/interactive-features#column-chooser") });
             this.Demos.Add(new DemoInfo() { SampleName = "Column Chooser", GroupName = "INTERACTIVE FEATURES", Description = "This sample showcases the column chooser capability of SfDatagrid. Column Chooser allows you to add or remove columns dynamically from the current Grid view using drag-and-drop operations.", DemoViewType = typeof(ColumnChooserDemo), DemoLauchMode = DemoLauchMode.Window, ThemeMode = ThemeMode.None, Documentations = columnChooserDocumentation });
 
+            List<Documentation> clipBoardOperationDocumentation = new List<Documentation>();
+            clipBoardOperationDocumentation.Add(new Documentation { Content = "DataGrid - GridCopyOption API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.SfGridBase.html#Syncfusion_UI_Xaml_Grid_SfGridBase_GridCopyOption") });
+            clipBoardOperationDocumentation.Add(new Documentation { Content = "DataGrid - GridPasteOption API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.SfGridBase.html#Syncfusion_UI_Xaml_Grid_SfGridBase_GridPasteOption") });
+            clipBoardOperationDocumentation.Add(new Documentation { Content = "DataGrid - ClipBoard Operation Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/clipboard-operations") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Clipboard Operation", GroupName = "INTERACTIVE FEATURES", Description = "This sample showcases the clipboard operation capabilities of SfDataGrid. The SfDataGrid, provides an interactive support to perform cut, copy and paste operations by using GridCopyOption and GridPasteOption properties. The GridCopyOption provides options like None, CopyData, CutData, IncludeHeaders, and IncludeFormat and the GridPasteOption provides options like None, PasteData, IncludeFirstLine.", DemoViewType = typeof(CutCopyPasteDemo), Documentations = clipBoardOperationDocumentation });
+
         }
     }
 }

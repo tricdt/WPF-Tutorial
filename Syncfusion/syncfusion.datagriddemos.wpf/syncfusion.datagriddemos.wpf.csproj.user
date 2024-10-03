@@ -124,6 +124,9 @@
     <Compile Update="Views\Interactive Features\ContextMenuDemo.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\Interactive Features\CutCopyPasteDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\Master-Detail\ConditionalFormattingDetailsViewDataGridDemo.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -307,6 +310,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Interactive Features\CustomColumnChooser.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Interactive Features\CutCopyPasteDemo.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Master-Detail\ConditionalFormattingDetailsViewDataGridDemo.xaml">
