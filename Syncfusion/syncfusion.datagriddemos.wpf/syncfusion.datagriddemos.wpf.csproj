@@ -77,8 +77,8 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\datagrid\Female.png" />
-    <Resource Include="Assets\datagrid\Footer.jpg" />
-    <Resource Include="Assets\datagrid\Header.jpg" />
+    <EmbeddedResource Include="Assets\datagrid\Footer.jpg" />
+    <EmbeddedResource Include="Assets\datagrid\Header.jpg" />
     <Resource Include="Assets\datagrid\icon_add.png" />
     <Resource Include="Assets\datagrid\icon_percentage.png" />
     <Resource Include="Assets\datagrid\icon_sum.png" />

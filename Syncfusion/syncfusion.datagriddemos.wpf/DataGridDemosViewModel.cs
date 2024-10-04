@@ -286,6 +286,11 @@ namespace syncfusion.datagriddemos.wpf
             excelExportingDocumentation.Add(new Documentation { Content = "DataGrid - ExportToExcel Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/export-to-excel") });
             this.Demos.Add(new DemoInfo() { SampleName = "Excel Exporting", GroupName = "EXPORT & PRINT", Description = "This sample showcases the excel exporting capability of SfDataGrid. The SfGridConverter assembly helps to provide support for exporting data from a SfDataGrid to an Excel spreadsheet. Our XlsIO libraries are used to support the conversion of the SfDataGrid contents to Excel. It also supports to export the selected ranges of SfDataGrid content to Excel.", DemoViewType = typeof(ExportingDemo), Documentations = excelExportingDocumentation });
 
+            List<Documentation> pdfExportingDocumentation = new List<Documentation>();
+            pdfExportingDocumentation.Add(new Documentation { Content = "DataGrid - ExportToPDF API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.Converter.GridPdfExportExtension.html#Syncfusion_UI_Xaml_Grid_Converter_GridPdfExportExtension_ExportToPdf_Syncfusion_UI_Xaml_Grid_SfDataGrid_") });
+            pdfExportingDocumentation.Add(new Documentation { Content = "DataGrid - ExportToPDF Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/export-to-pdf") });
+            this.Demos.Add(new DemoInfo() { SampleName = "PDF Exporting", GroupName = "EXPORT & PRINT", Description = "This sample showcases the PDF exporting capability of SfDataGrid. The SfGridConverter assembly helps to provide support for exporting data from a SfDataGrid to a PDF file. Our Pdf.Base libraries are used to support the conversion of the SfDataGrid contents to PDF. The exporting to PDF provides the options like Auto Column Width, Auto Row Height, Export Groups, Export Group Summaries, Export Table Summaries, Repeat Headers, Fit All Columns in one page and export all to pdf, export selected items to PDF.", DemoViewType = typeof(PdfExportingDemo), Documentations = pdfExportingDocumentation });
+
         }
     }
 }
