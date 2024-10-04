@@ -281,6 +281,11 @@ namespace syncfusion.datagriddemos.wpf
             serializationDocumentation.Add(new Documentation { Content = "DataGrid - Serialize and Deserialize Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/serialization-and-deserialization") });
             this.Demos.Add(new DemoInfo() { SampleName = "Serialization", GroupName = "SERIALIZATION", Description = "This sample showcases the serialization and deserialization capability of SfDataGrid. By customizing SerializationController, you can serialize and deserialize derived DataGrid and custom column also.", DemoViewType = typeof(SerializationDemo), ThemeMode = ThemeMode.None, Documentations = serializationDocumentation });
 
+            List<Documentation> excelExportingDocumentation = new List<Documentation>();
+            excelExportingDocumentation.Add(new Documentation { Content = "DataGrid - ExportToExcel API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.Converter.GridExcelExportExtension.html#Syncfusion_UI_Xaml_Grid_Converter_GridExcelExportExtension_ExportToExcel_Syncfusion_UI_Xaml_Grid_SfDataGrid_Syncfusion_Data_ICollectionViewAdv_Syncfusion_UI_Xaml_Grid_Converter_ExcelExportingOptions_") });
+            excelExportingDocumentation.Add(new Documentation { Content = "DataGrid - ExportToExcel Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/export-to-excel") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Excel Exporting", GroupName = "EXPORT & PRINT", Description = "This sample showcases the excel exporting capability of SfDataGrid. The SfGridConverter assembly helps to provide support for exporting data from a SfDataGrid to an Excel spreadsheet. Our XlsIO libraries are used to support the conversion of the SfDataGrid contents to Excel. It also supports to export the selected ranges of SfDataGrid content to Excel.", DemoViewType = typeof(ExportingDemo), Documentations = excelExportingDocumentation });
+
         }
     }
 }
