@@ -275,6 +275,12 @@ namespace syncfusion.datagriddemos.wpf
             dragAndDropDocumentation.Add(new Documentation { Content = "DataGrid - Drag and Drop Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/drag-and-drop") });
             this.Demos.Add(new DemoInfo() { SampleName = "Drag and Drop", GroupName = "INTERACTIVE FEATURES", Description = "This sample showcases the built-in row drag and drop capability of SfDataGrid.", DemoViewType = typeof(DragAndDropDemo), Documentations = dragAndDropDocumentation });
 
+            List<Documentation> serializationDocumentation = new List<Documentation>();
+            serializationDocumentation.Add(new Documentation { Content = "DataGrid - Serialize API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.SfDataGrid.html#Syncfusion_UI_Xaml_Grid_SfDataGrid_Serialize_System_IO_Stream_") });
+            serializationDocumentation.Add(new Documentation { Content = "DataGrid - Deserialize API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.SfDataGrid.html#Syncfusion_UI_Xaml_Grid_SfDataGrid_Deserialize_System_IO_Stream_") });
+            serializationDocumentation.Add(new Documentation { Content = "DataGrid - Serialize and Deserialize Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/serialization-and-deserialization") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Serialization", GroupName = "SERIALIZATION", Description = "This sample showcases the serialization and deserialization capability of SfDataGrid. By customizing SerializationController, you can serialize and deserialize derived DataGrid and custom column also.", DemoViewType = typeof(SerializationDemo), ThemeMode = ThemeMode.None, Documentations = serializationDocumentation });
+
         }
     }
 }
