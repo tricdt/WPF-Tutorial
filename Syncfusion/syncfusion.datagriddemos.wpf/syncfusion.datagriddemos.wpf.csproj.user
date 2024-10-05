@@ -166,6 +166,15 @@
     <Compile Update="Views\Performance\TradingGridDemo.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\Printing\CustomPrintingDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Printing\PreviewWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Printing\PrintingDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\Rows\AddNewRowDemo.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -367,6 +376,15 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Performance\TradingGridDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Printing\CustomPrintingDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Printing\PreviewWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Printing\PrintingDemo.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Rows\AddNewRowDemo.xaml">

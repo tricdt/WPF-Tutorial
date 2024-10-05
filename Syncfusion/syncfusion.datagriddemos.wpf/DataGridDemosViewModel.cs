@@ -291,6 +291,17 @@ namespace syncfusion.datagriddemos.wpf
             pdfExportingDocumentation.Add(new Documentation { Content = "DataGrid - ExportToPDF Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/export-to-pdf") });
             this.Demos.Add(new DemoInfo() { SampleName = "PDF Exporting", GroupName = "EXPORT & PRINT", Description = "This sample showcases the PDF exporting capability of SfDataGrid. The SfGridConverter assembly helps to provide support for exporting data from a SfDataGrid to a PDF file. Our Pdf.Base libraries are used to support the conversion of the SfDataGrid contents to PDF. The exporting to PDF provides the options like Auto Column Width, Auto Row Height, Export Groups, Export Group Summaries, Export Table Summaries, Repeat Headers, Fit All Columns in one page and export all to pdf, export selected items to PDF.", DemoViewType = typeof(PdfExportingDemo), Documentations = pdfExportingDocumentation });
 
+            List<Documentation> printingDocumentation = new List<Documentation>();
+            printingDocumentation.Add(new Documentation { Content = "DataGrid - Print API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.SfDataGrid.html#Syncfusion_UI_Xaml_Grid_SfDataGrid_Print") });
+            printingDocumentation.Add(new Documentation { Content = "DataGrid - ShowPrintPreview API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.SfDataGrid.html#Syncfusion_UI_Xaml_Grid_SfDataGrid_ShowPrintPreview") });
+            printingDocumentation.Add(new Documentation { Content = "DataGrid - Printing Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/printing") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Printing", GroupName = "EXPORT & PRINT", Description = "This sample showcases the printing capabilities of SfDataGrid. The SfDataGrid control allows you to print the data displayed in the DataGrid. The GridPrintManager of SfDataGrid is designed to support different orientations, sizes, margins, etc. you can change print settings using the print settings property of SfDataGrid.", DemoViewType = typeof(PrintingDemo), Documentations = printingDocumentation });
+
+            List<Documentation> printingCustomizationDocumentation = new List<Documentation>();
+            printingCustomizationDocumentation.Add(new Documentation { Content = "DataGrid - GridPrintManager API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.GridPrintManager.html") });
+            printingCustomizationDocumentation.Add(new Documentation { Content = "DataGrid - Printing Customization Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/printing#printing-customization") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Printing Customization", GroupName = "EXPORT & PRINT", Description = "This sample showcases the custom printing capabilities of SfDataGrid. SfDataGrid provide options to customize the content while printing by CustomPrintManager. This sample demonstrates the CustomPrintManager support to meet the required level of customization.", DemoViewType = typeof(CustomPrintingDemo), Documentations = printingCustomizationDocumentation });
+
         }
     }
 }
