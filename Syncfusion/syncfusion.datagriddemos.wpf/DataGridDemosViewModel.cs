@@ -302,6 +302,10 @@ namespace syncfusion.datagriddemos.wpf
             printingCustomizationDocumentation.Add(new Documentation { Content = "DataGrid - Printing Customization Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/printing#printing-customization") });
             this.Demos.Add(new DemoInfo() { SampleName = "Printing Customization", GroupName = "EXPORT & PRINT", Description = "This sample showcases the custom printing capabilities of SfDataGrid. SfDataGrid provide options to customize the content while printing by CustomPrintManager. This sample demonstrates the CustomPrintManager support to meet the required level of customization.", DemoViewType = typeof(CustomPrintingDemo), Documentations = printingCustomizationDocumentation });
 
+            List<Documentation> localizationDocumentation = new List<Documentation>();
+            localizationDocumentation.Add(new Documentation { Content = "DataGrid - Localization Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/datagrid/localization") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Localization", GroupName = "LOCALIZATION", Description = "This sample showcases the localization capability of SfDataGrid. Localization is the process of making your application multi-lingual, by formatting content according to cultures.", DemoViewType = typeof(DataGridLocalizationDemo), Documentations = localizationDocumentation });
+
         }
     }
 }

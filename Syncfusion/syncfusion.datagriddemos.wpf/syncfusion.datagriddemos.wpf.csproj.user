@@ -136,6 +136,9 @@
     <Compile Update="Views\Interactive Features\DragAndDropDemo.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\Localization\DataGridLocalizationDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\Master-Detail\ConditionalFormattingDetailsViewDataGridDemo.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -346,6 +349,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Interactive Features\DragAndDropDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Localization\DataGridLocalizationDemo.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Master-Detail\ConditionalFormattingDetailsViewDataGridDemo.xaml">

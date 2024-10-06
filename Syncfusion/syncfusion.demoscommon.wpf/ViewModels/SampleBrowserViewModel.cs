@@ -17,6 +17,7 @@ namespace syncfusion.demoscommon.wpf
     {
         public Action ThemeChanged;
         public static string DefaultThemeName = "Windows11Light";
+        public static System.Globalization.CultureInfo AppCulture;
         private bool isShowCaseDemoBusy = false;
         /// <summary>
         /// Property to store busy status of sample browser while launch the show case demo.
@@ -893,6 +894,7 @@ namespace syncfusion.demoscommon.wpf
         public DemoBrowserViewModel()
         {
             clickCommand = new DelegateCommand<object>(OnClicked);
+            AppCulture = System.Threading.Thread.CurrentThread.CurrentUICulture;
             ProductDemos = GetDemosDetails();
             WhatsNewDemos = PopulateWhatsNewDemos();
             PopulateWhatsNewDemos();
