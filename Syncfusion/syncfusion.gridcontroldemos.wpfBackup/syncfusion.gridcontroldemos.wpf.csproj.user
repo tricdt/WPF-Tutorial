@@ -7,12 +7,12 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Product ShowCase\ExcelLikeUi\Views\ExcelLikeUI.xaml.cs">
+    <Compile Update="Views\Product ShowCase\ExcelLikeUI.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="Product ShowCase\ExcelLikeUi\Views\ExcelLikeUI.xaml">
+    <Page Update="Views\Product ShowCase\ExcelLikeUI.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
