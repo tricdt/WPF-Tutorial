@@ -33,6 +33,7 @@ namespace syncfusion.gridcontroldemos.wpf
             List<Documentation> excelLikeUIDocumentation = new List<Documentation>();
             excelLikeUIDocumentation.Add(new Documentation { Content = "GridControl - Excel Like UI Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/real-time-applications#excel-like-ui-applications") });
             this.Demos.Add(new DemoInfo() { SampleName = "Excel Like UI", Description = "This sample showcases the following capabilities of GridControl such as Selection Frame, Floating cells, Formula cells, Markup headers and Tab sheets and it provides us interactive user experience with an Excel-like appearance and characteristics .", GroupName = "PRODUCT SHOWCASE", DemoViewType = typeof(ExcelLikeUI), DemoLauchMode = DemoLauchMode.Window, ThemeMode = ThemeMode.None, Documentations = excelLikeUIDocumentation });
+            this.Demos.Add(new DemoInfo() { SampleName = "Scroll Performance", Description = "This sample showcases the scrolling performance of GridControl.", GroupName = "PERFORMANCE", DemoViewType = typeof(ScrollPerformance), ThemeMode = ThemeMode.Default });
 
         }
     }
