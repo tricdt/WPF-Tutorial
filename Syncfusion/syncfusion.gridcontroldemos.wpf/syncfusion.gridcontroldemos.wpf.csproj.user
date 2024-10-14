@@ -10,12 +10,18 @@
     <Compile Update="Performance\ScrollPerformance\Views\ScrollPerformance.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Performance\TraderGridtest\Views\TraderGridTest.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Product ShowCase\ExcelLikeUi\Views\ExcelLikeUI.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Performance\ScrollPerformance\Views\ScrollPerformance.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Performance\TraderGridtest\Views\TraderGridTest.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Product ShowCase\ExcelLikeUi\Views\ExcelLikeUI.xaml">
