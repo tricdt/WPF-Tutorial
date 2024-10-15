@@ -36,6 +36,11 @@ namespace syncfusion.gridcontroldemos.wpf
             this.Demos.Add(new DemoInfo() { SampleName = "Scroll Performance", Description = "This sample showcases the scrolling performance of GridControl.", GroupName = "PERFORMANCE", DemoViewType = typeof(ScrollPerformance), ThemeMode = ThemeMode.Default });
             this.Demos.Add(new DemoInfo() { SampleName = "TraderGrid Test", Description = "This sample showcases the real time updates capability of GridControl.It provides support to insert and remove rows or columns with a minimal CPU usage. It also handles very high frequency updates and refresh scenarios.", GroupName = "PERFORMANCE", DemoViewType = typeof(TraderGridTest), ThemeMode = ThemeMode.Default });
 
+            List<Documentation> excelLikeDragDropDocumentation = new List<Documentation>();
+            excelLikeDragDropDocumentation.Add(new Documentation { Content = "GridControl - AllowDragDrop API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.Grid.GridControlBase.html#Syncfusion_Windows_Controls_Grid_GridControlBase_AllowDragDrop") });
+            excelLikeDragDropDocumentation.Add(new Documentation { Content = "GridControl - Excel Like Drag And Drop Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/interactive-features#excel-like---cell-drag-and-drop") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Excel Like Drag and Drop", Description = "This sample showcases Excel like Drag and Drop in GridControl. This feature enables you to select any range and click on any corner of the selected region to drag it and drop it anywhere into a Grid, or some other controls, in an application. You can enable this feature by setting the AllowDragDrop property of the GridControl as True.", GroupName = "EXCEL LIKE FEATURES", DemoViewType = typeof(ExcelLikeDragandDrop), ThemeMode = ThemeMode.Default, Documentations = excelLikeDragDropDocumentation });
+
         }
     }
 }
