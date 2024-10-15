@@ -19,7 +19,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "syncfusion.pivotgriddemos.w
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "syncfusion.propertygriddemos.wpf", "syncfusion.propertygriddemos.wpf\syncfusion.propertygriddemos.wpf.csproj", "{FDD9C2A7-93F0-4618-B3BB-615ED86833AD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "syncfusion.chartdemos.wpf", "syncfusion.chartdemos.wpf\syncfusion.chartdemos.wpf.csproj", "{30D77F6C-0C73-4ED5-9F7F-5E7D088E636B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "syncfusion.chartdemos.wpf", "syncfusion.chartdemos.wpf\syncfusion.chartdemos.wpf.csproj", "{30D77F6C-0C73-4ED5-9F7F-5E7D088E636B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -41,6 +41,10 @@ namespace syncfusion.gridcontroldemos.wpf
             excelLikeDragDropDocumentation.Add(new Documentation { Content = "GridControl - Excel Like Drag And Drop Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/interactive-features#excel-like---cell-drag-and-drop") });
             this.Demos.Add(new DemoInfo() { SampleName = "Excel Like Drag and Drop", Description = "This sample showcases Excel like Drag and Drop in GridControl. This feature enables you to select any range and click on any corner of the selected region to drag it and drop it anywhere into a Grid, or some other controls, in an application. You can enable this feature by setting the AllowDragDrop property of the GridControl as True.", GroupName = "EXCEL LIKE FEATURES", DemoViewType = typeof(ExcelLikeDragandDrop), ThemeMode = ThemeMode.Default, Documentations = excelLikeDragDropDocumentation });
 
+            List<Documentation> excelLikeFillSelectionDocumentation = new List<Documentation>();
+            excelLikeFillSelectionDocumentation.Add(new Documentation { Content = "GridControl - ExcelLikeSelectionFrame API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.Grid.GridModelOptions.html#Syncfusion_Windows_Controls_Grid_GridModelOptions_ExcelLikeSelectionFrame") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Excel Like Fill Selection", Description = "This sample showcases Excel-like Fill selection in GridControl. This allows you to fill the data of selected cells by clicking and dragging the bottom right corner of the selected region. A popup button is displayed below the cell containing various options to customize how the data is to be filled in the dragged cells.", GroupName = "EXCEL LIKE FEATURES", DemoViewType = typeof(ExcelLikeFillSelection), ThemeMode = ThemeMode.Default, Documentations = excelLikeFillSelectionDocumentation });
+
         }
     }
 }

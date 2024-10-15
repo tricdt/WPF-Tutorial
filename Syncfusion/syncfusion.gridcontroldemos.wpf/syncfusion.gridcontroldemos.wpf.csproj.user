@@ -10,6 +10,9 @@
     <Compile Update="ExcelLikeFeature\DragAndDrop\ExcelLikeDragandDrop.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="ExcelLikeFeature\FillSelection\Views\ExcelLikeFillSelection.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Performance\ScrollPerformance\Views\ScrollPerformance.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -22,6 +25,12 @@
   </ItemGroup>
   <ItemGroup>
     <Page Update="ExcelLikeFeature\DragAndDrop\ExcelLikeDragandDrop.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ExcelLikeFeature\FillSelection\Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ExcelLikeFeature\FillSelection\Views\ExcelLikeFillSelection.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Performance\ScrollPerformance\Views\ScrollPerformance.xaml">

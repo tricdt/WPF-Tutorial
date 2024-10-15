@@ -148,6 +148,14 @@ namespace syncfusion.gridcontroldemos.wpf
         int right = 0;
         int bottom = 0;
         int left = 0;
+        enum MovingDirection
+        {
+            None,
+            Left,
+            Down,
+            Right,
+            Up
+        }
         public void MouseMove(MouseControllerEventArgs e)
         {
             RowColumnIndex cell = Grid.PointToCellRowColumnIndex(e.Location);
@@ -326,16 +334,10 @@ namespace syncfusion.gridcontroldemos.wpf
             // throw new NotImplementedException();
         }
     }
-    enum MovingDirection
-    {
-        None,
-        Left,
-        Down,
-        Right,
-        Up
-    }
+
     public class ExcelRangeExtendedEventArgs : EventArgs
     {
+
         public ExcelRangeExtendedEventArgs(GridRangeInfo originalRange, GridRangeInfo newRange)
         {
             this.originalRange = originalRange;
@@ -357,6 +359,7 @@ namespace syncfusion.gridcontroldemos.wpf
             set { newRange = value; }
         }
     }
+
     public class MyGridCellTextBoxRenderer : GridCellTextBoxRenderer
     {
         protected override void OnRender(DrawingContext dc, RenderCellArgs rca, GridRenderStyleInfo style)

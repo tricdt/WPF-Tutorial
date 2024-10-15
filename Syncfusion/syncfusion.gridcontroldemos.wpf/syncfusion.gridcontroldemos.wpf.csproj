@@ -9,6 +9,7 @@
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Assets\GridControl\Cross.cur" />
+    <None Remove="Assets\GridControl\DropDownIcon.png" />
     <None Remove="Assets\GridControl\ExcelLikeUi\AlignTextCenter16.png" />
     <None Remove="Assets\GridControl\ExcelLikeUi\AlignTextLeft16.png" />
     <None Remove="Assets\GridControl\ExcelLikeUi\AlignTextRight16.png" />
@@ -42,6 +43,7 @@
     <None Remove="Assets\GridControl\ExcelLikeUi\TopAlign.png" />
     <None Remove="Assets\GridControl\ExcelLikeUi\Underline.png" />
     <None Remove="Assets\GridControl\ExcelLikeUi\Undo16.png" />
+    <None Remove="ExcelLikeFeature\FillSelection\Helpers\Cross.cur" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\syncfusion.demoscommon.wpf\syncfusion.demoscommon.wpf.csproj" />
@@ -86,6 +88,8 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Assets\GridControl\Cross.cur" />
+    <EmbeddedResource Include="ExcelLikeFeature\FillSelection\Helpers\Cross.cur" />
+    <Resource Include="Assets\GridControl\DropDownIcon.png" />
     <Resource Include="Assets\GridControl\ExcelLikeUi\AlignTextCenter16.png" />
     <Resource Include="Assets\GridControl\ExcelLikeUi\AlignTextLeft16.png" />
     <Resource Include="Assets\GridControl\ExcelLikeUi\AlignTextRight16.png" />
