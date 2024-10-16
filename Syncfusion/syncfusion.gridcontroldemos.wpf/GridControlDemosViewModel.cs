@@ -45,6 +45,11 @@ namespace syncfusion.gridcontroldemos.wpf
             excelLikeFillSelectionDocumentation.Add(new Documentation { Content = "GridControl - ExcelLikeSelectionFrame API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.Grid.GridModelOptions.html#Syncfusion_Windows_Controls_Grid_GridModelOptions_ExcelLikeSelectionFrame") });
             this.Demos.Add(new DemoInfo() { SampleName = "Excel Like Fill Selection", Description = "This sample showcases Excel-like Fill selection in GridControl. This allows you to fill the data of selected cells by clicking and dragging the bottom right corner of the selected region. A popup button is displayed below the cell containing various options to customize how the data is to be filled in the dragged cells.", GroupName = "EXCEL LIKE FEATURES", DemoViewType = typeof(ExcelLikeFillSelection), ThemeMode = ThemeMode.Default, Documentations = excelLikeFillSelectionDocumentation });
 
+            List<Documentation> floatingCellDocumentation = new List<Documentation>();
+            floatingCellDocumentation.Add(new Documentation { Content = "GridControl - EnableFloatingCell API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.Grid.GridModelOptions.html#Syncfusion_Windows_Controls_Grid_GridModelOptions_EnableFloatingCell") });
+            floatingCellDocumentation.Add(new Documentation { Content = "GridControl - Floating Cells Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/cell-layout-customization#floating") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Floating Cells", Description = "This sample showcases the following capability of GridControl such as to display the cell content in an adjacent cell by overlapping the next cell, when the cell content exceeds the cell width. GridControl supports this floating behavior in both display and edit mode.", GroupName = "EXCEL LIKE FEATURES", DemoViewType = typeof(FloatingCells), ThemeMode = ThemeMode.Default, Documentations = floatingCellDocumentation });
+
         }
     }
 }

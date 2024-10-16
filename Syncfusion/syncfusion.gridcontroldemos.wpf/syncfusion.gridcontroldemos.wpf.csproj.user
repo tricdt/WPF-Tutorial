@@ -13,6 +13,9 @@
     <Compile Update="ExcelLikeFeature\FillSelection\Views\ExcelLikeFillSelection.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="ExcelLikeFeature\FloatingCells\FloatingCells.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Performance\ScrollPerformance\Views\ScrollPerformance.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -31,6 +34,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="ExcelLikeFeature\FillSelection\Views\ExcelLikeFillSelection.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ExcelLikeFeature\FloatingCells\FloatingCells.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Performance\ScrollPerformance\Views\ScrollPerformance.xaml">
