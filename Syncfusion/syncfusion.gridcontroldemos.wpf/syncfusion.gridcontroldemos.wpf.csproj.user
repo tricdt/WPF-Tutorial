@@ -22,6 +22,9 @@
     <Compile Update="ExcelLikeFeature\HideRowColumnResizing\Views\HiddenRowColumnResizing.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="ExcelLikeFeature\InputMessage\Views\InputMessage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Performance\ScrollPerformance\Views\ScrollPerformance.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -49,6 +52,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="ExcelLikeFeature\HideRowColumnResizing\Views\HiddenRowColumnResizing.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ExcelLikeFeature\InputMessage\Views\InputMessage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Performance\ScrollPerformance\Views\ScrollPerformance.xaml">

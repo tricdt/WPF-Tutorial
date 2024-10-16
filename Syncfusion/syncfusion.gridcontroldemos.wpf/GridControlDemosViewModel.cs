@@ -60,6 +60,10 @@ namespace syncfusion.gridcontroldemos.wpf
             hiddenRowColumnResizingDocumentation.Add(new Documentation { Content = "GridControl - Hide and Unhide Rows Columns Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/interactive-features#hide-and-unhide-a-rows-or-columns-during-run-time") });
             this.Demos.Add(new DemoInfo() { SampleName = "Hidden Row Column Resizing", Description = "This sample showcases the following capabilities of GridControl such as to resize and an option to hide and unhide the specified number of rows and columns. GridControl allows you to resize, hide and unhide the rows or columns by dragging the resizing cursor that appears when the mouse is hovered at the edge of the Header cells.", GroupName = "EXCEL LIKE FEATURES", DemoViewType = typeof(HiddenRowColumnResizing), ThemeMode = ThemeMode.Default, Documentations = hiddenRowColumnResizingDocumentation });
 
+            List<Documentation> inputMessageDocumentation = new List<Documentation>();
+            inputMessageDocumentation.Add(new Documentation { Content = "GridControl - Input Message Tip Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/input-message-tip") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Input Message", Description = "This sample showcases Excel-like Input tips in the GridControl, that is, GridControl displays a small pop-up that contains the custom message about a cell when that particular cell is selected.", GroupName = "EXCEL LIKE FEATURES", DemoViewType = typeof(InputMessage), ThemeMode = ThemeMode.Default, Documentations = inputMessageDocumentation });
+
         }
     }
 }
