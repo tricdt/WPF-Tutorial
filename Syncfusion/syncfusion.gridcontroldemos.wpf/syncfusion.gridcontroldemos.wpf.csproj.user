@@ -28,6 +28,9 @@
     <Compile Update="ExcelLikeFeature\SelectionMarker\Views\SelectionMarker.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="ExcelLikeFeature\SortColumn\Views\SortColumn.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Performance\ScrollPerformance\Views\ScrollPerformance.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -61,6 +64,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="ExcelLikeFeature\SelectionMarker\Views\SelectionMarker.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ExcelLikeFeature\SortColumn\Views\SortColumn.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Performance\ScrollPerformance\Views\ScrollPerformance.xaml">

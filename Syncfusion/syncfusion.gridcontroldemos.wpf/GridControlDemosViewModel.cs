@@ -65,6 +65,8 @@ namespace syncfusion.gridcontroldemos.wpf
             this.Demos.Add(new DemoInfo() { SampleName = "Input Message", Description = "This sample showcases Excel-like Input tips in the GridControl, that is, GridControl displays a small pop-up that contains the custom message about a cell when that particular cell is selected.", GroupName = "EXCEL LIKE FEATURES", DemoViewType = typeof(InputMessage), ThemeMode = ThemeMode.Default, Documentations = inputMessageDocumentation });
 
             this.Demos.Add(new DemoInfo() { SampleName = "Selection Marker", Description = "This sample showcases a support for selection marker in GridControl, which shows the marker on the selection rectangle when the selection covers the hidden ranges.", GroupName = "EXCEL LIKE FEATURES", DemoViewType = typeof(SelectionMarker), ThemeMode = ThemeMode.Default });
+            this.Demos.Add(new DemoInfo() { SampleName = "Sort Column", Description = "This sample showcases the sorting of a column in a GridControl. Sorting can be easily accomplished by clicking on the appropriate column’s header cell.", GroupName = "EXCEL LIKE FEATURES", DemoViewType = typeof(SortColumn), ThemeMode = ThemeMode.Default });
+
         }
     }
 }
