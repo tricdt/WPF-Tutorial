@@ -7,13 +7,16 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="ExcelLikeFeature\DragAndDrop\ExcelLikeDragandDrop.xaml.cs">
+    <Compile Update="ExcelLikeFeature\DragAndDrop\Views\ExcelLikeDragandDrop.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="ExcelLikeFeature\FillSelection\Views\ExcelLikeFillSelection.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="ExcelLikeFeature\FloatingCells\FloatingCells.xaml.cs">
+    <Compile Update="ExcelLikeFeature\FloatingCells\Views\FloatingCells.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ExcelLikeFeature\FreezePane\Views\FreezePane.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Performance\ScrollPerformance\Views\ScrollPerformance.xaml.cs">
@@ -27,7 +30,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="ExcelLikeFeature\DragAndDrop\ExcelLikeDragandDrop.xaml">
+    <Page Update="ExcelLikeFeature\DragAndDrop\Views\ExcelLikeDragandDrop.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="ExcelLikeFeature\FillSelection\Themes\Generic.xaml">
@@ -36,7 +39,10 @@
     <Page Update="ExcelLikeFeature\FillSelection\Views\ExcelLikeFillSelection.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="ExcelLikeFeature\FloatingCells\FloatingCells.xaml">
+    <Page Update="ExcelLikeFeature\FloatingCells\Views\FloatingCells.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ExcelLikeFeature\FreezePane\Views\FreezePane.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Performance\ScrollPerformance\Views\ScrollPerformance.xaml">

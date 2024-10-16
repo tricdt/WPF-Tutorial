@@ -50,6 +50,11 @@ namespace syncfusion.gridcontroldemos.wpf
             floatingCellDocumentation.Add(new Documentation { Content = "GridControl - Floating Cells Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/cell-layout-customization#floating") });
             this.Demos.Add(new DemoInfo() { SampleName = "Floating Cells", Description = "This sample showcases the following capability of GridControl such as to display the cell content in an adjacent cell by overlapping the next cell, when the cell content exceeds the cell width. GridControl supports this floating behavior in both display and edit mode.", GroupName = "EXCEL LIKE FEATURES", DemoViewType = typeof(FloatingCells), ThemeMode = ThemeMode.Default, Documentations = floatingCellDocumentation });
 
+            List<Documentation> freezePaneDocumentation = new List<Documentation>();
+            freezePaneDocumentation.Add(new Documentation { Content = "GridControl - ExcelLikeFreezePane API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.Grid.GridModelOptions.html#Syncfusion_Windows_Controls_Grid_GridModelOptions_ExcelLikeFreezePane") });
+            freezePaneDocumentation.Add(new Documentation { Content = "GridControl - Freeze Rows And Columns Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/managing-rows-and-columns#freeze-rows-and-columns") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Freeze Pane", Description = "This sample of GridControl showcases the Freeze Pane feature . This enables you to freeze a part of the grid on screen, so that you can see the frozen area, even when you scroll through the other part independently. The Freeze Pane feature is frequently used to keep a set of title cells in view as data scrolls through or next to it.", GroupName = "EXCEL LIKE FEATURES", DemoViewType = typeof(FreezePane), ThemeMode = ThemeMode.Default, Documentations = freezePaneDocumentation });
+
         }
     }
 }
