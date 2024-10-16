@@ -26,7 +26,21 @@ namespace syncfusion.gridcontroldemos.wpf
             gridControl1.Model.Options.ActivateCurrentCellBehavior = GridCellActivateAction.DblClickOnCell;
             gridControl1.QueryCellInfo += new GridQueryCellInfoEventHandler(GridControl1_QueryCellInfo);
         }
-
+        public InputMessage(string themename) : base(themename)
+        {
+            InitializeComponent();
+            this.LoadData();
+            gridControl1.Model.RowCount = dataTable.Rows.Count;
+            gridControl1.Model.ColumnCount = dataTable.Columns.Count;
+            gridControl1.Model.RowHeights.DefaultLineSize = 30;
+            gridControl1.Model.ColumnWidths.DefaultLineSize = 115;
+            gridControl1.Model.ColumnWidths[0] = 115;
+            Width = 1000;
+            Height = 600;
+            this.gridControl1.Model.HeaderStyle.BorderMargins = new CellMarginsInfo(5);
+            gridControl1.Model.Options.ActivateCurrentCellBehavior = GridCellActivateAction.DblClickOnCell;
+            gridControl1.QueryCellInfo += new GridQueryCellInfoEventHandler(GridControl1_QueryCellInfo);
+        }
         private void GridControl1_QueryCellInfo(object sender, GridQueryCellInfoEventArgs e)
         {
             if (e.Style.ColumnIndex == 0 || e.Style.RowIndex == 0)

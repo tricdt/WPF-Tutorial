@@ -64,6 +64,7 @@ namespace syncfusion.gridcontroldemos.wpf
             inputMessageDocumentation.Add(new Documentation { Content = "GridControl - Input Message Tip Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/input-message-tip") });
             this.Demos.Add(new DemoInfo() { SampleName = "Input Message", Description = "This sample showcases Excel-like Input tips in the GridControl, that is, GridControl displays a small pop-up that contains the custom message about a cell when that particular cell is selected.", GroupName = "EXCEL LIKE FEATURES", DemoViewType = typeof(InputMessage), ThemeMode = ThemeMode.Default, Documentations = inputMessageDocumentation });
 
+            this.Demos.Add(new DemoInfo() { SampleName = "Selection Marker", Description = "This sample showcases a support for selection marker in GridControl, which shows the marker on the selection rectangle when the selection covers the hidden ranges.", GroupName = "EXCEL LIKE FEATURES", DemoViewType = typeof(SelectionMarker), ThemeMode = ThemeMode.Default });
         }
     }
 }
