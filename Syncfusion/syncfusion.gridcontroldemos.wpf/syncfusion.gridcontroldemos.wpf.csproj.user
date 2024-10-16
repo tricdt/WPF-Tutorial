@@ -19,6 +19,9 @@
     <Compile Update="ExcelLikeFeature\FreezePane\Views\FreezePane.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="ExcelLikeFeature\HideRowColumnResizing\Views\HiddenRowColumnResizing.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Performance\ScrollPerformance\Views\ScrollPerformance.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -43,6 +46,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="ExcelLikeFeature\FreezePane\Views\FreezePane.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ExcelLikeFeature\HideRowColumnResizing\Views\HiddenRowColumnResizing.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Performance\ScrollPerformance\Views\ScrollPerformance.xaml">

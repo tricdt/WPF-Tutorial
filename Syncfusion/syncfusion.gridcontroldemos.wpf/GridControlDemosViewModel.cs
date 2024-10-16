@@ -55,6 +55,11 @@ namespace syncfusion.gridcontroldemos.wpf
             freezePaneDocumentation.Add(new Documentation { Content = "GridControl - Freeze Rows And Columns Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/managing-rows-and-columns#freeze-rows-and-columns") });
             this.Demos.Add(new DemoInfo() { SampleName = "Freeze Pane", Description = "This sample of GridControl showcases the Freeze Pane feature . This enables you to freeze a part of the grid on screen, so that you can see the frozen area, even when you scroll through the other part independently. The Freeze Pane feature is frequently used to keep a set of title cells in view as data scrolls through or next to it.", GroupName = "EXCEL LIKE FEATURES", DemoViewType = typeof(FreezePane), ThemeMode = ThemeMode.Default, Documentations = freezePaneDocumentation });
 
+            List<Documentation> hiddenRowColumnResizingDocumentation = new List<Documentation>();
+            hiddenRowColumnResizingDocumentation.Add(new Documentation { Content = "GridControl - AllowExcelLikeResizing API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.Grid.GridModelOptions.html#Syncfusion_Windows_Controls_Grid_GridModelOptions_AllowExcelLikeResizing") });
+            hiddenRowColumnResizingDocumentation.Add(new Documentation { Content = "GridControl - Hide and Unhide Rows Columns Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/interactive-features#hide-and-unhide-a-rows-or-columns-during-run-time") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Hidden Row Column Resizing", Description = "This sample showcases the following capabilities of GridControl such as to resize and an option to hide and unhide the specified number of rows and columns. GridControl allows you to resize, hide and unhide the rows or columns by dragging the resizing cursor that appears when the mouse is hovered at the edge of the Header cells.", GroupName = "EXCEL LIKE FEATURES", DemoViewType = typeof(HiddenRowColumnResizing), ThemeMode = ThemeMode.Default, Documentations = hiddenRowColumnResizingDocumentation });
+
         }
     }
 }
