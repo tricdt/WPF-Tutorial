@@ -75,6 +75,10 @@ namespace syncfusion.gridcontroldemos.wpf
             virtualCellDocumentation.Add(new Documentation { Content = "GridControl - Virtual Cells Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/virtualization#virtual-cells") });
             this.Demos.Add(new DemoInfo() { SampleName = "Virtual Cell", Description = "This sample showcases a Virtual Cell architecture in GridControl where the cell contents are drawn statically until a live cell is needed. ", GroupName = "GRID VIRTUALIZATION", DemoViewType = typeof(VirtualCell), ThemeMode = ThemeMode.Default, Documentations = virtualCellDocumentation });
 
+            List<Documentation> virtualGridDocumentation = new List<Documentation>();
+            virtualGridDocumentation.Add(new Documentation { Content = "GridControl - Virtual Mode Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/virtualization#virtual-mode") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Virtual Grid", Description = "This sample showcases the virtualization support in GridControl that allows you to display large data sources very quickly. The data is provided to the GridControl on demand through an event that allows you to furnish the requested data in the handler. You can also instantaneously hide or show millions of rows in a GridControl.", GroupName = "GRID VIRTUALIZATION", DemoViewType = typeof(VirtualGrid), ThemeMode = ThemeMode.Default, Documentations = virtualGridDocumentation });
+
         }
     }
 }
