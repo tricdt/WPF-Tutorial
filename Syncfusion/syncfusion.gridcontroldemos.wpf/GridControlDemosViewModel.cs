@@ -67,6 +67,10 @@ namespace syncfusion.gridcontroldemos.wpf
             this.Demos.Add(new DemoInfo() { SampleName = "Selection Marker", Description = "This sample showcases a support for selection marker in GridControl, which shows the marker on the selection rectangle when the selection covers the hidden ranges.", GroupName = "EXCEL LIKE FEATURES", DemoViewType = typeof(SelectionMarker), ThemeMode = ThemeMode.Default });
             this.Demos.Add(new DemoInfo() { SampleName = "Sort Column", Description = "This sample showcases the sorting of a column in a GridControl. Sorting can be easily accomplished by clicking on the appropriate column’s header cell.", GroupName = "EXCEL LIKE FEATURES", DemoViewType = typeof(SortColumn), ThemeMode = ThemeMode.Default });
 
+            List<Documentation> undoRedoDocumentation = new List<Documentation>();
+            undoRedoDocumentation.Add(new Documentation { Content = "GridControl - Undo/Redo Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/editing#undoredo") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Undo Redo", Description = "This sample showcases how to perform Undo and Redo operations in GridControl. Undo reverts the actions that are performed in GridControl and Redo reverts the undo actions.", GroupName = "EXCEL LIKE FEATURES", DemoViewType = typeof(UndoRedo), ThemeMode = ThemeMode.Default, Documentations = undoRedoDocumentation });
+
         }
     }
 }
