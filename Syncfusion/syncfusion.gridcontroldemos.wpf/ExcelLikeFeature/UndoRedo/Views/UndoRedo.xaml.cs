@@ -24,6 +24,18 @@ namespace syncfusion.gridcontroldemos.wpf
             this.grid.Model.CommandStack.Enabled = true;
         }
 
+        public UndoRedo(string themename) : base(themename)
+        {
+            InitializeComponent();
+            this.grid.Model.RowCount = 30;
+            this.grid.Model.ColumnCount = 15;
+            PopulateGrid();
+            oldRedoCount = 0;
+            oldUndoCount = 0;
+            this.grid.LayoutUpdated += new EventHandler(Grid_LayoutUpdated);
+            this.grid.Model.CommandStack.Enabled = true;
+        }
+
         private void Grid_LayoutUpdated(object? sender, EventArgs e)
         {
             ShowStacks();

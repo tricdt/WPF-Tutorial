@@ -71,6 +71,10 @@ namespace syncfusion.gridcontroldemos.wpf
             undoRedoDocumentation.Add(new Documentation { Content = "GridControl - Undo/Redo Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/editing#undoredo") });
             this.Demos.Add(new DemoInfo() { SampleName = "Undo Redo", Description = "This sample showcases how to perform Undo and Redo operations in GridControl. Undo reverts the actions that are performed in GridControl and Redo reverts the undo actions.", GroupName = "EXCEL LIKE FEATURES", DemoViewType = typeof(UndoRedo), ThemeMode = ThemeMode.Default, Documentations = undoRedoDocumentation });
 
+            List<Documentation> virtualCellDocumentation = new List<Documentation>();
+            virtualCellDocumentation.Add(new Documentation { Content = "GridControl - Virtual Cells Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/virtualization#virtual-cells") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Virtual Cell", Description = "This sample showcases a Virtual Cell architecture in GridControl where the cell contents are drawn statically until a live cell is needed. ", GroupName = "GRID VIRTUALIZATION", DemoViewType = typeof(VirtualCell), ThemeMode = ThemeMode.Default, Documentations = virtualCellDocumentation });
+
         }
     }
 }
