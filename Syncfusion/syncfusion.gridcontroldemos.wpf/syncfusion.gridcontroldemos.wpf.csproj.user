@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Cell Types\AdvancedDataTemplateCell\Views\AdvancedDataTemplateCell.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Cell Types\BasicCellType\Views\BasicCellType.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ExcelLikeFeature\DragAndDrop\Views\ExcelLikeDragandDrop.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ExcelLikeFeature\FillSelection\Views\ExcelLikeFillSelection.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ExcelLikeFeature\FloatingCells\Views\FloatingCells.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ExcelLikeFeature\FreezePane\Views\FreezePane.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ExcelLikeFeature\HideRowColumnResizing\Views\HiddenRowColumnResizing.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ExcelLikeFeature\InputMessage\Views\InputMessage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ExcelLikeFeature\SelectionMarker\Views\SelectionMarker.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ExcelLikeFeature\SortColumn\Views\SortColumn.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ExcelLikeFeature\UndoRedo\Views\UndoRedo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Grid Virtualization\VirtualCell\Views\VirtualCell.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Grid Virtualization\VirtualGrid\Views\VirtualGrid.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Performance\ScrollPerformance\Views\ScrollPerformance.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Performance\TraderGridtest\Views\TraderGridTest.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Product ShowCase\ExcelLikeUi\Views\ExcelLikeUI.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Cell Types\AdvancedDataTemplateCell\Views\AdvancedDataTemplateCell.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Cell Types\BasicCellType\Views\BasicCellType.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ExcelLikeFeature\DragAndDrop\Views\ExcelLikeDragandDrop.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ExcelLikeFeature\FillSelection\Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ExcelLikeFeature\FillSelection\Views\ExcelLikeFillSelection.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ExcelLikeFeature\FloatingCells\Views\FloatingCells.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ExcelLikeFeature\FreezePane\Views\FreezePane.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ExcelLikeFeature\HideRowColumnResizing\Views\HiddenRowColumnResizing.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ExcelLikeFeature\InputMessage\Views\InputMessage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ExcelLikeFeature\SelectionMarker\Views\SelectionMarker.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ExcelLikeFeature\SortColumn\Views\SortColumn.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ExcelLikeFeature\UndoRedo\Views\UndoRedo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Grid Virtualization\VirtualCell\Views\VirtualCell.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Grid Virtualization\VirtualGrid\Views\VirtualGrid.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Performance\ScrollPerformance\Views\ScrollPerformance.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Performance\TraderGridtest\Views\TraderGridTest.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Product ShowCase\ExcelLikeUi\Views\ExcelLikeUI.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

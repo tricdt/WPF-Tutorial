@@ -4,9 +4,78 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Root"
+        xmlns:System="clr-namespace:System;assembly=mscorlib"  
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Root;component/ResourceDictionary.xaml"/>
+                <ResourceDictionary Source="/Root;component/View/ResourceDictionary.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <Brush x:Key="backgroundBrush">#DCE8F3</Brush>
+            <Style x:Key="borderYellowNoLine" TargetType="Border">
+                <Setter Property="Background" Value="LightYellow"/>
+                <Setter Property="BorderThickness" Value="0"/>
+            </Style>
+            <Style x:Key="groupBoxStyle" TargetType="GroupBox">
+                <Setter Property="Margin" Value="3"/>
+                <Setter Property="Padding" Value="5,5,5,5"/>
+                <Setter Property="Background" Value="{StaticResource ResourceKey=backgroundBrush}"/>
+                <Setter Property="BorderBrush" Value="Black"/>
+            </Style>
+            <Style x:Key="groupBoxStyleYellow" TargetType="GroupBox" BasedOn="{StaticResource groupBoxStyle}">
+                <Setter Property="Background" Value="LightYellow"/>
+            </Style>
+   
+            <System:Double x:Key="ButtonWidth">200</System:Double>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Border Grid.Row="0" Grid.Column="0" Style="{StaticResource borderYellowNoLine}">
+            <GroupBox Header="Styles Example One" Style="{StaticResource groupBoxStyleYellow}">
+                <Label>Styles defined in the window XAML</Label>
+            </GroupBox>
+        </Border>
+        <Border Grid.Row="2" Grid.Column="0" Style="{StaticResource borderRedNoLine}">
+            <GroupBox Header="Styles Example Two" Style="{StaticResource groupBoxStyleRedBorder}">
+                <Label>Styles defined in a dictionary in the application assembly</Label>
+            </GroupBox>
+        </Border>
+        <Border Grid.Row="4" Grid.Column="0" Style="{StaticResource borderGreenNoLine}">
+            <GroupBox Header="Styles Example Three" Style="{StaticResource groupBoxStyleGreenBorder}">
+                <Label>Styles defined in a dictionary in another Assembly</Label>
+            </GroupBox>
+        </Border>
+        <Button Grid.Row="6" Grid.Column="0" Content="Press Me" Width="{StaticResource ButtonWidth}" HorizontalAlignment="Left"/>
+        <GroupBox Grid.Row="8" Grid.Column="0" Name="_borderBottom" Header="Override a resource dictionary style">
+            <GroupBox.Style>
+                <Style TargetType="GroupBox" BasedOn="{StaticResource groupBoxStyle}">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding ElementName=_checkBoxYellowBackground, Path=IsChecked}" Value="true">
+                            <Setter Property="Background"  Value="LightYellow" />
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding ElementName=_checkBoxYellowBackground, Path=IsChecked}" Value="false">
+                            <Setter Property="Background"  Value="LightCoral" />
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </GroupBox.Style>
+            <CheckBox Grid.Row="8" Grid.Column="0" x:Name="_checkBoxYellowBackground" Content="Yellow Background"/>
+        </GroupBox>
     </Grid>
 </Window>

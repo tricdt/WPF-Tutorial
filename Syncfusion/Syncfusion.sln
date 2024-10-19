@@ -3,7 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Root", "Root\Root.csproj", "{1AFB6A67-C764-442A-805A-84407088BCF8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Root", "Root\Root.csproj", "{1AFB6A67-C764-442A-805A-84407088BCF8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "syncfusion.demoscommon.wpf", "syncfusion.demoscommon.wpf\syncfusion.demoscommon.wpf.csproj", "{EFA7CFE4-7007-4990-8A0F-DD5412DDD0D3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "syncfusion.datagriddemos.wpf", "syncfusion.datagriddemos.wpf\syncfusion.datagriddemos.wpf.csproj", "{8ED5EAFF-B7D8-4320-B454-ADEB5033783F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "syncfusion.gridcontroldemos.wpf", "syncfusion.gridcontroldemos.wpf\syncfusion.gridcontroldemos.wpf.csproj", "{B9074F84-586A-4EF6-88FF-A461A7261FB6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "syncfusion.samplebrowser.wpf", "syncfusion.samplebrowser.wpf\syncfusion.samplebrowser.wpf.csproj", "{98984BD6-1751-4DD8-971C-C85B82BEAD29}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "syncfusion.treegriddemos.wpf", "syncfusion.treegriddemos.wpf\syncfusion.treegriddemos.wpf.csproj", "{014657C8-4304-45CC-894A-F2254565ABA8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "syncfusion.pivotgriddemos.wpf", "syncfusion.pivotgriddemos.wpf\syncfusion.pivotgriddemos.wpf.csproj", "{97C6A300-D63F-4FDA-B176-A3746C56D806}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "syncfusion.propertygriddemos.wpf", "syncfusion.propertygriddemos.wpf\syncfusion.propertygriddemos.wpf.csproj", "{FDD9C2A7-93F0-4618-B3BB-615ED86833AD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "syncfusion.chartdemos.wpf", "syncfusion.chartdemos.wpf\syncfusion.chartdemos.wpf.csproj", "{30D77F6C-0C73-4ED5-9F7F-5E7D088E636B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +31,38 @@ Global
 		{1AFB6A67-C764-442A-805A-84407088BCF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1AFB6A67-C764-442A-805A-84407088BCF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1AFB6A67-C764-442A-805A-84407088BCF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFA7CFE4-7007-4990-8A0F-DD5412DDD0D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFA7CFE4-7007-4990-8A0F-DD5412DDD0D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFA7CFE4-7007-4990-8A0F-DD5412DDD0D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFA7CFE4-7007-4990-8A0F-DD5412DDD0D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8ED5EAFF-B7D8-4320-B454-ADEB5033783F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8ED5EAFF-B7D8-4320-B454-ADEB5033783F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8ED5EAFF-B7D8-4320-B454-ADEB5033783F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8ED5EAFF-B7D8-4320-B454-ADEB5033783F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9074F84-586A-4EF6-88FF-A461A7261FB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9074F84-586A-4EF6-88FF-A461A7261FB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9074F84-586A-4EF6-88FF-A461A7261FB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9074F84-586A-4EF6-88FF-A461A7261FB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98984BD6-1751-4DD8-971C-C85B82BEAD29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98984BD6-1751-4DD8-971C-C85B82BEAD29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98984BD6-1751-4DD8-971C-C85B82BEAD29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98984BD6-1751-4DD8-971C-C85B82BEAD29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{014657C8-4304-45CC-894A-F2254565ABA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{014657C8-4304-45CC-894A-F2254565ABA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{014657C8-4304-45CC-894A-F2254565ABA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{014657C8-4304-45CC-894A-F2254565ABA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97C6A300-D63F-4FDA-B176-A3746C56D806}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97C6A300-D63F-4FDA-B176-A3746C56D806}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97C6A300-D63F-4FDA-B176-A3746C56D806}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97C6A300-D63F-4FDA-B176-A3746C56D806}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDD9C2A7-93F0-4618-B3BB-615ED86833AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDD9C2A7-93F0-4618-B3BB-615ED86833AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDD9C2A7-93F0-4618-B3BB-615ED86833AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDD9C2A7-93F0-4618-B3BB-615ED86833AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30D77F6C-0C73-4ED5-9F7F-5E7D088E636B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30D77F6C-0C73-4ED5-9F7F-5E7D088E636B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30D77F6C-0C73-4ED5-9F7F-5E7D088E636B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30D77F6C-0C73-4ED5-9F7F-5E7D088E636B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

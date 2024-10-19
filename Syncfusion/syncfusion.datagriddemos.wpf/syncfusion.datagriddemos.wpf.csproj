@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Assets\datagrid\Female.png" />
+    <None Remove="Assets\datagrid\Footer.jpg" />
+    <None Remove="Assets\datagrid\Header.jpg" />
+    <None Remove="Assets\datagrid\icon_add.png" />
+    <None Remove="Assets\datagrid\icon_percentage.png" />
+    <None Remove="Assets\datagrid\icon_sum.png" />
+    <None Remove="Assets\datagrid\icon_total.png" />
+    <None Remove="Assets\datagrid\Insufficient.png" />
+    <None Remove="Assets\datagrid\Japan.jpg" />
+    <None Remove="Assets\datagrid\location.png" />
+    <None Remove="Assets\datagrid\Male.png" />
+    <None Remove="Assets\datagrid\Perfect.png" />
+    <None Remove="Assets\datagrid\Sufficient.png" />
+    <None Remove="Assets\datagrid\UK.jpg" />
+    <None Remove="Assets\datagrid\US.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\syncfusion.demoscommon.wpf\syncfusion.demoscommon.wpf.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.135" />
+    <PackageReference Include="Syncfusion.UI.WPF.NET" Version="26.1.35" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Syncfusion.Data.WPF">
+      <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\WPF\26.1.35\precompiledassemblies\net6.0\Syncfusion.Data.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfGrid.WPF">
+      <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\WPF\26.1.35\Assemblies\4.6.2\Syncfusion.SfGrid.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfGridConverter.WPF">
+      <HintPath>C:\Users\Public\Documents\Syncfusion\WPF\26.1.35\SampleBrowser\datagrid\bin\Debug\net8.0-windows\Syncfusion.SfGridConverter.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfInput.Wpf">
+      <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\WPF\26.1.35\precompiledassemblies\net6.0\Syncfusion.SfInput.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfShared.Wpf">
+      <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\WPF\26.1.35\precompiledassemblies\net6.0\Syncfusion.SfShared.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfSkinManager.WPF">
+      <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\WPF\26.1.35\precompiledassemblies\net6.0\Syncfusion.SfSkinManager.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Shared.WPF">
+      <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\WPF\26.1.35\precompiledassemblies\net6.0\Syncfusion.Shared.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Themes.FluentDark.WPF">
+      <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\WPF\26.1.35\precompiledassemblies\net6.0\Syncfusion.Themes.FluentDark.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Themes.FluentLight.WPF">
+      <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\WPF\26.1.35\precompiledassemblies\net6.0\Syncfusion.Themes.FluentLight.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Themes.SystemTheme.WPF">
+      <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\WPF\26.1.35\precompiledassemblies\net6.0\Syncfusion.Themes.SystemTheme.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Themes.Windows11Dark.WPF">
+      <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\WPF\26.1.35\precompiledassemblies\net6.0\Syncfusion.Themes.Windows11Dark.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Themes.Windows11Light.WPF">
+      <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\WPF\26.1.35\precompiledassemblies\net6.0\Syncfusion.Themes.Windows11Light.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Tools.Wpf">
+      <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\WPF\26.1.35\precompiledassemblies\net6.0\Syncfusion.Tools.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.XlsIO.Base">
+      <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\WPF\26.1.35\Assemblies\4.6.2\Syncfusion.XlsIO.Base.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\datagrid\Female.png" />
+    <EmbeddedResource Include="Assets\datagrid\Footer.jpg" />
+    <EmbeddedResource Include="Assets\datagrid\Header.jpg" />
+    <Resource Include="Assets\datagrid\icon_add.png" />
+    <Resource Include="Assets\datagrid\icon_percentage.png" />
+    <Resource Include="Assets\datagrid\icon_sum.png" />
+    <Resource Include="Assets\datagrid\icon_total.png" />
+    <Resource Include="Assets\datagrid\Insufficient.png" />
+    <Resource Include="Assets\datagrid\Japan.jpg" />
+    <Resource Include="Assets\datagrid\location.png" />
+    <Resource Include="Assets\datagrid\Male.png" />
+    <Resource Include="Assets\datagrid\Perfect.png" />
+    <Resource Include="Assets\datagrid\Sufficient.png" />
+    <Resource Include="Assets\datagrid\UK.jpg" />
+    <Resource Include="Assets\datagrid\US.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Resources\Search.xaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Page>
+  </ItemGroup>
+</Project>

@@ -10,5 +10,11 @@
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="ResourceDictionary.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ResourceDictionary.xaml">
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
 </Project>

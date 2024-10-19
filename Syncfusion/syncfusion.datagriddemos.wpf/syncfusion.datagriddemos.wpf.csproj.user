@@ -1,0 +1,424 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Views\Appearance\AlternateRowStyleDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Appearance\CellAnimationDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Appearance\ConditionalFormattingDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Appearance\FreezePanesDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Appearance\RowStyleDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Appearance\StylingDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Columns\AutoCellMergeDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Columns\CellMergeDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Columns\ColumnSizerDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Columns\UnBoundColumnsDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Data Presentation\CustomGroupingDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Data Presentation\GroupingDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Data Presentation\IntervalGroupingDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Data Presentation\SortBySummaryDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Data Presentation\SortingDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Data Presentation\SummariesDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Data Validation\CustomValidationDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Data Validation\DataValidationDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Data Virtualization\DataPagingDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Data Virtualization\DataVirtualizationDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Data Virtualization\OnDemandPagingDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\DataBinding\ComplexPropertyBindingDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\DataBinding\DataBindingDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\DataBinding\DataTablePage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\DataBinding\DynamicObjectsPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\DataBinding\ListViewPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\DataBinding\ObservableCollectionPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Editing\ComboBoxColumnsDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Editing\EditingAndDataValidationDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Editing\GridColumnsDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Editing\GridDropDownAndReadOnlyColumnsDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Exporting\ExportingDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Exporting\PdfExportingDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Filtering\CustomFilterRowDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Filtering\ExcelLikeFilteringDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Filtering\FilteringDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Filtering\FilterStatusBarDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Filtering\SearchPanelDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\GettingStarted\GettingStarted.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Interactive Features\ColumnChooserDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Interactive Features\ContextMenuDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Interactive Features\CutCopyPasteDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Interactive Features\DragAndDropDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Localization\DataGridLocalizationDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Master-Detail\ConditionalFormattingDetailsViewDataGridDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Master-Detail\DetailsViewColumnTypesDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Master-Detail\DetailsViewDataTableBindingDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Master-Detail\DetailsViewStackedHeaderRowsDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Master-Detail\DetailsViewTemplateDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Master-Detail\MasterDetailsExportingDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Master-Detail\MasterDetailsViewDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Performance\PerformanceDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Performance\ScrollPerformanceDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Performance\TradingGridDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Printing\CustomPrintingDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Printing\PreviewWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Printing\PrintingDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Rows\AddNewRowDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Rows\AutoRowHeightDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Rows\StackedHeaderRowsDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Rows\UnBoundRowDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Selections\CellSelectionDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Selections\CheckBoxSelectorColumnDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Selections\SelectionDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Serialization\ManipulatorView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Serialization\SerializationDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Resources\Generic.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\Search.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Appearance\AlternateRowStyleDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Appearance\CellAnimationDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Appearance\ConditionalFormattingDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Appearance\FreezePanesDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Appearance\RowStyleDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Appearance\StylingDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Columns\AutoCellMergeDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Columns\CellMergeDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Columns\ColumnSizerDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Columns\UnBoundColumnsDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Data Presentation\CustomGroupingDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Data Presentation\GroupingDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Data Presentation\IntervalGroupingDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Data Presentation\SortBySummaryDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Data Presentation\SortingDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Data Presentation\SummariesDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Data Validation\CustomValidationDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Data Validation\DataValidationDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Data Virtualization\DataPagingDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Data Virtualization\DataVirtualizationDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Data Virtualization\OnDemandPagingDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\DataBinding\ComplexPropertyBindingDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\DataBinding\DataBindingDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\DataBinding\DataTablePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\DataBinding\DynamicObjectsPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\DataBinding\ListViewPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\DataBinding\ObservableCollectionPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Editing\ComboBoxColumnsDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Editing\EditingAndDataValidationDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Editing\GridColumnsDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Editing\GridDropDownAndReadOnlyColumnsDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Exporting\ExportingDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Exporting\PdfExportingDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Filtering\CustomFilterRowDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Filtering\ExcelLikeFilteringDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Filtering\FilteringDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Filtering\FilterRowDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Filtering\FilterStatusBarDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Filtering\SearchPanelDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\GettingStarted\GettingStarted.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Interactive Features\ColumnChooserDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Interactive Features\ContextMenuDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Interactive Features\CustomColumnChooser.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Interactive Features\CutCopyPasteDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Interactive Features\DragAndDropDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Localization\DataGridLocalizationDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Master-Detail\ConditionalFormattingDetailsViewDataGridDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Master-Detail\DetailsViewColumnTypesDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Master-Detail\DetailsViewDataTableBindingDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Master-Detail\DetailsViewStackedHeaderRowsDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Master-Detail\DetailsViewTemplateDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Master-Detail\MasterDetailsExportingDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Master-Detail\MasterDetailsViewDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Performance\PerformanceDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Performance\ScrollPerformanceDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Performance\TradingGridDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Printing\CustomPrintingDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Printing\PreviewWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Printing\PrintingDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Rows\AddNewRowDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Rows\AutoRowHeightDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Rows\StackedHeaderRowsDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Rows\UnBoundRowDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Selections\CellSelectionDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Selections\CheckBoxSelectorColumnDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Selections\SelectionDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Serialization\ManipulatorView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Serialization\SerializationDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

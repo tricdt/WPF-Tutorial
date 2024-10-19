@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\syncfusion.demoscommon.wpf\syncfusion.demoscommon.wpf.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Syncfusion.SfBusyIndicator.WPF">
+      <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\WPF\26.1.35\precompiledassemblies\net6.0\Syncfusion.SfBusyIndicator.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfSkinManager.WPF">
+      <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\WPF\26.1.35\precompiledassemblies\net6.0\Syncfusion.SfSkinManager.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Shared.WPF">
+      <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\WPF\26.1.35\precompiledassemblies\net6.0\Syncfusion.Shared.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Themes.FluentLight.WPF">
+      <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\WPF\26.1.35\precompiledassemblies\net6.0\Syncfusion.Themes.FluentLight.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Themes.Office2019White.WPF">
+      <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\WPF\26.1.35\precompiledassemblies\net6.0\Syncfusion.Themes.Office2019White.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Themes.Windows11Dark.WPF">
+      <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\WPF\26.1.35\precompiledassemblies\net6.0\Syncfusion.Themes.Windows11Dark.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Themes.Windows11Light.WPF">
+      <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\WPF\26.1.35\precompiledassemblies\net6.0\Syncfusion.Themes.Windows11Light.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Tools.Wpf">
+      <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\WPF\26.1.35\precompiledassemblies\net6.0\Syncfusion.Tools.Wpf.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Behaviors\" />
+  </ItemGroup>
+</Project>
