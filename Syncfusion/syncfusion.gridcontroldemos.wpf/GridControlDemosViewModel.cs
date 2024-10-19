@@ -83,6 +83,10 @@ namespace syncfusion.gridcontroldemos.wpf
             advancedDataTemplateCellDocumentation.Add(new Documentation { Content = "GridControl - DataTemplate Cell Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/cell-types#datatemplate-cell-type") });
             this.Demos.Add(new DemoInfo() { SampleName = "Advanced DataTemplate Cell", Description = "This sample of GridControl showcases how to load the DataTemplate into a cell. By using a DataTemplate, each cell can be customized by defining the template. In this application, some advanced controls like DataGrid, Charts, and Gauge are loaded into a cell in GridControl.", GroupName = "CELL TYPES", DemoViewType = typeof(AdvancedDataTemplateCell), ThemeMode = ThemeMode.Default, Documentations = advancedDataTemplateCellDocumentation });
 
+            List<Documentation> basicCellTypeDocumentation = new List<Documentation>();
+            basicCellTypeDocumentation.Add(new Documentation { Content = "GridControl - Basic Cell Type Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/cell-types") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Basic Cell Type", Description = "This sample showcases the following capabilities of GridControl such as to load different types of cells like TextBox, Static, Header, Checkbox, Button and Image and its contents into any cell.", GroupName = "CELL TYPES", DemoViewType = typeof(BasicCellType), ThemeMode = ThemeMode.Default, Documentations = basicCellTypeDocumentation });
+
         }
     }
 }

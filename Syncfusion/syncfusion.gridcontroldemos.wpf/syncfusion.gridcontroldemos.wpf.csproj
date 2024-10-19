@@ -43,6 +43,11 @@
     <None Remove="Assets\GridControl\ExcelLikeUi\TopAlign.png" />
     <None Remove="Assets\GridControl\ExcelLikeUi\Underline.png" />
     <None Remove="Assets\GridControl\ExcelLikeUi\Undo16.png" />
+    <None Remove="Assets\GridControl\Movies\Avatar.jpeg" />
+    <None Remove="Assets\GridControl\Movies\Iceage3.jpeg" />
+    <None Remove="Assets\GridControl\Movies\Kungfupanda2.jpeg" />
+    <None Remove="Assets\GridControl\Movies\Shrek.jpeg" />
+    <None Remove="Assets\GridControl\Movies\Toystory3.jpeg" />
     <None Remove="Assets\GridControl\UndoRedo\BeginTrans.ico" />
     <None Remove="Assets\GridControl\UndoRedo\Commit.ico" />
     <None Remove="Assets\GridControl\UndoRedo\Refresh.png" />
@@ -153,6 +158,11 @@
     <Resource Include="Assets\GridControl\ExcelLikeUi\TopAlign.png" />
     <Resource Include="Assets\GridControl\ExcelLikeUi\Underline.png" />
     <Resource Include="Assets\GridControl\ExcelLikeUi\Undo16.png" />
+    <Resource Include="Assets\GridControl\Movies\Avatar.jpeg" />
+    <Resource Include="Assets\GridControl\Movies\Iceage3.jpeg" />
+    <Resource Include="Assets\GridControl\Movies\Kungfupanda2.jpeg" />
+    <Resource Include="Assets\GridControl\Movies\Shrek.jpeg" />
+    <Resource Include="Assets\GridControl\Movies\Toystory3.jpeg" />
     <Resource Include="Assets\GridControl\UndoRedo\BeginTrans.ico" />
     <Resource Include="Assets\GridControl\UndoRedo\Commit.ico" />
     <Resource Include="Assets\GridControl\UndoRedo\Refresh.png" />
