@@ -79,6 +79,10 @@ namespace syncfusion.gridcontroldemos.wpf
             virtualGridDocumentation.Add(new Documentation { Content = "GridControl - Virtual Mode Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/virtualization#virtual-mode") });
             this.Demos.Add(new DemoInfo() { SampleName = "Virtual Grid", Description = "This sample showcases the virtualization support in GridControl that allows you to display large data sources very quickly. The data is provided to the GridControl on demand through an event that allows you to furnish the requested data in the handler. You can also instantaneously hide or show millions of rows in a GridControl.", GroupName = "GRID VIRTUALIZATION", DemoViewType = typeof(VirtualGrid), ThemeMode = ThemeMode.Default, Documentations = virtualGridDocumentation });
 
+            List<Documentation> advancedDataTemplateCellDocumentation = new List<Documentation>();
+            advancedDataTemplateCellDocumentation.Add(new Documentation { Content = "GridControl - DataTemplate Cell Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/cell-types#datatemplate-cell-type") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Advanced DataTemplate Cell", Description = "This sample of GridControl showcases how to load the DataTemplate into a cell. By using a DataTemplate, each cell can be customized by defining the template. In this application, some advanced controls like DataGrid, Charts, and Gauge are loaded into a cell in GridControl.", GroupName = "CELL TYPES", DemoViewType = typeof(AdvancedDataTemplateCell), ThemeMode = ThemeMode.Default, Documentations = advancedDataTemplateCellDocumentation });
+
         }
     }
 }
