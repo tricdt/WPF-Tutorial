@@ -20,8 +20,6 @@ namespace syncfusion.gridcontroldemos.wpf
             GridSettings();
         }
 
-
-
         public BasicCellType(string themename) : base(themename)
         {
             InitializeComponent();
