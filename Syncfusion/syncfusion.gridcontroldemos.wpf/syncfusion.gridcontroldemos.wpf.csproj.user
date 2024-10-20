@@ -19,6 +19,9 @@
     <Compile Update="Cell Types\CurrencyCell\CurrencyCell.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Cell Types\CustomDataTemplateCell\Views\CustomDataTemplateCell.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="ExcelLikeFeature\DragAndDrop\Views\ExcelLikeDragandDrop.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -73,6 +76,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Cell Types\CurrencyCell\CurrencyCell.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Cell Types\CustomDataTemplateCell\Views\CustomDataTemplateCell.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="ExcelLikeFeature\DragAndDrop\Views\ExcelLikeDragandDrop.xaml">

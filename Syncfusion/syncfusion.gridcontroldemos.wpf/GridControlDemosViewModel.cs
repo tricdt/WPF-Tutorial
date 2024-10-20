@@ -95,6 +95,10 @@ namespace syncfusion.gridcontroldemos.wpf
             currencyCellDocumentation.Add(new Documentation { Content = "GridControl - CurrencyEdit Cell Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/cell-types#currencyedit-cell-type") });
             this.Demos.Add(new DemoInfo() { SampleName = "Currency Cell", Description = "This sample showcases the Currency-Edit cell type that provides edit experience with different currency symbols, number formats, decimal digits, number groups and number group separators, etc.", GroupName = "CELL TYPES", DemoViewType = typeof(CurrencyCell), ThemeMode = ThemeMode.Default, Documentations = currencyCellDocumentation });
 
+            List<Documentation> customDataTemplateCellDocumentation = new List<Documentation>();
+            customDataTemplateCellDocumentation.Add(new Documentation { Content = "Gridcontrol - Data Template Cell Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/cell-types#data-template-cells") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Custom Data Template Cell", Description = "This sample of GridControl showcases how to load the DataTemplate into a cell. By using a DataTemplate, each and every cell can be customized with a different look and feel, achieving a colorful appearance for the entire Grid Control.", GroupName = "CELL TYPES", DemoViewType = typeof(CustomDataTemplateCell), ThemeMode = ThemeMode.Default, Documentations = customDataTemplateCellDocumentation });
+
         }
     }
 }
