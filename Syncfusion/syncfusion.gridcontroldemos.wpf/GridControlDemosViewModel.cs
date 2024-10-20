@@ -87,6 +87,10 @@ namespace syncfusion.gridcontroldemos.wpf
             basicCellTypeDocumentation.Add(new Documentation { Content = "GridControl - Basic Cell Type Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/cell-types") });
             this.Demos.Add(new DemoInfo() { SampleName = "Basic Cell Type", Description = "This sample showcases the following capabilities of GridControl such as to load different types of cells like TextBox, Static, Header, Checkbox, Button and Image and its contents into any cell.", GroupName = "CELL TYPES", DemoViewType = typeof(BasicCellType), ThemeMode = ThemeMode.Default, Documentations = basicCellTypeDocumentation });
 
+            List<Documentation> comboBoxCellDocumentation = new List<Documentation>();
+            comboBoxCellDocumentation.Add(new Documentation { Content = "GridControl - ComboBox Cell Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/cell-types#combobox-cell-type") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Combo Box Cell", Description = "This sample showcases the following capabilities of GridControl such as the use of Combo Box, Drop-Down, and Multicolumn Grid list controls in Grid cells. The various options illustrated include AutoComplete functionality, getting items for the drop-down from either a string collection or a LINQ source, and using the drop-down in a foreign-key manner. For example, displaying one column from a data source in the drop-down while saving the cell value from another column in the data source.", GroupName = "CELL TYPES", DemoViewType = typeof(ComboBoxCell), ThemeMode = ThemeMode.Default, Documentations = comboBoxCellDocumentation });
+
         }
     }
 }

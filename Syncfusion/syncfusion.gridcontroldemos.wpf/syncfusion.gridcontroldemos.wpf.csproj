@@ -54,6 +54,8 @@
     <None Remove="Assets\GridControl\UndoRedo\RollBack.ico" />
     <None Remove="Data\GridControl\Accounts.xml" />
     <None Remove="Data\GridControl\AmericanFundsPerf.xml" />
+    <None Remove="Data\GridControl\Customers.xml" />
+    <None Remove="Data\GridControl\Employees.xml" />
     <None Remove="Data\GridControl\HoldingsData.xml" />
     <None Remove="ExcelLikeFeature\FillSelection\Helpers\Cross.cur" />
   </ItemGroup>
@@ -62,6 +64,12 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Data\GridControl\AmericanFundsPerf.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\GridControl\Customers.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\GridControl\Employees.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Data\GridControl\HoldingsData.xml">
