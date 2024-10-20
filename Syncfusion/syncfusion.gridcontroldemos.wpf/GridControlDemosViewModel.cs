@@ -91,6 +91,10 @@ namespace syncfusion.gridcontroldemos.wpf
             comboBoxCellDocumentation.Add(new Documentation { Content = "GridControl - ComboBox Cell Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/cell-types#combobox-cell-type") });
             this.Demos.Add(new DemoInfo() { SampleName = "Combo Box Cell", Description = "This sample showcases the following capabilities of GridControl such as the use of Combo Box, Drop-Down, and Multicolumn Grid list controls in Grid cells. The various options illustrated include AutoComplete functionality, getting items for the drop-down from either a string collection or a LINQ source, and using the drop-down in a foreign-key manner. For example, displaying one column from a data source in the drop-down while saving the cell value from another column in the data source.", GroupName = "CELL TYPES", DemoViewType = typeof(ComboBoxCell), ThemeMode = ThemeMode.Default, Documentations = comboBoxCellDocumentation });
 
+            List<Documentation> currencyCellDocumentation = new List<Documentation>();
+            currencyCellDocumentation.Add(new Documentation { Content = "GridControl - CurrencyEdit Cell Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/cell-types#currencyedit-cell-type") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Currency Cell", Description = "This sample showcases the Currency-Edit cell type that provides edit experience with different currency symbols, number formats, decimal digits, number groups and number group separators, etc.", GroupName = "CELL TYPES", DemoViewType = typeof(CurrencyCell), ThemeMode = ThemeMode.Default, Documentations = currencyCellDocumentation });
+
         }
     }
 }
