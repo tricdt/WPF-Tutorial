@@ -28,6 +28,9 @@
     <Compile Update="Cell Types\DataTemplateCell\Views\DataTemplateCell.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Cell Types\DateTimeCell\Views\DateTimeCell.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="ExcelLikeFeature\DragAndDrop\Views\ExcelLikeDragandDrop.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -91,6 +94,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Cell Types\DataTemplateCell\Views\DataTemplateCell.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Cell Types\DateTimeCell\Views\DateTimeCell.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="ExcelLikeFeature\DragAndDrop\Views\ExcelLikeDragandDrop.xaml">

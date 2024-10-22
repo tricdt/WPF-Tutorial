@@ -108,6 +108,10 @@ namespace syncfusion.gridcontroldemos.wpf
             dataTemplateCellTemplateDocumentation.Add(new Documentation { Content = "GridControl - DataTemplate Cell Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/cell-types#datatemplate-cell-type") });
             this.Demos.Add(new DemoInfo() { SampleName = "Data Template Cell", Description = "This sample showcases how the GridControl provides a support to load the DataTemplate into a cell. By using a DataTemplate, each and every cell can be customized with a different look and feel, achieving a colorful appearance for the entire Grid Control.", GroupName = "CELL TYPES", DemoViewType = typeof(DataTemplateCell), ThemeMode = ThemeMode.Default, Documentations = dataTemplateCellTemplateDocumentation });
 
+            List<Documentation> dateTimeCellDocumentation = new List<Documentation>();
+            dateTimeCellDocumentation.Add(new Documentation { Content = "GridControl - DateTimeEdit Cell Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/cell-types#datetimeedit-cell-type") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Date Time Cell", Description = "This sample showcases the DateTime cell type that provides edit experience with attractive DateTimePicker to modify the date and time value of the cell in a GridControl.", GroupName = "CELL TYPES", DemoViewType = typeof(DateTimeCell), ThemeMode = ThemeMode.Default, Documentations = dateTimeCellDocumentation });
+
         }
     }
 }
