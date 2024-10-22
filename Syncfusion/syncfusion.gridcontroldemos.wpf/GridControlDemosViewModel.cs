@@ -112,6 +112,10 @@ namespace syncfusion.gridcontroldemos.wpf
             dateTimeCellDocumentation.Add(new Documentation { Content = "GridControl - DateTimeEdit Cell Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/cell-types#datetimeedit-cell-type") });
             this.Demos.Add(new DemoInfo() { SampleName = "Date Time Cell", Description = "This sample showcases the DateTime cell type that provides edit experience with attractive DateTimePicker to modify the date and time value of the cell in a GridControl.", GroupName = "CELL TYPES", DemoViewType = typeof(DateTimeCell), ThemeMode = ThemeMode.Default, Documentations = dateTimeCellDocumentation });
 
+            List<Documentation> doubleEditCellDocumentation = new List<Documentation>();
+            doubleEditCellDocumentation.Add(new Documentation { Content = "GridControl - DoubleEdit Cell Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/cell-types#doubleedit-cell-type") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Double Edit Cell", Description = "This sample showcases the Double-Edit cell type that provides edit experience with different number formats, decimal digits, number groups and number group separators, etc.", GroupName = "CELL TYPES", DemoViewType = typeof(DoubleEditCell), ThemeMode = ThemeMode.Default, Documentations = doubleEditCellDocumentation });
+
         }
     }
 }
