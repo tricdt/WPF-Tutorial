@@ -103,6 +103,11 @@ namespace syncfusion.gridcontroldemos.wpf
             customDropDownDocumentation.Add(new Documentation { Content = "GridControl - Custom Drop-down Cell Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/cell-types#custom-drop-down-cells") });
             this.Demos.Add(new DemoInfo() { SampleName = "Custom Drop Down", Description = "This sample showcases how to create your own custom cell renderer in GridControl and demonstrates how you can easily create a Custom Drop-Down control and renderer. The Custom Drop-Down Cell Type allow you to implement you to own custom drop-downs. The drop-downs can be easily created by inheriting the GridCellDropDownControlBase and GridCellDropDownCellRenderer base classes.", GroupName = "CELL TYPES", DemoViewType = typeof(CustomDropDown), ThemeMode = ThemeMode.Default, Documentations = customDropDownDocumentation });
 
+
+            List<Documentation> dataTemplateCellTemplateDocumentation = new List<Documentation>();
+            dataTemplateCellTemplateDocumentation.Add(new Documentation { Content = "GridControl - DataTemplate Cell Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/cell-types#datatemplate-cell-type") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Data Template Cell", Description = "This sample showcases how the GridControl provides a support to load the DataTemplate into a cell. By using a DataTemplate, each and every cell can be customized with a different look and feel, achieving a colorful appearance for the entire Grid Control.", GroupName = "CELL TYPES", DemoViewType = typeof(DataTemplateCell), ThemeMode = ThemeMode.Default, Documentations = dataTemplateCellTemplateDocumentation });
+
         }
     }
 }
