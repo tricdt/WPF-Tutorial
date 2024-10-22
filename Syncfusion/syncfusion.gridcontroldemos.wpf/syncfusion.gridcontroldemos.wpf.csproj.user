@@ -22,6 +22,9 @@
     <Compile Update="Cell Types\CustomDataTemplateCell\Views\CustomDataTemplateCell.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Cell Types\CustomDropDown\Views\CustomDropDown.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="ExcelLikeFeature\DragAndDrop\Views\ExcelLikeDragandDrop.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -81,6 +84,9 @@
     <Page Update="Cell Types\CustomDataTemplateCell\Views\CustomDataTemplateCell.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Cell Types\CustomDropDown\Views\CustomDropDown.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="ExcelLikeFeature\DragAndDrop\Views\ExcelLikeDragandDrop.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -124,6 +130,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Product ShowCase\ExcelLikeUi\Views\ExcelLikeUI.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Generic.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
