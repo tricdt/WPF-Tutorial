@@ -136,6 +136,10 @@ namespace syncfusion.gridcontroldemos.wpf
             percentEditCellDocumentation.Add(new Documentation { Content = "GridControl - PercentEdit Cell Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/cell-types#percentedit-cell-type") });
             this.Demos.Add(new DemoInfo() { SampleName = "Percent Edit Cell", Description = "This sample showcases the Percent-Edit cell type, that provides edit experience with percent symbols, decimal digits, number groups and number group separators, etc.", GroupName = "CELL TYPES", DemoViewType = typeof(PercentEditCell), ThemeMode = ThemeMode.Default, Documentations = percentEditCellDocumentation });
 
+            List<Documentation> richTextBoxCellDocumentation = new List<Documentation>();
+            richTextBoxCellDocumentation.Add(new Documentation { Content = "GridControl - RichTextBox Cell Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/cell-types#richtext-cell-type") });
+            this.Demos.Add(new DemoInfo() { SampleName = "RichTextBox Cell", Description = "This sample showcases the RichTextBox cell type, that provides you with a rich edit experience. It provides the support to load the RichTextBox into a cell by setting the CellType.", GroupName = "CELL TYPES", DemoViewType = typeof(RichTextBoxCell), ThemeMode = ThemeMode.Default, Documentations = richTextBoxCellDocumentation });
+
         }
     }
 }
