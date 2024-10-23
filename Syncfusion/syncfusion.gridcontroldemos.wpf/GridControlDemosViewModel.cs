@@ -120,6 +120,10 @@ namespace syncfusion.gridcontroldemos.wpf
             gaugeChartDocumentation.Add(new Documentation { Content = "GridControl - DataTemplate Cell Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/cell-types#datatemplate-cell-type") });
             this.Demos.Add(new DemoInfo() { SampleName = "Gauge Chart", Description = "This sample showcases how the Gauge and various Charts are loaded into a cell in GridControl. By using a DataTemplate, each cell can be customized by defining the template.", GroupName = "CELL TYPES", DemoViewType = typeof(GaugeChart), ThemeMode = ThemeMode.Default, Documentations = gaugeChartDocumentation });
 
+            List<Documentation> integerEditCellDocumentation = new List<Documentation>();
+            integerEditCellDocumentation.Add(new Documentation { Content = "GridControl - IntegerEdit Cell Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/cell-types#integeredit-cell-type") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Integer Edit Cell", Description = "This sample showcases the Integer-Edit cell type that provides edit experience with different number formats, number groups and number group separators, etc.", GroupName = "CELL TYPES", DemoViewType = typeof(IntegerEditCell), ThemeMode = ThemeMode.Default, Documentations = integerEditCellDocumentation });
+
         }
     }
 }
