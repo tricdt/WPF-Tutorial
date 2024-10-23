@@ -124,6 +124,9 @@
     <Reference Include="Syncfusion.SfChart.WPF">
       <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\WPF\26.1.35\precompiledassemblies\net6.0\Syncfusion.SfChart.WPF.dll</HintPath>
     </Reference>
+    <Reference Include="Syncfusion.SfGauge.WPF">
+      <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\WPF\26.1.35\precompiledassemblies\net6.0\Syncfusion.SfGauge.WPF.dll</HintPath>
+    </Reference>
     <Reference Include="Syncfusion.SfGrid.WPF">
       <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\WPF\26.1.35\precompiledassemblies\net6.0\Syncfusion.SfGrid.WPF.dll</HintPath>
     </Reference>

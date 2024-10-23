@@ -34,6 +34,12 @@
     <Compile Update="Cell Types\DoubleEditCell\Views\DoubleEditCell.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Cell Types\GaugeChart\Views\GaugeChart.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Cell Types\GaugeChart\Views\GaugeView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="ExcelLikeFeature\DragAndDrop\Views\ExcelLikeDragandDrop.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -103,6 +109,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Cell Types\DoubleEditCell\Views\DoubleEditCell.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Cell Types\GaugeChart\Views\GaugeChart.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Cell Types\GaugeChart\Views\GaugeView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="ExcelLikeFeature\DragAndDrop\Views\ExcelLikeDragandDrop.xaml">

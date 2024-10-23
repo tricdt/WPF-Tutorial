@@ -116,6 +116,10 @@ namespace syncfusion.gridcontroldemos.wpf
             doubleEditCellDocumentation.Add(new Documentation { Content = "GridControl - DoubleEdit Cell Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/cell-types#doubleedit-cell-type") });
             this.Demos.Add(new DemoInfo() { SampleName = "Double Edit Cell", Description = "This sample showcases the Double-Edit cell type that provides edit experience with different number formats, decimal digits, number groups and number group separators, etc.", GroupName = "CELL TYPES", DemoViewType = typeof(DoubleEditCell), ThemeMode = ThemeMode.Default, Documentations = doubleEditCellDocumentation });
 
+            List<Documentation> gaugeChartDocumentation = new List<Documentation>();
+            gaugeChartDocumentation.Add(new Documentation { Content = "GridControl - DataTemplate Cell Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/cell-types#datatemplate-cell-type") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Gauge Chart", Description = "This sample showcases how the Gauge and various Charts are loaded into a cell in GridControl. By using a DataTemplate, each cell can be customized by defining the template.", GroupName = "CELL TYPES", DemoViewType = typeof(GaugeChart), ThemeMode = ThemeMode.Default, Documentations = gaugeChartDocumentation });
+
         }
     }
 }
