@@ -132,6 +132,10 @@ namespace syncfusion.gridcontroldemos.wpf
             nestedGridDocumentation.Add(new Documentation { Content = "GridControl - Nested Grid Cell Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/cell-types#nested-grid-cell-type") });
             this.Demos.Add(new DemoInfo() { SampleName = "Nested Grid", Description = "This sample of GridControl showcases how to display nested tables in grid cells. By setting the CellType, a grid is loaded into a cell as NestedGrid.", GroupName = "CELL TYPES", DemoViewType = typeof(NestedGrid), ThemeMode = ThemeMode.Default, Documentations = nestedGridDocumentation });
 
+            List<Documentation> percentEditCellDocumentation = new List<Documentation>();
+            percentEditCellDocumentation.Add(new Documentation { Content = "GridControl - PercentEdit Cell Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/cell-types#percentedit-cell-type") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Percent Edit Cell", Description = "This sample showcases the Percent-Edit cell type, that provides edit experience with percent symbols, decimal digits, number groups and number group separators, etc.", GroupName = "CELL TYPES", DemoViewType = typeof(PercentEditCell), ThemeMode = ThemeMode.Default, Documentations = percentEditCellDocumentation });
+
         }
     }
 }
