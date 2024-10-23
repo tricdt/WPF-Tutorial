@@ -225,4 +225,7 @@
     <Resource Include="Assets\GridControl\UndoRedo\Refresh.png" />
     <Resource Include="Assets\GridControl\UndoRedo\RollBack.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Cell Types\NestedGrid\Themes\" />
+  </ItemGroup>
 </Project>

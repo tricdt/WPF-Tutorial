@@ -124,6 +124,14 @@ namespace syncfusion.gridcontroldemos.wpf
             integerEditCellDocumentation.Add(new Documentation { Content = "GridControl - IntegerEdit Cell Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/cell-types#integeredit-cell-type") });
             this.Demos.Add(new DemoInfo() { SampleName = "Integer Edit Cell", Description = "This sample showcases the Integer-Edit cell type that provides edit experience with different number formats, number groups and number group separators, etc.", GroupName = "CELL TYPES", DemoViewType = typeof(IntegerEditCell), ThemeMode = ThemeMode.Default, Documentations = integerEditCellDocumentation });
 
+            List<Documentation> maskEditCellDocumentation = new List<Documentation>();
+            maskEditCellDocumentation.Add(new Documentation { Content = "GridControl - MaskEdit Cell Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/cell-types#maskedit-cell-type") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Mask Edit Cell", Description = "This sample showcases the Mask-Edit cell type that provides edit experience with different prompt characters, number formats, date formats, time formats, number decimal separators and number group separators, etc.", GroupName = "CELL TYPES", DemoViewType = typeof(MaskEditCell), ThemeMode = ThemeMode.Default, Documentations = maskEditCellDocumentation });
+
+            List<Documentation> nestedGridDocumentation = new List<Documentation>();
+            nestedGridDocumentation.Add(new Documentation { Content = "GridControl - Nested Grid Cell Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/cell-types#nested-grid-cell-type") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Nested Grid", Description = "This sample of GridControl showcases how to display nested tables in grid cells. By setting the CellType, a grid is loaded into a cell as NestedGrid.", GroupName = "CELL TYPES", DemoViewType = typeof(NestedGrid), ThemeMode = ThemeMode.Default, Documentations = nestedGridDocumentation });
+
         }
     }
 }
