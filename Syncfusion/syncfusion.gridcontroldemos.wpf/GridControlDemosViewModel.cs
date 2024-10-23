@@ -140,6 +140,10 @@ namespace syncfusion.gridcontroldemos.wpf
             richTextBoxCellDocumentation.Add(new Documentation { Content = "GridControl - RichTextBox Cell Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/cell-types#richtext-cell-type") });
             this.Demos.Add(new DemoInfo() { SampleName = "RichTextBox Cell", Description = "This sample showcases the RichTextBox cell type, that provides you with a rich edit experience. It provides the support to load the RichTextBox into a cell by setting the CellType.", GroupName = "CELL TYPES", DemoViewType = typeof(RichTextBoxCell), ThemeMode = ThemeMode.Default, Documentations = richTextBoxCellDocumentation });
 
+            List<Documentation> textImageCellDocumentation = new List<Documentation>();
+            textImageCellDocumentation.Add(new Documentation { Content = "GridControl - Image Cell Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/cell-types#image-cell-type") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Text Image Cell", Description = "This sample of GridControl showcases how to load the images into a cell along with the text. That is, the GridControl displays both Image and text in a cell.", GroupName = "CELL TYPES", DemoViewType = typeof(TextImageCell), ThemeMode = ThemeMode.Default, Documentations = textImageCellDocumentation });
+
         }
     }
 }
