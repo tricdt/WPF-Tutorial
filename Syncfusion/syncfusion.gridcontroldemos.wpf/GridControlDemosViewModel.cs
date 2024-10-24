@@ -144,6 +144,10 @@ namespace syncfusion.gridcontroldemos.wpf
             textImageCellDocumentation.Add(new Documentation { Content = "GridControl - Image Cell Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/cell-types#image-cell-type") });
             this.Demos.Add(new DemoInfo() { SampleName = "Text Image Cell", Description = "This sample of GridControl showcases how to load the images into a cell along with the text. That is, the GridControl displays both Image and text in a cell.", GroupName = "CELL TYPES", DemoViewType = typeof(TextImageCell), ThemeMode = ThemeMode.Default, Documentations = textImageCellDocumentation });
 
+            List<Documentation> upDownCellDocumentation = new List<Documentation>();
+            upDownCellDocumentation.Add(new Documentation { Content = "GridControl - UpDownEdit Cell Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/cell-types#updownedit-cell-type") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Up Down Cell", Description = "This sample showcases the UpDown cell type, that provides you with an edit experience with decimal digits, number groups and number group separators, etc., along with a spin button that helps to increase or decrease the value by simply pressing it.", GroupName = "CELL TYPES", DemoViewType = typeof(UpDownCell), ThemeMode = ThemeMode.Default, Documentations = upDownCellDocumentation });
+
         }
     }
 }

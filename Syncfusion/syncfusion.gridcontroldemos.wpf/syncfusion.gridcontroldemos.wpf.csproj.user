@@ -58,6 +58,9 @@
     <Compile Update="Cell Types\TextImageCell\Views\TextImageCell.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Cell Types\UpdownCell\Views\UpDownCell.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="ExcelLikeFeature\DragAndDrop\Views\ExcelLikeDragandDrop.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -154,6 +157,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Cell Types\TextImageCell\Views\TextImageCell.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Cell Types\UpdownCell\Views\UpDownCell.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Data\GridControl\Finance.xaml">
