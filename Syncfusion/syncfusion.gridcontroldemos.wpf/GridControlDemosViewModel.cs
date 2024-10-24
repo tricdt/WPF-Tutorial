@@ -172,6 +172,10 @@ namespace syncfusion.gridcontroldemos.wpf
             textFormatDocumentation.Add(new Documentation { Content = "GridControl - Data Formats Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/appearance#data-formats") });
             this.Demos.Add(new DemoInfo() { SampleName = "Text Format", Description = "The sample showcases the following capabilities in GridControl such as number formatting, date-time formatting, and validating data when leaving the cell from edit mode.", GroupName = "APPEARANCE", DemoViewType = typeof(TextFormat), ThemeMode = ThemeMode.Default, Documentations = textFormatDocumentation });
 
+            List<Documentation> toolTipDocumentation = new List<Documentation>();
+            toolTipDocumentation.Add(new Documentation { Content = "GridControl - ToolTip Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/tooltip") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Tooltip", Description = "This sample of GridControl showcases how to associate the individual cells with ToolTip. ToolTip is a small pop-up box that appears when you move the mouse over a cell. It is used to display additional information about the cell. They are mainly used to display some text data. You can also display a text block with an image in the tooltip.", GroupName = "APPEARANCE", DemoViewType = typeof(Tooltip), ThemeMode = ThemeMode.Default, Documentations = toolTipDocumentation });
+
         }
     }
 }

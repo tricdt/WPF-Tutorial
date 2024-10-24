@@ -25,6 +25,9 @@
     <Compile Update="Appearance\TextFormat\Views\TextFormat.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Appearance\Tooltip\Views\Tooltip.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Cell Types\AdvancedDataTemplateCell\Views\AdvancedDataTemplateCell.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -139,6 +142,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Appearance\TextFormat\Views\TextFormat.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Appearance\Tooltip\Views\Tooltip.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Cell Types\AdvancedDataTemplateCell\Views\AdvancedDataTemplateCell.xaml">
