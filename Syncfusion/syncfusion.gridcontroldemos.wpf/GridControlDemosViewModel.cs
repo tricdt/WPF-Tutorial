@@ -160,6 +160,10 @@ namespace syncfusion.gridcontroldemos.wpf
             coveredCellDocumentation.Add(new Documentation { Content = "GridControl - Covered Cells Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/cell-layout-customization#covered-cells") });
             this.Demos.Add(new DemoInfo() { SampleName = "Covered Cell ", Description = "This sample of GridControl showcases how to combine the cells in adjacent rows or columns or both. Covered Cells are cells that span over neighboring cells. The combined cells act as like they are a single cell, visually and programmatically.", GroupName = "APPEARANCE", DemoViewType = typeof(CoveredCell), ThemeMode = ThemeMode.Default, Documentations = coveredCellDocumentation });
 
+            List<Documentation> gridStyleInfoDocumentation = new List<Documentation>();
+            gridStyleInfoDocumentation.Add(new Documentation { Content = "GridControl - GridStyleInfo Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/appearance#gridstyleinfo-class-overview") });
+            this.Demos.Add(new DemoInfo() { SampleName = "GridStyleInfo At Work", Description = "This sample showcases the following capabilities of GridControl such as the relationship between a Standard Style, Table Style, Base Style, Row Style, Column Style, and Cell Style. It lets you customize each style and allows you to choose whether you want to include the style or not.", GroupName = "APPEARANCE", DemoViewType = typeof(GridStyleInfoAtWork), ThemeMode = ThemeMode.Default, Documentations = gridStyleInfoDocumentation });
+
         }
     }
 }
