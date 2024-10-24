@@ -13,6 +13,9 @@
     <Compile Update="Appearance\CommentService\Views\CommentService.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Appearance\CoveredCell\Views\CoveredCell.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Cell Types\AdvancedDataTemplateCell\Views\AdvancedDataTemplateCell.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -115,6 +118,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Appearance\CommentService\Views\CommentService.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Appearance\CoveredCell\Views\CoveredCell.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Cell Types\AdvancedDataTemplateCell\Views\AdvancedDataTemplateCell.xaml">

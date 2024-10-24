@@ -156,6 +156,10 @@ namespace syncfusion.gridcontroldemos.wpf
             commentServiceDocumentation.Add(new Documentation { Content = "GridControl - Comment Tip Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/comment-tip") });
             this.Demos.Add(new DemoInfo() { SampleName = "Comment Service", Description = "This sample of GridControl showcases how to show comments in a cell as a small triangle at corners of the cell and display content via popup when mouse hover the small triangle. Comments are used to provide context to data in cells. Text in comments can be richly formatted to emphasize a comment concerning the cell.", GroupName = "APPEARANCE", DemoViewType = typeof(CommentService), ThemeMode = ThemeMode.Default, Documentations = commentServiceDocumentation });
 
+            List<Documentation> coveredCellDocumentation = new List<Documentation>();
+            coveredCellDocumentation.Add(new Documentation { Content = "GridControl - Covered Cells Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/cell-layout-customization#covered-cells") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Covered Cell ", Description = "This sample of GridControl showcases how to combine the cells in adjacent rows or columns or both. Covered Cells are cells that span over neighboring cells. The combined cells act as like they are a single cell, visually and programmatically.", GroupName = "APPEARANCE", DemoViewType = typeof(CoveredCell), ThemeMode = ThemeMode.Default, Documentations = coveredCellDocumentation });
+
         }
     }
 }
