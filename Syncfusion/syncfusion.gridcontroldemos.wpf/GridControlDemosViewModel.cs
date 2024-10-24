@@ -164,6 +164,10 @@ namespace syncfusion.gridcontroldemos.wpf
             gridStyleInfoDocumentation.Add(new Documentation { Content = "GridControl - GridStyleInfo Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/appearance#gridstyleinfo-class-overview") });
             this.Demos.Add(new DemoInfo() { SampleName = "GridStyleInfo At Work", Description = "This sample showcases the following capabilities of GridControl such as the relationship between a Standard Style, Table Style, Base Style, Row Style, Column Style, and Cell Style. It lets you customize each style and allows you to choose whether you want to include the style or not.", GroupName = "APPEARANCE", DemoViewType = typeof(GridStyleInfoAtWork), ThemeMode = ThemeMode.Default, Documentations = gridStyleInfoDocumentation });
 
+            List<Documentation> gridPropertiesDocumentation = new List<Documentation>();
+            gridPropertiesDocumentation.Add(new Documentation { Content = "GridControl - QueryBaseStyles API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.Grid.GridControlBase.html#Syncfusion_Windows_Controls_Grid_GridControlBase_QueryBaseStyles") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Grid Properties", Description = "This sample showcases the following capabilities of GridControl such as how to hide the headers, gridlines and how to set the styles using QueryBaseStyles and selection behaviour like ListBoxMode Selection of grid.", GroupName = "APPEARANCE", DemoViewType = typeof(GridProperties), ThemeMode = ThemeMode.Default, Documentations = gridPropertiesDocumentation });
+
         }
     }
 }

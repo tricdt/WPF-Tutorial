@@ -16,6 +16,9 @@
     <Compile Update="Appearance\CoveredCell\Views\CoveredCell.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Appearance\GridProperties\Views\GridProperties.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Appearance\GridStyleInfoAtWork\GridStyleInfoAtWork.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -124,6 +127,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Appearance\CoveredCell\Views\CoveredCell.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Appearance\GridProperties\Views\GridProperties.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Appearance\GridStyleInfoAtWork\GridStyleInfoAtWork.xaml">
