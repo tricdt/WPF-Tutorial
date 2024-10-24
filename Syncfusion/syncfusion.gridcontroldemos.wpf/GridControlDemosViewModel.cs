@@ -148,6 +148,14 @@ namespace syncfusion.gridcontroldemos.wpf
             upDownCellDocumentation.Add(new Documentation { Content = "GridControl - UpDownEdit Cell Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/cell-types#updownedit-cell-type") });
             this.Demos.Add(new DemoInfo() { SampleName = "Up Down Cell", Description = "This sample showcases the UpDown cell type, that provides you with an edit experience with decimal digits, number groups and number group separators, etc., along with a spin button that helps to increase or decrease the value by simply pressing it.", GroupName = "CELL TYPES", DemoViewType = typeof(UpDownCell), ThemeMode = ThemeMode.Default, Documentations = upDownCellDocumentation });
 
+            List<Documentation> cellStyleDocumentation = new List<Documentation>();
+            cellStyleDocumentation.Add(new Documentation { Content = "GridControl - Cell Styles Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/appearance#cell-styles") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Cell Style", Description = "This sample of GridControl showcases how to customize the appearance of each and every cell with different styles such as background, foreground, font size, font family, font styles, text orientation, and text alignment, etc.", GroupName = "APPEARANCE", DemoViewType = typeof(CellStyle), ThemeMode = ThemeMode.Default, Documentations = cellStyleDocumentation });
+
+            List<Documentation> commentServiceDocumentation = new List<Documentation>();
+            commentServiceDocumentation.Add(new Documentation { Content = "GridControl - Comment Tip Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/comment-tip") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Comment Service", Description = "This sample of GridControl showcases how to show comments in a cell as a small triangle at corners of the cell and display content via popup when mouse hover the small triangle. Comments are used to provide context to data in cells. Text in comments can be richly formatted to emphasize a comment concerning the cell.", GroupName = "APPEARANCE", DemoViewType = typeof(CommentService), ThemeMode = ThemeMode.Default, Documentations = commentServiceDocumentation });
+
         }
     }
 }

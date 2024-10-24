@@ -7,6 +7,12 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Appearance\CellStyle\Views\CellStyle.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Appearance\CommentService\Views\CommentService.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Cell Types\AdvancedDataTemplateCell\Views\AdvancedDataTemplateCell.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -105,6 +111,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Appearance\CellStyle\Views\CellStyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Appearance\CommentService\Views\CommentService.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Cell Types\AdvancedDataTemplateCell\Views\AdvancedDataTemplateCell.xaml">
       <SubType>Designer</SubType>
     </Page>
