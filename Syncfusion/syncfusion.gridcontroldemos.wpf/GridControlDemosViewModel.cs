@@ -168,6 +168,10 @@ namespace syncfusion.gridcontroldemos.wpf
             gridPropertiesDocumentation.Add(new Documentation { Content = "GridControl - QueryBaseStyles API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.Grid.GridControlBase.html#Syncfusion_Windows_Controls_Grid_GridControlBase_QueryBaseStyles") });
             this.Demos.Add(new DemoInfo() { SampleName = "Grid Properties", Description = "This sample showcases the following capabilities of GridControl such as how to hide the headers, gridlines and how to set the styles using QueryBaseStyles and selection behaviour like ListBoxMode Selection of grid.", GroupName = "APPEARANCE", DemoViewType = typeof(GridProperties), ThemeMode = ThemeMode.Default, Documentations = gridPropertiesDocumentation });
 
+            List<Documentation> textFormatDocumentation = new List<Documentation>();
+            textFormatDocumentation.Add(new Documentation { Content = "GridControl - Data Formats Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/appearance#data-formats") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Text Format", Description = "The sample showcases the following capabilities in GridControl such as number formatting, date-time formatting, and validating data when leaving the cell from edit mode.", GroupName = "APPEARANCE", DemoViewType = typeof(TextFormat), ThemeMode = ThemeMode.Default, Documentations = textFormatDocumentation });
+
         }
     }
 }
