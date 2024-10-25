@@ -176,6 +176,8 @@ namespace syncfusion.gridcontroldemos.wpf
             toolTipDocumentation.Add(new Documentation { Content = "GridControl - ToolTip Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/tooltip") });
             this.Demos.Add(new DemoInfo() { SampleName = "Tooltip", Description = "This sample of GridControl showcases how to associate the individual cells with ToolTip. ToolTip is a small pop-up box that appears when you move the mouse over a cell. It is used to display additional information about the cell. They are mainly used to display some text data. You can also display a text block with an image in the tooltip.", GroupName = "APPEARANCE", DemoViewType = typeof(Tooltip), ThemeMode = ThemeMode.Default, Documentations = toolTipDocumentation });
 
+            this.Demos.Add(new DemoInfo() { SampleName = "Formula Range Selection", Description = "This sample showcases a helper class that enables you to use your mouse to insert range references as you enter a formula from the keyboard.", GroupName = "FORMULA SUPPORT", DemoViewType = typeof(FormulaRangeSelection), ThemeMode = ThemeMode.Default });
+
         }
     }
 }
