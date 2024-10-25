@@ -8,6 +8,9 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove="Assets\GridControl\Clipboard\copy-icon.jpg" />
+    <None Remove="Assets\GridControl\Clipboard\cut-icon.jpg" />
+    <None Remove="Assets\GridControl\Clipboard\paste-icon.jpg" />
     <None Remove="Assets\GridControl\Cross.cur" />
     <None Remove="Assets\GridControl\DropDownIcon.png" />
     <None Remove="Assets\GridControl\ExcelLikeUi\AlignTextCenter16.png" />
@@ -168,6 +171,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Assets\GridControl\Cross.cur" />
     <EmbeddedResource Include="ExcelLikeFeature\FillSelection\Helpers\Cross.cur" />
+    <Resource Include="Assets\GridControl\Clipboard\copy-icon.jpg" />
+    <Resource Include="Assets\GridControl\Clipboard\cut-icon.jpg" />
+    <Resource Include="Assets\GridControl\Clipboard\paste-icon.jpg" />
     <Resource Include="Assets\GridControl\DropDownIcon.png" />
     <Resource Include="Assets\GridControl\ExcelLikeUi\AlignTextCenter16.png" />
     <Resource Include="Assets\GridControl\ExcelLikeUi\AlignTextLeft16.png" />

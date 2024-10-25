@@ -130,6 +130,9 @@
     <Compile Update="Product ShowCase\ExcelLikeUi\Views\ExcelLikeUI.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Selection\CopyToClipboard\Views\CopyToClipboard.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Appearance\CellStyle\Views\CellStyle.xaml">
@@ -262,6 +265,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Product ShowCase\ExcelLikeUi\Views\ExcelLikeUI.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Selection\CopyToClipboard\Views\CopyToClipboard.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Themes\Generic.xaml">

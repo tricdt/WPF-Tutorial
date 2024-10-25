@@ -179,6 +179,10 @@ namespace syncfusion.gridcontroldemos.wpf
             this.Demos.Add(new DemoInfo() { SampleName = "Formula Range Selection", Description = "This sample showcases a helper class that enables you to use your mouse to insert range references as you enter a formula from the keyboard.", GroupName = "FORMULA SUPPORT", DemoViewType = typeof(FormulaRangeSelection), ThemeMode = ThemeMode.Default });
             this.Demos.Add(new DemoInfo() { SampleName = "Formula Test Values", Description = "This sample showcases the following capability of GridControl such as how the values of a formula entered during runtime can be computed by using the formula engine. Currently, there are 370 functions that are supported by the formula engine, covering all common usage scenarios like Excel. GridControl provides support to create and use custom functions also.", GroupName = "FORMULA SUPPORT", DemoViewType = typeof(FormulaTestValues), ThemeMode = ThemeMode.Default });
 
+            List<Documentation> copyToClipboardDocumentation = new List<Documentation>();
+            copyToClipboardDocumentation.Add(new Documentation { Content = "GridControl - Clipboard Support Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/editing#clipboard-support") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Copy To Clipboard", Description = "This sample showcases the following capabilities of GridControl such as Clipboard Operations like Cut, Copy and Paste and also provides you with options to customize the behavior of the clipboard operations. This sample showcases the clipboard support within a GridControl and other applications by specifying the different CopyPaste options.", GroupName = "SELECTIONS", DemoViewType = typeof(CopyToClipboard), ThemeMode = ThemeMode.Default, Documentations = copyToClipboardDocumentation });
+
         }
     }
 }
