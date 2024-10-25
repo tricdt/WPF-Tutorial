@@ -188,6 +188,11 @@ namespace syncfusion.gridcontroldemos.wpf
             excelLikeSelectionDocumentation.Add(new Documentation { Content = "GridControl - Excel-Like Selection Frame Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/selection#excel-like-selection-frame") });
             this.Demos.Add(new DemoInfo() { SampleName = "Excel Like Selection", Description = "This sample showcases the following capabilities of GridControl such as, Excel-like Selection frame, Excel-like current cell moving when extending the selection using mouse and extending the selection by pressing Shift key, etc.", GroupName = "SELECTIONS", DemoViewType = typeof(ExcelLikeSelection), ThemeMode = ThemeMode.Default, Documentations = excelLikeSelectionDocumentation });
 
+            List<Documentation> selectionDocumentation = new List<Documentation>();
+            selectionDocumentation.Add(new Documentation { Content = "GridControl - AllowSelection API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.Grid.GridModelOptions.html#Syncfusion_Windows_Controls_Grid_GridModelOptions_AllowSelection") });
+            selectionDocumentation.Add(new Documentation { Content = "GridControl - Selection Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/selection") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Grid Control Selection", Description = "This sample showcases the various selection options in GridControl. That is single cell selection, ListBox selection, row selection and column selection. It also provides various event handlers to customize the behavior of the selection.", GroupName = "SELECTIONS", DemoViewType = typeof(GridControlSelection), ThemeMode = ThemeMode.Default, Documentations = selectionDocumentation });
+
         }
     }
 }
