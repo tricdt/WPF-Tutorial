@@ -85,6 +85,7 @@
     <None Remove="Data\GridControl\AmericanFundsPerf.xml" />
     <None Remove="Data\GridControl\Customers.xml" />
     <None Remove="Data\GridControl\Employees.xml" />
+    <None Remove="Data\GridControl\good.tsv" />
     <None Remove="Data\GridControl\HoldingsData.xml" />
     <None Remove="ExcelLikeFeature\FillSelection\Helpers\Cross.cur" />
   </ItemGroup>
@@ -99,6 +100,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Data\GridControl\Employees.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\GridControl\good.tsv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Data\GridControl\HoldingsData.xml">

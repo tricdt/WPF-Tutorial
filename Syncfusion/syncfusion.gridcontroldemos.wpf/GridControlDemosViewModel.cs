@@ -177,6 +177,7 @@ namespace syncfusion.gridcontroldemos.wpf
             this.Demos.Add(new DemoInfo() { SampleName = "Tooltip", Description = "This sample of GridControl showcases how to associate the individual cells with ToolTip. ToolTip is a small pop-up box that appears when you move the mouse over a cell. It is used to display additional information about the cell. They are mainly used to display some text data. You can also display a text block with an image in the tooltip.", GroupName = "APPEARANCE", DemoViewType = typeof(Tooltip), ThemeMode = ThemeMode.Default, Documentations = toolTipDocumentation });
 
             this.Demos.Add(new DemoInfo() { SampleName = "Formula Range Selection", Description = "This sample showcases a helper class that enables you to use your mouse to insert range references as you enter a formula from the keyboard.", GroupName = "FORMULA SUPPORT", DemoViewType = typeof(FormulaRangeSelection), ThemeMode = ThemeMode.Default });
+            this.Demos.Add(new DemoInfo() { SampleName = "Formula Test Values", Description = "This sample showcases the following capability of GridControl such as how the values of a formula entered during runtime can be computed by using the formula engine. Currently, there are 370 functions that are supported by the formula engine, covering all common usage scenarios like Excel. GridControl provides support to create and use custom functions also.", GroupName = "FORMULA SUPPORT", DemoViewType = typeof(FormulaTestValues), ThemeMode = ThemeMode.Default });
 
         }
     }
