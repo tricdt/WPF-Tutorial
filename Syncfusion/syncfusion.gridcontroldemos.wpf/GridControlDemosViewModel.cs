@@ -197,6 +197,12 @@ namespace syncfusion.gridcontroldemos.wpf
             borderPaddingCellsDocumentation.Add(new Documentation { Content = "GridControl - Style Properties Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/appearance#style-properties") });
             this.Demos.Add(new DemoInfo() { SampleName = "Border Padding Cells", Description = "GridControl provides support to customize the cell borders and its padding. This sample showcases the various types of border styles and border padding. Based on border padding thickness, the padding of text in a cell can also be adjusted. GridControl allows you to customize the border in each and every side of the cell.", GroupName = "GRID LAYOUT", DemoViewType = typeof(BorderPaddingCell), ThemeMode = ThemeMode.Default, Documentations = borderPaddingCellsDocumentation });
 
+            List<Documentation> dragAndDropDocumentation = new List<Documentation>();
+            dragAndDropDocumentation.Add(new Documentation { Content = "GridControl - AllowDragDrop API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.Grid.GridControlBase.html#Syncfusion_Windows_Controls_Grid_GridControlBase_AllowDragDrop") });
+            dragAndDropDocumentation.Add(new Documentation { Content = "GridControl - AllowDragColumns API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.Grid.GridControlBase.html#Syncfusion_Windows_Controls_Grid_GridControlBase_AllowDragColumns") });
+            dragAndDropDocumentation.Add(new Documentation { Content = "GridControl - Drag And Drop Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/interactive-features#drag-and-drop-columns") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Drag and Drop", Description = "This sample showcases how to drag and drop columns around the grid. An animated indicator denotes the place of the drop when dragging the column. It provides an event handler to customize the behavior of drag and drop.", GroupName = "GRID LAYOUT", DemoViewType = typeof(DragandDrop), ThemeMode = ThemeMode.Default, Documentations = dragAndDropDocumentation });
+
         }
     }
 }

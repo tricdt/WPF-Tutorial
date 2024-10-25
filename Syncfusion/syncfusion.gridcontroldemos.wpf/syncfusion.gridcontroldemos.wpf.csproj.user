@@ -118,6 +118,9 @@
     <Compile Update="Grid Layout\BorderPaddingCell\BorderPaddingCell.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Grid Layout\DragandDrop\Views\DragandDrop.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Grid Virtualization\VirtualCell\Views\VirtualCell.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -262,6 +265,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Grid Layout\BorderPaddingCell\BorderPaddingCell.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Grid Layout\DragandDrop\Views\DragandDrop.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Grid Virtualization\VirtualCell\Views\VirtualCell.xaml">
