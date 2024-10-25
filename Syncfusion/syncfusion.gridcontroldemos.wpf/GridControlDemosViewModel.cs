@@ -203,6 +203,10 @@ namespace syncfusion.gridcontroldemos.wpf
             dragAndDropDocumentation.Add(new Documentation { Content = "GridControl - Drag And Drop Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/interactive-features#drag-and-drop-columns") });
             this.Demos.Add(new DemoInfo() { SampleName = "Drag and Drop", Description = "This sample showcases how to drag and drop columns around the grid. An animated indicator denotes the place of the drop when dragging the column. It provides an event handler to customize the behavior of drag and drop.", GroupName = "GRID LAYOUT", DemoViewType = typeof(DragandDrop), ThemeMode = ThemeMode.Default, Documentations = dragAndDropDocumentation });
 
+            List<Documentation> hideRowsAndColumnsDocumentation = new List<Documentation>();
+            hideRowsAndColumnsDocumentation.Add(new Documentation { Content = "GridControl - Hide Rows And Columns Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/managing-rows-and-columns#hiding-rows-and-columns") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Hide or Show Column", Description = "This sample showcases to show or hide the set of rows and columns in GridControl.", GroupName = "GRID LAYOUT", DemoViewType = typeof(HideorShowColumn), ThemeMode = ThemeMode.Default, Documentations = hideRowsAndColumnsDocumentation });
+
         }
     }
 }
