@@ -183,6 +183,11 @@ namespace syncfusion.gridcontroldemos.wpf
             copyToClipboardDocumentation.Add(new Documentation { Content = "GridControl - Clipboard Support Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/editing#clipboard-support") });
             this.Demos.Add(new DemoInfo() { SampleName = "Copy To Clipboard", Description = "This sample showcases the following capabilities of GridControl such as Clipboard Operations like Cut, Copy and Paste and also provides you with options to customize the behavior of the clipboard operations. This sample showcases the clipboard support within a GridControl and other applications by specifying the different CopyPaste options.", GroupName = "SELECTIONS", DemoViewType = typeof(CopyToClipboard), ThemeMode = ThemeMode.Default, Documentations = copyToClipboardDocumentation });
 
+            List<Documentation> excelLikeSelectionDocumentation = new List<Documentation>();
+            excelLikeSelectionDocumentation.Add(new Documentation { Content = "GridControl - ExcelLikeSelectionFrame API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.Grid.GridModelOptions.html#Syncfusion_Windows_Controls_Grid_GridModelOptions_ExcelLikeSelectionFrame") });
+            excelLikeSelectionDocumentation.Add(new Documentation { Content = "GridControl - Excel-Like Selection Frame Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/selection#excel-like-selection-frame") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Excel Like Selection", Description = "This sample showcases the following capabilities of GridControl such as, Excel-like Selection frame, Excel-like current cell moving when extending the selection using mouse and extending the selection by pressing Shift key, etc.", GroupName = "SELECTIONS", DemoViewType = typeof(ExcelLikeSelection), ThemeMode = ThemeMode.Default, Documentations = excelLikeSelectionDocumentation });
+
         }
     }
 }
