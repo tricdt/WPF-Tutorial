@@ -193,6 +193,10 @@ namespace syncfusion.gridcontroldemos.wpf
             selectionDocumentation.Add(new Documentation { Content = "GridControl - Selection Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/selection") });
             this.Demos.Add(new DemoInfo() { SampleName = "Grid Control Selection", Description = "This sample showcases the various selection options in GridControl. That is single cell selection, ListBox selection, row selection and column selection. It also provides various event handlers to customize the behavior of the selection.", GroupName = "SELECTIONS", DemoViewType = typeof(GridControlSelection), ThemeMode = ThemeMode.Default, Documentations = selectionDocumentation });
 
+            List<Documentation> borderPaddingCellsDocumentation = new List<Documentation>();
+            borderPaddingCellsDocumentation.Add(new Documentation { Content = "GridControl - Style Properties Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/appearance#style-properties") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Border Padding Cells", Description = "GridControl provides support to customize the cell borders and its padding. This sample showcases the various types of border styles and border padding. Based on border padding thickness, the padding of text in a cell can also be adjusted. GridControl allows you to customize the border in each and every side of the cell.", GroupName = "GRID LAYOUT", DemoViewType = typeof(BorderPaddingCell), ThemeMode = ThemeMode.Default, Documentations = borderPaddingCellsDocumentation });
+
         }
     }
 }
