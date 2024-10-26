@@ -124,6 +124,9 @@
     <Compile Update="Grid Layout\HideOrShowColumn\Views\HideorShowColumn.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Grid Layout\ResizeToFit\Views\ResizeToFit.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Grid Virtualization\VirtualCell\Views\VirtualCell.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -274,6 +277,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Grid Layout\HideOrShowColumn\Views\HideorShowColumn.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Grid Layout\ResizeToFit\Views\ResizeToFit.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Grid Virtualization\VirtualCell\Views\VirtualCell.xaml">

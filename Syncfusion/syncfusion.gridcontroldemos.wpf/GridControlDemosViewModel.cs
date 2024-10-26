@@ -207,6 +207,11 @@ namespace syncfusion.gridcontroldemos.wpf
             hideRowsAndColumnsDocumentation.Add(new Documentation { Content = "GridControl - Hide Rows And Columns Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/managing-rows-and-columns#hiding-rows-and-columns") });
             this.Demos.Add(new DemoInfo() { SampleName = "Hide or Show Column", Description = "This sample showcases to show or hide the set of rows and columns in GridControl.", GroupName = "GRID LAYOUT", DemoViewType = typeof(HideorShowColumn), ThemeMode = ThemeMode.Default, Documentations = hideRowsAndColumnsDocumentation });
 
+            List<Documentation> resizeToFitDocumentation = new List<Documentation>();
+            resizeToFitDocumentation.Add(new Documentation { Content = "GridControl - ResizeRowsToFit API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.Grid.GridModel.html#Syncfusion_Windows_Controls_Grid_GridModel_ResizeRowsToFit_Syncfusion_Windows_Controls_Grid_GridRangeInfo_Syncfusion_Windows_Controls_Grid_GridResizeToFitOptions_") });
+            resizeToFitDocumentation.Add(new Documentation { Content = "GridControl - AutoFit Cells Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/autofit-cells") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Resize To Fit", Description = "This sample showcases the following capability of GridControl such as to automatically customize the height or width of the row or column, based on the content loaded into the cell. And provides the various options to customize the Auto fit behavior.", GroupName = "GRID LAYOUT", DemoViewType = typeof(ResizeToFit), ThemeMode = ThemeMode.Default, Documentations = resizeToFitDocumentation });
+
         }
     }
 }
