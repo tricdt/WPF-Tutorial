@@ -212,6 +212,10 @@ namespace syncfusion.gridcontroldemos.wpf
             resizeToFitDocumentation.Add(new Documentation { Content = "GridControl - AutoFit Cells Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/autofit-cells") });
             this.Demos.Add(new DemoInfo() { SampleName = "Resize To Fit", Description = "This sample showcases the following capability of GridControl such as to automatically customize the height or width of the row or column, based on the content loaded into the cell. And provides the various options to customize the Auto fit behavior.", GroupName = "GRID LAYOUT", DemoViewType = typeof(ResizeToFit), ThemeMode = ThemeMode.Default, Documentations = resizeToFitDocumentation });
 
+            List<Documentation> excelImportDocumentation = new List<Documentation>();
+            excelImportDocumentation.Add(new Documentation { Content = "GridControl - Import from Excel Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/import-from-excel") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Excel Import", Description = "This sample showcases the Excel Importing feature in GridControl. This Excel Importing feature allows you to import the Excel Workbook to the GridControl with the same set of features, like style, Formula, Named Ranges, Conditional Formatting, Data Validation, Freezing Pane and Bookmarks, etc.", GroupName = "IMPORT", DemoViewType = typeof(ExcelImport), DemoLauchMode = DemoLauchMode.Window, ThemeMode = ThemeMode.None, Documentations = excelImportDocumentation });
+
         }
     }
 }

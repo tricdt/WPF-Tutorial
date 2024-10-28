@@ -133,6 +133,9 @@
     <Compile Update="Grid Virtualization\VirtualGrid\Views\VirtualGrid.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Import\ExcelImport\Views\ExcelImport.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Performance\ScrollPerformance\Views\ScrollPerformance.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -286,6 +289,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Grid Virtualization\VirtualGrid\Views\VirtualGrid.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Import\ExcelImport\Views\ExcelImport.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Performance\ScrollPerformance\Views\ScrollPerformance.xaml">
