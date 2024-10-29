@@ -169,6 +169,9 @@
     <Compile Update="Selection\GridControlSelection\Views\GridControlSelection.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Serialization\GridSerialization\Views\GridSerialization.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Zooming\Views\Zooming.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -343,6 +346,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Selection\GridControlSelection\Views\GridControlSelection.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Serialization\GridSerialization\Views\GridSerialization.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Themes\Generic.xaml">

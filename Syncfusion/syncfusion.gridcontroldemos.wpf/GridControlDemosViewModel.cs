@@ -240,6 +240,10 @@ namespace syncfusion.gridcontroldemos.wpf
             zoomingDocumentation.Add(new Documentation { Content = "GridControl - Zooming Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/zooming") });
             this.Demos.Add(new DemoInfo() { SampleName = "Zooming", Description = "This sample showcases the zooming support in GridControl. User can increase or decrease the zooming level of GridControl using the ZoomScale.", GroupName = "ZOOMING", DemoViewType = typeof(Zooming), ThemeMode = ThemeMode.Default, Documentations = zoomingDocumentation });
 
+            List<Documentation> serializationDocumentation = new List<Documentation>();
+            serializationDocumentation.Add(new Documentation { Content = "GridControl - Serialization Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/serialization") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Grid Serialization", Description = "This sample showcases the support for serialization and deserialization in GridControl. GridControl serializes the GridModel into various formats like string, xml and stream, and de-serializes from it.", GroupName = "SERIALIZATION", DemoViewType = typeof(GridSerialization), ThemeMode = ThemeMode.Default, Documentations = serializationDocumentation });
+
         }
     }
 }
