@@ -221,6 +221,11 @@ namespace syncfusion.gridcontroldemos.wpf
             csvExportDocumentation.Add(new Documentation { Content = "GridControl - Export to CSV Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/export-to-excel#exporting-to-csv") });
             this.Demos.Add(new DemoInfo() { SampleName = "CSV Export", Description = "This sample showcases how to export the content of an entire Grid or the contents of the specified range of cells into the csv format. And it provides various event handlers to customize the behavior of exporting.", GroupName = "EXPORT", DemoViewType = typeof(CSVExport), ThemeMode = ThemeMode.Default, Documentations = csvExportDocumentation });
 
+            List<Documentation> excelExportDocumentation = new List<Documentation>();
+            excelExportDocumentation.Add(new Documentation { Content = "GridControl - ExportToExcel API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.Grid.Converter.GridModelExportExtensions.html#Syncfusion_Windows_Controls_Grid_Converter_GridModelExportExtensions_ExportToExcel_Syncfusion_Windows_Controls_Grid_GridModel_Syncfusion_Windows_Controls_Grid_GridRangeInfo_Syncfusion_XlsIO_IWorksheet_Syncfusion_XlsIO_IRange_Syncfusion_Windows_Controls_Grid_Converter_GridCellExportToExcelHandler_") });
+            excelExportDocumentation.Add(new Documentation { Content = "GridControl - Export to Excel Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/export-to-excel") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Excel Export", Description = "This sample showcases how to export the content of the entire Grid or the content of the specified range of cells into the excel format. And it provides various event handlers to customize the behavior of exporting.", GroupName = "EXPORT", DemoViewType = typeof(ExcelExport), ThemeMode = ThemeMode.Default, Documentations = excelExportDocumentation });
+
         }
     }
 }
