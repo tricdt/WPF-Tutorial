@@ -23,6 +23,7 @@ namespace syncfusion.gridcontroldemos.wpf
             this.ForeColorSplitButton.Click += new RoutedEventHandler(ForeColorSplitButton_Click);
             this.BGColorSplitButton.Click += new RoutedEventHandler(BGColorSplitButton_Click);
         }
+
         private void ForegroundColorPicker_SelectedBrushChanged(object? sender, SelectedBrushChangedEventArgs e)
         {
             var color = this.ForegroundColorPicker.Color;

@@ -216,6 +216,11 @@ namespace syncfusion.gridcontroldemos.wpf
             excelImportDocumentation.Add(new Documentation { Content = "GridControl - Import from Excel Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/import-from-excel") });
             this.Demos.Add(new DemoInfo() { SampleName = "Excel Import", Description = "This sample showcases the Excel Importing feature in GridControl. This Excel Importing feature allows you to import the Excel Workbook to the GridControl with the same set of features, like style, Formula, Named Ranges, Conditional Formatting, Data Validation, Freezing Pane and Bookmarks, etc.", GroupName = "IMPORT", DemoViewType = typeof(ExcelImport), DemoLauchMode = DemoLauchMode.Window, ThemeMode = ThemeMode.None, Documentations = excelImportDocumentation });
 
+            List<Documentation> csvExportDocumentation = new List<Documentation>();
+            csvExportDocumentation.Add(new Documentation { Content = "GridControl - ExportToCSV API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.Grid.Converter.GridModelExportExtensions.html#Syncfusion_Windows_Controls_Grid_Converter_GridModelExportExtensions_ExportToCSV_Syncfusion_Windows_Controls_Grid_GridModel_Syncfusion_Windows_Controls_Grid_GridRangeInfo_System_String_") });
+            csvExportDocumentation.Add(new Documentation { Content = "GridControl - Export to CSV Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/export-to-excel#exporting-to-csv") });
+            this.Demos.Add(new DemoInfo() { SampleName = "CSV Export", Description = "This sample showcases how to export the content of an entire Grid or the contents of the specified range of cells into the csv format. And it provides various event handlers to customize the behavior of exporting.", GroupName = "EXPORT", DemoViewType = typeof(CSVExport), ThemeMode = ThemeMode.Default, Documentations = csvExportDocumentation });
+
         }
     }
 }

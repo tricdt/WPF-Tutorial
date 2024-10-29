@@ -109,6 +109,9 @@
     <Compile Update="ExcelLikeFeature\UndoRedo\Views\UndoRedo.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Export\CSVExport\Views\CSVExport.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Formula Support\FormulaRangeSelection\Views\FormulaRangeSelection.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -265,6 +268,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="ExcelLikeFeature\UndoRedo\Views\UndoRedo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Export\CSVExport\Views\CSVExport.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Formula Support\FormulaRangeSelection\Views\FormulaRangeSelection.xaml">
