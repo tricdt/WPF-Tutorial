@@ -124,6 +124,9 @@
     <ProjectReference Include="..\syncfusion.demoscommon.wpf\syncfusion.demoscommon.wpf.csproj" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="Syncfusion.Compression.Base">
+      <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\WPF\26.1.35\Assemblies\4.6.2\Syncfusion.Compression.Base.dll</HintPath>
+    </Reference>
     <Reference Include="Syncfusion.Data.WPF">
       <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\WPF\26.1.35\precompiledassemblies\net6.0\Syncfusion.Data.WPF.dll</HintPath>
     </Reference>
@@ -138,6 +141,15 @@
     </Reference>
     <Reference Include="Syncfusion.Linq.Base">
       <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\WPF\26.1.35\Assemblies\4.6.2\Syncfusion.Linq.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Pdf.Base">
+      <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\WPF\26.1.35\Assemblies\4.6.2\Syncfusion.Pdf.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Pdf.WPF">
+      <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\WPF\26.1.35\Assemblies\4.6.2\Syncfusion.Pdf.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.PdfViewer.WPF">
+      <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\WPF\26.1.35\precompiledassemblies\net6.0\Syncfusion.PdfViewer.WPF.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.SfBusyIndicator.WPF">
       <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\WPF\26.1.35\precompiledassemblies\net6.0\Syncfusion.SfBusyIndicator.WPF.dll</HintPath>

@@ -226,6 +226,10 @@ namespace syncfusion.gridcontroldemos.wpf
             excelExportDocumentation.Add(new Documentation { Content = "GridControl - Export to Excel Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/export-to-excel") });
             this.Demos.Add(new DemoInfo() { SampleName = "Excel Export", Description = "This sample showcases how to export the content of the entire Grid or the content of the specified range of cells into the excel format. And it provides various event handlers to customize the behavior of exporting.", GroupName = "EXPORT", DemoViewType = typeof(ExcelExport), ThemeMode = ThemeMode.Default, Documentations = excelExportDocumentation });
 
+            List<Documentation> pdfExportDocumentation = new List<Documentation>();
+            pdfExportDocumentation.Add(new Documentation { Content = "GridControl - ExportToPdfGridDocument API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.Grid.Converter.GridPdfExportExtension.html#Syncfusion_Windows_Controls_Grid_Converter_GridPdfExportExtension_ExportToPdfGridDocument_Syncfusion_Windows_Controls_Grid_GridModel_Syncfusion_Windows_Controls_Grid_GridRangeInfo_System_String_") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Pdf Export", Description = "This sample showcases how to export the content of the entire Grid or the content of the specified range of cells into the pdf format. And it provides various event handlers to customize the behavior of exporting like adding header and footer.", GroupName = "EXPORT", DemoViewType = typeof(PdfExport), ThemeMode = ThemeMode.Default, Documentations = pdfExportDocumentation });
+
         }
     }
 }
