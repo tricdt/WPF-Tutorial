@@ -80,6 +80,7 @@
     <None Remove="Assets\GridControl\RichTextBoxCell\ReadMail.png" />
     <None Remove="Assets\GridControl\RichTextBoxCell\UnFlagged.PNG" />
     <None Remove="Assets\GridControl\RichTextBoxCell\UnreadMail.png" />
+    <None Remove="Assets\GridControl\syncfusionLogo.PNG" />
     <None Remove="Assets\GridControl\UndoRedo\BeginTrans.ico" />
     <None Remove="Assets\GridControl\UndoRedo\Commit.ico" />
     <None Remove="Assets\GridControl\UndoRedo\Refresh.png" />
@@ -265,6 +266,7 @@
     <Resource Include="Assets\GridControl\RichTextBoxCell\ReadMail.png" />
     <Resource Include="Assets\GridControl\RichTextBoxCell\UnFlagged.PNG" />
     <Resource Include="Assets\GridControl\RichTextBoxCell\UnreadMail.png" />
+    <Resource Include="Assets\GridControl\syncfusionLogo.PNG" />
     <Resource Include="Assets\GridControl\UndoRedo\BeginTrans.ico" />
     <Resource Include="Assets\GridControl\UndoRedo\Commit.ico" />
     <Resource Include="Assets\GridControl\UndoRedo\Refresh.png" />

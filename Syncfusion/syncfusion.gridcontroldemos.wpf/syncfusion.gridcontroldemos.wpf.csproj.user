@@ -151,6 +151,9 @@
     <Compile Update="Performance\TraderGridtest\Views\TraderGridTest.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Printing\Views\Printing.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Product ShowCase\ExcelLikeUi\Views\ExcelLikeUI.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -316,6 +319,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Performance\TraderGridtest\Views\TraderGridTest.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Printing\Views\Printing.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Product ShowCase\ExcelLikeUi\Views\ExcelLikeUI.xaml">
