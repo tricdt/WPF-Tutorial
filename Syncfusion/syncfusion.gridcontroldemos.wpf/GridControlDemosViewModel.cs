@@ -234,6 +234,7 @@ namespace syncfusion.gridcontroldemos.wpf
             printingDocumentation.Add(new Documentation { Content = "GridControl - Printing Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/gridcontrol/printing") });
             this.Demos.Add(new DemoInfo() { SampleName = "Printing", Description = "This sample showcases how to print the content of the entire Grid or the contents of the specified range of cells by providing various options to customize how the content is to be printed. It also provides a familiar Grid Print dialog to preview the printing.", GroupName = "PRINTING", DemoViewType = typeof(Printing), ThemeMode = ThemeMode.Default, Documentations = printingDocumentation });
 
+            this.Demos.Add(new DemoInfo() { SampleName = "Deferred Scrolling", Description = "This sample showcases the support for deferred scrolling in GridControl, That is, the Grid remains stationary when you drag the thumb of a scrollBar and updates its view only when you release the thumb of the scrollbar.", GroupName = "SCROLLING", DemoViewType = typeof(DeferredScrolling), ThemeMode = ThemeMode.Default });
         }
     }
 }

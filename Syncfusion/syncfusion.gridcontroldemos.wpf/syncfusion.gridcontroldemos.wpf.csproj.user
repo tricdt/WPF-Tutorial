@@ -157,6 +157,9 @@
     <Compile Update="Product ShowCase\ExcelLikeUi\Views\ExcelLikeUI.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Scrolling\DeferredScrolling\Views\DeferredScrolling.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Selection\CopyToClipboard\Views\CopyToClipboard.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -325,6 +328,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Product ShowCase\ExcelLikeUi\Views\ExcelLikeUI.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Scrolling\DeferredScrolling\Views\DeferredScrolling.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Selection\CopyToClipboard\Views\CopyToClipboard.xaml">
