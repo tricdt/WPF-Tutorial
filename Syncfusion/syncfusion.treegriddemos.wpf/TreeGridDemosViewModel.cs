@@ -55,6 +55,11 @@ namespace syncfusion.treegriddemos.wpf
             onDemandLoadingDocumentation.Add(new Documentation { Content = "TreeGrid - On-Demand Loading Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/treegrid/load-on-demand") });
             this.Demos.Add(new DemoInfo() { SampleName = "On-Demand Loading", Description = "This sample exposes the OnDemand data loading of SfTreeGrid.", GroupName = "GETTING STARTED", DemoViewType = typeof(OnDemandLoadingDemo), Documentations = onDemandLoadingDocumentation });
 
+            List<Documentation> sortingDocumentation = new List<Documentation>();
+            sortingDocumentation.Add(new Documentation { Content = "TreeGrid - AllowSorting API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.SfGridBase.html#Syncfusion_UI_Xaml_Grid_SfGridBase_AllowSorting") });
+            sortingDocumentation.Add(new Documentation { Content = "TreeGrid - Sorting Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/treegrid/sorting") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Sorting", Description = "This sample showcases the sorting capabilities of data in SfTreeGrid. The SfTreeGrid control allows you to sort the data against one or more columns and provides some sorting functionalities like Tristate Sorting, Showing Sort Orders or Sort Numbers.", GroupName = "SORTING", DemoViewType = typeof(SortingDemo), Documentations = sortingDocumentation });
+
         }
     }
 }
