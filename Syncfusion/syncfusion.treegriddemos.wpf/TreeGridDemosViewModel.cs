@@ -60,6 +60,10 @@ namespace syncfusion.treegriddemos.wpf
             sortingDocumentation.Add(new Documentation { Content = "TreeGrid - Sorting Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/treegrid/sorting") });
             this.Demos.Add(new DemoInfo() { SampleName = "Sorting", Description = "This sample showcases the sorting capabilities of data in SfTreeGrid. The SfTreeGrid control allows you to sort the data against one or more columns and provides some sorting functionalities like Tristate Sorting, Showing Sort Orders or Sort Numbers.", GroupName = "SORTING", DemoViewType = typeof(SortingDemo), Documentations = sortingDocumentation });
 
+            List<Documentation> customSortingDocumentation = new List<Documentation>();
+            customSortingDocumentation.Add(new Documentation { Content = "TreeGrid - Custom Sorting Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/treegrid/sorting#custom-sorting") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Custom Sorting", Description = "This sample showcases how to sort a column based on length of the string using SortComparer in SfTreeGrid.", GroupName = "SORTING", DemoViewType = typeof(CustomSortingDemo), Documentations = customSortingDocumentation });
+
         }
     }
 }

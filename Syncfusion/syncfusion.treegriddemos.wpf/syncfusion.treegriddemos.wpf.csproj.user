@@ -16,6 +16,9 @@
     <Compile Update="Views\Getting Started\SelfRelationalDataBinding.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\Sorting\CustomSorting.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\Sorting\Sorting.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -31,6 +34,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Show Case Demo\FileExplorer.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Sorting\CustomSorting.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Sorting\Sorting.xaml">
