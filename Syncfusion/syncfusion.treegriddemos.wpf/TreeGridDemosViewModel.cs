@@ -9,6 +9,7 @@ namespace syncfusion.treegriddemos.wpf
         public override List<ProductDemo> GetDemosDetails()
         {
             var productdemos = new List<ProductDemo>();
+            productdemos.Add(new TreeGridProductDemos());
             return productdemos;
         }
     }
@@ -28,16 +29,16 @@ namespace syncfusion.treegriddemos.wpf
             this.Demos = new List<DemoInfo>();
             this.ControlDescription = "The TreeGrid control displays the hierarchical or self-relational data in a tree structure with multicolumn interface like multicolumn treeview.";
             this.GalleryViewImageSource = new BitmapImage(new Uri(@"/syncfusion.demoscommon.wpf;component/Assets/GalleryViewImages/TreeGrid.png", UriKind.RelativeOrAbsolute));
-            //this.Demos.Add(new DemoInfo()
-            //{
-            //    SampleName = "File Explorer",
-            //    Description = "This sample showcases the folder directory model with SfTreeGrid. The information is loaded on demand as the user opens each parent folder.",
-            //    ImagePath = @"/syncfusion.treegriddemos.wpf;component/Assets/treegrid/FileExplorer_Icon.png",
-            //    GroupName = "PRODUCT SHOWCASE",
-            //    DemoViewType = typeof(FileExplorer),
-            //    DemoLauchMode = DemoLauchMode.Window,
-            //    ThemeMode = ThemeMode.Default
-            //});
+            this.Demos.Add(new DemoInfo()
+            {
+                SampleName = "File Explorer",
+                Description = "This sample showcases the folder directory model with SfTreeGrid. The information is loaded on demand as the user opens each parent folder.",
+                ImagePath = @"/syncfusion.treegriddemos.wpf;component/Assets/treegrid/FileExplorer_Icon.png",
+                GroupName = "PRODUCT SHOWCASE",
+                DemoViewType = typeof(FileExplorer),
+                DemoLauchMode = DemoLauchMode.Window,
+                ThemeMode = ThemeMode.Default
+            });
         }
     }
 }
