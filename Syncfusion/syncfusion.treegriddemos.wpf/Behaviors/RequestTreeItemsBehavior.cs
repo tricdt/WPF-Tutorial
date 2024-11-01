@@ -22,13 +22,28 @@ namespace syncfusion.treegriddemos.wpf
         {
             if (args.ParentItem == null)
             {
-                args.ChildItems = (IEnumerable)fileExplorerViewModel.DriveDetails;
+                if (viewModel != null)
+                    //get the root list - get all employees who have no boss 
+                    args.ChildItems = viewModel.EmployeeList.Where(x => x.ReportsTo == -1); //get all employees whose boss's id is -1 (no boss)
+                else
+                    args.ChildItems = (IEnumerable)fileExplorerViewModel.DriveDetails;
             }
             else
             {
-
-                FileInfoModel item = args.ParentItem as FileInfoModel;
-                args.ChildItems = fileExplorerViewModel.GetChildFolderContent(item);
+                if (viewModel != null)
+                {
+                    EmployeeInfo emp = args.ParentItem as EmployeeInfo;
+                    if (emp != null)
+                    {
+                        //get all employees that report to the parent employee
+                        args.ChildItems = viewModel.GetReportees(emp.ID);
+                    }
+                }
+                else
+                {
+                    FileInfoModel item = args.ParentItem as FileInfoModel;
+                    args.ChildItems = fileExplorerViewModel.GetChildFolderContent(item);
+                }
             }
         }
     }

@@ -50,6 +50,11 @@ namespace syncfusion.treegriddemos.wpf
             nestedCollectionDocumentation.Add(new Documentation { Content = "TreeGrid - Nested Collection Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/treegrid/getting-started#binding-nested-collection-with-sftreegrid") });
             this.Demos.Add(new DemoInfo() { SampleName = "Nested Collection", Description = "This sample showcases how to bind the Nested Collection data by specifying ChildPropertyName in SfTreeGrid.", GroupName = "GETTING STARTED", DemoViewType = typeof(NestedCollectionDemo), Documentations = nestedCollectionDocumentation });
 
+            List<Documentation> onDemandLoadingDocumentation = new List<Documentation>();
+            onDemandLoadingDocumentation.Add(new Documentation { Content = "TreeGrid - LoadOnDemandCommand API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.TreeGrid.SfTreeGrid.html#Syncfusion_UI_Xaml_TreeGrid_SfTreeGrid_LoadOnDemandCommand") });
+            onDemandLoadingDocumentation.Add(new Documentation { Content = "TreeGrid - On-Demand Loading Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/treegrid/load-on-demand") });
+            this.Demos.Add(new DemoInfo() { SampleName = "On-Demand Loading", Description = "This sample exposes the OnDemand data loading of SfTreeGrid.", GroupName = "GETTING STARTED", DemoViewType = typeof(OnDemandLoadingDemo), Documentations = onDemandLoadingDocumentation });
+
         }
     }
 }
