@@ -39,6 +39,13 @@ namespace syncfusion.treegriddemos.wpf
                 DemoLauchMode = DemoLauchMode.Window,
                 ThemeMode = ThemeMode.Default
             });
+
+            List<Documentation> gettingStartedDocumentation = new List<Documentation>();
+            gettingStartedDocumentation.Add(new Documentation { Content = "TreeGrid - API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.TreeGrid.SfTreeGrid.html") });
+            gettingStartedDocumentation.Add(new Documentation { Content = "TreeGrid - GettingStarted Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/treegrid/getting-started") });
+            gettingStartedDocumentation.Add(new Documentation { Content = "TreeGrid - Self-Relational Collection Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/treegrid/getting-started#binding-self-relational-data-in-sftreegrid") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Self-Relational Collection", Description = "This sample showcases how to bind the Self-Relational data by specifying ChildPropertyName and ParentPropertyName in SfTreeGrid.", GroupName = "GETTING STARTED", DemoViewType = typeof(SelfRelationalDataBinding), Documentations = gettingStartedDocumentation });
+
         }
     }
 }
