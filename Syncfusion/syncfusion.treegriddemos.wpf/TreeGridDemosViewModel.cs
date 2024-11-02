@@ -64,6 +64,11 @@ namespace syncfusion.treegriddemos.wpf
             customSortingDocumentation.Add(new Documentation { Content = "TreeGrid - Custom Sorting Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/treegrid/sorting#custom-sorting") });
             this.Demos.Add(new DemoInfo() { SampleName = "Custom Sorting", Description = "This sample showcases how to sort a column based on length of the string using SortComparer in SfTreeGrid.", GroupName = "SORTING", DemoViewType = typeof(CustomSortingDemo), Documentations = customSortingDocumentation });
 
+            List<Documentation> filteringDocumentation = new List<Documentation>();
+            filteringDocumentation.Add(new Documentation { Content = "TreeGrid - FilterLevel API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.TreeGrid.SfTreeGrid.html#Syncfusion_UI_Xaml_TreeGrid_SfTreeGrid_FilterLevel") });
+            filteringDocumentation.Add(new Documentation { Content = "TreeGrid - Filtering Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/treegrid/filtering") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Filtering", Description = "This sample showcases the filtering capabilities of SfTreeGrid.", GroupName = "FILTERING", DemoViewType = typeof(FilteringDemo), Documentations = filteringDocumentation });
+
         }
     }
 }

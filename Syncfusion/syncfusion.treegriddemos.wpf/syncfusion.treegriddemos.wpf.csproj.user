@@ -7,6 +7,9 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Views\Filtering\Filtering.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\Getting Started\NestedCollection.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -24,6 +27,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Views\Filtering\Filtering.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Views\Getting Started\NestedCollection.xaml">
       <SubType>Designer</SubType>
     </Page>
