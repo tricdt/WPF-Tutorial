@@ -69,6 +69,11 @@ namespace syncfusion.treegriddemos.wpf
             filteringDocumentation.Add(new Documentation { Content = "TreeGrid - Filtering Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/treegrid/filtering") });
             this.Demos.Add(new DemoInfo() { SampleName = "Filtering", Description = "This sample showcases the filtering capabilities of SfTreeGrid.", GroupName = "FILTERING", DemoViewType = typeof(FilteringDemo), Documentations = filteringDocumentation });
 
+            List<Documentation> advancedFilteringDocumentation = new List<Documentation>();
+            advancedFilteringDocumentation.Add(new Documentation { Content = "TreeGrid - AllowFiltering", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.TreeGrid.SfTreeGrid.html#Syncfusion_UI_Xaml_TreeGrid_SfTreeGrid_AllowFiltering") });
+            advancedFilteringDocumentation.Add(new Documentation { Content = "TreeGrid - Advanced Filtering Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/treegrid/filtering#advanced-filtering") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Advanced Filtering", Description = "This sample showcases Excel-inspired filtering capabilities in SfTreeGrid.", GroupName = "FILTERING", DemoViewType = typeof(ExcelLikeFilteringDemo), ThemeMode = ThemeMode.None, Documentations = advancedFilteringDocumentation });
+
         }
     }
 }
