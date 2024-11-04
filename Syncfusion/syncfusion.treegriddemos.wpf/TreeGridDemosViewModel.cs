@@ -74,6 +74,12 @@ namespace syncfusion.treegriddemos.wpf
             advancedFilteringDocumentation.Add(new Documentation { Content = "TreeGrid - Advanced Filtering Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/treegrid/filtering#advanced-filtering") });
             this.Demos.Add(new DemoInfo() { SampleName = "Advanced Filtering", Description = "This sample showcases Excel-inspired filtering capabilities in SfTreeGrid.", GroupName = "FILTERING", DemoViewType = typeof(ExcelLikeFilteringDemo), ThemeMode = ThemeMode.None, Documentations = advancedFilteringDocumentation });
 
+            List<Documentation> selectionDocumentation = new List<Documentation>();
+            selectionDocumentation.Add(new Documentation { Content = "TreeGrid - SelectionMode API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.SfGridBase.html#Syncfusion_UI_Xaml_Grid_SfGridBase_SelectionMode") });
+            selectionDocumentation.Add(new Documentation { Content = "TreeGrid - NavigationMode API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.SfGridBase.html#Syncfusion_UI_Xaml_Grid_SfGridBase_NavigationMode") });
+            selectionDocumentation.Add(new Documentation { Content = "TreeGrid - Selection Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/treegrid/selection") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Selection", Description = "This sample showcases the row selection capability of SfTreeGrid. SfTreeGrid control provides an interactive support for selecting rows in different mode with smooth and ease manner. It supports to select a specific row or group of rows programmatically or by Mouse and Keyboard interactions by SelectionMode property. This property provides options like Single, Multiple, Extended and None.", GroupName = "EDITING AND SELECTION", DemoViewType = typeof(SelectionDemo), Documentations = selectionDocumentation });
+
         }
     }
 }
