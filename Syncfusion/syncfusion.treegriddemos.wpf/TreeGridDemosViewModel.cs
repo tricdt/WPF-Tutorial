@@ -122,6 +122,14 @@ namespace syncfusion.treegriddemos.wpf
             cellStyleDocumentation.Add(new Documentation { Content = "TreeGrid - Styling Cells based on Records Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/treegrid/conditional-styling#style-cells-based-on-record-using-converter") });
             this.Demos.Add(new DemoInfo() { SampleName = "Cell Style", Description = "This sample showcases the conditional formatting capability of SfTreeGrid. The SfTreeGrid control allows you to format the styles of cells and rows based on certain conditions by using Converter and StyleSelector.", GroupName = "APPEARANCE", ThemeMode = ThemeMode.None, DemoViewType = typeof(CellStyleDemo), Documentations = cellStyleDocumentation });
 
+            List<Documentation> conditionalFormattingDocumentation = new List<Documentation>();
+            conditionalFormattingDocumentation.Add(new Documentation { Content = "TreeGrid - Conditional Styling Rows Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/treegrid/conditional-styling#conditional-styling-in-wpf-treegrid-sftreegrid-1") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Conditional Formatting", Description = "This sample showcases the conditional formatting capability of SfTreeGrid. The SfTreeGrid control allows you to format the styles of cells and rows based on certain conditions by using Converter and StyleSelector.", GroupName = "APPEARANCE", ThemeMode = ThemeMode.None, DemoViewType = typeof(ConditionalFormatting), Documentations = conditionalFormattingDocumentation });
+
+            List<Documentation> levelStylingDocumentation = new List<Documentation>();
+            levelStylingDocumentation.Add(new Documentation { Content = "TreeGrid - Conditional Styling Rows Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/treegrid/conditional-styling#conditional-styling-in-wpf-treegrid-sftreegrid-1") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Level Styling", Description = "This sample showcases the Level Style capabilities of SfTreeGrid. In the SfTreeGrid, the node style can be customized based on its level or depth. This sample illustrates how the background color of the node or row can be changed based on its level.", ThemeMode = ThemeMode.None, GroupName = "APPEARANCE", DemoViewType = typeof(LevelStylingDemo), Documentations = levelStylingDocumentation });
+
         }
     }
 }

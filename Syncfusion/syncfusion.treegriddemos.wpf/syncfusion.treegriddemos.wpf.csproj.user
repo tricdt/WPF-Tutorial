@@ -16,6 +16,9 @@
     <Compile Update="Views\Appearance\FrozenColumnsDemo.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\Appearance\LevelStylingDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\Columns\CellMerging.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -70,6 +73,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Appearance\FrozenColumnsDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Appearance\LevelStylingDemo.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Columns\CellMerging.xaml">
