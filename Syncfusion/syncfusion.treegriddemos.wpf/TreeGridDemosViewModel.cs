@@ -85,6 +85,11 @@ namespace syncfusion.treegriddemos.wpf
             editingDocumentation.Add(new Documentation { Content = "TreeGrid - Editing Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/treegrid/editing") });
             this.Demos.Add(new DemoInfo() { SampleName = "Editing", Description = "This sample showcases the editing capability in SfTreeGrid. SfTreeGrid provided options to trigger the edit mode by either with single or double click.", GroupName = "EDITING AND SELECTION", DemoViewType = typeof(EditingDemo), Documentations = editingDocumentation });
 
+            List<Documentation> dataValidationDocumentation = new List<Documentation>();
+            dataValidationDocumentation.Add(new Documentation { Content = "TreeGrid - GridValidationMode API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.SfGridBase.html#Syncfusion_UI_Xaml_Grid_SfGridBase_GridValidationMode") });
+            dataValidationDocumentation.Add(new Documentation { Content = "TreeGrid - Data Validation Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/treegrid/data-validation") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Data Validation", Description = "This sample showcases the data validation capability in SfTreeGrid by implementing IDataErrorInfo interface.", GroupName = "DATA VALIDATION", DemoViewType = typeof(DataValidationDemo), Documentations = dataValidationDocumentation });
+
         }
     }
 }

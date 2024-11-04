@@ -7,6 +7,9 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Views\Data Validation\DataValidationDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\Editing and Selection\Editing.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -36,6 +39,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Views\Data Validation\DataValidationDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Views\Editing and Selection\Editing.xaml">
       <SubType>Designer</SubType>
     </Page>
