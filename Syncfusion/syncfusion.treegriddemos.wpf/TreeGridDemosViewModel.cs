@@ -108,6 +108,10 @@ namespace syncfusion.treegriddemos.wpf
             stackedHeadersDocumentation.Add(new Documentation { Content = "TreeGrid - Stacked Headers Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/treegrid/columns#stacked-headers") });
             this.Demos.Add(new DemoInfo() { SampleName = "Stacked Headers", Description = "This sample showcases the Stacked headers capability in SfTreeGrid.", GroupName = "COLUMNS", DemoViewType = typeof(StackedHeaderDemo), Documentations = stackedHeadersDocumentation });
 
+            List<Documentation> cellMergeDocumentation = new List<Documentation>();
+            cellMergeDocumentation.Add(new Documentation { Content = "TreeGrid - Merge Cell Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/treegrid/mergecell") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Cell Merge", Description = "This sample showcases the merging capabilities in SfTreeGrid.", GroupName = "COLUMNS", DemoViewType = typeof(CellMerging), Documentations = cellMergeDocumentation });
+
         }
     }
 }
