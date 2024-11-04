@@ -10,6 +10,9 @@
     <Compile Update="Views\Appearance\CellStyleDemo.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\Appearance\ConditionalFormatting.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\Appearance\FrozenColumnsDemo.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -61,6 +64,9 @@
   </ItemGroup>
   <ItemGroup>
     <Page Update="Views\Appearance\CellStyleDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Appearance\ConditionalFormatting.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Appearance\FrozenColumnsDemo.xaml">
