@@ -134,6 +134,11 @@ namespace syncfusion.treegriddemos.wpf
             contextMenuDocumentation.Add(new Documentation { Content = "TreeGrid - Context Menu Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/treegrid/interactive-features#context-menu") });
             this.Demos.Add(new DemoInfo() { SampleName = "Context Menu", Description = "This sample showcases the context menu capabilities of SfTreeGrid. ContextMenu in SfTreeGrid is entirely customizable menu for the extensible functionalities of the Grid. ContextMenu is enabled for various parts of the Grid with the appropriate APIs. SfTreeGrid has a set of APIs that allows access to the context menu in various parts of the Grid.", GroupName = "INTERACTIVE FEATURES", DemoViewType = typeof(ContextMenuDemo), ThemeMode = ThemeMode.None, Documentations = contextMenuDocumentation });
 
+            List<Documentation> dragAndDropDocumentation = new List<Documentation>();
+            dragAndDropDocumentation.Add(new Documentation { Content = "TreeGrid - AllowDraggingRows API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.TreeGrid.SfTreeGrid.html#Syncfusion_UI_Xaml_TreeGrid_SfTreeGrid_AllowDraggingRows") });
+            dragAndDropDocumentation.Add(new Documentation { Content = "TreeGrid - Drag and Drop Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/treegrid/interactive-features#drag-and-drop-row") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Drag and Drop", Description = "This sample showcases the built-in row drag and drop capability of SfTreeGrid.", GroupName = "INTERACTIVE FEATURES", DemoViewType = typeof(DragAndDropDemo), Documentations = dragAndDropDocumentation });
+
         }
     }
 }

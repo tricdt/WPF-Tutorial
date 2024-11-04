@@ -55,6 +55,9 @@
     <Compile Update="Views\Interactive Features\ContextMenuDemo.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\Interactive Features\DragAndDropDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\Node CheckBox\CheckBoxSelection.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -115,6 +118,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Interactive Features\ContextMenuDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Interactive Features\DragAndDropDemo.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Node CheckBox\CheckBoxSelection.xaml">
