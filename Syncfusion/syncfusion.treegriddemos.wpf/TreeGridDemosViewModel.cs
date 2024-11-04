@@ -80,6 +80,11 @@ namespace syncfusion.treegriddemos.wpf
             selectionDocumentation.Add(new Documentation { Content = "TreeGrid - Selection Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/treegrid/selection") });
             this.Demos.Add(new DemoInfo() { SampleName = "Selection", Description = "This sample showcases the row selection capability of SfTreeGrid. SfTreeGrid control provides an interactive support for selecting rows in different mode with smooth and ease manner. It supports to select a specific row or group of rows programmatically or by Mouse and Keyboard interactions by SelectionMode property. This property provides options like Single, Multiple, Extended and None.", GroupName = "EDITING AND SELECTION", DemoViewType = typeof(SelectionDemo), Documentations = selectionDocumentation });
 
+            List<Documentation> editingDocumentation = new List<Documentation>();
+            editingDocumentation.Add(new Documentation { Content = "TreeGrid - AllowEditing API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.GridColumnBase.html#Syncfusion_UI_Xaml_Grid_GridColumnBase_AllowEditing") });
+            editingDocumentation.Add(new Documentation { Content = "TreeGrid - Editing Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/treegrid/editing") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Editing", Description = "This sample showcases the editing capability in SfTreeGrid. SfTreeGrid provided options to trigger the edit mode by either with single or double click.", GroupName = "EDITING AND SELECTION", DemoViewType = typeof(EditingDemo), Documentations = editingDocumentation });
+
         }
     }
 }
