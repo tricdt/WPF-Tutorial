@@ -90,6 +90,10 @@ namespace syncfusion.treegriddemos.wpf
             dataValidationDocumentation.Add(new Documentation { Content = "TreeGrid - Data Validation Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/treegrid/data-validation") });
             this.Demos.Add(new DemoInfo() { SampleName = "Data Validation", Description = "This sample showcases the data validation capability in SfTreeGrid by implementing IDataErrorInfo interface.", GroupName = "DATA VALIDATION", DemoViewType = typeof(DataValidationDemo), Documentations = dataValidationDocumentation });
 
+            List<Documentation> checkboxSelectionDocumentation = new List<Documentation>();
+            checkboxSelectionDocumentation.Add(new Documentation { Content = "TreeGrid - Node CheckBox Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/treegrid/node-checkbox") });
+            this.Demos.Add(new DemoInfo() { SampleName = "CheckBox Selection", Description = "This sample showcases how nodes can be selected by CheckBox in SfTreeGrid.", GroupName = "NODE CHECKBOX", DemoViewType = typeof(CheckBoxSelection), Documentations = checkboxSelectionDocumentation });
+
         }
     }
 }
