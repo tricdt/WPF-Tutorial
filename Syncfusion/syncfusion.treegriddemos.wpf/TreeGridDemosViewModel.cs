@@ -94,6 +94,10 @@ namespace syncfusion.treegriddemos.wpf
             checkboxSelectionDocumentation.Add(new Documentation { Content = "TreeGrid - Node CheckBox Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/treegrid/node-checkbox") });
             this.Demos.Add(new DemoInfo() { SampleName = "CheckBox Selection", Description = "This sample showcases how nodes can be selected by CheckBox in SfTreeGrid.", GroupName = "NODE CHECKBOX", DemoViewType = typeof(CheckBoxSelection), Documentations = checkboxSelectionDocumentation });
 
+            List<Documentation> conditionalCheckBoxDocumentation = new List<Documentation>();
+            conditionalCheckBoxDocumentation.Add(new Documentation { Content = "TreeGrid - Disabling CheckBox Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/treegrid/node-checkbox#disabling-checkbox-for-certain-nodes") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Conditional CheckBox", Description = "This sample showcases how to enable/disable CheckBox based on child nodes in SfTreeGrid.", GroupName = "NODE CHECKBOX", DemoViewType = typeof(ConditionalCheckBox), ThemeMode = ThemeMode.None, Documentations = conditionalCheckBoxDocumentation });
+
         }
     }
 }
