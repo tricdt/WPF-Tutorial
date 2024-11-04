@@ -7,6 +7,9 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Views\Appearance\CellStyleDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\Appearance\FrozenColumnsDemo.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -57,6 +60,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Views\Appearance\CellStyleDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Views\Appearance\FrozenColumnsDemo.xaml">
       <SubType>Designer</SubType>
     </Page>

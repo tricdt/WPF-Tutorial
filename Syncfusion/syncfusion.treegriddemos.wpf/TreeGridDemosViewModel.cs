@@ -118,6 +118,10 @@ namespace syncfusion.treegriddemos.wpf
             freezeColumnsDocumentation.Add(new Documentation { Content = "TreeGrid - Freezing Columns Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/treegrid/columns#freezing-columns") });
             this.Demos.Add(new DemoInfo() { SampleName = "Freeze Columns", Description = "This sample showcases the freeze columns capability of SfTreeGrid. The SfTreeGrid provides support to freeze columns at the left and also at the right similar to Excel freeze panes with the help of FrozenColumnCount and FooterColumnCount.", GroupName = "APPEARANCE", DemoViewType = typeof(FrozenColumnsDemo), Documentations = freezeColumnsDocumentation });
 
+            List<Documentation> cellStyleDocumentation = new List<Documentation>();
+            cellStyleDocumentation.Add(new Documentation { Content = "TreeGrid - Styling Cells based on Records Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/treegrid/conditional-styling#style-cells-based-on-record-using-converter") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Cell Style", Description = "This sample showcases the conditional formatting capability of SfTreeGrid. The SfTreeGrid control allows you to format the styles of cells and rows based on certain conditions by using Converter and StyleSelector.", GroupName = "APPEARANCE", ThemeMode = ThemeMode.None, DemoViewType = typeof(CellStyleDemo), Documentations = cellStyleDocumentation });
+
         }
     }
 }
