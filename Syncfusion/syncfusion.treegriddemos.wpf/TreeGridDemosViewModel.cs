@@ -103,6 +103,11 @@ namespace syncfusion.treegriddemos.wpf
             columnSizerDocumentation.Add(new Documentation { Content = "TreeGrid - Column Sizing Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/treegrid/column-sizing") });
             this.Demos.Add(new DemoInfo() { SampleName = "Column Sizer", Description = "This sample showcases the different types of column sizer capabilities in SfTreeGrid. The SfTreeGrid provides in-built feature for customizing the width of the column based on the data present in the cell by defining the ColumnSizer property. This property has different ColumnSizer options like Auto, FillColumn, AutoFillColumn, SizeToCells, SizeToHeader, Star and None.", GroupName = "COLUMNS", DemoViewType = typeof(ColumnSizerDemo), Documentations = columnSizerDocumentation });
 
+            List<Documentation> stackedHeadersDocumentation = new List<Documentation>();
+            stackedHeadersDocumentation.Add(new Documentation { Content = "TreeGrid - StackedHeaderRows API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.SfGridBase.html#Syncfusion_UI_Xaml_Grid_SfGridBase_StackedHeaderRows") });
+            stackedHeadersDocumentation.Add(new Documentation { Content = "TreeGrid - Stacked Headers Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/treegrid/columns#stacked-headers") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Stacked Headers", Description = "This sample showcases the Stacked headers capability in SfTreeGrid.", GroupName = "COLUMNS", DemoViewType = typeof(StackedHeaderDemo), Documentations = stackedHeadersDocumentation });
+
         }
     }
 }

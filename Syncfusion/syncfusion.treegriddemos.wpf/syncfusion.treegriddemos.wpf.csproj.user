@@ -10,6 +10,9 @@
     <Compile Update="Views\Columns\ColumnSizerDemo.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\Columns\StackedHeaderDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\Data Validation\DataValidationDemo.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -49,6 +52,9 @@
   </ItemGroup>
   <ItemGroup>
     <Page Update="Views\Columns\ColumnSizerDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Columns\StackedHeaderDemo.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Data Validation\DataValidationDemo.xaml">
