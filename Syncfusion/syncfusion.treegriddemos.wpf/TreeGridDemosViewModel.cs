@@ -112,6 +112,12 @@ namespace syncfusion.treegriddemos.wpf
             cellMergeDocumentation.Add(new Documentation { Content = "TreeGrid - Merge Cell Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/treegrid/mergecell") });
             this.Demos.Add(new DemoInfo() { SampleName = "Cell Merge", Description = "This sample showcases the merging capabilities in SfTreeGrid.", GroupName = "COLUMNS", DemoViewType = typeof(CellMerging), Documentations = cellMergeDocumentation });
 
+            List<Documentation> freezeColumnsDocumentation = new List<Documentation>();
+            freezeColumnsDocumentation.Add(new Documentation { Content = "TreeGrid - FrozenColumnCount API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.SfGridBase.html#Syncfusion_UI_Xaml_Grid_SfGridBase_FrozenColumnCount") });
+            freezeColumnsDocumentation.Add(new Documentation { Content = "TreeGrid - FooterColumnCount API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.SfGridBase.html#Syncfusion_UI_Xaml_Grid_SfGridBase_FooterColumnCount") });
+            freezeColumnsDocumentation.Add(new Documentation { Content = "TreeGrid - Freezing Columns Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/treegrid/columns#freezing-columns") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Freeze Columns", Description = "This sample showcases the freeze columns capability of SfTreeGrid. The SfTreeGrid provides support to freeze columns at the left and also at the right similar to Excel freeze panes with the help of FrozenColumnCount and FooterColumnCount.", GroupName = "APPEARANCE", DemoViewType = typeof(FrozenColumnsDemo), Documentations = freezeColumnsDocumentation });
+
         }
     }
 }
