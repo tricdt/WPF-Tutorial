@@ -130,6 +130,10 @@ namespace syncfusion.treegriddemos.wpf
             levelStylingDocumentation.Add(new Documentation { Content = "TreeGrid - Conditional Styling Rows Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/treegrid/conditional-styling#conditional-styling-in-wpf-treegrid-sftreegrid-1") });
             this.Demos.Add(new DemoInfo() { SampleName = "Level Styling", Description = "This sample showcases the Level Style capabilities of SfTreeGrid. In the SfTreeGrid, the node style can be customized based on its level or depth. This sample illustrates how the background color of the node or row can be changed based on its level.", ThemeMode = ThemeMode.None, GroupName = "APPEARANCE", DemoViewType = typeof(LevelStylingDemo), Documentations = levelStylingDocumentation });
 
+            List<Documentation> contextMenuDocumentation = new List<Documentation>();
+            contextMenuDocumentation.Add(new Documentation { Content = "TreeGrid - Context Menu Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/treegrid/interactive-features#context-menu") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Context Menu", Description = "This sample showcases the context menu capabilities of SfTreeGrid. ContextMenu in SfTreeGrid is entirely customizable menu for the extensible functionalities of the Grid. ContextMenu is enabled for various parts of the Grid with the appropriate APIs. SfTreeGrid has a set of APIs that allows access to the context menu in various parts of the Grid.", GroupName = "INTERACTIVE FEATURES", DemoViewType = typeof(ContextMenuDemo), ThemeMode = ThemeMode.None, Documentations = contextMenuDocumentation });
+
         }
     }
 }
