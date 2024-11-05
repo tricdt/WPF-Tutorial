@@ -48,6 +48,12 @@ namespace syncfusion.pivotgriddemos.wpf
             customizationDocumentaion.Add(new Documentation { Content = "PivotGrid - Grid Layout Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/pivot-grid/grid-layout") });
             this.Demos.Add(new DemoInfo() { SampleName = "Customization", GroupName = "PRODUCT SHOWCASE", DemoViewType = typeof(PivotGridCustomization), Description = "This sample illustrates customization of PivotGrid, such as changing GridLine color, freezing headers, showing/hiding sub-totals etc...", Documentations = customizationDocumentaion });
 
+            List<Documentation> fieldCaptionDocumentation = new List<Documentation>();
+            fieldCaptionDocumentation.Add(new Documentation { Content = "PivotGrid - PivotFields API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.PivotGrid.PivotGridControl.html#Syncfusion_Windows_Controls_PivotGrid_PivotGridControl_PivotFields") });
+            fieldCaptionDocumentation.Add(new Documentation { Content = "PivotGrid - PivotCalculations API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.PivotGrid.PivotGridControl.html#Syncfusion_Windows_Controls_PivotGrid_PivotGridControl_PivotCalculations") });
+            fieldCaptionDocumentation.Add(new Documentation { Content = "PivotGrid - Pivot Table Field List Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/pivot-grid/pivotgrid-field-list") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Field Caption", GroupName = "PRODUCT SHOWCASE", DemoViewType = typeof(FieldCaption), Description = "This sample illustrates setting caption and duplication of PivotField and PivotCalculation in PivotTable Field List.", Documentations = fieldCaptionDocumentation });
+
         }
     }
 }
