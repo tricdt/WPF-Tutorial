@@ -147,6 +147,10 @@ namespace syncfusion.treegriddemos.wpf
             pdfExportingDocumentation.Add(new Documentation { Content = "TreeGrid - Export to PDF Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/treegrid/export-to-pdf") });
             this.Demos.Add(new DemoInfo() { SampleName = "PDF Exporting", Description = "This sample showcases the PDF exporting capability of SfTreeGrid. The SfGridConverter assembly helps to provide support for exporting data from a SfTreeGrid to a PDF file. Our Pdf.Base libraries are used to support the conversion of the SfTreeGrid contents to PDF. The exporting to PDF provides the options like Auto Column Width, Auto Row Height, Export Format, Export HyperLink, Repeat Headers, Fit All Columns in one page, PdfGrid Style, PdfGrid LayoutFormat, Customize HeaderCell Style, Customize RecordCell Style, Customize Pdf Header and Footer and export all to PDF.", GroupName = "EXPORT & PRINT", DemoViewType = typeof(PDFExportingDemo), Documentations = pdfExportingDocumentation });
 
+            List<Documentation> printingDocumentation = new List<Documentation>();
+            printingDocumentation.Add(new Documentation { Content = "TreeGrid - Printing Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/treegrid/printing") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Printing", Description = "This sample showcases the printing capability of SfTreeGrid.", GroupName = "EXPORT & PRINT", DemoViewType = typeof(PrintingDemo), Documentations = printingDocumentation });
+
         }
     }
 }

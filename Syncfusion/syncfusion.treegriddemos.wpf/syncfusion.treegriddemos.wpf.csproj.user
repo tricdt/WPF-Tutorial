@@ -70,6 +70,9 @@
     <Compile Update="Views\Node CheckBox\ConditionalCheckBox.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\Printing\PrintingDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\Sorting\CustomSorting.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -139,6 +142,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Node CheckBox\ConditionalCheckBox.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Printing\PrintingDemo.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Show Case Demo\FileExplorer.xaml">

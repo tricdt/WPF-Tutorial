@@ -66,8 +66,8 @@
     <Resource Include="Assets\treegrid\Directory.png" />
     <Resource Include="Assets\treegrid\DriveNode.png" />
     <Resource Include="Assets\treegrid\FileExplorer_Icon.png" />
-    <Resource Include="Assets\treegrid\Footer.png" />
-    <Resource Include="Assets\treegrid\Header.png" />
+    <EmbeddedResource Include="Assets\treegrid\Footer.png" />
+    <EmbeddedResource Include="Assets\treegrid\Header.png" />
   </ItemGroup>
 
 </Project>
