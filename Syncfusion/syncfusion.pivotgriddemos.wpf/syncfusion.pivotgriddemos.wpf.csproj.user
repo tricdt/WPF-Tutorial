@@ -16,6 +16,9 @@
     <Compile Update="Views\ProductShowcase\PivotGridDemo.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\ProductShowcase\UIThreading.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Views\ProductShowcase\FieldCaption.xaml">
@@ -25,6 +28,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\ProductShowcase\PivotGridDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\ProductShowcase\UIThreading.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

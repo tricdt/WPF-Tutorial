@@ -54,6 +54,8 @@ namespace syncfusion.pivotgriddemos.wpf
             fieldCaptionDocumentation.Add(new Documentation { Content = "PivotGrid - Pivot Table Field List Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/pivot-grid/pivotgrid-field-list") });
             this.Demos.Add(new DemoInfo() { SampleName = "Field Caption", GroupName = "PRODUCT SHOWCASE", DemoViewType = typeof(FieldCaption), Description = "This sample illustrates setting caption and duplication of PivotField and PivotCalculation in PivotTable Field List.", Documentations = fieldCaptionDocumentation });
 
+            this.Demos.Add(new DemoInfo() { SampleName = "UI Threading", GroupName = "PRODUCT SHOWCASE", DemoViewType = typeof(UIThreading), Description = "The pivotGrid supports to load data in a different UI thread. That is, PivotGrid control can perform long running operations in a background thread so that we can access other UI controls when PivotGrid is loading. It also loads uniquely for every layout change operation, such as filtering, sorting, drag and drop, FieldList and PivotSchemaDesigner." });
+
         }
     }
 }
