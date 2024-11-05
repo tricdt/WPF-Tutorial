@@ -139,6 +139,10 @@ namespace syncfusion.treegriddemos.wpf
             dragAndDropDocumentation.Add(new Documentation { Content = "TreeGrid - Drag and Drop Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/treegrid/interactive-features#drag-and-drop-row") });
             this.Demos.Add(new DemoInfo() { SampleName = "Drag and Drop", Description = "This sample showcases the built-in row drag and drop capability of SfTreeGrid.", GroupName = "INTERACTIVE FEATURES", DemoViewType = typeof(DragAndDropDemo), Documentations = dragAndDropDocumentation });
 
+            List<Documentation> excelExportingDocumentation = new List<Documentation>();
+            excelExportingDocumentation.Add(new Documentation { Content = "TreeGrid - Export to Excel Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/treegrid/export-to-excel") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Excel Exporting", Description = "This sample showcases the excel exporting capability of SfTreeGrid. The SfGridConverter assembly helps to provide support for exporting data from a SfTreeGrid to an Excel spreadsheet. Our XlsIO libraries are used to support the conversion of the SfTreeGrid contents to Excel.", GroupName = "EXPORT & PRINT", DemoViewType = typeof(ExcelExportingDemo), Documentations = excelExportingDocumentation });
+
         }
     }
 }
