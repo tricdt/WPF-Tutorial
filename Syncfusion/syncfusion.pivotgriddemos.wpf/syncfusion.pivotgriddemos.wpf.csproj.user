@@ -7,6 +7,9 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Views\Performance\OnDemandLoading.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\ProductShowcase\FieldCaption.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -24,6 +27,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Views\Performance\OnDemandLoading.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Views\ProductShowcase\FieldCaption.xaml">
       <SubType>Designer</SubType>
     </Page>

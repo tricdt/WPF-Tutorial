@@ -61,6 +61,11 @@ namespace syncfusion.pivotgriddemos.wpf
             rowPivotsOnlyDocumentation.Add(new Documentation { Content = "PivotGrid - Row Pivots Only Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/pivot-grid/defining-rowpivotsonly-mode-for-pivotgridcont") });
             this.Demos.Add(new DemoInfo() { SampleName = "Row Pivots Only", GroupName = "PRODUCT SHOWCASE", DemoViewType = typeof(RowPivotsOnly), Description = "This sample illustrates about multiple functionalities, implemented in PivotGrid by enabling RowPivotsOnly property.", Documentations = rowPivotsOnlyDocumentation });
 
+            List<Documentation> onDemandLoadingDocumentation = new List<Documentation>();
+            onDemandLoadingDocumentation.Add(new Documentation { Content = "PivotGrid - EnableOnDemandCalculations API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.PivotAnalysis.Base.PivotEngine.html#Syncfusion_PivotAnalysis_Base_PivotEngine_EnableOnDemandCalculations") });
+            onDemandLoadingDocumentation.Add(new Documentation { Content = "PivotGrid - UseIndexedEngine API Referenece", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.PivotAnalysis.Base.PivotEngine.html#Syncfusion_PivotAnalysis_Base_PivotEngine_UseIndexedEngine") });
+            this.Demos.Add(new DemoInfo() { SampleName = "On-Demand Loading", GroupName = "PERFORMANCE", DemoViewType = typeof(OnDemandLoading), Description = "This sample illustrates the fast performance of loading data through on-demand, index-based engine in PivotGrid.", Documentations = onDemandLoadingDocumentation });
+
         }
     }
 }

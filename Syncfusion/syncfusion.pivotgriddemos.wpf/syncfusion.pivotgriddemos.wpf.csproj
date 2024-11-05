@@ -55,10 +55,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Helpers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Update="Data\pivotgrid\data.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
