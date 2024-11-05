@@ -7,11 +7,17 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Views\ProductShowcase\PivotGridCustomization.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\ProductShowcase\PivotGridDemo.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Views\ProductShowcase\PivotGridCustomization.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Views\ProductShowcase\PivotGridDemo.xaml">
       <SubType>Designer</SubType>
     </Page>

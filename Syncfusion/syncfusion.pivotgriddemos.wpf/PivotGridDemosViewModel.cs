@@ -42,6 +42,12 @@ namespace syncfusion.pivotgriddemos.wpf
             gettingStartedDocumentation.Add(new Documentation { Content = "PivotGrid - Getting Started Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/pivot-grid/pivotgrid-getting-started") });
             this.Demos.Add(new DemoInfo() { SampleName = "Getting Started", GroupName = "PRODUCT SHOWCASE", DemoViewType = typeof(PivotGridDemo), Description = "This sample illustrate to show sales data across customer geography and product categories during each fiscal year.", Documentations = gettingStartedDocumentation });
 
+            List<Documentation> customizationDocumentaion = new List<Documentation>();
+            customizationDocumentaion.Add(new Documentation { Content = "PivotGrid - GridLayout API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.PivotGrid.PivotGridControl.html#Syncfusion_Windows_Controls_PivotGrid_PivotGridControl_GridLayout") });
+            customizationDocumentaion.Add(new Documentation { Content = "PivotGrid - GridLineStroke API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.PivotGrid.PivotGridControl.html#Syncfusion_Windows_Controls_PivotGrid_PivotGridControl_GridLineStroke") });
+            customizationDocumentaion.Add(new Documentation { Content = "PivotGrid - Grid Layout Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/pivot-grid/grid-layout") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Customization", GroupName = "PRODUCT SHOWCASE", DemoViewType = typeof(PivotGridCustomization), Description = "This sample illustrates customization of PivotGrid, such as changing GridLine color, freezing headers, showing/hiding sub-totals etc...", Documentations = customizationDocumentaion });
+
         }
     }
 }
