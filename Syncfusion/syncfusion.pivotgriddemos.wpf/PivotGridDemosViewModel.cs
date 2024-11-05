@@ -9,6 +9,7 @@ namespace syncfusion.pivotgriddemos.wpf
         public override List<ProductDemo> GetDemosDetails()
         {
             var productdemos = new List<ProductDemo>();
+            productdemos.Add(new PivotGridProductDemos());
             return productdemos;
         }
     }
@@ -35,6 +36,12 @@ namespace syncfusion.pivotgriddemos.wpf
             this.ControlDescription = "The PivotGridControl organizes and summarizes business data in a cross-table format. Key features include custom calculations and export to Excel and more.";
             this.GalleryViewImageSource = new BitmapImage(new Uri(@"/syncfusion.demoscommon.wpf;component/Assets/GalleryViewImages/PivotGrid.png", UriKind.RelativeOrAbsolute));
             this.Demos = new List<DemoInfo>();
+
+            List<Documentation> gettingStartedDocumentation = new List<Documentation>();
+            gettingStartedDocumentation.Add(new Documentation { Content = "PivotGridControl - API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.PivotGrid.PivotGridControl.html") });
+            gettingStartedDocumentation.Add(new Documentation { Content = "PivotGrid - Getting Started Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/pivot-grid/pivotgrid-getting-started") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Getting Started", GroupName = "PRODUCT SHOWCASE", DemoViewType = typeof(PivotGridDemo), Description = "This sample illustrate to show sales data across customer geography and product categories during each fiscal year.", Documentations = gettingStartedDocumentation });
+
         }
     }
 }
