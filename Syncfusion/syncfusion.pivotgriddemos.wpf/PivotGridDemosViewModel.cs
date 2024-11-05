@@ -56,6 +56,11 @@ namespace syncfusion.pivotgriddemos.wpf
 
             this.Demos.Add(new DemoInfo() { SampleName = "UI Threading", GroupName = "PRODUCT SHOWCASE", DemoViewType = typeof(UIThreading), Description = "The pivotGrid supports to load data in a different UI thread. That is, PivotGrid control can perform long running operations in a background thread so that we can access other UI controls when PivotGrid is loading. It also loads uniquely for every layout change operation, such as filtering, sorting, drag and drop, FieldList and PivotSchemaDesigner." });
 
+            List<Documentation> rowPivotsOnlyDocumentation = new List<Documentation>();
+            rowPivotsOnlyDocumentation.Add(new Documentation { Content = "PivotGrid - RowPivotsOnly API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.PivotGrid.PivotGridControl.html#Syncfusion_Windows_Controls_PivotGrid_PivotGridControl_RowPivotsOnly") });
+            rowPivotsOnlyDocumentation.Add(new Documentation { Content = "PivotGrid - Row Pivots Only Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/pivot-grid/defining-rowpivotsonly-mode-for-pivotgridcont") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Row Pivots Only", GroupName = "PRODUCT SHOWCASE", DemoViewType = typeof(RowPivotsOnly), Description = "This sample illustrates about multiple functionalities, implemented in PivotGrid by enabling RowPivotsOnly property.", Documentations = rowPivotsOnlyDocumentation });
+
         }
     }
 }
