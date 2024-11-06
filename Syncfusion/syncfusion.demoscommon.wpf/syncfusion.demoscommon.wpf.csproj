@@ -79,6 +79,7 @@
     <None Remove="Assets\People\People_Circle8.png" />
     <None Remove="Assets\People\People_Circle9.png" />
     <None Remove="Assets\Population.jpg" />
+    <None Remove="Assets\ProductCategoryImages\BusinessIntilegence.png" />
     <None Remove="Assets\ProductCategoryImages\Grids.png" />
     <None Remove="Assets\RunCruise.png" />
     <None Remove="Assets\yes.png" />
@@ -256,6 +257,7 @@
     <Resource Include="Assets\People\People_Circle8.png" />
     <Resource Include="Assets\People\People_Circle9.png" />
     <Resource Include="Assets\Population.jpg" />
+    <Resource Include="Assets\ProductCategoryImages\BusinessIntilegence.png" />
     <Resource Include="Assets\ProductCategoryImages\Grids.png" />
     <Resource Include="Assets\RunCruise.png" />
     <Resource Include="Assets\yes.png" />

@@ -7,6 +7,9 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Models\BusinessObject.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Update="Views\Performance\OnDemandLoading.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -23,6 +26,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\ProductShowcase\UIThreading.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Selection\CellSelection.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -43,6 +49,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\ProductShowcase\UIThreading.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Selection\CellSelection.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

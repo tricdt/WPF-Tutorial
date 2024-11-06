@@ -66,6 +66,12 @@ namespace syncfusion.pivotgriddemos.wpf
             onDemandLoadingDocumentation.Add(new Documentation { Content = "PivotGrid - UseIndexedEngine API Referenece", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.PivotAnalysis.Base.PivotEngine.html#Syncfusion_PivotAnalysis_Base_PivotEngine_UseIndexedEngine") });
             this.Demos.Add(new DemoInfo() { SampleName = "On-Demand Loading", GroupName = "PERFORMANCE", DemoViewType = typeof(OnDemandLoading), Description = "This sample illustrates the fast performance of loading data through on-demand, index-based engine in PivotGrid.", Documentations = onDemandLoadingDocumentation });
 
+            List<Documentation> cellSelectionDocumentation = new List<Documentation>();
+            cellSelectionDocumentation.Add(new Documentation { Content = "PivotGrid - AllowSelection API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.PivotGrid.PivotGridControl.html#Syncfusion_Windows_Controls_PivotGrid_PivotGridControl_AllowSelection") });
+            cellSelectionDocumentation.Add(new Documentation { Content = "PivotGrid - AllowSelectionWithHeaders API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.PivotGrid.PivotGridControl.html#Syncfusion_Windows_Controls_PivotGrid_PivotGridControl_AllowSelectionWithHeaders") });
+            cellSelectionDocumentation.Add(new Documentation { Content = "PivotGrid - Cell Selection Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/pivot-grid/selection") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Cell Selection", GroupName = "SELECTION", DemoViewType = typeof(CellSelection), Description = "This sample illustrates the cell selection in PivotGrid.", Documentations = cellSelectionDocumentation });
+
         }
     }
 }
