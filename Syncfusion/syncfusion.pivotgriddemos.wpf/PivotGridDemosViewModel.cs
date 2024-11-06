@@ -9,6 +9,7 @@ namespace syncfusion.pivotgriddemos.wpf
         public override List<ProductDemo> GetDemosDetails()
         {
             var productdemos = new List<ProductDemo>();
+            productdemos.Add(new PivotGridProductDemos());
             return productdemos;
         }
     }
@@ -35,6 +36,42 @@ namespace syncfusion.pivotgriddemos.wpf
             this.ControlDescription = "The PivotGridControl organizes and summarizes business data in a cross-table format. Key features include custom calculations and export to Excel and more.";
             this.GalleryViewImageSource = new BitmapImage(new Uri(@"/syncfusion.demoscommon.wpf;component/Assets/GalleryViewImages/PivotGrid.png", UriKind.RelativeOrAbsolute));
             this.Demos = new List<DemoInfo>();
+
+            List<Documentation> gettingStartedDocumentation = new List<Documentation>();
+            gettingStartedDocumentation.Add(new Documentation { Content = "PivotGridControl - API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.PivotGrid.PivotGridControl.html") });
+            gettingStartedDocumentation.Add(new Documentation { Content = "PivotGrid - Getting Started Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/pivot-grid/pivotgrid-getting-started") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Getting Started", GroupName = "PRODUCT SHOWCASE", DemoViewType = typeof(PivotGridDemo), Description = "This sample illustrate to show sales data across customer geography and product categories during each fiscal year.", Documentations = gettingStartedDocumentation });
+
+            List<Documentation> customizationDocumentaion = new List<Documentation>();
+            customizationDocumentaion.Add(new Documentation { Content = "PivotGrid - GridLayout API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.PivotGrid.PivotGridControl.html#Syncfusion_Windows_Controls_PivotGrid_PivotGridControl_GridLayout") });
+            customizationDocumentaion.Add(new Documentation { Content = "PivotGrid - GridLineStroke API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.PivotGrid.PivotGridControl.html#Syncfusion_Windows_Controls_PivotGrid_PivotGridControl_GridLineStroke") });
+            customizationDocumentaion.Add(new Documentation { Content = "PivotGrid - Grid Layout Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/pivot-grid/grid-layout") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Customization", GroupName = "PRODUCT SHOWCASE", DemoViewType = typeof(PivotGridCustomization), Description = "This sample illustrates customization of PivotGrid, such as changing GridLine color, freezing headers, showing/hiding sub-totals etc...", Documentations = customizationDocumentaion });
+
+            List<Documentation> fieldCaptionDocumentation = new List<Documentation>();
+            fieldCaptionDocumentation.Add(new Documentation { Content = "PivotGrid - PivotFields API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.PivotGrid.PivotGridControl.html#Syncfusion_Windows_Controls_PivotGrid_PivotGridControl_PivotFields") });
+            fieldCaptionDocumentation.Add(new Documentation { Content = "PivotGrid - PivotCalculations API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.PivotGrid.PivotGridControl.html#Syncfusion_Windows_Controls_PivotGrid_PivotGridControl_PivotCalculations") });
+            fieldCaptionDocumentation.Add(new Documentation { Content = "PivotGrid - Pivot Table Field List Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/pivot-grid/pivotgrid-field-list") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Field Caption", GroupName = "PRODUCT SHOWCASE", DemoViewType = typeof(FieldCaption), Description = "This sample illustrates setting caption and duplication of PivotField and PivotCalculation in PivotTable Field List.", Documentations = fieldCaptionDocumentation });
+
+            this.Demos.Add(new DemoInfo() { SampleName = "UI Threading", GroupName = "PRODUCT SHOWCASE", DemoViewType = typeof(UIThreading), Description = "The pivotGrid supports to load data in a different UI thread. That is, PivotGrid control can perform long running operations in a background thread so that we can access other UI controls when PivotGrid is loading. It also loads uniquely for every layout change operation, such as filtering, sorting, drag and drop, FieldList and PivotSchemaDesigner." });
+
+            List<Documentation> rowPivotsOnlyDocumentation = new List<Documentation>();
+            rowPivotsOnlyDocumentation.Add(new Documentation { Content = "PivotGrid - RowPivotsOnly API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.PivotGrid.PivotGridControl.html#Syncfusion_Windows_Controls_PivotGrid_PivotGridControl_RowPivotsOnly") });
+            rowPivotsOnlyDocumentation.Add(new Documentation { Content = "PivotGrid - Row Pivots Only Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/pivot-grid/defining-rowpivotsonly-mode-for-pivotgridcont") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Row Pivots Only", GroupName = "PRODUCT SHOWCASE", DemoViewType = typeof(RowPivotsOnly), Description = "This sample illustrates about multiple functionalities, implemented in PivotGrid by enabling RowPivotsOnly property.", Documentations = rowPivotsOnlyDocumentation });
+
+            List<Documentation> onDemandLoadingDocumentation = new List<Documentation>();
+            onDemandLoadingDocumentation.Add(new Documentation { Content = "PivotGrid - EnableOnDemandCalculations API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.PivotAnalysis.Base.PivotEngine.html#Syncfusion_PivotAnalysis_Base_PivotEngine_EnableOnDemandCalculations") });
+            onDemandLoadingDocumentation.Add(new Documentation { Content = "PivotGrid - UseIndexedEngine API Referenece", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.PivotAnalysis.Base.PivotEngine.html#Syncfusion_PivotAnalysis_Base_PivotEngine_UseIndexedEngine") });
+            this.Demos.Add(new DemoInfo() { SampleName = "On-Demand Loading", GroupName = "PERFORMANCE", DemoViewType = typeof(OnDemandLoading), Description = "This sample illustrates the fast performance of loading data through on-demand, index-based engine in PivotGrid.", Documentations = onDemandLoadingDocumentation });
+
+            List<Documentation> cellSelectionDocumentation = new List<Documentation>();
+            cellSelectionDocumentation.Add(new Documentation { Content = "PivotGrid - AllowSelection API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.PivotGrid.PivotGridControl.html#Syncfusion_Windows_Controls_PivotGrid_PivotGridControl_AllowSelection") });
+            cellSelectionDocumentation.Add(new Documentation { Content = "PivotGrid - AllowSelectionWithHeaders API Reference", Uri = new Uri("https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.PivotGrid.PivotGridControl.html#Syncfusion_Windows_Controls_PivotGrid_PivotGridControl_AllowSelectionWithHeaders") });
+            cellSelectionDocumentation.Add(new Documentation { Content = "PivotGrid - Cell Selection Documentation", Uri = new Uri("https://help.syncfusion.com/wpf/pivot-grid/selection") });
+            this.Demos.Add(new DemoInfo() { SampleName = "Cell Selection", GroupName = "SELECTION", DemoViewType = typeof(CellSelection), Description = "This sample illustrates the cell selection in PivotGrid.", Documentations = cellSelectionDocumentation });
+
         }
     }
 }

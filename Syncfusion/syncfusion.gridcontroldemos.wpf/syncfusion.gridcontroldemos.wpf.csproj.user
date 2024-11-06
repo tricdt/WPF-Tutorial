@@ -7,6 +7,27 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Appearance\CellStyle\Views\CellStyle.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Appearance\CommentService\Views\CommentService.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Appearance\CoveredCell\Views\CoveredCell.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Appearance\GridProperties\Views\GridProperties.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Appearance\GridStyleInfoAtWork\GridStyleInfoAtWork.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Appearance\TextFormat\Views\TextFormat.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Appearance\Tooltip\Views\Tooltip.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Cell Types\AdvancedDataTemplateCell\Views\AdvancedDataTemplateCell.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -14,6 +35,51 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Cell Types\ComboboxCell\Views\ComboBoxCell.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Cell Types\CurrencyCell\CurrencyCell.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Cell Types\CustomDataTemplateCell\Views\CustomDataTemplateCell.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Cell Types\CustomDropDown\Views\CustomDropDown.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Cell Types\DataTemplateCell\Views\DataTemplateCell.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Cell Types\DateTimeCell\Views\DateTimeCell.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Cell Types\DoubleEditCell\Views\DoubleEditCell.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Cell Types\GaugeChart\Views\GaugeChart.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Cell Types\GaugeChart\Views\GaugeView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Cell Types\IntegerEditCell\Views\IntegerEditCell.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Cell Types\MaskEditCell\Views\MaskEditCell.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Cell Types\NestedGrid\Views\NestedGrid.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Cell Types\PercentEditCell\Views\PercentEditCell.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Cell Types\RichTextBoxCell\Views\RichTextBoxCell.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Cell Types\TextImageCell\Views\TextImageCell.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Cell Types\UpdownCell\Views\UpDownCell.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="ExcelLikeFeature\DragAndDrop\Views\ExcelLikeDragandDrop.xaml.cs">
@@ -43,10 +109,40 @@
     <Compile Update="ExcelLikeFeature\UndoRedo\Views\UndoRedo.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Export\CSVExport\Views\CSVExport.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Export\ExcelExport\Views\ExcelExport.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Export\PdfExport\Views\PdfExport.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Formula Support\FormulaRangeSelection\Views\FormulaRangeSelection.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Formula Support\FormulaTestValues\Views\FormulaTestValues.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Grid Layout\BorderPaddingCell\BorderPaddingCell.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Grid Layout\DragandDrop\Views\DragandDrop.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Grid Layout\HideOrShowColumn\Views\HideorShowColumn.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Grid Layout\ResizeToFit\Views\ResizeToFit.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Grid Virtualization\VirtualCell\Views\VirtualCell.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Grid Virtualization\VirtualGrid\Views\VirtualGrid.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Import\ExcelImport\Views\ExcelImport.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Performance\ScrollPerformance\Views\ScrollPerformance.xaml.cs">
@@ -55,11 +151,53 @@
     <Compile Update="Performance\TraderGridtest\Views\TraderGridTest.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Printing\Views\Printing.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Product ShowCase\ExcelLikeUi\Views\ExcelLikeUI.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Scrolling\DeferredScrolling\Views\DeferredScrolling.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Selection\CopyToClipboard\Views\CopyToClipboard.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Selection\ExcelLikeSelection\Views\ExcelLikeSelection.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Selection\GridControlSelection\Views\GridControlSelection.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Serialization\GridSerialization\Views\GridSerialization.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Zooming\Views\Zooming.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Appearance\CellStyle\Views\CellStyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Appearance\CommentService\Views\CommentService.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Appearance\CoveredCell\Views\CoveredCell.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Appearance\GridProperties\Views\GridProperties.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Appearance\GridStyleInfoAtWork\GridStyleInfoAtWork.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Appearance\TextFormat\Views\TextFormat.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Appearance\Tooltip\Views\Tooltip.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Cell Types\AdvancedDataTemplateCell\Views\AdvancedDataTemplateCell.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -67,6 +205,57 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Cell Types\ComboboxCell\Views\ComboBoxCell.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Cell Types\CurrencyCell\CurrencyCell.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Cell Types\CustomDataTemplateCell\Views\CustomDataTemplateCell.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Cell Types\CustomDropDown\Views\CustomDropDown.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Cell Types\DataTemplateCell\Views\DataTemplateCell.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Cell Types\DateTimeCell\Views\DateTimeCell.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Cell Types\DoubleEditCell\Views\DoubleEditCell.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Cell Types\GaugeChart\Views\GaugeChart.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Cell Types\GaugeChart\Views\GaugeView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Cell Types\IntegerEditCell\Views\IntegerEditCell.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Cell Types\MaskEditCell\Views\MaskEditCell.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Cell Types\NestedGrid\Themes\Resources.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Cell Types\NestedGrid\Views\NestedGrid.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Cell Types\PercentEditCell\Views\PercentEditCell.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Cell Types\RichTextBoxCell\Views\RichTextBoxCell.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Cell Types\TextImageCell\Views\TextImageCell.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Cell Types\UpdownCell\Views\UpDownCell.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Data\GridControl\Finance.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="ExcelLikeFeature\DragAndDrop\Views\ExcelLikeDragandDrop.xaml">
@@ -99,10 +288,40 @@
     <Page Update="ExcelLikeFeature\UndoRedo\Views\UndoRedo.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Export\CSVExport\Views\CSVExport.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Export\ExcelExport\Views\ExcelExport.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Export\PdfExport\Views\PdfExport.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Formula Support\FormulaRangeSelection\Views\FormulaRangeSelection.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Formula Support\FormulaTestValues\Views\FormulaTestValues.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Grid Layout\BorderPaddingCell\BorderPaddingCell.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Grid Layout\DragandDrop\Views\DragandDrop.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Grid Layout\HideOrShowColumn\Views\HideorShowColumn.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Grid Layout\ResizeToFit\Views\ResizeToFit.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Grid Virtualization\VirtualCell\Views\VirtualCell.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Grid Virtualization\VirtualGrid\Views\VirtualGrid.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Import\ExcelImport\Views\ExcelImport.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Performance\ScrollPerformance\Views\ScrollPerformance.xaml">
@@ -111,7 +330,31 @@
     <Page Update="Performance\TraderGridtest\Views\TraderGridTest.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Printing\Views\Printing.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Product ShowCase\ExcelLikeUi\Views\ExcelLikeUI.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Scrolling\DeferredScrolling\Views\DeferredScrolling.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Selection\CopyToClipboard\Views\CopyToClipboard.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Selection\ExcelLikeSelection\Views\ExcelLikeSelection.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Selection\GridControlSelection\Views\GridControlSelection.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Serialization\GridSerialization\Views\GridSerialization.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Zooming\Views\Zooming.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

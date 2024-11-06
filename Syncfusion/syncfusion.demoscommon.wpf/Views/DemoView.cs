@@ -80,10 +80,10 @@ namespace syncfusion.demoscommon.wpf
 
         protected virtual void Dispose(bool disposing)
         {
-            //this.ROOT = null;
-            //this.SAMPLEVIEW = null;
-            //this.OPTIONSVIEW = null;
-            //this.OPTIONSBORDER = null;
+            this.ROOT = null;
+            this.SAMPLEVIEW = null;
+            this.OPTIONSVIEW = null;
+            this.OPTIONSBORDER = null;
         }
         /// <summary>
         ///  Gets or sets the options view.

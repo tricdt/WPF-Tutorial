@@ -15,8 +15,8 @@ namespace syncfusion.samplebrowser.wpf
             productdemos.Add(new DataGridProductDemos());
             productdemos.Add(new GridControlProductDemos());
             productdemos.Add(new TreeGridProductDemos());
-            productdemos.Add(new PivotGridProductDemos());
             productdemos.Add(new PropertyGridProductDemos());
+            productdemos.Add(new PivotGridProductDemos());
             productdemos.Add(new ChartProductDemos());
             return productdemos;
         }

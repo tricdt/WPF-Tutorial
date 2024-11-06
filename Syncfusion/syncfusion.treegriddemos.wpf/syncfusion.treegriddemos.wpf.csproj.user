@@ -7,7 +7,153 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="MainWindow.xaml">
+    <Compile Update="Views\Appearance\CellStyleDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Appearance\ConditionalFormatting.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Appearance\FrozenColumnsDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Appearance\LevelStylingDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Columns\CellMerging.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Columns\ColumnSizerDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Columns\StackedHeaderDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Data Validation\DataValidationDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Editing and Selection\Editing.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Editing and Selection\Selection.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Exporting\ExcelExportingDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Exporting\PDFExportingDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Filtering\ExcelLikeFiltering.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Filtering\Filtering.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Getting Started\NestedCollection.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Getting Started\OnDemandLoading.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Getting Started\SelfRelationalDataBinding.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Interactive Features\ContextMenuDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Interactive Features\DragAndDropDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Node CheckBox\CheckBoxSelection.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Node CheckBox\ConditionalCheckBox.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Printing\PrintingDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Sorting\CustomSorting.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Sorting\Sorting.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Views\Appearance\CellStyleDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Appearance\ConditionalFormatting.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Appearance\FrozenColumnsDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Appearance\LevelStylingDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Columns\CellMerging.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Columns\ColumnSizerDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Columns\StackedHeaderDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Data Validation\DataValidationDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Editing and Selection\Editing.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Editing and Selection\Selection.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Exporting\ExcelExportingDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Exporting\PDFExportingDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Filtering\ExcelLikeFiltering.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Filtering\Filtering.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Getting Started\NestedCollection.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Getting Started\OnDemandLoading.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Getting Started\SelfRelationalDataBinding.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Interactive Features\ContextMenuDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Interactive Features\DragAndDropDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Node CheckBox\CheckBoxSelection.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Node CheckBox\ConditionalCheckBox.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Printing\PrintingDemo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Show Case Demo\FileExplorer.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Sorting\CustomSorting.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Sorting\Sorting.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
