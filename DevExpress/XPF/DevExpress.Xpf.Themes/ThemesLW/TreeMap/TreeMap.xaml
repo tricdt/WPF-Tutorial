@@ -1,0 +1,17 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:dxi="http://schemas.devexpress.com/winfx/2008/xaml/core/internal"
+    xmlns:dxt="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys"
+    xmlns:dxtmt="http://schemas.devexpress.com/winfx/2008/xaml/treemap/themekeys"
+    xmlns:cs="colorscheme_ignorable_uri"
+    mc:Ignorable="cs">
+
+    <ResourceDictionary.MergedDictionaries>
+        <dxi:ThemeResourceDictionary Path="TreeMap/_{ThemeCategory}.xaml" />
+        <dxi:ThemeResourceDictionary Path="TreeMap/Generic.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+</ResourceDictionary>

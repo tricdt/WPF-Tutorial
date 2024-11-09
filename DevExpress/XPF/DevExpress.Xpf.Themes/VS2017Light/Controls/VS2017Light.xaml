@@ -1,0 +1,18 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:dxt="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys">
+  <ResourceDictionary.MergedDictionaries>
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.VS2017Light.v24.1;component/Controls/WindowsUI/VS2017Light/FadingButton.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.VS2017Light.v24.1;component/Controls/WindowsUI/VS2017Light/FlipView.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.VS2017Light.v24.1;component/Controls/WindowsUI/VS2017Light/PageView.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.VS2017Light.v24.1;component/Controls/WindowsUI/VS2017Light/SlideView.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.VS2017Light.v24.1;component/Controls/WindowsUI/VS2017Light/CommandButton.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.VS2017Light.v24.1;component/Controls/WindowsUI/VS2017Light/AppBar.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.VS2017Light.v24.1;component/Controls/WindowsUI/VS2017Light/Flyout.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.VS2017Light.v24.1;component/Controls/WindowsUI/VS2017Light/TouchNavigator.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.VS2017Light.v24.1;component/Controls/WindowsUI/VS2017Light/TileNavPane.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.VS2017Light.v24.1;component/Controls/WindowsUI/VS2017Light/HamburgerMenu.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.VS2017Light.v24.1;component/Controls/WindowsUI/VS2017Light/BreadcrumbControl.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.VS2017Light.v24.1;component/Controls/Wizard/VS2017Light/UICore.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.VS2017Light.v24.1;component/Controls/VS2017Light/StepProgressBar.xaml" />
+  </ResourceDictionary.MergedDictionaries>
+  <!-- General -->
+</ResourceDictionary>

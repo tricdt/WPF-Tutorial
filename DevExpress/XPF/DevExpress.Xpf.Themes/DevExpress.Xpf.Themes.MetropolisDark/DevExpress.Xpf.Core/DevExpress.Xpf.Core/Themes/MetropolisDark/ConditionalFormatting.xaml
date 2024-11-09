@@ -1,0 +1,141 @@
+﻿<ResourceDictionary mc:Ignorable="cs"
+                    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:cs="colorscheme_ignorable_uri"
+                    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+                    xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
+                    xmlns:dxcinternal="http://schemas.devexpress.com/winfx/2008/xaml/core/internal"
+                    xmlns:dxdst="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys"
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <SolidColorBrush x:Key="{dxdst:FormatThemeKey ResourceKey=FormatRedTextBrush}" cs:MetropolisLight.Color="#FFAD2B14">#ffffc0b2</SolidColorBrush>
+
+    <SolidColorBrush x:Key="{dxdst:FormatThemeKey ResourceKey=FormatRedFillBrush}" cs:MetropolisLight.Color="#2FFF2600">#2fff2600</SolidColorBrush>
+
+    <SolidColorBrush x:Key="{dxdst:FormatThemeKey ResourceKey=FormatYellowTextBrush}" cs:MetropolisLight.Color="#FFAD8314">#fffff7b2</SolidColorBrush>
+
+    <SolidColorBrush x:Key="{dxdst:FormatThemeKey ResourceKey=FormatYellowFillBrush}" cs:MetropolisLight.Color="#2FFFB900">#2fffb900</SolidColorBrush>
+
+    <SolidColorBrush x:Key="{dxdst:FormatThemeKey ResourceKey=FormatGreenTextBrush}" cs:MetropolisLight.Color="#FF4F9422">#ffd3ffb2</SolidColorBrush>
+
+    <SolidColorBrush x:Key="{dxdst:FormatThemeKey ResourceKey=FormatGreenFillBrush}" cs:MetropolisLight.Color="#2F62D518">#2f62d518</SolidColorBrush>
+
+    <Color x:Key="{dxdst:FormatThemeKey ResourceKey=ColorScaleRed}" cs:MetropolisLight.Color="#3FAD2B14">#73ad2b14</Color>
+
+    <Color x:Key="{dxdst:FormatThemeKey ResourceKey=ColorScaleYellow}" cs:MetropolisLight.Color="#3FAD8314">#73ad8314</Color>
+
+    <Color x:Key="{dxdst:FormatThemeKey ResourceKey=ColorScaleGreen}" cs:MetropolisLight.Color="#3F4F9422">#734f9422</Color>
+
+    <Color x:Key="{dxdst:FormatThemeKey ResourceKey=ColorScaleBlue}" cs:MetropolisLight.Color="#3F146DAD">#7344709C</Color>
+
+    <Color x:Key="{dxdst:FormatThemeKey ResourceKey=ColorScaleWhite}" cs:MetropolisLight.Color="#3F333333">#3f333333</Color>
+
+    <Color x:Key="{dxdst:FormatThemeKey ResourceKey=DataBarNegativeColor}" cs:MetropolisLight.Color="#FFAD2B14">#FF972B2B</Color>
+
+    <Color x:Key="{dxdst:FormatThemeKey ResourceKey=DataBarBlueColor}" cs:MetropolisLight.Color="#FF146DAD">#FF44709C</Color>
+
+    <Color x:Key="{dxdst:FormatThemeKey ResourceKey=DataBarGreenColor}" cs:MetropolisLight.Color="#FF4F9422">#FF2E9733</Color>
+
+    <Color x:Key="{dxdst:FormatThemeKey ResourceKey=DataBarRedColor}" cs:MetropolisLight.Color="#FFAD2B14">#FF972B2B</Color>
+
+    <Color x:Key="{dxdst:FormatThemeKey ResourceKey=DataBarOrangeColor}" cs:MetropolisLight.Color="#FFAD8314">#FF925313</Color>
+
+    <Color x:Key="{dxdst:FormatThemeKey ResourceKey=DataBarLightBlueColor}" cs:MetropolisLight.Color="#FF5499AD">#FF419A9B</Color>
+
+    <Color x:Key="{dxdst:FormatThemeKey ResourceKey=DataBarPurpleColor}" cs:MetropolisLight.Color="#FF8D2FAD">#FF8A2395</Color>
+
+    <LinearGradientBrush x:Key="{dxdst:FormatThemeKey ResourceKey=DataBarNegativeBrush_Gradient}"
+                         EndPoint="1,0"
+                         StartPoint="0,0">
+        <GradientStop Color="#FF972B2B"
+                      Offset="1"
+                      cs:MetropolisLight.Color="#FFAD2B14"
+                     />
+        <GradientStop Color="#00333333"
+                      Offset="0"
+                      cs:MetropolisLight.Color="#FF51322C"
+                     />
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="{dxdst:FormatThemeKey ResourceKey=DataBarBlueBrush_Gradient}"
+                         EndPoint="1,0"
+                         StartPoint="0,0">
+        <GradientStop Color="#FF44709C"
+                      Offset="0"
+                      cs:MetropolisLight.Color="#FF146DAD"
+                     />
+        <GradientStop Color="#00333333"
+                      Offset="1"
+                      cs:MetropolisLight.Color="#FF2D404D"
+                     />
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="{dxdst:FormatThemeKey ResourceKey=DataBarGreenBrush_Gradient}"
+                         EndPoint="1,0"
+                         StartPoint="0,0">
+        <GradientStop Color="#FF2E9733"
+                      Offset="0"
+                      cs:MetropolisLight.Color="#FF4F9422"
+                     />
+        <GradientStop Color="#00333333"
+                      Offset="1"
+                      cs:MetropolisLight.Color="#FF39492F"
+                     />
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="{dxdst:FormatThemeKey ResourceKey=DataBarRedBrush_Gradient}"
+                         EndPoint="1,0"
+                         StartPoint="0,0">
+        <GradientStop Color="#FF972B2B"
+                      Offset="0"
+                      cs:MetropolisLight.Color="#FFAD2B14"
+                     />
+        <GradientStop Color="#00333333"
+                      Offset="1"
+                      cs:MetropolisLight.Color="#FF51322C"
+                     />
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="{dxdst:FormatThemeKey ResourceKey=DataBarOrangeBrush_Gradient}"
+                         EndPoint="1,0"
+                         StartPoint="0,0">
+        <GradientStop Color="#FF925313"
+                      Offset="0"
+                      cs:MetropolisLight.Color="#FFAD8314"
+                     />
+        <GradientStop Color="#00333333"
+                      Offset="1"
+                      cs:MetropolisLight.Color="#FF4C442D"
+                     />
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="{dxdst:FormatThemeKey ResourceKey=DataBarLightBlueBrush_Gradient}"
+                         EndPoint="1,0"
+                         StartPoint="0,0">
+        <GradientStop Color="#FF419A9B"
+                      Offset="0"
+                      cs:MetropolisLight.Color="#FF5499AD"
+                     />
+        <GradientStop Color="#00333333"
+                      Offset="1"
+                      cs:MetropolisLight.Color="#FF4C442D"
+                     />
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="{dxdst:FormatThemeKey ResourceKey=DataBarPurpleBrush_Gradient}"
+                         EndPoint="1,0"
+                         StartPoint="0,0">
+        <GradientStop Color="#FF8A2395"
+                      Offset="0"
+                      cs:MetropolisLight.Color="#FF8D2FAD"
+                     />
+        <GradientStop Color="#00333333"
+                      Offset="1"
+                      cs:MetropolisLight.Color="#FF46334C"
+                     />
+    </LinearGradientBrush>
+
+    <SolidColorBrush x:Key="{dxdst:FormatThemeKey ResourceKey=DataBarZeroLineColor}" Color="#99FFFFFF"/>
+
+</ResourceDictionary>

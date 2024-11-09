@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0724ECD5-A3DF-486E-93BA-9FA5DBC1BEFE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DevExpress.Mvvm.DataModel</RootNamespace>
+    <AssemblyName>DevExpress.Mvvm.v24.1.DataModel</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <LangVersion>6</LangVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <BaseIntermediateOutputPath>obj_netFW</BaseIntermediateOutputPath>
+    <ConvertToNet6Windows />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\..\..\Bin\Framework\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;DEBUGTEST</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\Bin\Framework\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\..\..\DevExpress.Key\StrongKey.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v24.1">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Bin\Framework\DevExpress.Data.v24.1.dll</HintPath>
+    <Private>False</Private></Reference>
+    <Reference Include="DevExpress.Mvvm.v24.1">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Bin\Framework\DevExpress.Mvvm.v24.1.dll</HintPath>
+    <Private>False</Private></Reference>
+    <Reference Include="System"><Private>False</Private></Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations"><Private>False</Private></Reference>
+    <Reference Include="System.Core"><Private>False</Private></Reference>
+    <Reference Include="System.Xml.Linq"><Private>False</Private></Reference>
+    <Reference Include="System.Data.DataSetExtensions"><Private>False</Private></Reference>
+    <Reference Include="Microsoft.CSharp"><Private>False</Private></Reference>
+    <Reference Include="System.Data"><Private>False</Private></Reference>
+    <Reference Include="System.Net.Http"><Private>False</Private></Reference>
+    <Reference Include="System.Xml"><Private>False</Private></Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\DataModel\DbExceptions.cs" />
+    <Compile Include="Common\DataModel\DesignTime\DesignTimeInstantFeedbackSource.cs" />
+    <Compile Include="Common\DataModel\DesignTime\DesignTimeReadOnlyRepository.cs" />
+    <Compile Include="Common\DataModel\DesignTime\DesignTimeRepository.cs" />
+    <Compile Include="Common\DataModel\DesignTime\DesignTimeUnitOfWork.cs" />
+    <Compile Include="Common\DataModel\DesignTime\DesignTimeUnitOfWorkFactory.cs" />
+    <Compile Include="Common\DataModel\EntityState.cs" />
+    <Compile Include="Common\DataModel\IReadOnlyRepository.cs" />
+    <Compile Include="Common\DataModel\IRepository.cs" />
+    <Compile Include="Common\DataModel\IUnitOfWork.cs" />
+    <Compile Include="Common\DataModel\Objects\ObjectInstantFeedbackSource.cs" />
+    <Compile Include="Common\DataModel\Objects\ObjectReadOnlyRepository.cs" />
+    <Compile Include="Common\DataModel\Objects\ObjectRepository.cs" />
+    <Compile Include="Common\DataModel\Objects\ObjectUnitOfWork.cs" />
+    <Compile Include="Common\DataModel\Objects\ObjectUnitOfWorkFactory.cs" />
+    <Compile Include="Common\DataModel\UnitOfWorkBase.cs" />
+    <Compile Include="Common\Utils\DbExtensions.cs" />
+    <Compile Include="Common\Utils\ExpressionHelper.cs" />
+    <Compile Include="Localization\ScaffoldingLocalizerGenerator.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ScaffoldingLocalizerGenerator.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Localization\Localization.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Localization\LocalizationRes.resx">
+      <DependentUpon>ScaffoldingLocalizerGenerator.tt</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Localization\LocalizationRes.ja.resx"><DependentUpon>ScaffoldingLocalizerGenerator.tt</DependentUpon></EmbeddedResource>
+    <EmbeddedResource Include="Localization\LocalizationRes.es.resx"><DependentUpon>ScaffoldingLocalizerGenerator.tt</DependentUpon></EmbeddedResource>
+    <EmbeddedResource Include="Localization\LocalizationRes.de.resx"><DependentUpon>ScaffoldingLocalizerGenerator.tt</DependentUpon></EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Localization\ScaffoldingLocalizerGenerator.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ScaffoldingLocalizerGenerator.cs</LastGenOutput>
+    </Content>
+    <Content Include="Localization\LocalizerGenerator.ttinclude" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

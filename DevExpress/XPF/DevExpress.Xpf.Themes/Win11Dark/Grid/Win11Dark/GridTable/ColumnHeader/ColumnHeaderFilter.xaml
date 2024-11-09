@@ -1,0 +1,55 @@
+<ResourceDictionary mc:Ignorable="cs" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:cs="colorscheme_ignorable_uri" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" xmlns:dxei="http://schemas.devexpress.com/winfx/2008/xaml/editors/internal" xmlns:dxet="http://schemas.devexpress.com/winfx/2008/xaml/editors/themekeys" xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid" xmlns:dxgi="http://schemas.devexpress.com/winfx/2008/xaml/grid/internal" xmlns:dxgt="http://schemas.devexpress.com/winfx/2008/xaml/grid/themekeys" xmlns:dxi="http://schemas.devexpress.com/winfx/2008/xaml/core/internal" xmlns:dxt="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sys="clr-namespace:System;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ResourceDictionary.MergedDictionaries>
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win11Dark.v24.1;component/Grid/Win11Dark/UICore.xaml" />
+  </ResourceDictionary.MergedDictionaries>
+  <!-- General -->
+  <Style x:Key="{dxgt:GridColumnHeaderThemeKey ResourceKey=HeaderFilterSearchIconStyle}" TargetType="Path">
+    <Setter Property="Data" Value="M6.3667 7.22498C5.7041 7.71216 4.88574 8 4 8C1.79102 8 0 6.20911 0 4C0 1.79089 1.79102 0 4 0C6.20898 0 8 1.79089 8 4C8 4.88562 7.7124 5.70398 7.2251 6.3667L9.5957 8.73767C9.83301 8.97461 9.83301 9.35889 9.5957 9.59595C9.35889 9.83301 8.97461 9.83301 8.73779 9.59595L6.3667 7.22498ZM7 4C7 5.65686 5.65674 7 4 7C2.34326 7 1 5.65686 1 4C1 2.34314 2.34326 1 4 1C5.65674 1 7 2.34314 7 4Z" />
+    <Setter Property="HorizontalAlignment" Value="Center" />
+    <Setter Property="VerticalAlignment" Value="Center" />
+    <Setter Property="Stretch" Value="Fill" />
+    <Setter Property="SnapsToDevicePixels" Value="True" />
+    <Setter Property="Width" Value="14" />
+    <Setter Property="Height" Value="14" />
+  </Style>
+  <ControlTemplate x:Key="{dxgt:GridColumnHeaderThemeKey ResourceKey=ColumnFilterTemplate}" TargetType="{x:Type ToggleButton}">
+    <Grid Background="Transparent" cs:id="Border_0000">
+      <Path x:Name="Filter" Fill="#FF7D7D7D" Margin="3,0,0,0" Style="{StaticResource UIShape.Filter}" cs:id="Path_0000" x:Uid="@Fill=Border" />
+    </Grid>
+    <ControlTemplate.Triggers>
+      <Trigger Property="IsMouseOver" Value="True">
+        <Setter Property="Fill" TargetName="Filter" Value="#FF60CDFF" cs:id="Setter_0000" x:Uid="@Value=Accent" />
+      </Trigger>
+      <Trigger Property="IsPressed" Value="True">
+        <Setter Property="Fill" TargetName="Filter" Value="#FF60CDFF" cs:id="Setter_0001" x:Uid="@Value=Accent" />
+      </Trigger>
+      <Trigger Property="IsChecked" Value="True">
+        <Setter Property="Fill" TargetName="Filter" Value="#FF60CDFF" cs:id="Setter_0002" x:Uid="@Value=Accent" />
+      </Trigger>
+      <DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=(dxe:BaseEdit.OwnerEdit).Parent.IsMouseOver}" Value="True">
+        <Setter Property="Fill" TargetName="Filter" Value="#FFFFFFFF" cs:id="Setter_0003" x:Uid="@Value=Foreground.Primary" />
+      </DataTrigger>
+      <Trigger Property="dx:ThemeManager.IsTouchEnabled" Value="True">
+        <Setter Property="Margin" TargetName="Filter" Value="14,0,14,0" />
+      </Trigger>
+    </ControlTemplate.Triggers>
+  </ControlTemplate>
+  <!-- Calendar -->
+  <ControlTemplate x:Key="{dxgt:GridColumnHeaderThemeKey ResourceKey=CalendarFilterControlTemplate}" TargetType="dxg:CalendarFilterControl">
+    <Grid Background="#FF292929" HorizontalAlignment="Center" VerticalAlignment="Center" cs:id="Grid_0000" x:Uid="@Background=Editor.Background">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition />
+      </Grid.RowDefinitions>
+      <StackPanel x:Name="PART_UpperFiltersPanel" />
+      <dxe:DateNavigator x:Name="PART_DateNavigator" ColumnCount="1" Grid.Row="1" IsMultiSelect="True" Margin="0,12,0,0" RowCount="1" ShowTodayButton="False" />
+      <ScrollViewer Grid.Row="2" VerticalScrollBarVisibility="Auto">
+        <StackPanel x:Name="PART_BottomFiltersPanel" />
+      </ScrollViewer>
+    </Grid>
+  </ControlTemplate>
+  <Style x:Key="{dxgt:GridColumnHeaderThemeKey ResourceKey=DateFilterStyle}" TargetType="{x:Type CheckBox}">
+    <Setter Property="Margin" Value="10,6,10,6" />
+  </Style>
+</ResourceDictionary>

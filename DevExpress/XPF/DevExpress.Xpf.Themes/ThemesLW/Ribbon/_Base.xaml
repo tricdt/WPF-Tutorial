@@ -1,0 +1,174 @@
+﻿<ResourceDictionary
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+    xmlns:dxrt="http://schemas.devexpress.com/winfx/2008/xaml/ribbon/themekeys"
+    xmlns:dxr="http://schemas.devexpress.com/winfx/2008/xaml/ribbon"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:dxi="http://schemas.devexpress.com/winfx/2008/xaml/core/internal"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <dxi:ThemeResourceDictionary Path="Common/{ThemeName}/Common.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <ControlTemplate x:Key="{dxrt:LWKey Ribbon.RightRepeatButtonTemplate}" TargetType="{x:Type RepeatButton}">
+        <Grid x:Name="Root" Background="Transparent">
+            <dx:DXBorder x:Name="IsDefault" Background="{dx:LWBrush 'Brush.Backstage.Button.Background, VS2019Blue=Brush.Button.Background'}" CornerRadius="62" />
+            <Path Fill="{dx:LWBrush 'Brush.Backstage.Foreground, Office2019Black=Brush.ForegroundDark, VS2019Blue=Brush.Foreground'}" Style="{StaticResource UIShape.Right}" />
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal" />
+                    <VisualState x:Name="MouseOver">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{StaticResource Color.Backstage.HoverBackground}" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Pressed">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.Backstage.HoverBackground, VS2019Blue=Color.Backstage.SelectionBackground'}" />
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </Grid>
+    </ControlTemplate>
+    <ControlTemplate x:Key="{dxrt:LWKey Ribbon.LeftRepeatButtonTemplate}" TargetType="{x:Type RepeatButton}">
+        <Grid x:Name="Root" Background="Transparent">
+            <dx:DXBorder x:Name="IsDefault" Background="{dx:LWBrush 'Brush.Backstage.Button.Background, VS2019Blue=Brush.Button.Background'}" CornerRadius="62" />
+            <Path Fill="{dx:LWBrush 'Brush.Backstage.Foreground, Office2019Black=Brush.ForegroundDark, VS2019Blue=Brush.Foreground'}" Style="{StaticResource UIShape.Left}" />
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal" />
+                    <VisualState x:Name="MouseOver">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{StaticResource Color.Backstage.HoverBackground}" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Pressed">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.Backstage.HoverBackground, VS2019Blue=Color.Backstage.SelectionBackground'}" />
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </Grid>
+    </ControlTemplate>
+    <ControlTemplate x:Key="{dxrt:LWKey ApplicationButton.BorderTemplate2007}" TargetType="{x:Type ContentControl}">
+        <Grid x:Name="Root">
+            <dx:DXBorder x:Name="IsDefaultBorder" Background="{dx:LWBrush 'Brush.Backstage.Foreground, Office2019Black=Brush.ControlLight.Background, VS2019Dark=Brush.Border, Win10Dark=Brush.Backstage.Window.Background, Win10Light=Brush.Backstage.Window.Background'}" CornerRadius="36">
+                <dx:DXBorder
+                    x:Name="IsDefaultBackground"
+                    Background="{dx:LWBrush 'Brush.Backstage.Foreground, Office2019Black=Brush.ControlLight.Background, VS2019Dark=Brush.Button.Background, Win10Dark=Brush.Backstage.Window.Background, Win10Light=Brush.Backstage.Window.Background'}"
+                    CornerRadius="36"
+                    Margin="3" />
+            </dx:DXBorder>
+            <ContentPresenter Margin="4" />
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal" />
+                    <VisualState x:Name="Hover">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefaultBorder" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.HoverBackground, Office2019Black=Color.ControlLight.HoverBackground, Office2019Colorful=Color.HoverAltBackground'}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefaultBackground" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.HoverBackground, Office2019Black=Color.ControlLight.HoverBackground, Office2019Colorful=Color.HoverAltBackground'}" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Checked">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefaultBorder" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.SelectionBackground, Office2019Black=Color.ControlLight.SelectionBackground, Office2019Colorful=Color.SelectionAltBackground'}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefaultBackground" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.SelectionBackground, Office2019Black=Color.ControlLight.SelectionBackground, Office2019Colorful=Color.SelectionAltBackground'}" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Focused">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefaultBorder" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.HoverBackground, Office2019Black=Color.ControlLight.HoverBackground, Office2019Colorful=Color.HoverAltBackground'}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefaultBackground" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.HoverBackground, Office2019Black=Color.ControlLight.HoverBackground, Office2019Colorful=Color.HoverAltBackground'}" />
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </Grid>
+    </ControlTemplate>
+    <ControlTemplate x:Key="{dxrt:LWKey ApplicationButton.BorderTemplate2007InPopup}" TargetType="{x:Type ContentControl}">
+        <Grid>
+            <dx:DXBorder x:Name="IsDefaultBorder" Background="{dx:LWBrush 'Brush.SelectionBackground, Office2019Colorful=Brush.SelectionAltBackground'}" CornerRadius="36">
+                <dx:DXBorder
+                    x:Name="IsDefaultBackground"
+                    Background="{dx:LWBrush 'Brush.SelectionBackground, Office2019Colorful=Brush.SelectionAltBackground'}"
+                    CornerRadius="36"
+                    Margin="3" />
+            </dx:DXBorder>
+            <ContentPresenter Margin="4" />
+        </Grid>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="{dxrt:LWKey Ribbon.ApplicationMenuBarControlBorderTemplate2007}" TargetType="{x:Type ContentControl}">
+        <dx:DXBorder Background="{StaticResource Brush.Editor.Background}" BorderBrush="{StaticResource Brush.Backstage.Window.Background}" BorderThickness="1">
+            <StackPanel>
+                <dx:DXBorder
+                    Background="{dx:LWBrush 'Brush.Control.Background, Office2019Black=Brush.ControlLight.Background'}"
+                    BorderBrush="{StaticResource Brush.Border}"
+                    BorderThickness="0,0,0,1"
+                    MinHeight="28" />
+                <ContentPresenter />
+            </StackPanel>
+        </dx:DXBorder>
+    </ControlTemplate>
+
+    <Style x:Key="{dxrt:LWKey Ribbon.ShowAutoHidePopupButtonStyle}" TargetType="{x:Type dxr:ShowAutoHidePopupButton}">
+        <Setter Property="Height" Value="32" />
+        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+        <Setter Property="VerticalContentAlignment" Value="Stretch" />
+        <Setter Property="MinWidth" Value="46" />
+        <Setter Property="Template" Value="{DynamicResource {dxrt:LWKey Ribbon.ShowAutoHidePopupButtonTemplate}}" />
+        <Style.Triggers>
+            <Trigger Property="dx:ThemeManager.IsTouchEnabled" Value="True">
+                <Setter Property="MinHeight" Value="44" />
+                <Setter Property="MinWidth" Value="44" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <ControlTemplate x:Key="{dxrt:LWKey Ribbon.RightRepeatButtonTemplateInRibbonAeroWindow}" TargetType="{x:Type RepeatButton}">
+        <Grid x:Name="Root" Background="Transparent">
+            <dx:DXBorder x:Name="IsDefault" Background="{StaticResource Brush.Backstage.Button.Background}" CornerRadius="62" />
+            <Path Fill="{dx:LWBrush 'Brush.Backstage.Foreground, Office2019Black=Brush.ForegroundDark'}" Style="{StaticResource UIShape.Right}" />
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal" />
+                    <VisualState x:Name="MouseOver">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{StaticResource Color.Backstage.HoverBackground}" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Pressed">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{StaticResource Color.Backstage.HoverBackground}" />
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </Grid>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="{dxrt:LWKey Ribbon.LeftRepeatButtonTemplateInRibbonAeroWindow}" TargetType="{x:Type RepeatButton}">
+        <Grid x:Name="Root" Background="Transparent">
+            <dx:DXBorder x:Name="IsDefault" Background="{StaticResource Brush.Backstage.Button.Background}" CornerRadius="62" />
+            <Path Fill="{dx:LWBrush 'Brush.Backstage.Foreground, Office2019Black=Brush.ForegroundDark'}" Style="{StaticResource UIShape.Left}" />
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal" />
+                    <VisualState x:Name="MouseOver">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{StaticResource Color.Backstage.HoverBackground}" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Pressed">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{StaticResource Color.Backstage.HoverBackground}" />
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </Grid>
+    </ControlTemplate>
+
+</ResourceDictionary>

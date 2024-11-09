@@ -1,0 +1,67 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+    xmlns:dxi="http://schemas.devexpress.com/winfx/2008/xaml/core/internal"
+    xmlns:dxm="http://schemas.devexpress.com/winfx/2008/xaml/map">
+
+    <ResourceDictionary.MergedDictionaries>
+        <dxi:ThemeResourceDictionary Path="Map\Map.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Map.MiniMap'}" BasedOn="{StaticResource MiniMap.DefaultStyleBase}" TargetType="dxm:MiniMap" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Map.MiniMapImageTilesLayer'}" BasedOn="{StaticResource MiniMapImageTilesLayer.DefaultStyleBase}" TargetType="dxm:MiniMapImageTilesLayer" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Map.MiniMapVectorLayer'}" BasedOn="{StaticResource MiniMapVectorLayer.DefaultStyleBase}" TargetType="dxm:MiniMapVectorLayer" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Map.MapBubbleControl'}" BasedOn="{StaticResource MapBubbleControl.DefaultStyleBase}" TargetType="dxm:MapBubbleControl" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Map.CircleMarkerModelControl'}" BasedOn="{StaticResource CircleMarkerModelControl.DefaultStyleBase}" TargetType="dxm:CircleMarkerModelControl" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Map.SquareMarkerModelControl'}" BasedOn="{StaticResource SquareMarkerModelControl.DefaultStyleBase}" TargetType="dxm:SquareMarkerModelControl" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Map.DiamondMarkerModelControl'}" BasedOn="{StaticResource DiamondMarkerModelControl.DefaultStyleBase}" TargetType="dxm:DiamondMarkerModelControl" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Map.CrossMarkerModelControl'}" BasedOn="{StaticResource CrossMarkerModelControl.DefaultStyleBase}" TargetType="dxm:CrossMarkerModelControl" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Map.InvertedTriangleMarkerModelControl'}" BasedOn="{StaticResource InvertedTriangleMarkerModelControl.DefaultStyleBase}" TargetType="dxm:InvertedTriangleMarkerModelControl" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Map.TriangleMarkerModelControl'}" BasedOn="{StaticResource TriangleMarkerModelControl.DefaultStyleBase}" TargetType="dxm:TriangleMarkerModelControl" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Map.PlusMarkerModelControl'}" BasedOn="{StaticResource PlusMarkerModelControl.DefaultStyleBase}" TargetType="dxm:PlusMarkerModelControl" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Map.Star5MarkerModelControl'}" BasedOn="{StaticResource Star5MarkerModelControl.DefaultStyleBase}" TargetType="dxm:Star5MarkerModelControl" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Map.Star6MarkerModelControl'}" BasedOn="{StaticResource Star6MarkerModelControl.DefaultStyleBase}" TargetType="dxm:Star6MarkerModelControl" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Map.Star8MarkerModelControl'}" BasedOn="{StaticResource Star8MarkerModelControl.DefaultStyleBase}" TargetType="dxm:Star8MarkerModelControl" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Map.PentagonMarkerModelControl'}" BasedOn="{StaticResource PentagonMarkerModelControl.DefaultStyleBase}" TargetType="dxm:PentagonMarkerModelControl" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Map.HexagonMarkerModelControl'}" BasedOn="{StaticResource HexagonMarkerModelControl.DefaultStyleBase}" TargetType="dxm:HexagonMarkerModelControl" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Map.CustomMarkerModelControl'}" BasedOn="{StaticResource CustomMarkerModelControl.DefaultStyleBase}" TargetType="dxm:CustomMarkerModelControl" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Map.PieSegmentPresentationControl'}" BasedOn="{StaticResource PieSegmentPresentationControl.DefaultStyleBase}" TargetType="dxm:PieSegmentPresentationControl" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Map.MapPieControl'}" BasedOn="{StaticResource MapPieControl.DefaultStyleBase}" TargetType="dxm:MapPieControl" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Map.PushpinMarkerControl'}" BasedOn="{StaticResource PushpinMarkerControl.DefaultStyleBase}" TargetType="dxm:PushpinMarkerControl" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Map.PushpinControl'}" BasedOn="{StaticResource PushpinControl.DefaultStyleBase}" TargetType="dxm:PushpinControl" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Map.PushpinTraceControl'}" BasedOn="{StaticResource PushpinTraceControl.DefaultStyleBase}" TargetType="dxm:PushpinTraceControl" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Map.MapScrollButtonsLayoutControl'}" BasedOn="{StaticResource MapScrollButtonsLayoutControl.DefaultStyleBase}" TargetType="dxm:MapScrollButtonsLayoutControl" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Map.MapScrollButtons'}" BasedOn="{StaticResource MapScrollButtons.DefaultStyleBase}" TargetType="dxm:MapScrollButtons" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Map.OverlayPresentationControl'}" BasedOn="{StaticResource OverlayPresentationControl.DefaultStyleBase}" TargetType="dxm:OverlayPresentationControl" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Map.MapCoordinatesPanelLayoutControl'}" BasedOn="{StaticResource MapCoordinatesPanelLayoutControl.DefaultStyleBase}" TargetType="dxm:MapCoordinatesPanelLayoutControl" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Map.MapGeoCoordinatesPanel'}" BasedOn="{StaticResource MapGeoCoordinatesPanel.DefaultStyleBase}" TargetType="dxm:MapGeoCoordinatesPanel" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Map.MapCartesianCoordinatesPanel'}" BasedOn="{StaticResource MapCartesianCoordinatesPanel.DefaultStyleBase}" TargetType="dxm:MapCartesianCoordinatesPanel" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Map.MapScalePanelLayoutControl'}" BasedOn="{StaticResource MapScalePanelLayoutControl.DefaultStyleBase}" TargetType="dxm:MapScalePanelLayoutControl" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Map.MapScalePanel'}" BasedOn="{StaticResource MapScalePanel.DefaultStyleBase}" TargetType="dxm:MapScalePanel" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Map.MapZoomTrackbarLayoutControl'}" BasedOn="{StaticResource MapZoomTrackbarLayoutControl.DefaultStyleBase}" TargetType="dxm:MapZoomTrackbarLayoutControl" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Map.MapVerticalZoomTrackbar'}" BasedOn="{StaticResource MapVerticalZoomTrackbar.DefaultStyleBase}" TargetType="dxm:MapVerticalZoomTrackbar" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Map.MapHorizontalZoomTrackbar'}" BasedOn="{StaticResource MapHorizontalZoomTrackbar.DefaultStyleBase}" TargetType="dxm:MapHorizontalZoomTrackbar" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Map.MapSearchListBoxItem'}" BasedOn="{StaticResource MapSearchListBoxItem.DefaultStyleBase}" TargetType="{x:Type dxm:MapSearchListBoxItem}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Map.MapSearchPanel'}" BasedOn="{StaticResource MapSearchPanel.DefaultStyleBase}" TargetType="dxm:MapSearchPanel" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Map.MapControl'}" BasedOn="{StaticResource MapControl.DefaultStyleBase}" TargetType="dxm:MapControl" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Map.MultiScaleImageBase'}" BasedOn="{StaticResource MultiScaleImageBase.DefaultStyleBase}" TargetType="{x:Type dxm:MultiScaleImageBase}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Map.MapEditorAdorner'}" BasedOn="{StaticResource MapEditorAdorner.DefaultStyleBase}" TargetType="{x:Type dxm:MapEditorAdorner}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Map.MapEditorPanelControl'}" BasedOn="{StaticResource MapEditorPanelControl.DefaultStyleBase}" TargetType="dxm:MapEditorPanelControl" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Map.MeasurementToolbarControl'}" BasedOn="{StaticResource MeasurementToolbarControl.DefaultStyleBase}" TargetType="dxm:MeasurementToolbarControl" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Map.ImageLayer'}" BasedOn="{StaticResource ImageLayer.DefaultStyleBase}" TargetType="dxm:ImageLayer" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Map.VectorLayer'}" BasedOn="{StaticResource VectorLayer.DefaultStyleBase}" TargetType="dxm:VectorLayer" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Map.InformationLayer'}" BasedOn="{StaticResource InformationLayer.DefaultStyleBase}" TargetType="dxm:InformationLayer" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Map.VectorLayerRenderControl'}" BasedOn="{StaticResource VectorLayerRenderControl.DefaultStyleBase}" TargetType="dxm:VectorLayerRenderControl" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Map.ShapeTitleTextControl'}" BasedOn="{StaticResource ShapeTitleTextControl.DefaultStyleBase}" TargetType="{x:Type dxm:ShapeTitleTextControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Map.NestedItemPresentationControl'}" BasedOn="{StaticResource NestedItemPresentationControl.DefaultStyleBase}" TargetType="dxm:NestedItemPresentationControl" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Map.ColorListLegend'}" BasedOn="{StaticResource ColorListLegend.DefaultStyleBase}" TargetType="dxm:ColorListLegend" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Map.SizeLegend'}" BasedOn="{StaticResource SizeLegend.DefaultStyleBase}" TargetType="dxm:SizeLegend" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Map.ColorScaleLegend'}" BasedOn="{StaticResource ColorScaleLegend.DefaultStyleBase}" TargetType="dxm:ColorScaleLegend" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Map.PrintContainer'}" BasedOn="{StaticResource PrintContainer.DefaultStyleBase}" TargetType="dxm:PrintContainer" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Map.MeasurementLabelPresentation'}" BasedOn="{StaticResource MeasurementLabelPresentation.DefaultStyleBase}" TargetType="{x:Type dxm:MeasurementLabelPresentation}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Map.MeasurementsControl'}" BasedOn="{StaticResource MeasurementsControl.DefaultStyleBase}" TargetType="{x:Type dxm:MeasurementsControl}" />
+
+
+</ResourceDictionary>

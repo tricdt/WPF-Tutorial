@@ -1,0 +1,23 @@
+<ResourceDictionary mc:Ignorable="cs" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:cs="colorscheme_ignorable_uri" xmlns:dxdst="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ResourceDictionary.MergedDictionaries>
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win11Dark.v24.1;component/Dashboard/Generic/Generic.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win11Dark.v24.1;component/Dashboard/Win11Dark/Templates.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win11Dark.v24.1;component/Dashboard/Win11Dark/DeltaValuePresenter.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win11Dark.v24.1;component/Dashboard/Win11Dark/CardItem.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win11Dark.v24.1;component/Dashboard/Win11Dark/MapItem.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win11Dark.v24.1;component/Dashboard/Win11Dark/BoundImageItem.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win11Dark.v24.1;component/Dashboard/Win11Dark/ChartItem.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win11Dark.v24.1;component/Dashboard/Win11Dark/ComboBoxItem.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win11Dark.v24.1;component/Dashboard/Win11Dark/GaugeItem.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win11Dark.v24.1;component/Dashboard/Win11Dark/GridItem.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win11Dark.v24.1;component/Dashboard/Win11Dark/ImageItem.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win11Dark.v24.1;component/Dashboard/Win11Dark/ListBoxItem.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win11Dark.v24.1;component/Dashboard/Win11Dark/PieItem.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win11Dark.v24.1;component/Dashboard/Win11Dark/PivotItem.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win11Dark.v24.1;component/Dashboard/Win11Dark/RangeItem.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win11Dark.v24.1;component/Dashboard/Win11Dark/TextBoxItem.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win11Dark.v24.1;component/Dashboard/Win11Dark/TreemapItem.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win11Dark.v24.1;component/Dashboard/Win11Dark/TreeViewItem.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win11Dark.v24.1;component/Dashboard/Win11Dark/DateFilterItem.xaml" />
+  </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

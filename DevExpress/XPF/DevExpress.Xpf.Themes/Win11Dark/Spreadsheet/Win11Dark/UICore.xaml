@@ -1,0 +1,35 @@
+<ResourceDictionary mc:Ignorable="cs" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:cs="colorscheme_ignorable_uri" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxsps="http://schemas.devexpress.com/winfx/2008/xaml/spreadsheet" xmlns:dxspsi="http://schemas.devexpress.com/winfx/2008/xaml/spreadsheet/internal" xmlns:dxspst="http://schemas.devexpress.com/winfx/2008/xaml/spreadsheet/themekeys" xmlns:dxt="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sys="clr-namespace:System;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ResourceDictionary.MergedDictionaries>
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win11Dark.v24.1;component/UICore/UIData.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win11Dark.v24.1;component/Spreadsheet/Win11Dark/UICustom.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win11Dark.v24.1;component/Spreadsheet/Win11Dark/UIPreset.xaml" />
+  </ResourceDictionary.MergedDictionaries>
+  <!-- Comment -->
+  <SolidColorBrush x:Key="{dxspst:SpreadsheetThemeKey ResourceKey=CommentLineBrush}" Color="#FF7D7D7D" x:Uid="@Color=Border" />
+  <!-- General -->
+  <Color x:Key="{dxspst:SpreadsheetThemeKey ResourceKey=GridLinesColor}" x:Uid="@Content_Property=Delimiter">#FF7D7D7D</Color>
+  <SolidColorBrush x:Key="{dxspst:SpreadsheetThemeKey ResourceKey=SpreadsheetBorderBrush}" Color="#FF7D7D7D" x:Uid="@Color=Border" />
+  <SolidColorBrush x:Key="{dxspst:SpreadsheetThemeKey ResourceKey=SpreadsheetForegroundBrush}" Color="#FFFFFFFF" x:Uid="@Color=Foreground.Primary" />
+  <SolidColorBrush x:Key="{dxspst:SpreadsheetThemeKey ResourceKey=SpreadsheetBackgroundBrush}" Color="#FF292929" x:Uid="@Color=Editor.Background" />
+  <SolidColorBrush x:Key="{dxspst:SpreadsheetThemeKey ResourceKey=WorksheetBorderBrush}" Color="#FF7D7D7D" x:Uid="@Color=Border" />
+  <SolidColorBrush x:Key="{dxspst:SpreadsheetThemeKey ResourceKey=VisualFeedbackLineBrush}" Color="#FFFFFFFF" x:Uid="@Color=Foreground.Primary" />
+  <SolidColorBrush x:Key="{dxspst:SpreadsheetThemeKey ResourceKey=FrozenSeparatorBrush}" Color="#FFFFFFFF" x:Uid="@Color=Foreground.Primary" />
+  <SolidColorBrush x:Key="{dxspst:SpreadsheetThemeKey ResourceKey=AutoFilterBackgroundBrush}" Color="#FF303030" x:Uid="@Color=Button.SimpleButtonBackground" />
+  <Color x:Key="UIBrush.Color" x:Uid="@Content_Property=ListItem.SelectionBackground">#0AFFFFFF</Color>
+  <sys:Double x:Key="{dxspst:SpreadsheetThemeKey ResourceKey=CellStyleGalleryBarItemHeight}">90</sys:Double>
+  <sys:Double x:Key="{dxspst:SpreadsheetThemeKey ResourceKey=TableStyleGalleryBarItemHeight}">56</sys:Double>
+  <sys:Double x:Key="{dxspst:SpreadsheetThemeKey ResourceKey=ChartLayoutGalleryBarItemHeight}">66</sys:Double>
+  <sys:Double x:Key="{dxspst:SpreadsheetThemeKey ResourceKey=ChartStyleGalleryBarItemHeight}">66</sys:Double>
+  <!-- FormulaBar -->
+  <Color x:Key="UIColor.Spreadsheet.FormulaBar.Foreground" x:Uid="@Content_Property=Foreground.Primary">#FFFFFFFF</Color>
+  <Color x:Key="UIColor.Spreadsheet.FormulaBar.Foreground.Cancel" x:Uid="@Content_Property=Custom.Red">#FFCC0000</Color>
+  <Color x:Key="UIColor.Spreadsheet.FormulaBar.Foreground.Ok" x:Uid="@Content_Property=Custom.Green">#FF00CC66</Color>
+  <Color x:Key="UIColor.Spreadsheet.FormulaBar.Foreground.Function" x:Uid="@Content_Property=Custom.Blue">#FF0066CC</Color>
+  <!-- Group -->
+  <SolidColorBrush x:Key="{dxspst:SpreadsheetThemeKey ResourceKey=GroupControlBackgroundBrush}" Color="#FF1C1C1C" x:Uid="@Color=WindowBackground" />
+  <SolidColorBrush x:Key="{dxspst:SpreadsheetThemeKey ResourceKey=GroupLineBrush}" Color="#FF7D7D7D" x:Uid="@Color=Border" />
+  <SolidColorBrush x:Key="{dxspst:SpreadsheetThemeKey ResourceKey=GroupDotBrush}" Color="#FFFFFFFF" x:Uid="@Color=Foreground.Primary" />
+  <!-- ReferenceEdit -->
+  <Color x:Key="UIColor.Spreadsheet.ReferenceEdit.Foreground" x:Uid="@Content_Property=Foreground.Primary">#FFFFFFFF</Color>
+  <Color x:Key="UIColor.Spreadsheet.ReferenceEdit.HoverForeground" x:Uid="@Content_Property=Foreground.Primary">#FFFFFFFF</Color>
+</ResourceDictionary>

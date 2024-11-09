@@ -1,0 +1,40 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+    xmlns:dxi="http://schemas.devexpress.com/winfx/2008/xaml/core/internal"
+    xmlns:dxdash="http://schemas.devexpress.com/winfx/2008/xaml/dashboard"
+    xmlns:dxdashi="http://schemas.devexpress.com/winfx/2008/xaml/dashboard/internal">
+
+    <ResourceDictionary.MergedDictionaries>
+        <dxi:ThemeResourceDictionary Path="Dashboard/Generic.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.DashboardWpf.Internal.DeltaValuePresenter'}" BasedOn="{StaticResource DeltaValuePresenter.DefaultStyleBase}" TargetType="dxdashi:DeltaValuePresenter" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.DashboardWpf.Internal.CardItem'}" BasedOn="{StaticResource CardItem.DefaultStyleBase}" TargetType="{x:Type dxdashi:CardItem}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.DashboardWpf.Internal.PiePointPresenter'}" BasedOn="{StaticResource PiePointPresenter.DefaultStyleBase}" TargetType="dxdashi:PiePointPresenter" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.DashboardWpf.DashboardControlBase'}" BasedOn="{StaticResource DashboardControlBase.DefaultStyleBase}" TargetType="dxdash:DashboardControlBase" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.DashboardWpf.DashboardLayoutGroup'}" BasedOn="{StaticResource DashboardLayoutGroup.DefaultStyleBase}" TargetType="dxdash:DashboardLayoutGroup" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.DashboardWpf.DashboardLayoutItem'}" BasedOn="{StaticResource DashboardLayoutItem.DefaultStyleBase}" TargetType="dxdash:DashboardLayoutItem" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.DashboardWpf.Internal.DashboardItemWaitIndicator'}" BasedOn="{StaticResource DashboardItemWaitIndicator.DefaultStyleBase}" TargetType="{x:Type dxdashi:DashboardItemWaitIndicator}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.DashboardWpf.ListBoxDashboardLayoutItem'}" BasedOn="{StaticResource ListBoxDashboardLayoutItem.DefaultStyleBase}" TargetType="{x:Type dxdash:ListBoxDashboardLayoutItem}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.DashboardWpf.DateFilterDashboardLayoutItem'}" BasedOn="{StaticResource DateFilterDashboardLayoutItem.DefaultStyleBase}" TargetType="{x:Type dxdash:DateFilterDashboardLayoutItem}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.DashboardWpf.BoundImageDashboardLayoutItem'}" BasedOn="{StaticResource BoundImageDashboardLayoutItem.DefaultStyleBase}" TargetType="{x:Type dxdash:BoundImageDashboardLayoutItem}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.DashboardWpf.CardDashboardLayoutItem'}" BasedOn="{StaticResource CardDashboardLayoutItem.DefaultStyleBase}" TargetType="{x:Type dxdash:CardDashboardLayoutItem}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.DashboardWpf.ChartDashboardLayoutItem'}" BasedOn="{StaticResource ChartDashboardLayoutItem.DefaultStyleBase}" TargetType="{x:Type dxdash:ChartDashboardLayoutItem}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.DashboardWpf.ComboBoxDashboardLayoutItem'}" BasedOn="{StaticResource ComboBoxDashboardLayoutItem.DefaultStyleBase}" TargetType="{x:Type dxdash:ComboBoxDashboardLayoutItem}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.DashboardWpf.GaugeDashboardLayoutItem'}" BasedOn="{StaticResource GaugeDashboardLayoutItem.DefaultStyleBase}" TargetType="{x:Type dxdash:GaugeDashboardLayoutItem}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.DashboardWpf.GridDashboardLayoutItem'}" BasedOn="{StaticResource GridDashboardLayoutItem.DefaultStyleBase}" TargetType="{x:Type dxdash:GridDashboardLayoutItem}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.DashboardWpf.ImageDashboardLayoutItem'}" BasedOn="{StaticResource ImageDashboardLayoutItem.DefaultStyleBase}" TargetType="{x:Type dxdash:ImageDashboardLayoutItem}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.DashboardWpf.MapDashboardLayoutItem'}" BasedOn="{StaticResource MapDashboardLayoutItem.DefaultStyleBase}" TargetType="{x:Type dxdash:MapDashboardLayoutItem}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.DashboardWpf.PieDashboardLayoutItem'}" BasedOn="{StaticResource PieDashboardLayoutItem.DefaultStyleBase}" TargetType="{x:Type dxdash:PieDashboardLayoutItem}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.DashboardWpf.PivotDashboardLayoutItem'}" BasedOn="{StaticResource PivotDashboardLayoutItem.DefaultStyleBase}" TargetType="{x:Type dxdash:PivotDashboardLayoutItem}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.DashboardWpf.RangeDashboardLayoutItem'}" BasedOn="{StaticResource RangeDashboardLayoutItem.DefaultStyleBase}" TargetType="{x:Type dxdash:RangeDashboardLayoutItem}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.DashboardWpf.TextBoxDashboardLayoutItem'}" BasedOn="{StaticResource TextBoxDashboardLayoutItem.DefaultStyleBase}" TargetType="{x:Type dxdash:TextBoxDashboardLayoutItem}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.DashboardWpf.TreemapDashboardLayoutItem'}" BasedOn="{StaticResource TreemapDashboardLayoutItem.DefaultStyleBase}" TargetType="{x:Type dxdash:TreemapDashboardLayoutItem}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.DashboardWpf.TreeViewDashboardLayoutItem'}" BasedOn="{StaticResource TreeViewDashboardLayoutItem.DefaultStyleBase}" TargetType="{x:Type dxdash:TreeViewDashboardLayoutItem}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.DashboardWpf.CustomItemDashboardLayoutItem'}" BasedOn="{StaticResource CustomItemDashboardLayoutItem.DefaultStyleBase}" TargetType="{x:Type dxdash:CustomItemDashboardLayoutItem}" />
+
+
+</ResourceDictionary>

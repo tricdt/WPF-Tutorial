@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+<style>
+.Red {fill: #D11C1C;}
+.Yellow {fill: #FFB115;}
+.Green {fill: #039C23;}
+.Blue {fill: #1177D7; }
+.Black {fill: #727272;}
+.White {fill: #FFFFFF;}
+</style>
+<title>Action_Info_20x20</title>
+<path d="M10,1a9,9,0,1,0,9,9A9,9,0,0,0,10,1Zm0,2A1,1,0,1,1,9,4,1,1,0,0,1,10,3Zm3,13H7V14H9V9H7V7h4v7h2Z" class="Blue"/>
+</svg>

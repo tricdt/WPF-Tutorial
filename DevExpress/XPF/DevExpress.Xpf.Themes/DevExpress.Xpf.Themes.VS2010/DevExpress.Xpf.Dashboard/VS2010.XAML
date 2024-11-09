@@ -1,0 +1,31 @@
+﻿<ResourceDictionary mc:Ignorable="cs"
+                    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:cs="colorscheme_ignorable_uri"
+                    xmlns:dxdst="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys"
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.VS2010.v24.1;component/DevExpress.Xpf.Dashboard/Generic/Generic.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.VS2010.v24.1;component/DevExpress.Xpf.Dashboard/VS2010/UICore.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.VS2010.v24.1;component/DevExpress.Xpf.Dashboard/VS2010/Templates.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.VS2010.v24.1;component/DevExpress.Xpf.Dashboard/VS2010/DeltaValuePresenter.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.VS2010.v24.1;component/DevExpress.Xpf.Dashboard/VS2010/CardItem.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.VS2010.v24.1;component/DevExpress.Xpf.Dashboard/VS2010/MapItem.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.VS2010.v24.1;component/DevExpress.Xpf.Dashboard/VS2010/BoundImageItem.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.VS2010.v24.1;component/DevExpress.Xpf.Dashboard/VS2010/ChartItem.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.VS2010.v24.1;component/DevExpress.Xpf.Dashboard/VS2010/ComboBoxItem.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.VS2010.v24.1;component/DevExpress.Xpf.Dashboard/VS2010/GaugeItem.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.VS2010.v24.1;component/DevExpress.Xpf.Dashboard/VS2010/GridItem.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.VS2010.v24.1;component/DevExpress.Xpf.Dashboard/VS2010/ImageItem.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.VS2010.v24.1;component/DevExpress.Xpf.Dashboard/VS2010/ListBoxItem.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.VS2010.v24.1;component/DevExpress.Xpf.Dashboard/VS2010/PieItem.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.VS2010.v24.1;component/DevExpress.Xpf.Dashboard/VS2010/PivotItem.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.VS2010.v24.1;component/DevExpress.Xpf.Dashboard/VS2010/RangeItem.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.VS2010.v24.1;component/DevExpress.Xpf.Dashboard/VS2010/TextBoxItem.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.VS2010.v24.1;component/DevExpress.Xpf.Dashboard/VS2010/TreemapItem.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.VS2010.v24.1;component/DevExpress.Xpf.Dashboard/VS2010/TreeViewItem.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.VS2010.v24.1;component/DevExpress.Xpf.Dashboard/VS2010/DateFilterItem.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+</ResourceDictionary>

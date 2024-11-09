@@ -1,0 +1,237 @@
+﻿<ResourceDictionary mc:Ignorable="cs"
+                    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:cs="colorscheme_ignorable_uri"
+                    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+                    xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
+                    xmlns:dxcinternal="http://schemas.devexpress.com/winfx/2008/xaml/core/internal"
+                    xmlns:dxdst="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys"
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <SolidColorBrush x:Key="{dxdst:FormatThemeKey ResourceKey=FormatRedTextBrush}"
+                     cs:Name="SolidColorBrush_0002"
+                     cs:Office2010Blue.Color="#FF9C0006"
+                     cs:Office2010Silver.Color="#FF9C0006">
+        #FF9C0006
+    </SolidColorBrush>
+
+    <SolidColorBrush x:Key="{dxdst:FormatThemeKey ResourceKey=FormatRedFillBrush}"
+                     cs:Name="SolidColorBrush_0003"
+                     cs:Office2010Blue.Color="#FFFFC7CE"
+                     cs:Office2010Silver.Color="#FFFFC7CE">
+        #FFFFC7CE
+    </SolidColorBrush>
+
+    <SolidColorBrush x:Key="{dxdst:FormatThemeKey ResourceKey=FormatYellowTextBrush}"
+                     cs:Name="SolidColorBrush_0004"
+                     cs:Office2010Blue.Color="#FF9C6500"
+                     cs:Office2010Silver.Color="#FF9C6500">
+        #FF9C6500
+    </SolidColorBrush>
+
+    <SolidColorBrush x:Key="{dxdst:FormatThemeKey ResourceKey=FormatYellowFillBrush}"
+                     cs:Name="SolidColorBrush_0005"
+                     cs:Office2010Blue.Color="#FFFFEB9C"
+                     cs:Office2010Silver.Color="#FFFFEB9C">
+        #FFFFEB9C
+    </SolidColorBrush>
+
+    <SolidColorBrush x:Key="{dxdst:FormatThemeKey ResourceKey=FormatGreenTextBrush}"
+                     cs:Name="SolidColorBrush_0006"
+                     cs:Office2010Blue.Color="#FF006100"
+                     cs:Office2010Silver.Color="#FF006100">
+        #FF006100
+    </SolidColorBrush>
+
+    <SolidColorBrush x:Key="{dxdst:FormatThemeKey ResourceKey=FormatGreenFillBrush}"
+                     cs:Name="SolidColorBrush_0007"
+                     cs:Office2010Blue.Color="#FFC6EFCE"
+                     cs:Office2010Silver.Color="#FFC6EFCE">
+        #FFC6EFCE
+    </SolidColorBrush>
+
+    <Color x:Key="{dxdst:FormatThemeKey ResourceKey=ColorScaleRed}"
+           cs:Name="Color_0001"
+           cs:Office2010Blue.Color="#FFF8696B"
+           cs:Office2010Silver.Color="#FFF8696B">
+        #FFF8696B
+    </Color>
+
+    <Color x:Key="{dxdst:FormatThemeKey ResourceKey=ColorScaleYellow}"
+           cs:Name="Color_0002"
+           cs:Office2010Blue.Color="#FFFFEB84"
+           cs:Office2010Silver.Color="#FFFFEB84">
+        #FFFFEB84
+    </Color>
+
+    <Color x:Key="{dxdst:FormatThemeKey ResourceKey=ColorScaleGreen}"
+           cs:Name="Color_0003"
+           cs:Office2010Blue.Color="#FF63BE7B"
+           cs:Office2010Silver.Color="#FF63BE7B">
+        #FF63BE7B
+    </Color>
+
+    <Color x:Key="{dxdst:FormatThemeKey ResourceKey=ColorScaleBlue}"
+           cs:Name="Color_0004"
+           cs:Office2010Blue.Color="#FF5A8AC6"
+           cs:Office2010Silver.Color="#FF5A8AC6">
+        #FF5A8AC6
+    </Color>
+
+    <Color x:Key="{dxdst:FormatThemeKey ResourceKey=ColorScaleWhite}"
+           cs:Name="Color_0005"
+           cs:Office2010Blue.Color="#FFFFFFFF"
+           cs:Office2010Silver.Color="#FFFFFFFF">
+        #FFFFFFFF
+    </Color>
+
+    <Color x:Key="{dxdst:FormatThemeKey ResourceKey=DataBarNegativeColor}"
+           cs:Name="Color_0006"
+           cs:Office2010Blue.Color="#FFFF555A"
+           cs:Office2010Silver.Color="#FFFF555A">
+        #FFFF555A
+    </Color>
+
+    <Color x:Key="{dxdst:FormatThemeKey ResourceKey=DataBarBlueColor}"
+           cs:Name="Color_0007"
+           cs:Office2010Blue.Color="#FF638EC6"
+           cs:Office2010Silver.Color="#FF638EC6">
+        #FF638EC6
+    </Color>
+
+    <Color x:Key="{dxdst:FormatThemeKey ResourceKey=DataBarGreenColor}"
+           cs:Name="Color_0008"
+           cs:Office2010Blue.Color="#FF63C384"
+           cs:Office2010Silver.Color="#FF63C384">
+        #FF63C384
+    </Color>
+
+    <Color x:Key="{dxdst:FormatThemeKey ResourceKey=DataBarRedColor}"
+           cs:Name="Color_0009"
+           cs:Office2010Blue.Color="#FFFF555A"
+           cs:Office2010Silver.Color="#FFFF555A">
+        #FFFF555A
+    </Color>
+
+    <Color x:Key="{dxdst:FormatThemeKey ResourceKey=DataBarOrangeColor}"
+           cs:Name="Color_0010"
+           cs:Office2010Blue.Color="#FFFFB628"
+           cs:Office2010Silver.Color="#FFFFB628">
+        #FFFFB628
+    </Color>
+
+    <Color x:Key="{dxdst:FormatThemeKey ResourceKey=DataBarLightBlueColor}"
+           cs:Name="Color_0011"
+           cs:Office2010Blue.Color="#FF008AEF"
+           cs:Office2010Silver.Color="#FF008AEF">
+        #FF008AEF
+    </Color>
+
+    <Color x:Key="{dxdst:FormatThemeKey ResourceKey=DataBarPurpleColor}"
+           cs:Name="Color_0012"
+           cs:Office2010Blue.Color="#FFD6007B"
+           cs:Office2010Silver.Color="#FFD6007B">
+        #FFD6007B
+    </Color>
+
+    <LinearGradientBrush x:Key="{dxdst:FormatThemeKey ResourceKey=DataBarNegativeBrush_Gradient}"
+                         cs:Name="LinearGradientBrush_6445"
+                         EndPoint="1,0"
+                         StartPoint="0,0">
+        <GradientStop Color="Transparent"
+                      cs:Name="GradientStop_0001"
+                      Offset="0"
+                      cs:Office2010Blue.Color="#FFFFD8D8"
+                      cs:Office2010Silver.Color="#FFFFD8D8"
+                     />
+        <GradientStop Color="{StaticResource {dxdst:FormatThemeKey ResourceKey=DataBarNegativeColor}}"
+                      Offset="1"
+                     />
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="{dxdst:FormatThemeKey ResourceKey=DataBarBlueBrush_Gradient}"
+                         cs:Name="LinearGradientBrush_6446"
+                         EndPoint="1,0"
+                         StartPoint="0,0">
+        <GradientStop Color="{StaticResource {dxdst:FormatThemeKey ResourceKey=DataBarBlueColor}}" Offset="0"/>
+        <GradientStop Color="Transparent"
+                      cs:Name="GradientStop_0002"
+                      Offset="1"
+                      cs:Office2010Blue.Color="#FFE6EDF5"
+                      cs:Office2010Silver.Color="#FFE6EDF5"
+                     />
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="{dxdst:FormatThemeKey ResourceKey=DataBarGreenBrush_Gradient}"
+                         cs:Name="LinearGradientBrush_6447"
+                         EndPoint="1,0"
+                         StartPoint="0,0">
+        <GradientStop Color="{StaticResource {dxdst:FormatThemeKey ResourceKey=DataBarGreenColor}}" Offset="0"/>
+        <GradientStop Color="Transparent"
+                      cs:Name="GradientStop_0003"
+                      Offset="1"
+                      cs:Office2010Blue.Color="#FFE6F5EB"
+                      cs:Office2010Silver.Color="#FFE6F5EB"
+                     />
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="{dxdst:FormatThemeKey ResourceKey=DataBarRedBrush_Gradient}"
+                         cs:Name="LinearGradientBrush_6448"
+                         EndPoint="1,0"
+                         StartPoint="0,0">
+        <GradientStop Color="{StaticResource {dxdst:FormatThemeKey ResourceKey=DataBarRedColor}}" Offset="0"/>
+        <GradientStop Color="Transparent"
+                      cs:Name="GradientStop_0004"
+                      Offset="1"
+                      cs:Office2010Blue.Color="#FFFFE4E5"
+                      cs:Office2010Silver.Color="#FFFFE4E5"
+                     />
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="{dxdst:FormatThemeKey ResourceKey=DataBarOrangeBrush_Gradient}"
+                         cs:Name="LinearGradientBrush_6449"
+                         EndPoint="1,0"
+                         StartPoint="0,0">
+        <GradientStop Color="{StaticResource {dxdst:FormatThemeKey ResourceKey=DataBarOrangeColor}}" Offset="0"/>
+        <GradientStop Color="Transparent"
+                      cs:Name="GradientStop_0005"
+                      Offset="1"
+                      cs:Office2010Blue.Color="#FFFFF3DD"
+                      cs:Office2010Silver.Color="#FFFFF3DD"
+                     />
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="{dxdst:FormatThemeKey ResourceKey=DataBarLightBlueBrush_Gradient}"
+                         cs:Name="LinearGradientBrush_6450"
+                         EndPoint="1,0"
+                         StartPoint="0,0">
+        <GradientStop Color="{StaticResource {dxdst:FormatThemeKey ResourceKey=DataBarLightBlueColor}}" Offset="0"/>
+        <GradientStop Color="Transparent"
+                      cs:Name="GradientStop_0006"
+                      Offset="1"
+                      cs:Office2010Blue.Color="#FFD7ECFB"
+                      cs:Office2010Silver.Color="#FFD7ECFB"
+                     />
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="{dxdst:FormatThemeKey ResourceKey=DataBarPurpleBrush_Gradient}"
+                         cs:Name="LinearGradientBrush_6451"
+                         EndPoint="1,0"
+                         StartPoint="0,0">
+        <GradientStop Color="{StaticResource {dxdst:FormatThemeKey ResourceKey=DataBarPurpleColor}}" Offset="0"/>
+        <GradientStop Color="Transparent"
+                      cs:Name="GradientStop_0007"
+                      Offset="1"
+                      cs:Office2010Blue.Color="#FFF7D7EA"
+                      cs:Office2010Silver.Color="#FFF7D7EA"
+                     />
+    </LinearGradientBrush>
+
+    <SolidColorBrush x:Key="{dxdst:FormatThemeKey ResourceKey=DataBarZeroLineColor}"
+                     Color="#FF000000"
+                     cs:Name="SolidColorBrush_0001"
+                     cs:Office2010Blue.Color="#FF000000"
+                     cs:Office2010Silver.Color="#FF000000"/>
+
+</ResourceDictionary>

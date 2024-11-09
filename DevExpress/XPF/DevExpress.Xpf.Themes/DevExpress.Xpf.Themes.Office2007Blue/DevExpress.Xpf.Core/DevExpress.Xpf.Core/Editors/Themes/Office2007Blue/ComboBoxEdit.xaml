@@ -1,0 +1,641 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+                    xmlns:dxdst="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys"
+                    xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+                    xmlns:dxep="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+                    xmlns:dxepc="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+                    xmlns:dxet="http://schemas.devexpress.com/winfx/2008/xaml/editors/themekeys"
+                    xmlns:helpers="http://schemas.devexpress.com/winfx/2008/xaml/editors/internal"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!--BEGIN WPF-->
+
+    <ResourceDictionary.MergedDictionaries>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2007Blue.v24.1;component/DevExpress.Xpf.Core/DevExpress.Xpf.Core/Editors/Themes/Office2007Generic/ComboBoxEdit.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+    <!--END WPF-->
+
+    <ControlTemplate x:Key="{dxet:SearchControlThemeKey ResourceKey=PanelTemplate}" TargetType="ContentControl">
+        <Border BorderBrush="#FF062B63" BorderThickness="0,0,0,1">
+            <ContentPresenter Content="{TemplateBinding Content}" Margin="{TemplateBinding Padding}"/>
+        </Border>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="ComboBoxEditLoadingIndicatorTemplate" TargetType="{x:Type ProgressBar}">
+        <Grid>
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Determinate"/>
+                    <VisualState x:Name="Indeterminate">
+                        <Storyboard RepeatBehavior="Forever">
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="border" Storyboard.TargetProperty="(UIElement.Opacity)">
+                                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.6"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0.5"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0.35"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="0.35"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0.35"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="0.35"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="0.35"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+                            </DoubleAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="border1" Storyboard.TargetProperty="(UIElement.Opacity)">
+                                <EasingDoubleKeyFrame KeyTime="0" Value="0.35"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0.6"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0.5"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="0.35"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0.35"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="0.35"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="0.35"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="0.35"/>
+                            </DoubleAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="border2" Storyboard.TargetProperty="(UIElement.Opacity)">
+                                <EasingDoubleKeyFrame KeyTime="0" Value="0.35"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.35"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="1"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0.6"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="0.5"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0.35"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="0.35"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="0.35"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="0.35"/>
+                            </DoubleAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="border3" Storyboard.TargetProperty="(UIElement.Opacity)">
+                                <EasingDoubleKeyFrame KeyTime="0" Value="0.35"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.35"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0.35"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="0.6"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0.5"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="0.35"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="0.35"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="0.35"/>
+                            </DoubleAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="border4" Storyboard.TargetProperty="(UIElement.Opacity)">
+                                <EasingDoubleKeyFrame KeyTime="0" Value="0.35"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.35"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0.35"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0.35"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="1"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0.6"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="0.5"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="0.35"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="0.35"/>
+                            </DoubleAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="border5" Storyboard.TargetProperty="(UIElement.Opacity)">
+                                <EasingDoubleKeyFrame KeyTime="0" Value="0.35"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.35"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0.35"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0.35"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="0.35"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="0.6"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="0.5"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="0.35"/>
+                            </DoubleAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="border6" Storyboard.TargetProperty="(UIElement.Opacity)">
+                                <EasingDoubleKeyFrame KeyTime="0" Value="0.5"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.35"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0.35"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0.35"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="0.35"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0.35"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="1"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="0.6"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="0.5"/>
+                            </DoubleAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="border7" Storyboard.TargetProperty="(UIElement.Opacity)">
+                                <EasingDoubleKeyFrame KeyTime="0" Value="0.6"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.5"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0.35"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0.35"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="0.35"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0.35"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="0.35"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="1"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="0.6"/>
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+            <Grid SnapsToDevicePixels="True">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Border x:Name="border"
+                        BorderBrush="{x:Null}"
+                        CornerRadius="256"
+                        Grid.Column="1"
+                        Grid.Row="0"
+                        Height="{TemplateBinding MinHeight}"
+                        HorizontalAlignment="Center"
+                        Margin="-1"
+                        VerticalAlignment="Center"
+                        Width="{TemplateBinding MinWidth}">
+                    <Border.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#0CFFFFFF" Offset="1"/>
+                            <GradientStop Color="#19FFFFFF"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    <Border BorderBrush="{x:Null}"
+                            BorderThickness="0"
+                            CornerRadius="256"
+                            Height="Auto"
+                            Margin="1"
+                            Width="Auto">
+                        <Border.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FF9CD3FF"/>
+                                <GradientStop Color="#FF66BBFF" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <Border BorderBrush="{x:Null}"
+                                CornerRadius="256"
+                                Margin="1">
+                            <Border.Background>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="White" Offset="0"/>
+                                    <GradientStop Color="White" Offset="1"/>
+                                    <GradientStop Color="#FF66BBFF" Offset="0.5"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                        </Border>
+                    </Border>
+                </Border>
+                <Border x:Name="border1"
+                        BorderBrush="{x:Null}"
+                        CornerRadius="256"
+                        Grid.Column="2"
+                        Grid.Row="0"
+                        Height="{TemplateBinding MinHeight}"
+                        HorizontalAlignment="Left"
+                        Margin="-1"
+                        Opacity="0.35"
+                        VerticalAlignment="Bottom"
+                        Width="{TemplateBinding MinWidth}">
+                    <Border.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#0CFFFFFF" Offset="1"/>
+                            <GradientStop Color="#19FFFFFF"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    <Border BorderBrush="{x:Null}"
+                            CornerRadius="256"
+                            Height="Auto"
+                            Margin="1"
+                            Width="Auto">
+                        <Border.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FF9CD3FF"/>
+                                <GradientStop Color="#FF66BBFF" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <Border BorderBrush="{x:Null}"
+                                CornerRadius="256"
+                                Margin="1">
+                            <Border.Background>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="#FFA2C0E9" Offset="0"/>
+                                    <GradientStop Color="#FFA2C0E9" Offset="1"/>
+                                    <GradientStop Color="#FF3D60BB" Offset="0.5"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                        </Border>
+                    </Border>
+                </Border>
+                <Border x:Name="border2"
+                        BorderBrush="{x:Null}"
+                        CornerRadius="256"
+                        Grid.Column="2"
+                        Grid.Row="1"
+                        Height="{TemplateBinding MinHeight}"
+                        HorizontalAlignment="Center"
+                        Margin="-1"
+                        Opacity="0.35"
+                        VerticalAlignment="Center"
+                        Width="{TemplateBinding MinWidth}">
+                    <Border.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#0CFFFFFF" Offset="1"/>
+                            <GradientStop Color="#19FFFFFF"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    <Border BorderBrush="{x:Null}"
+                            CornerRadius="256"
+                            Height="Auto"
+                            Margin="1"
+                            Width="Auto">
+                        <Border.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FF9CD3FF"/>
+                                <GradientStop Color="#FF66BBFF" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <Border BorderBrush="{x:Null}"
+                                CornerRadius="256"
+                                Margin="1">
+                            <Border.Background>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="White" Offset="0"/>
+                                    <GradientStop Color="White" Offset="1"/>
+                                    <GradientStop Color="#FF66BBFF" Offset="0.5"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                        </Border>
+                    </Border>
+                </Border>
+                <Border x:Name="border3"
+                        BorderBrush="{x:Null}"
+                        CornerRadius="256"
+                        Grid.Column="2"
+                        Grid.Row="2"
+                        Height="{TemplateBinding MinHeight}"
+                        HorizontalAlignment="Left"
+                        Margin="-1"
+                        Opacity="0.35"
+                        VerticalAlignment="Top"
+                        Width="{TemplateBinding MinWidth}">
+                    <Border.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#0CFFFFFF" Offset="1"/>
+                            <GradientStop Color="#19FFFFFF"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    <Border BorderBrush="{x:Null}"
+                            CornerRadius="256"
+                            Height="Auto"
+                            Margin="1"
+                            Width="Auto">
+                        <Border.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FF9CD3FF"/>
+                                <GradientStop Color="#FF66BBFF" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <Border BorderBrush="{x:Null}"
+                                CornerRadius="256"
+                                Margin="1">
+                            <Border.Background>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="White" Offset="0"/>
+                                    <GradientStop Color="White" Offset="1"/>
+                                    <GradientStop Color="#FF66BBFF" Offset="0.5"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                        </Border>
+                    </Border>
+                </Border>
+                <Border x:Name="border4"
+                        BorderBrush="{x:Null}"
+                        CornerRadius="256"
+                        Grid.Column="1"
+                        Grid.Row="2"
+                        Height="{TemplateBinding MinHeight}"
+                        HorizontalAlignment="Center"
+                        Margin="-1"
+                        Opacity="0.35"
+                        VerticalAlignment="Center"
+                        Width="{TemplateBinding MinWidth}">
+                    <Border.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#0CFFFFFF" Offset="1"/>
+                            <GradientStop Color="#19FFFFFF"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    <Border BorderBrush="{x:Null}"
+                            CornerRadius="256"
+                            Height="Auto"
+                            Margin="1"
+                            Width="Auto">
+                        <Border.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FF9CD3FF"/>
+                                <GradientStop Color="#FF66BBFF" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <Border BorderBrush="{x:Null}"
+                                CornerRadius="256"
+                                Margin="1">
+                            <Border.Background>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="White" Offset="0"/>
+                                    <GradientStop Color="White" Offset="1"/>
+                                    <GradientStop Color="#FF66BBFF" Offset="0.5"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                        </Border>
+                    </Border>
+                </Border>
+                <Border x:Name="border5"
+                        BorderBrush="{x:Null}"
+                        CornerRadius="256"
+                        Grid.Column="0"
+                        Grid.Row="2"
+                        Height="{TemplateBinding MinHeight}"
+                        HorizontalAlignment="Right"
+                        Margin="-1"
+                        Opacity="0.35"
+                        VerticalAlignment="Top"
+                        Width="{TemplateBinding MinWidth}">
+                    <Border.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#0CFFFFFF" Offset="1"/>
+                            <GradientStop Color="#19FFFFFF"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    <Border BorderBrush="{x:Null}"
+                            CornerRadius="256"
+                            Height="Auto"
+                            Margin="1"
+                            Width="Auto">
+                        <Border.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FF9CD3FF"/>
+                                <GradientStop Color="#FF66BBFF" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <Border BorderBrush="{x:Null}"
+                                CornerRadius="256"
+                                Margin="1">
+                            <Border.Background>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="White" Offset="0"/>
+                                    <GradientStop Color="White" Offset="1"/>
+                                    <GradientStop Color="#FF66BBFF" Offset="0.5"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                        </Border>
+                    </Border>
+                </Border>
+                <Border x:Name="border6"
+                        BorderBrush="{x:Null}"
+                        CornerRadius="256"
+                        Grid.Column="0"
+                        Grid.Row="1"
+                        Height="{TemplateBinding MinHeight}"
+                        HorizontalAlignment="Center"
+                        Margin="-1"
+                        Opacity="0.35"
+                        VerticalAlignment="Center"
+                        Width="{TemplateBinding MinWidth}">
+                    <Border.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#0CFFFFFF" Offset="1"/>
+                            <GradientStop Color="#19FFFFFF"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    <Border BorderBrush="{x:Null}"
+                            CornerRadius="256"
+                            Height="Auto"
+                            Margin="1"
+                            Width="Auto">
+                        <Border.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FF9CD3FF"/>
+                                <GradientStop Color="#FF66BBFF" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <Border BorderBrush="{x:Null}"
+                                CornerRadius="256"
+                                Margin="1">
+                            <Border.Background>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="White" Offset="0"/>
+                                    <GradientStop Color="White" Offset="1"/>
+                                    <GradientStop Color="#FF66BBFF" Offset="0.5"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                        </Border>
+                    </Border>
+                </Border>
+                <Border x:Name="border7"
+                        BorderBrush="{x:Null}"
+                        CornerRadius="256"
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        Height="{TemplateBinding MinHeight}"
+                        HorizontalAlignment="Right"
+                        Margin="-1"
+                        Opacity="0.35"
+                        VerticalAlignment="Bottom"
+                        Width="{TemplateBinding MinWidth}">
+                    <Border.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#0CFFFFFF" Offset="1"/>
+                            <GradientStop Color="#19FFFFFF"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    <Border BorderBrush="{x:Null}"
+                            CornerRadius="256"
+                            Height="Auto"
+                            Margin="1"
+                            Width="Auto">
+                        <Border.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FF9CD3FF"/>
+                                <GradientStop Color="#FF66BBFF" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <Border BorderBrush="{x:Null}"
+                                CornerRadius="256"
+                                Margin="1">
+                            <Border.Background>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="#FFA2C0E9" Offset="0"/>
+                                    <GradientStop Color="#FFA2C0E9" Offset="1"/>
+                                    <GradientStop Color="#FF3D60BB" Offset="0.5"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                        </Border>
+                    </Border>
+                </Border>
+            </Grid>
+        </Grid>
+    </ControlTemplate>
+
+    <Style x:Key="{dxet:ComboBoxEditThemeKey ResourceKey=LoadingButtonStyle}" TargetType="{x:Type Button}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid x:Name="root"
+                          HorizontalAlignment="Center"
+                          Margin="0,0,2,0"
+                          VerticalAlignment="Center">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="Visibility">
+                                <VisualState x:Name="Visible">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="root" Storyboard.TargetProperty="Visibility">
+                                            <DiscreteObjectKeyFrame KeyTime="0:0:0.1">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Visible</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="progressBar" Storyboard.TargetProperty="IsIndeterminate">
+                                            <DiscreteObjectKeyFrame KeyTime="0:0:0.1">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <sys:Boolean>True</sys:Boolean>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Collapsed">
+                                    <Storyboard>
+                                        <DoubleAnimation BeginTime="0:0:0.1"
+                                                         Duration="0:0:0.1"
+                                                         From="1"
+                                                         Storyboard.TargetName="root"
+                                                         Storyboard.TargetProperty="Opacity"
+                                                         To="0"/>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="root" Storyboard.TargetProperty="Visibility">
+                                            <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Collapsed</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="progressBar" Storyboard.TargetProperty="IsIndeterminate">
+                                            <DiscreteObjectKeyFrame KeyTime="0:0:0.1">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <sys:Boolean>False</sys:Boolean>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <ProgressBar x:Name="progressBar"
+                                     BorderBrush="{x:Null}"
+                                     Foreground="{x:Null}"
+                                     Height="16"
+                                     HorizontalAlignment="Center"
+                                     IsIndeterminate="{Binding Path=Visibility, RelativeSource={RelativeSource TemplatedParent}, Converter={helpers:VisibilityToBooleanConverter}}"
+                                     MinHeight="4"
+                                     MinWidth="4"
+                                     Template="{StaticResource ComboBoxEditLoadingIndicatorTemplate}"
+                                     VerticalAlignment="Center"
+                                     Width="16"/>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <ControlTemplate x:Key="{dxet:SearchControlThemeKey ResourceKey=ButtonGlyphTemplate}" TargetType="{x:Type Button}">
+        <Grid Width="Auto">
+            <Grid x:Name="PART_Hover" Opacity="0.0">
+                <Border x:Name="border"
+                        CornerRadius="2"
+                        Padding="1"
+                        Visibility="Visible">
+                    <Border.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FFDBCE99 " Offset="0"/>
+                            <GradientStop Color="#FFBBA67F " Offset="1"/>
+                            <GradientStop Color="#FFB9A074 " Offset="0.5"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    <Border x:Name="border2"
+                            CornerRadius="1"
+                            Padding="1"
+                            Visibility="Visible">
+                        <Border.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FFFFFFFD " Offset="0"/>
+                                <GradientStop Color="#FFFFF9E0 " Offset="1"/>
+                                <GradientStop Color="#FFFFF1BA " Offset="0.5"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <Border x:Name="border1" CornerRadius="1">
+                            <Border.Background>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="#FFFFFDF2 " Offset="0"/>
+                                    <GradientStop Color="#FFFFEEAE " Offset="1"/>
+                                    <GradientStop Color="#FFFFEA9A " Offset="0.5"/>
+                                    <GradientStop Color="#FFFFDC58 " Offset="0.5"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                        </Border>
+                    </Border>
+                </Border>
+            </Grid>
+            <Grid x:Name="PART_Pressed" Opacity="0.0">
+                <Border x:Name="border_Copy"
+                        CornerRadius="2"
+                        Padding="1"
+                        Visibility="Visible">
+                    <Border.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FF9F7559 " Offset="0"/>
+                            <GradientStop Color="#FFC6C0B1 " Offset="1"/>
+                            <GradientStop Color="#FF8E8165 " Offset="0.1"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    <Border x:Name="border3"
+                            CornerRadius="1"
+                            Padding="1"
+                            Visibility="Visible">
+                        <Border.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FFBB9F7C " Offset="0"/>
+                                <GradientStop Color="#FFFFDE70 " Offset="1"/>
+                                <GradientStop Color="#FFF8AD61 " Offset="0.5"/>
+                                <GradientStop Color="#FFF7952F " Offset="0.5"/>
+                                <GradientStop Color="#FFFDD3A8 " Offset="0.1"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
+                    </Border>
+                </Border>
+            </Grid>
+            <ContentPresenter x:Name="contentPresenter" Margin="{TemplateBinding Padding}"/>
+        </Grid>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="False">
+                <Setter Property="Opacity"
+                        TargetName="PART_Hover"
+                        Value="0"/>
+                <Setter Property="Opacity"
+                        TargetName="PART_Pressed"
+                        Value="0"/>
+                <Setter Property="Foreground" Value="#FF000000"/>
+            </Trigger>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Opacity"
+                        TargetName="PART_Hover"
+                        Value="1"/>
+                <Setter Property="Opacity"
+                        TargetName="PART_Pressed"
+                        Value="0"/>
+                <Setter Property="Foreground" Value="#FF000000"/>
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True">
+                <Setter Property="Opacity"
+                        TargetName="PART_Hover"
+                        Value="0"/>
+                <Setter Property="Opacity"
+                        TargetName="PART_Pressed"
+                        Value="1"/>
+                <Setter Property="Foreground" Value="#FF000000"/>
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Opacity" Value="0.36"/>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+</ResourceDictionary>

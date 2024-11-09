@@ -1,0 +1,31 @@
+﻿<ResourceDictionary mc:Ignorable="cs"
+                    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:cs="colorscheme_ignorable_uri"
+                    xmlns:dxdst="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys"
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2007Blue.v24.1;component/DevExpress.Xpf.Dashboard/Generic/Generic.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2007Blue.v24.1;component/DevExpress.Xpf.Dashboard/Office2007Blue/UICore.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2007Blue.v24.1;component/DevExpress.Xpf.Dashboard/Office2007Blue/Templates.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2007Blue.v24.1;component/DevExpress.Xpf.Dashboard/Office2007Blue/DeltaValuePresenter.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2007Blue.v24.1;component/DevExpress.Xpf.Dashboard/Office2007Blue/CardItem.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2007Blue.v24.1;component/DevExpress.Xpf.Dashboard/Office2007Blue/MapItem.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2007Blue.v24.1;component/DevExpress.Xpf.Dashboard/Office2007Blue/BoundImageItem.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2007Blue.v24.1;component/DevExpress.Xpf.Dashboard/Office2007Blue/ChartItem.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2007Blue.v24.1;component/DevExpress.Xpf.Dashboard/Office2007Blue/ComboBoxItem.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2007Blue.v24.1;component/DevExpress.Xpf.Dashboard/Office2007Blue/GaugeItem.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2007Blue.v24.1;component/DevExpress.Xpf.Dashboard/Office2007Blue/GridItem.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2007Blue.v24.1;component/DevExpress.Xpf.Dashboard/Office2007Blue/ImageItem.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2007Blue.v24.1;component/DevExpress.Xpf.Dashboard/Office2007Blue/ListBoxItem.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2007Blue.v24.1;component/DevExpress.Xpf.Dashboard/Office2007Blue/PieItem.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2007Blue.v24.1;component/DevExpress.Xpf.Dashboard/Office2007Blue/PivotItem.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2007Blue.v24.1;component/DevExpress.Xpf.Dashboard/Office2007Blue/RangeItem.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2007Blue.v24.1;component/DevExpress.Xpf.Dashboard/Office2007Blue/TextBoxItem.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2007Blue.v24.1;component/DevExpress.Xpf.Dashboard/Office2007Blue/TreemapItem.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2007Blue.v24.1;component/DevExpress.Xpf.Dashboard/Office2007Blue/TreeViewItem.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2007Blue.v24.1;component/DevExpress.Xpf.Dashboard/Office2007Blue/DateFilterItem.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+</ResourceDictionary>

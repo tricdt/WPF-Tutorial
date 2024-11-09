@@ -1,0 +1,2308 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:cs="colorscheme_ignorable_uri"
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+    xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
+    xmlns:dxbt="http://schemas.devexpress.com/winfx/2008/xaml/bars/themekeys"
+    xmlns:dxt="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys"
+    xmlns:dxi="http://schemas.devexpress.com/winfx/2008/xaml/core/internal"
+    xmlns:dxbi="http://schemas.devexpress.com/winfx/2008/xaml/bars/internal"
+    mc:Ignorable="cs">
+
+    <ResourceDictionary.MergedDictionaries>
+        <dxi:ThemeResourceDictionary Path="Core/Bars/_{ThemeCategory}.xaml" />
+        <dxi:ThemeResourceDictionary Path="Core/Bars/Bars.Generic.RenderTemplates.xaml" />
+        <dxi:ThemeResourceDictionary Path="Core/Bars/Bars.Generic.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+
+    <!--#region Base\Core\Core\Bars\Themes\Base\UICore.xaml-->
+    <sys:Double x:Key="{dxt:LWKey BarControl.ClientPanelMinHeight}">22</sys:Double>
+    <Thickness x:Key="{dxt:LWKey BarControl.ClientPanelPadding}">1,1,0,0</Thickness>
+    <Thickness x:Key="{dxt:LWKey BarContainerControl.HorizontalPadding}">0</Thickness>
+    <Thickness x:Key="{dxt:LWKey BarContainerControl.VerticalPadding}">0</Thickness>
+    <Thickness x:Key="{dxt:LWKey BarItemLinkMenuHeader.HorizontalGlyphPadding}">2,0,2,0</Thickness>
+    <Thickness x:Key="{dxt:LWKey BarStaticItem.BorderPadding}">0,0,2,0</Thickness>
+    <Thickness x:Key="{dxt:LWKey SubMenuBarControl.GlyphPadding}">7,0,7,0</Thickness>
+    <Thickness x:Key="{dxt:LWKey GalleryItemControl.DefaultItemMargin}">1,1,0,0</Thickness>
+    <Thickness x:Key="{dxt:LWKey GalleryItemControl.DefaultGlyphBorderPadding}">0</Thickness>
+    <Thickness x:Key="{dxt:LWKey GalleryItemControl.DefaultGlyphMargin}">0</Thickness>
+    <Thickness x:Key="{dxt:LWKey GalleryItemControl.DefaultCaptionMargin}">0</Thickness>
+    <Thickness x:Key="{dxt:LWKey GalleryItemControl.DefaultDescriptionMargin}">0</Thickness>
+    <Thickness x:Key="{dxt:LWKey GalleryItemGroupControl.DefaultGroupCaptionMargin}">3</Thickness>
+    <Thickness x:Key="{dxt:LWKey GalleryItemGroupControl.DefaultGroupItemsMargin}">0,0,1,1</Thickness>
+    <sys:Double x:Key="{dxt:LWKey Customization.CustomizationFormMinWidth}">300</sys:Double>
+    <sys:Double x:Key="{dxt:LWKey Customization.CustomizationFormMinHeight}">300</sys:Double>
+    <sys:Boolean x:Key="{dxt:LWKey Customization.ColorizeGlyph}">False</sys:Boolean>
+
+    <dxb:BarItemLinkMenuHeaderControlStatesResourceHolder
+        x:Key="{dxt:LWKey BarItemLinkMenuHeader.StatesHolder}"
+        ContentBorderThicknessBottom="0,1,0,0"
+        ContentBorderThicknessCenter="0,1,0,1"
+        ContentBorderThicknessTop="0,0,0,1"
+        CornerRadiusCommon="0"
+        HorizontalItemsPresenterThickness="4,0,4,0"
+        ItemsBorderThicknessCollapsed="0"
+        ItemsBorderThicknessVisible="0"
+        VerticalItemsPresenterThickness="0" />
+
+    <!-- Customization -->
+
+    <dxb:SizeEx x:Key="{dxt:LWKey Customization.CaptionEditorFloatSize}" Height="140" Width="400" />
+
+    <dxb:SizeEx x:Key="{dxt:LWKey Customization.CustomizationFormFloatSize}" Height="400" Width="450" />
+
+    <!--#endregion Base\Core\Core\Bars\Themes\Base\UICore.xaml-->
+
+    <!--#region Base\Core\Core\Bars\Themes\Base\BarControl\BarContainerControl.xaml-->
+    <!-- General -->
+
+    <ControlTemplate x:Key="{dxt:LWKey BarContainerControl.BorderTemplate}" TargetType="{x:Type ContentControl}">
+        <ContentPresenter Content="{TemplateBinding Content}" />
+    </ControlTemplate>
+    <!--#endregion Base\Core\Core\Bars\Themes\Base\BarControl\BarContainerControl.xaml-->
+
+    <!--#region Base\Core\Core\Bars\Themes\Base\BarControl\BarControl.xaml-->
+    <!-- General -->
+
+    <Style x:Key="{dxt:LWKey BarControl.BarStyle}" TargetType="{x:Type ContentControl}">
+        <Setter Property="Margin" Value="{dx:LWThickness '0, Win11=(0,2,0,3)'}" />
+    </Style>
+
+    <Style x:Key="{dxt:LWKey BarControl.FloatingBarStyle}" TargetType="{x:Type ContentControl}" />
+
+    <Style x:Key="{dxt:LWKey BarControl.MainMenuStyle}" TargetType="{x:Type ContentControl}" />
+
+    <Style x:Key="{dxt:LWKey BarControl.StatusBarStyle}" TargetType="{x:Type ContentControl}" />
+
+    <!-- Templates -->
+
+    <ControlTemplate x:Key="{dxt:LWKey BarControl.BarTemplate}" TargetType="{x:Type ContentControl}">
+        <dx:DXBorder x:Name="Root" Background="{dx:LWBrush 'Brush.Window.Background, VS2019Blue=Brush.ControlDark.Background, Win10Dark=Brush.Control.Background, Win10Light=Brush.Control.Background, Win11=Brush.WindowBackground'}">
+            <ContentPresenter />
+        </dx:DXBorder>
+        <ControlTemplate.Triggers>
+            <DataTrigger Binding="{Binding Path=LinksHolder.(dxi:AppearanceOptions.HasBackground), RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type dxb:BarControl}}}" Value="True">
+                <Setter Property="Background" TargetName="Root" Value="{Binding Path=LinksHolder.(dxi:AppearanceOptions.Background), RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type dxb:BarControl}}}" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding Path=LinksHolder.(dxi:AppearanceOptions.HasBorderBrush), RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type dxb:BarControl}}}" Value="True">
+                <Setter Property="BorderBrush" TargetName="Root" Value="{Binding Path=LinksHolder.(dxi:AppearanceOptions.BorderBrush), RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type dxb:BarControl}}}" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding Path=LinksHolder.(dxi:AppearanceOptions.HasBorderThickness), RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type dxb:BarControl}}}" Value="True">
+                <Setter Property="BorderThickness" TargetName="Root" Value="{Binding Path=LinksHolder.(dxi:AppearanceOptions.BorderThickness), RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type dxb:BarControl}}}" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding Path=LinksHolder.(dxi:AppearanceOptions.HasPadding), RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type dxb:BarControl}}}" Value="True">
+                <Setter Property="Padding" TargetName="Root" Value="{Binding Path=LinksHolder.(dxi:AppearanceOptions.Padding), RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type dxb:BarControl}}}" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding Path=LinksHolder.(dxi:AppearanceOptions.HasCornerRadius), RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type dxb:BarControl}}}" Value="True">
+                <Setter Property="CornerRadius" TargetName="Root" Value="{Binding Path=LinksHolder.(dxi:AppearanceOptions.CornerRadius), RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type dxb:BarControl}}}" />
+            </DataTrigger>
+            <Trigger Property="dx:ThemeManager.IsTouchEnabled" Value="True">
+                <Setter Property="MinHeight" TargetName="Root" Value="46" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="{dxt:LWKey BarControl.MainMenuTemplate}" TargetType="{x:Type ContentControl}">
+        <dx:DXBorder x:Name="Root" Background="{dx:LWBrush 'Brush.Window.Background, VS2019Blue=Brush.ControlDark.Background, Win10Dark=Brush.Control.Background, Win10Light=Brush.Control.Background, Win11=Brush.WindowBackground'}">
+            <ContentPresenter />
+        </dx:DXBorder>
+        <ControlTemplate.Triggers>
+            <DataTrigger Binding="{Binding Path=LinksHolder.(dxi:AppearanceOptions.HasBackground), RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type dxb:BarControl}}}" Value="True">
+                <Setter Property="Background" TargetName="Root" Value="{Binding Path=LinksHolder.(dxi:AppearanceOptions.Background), RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type dxb:BarControl}}}" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding Path=LinksHolder.(dxi:AppearanceOptions.HasBorderBrush), RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type dxb:BarControl}}}" Value="True">
+                <Setter Property="BorderBrush" TargetName="Root" Value="{Binding Path=LinksHolder.(dxi:AppearanceOptions.BorderBrush), RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type dxb:BarControl}}}" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding Path=LinksHolder.(dxi:AppearanceOptions.HasBorderThickness), RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type dxb:BarControl}}}" Value="True">
+                <Setter Property="BorderThickness" TargetName="Root" Value="{Binding Path=LinksHolder.(dxi:AppearanceOptions.BorderThickness), RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type dxb:BarControl}}}" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding Path=LinksHolder.(dxi:AppearanceOptions.HasPadding), RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type dxb:BarControl}}}" Value="True">
+                <Setter Property="Padding" TargetName="Root" Value="{Binding Path=LinksHolder.(dxi:AppearanceOptions.Padding), RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type dxb:BarControl}}}" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding Path=LinksHolder.(dxi:AppearanceOptions.HasCornerRadius), RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type dxb:BarControl}}}" Value="True">
+                <Setter Property="CornerRadius" TargetName="Root" Value="{Binding Path=LinksHolder.(dxi:AppearanceOptions.CornerRadius), RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type dxb:BarControl}}}" />
+            </DataTrigger>
+            <Trigger Property="dx:ThemeManager.IsTouchEnabled" Value="True">
+                <Setter Property="MinHeight" TargetName="Root" Value="46" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <!--#endregion Base\Core\Core\Bars\Themes\Base\BarControl\BarControl.xaml-->
+
+    <!--#region Base\Core\Core\Bars\Themes\Base\BarControl.xaml-->
+    <!-- General -->
+
+    <ControlTemplate x:Key="{dxt:LWKey BarControl.QuickCustomizationButtonTemplate}" TargetType="{x:Type dxb:BarQuickCustomizationButton}">
+        <Grid x:Name="Root" Margin="1">
+            <dx:DXBorder
+                x:Name="IsDefault"
+                Background="Transparent"
+                BorderBrush="Transparent"
+                BorderThickness="1"
+                CornerRadius="{dx:LWCornerRadius '0, Win11=4'}" />
+            <Path
+                x:Name="Content"
+                Fill="{dx:LWBrush 'Brush.Foreground, Office2019Black=Brush.ForegroundDark, Win11=Brush.Foreground.Primary'}"
+                HorizontalAlignment="Right"
+                Margin="3"
+                Style="{StaticResource UIShape.RightDown}"
+                VerticalAlignment="Bottom" />
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal" />
+                    <VisualState x:Name="MouseOver">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.HoverBackground, Office2019Colorful=Color.HoverAltBackground, VS2019Blue=Color.ControlDark.HoverBackground, Win11=Color.Button.HoverBackground'}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.HoverBorder, Office2019Colorful=Color.HoverAltBorder, VS2019Blue=Color.ControlDark.HoverBorder, Win11=Color.Button.HoverBorder'}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="Content" Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.HoverForeground, Office2019Black=Color.Foreground, VS2019Dark=Color.Focused, Win11=Color.Foreground.Primary'}" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Pressed">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.SelectionBackground, Office2019Colorful=Color.SelectionAltBackground, VS2019Blue=Color.ControlDark.SelectionBackground, Win11=Color.Button.PressedBackground'}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.SelectionBorder, Office2019Colorful=Color.SelectionAltBorder, VS2019Blue=Color.ControlDark.SelectionBorder, Win11=Color.Button.PressedBorder'}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="Content" Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.SelectionForeground, Office2019Black=Color.Foreground, Win11=Color.Foreground.Muted'}" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Checked">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.SelectionBackground, Office2019Colorful=Color.SelectionAltBackground, VS2019Blue=Color.ControlDark.SelectionBackground, Win11=Color.Button.CheckedBackground'}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.SelectionBorder, Office2019Colorful=Color.SelectionAltBorder, VS2019Blue=Color.ControlDark.SelectionBorder, Win11=Color.Button.CheckedBorder'}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="Content" Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.SelectionForeground, Office2019Black=Color.Foreground, Win11=Color.Foreground.Alt'}" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Disabled">
+                        <Storyboard>
+                            <DoubleAnimation Duration="0" Storyboard.TargetName="Root" Storyboard.TargetProperty="Opacity" To="0.38" />
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+                <VisualStateGroup x:Name="OrientationStates">
+                    <VisualState x:Name="Horizontal" />
+                    <VisualState x:Name="Vertical">
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Content" Storyboard.TargetProperty="RenderTransform">
+                                <DiscreteObjectKeyFrame KeyTime="0">
+                                    <DiscreteObjectKeyFrame.Value>
+                                        <RotateTransform Angle="180" CenterX="3.5" CenterY="3.5" />
+                                    </DiscreteObjectKeyFrame.Value>
+                                </DiscreteObjectKeyFrame>
+                            </ObjectAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </Grid>
+        <ControlTemplate.Triggers>
+            <Trigger Property="dx:ThemeManager.IsTouchEnabled" Value="True">
+                <Setter Property="MinWidth" TargetName="Root" Value="44" />
+                <Setter Property="MinHeight" TargetName="Root" Value="44" />
+                <Setter Property="HorizontalAlignment" TargetName="Content" Value="Center" />
+                <Setter Property="VerticalAlignment" TargetName="Content" Value="Center" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="{dxt:LWKey BarControl.QuickCustomizationButtonInMainMenuTemplate}" TargetType="{x:Type dxb:BarQuickCustomizationButton}">
+        <Grid x:Name="Root" Margin="1">
+            <dx:DXBorder
+                x:Name="IsDefault"
+                Background="Transparent"
+                BorderBrush="Transparent"
+                BorderThickness="1" />
+            <Path
+                x:Name="Content"
+                Fill="{dx:LWBrush 'Brush.Foreground, Office2019Black=Brush.ForegroundDark, Win11=Brush.Foreground.Primary'}"
+                HorizontalAlignment="Right"
+                Margin="3"
+                Style="{StaticResource UIShape.RightDown}"
+                VerticalAlignment="Bottom" />
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal" />
+                    <VisualState x:Name="MouseOver">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.HoverBackground, Office2019Colorful=Color.HoverAltBackground, VS2019Blue=Color.ControlDark.HoverBackground, Win11=Color.ListItem.HoverBackground'}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.HoverBackground, Office2019Colorful=Color.HoverAltBackground, VS2019Blue=Color.ControlDark.HoverBorder, Win11=Color.ListItem.HoverBackground'}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="Content" Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.HoverForeground, Office2019Black=Color.Foreground, Win11=Color.Foreground.Primary'}" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Pressed">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.SelectionBackground, Office2019Colorful=Color.SelectionAltBackground, VS2019Blue=Color.ControlDark.SelectionBackground, Win11=Color.ListItem.SelectionBackground'}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.SelectionBackground, Office2019Colorful=Color.SelectionAltBackground, VS2019Blue=Color.ControlDark.SelectionBorder, Win11=Color.ListItem.SelectionBackground'}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="Content" Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.SelectionForeground, Office2019Black=Color.Foreground, Win11=Color.Foreground.Primary'}" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Checked">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.SelectionBackground, Office2019Colorful=Color.SelectionAltBackground, VS2019Blue=Color.ControlDark.SelectionBackground, Win11=Color.ListItem.SelectionBackground'}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.SelectionBackground, Office2019Colorful=Color.SelectionAltBackground, VS2019Blue=Color.ControlDark.SelectionBorder, Win11=Color.ListItem.SelectionBackground'}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="Content" Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.SelectionForeground, Office2019Black=Color.Foreground, VS2019Light=Color.HoverForeground, Win11=Color.Foreground.Primary'}" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Disabled">
+                        <Storyboard>
+                            <DoubleAnimation Duration="0" Storyboard.TargetName="Root" Storyboard.TargetProperty="Opacity" To="0.38" />
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+                <VisualStateGroup x:Name="OrientationStates">
+                    <VisualState x:Name="Horizontal" />
+                    <VisualState x:Name="Vertical">
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Content" Storyboard.TargetProperty="RenderTransform">
+                                <DiscreteObjectKeyFrame KeyTime="0">
+                                    <DiscreteObjectKeyFrame.Value>
+                                        <RotateTransform Angle="180" CenterX="3.5" CenterY="3.5" />
+                                    </DiscreteObjectKeyFrame.Value>
+                                </DiscreteObjectKeyFrame>
+                            </ObjectAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </Grid>
+        <ControlTemplate.Triggers>
+            <Trigger Property="dx:ThemeManager.IsTouchEnabled" Value="True">
+                <Setter Property="MinWidth" TargetName="Root" Value="44" />
+                <Setter Property="MinHeight" TargetName="Root" Value="44" />
+                <Setter Property="HorizontalAlignment" TargetName="Content" Value="Center" />
+                <Setter Property="VerticalAlignment" TargetName="Content" Value="Center" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <!-- General -->
+
+    <ControlTemplate x:Key="{dxt:LWKey BarControl.DragWidgetTemplate}" TargetType="{x:Type dxb:DragWidget}">
+        <Grid x:Name="Root" Background="Transparent">
+            <Path x:Name="Content" Margin="3" Style="{StaticResource UIShape.DragWidget}" />
+        </Grid>
+        <ControlTemplate.Triggers>
+            <Trigger Property="dx:ThemeManager.IsTouchEnabled" Value="True">
+                <Setter Property="MinHeight" TargetName="Root" Value="44" />
+                <Setter Property="MinWidth" TargetName="Root" Value="44" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <!-- SizeGrip -->
+
+    <ControlTemplate x:Key="{dxt:LWKey BarControl.ThumbTemplate}" TargetType="{x:Type Thumb}">
+        <dx:DXBorder x:Name="Root" Background="{dx:LWBrush 'Brush.Window.Background, Office2019Black=Brush.Control.Background, Office2019Colorful=Brush.Control.Background, Office2019HighContrast=Brush.Control.Background, VS2019Blue=Brush.Backstage.Window.Background, VS2019Dark=Brush.Backstage.Window.Background, VS2019Light=Brush.Backstage.Window.Background, Win11=Brush.WindowBackground'}">
+            <Path
+                x:Name="Content"
+                Fill="{dx:LWBrush 'Brush.Foreground, Office2019Black=Brush.Control.NeutralBackground, VS2019Blue=Brush.Backstage.Foreground, VS2019Dark=Brush.Backstage.Foreground, VS2019Light=Brush.Backstage.Foreground, Win11=Brush.Foreground.Primary'}"
+                HorizontalAlignment="Right"
+                Margin="3"
+                Style="{StaticResource UIShape.SizeGrip}"
+                VerticalAlignment="Bottom" />
+        </dx:DXBorder>
+        <ControlTemplate.Triggers>
+            <Trigger Property="dx:ThemeManager.IsTouchEnabled" Value="True">
+                <Setter Property="MinHeight" TargetName="Root" Value="44" />
+                <Setter Property="MinWidth" TargetName="Root" Value="44" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <!-- DropIndicator -->
+
+    <ControlTemplate x:Key="{dxt:LWKey BarControl.DropIndicatorTemplate}" TargetType="{x:Type ContentControl}">
+        <Grid x:Name="PART_Content">
+            <Grid.RenderTransform>
+                <TranslateTransform X="-3" Y="0" />
+            </Grid.RenderTransform>
+            <dx:DXBorder
+                Background="{dx:LWBrush 'Brush.Foreground, Office2019Black=Brush.ControlLight.Foreground, Win11=Brush.Foreground.Primary'}"
+                BorderBrush="{dx:LWBrush 'Brush.Window.Background, Win11=Brush.WindowBackground'}"
+                BorderThickness="1"
+                Height="3"
+                VerticalAlignment="Top"
+                Width="9" />
+            <dx:DXBorder
+                Background="{dx:LWBrush 'Brush.Foreground, Office2019Black=Brush.ControlLight.Foreground, Win11=Brush.Foreground.Primary'}"
+                BorderBrush="{dx:LWBrush 'Brush.Window.Background, Win11=Brush.WindowBackground'}"
+                BorderThickness="1"
+                Height="3"
+                VerticalAlignment="Bottom"
+                Width="9" />
+            <dx:PixelSnapper HorizontalAlignment="Center" Margin="0,2,0,2">
+                <dx:DXBorder
+                    Background="{dx:LWBrush 'Brush.Foreground, Office2019Black=Brush.ControlLight.Foreground, Win11=Brush.Foreground.Primary'}"
+                    BorderBrush="{dx:LWBrush 'Brush.Window.Background, Win11=Brush.WindowBackground'}"
+                    BorderThickness="1,0,1,0"
+                    Width="3" />
+            </dx:PixelSnapper>
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="Orientation">
+                    <VisualState x:Name="Horizontal">
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="PART_Content" Storyboard.TargetProperty="RenderTransform">
+                                <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                                    <DiscreteObjectKeyFrame.Value>
+                                        <TransformGroup x:Name="HorizontalTransform">
+                                            <TranslateTransform X="-3" Y="0" />
+                                        </TransformGroup>
+                                    </DiscreteObjectKeyFrame.Value>
+                                </DiscreteObjectKeyFrame>
+                            </ObjectAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Vertical">
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="PART_Content" Storyboard.TargetProperty="RenderTransform">
+                                <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                                    <DiscreteObjectKeyFrame.Value>
+                                        <TransformGroup x:Name="VerticalTransform">
+                                            <RotateTransform Angle="-90" CenterX="0.5" CenterY="0.5" />
+                                            <TranslateTransform X="0" Y="3" />
+                                        </TransformGroup>
+                                    </DiscreteObjectKeyFrame.Value>
+                                </DiscreteObjectKeyFrame>
+                            </ObjectAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </Grid>
+    </ControlTemplate>
+
+    <!-- General -->
+
+    <ControlTemplate x:Key="{dxt:LWKey BarControl.StatusBarContentTemplate}" TargetType="{x:Type ContentControl}">
+        <ContentPresenter Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" ContentTemplate="{TemplateBinding ContentTemplate}" />
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="{dxt:LWKey BarControl.MainMenuContentTemplate}" TargetType="{x:Type ContentControl}">
+        <ContentPresenter />
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="{dxt:LWKey BarControl.BarContentTemplate}" TargetType="{x:Type ContentControl}">
+        <ContentPresenter Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" ContentTemplate="{TemplateBinding ContentTemplate}" />
+    </ControlTemplate>
+
+    <!-- Styles -->
+
+    <Style x:Key="{dxt:LWKey BarControl.BarContentStyle}" TargetType="{x:Type ContentControl}">
+        <Setter Property="FontFamily" Value="Segoe UI" />
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="FontStyle" Value="Normal" />
+        <Setter Property="FontWeight" Value="Normal" />
+        <Setter Property="Foreground" Value="{dx:LWBrush 'Brush.Foreground, Win11=Brush.Foreground.Primary'}" />
+    </Style>
+
+    <Style x:Key="{dxt:LWKey BarControl.MenuContentStyle}" BasedOn="{StaticResource {dxt:LWKey BarControl.BarContentStyle}}" TargetType="{x:Type ContentControl}">
+        <Setter Property="Focusable" Value="False" />
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="IsTabStop" Value="False" />
+        <Setter Property="Foreground" Value="{dx:LWBrush 'Brush.Foreground, Win11=Brush.Foreground.Primary'}" />
+    </Style>
+
+    <Style x:Key="{dxt:LWKey BarControl.MainMenuContentStyle}" BasedOn="{StaticResource {dxt:LWKey BarControl.BarContentStyle}}" TargetType="{x:Type ContentControl}" />
+
+    <Style x:Key="{dxt:LWKey BarControl.StatusBarContentStyle}" BasedOn="{StaticResource {dxt:LWKey BarControl.BarContentStyle}}" TargetType="{x:Type ContentControl}" />
+    <!--#endregion Base\Core\Core\Bars\Themes\Base\BarControl.xaml-->
+
+    <!--#region Base\Core\Core\Bars\Themes\Base\BarItems\Items\BarSubItem.xaml-->
+    <!-- General -->
+
+    <Style x:Key="{dxt:LWKey BarSubItem.GlyphBorderStyle}" TargetType="{x:Type dx:MeasurePixelSnapperContentControl}" />
+
+
+    <!-- TextSplitter -->
+
+    <!--#endregion Base\Core\Core\Bars\Themes\Base\BarItems\Items\BarSubItem.xaml-->
+
+    <!--#region Base\Core\Core\Bars\Themes\Base\BarItems\BarItems.xaml-->
+    <!-- BarButtonItem -->
+
+    <ControlTemplate x:Key="CheckTriStateTemplate" TargetType="{x:Type ContentControl}">
+        <Grid x:Name="Root" Background="Transparent">
+            <Path Style="{StaticResource UIShape.Checked}" Visibility="{Binding Path=(dxb:BarCheckItemLinkControlStatesProvider.CheckVisibility), RelativeSource={RelativeSource TemplatedParent}}" />
+            <dx:DXBorder
+                Background="{dx:LWBrush 'Brush.Foreground, Win11=Brush.Foreground.Primary'}"
+                Height="8"
+                Visibility="{Binding Path=(dxb:BarCheckItemLinkControlStatesProvider.TriStateVisibility), RelativeSource={RelativeSource TemplatedParent}}"
+                Width="8" />
+            <dx:DXBorder Background="{dx:LWBrush 'Brush.Border, Office2019Black=Brush.Delimiter, Office2019HighContrast=Brush.Focused, VS2019Blue=Brush.ControlLight.SelectionBackground, VS2019Dark=Brush.Focused, VS2019Light=Brush.Focused, Win10Dark=Brush.SelectionBackground, Win10Light=Brush.SelectionBackground'}" Visibility="{Binding Path=(dxb:BarCheckItemLinkControlStatesProvider.GlyphCheckVisibility), RelativeSource={RelativeSource TemplatedParent}}" CornerRadius="{dx:LWCornerRadius '0, Win11=4'}">
+                <ContentPresenter />
+            </dx:DXBorder>
+            <dx:DXBorder Background="{dx:LWBrush 'Brush.Border, Office2019Black=Brush.Delimiter, VS2019Blue=Brush.ControlLight.SelectionBackground, VS2019Dark=Brush.Focused, VS2019Light=Brush.Focused'}" Opacity="0.38" Visibility="{Binding Path=(dxb:BarCheckItemLinkControlStatesProvider.GlyphTriStateVisibility), RelativeSource={RelativeSource TemplatedParent}}">
+                <ContentPresenter />
+            </dx:DXBorder>
+        </Grid>
+        <ControlTemplate.Triggers>
+            <Trigger Property="FlowDirection" Value="RightToLeft">
+                <Setter Property="RenderTransform" TargetName="Root">
+                    <Setter.Value>
+                        <ScaleTransform ScaleX="-1" ScaleY="1" />
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <!-- General -->
+
+    <!-- BarSplitButton -->
+
+    <!-- BarItemSeparator -->
+
+    <ControlTemplate x:Key="{dxt:LWKey BarItemSeparator.Template}" TargetType="{x:Type dxb:BarItemLinkSeparatorControl}">
+        <dx:DXBorder
+            Background="{dx:LWBrush 'Brush.Delimiter, Office2019Black=Brush.Editor.Delimiter, Win10Dark=Brush.AltBorder'}"
+            Margin="4,2,5,2"
+            MinHeight="1"
+            MinWidth="1" />
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="{dxt:LWKey BarItemSeparator.InRibbonStatusBarRightPartTemplate}" TargetType="{x:Type dxb:BarItemLinkSeparatorControl}">
+        <dx:DXBorder Background="{dx:LWBrush 'Brush.Backstage.Delimiter, Office2019Black=Brush.Border, Office2019Colorful=Brush.Delimiter, Office2019HighContrast=Brush.Delimiter, Win10Dark=Brush.AltBorder, Win10Light=Brush.Delimiter, Win11=Brush.Backstage.Separator'}" Margin="2,2,3,2" Width="1" />
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="{dxt:LWKey BarItemSeparator.InRibbonStatusBarLeftPartTemplate}" TargetType="{x:Type dxb:BarItemLinkSeparatorControl}">
+        <dx:DXBorder Background="{dx:LWBrush 'Brush.Backstage.Delimiter, Office2019Black=Brush.Border, Office2019Colorful=Brush.Delimiter, Office2019HighContrast=Brush.Delimiter, Win10Dark=Brush.AltBorder, Win10Light=Brush.Delimiter, Win11=Brush.Backstage.Separator'}" Margin="2,2,3,2" Width="1" />
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="{dxt:LWKey BarItemSeparator.InStatusBarTemplate}" TargetType="{x:Type dxb:BarItemLinkSeparatorControl}">
+        <dx:DXBorder Background="{dx:LWBrush 'Brush.Delimiter, Office2019Black=Brush.Border, VS2019Blue=Brush.Backstage.Delimiter, VS2019Dark=Brush.Backstage.Delimiter, VS2019Light=Brush.Backstage.Delimiter, Win10Dark=Brush.AltBorder'}" Margin="4,2,5,2" Width="1" />
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="{dxt:LWKey BarItemSeparator.InRibbonPageGroupTemplate}" TargetType="{x:Type dxb:BarItemLinkSeparatorControl}">
+        <dx:DXBorder
+            x:Name="Border"
+            Background="{dx:LWBrush 'Brush.Delimiter, Win10Dark=Brush.AltBorder, Win11=Brush.Separator'}"
+            Margin="4,2,5,2"
+            Width="1" />
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsInSimplifiedRibbon" Value="True">
+                <Setter Property="Margin" TargetName="Border" Value="3,4,3,5" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="{dxt:LWKey BarItemSeparator.InRibbonPageHeaderTemplate}" TargetType="{x:Type dxb:BarItemLinkSeparatorControl}">
+        <dx:DXBorder Background="{dx:LWBrush 'Brush.Backstage.Delimiter, Office2019Colorful=Brush.Delimiter, Office2019HighContrast=Brush.Delimiter, VS2019Dark=Brush.Delimiter, Win10Dark=Brush.AltBorder, Win10Light=Brush.Delimiter, Win11=Brush.Backstage.Separator'}" Margin="2,2,3,2" Width="1" />
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="{dxt:LWKey BarItemSeparator.InRibbonQuickAccessToolbarCommonTemplate}" TargetType="{x:Type Control}">
+        <dx:DXBorder Background="{dx:LWBrush 'Brush.Backstage.Delimiter, VS2019Dark=Brush.Delimiter, Win10Dark=Brush.AltBorder, Win10Light=Brush.Delimiter, Win11=Brush.Backstage.Separator'}" Margin="4,2,5,2" Width="1" />
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="{dxt:LWKey BarItemSeparator.InRibbonQuickAccessToolbarTemplate}" TargetType="{x:Type dxb:BarItemLinkSeparatorControl}">
+        <dx:DXBorder Background="{dx:LWBrush 'Brush.Backstage.Delimiter, VS2019Dark=Brush.Delimiter, Win10Dark=Brush.AltBorder, Win10Light=Brush.Delimiter, Win11=Brush.Backstage.Separator'}" Margin="2,2,3,2" Width="1" />
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="{dxt:LWKey BarItemSeparator.InRibbonQuickAccessToolbarFooterTemplate}" TargetType="{x:Type dxb:BarItemLinkSeparatorControl}">
+        <dx:DXBorder Background="{dx:LWBrush 'Brush.Delimiter, Win10Dark=Brush.AltBorder'}" Margin="2,2,3,2" Width="1" />
+    </ControlTemplate>
+
+    <!-- Horizontal -->
+
+    <ControlTemplate x:Key="{dxt:LWKey BarItemSeparator.InMenuTemplate}" TargetType="{x:Type dxb:BarItemLinkSeparatorControl}">
+        <Grid x:Name="Root">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <dx:DXBorder Width="{TemplateBinding InMenuContentOffset}" />
+            <dx:DXBorder
+                Grid.Column="1"
+                Background="{dx:LWBrush 'Brush.Delimiter, Office2019Black=Brush.Editor.Delimiter'}"
+                Height="1"
+                Margin="1,0,1,1"
+                VerticalAlignment="Center" />
+        </Grid>
+    </ControlTemplate>
+
+    <!-- BarStaticItem -->
+
+    <ControlTemplate x:Key="{dxt:LWKey BarStaticItem.BorderTemplate}" TargetType="ContentControl">
+        <Grid SnapsToDevicePixels="True">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <dxi:DXTriggerManager.TriggersInfo>
+                <dxi:DXTriggerInfoCollection>
+                    <dxi:DXTriggerInfo Binding="{Binding Path=Link.Item.ShowBorder, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=dxb:BarItemLinkControl}}" VisualState="HideBorder" VisualStateNormal="ShowBorder">
+                        <dxi:DXTriggerInfo.TriggerValue>
+                            <sys:Boolean>False</sys:Boolean>
+                        </dxi:DXTriggerInfo.TriggerValue>
+                    </dxi:DXTriggerInfo>
+                </dxi:DXTriggerInfoCollection>
+            </dxi:DXTriggerManager.TriggersInfo>
+            <ContentPresenter Grid.ColumnSpan="1" Content="{TemplateBinding Content}" />
+            <dx:DXBorder
+                x:Name="Separator"
+                Grid.Column="1"
+                Background="{dx:LWBrush 'Brush.Delimiter, Win10Dark=Brush.AltBorder, VS2019Dark=Brush.Foreground, VS2019Blue=Brush.Backstage.Foreground'}"
+                Margin="0,2,0,3"
+                Width="1" />
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="BorderVisibility">
+                    <VisualState x:Name="ShowBorder">
+                        <Storyboard>
+                            <DoubleAnimation Duration="0" Storyboard.TargetName="Separator" Storyboard.TargetProperty="Opacity" To="0" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="HideBorder" />
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </Grid>
+    </ControlTemplate>
+
+    <!-- BarItemTouchSplitter -->
+
+    <ControlTemplate x:Key="{dxt:LWKey BarItemTouchSplitter.InMenuTemplate}" TargetType="{x:Type Control}">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <dx:DXBorder Width="{Binding Path=InMenuContentOffset, RelativeSource={RelativeSource TemplatedParent}}" />
+            <dx:DXBorder
+                Grid.Column="1"
+                Background="{StaticResource Brush.Delimiter}"
+                Height="1"
+                Margin="7,0,2,0"
+                VerticalAlignment="Center" />
+        </Grid>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="{dxt:LWKey BarItemTouchSplitter.Template}" TargetType="{x:Type Control}">
+        <dx:DXBorder Background="{dx:LWBrush 'Brush.Delimiter, Win10Dark=Brush.AltBorder'}" Margin="1,5,1,5" Width="1" />
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="{dxt:LWKey BarItemTouchSplitter.InRibbonStatusBarRightPartTemplate}" TargetType="{x:Type Control}">
+        <dx:DXBorder Background="{dx:LWBrush 'Brush.Delimiter, VS2019Dark=Brush.Backstage.Delimiter, Win10Dark=Brush.AltBorder'}" Margin="1,2,1,2" Width="1" />
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="{dxt:LWKey BarItemTouchSplitter.InRibbonStatusBarLeftPartTemplate}" TargetType="{x:Type Control}">
+        <dx:DXBorder Background="{dx:LWBrush 'Brush.Delimiter, VS2019Dark=Brush.Backstage.Delimiter, Win10Dark=Brush.AltBorder'}" Margin="1,2,1,2" Width="1" />
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="{dxt:LWKey BarItemTouchSplitter.InStatusBarTemplate}" TargetType="{x:Type Control}">
+        <dx:DXBorder Background="{dx:LWBrush 'Brush.Delimiter, Office2019Black=Brush.Backstage.Delimiter, Office2019Colorful=Brush.Backstage.Delimiter, Office2019HighContrast=Brush.Backstage.Delimiter, VS2019Blue=Brush.Backstage.Delimiter, VS2019Dark=Brush.Backstage.Delimiter, VS2019Light=Brush.Backstage.Delimiter, Win10Dark=Brush.AltBorder'}" Margin="1,2,1,2" Width="1" />
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="{dxt:LWKey BarItemTouchSplitter.InRibbonPageGroupTemplate}" TargetType="{x:Type Control}">
+        <dx:DXBorder Background="{dx:LWBrush 'Brush.Delimiter, Win10Dark=Brush.AltBorder'}" Margin="2,5,2,-5" Width="1" />
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="{dxt:LWKey BarItemTouchSplitter.InRibbonPageHeaderTemplate}" TargetType="{x:Type Control}">
+        <dx:DXBorder Background="{dx:LWBrush 'Brush.Delimiter, Win10Dark=Brush.AltBorder'}" Margin="2,5,2,5" Width="1" />
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="{dxt:LWKey BarItemTouchSplitter.InRibbonQuickAccessToolbarCommonTemplate}" TargetType="{x:Type Control}">
+        <dx:DXBorder Background="{dx:LWBrush 'Brush.Delimiter, Win10Dark=Brush.AltBorder'}" Margin="2,5,2,5" Width="1" />
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="{dxt:LWKey BarItemTouchSplitter.InRibbonQuickAccessToolbarTemplate}" TargetType="{x:Type Control}">
+        <ContentControl dx:FocusHelper2.Focusable="False" Template="{StaticResource {dxt:LWKey BarItemTouchSplitter.InRibbonQuickAccessToolbarCommonTemplate}}" />
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="{dxt:LWKey BarItemTouchSplitter.InRibbonQuickAccessToolbarFooterTemplate}" TargetType="{x:Type Control}">
+        <dx:DXBorder Background="{dx:LWBrush 'Brush.Delimiter, Win10Dark=Brush.AltBorder'}" Margin="2,5,2,5" Width="1" />
+    </ControlTemplate>
+    <!--#endregion Base\Core\Core\Bars\Themes\Base\BarItems\BarItems.xaml-->
+
+    <ControlTemplate x:Key="{dxt:LWKey BarItemBorderInRibbonStatusBarLeft.Normal}" TargetType="{x:Type dxb:ItemBorderControl}">
+        <Grid x:Name="Root">
+            <dx:DXBorder
+            x:Name="IsDefault"
+            Background="Transparent"
+            BorderBrush="Transparent"
+            BorderThickness="1" />
+            <dx:DXBorder
+            x:Name="IsCustomization"
+            BorderBrush="{StaticResource Brush.Backstage.Focused}"
+            BorderThickness="1"
+            Opacity="0" />
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="HideBorderSide">
+                    <VisualState x:Name="None" />
+                    <VisualState x:Name="Top">
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames dxi:ValueSetter.Thickness="0,0,0,1" Storyboard.TargetName="Root" Storyboard.TargetProperty="Margin" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Right">
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames dxi:ValueSetter.Thickness="0,0,1,0" Storyboard.TargetName="Root" Storyboard.TargetProperty="Margin" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Left">
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames dxi:ValueSetter.Thickness="0" Storyboard.TargetName="Root" Storyboard.TargetProperty="Margin" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Bottom">
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames dxi:ValueSetter.Thickness="0" Storyboard.TargetName="Root" Storyboard.TargetProperty="Margin" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="All" />
+                </VisualStateGroup>
+                <VisualStateGroup x:Name="ActiveState">
+                    <VisualState x:Name="Active">
+                        <Storyboard>
+                            <DoubleAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="Opacity" To="1" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Inactive">
+                        <Storyboard>
+                            <DoubleAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="Opacity" To="0.62" />
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+                <VisualStateGroup x:Name="State">
+                    <VisualState x:Name="Normal">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="Transparent" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="Transparent" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Hover">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.Backstage.HoverBackground, Office2019Colorful=Color.HoverAltBackground, Office2019HighContrast=Color.HoverBackground, Win10=Color.HoverBackground, Win11=Color.Button.HoverBackground'}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.Backstage.HoverBackground, Office2019Colorful=Color.HoverAltBorder, Office2019HighContrast=Color.HoverBorder, Win10=Color.HoverBorder, Win11=Color.Button.HoverBorder'}" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Pressed">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.Backstage.SelectionBackground, Office2019Colorful=Color.SelectionAltBackground, Office2019HighContrast=Color.SelectionBackground, Win10=Color.SelectionBackground, Win11=Color.Button.PressedBackground'}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.Backstage.SelectionBackground, Office2019Colorful=Color.SelectionAltBorder, Office2019HighContrast=Color.SelectionBorder, Win10=Color.SelectionBorder, Win11=Color.Button.PressedBorder'}" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Disabled" />
+                    <VisualState x:Name="Checked">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.Backstage.SelectionBackground, Office2019Colorful=Color.SelectionAltBackground, Office2019HighContrast=Color.SelectionBackground, Win10=Color.SelectionBackground, Win11=Color.Button.CheckedBackground'}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.Backstage.SelectionBackground, Office2019Colorful=Color.SelectionAltBorder, Office2019HighContrast=Color.SelectionBorder, Win10=Color.SelectionBorder, Win11=Color.Button.CheckedBorder'}" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="HoverChecked">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.Backstage.SelectionBackground, Office2019Colorful=Color.SelectionAltBackground, Office2019HighContrast=Color.SelectionBackground, Win10=Color.SelectionBackground, Win11=Color.Button.CheckedHoverBackground'}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.Backstage.SelectionBackground, Office2019Colorful=Color.SelectionAltBorder, Office2019HighContrast=Color.SelectionBorder, Win10=Color.SelectionBorder, Win11=Color.Button.CheckedHoverBorder'}" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Indeterminate">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.Backstage.HoverBackground, Office2019Colorful=Color.HoverAltBackground, Office2019HighContrast=Color.HoverBackground, Win10=Color.HoverBackground, Win11=Color.Button.HoverBackground'}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.Backstage.HoverBackground, Office2019Colorful=Color.HoverAltBorder, Office2019HighContrast=Color.HoverBorder, Win10=Color.HoverBorder, Win11=Color.Accent'}" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Focused">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.Backstage.HoverBackground, Office2019Colorful=Color.HoverAltBackground, Office2019HighContrast=Color.HoverBackground, Win10=Color.HoverBackground, Win11=#00FFFFFF'}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.Focused, VS2019Blue=Color.Backstage.HoverBackground, Win11=Color.Foreground.Primary'}" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Customization">
+                        <Storyboard>
+                            <DoubleAnimation Duration="0" Storyboard.TargetName="IsCustomization" Storyboard.TargetProperty="Opacity" To="1" />
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </Grid>
+    </ControlTemplate>
+    <ControlTemplate x:Key="{dxt:LWKey BarItemBorderInRibbonStatusBarRight.Normal}" TargetType="{x:Type dxb:ItemBorderControl}">
+        <Grid x:Name="Root">
+            <dx:DXBorder
+            x:Name="IsDefault"
+            Background="Transparent"
+            BorderBrush="Transparent"
+            BorderThickness="1" />
+            <dx:DXBorder
+            x:Name="IsCustomization"
+            BorderBrush="{StaticResource Brush.Backstage.Focused}"
+            BorderThickness="1"
+            Opacity="0" />
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="HideBorderSide">
+                    <VisualState x:Name="None" />
+                    <VisualState x:Name="Top">
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames dxi:ValueSetter.Thickness="0,0,0,1" Storyboard.TargetName="Root" Storyboard.TargetProperty="Margin" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Right">
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames dxi:ValueSetter.Thickness="0,0,1,0" Storyboard.TargetName="Root" Storyboard.TargetProperty="Margin" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Left">
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames dxi:ValueSetter.Thickness="0" Storyboard.TargetName="Root" Storyboard.TargetProperty="Margin" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Bottom">
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames dxi:ValueSetter.Thickness="0" Storyboard.TargetName="Root" Storyboard.TargetProperty="Margin" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="All" />
+                </VisualStateGroup>
+                <VisualStateGroup x:Name="ActiveState">
+                    <VisualState x:Name="Active">
+                        <Storyboard>
+                            <DoubleAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="Opacity" To="1" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Inactive">
+                        <Storyboard>
+                            <DoubleAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="Opacity" To="0.62" />
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+                <VisualStateGroup x:Name="State">
+                    <VisualState x:Name="Normal">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="Transparent" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="Transparent" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Hover">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.Backstage.HoverBackground, Office2019Colorful=Color.HoverAltBackground, Office2019HighContrast=Color.HoverBackground, Win10=Color.HoverBackground, Win11=Color.Button.HoverBackground'}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.Backstage.HoverBackground, Office2019Colorful=Color.HoverAltBorder, Office2019HighContrast=Color.HoverBorder, Win10=Color.HoverBorder, Win11=Color.Button.HoverBorder'}" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Pressed">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.Backstage.SelectionBackground, Office2019Colorful=Color.SelectionAltBackground, Office2019HighContrast=Color.SelectionBackground, Win10=Color.SelectionBackground, Win11=Color.Button.PressedBackground'}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.Backstage.SelectionBackground, Office2019Colorful=Color.SelectionAltBorder, Office2019HighContrast=Color.SelectionBorder, Win10=Color.SelectionBorder, Win11=Color.Button.PressedBorder'}" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Disabled" />
+                    <VisualState x:Name="Checked">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.Backstage.SelectionBackground, Office2019Colorful=Color.SelectionAltBackground, Office2019HighContrast=Color.SelectionBackground, Win10=Color.SelectionBackground, Win11=Color.Button.CheckedBackground'}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.Backstage.SelectionBackground, Office2019Colorful=Color.SelectionAltBorder, Office2019HighContrast=Color.SelectionBorder, Win10=Color.SelectionBorder, Win11=Color.Button.CheckedBorder'}" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="HoverChecked">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.Backstage.SelectionBackground, Office2019Colorful=Color.SelectionAltBackground, Office2019HighContrast=Color.SelectionBackground, Win10=Color.SelectionBackground, Win11=Color.Button.CheckedHoverBackground'}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.Backstage.SelectionBackground, Office2019Colorful=Color.SelectionAltBorder, Office2019HighContrast=Color.SelectionBorder, Win10=Color.SelectionBorder, Win11=Color.Button.CheckedHoverBorder'}" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Indeterminate">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.Backstage.HoverBackground, Office2019Colorful=Color.HoverAltBackground, Office2019HighContrast=Color.HoverBackground, Win10=Color.HoverBackground, Win11=Color.Button.HoverBackground'}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.Backstage.HoverBackground, Office2019Colorful=Color.HoverAltBorder, Office2019HighContrast=Color.HoverBorder, Win10=Color.HoverBorder, Win11=Color.Accent'}" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Focused">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.Backstage.HoverBackground, Office2019Colorful=Color.HoverAltBackground, Office2019HighContrast=Color.HoverBackground, Win10=Color.HoverBackground, Win11=#00FFFFFF'}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.Focused, VS2019Blue=Color.Backstage.HoverBackground, Win11=Color.Foreground.Primary'}" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Customization">
+                        <Storyboard>
+                            <DoubleAnimation Duration="0" Storyboard.TargetName="IsCustomization" Storyboard.TargetProperty="Opacity" To="1" />
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </Grid>
+    </ControlTemplate>
+
+    <!--#region Base\Core\Core\Bars\Themes\Base\BarItems\BarItemStyles.xaml-->
+    <!-- In Bar -->
+
+    <Style x:Key="{dxt:LWKey BarButtonItemLayoutPanel.StyleInBar}" TargetType="{x:Type dxb:BarItemLayoutPanel}">
+        <Setter Property="MinHeight" Value="22" />
+        <Setter Property="AdditionalContentMargin" Value="3" />
+        <Setter Property="ArrowMargin" Value="3" />
+        <Setter Property="ArrowThemeKey" Value="{dxt:LWKey BarSubItem.ArrowTemplate}" />
+        <Setter Property="BorderThemeKey" Value="{dxbt:BarItemBorderThemeKey}" />
+        <Setter Property="BottomArrowMargin" Value="3" />
+        <Setter Property="BottomCommonContentMargin" Value="0" />
+        <Setter Property="BottomContentAndGlyphMargin" Value="0" />
+        <Setter Property="BottomGlyphMargin" Value="3" />
+        <Setter Property="CommonContentMargin" Value="0" />
+        <Setter Property="CommonMargin" Value="0" />
+        <Setter Property="Content2Margin" Value="3" />
+        <Setter Property="ContentAndGlyphMargin" Value="0" />
+        <Setter Property="ContentMargin" Value="{dx:LWThickness '3, Win11=(6,4,6,4)'}" />
+        <Setter Property="DescriptionMargin" Value="3" />
+        <Setter Property="FirstBorderUseNormalStateOnly" Value="True" />
+        <Setter Property="GlyphMargin" Value="{dx:LWThickness '3, Win11=(3,4)'}" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="KeyGestureMargin" Value="3" />
+        <Setter Property="LeftArrowMargin" Value="3" />
+        <Setter Property="LeftCommonContentMargin" Value="0" />
+        <Setter Property="LeftContentAndGlyphMargin" Value="0" />
+        <Setter Property="LeftGlyphMargin" Value="3,3,0,3" />
+        <Setter Property="Margin" Value="{dx:LWThickness '(0,0,1,1), Win11=(0,4,1,4)'}" />
+        <Setter Property="RightArrowMargin" Value="3" />
+        <Setter Property="RightCommonContentMargin" Value="0" />
+        <Setter Property="RightContentAndGlyphMargin" Value="0" />
+        <Setter Property="RightGlyphMargin" Value="0,3,3,3" />
+        <Setter Property="SecondBorderUseNormalStateOnly" Value="True" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="TextSplitterStyleKey" Value="{dxt:LWKey TextSplitter.BarSubItem}" />
+        <Setter Property="TopArrowMargin" Value="3" />
+        <Setter Property="TopCommonContentMargin" Value="0" />
+        <Setter Property="TopContentAndGlyphMargin" Value="0" />
+        <Setter Property="TopGlyphMargin" Value="3" />
+        <Setter Property="TouchSplitterThemeKey" Value="{dxt:LWKey BarItemTouchSplitter.Template}" />
+        <Setter Property="VerticalAlignment" Value="Stretch" />
+        <Style.Triggers>
+            <Trigger Property="dx:ThemeManager.IsTouchEnabled" Value="True">
+                <Setter Property="AdditionalContentMargin" Value="14" />
+                <Setter Property="ArrowMargin" Value="14" />
+                <Setter Property="BottomArrowMargin" Value="14" />
+                <Setter Property="BottomGlyphMargin" Value="14" />
+                <Setter Property="Content2Margin" Value="14" />
+                <Setter Property="ContentMargin" Value="14" />
+                <Setter Property="DescriptionMargin" Value="14" />
+                <Setter Property="GlyphMargin" Value="14" />
+                <Setter Property="KeyGestureMargin" Value="14" />
+                <Setter Property="LeftArrowMargin" Value="14" />
+                <Setter Property="LeftGlyphMargin" Value="14,14,0,14" />
+                <Setter Property="RightArrowMargin" Value="14" />
+                <Setter Property="RightGlyphMargin" Value="0,14,14,14" />
+                <Setter Property="TopArrowMargin" Value="14" />
+                <Setter Property="TopGlyphMargin" Value="14" />
+                <Setter Property="MinWidth" Value="44" />
+                <Setter Property="MinHeight" Value="44" />
+            </Trigger>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="IsInSimplifiedRibbon" Value="True" />
+                    <Condition Property="ContainerType" Value="RibbonPageGroup" />
+                </MultiTrigger.Conditions>
+                <Setter Property="LeftGlyphMargin" Value="8,8,0,8" />
+                <Setter Property="GlyphMargin" Value="8" />
+                <Setter Property="ContentMargin" Value="8,0,8,0" />
+                <Setter Property="Margin" Value="0,0,0,1" />
+                <Setter Property="ArrowMargin" Value="4,0,8,0" />
+            </MultiTrigger>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="IsInSimplifiedRibbon" Value="True" />
+                    <Condition Property="ContainerType" Value="BarButtonGroup" />
+                </MultiTrigger.Conditions>
+                <Setter Property="LeftGlyphMargin" Value="8,8,0,8" />
+                <Setter Property="GlyphMargin" Value="8" />
+                <Setter Property="ContentMargin" Value="8,0,8,0" />
+                <Setter Property="Margin" Value="0,0,0,1" />
+                <Setter Property="ArrowMargin" Value="4,0,8,0" />
+            </MultiTrigger>
+            <Trigger Property="ContainerType" Value="RibbonPageGroup">
+                <Setter Property="RightArrowMargin" Value="4,3,3,3" />
+                <Setter Property="LeftGlyphMargin" Value="{dx:LWThickness '(3,3,0,3), Win11=(4,4,0,4)'}" />
+                <Setter Property="GlyphMargin" Value="{dx:LWThickness '3, Win11=(4)'}" />
+                <Setter Property="Margin" Value="{dx:LWThickness '(0,0,1,1), Win11=(0,0,1,1)'}" />
+                <Setter Property="ContentMargin" Value="{dx:LWThickness '3, Win11=(4,0,4,0)'}" />
+                <Setter Property="ArrowMargin" Value="{dx:LWThickness '3, Win11=(4,0,4,0)'}" />
+            </Trigger>
+            <Trigger Property="ContainerType" Value="BarButtonGroup">
+                <Setter Property="RightArrowMargin" Value="4,3,3,3" />
+                <Setter Property="LeftGlyphMargin" Value="{dx:LWThickness '(3,3,0,3), Win11=(4,4,0,4)'}" />
+                <Setter Property="GlyphMargin" Value="{dx:LWThickness '3, Win11=(4)'}" />
+                <Setter Property="Margin" Value="{dx:LWThickness '(0,0,1,1), Win11=(0,0,1,1)'}" />
+                <Setter Property="ContentMargin" Value="{dx:LWThickness '3, Win11=(4,0,4,0)'}" />
+                <Setter Property="ArrowMargin" Value="{dx:LWThickness '3, Win11=(4,0,4,0)'}" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="{dxt:LWKey BarSubItemLayoutPanel.StyleInBar}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInBar}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <Style x:Key="{dxt:LWKey BarSplitButtonItemLayoutPanel.StyleInBar}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInBar}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <Style x:Key="{dxt:LWKey BarStaticItemLayoutPanel.StyleInBar}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInBar}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <Style x:Key="{dxt:LWKey BarEditItemLayoutPanel.StyleInBar}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInBar}}" TargetType="{x:Type dxb:BarItemLayoutPanel}">
+        <Setter Property="MinHeight" Value="22" />
+        <Setter Property="AdditionalContentMargin" Value="0,0,3,0" />
+        <Setter Property="ArrowMargin" Value="3" />
+        <Setter Property="BottomArrowMargin" Value="3,0,3,0" />
+        <Setter Property="BottomCommonContentMargin" Value="0" />
+        <Setter Property="BottomContentAndGlyphMargin" Value="0" />
+        <Setter Property="BottomGlyphMargin" Value="3" />
+        <Setter Property="CommonContentMargin" Value="0" />
+        <Setter Property="CommonMargin" Value="0" />
+        <Setter Property="Content2Margin" Value="3,0,3,0" />
+        <Setter Property="ContentAndGlyphMargin" Value="0" />
+        <Setter Property="ContentMargin" Value="3,0,3,0" />
+        <Setter Property="DescriptionMargin" Value="3,0,3,0" />
+        <Setter Property="GlyphMargin" Value="3" />
+        <Setter Property="KeyGestureMargin" Value="3,0,3,0" />
+        <Setter Property="LeftArrowMargin" Value="3,0,3,0" />
+        <Setter Property="LeftCommonContentMargin" Value="0" />
+        <Setter Property="LeftContentAndGlyphMargin" Value="0" />
+        <Setter Property="LeftGlyphMargin" Value="3,3,0,3" />
+        <Setter Property="Margin" Value="0,0,1,1" />
+        <Setter Property="RightArrowMargin" Value="3,0,3,0" />
+        <Setter Property="RightCommonContentMargin" Value="0" />
+        <Setter Property="RightContentAndGlyphMargin" Value="0" />
+        <Setter Property="RightGlyphMargin" Value="0,3,3,3" />
+        <Setter Property="TopArrowMargin" Value="3,0,3,0" />
+        <Setter Property="TopCommonContentMargin" Value="0" />
+        <Setter Property="TopContentAndGlyphMargin" Value="0" />
+        <Setter Property="TopGlyphMargin" Value="3" />
+        <Style.Triggers>
+            <Trigger Property="dx:ThemeManager.IsTouchEnabled" Value="True">
+                <Setter Property="AdditionalContentMargin" Value="14,0,14,0" />
+                <Setter Property="ArrowMargin" Value="14" />
+                <Setter Property="BottomArrowMargin" Value="14,0,14,0" />
+                <Setter Property="BottomGlyphMargin" Value="14" />
+                <Setter Property="Content2Margin" Value="14,0,14,0" />
+                <Setter Property="ContentMargin" Value="14,0,14,0" />
+                <Setter Property="DescriptionMargin" Value="14,0,14,0" />
+                <Setter Property="GlyphMargin" Value="14" />
+                <Setter Property="KeyGestureMargin" Value="14,0,14,0" />
+                <Setter Property="LeftArrowMargin" Value="14,0,14,0" />
+                <Setter Property="LeftGlyphMargin" Value="14,14,0,14" />
+                <Setter Property="RightArrowMargin" Value="14,0,14,0" />
+                <Setter Property="RightGlyphMargin" Value="0,14,14,14" />
+                <Setter Property="TopArrowMargin" Value="14,0,14,0" />
+                <Setter Property="TopGlyphMargin" Value="14" />
+                <Setter Property="MinWidth" Value="44" />
+                <Setter Property="MinHeight" Value="44" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="{dxt:LWKey BarCheckItemLayoutPanel.StyleInBar}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInBar}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <Style x:Key="{dxt:LWKey BarSplitCheckItemLayoutPanel.StyleInBar}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInBar}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <!-- In Main Menu -->
+
+    <Style x:Key="{dxt:LWKey BarButtonItemLayoutPanel.StyleInMainMenu}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInBar}}" TargetType="{x:Type dxb:BarItemLayoutPanel}">
+        <Setter Property="ArrowThemeKey" Value="{dxt:LWKey BarSubItem.ArrowTemplateInMainMenu}" />
+        <Setter Property="BorderThemeKey" Value="{dxbt:BarItemBorderInMainMenuThemeKey}" />
+        <Setter Property="ContentMargin" Value="{dx:LWThickness '(6,0,6,0), Win11=(6,4,6,4)'}" />
+        <Setter Property="RightArrowMargin" Value="{dx:LWThickness '3, Win11=(6,0,6,0)'}" />
+        <Setter Property="Margin" Value="{dx:LWThickness '(0,0,1,1), Win11=(2,0,2,0)'}" />
+    </Style>
+
+    <Style x:Key="{dxt:LWKey BarSubItemLayoutPanel.StyleInMainMenu}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInMainMenu}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <Style x:Key="{dxt:LWKey BarSplitButtonItemLayoutPanel.StyleInMainMenu}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInMainMenu}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <Style x:Key="{dxt:LWKey BarStaticItemLayoutPanel.StyleInMainMenu}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInBar}}" TargetType="{x:Type dxb:BarItemLayoutPanel}">
+        <Setter Property="ContentMargin" Value="{dx:LWThickness '(6,0,6,0), Win11=(6,4,6,4)'}" />
+    </Style>
+
+    <Style x:Key="{dxt:LWKey BarEditItemLayoutPanel.StyleInMainMenu}" BasedOn="{StaticResource {dxt:LWKey BarEditItemLayoutPanel.StyleInBar}}" TargetType="{x:Type dxb:BarItemLayoutPanel}">
+        <Setter Property="ContentMargin" Value="{dx:LWThickness '(6,0,6,0), Win11=(6,4,6,4)'}" />
+    </Style>
+
+    <Style x:Key="{dxt:LWKey BarCheckItemLayoutPanel.StyleInMainMenu}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInMainMenu}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <Style x:Key="{dxt:LWKey BarSplitCheckItemLayoutPanel.StyleInMainMenu}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInMainMenu}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <!-- In Menu -->
+
+    <Style x:Key="{dxt:LWKey BarButtonItemLayoutPanel.StyleInMenu}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInBar}}" TargetType="{x:Type dxb:BarItemLayoutPanel}">
+        <Setter Property="MinHeight" Value="{dx:LWDouble '22, Win11=28'}" />
+        <Setter Property="AdditionalContentMargin" Value="3,0,3,0" />
+        <Setter Property="ArrowMargin" Value="3" />
+        <Setter Property="ArrowThemeKey" Value="{dxt:LWKey BarSubItem.ArrowTemplateInMenu}" />
+        <Setter Property="BorderThemeKey" Value="{dxbt:BarItemBorderInMenuThemeKey}" />
+        <Setter Property="BottomArrowMargin" Value="3" />
+        <Setter Property="BottomCommonContentMargin" Value="0" />
+        <Setter Property="BottomContentAndGlyphMargin" Value="0,0,0,4" />
+        <Setter Property="BottomGlyphMargin" Value="3" />
+        <Setter Property="CommonContentMargin" Value="0" />
+        <Setter Property="CommonMargin" Value="0" />
+        <Setter Property="Content2Margin" Value="3,0,3,0" />
+        <Setter Property="ContentAndGlyphMargin" Value="0" />
+        <Setter Property="ContentMargin" Value="{dx:LWThickness '(14,0,24,0), Win11=(12,0,24,0)'}" />
+        <Setter Property="DescriptionMargin" Value="8,0,3,0" />
+        <Setter Property="FirstBorderUseNormalStateOnly" Value="True" />
+        <Setter Property="GlyphBackgroundTemplate" Value="{StaticResource CheckTriStateTemplate}" />
+        <Setter Property="GlyphBackgroundThickness" Value="-2" />
+        <Setter Property="GlyphMargin" Value="3" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="KeyGestureMargin" Value="{dx:LWThickness '(3,0,20,0), Win11=(8,0,10,0)'}" />
+        <Setter Property="LeftArrowMargin" Value="3" />
+        <Setter Property="LeftCommonContentMargin" Value="0" />
+        <Setter Property="LeftContentAndGlyphMargin" Value="0" />
+        <Setter Property="LeftGlyphMargin" Value="{dx:LWThickness '(3,3,0,3), Win11=(10,3,0,3)'}" />
+        <Setter Property="Margin" Value="0,0,1,1" />
+        <Setter Property="RightArrowMargin" Value="{dx:LWThickness '(6,0,6,0), Win11=(8,0,6,0)'}" />
+        <Setter Property="RightCommonContentMargin" Value="0" />
+        <Setter Property="RightContentAndGlyphMargin" Value="0,0,4,0" />
+        <Setter Property="RightGlyphMargin" Value="0,3,3,3" />
+        <Setter Property="SecondBorderUseNormalStateOnly" Value="True" />
+        <Setter Property="TextSplitterStyleKey" Value="{dxt:LWKey TextSplitter.BarSubItem}" />
+        <Setter Property="TopArrowMargin" Value="3" />
+        <Setter Property="TopCommonContentMargin" Value="0" />
+        <Setter Property="TopContentAndGlyphMargin" Value="0,4,0,0" />
+        <Setter Property="TopGlyphMargin" Value="3" />
+        <Setter Property="VerticalAlignment" Value="Stretch" />
+        <Style.Triggers>
+            <Trigger Property="dx:ThemeManager.IsTouchEnabled" Value="True">
+                <Setter Property="MinHeight" Value="44" />
+                <Setter Property="AdditionalContentMargin" Value="14,0,14,0" />
+                <Setter Property="ArrowMargin" Value="14" />
+                <Setter Property="BottomArrowMargin" Value="14" />
+                <Setter Property="BottomCommonContentMargin" Value="0" />
+                <Setter Property="BottomContentAndGlyphMargin" Value="0" />
+                <Setter Property="BottomGlyphMargin" Value="14" />
+                <Setter Property="CommonContentMargin" Value="0" />
+                <Setter Property="CommonMargin" Value="0" />
+                <Setter Property="Content2Margin" Value="14,0,14,0" />
+                <Setter Property="ContentAndGlyphMargin" Value="0" />
+                <Setter Property="ContentMargin" Value="14,0,44,0" />
+                <Setter Property="DescriptionMargin" Value="14,0,14,0" />
+                <Setter Property="GlyphBackgroundThickness" Value="-1" />
+                <Setter Property="GlyphMargin" Value="14" />
+                <Setter Property="KeyGestureMargin" Value="14,0,50,0" />
+                <Setter Property="LeftArrowMargin" Value="14" />
+                <Setter Property="LeftCommonContentMargin" Value="0" />
+                <Setter Property="LeftContentAndGlyphMargin" Value="0" />
+                <Setter Property="LeftGlyphMargin" Value="14,14,0,14" />
+                <Setter Property="Margin" Value="0,0,1,1" />
+                <Setter Property="RightArrowMargin" Value="14" />
+                <Setter Property="RightCommonContentMargin" Value="0" />
+                <Setter Property="RightContentAndGlyphMargin" Value="0" />
+                <Setter Property="RightGlyphMargin" Value="0,14,14,14" />
+                <Setter Property="TopArrowMargin" Value="14" />
+                <Setter Property="TopCommonContentMargin" Value="0" />
+                <Setter Property="TopContentAndGlyphMargin" Value="0" />
+                <Setter Property="TopGlyphMargin" Value="14" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="{dxt:LWKey BarSubItemLayoutPanel.StyleInMenu}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInMenu}}" TargetType="{x:Type dxb:BarItemLayoutPanel}">
+        <Setter Property="KeyGestureMargin" Value="{dx:LWThickness '(3,0,4,0), Win11=(3,0,8,0)'}" />
+        <Style.Triggers>
+            <Trigger Property="dx:ThemeManager.IsTouchEnabled" Value="True">
+                <Setter Property="KeyGestureMargin" Value="14,0,14,0" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="{dxt:LWKey BarSplitButtonItemLayoutPanel.StyleInMenu}" BasedOn="{StaticResource {dxt:LWKey BarSubItemLayoutPanel.StyleInMenu}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <Style x:Key="{dxt:LWKey BarStaticItemLayoutPanel.StyleInMenu}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInMenu}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <Style x:Key="{dxt:LWKey BarEditItemLayoutPanel.StyleInMenu}" BasedOn="{StaticResource {dxt:LWKey BarEditItemLayoutPanel.StyleInBar}}" TargetType="{x:Type dxb:BarItemLayoutPanel}">
+        <Setter Property="ContentMargin" Value="{dx:LWThickness '(8,0,3,0), Win11=(12,0,8,0)'}" />
+        <Setter Property="Margin" Value="{dx:LWThickness '(4,0,4,1), Win11=(0,0,1,1)'}" />
+        <Setter Property="LeftGlyphMargin" Value="{dx:LWThickness '(3,3,0,3), Win11=(10,0,0,0)'}" />
+        <Setter Property="Content2Margin" Value="{dx:LWThickness '(3,0,3,0), Win11=(6,0,14,0)'}" />
+        <Style.Triggers>
+            <Trigger Property="dx:ThemeManager.IsTouchEnabled" Value="True">
+                <Setter Property="ContentMargin" Value="14,0,14,0" />
+                <Setter Property="Margin" Value="0,0,1,1" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="{dxt:LWKey BarCheckItemLayoutPanel.StyleInMenu}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInMenu}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <Style x:Key="{dxt:LWKey BarSplitCheckItemLayoutPanel.StyleInMenu}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInMenu}}" TargetType="{x:Type dxb:BarItemLayoutPanel}">
+        <Setter Property="KeyGestureMargin" Value="{dx:LWThickness '(3,0,5,0), Win11=(3,0,8,0)'}" />
+        <Style.Triggers>
+            <Trigger Property="dx:ThemeManager.IsTouchEnabled" Value="True">
+                <Setter Property="KeyGestureMargin" Value="14,0,14,0" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <!-- In Search Result -->
+
+    <Style x:Key="{dxt:LWKey BarButtonItemLayoutPanel.StyleInSearchResult}"
+           BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInMenu}}"
+           TargetType="{x:Type dxb:BarItemLayoutPanel}">
+    </Style>
+
+    <Style x:Key="{dxt:LWKey BarSubItemLayoutPanel.StyleInSearchResult}"
+           BasedOn="{StaticResource {dxt:LWKey BarSubItemLayoutPanel.StyleInMenu}}"
+           TargetType="{x:Type dxb:BarItemLayoutPanel}">
+    </Style>
+
+    <Style x:Key="{dxt:LWKey BarSplitButtonItemLayoutPanel.StyleInSearchResult}"
+           BasedOn="{StaticResource {dxt:LWKey BarSplitButtonItemLayoutPanel.StyleInMenu}}"
+           TargetType="{x:Type dxb:BarItemLayoutPanel}">
+    </Style>
+
+    <Style x:Key="{dxt:LWKey BarCheckItemLayoutPanel.StyleInSearchResult}"
+           BasedOn="{StaticResource {dxt:LWKey BarCheckItemLayoutPanel.StyleInMenu}}"
+           TargetType="{x:Type dxb:BarItemLayoutPanel}">
+    </Style>
+
+    <Style x:Key="{dxt:LWKey BarSplitCheckItemLayoutPanel.StyleInSearchResult}"
+           BasedOn="{StaticResource {dxt:LWKey BarSplitCheckItemLayoutPanel.StyleInMenu}}"
+           TargetType="{x:Type dxb:BarItemLayoutPanel}">
+    </Style>
+
+    <!-- In Menu Header -->
+
+    <Style x:Key="{dxt:LWKey BarButtonItemLayoutPanel.StyleInMenuHeader}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInBar}}" TargetType="{x:Type dxb:BarItemLayoutPanel}">
+        <Setter Property="MinHeight" Value="22" />
+        <Setter Property="ArrowMargin" Value="3" />
+        <Setter Property="ArrowThemeKey" Value="{dxt:LWKey BarSubItem.ArrowTemplateInMenu}" />
+        <Setter Property="BorderThemeKey" Value="{dxbt:BarItemBorderInMenuThemeKey}" />
+        <Setter Property="BottomArrowMargin" Value="3" />
+        <Setter Property="BottomContentAndGlyphMargin" Value="0" />
+        <Setter Property="BottomGlyphMargin" Value="3" />
+        <Setter Property="ContentAndGlyphMargin" Value="0" />
+        <Setter Property="GlyphMargin" Value="3" />
+        <Setter Property="LeftArrowMargin" Value="3" />
+        <Setter Property="LeftContentAndGlyphMargin" Value="0" />
+        <Setter Property="LeftGlyphMargin" Value="3" />
+        <Setter Property="RightArrowMargin" Value="3" />
+        <Setter Property="RightContentAndGlyphMargin" Value="0" />
+        <Setter Property="RightGlyphMargin" Value="3" />
+        <Setter Property="TextSplitterStyleKey" Value="{dxt:LWKey TextSplitter.BarSubItem}" />
+        <Setter Property="TopArrowMargin" Value="3" />
+        <Setter Property="TopContentAndGlyphMargin" Value="0" />
+        <Setter Property="TopGlyphMargin" Value="3" />
+        <Style.Triggers>
+            <Trigger Property="dx:ThemeManager.IsTouchEnabled" Value="True">
+                <Setter Property="ArrowMargin" Value="14" />
+                <Setter Property="BottomArrowMargin" Value="14" />
+                <Setter Property="BottomContentAndGlyphMargin" Value="0" />
+                <Setter Property="BottomGlyphMargin" Value="14" />
+                <Setter Property="ContentAndGlyphMargin" Value="0" />
+                <Setter Property="GlyphMargin" Value="14" />
+                <Setter Property="LeftArrowMargin" Value="14" />
+                <Setter Property="LeftContentAndGlyphMargin" Value="0" />
+                <Setter Property="LeftGlyphMargin" Value="14" />
+                <Setter Property="RightArrowMargin" Value="14" />
+                <Setter Property="RightContentAndGlyphMargin" Value="0" />
+                <Setter Property="RightGlyphMargin" Value="14" />
+                <Setter Property="TopArrowMargin" Value="14" />
+                <Setter Property="TopContentAndGlyphMargin" Value="0" />
+                <Setter Property="TopGlyphMargin" Value="14" />
+                <Setter Property="MinWidth" Value="44" />
+                <Setter Property="MinHeight" Value="44" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="{dxt:LWKey BarSubItemLayoutPanel.StyleInMenuHeader}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInMenuHeader}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <Style x:Key="{dxt:LWKey BarSplitButtonItemLayoutPanel.StyleInMenuHeader}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInMenuHeader}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <Style x:Key="{dxt:LWKey BarStaticItemLayoutPanel.StyleInMenuHeader}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInBar}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <Style x:Key="{dxt:LWKey BarEditItemLayoutPanel.StyleInMenuHeader}" BasedOn="{StaticResource {dxt:LWKey BarEditItemLayoutPanel.StyleInBar}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <Style x:Key="{dxt:LWKey BarCheckItemLayoutPanel.StyleInMenuHeader}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInMenuHeader}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <Style x:Key="{dxt:LWKey BarSplitCheckItemLayoutPanel.StyleInMenuHeader}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInMenuHeader}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <!-- In Status Bar -->
+
+    <Style x:Key="{dxt:LWKey BarButtonItemLayoutPanel.StyleInStatusBar}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInBar}}" TargetType="{x:Type dxb:BarItemLayoutPanel}">
+        <Setter Property="ArrowThemeKey" Value="{dxt:LWKey BarSubItem.ArrowTemplateInStatusBar}" />
+        <Setter Property="BorderThemeKey" Value="{dxbt:BarItemBorderInStatusBarThemeKey}" />
+    </Style>
+
+    <Style x:Key="{dxt:LWKey BarSubItemLayoutPanel.StyleInStatusBar}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInStatusBar}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <Style x:Key="{dxt:LWKey BarSplitButtonItemLayoutPanel.StyleInStatusBar}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInStatusBar}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <Style x:Key="{dxt:LWKey BarStaticItemLayoutPanel.StyleInStatusBar}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInBar}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <Style x:Key="{dxt:LWKey BarEditItemLayoutPanel.StyleInStatusBar}" BasedOn="{StaticResource {dxt:LWKey BarEditItemLayoutPanel.StyleInBar}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <Style x:Key="{dxt:LWKey BarCheckItemLayoutPanel.StyleInStatusBar}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInStatusBar}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <Style x:Key="{dxt:LWKey BarSplitCheckItemLayoutPanel.StyleInStatusBar}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInStatusBar}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <!-- In Ribbon Page Group -->
+
+    <Style x:Key="{dxt:LWKey BarButtonItemLayoutPanel.StyleInRibbonPageGroup}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInBar}}" TargetType="{x:Type dxb:BarItemLayoutPanel}">
+        <Setter Property="ArrowThemeKey" Value="{dxt:LWKey BarSubItem.ArrowTemplateInRibbonPageGroup}" />
+        <Setter Property="BorderThemeKey" Value="{dxbt:BarItemBorderInRibbonPageGroupThemeKey}" />
+        <Style.Triggers>
+            <Trigger Property="dx:ThemeManager.IsTouchEnabled" Value="True">
+                <Setter Property="Height" Value="50"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="{dxt:LWKey BarSubItemLayoutPanel.StyleInRibbonPageGroup}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInRibbonPageGroup}}" TargetType="{x:Type dxb:BarItemLayoutPanel}">
+        <Setter Property="Margin" Value="{dx:LWThickness '(0,0,1,1), Win11=(0,4,1,4)'}" />
+        <Style.Triggers>
+            <Trigger Property="IsInSimplifiedRibbon" Value="True">
+                <Setter Property="LeftGlyphMargin" Value="8,8,0,8" />
+                <Setter Property="GlyphMargin" Value="8,8,4,8" />
+                <Setter Property="Margin" Value="{dx:LWThickness '(0,0,1,1), Win10=0, Win11=(0,4,1,4)'}" />
+                <Setter Property="ContentMargin" Value="8,0,4,0" />
+                <Setter Property="RightArrowMargin" Value="4,0,6,0" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="{dxt:LWKey BarSplitButtonItemLayoutPanel.StyleInRibbonPageGroup}" BasedOn="{StaticResource {dxt:LWKey BarSubItemLayoutPanel.StyleInRibbonPageGroup}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <Style x:Key="{dxt:LWKey BarStaticItemLayoutPanel.StyleInRibbonPageGroup}" BasedOn="{StaticResource {dxt:LWKey BarEditItemLayoutPanel.StyleInBar}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <Style x:Key="{dxt:LWKey BarEditItemLayoutPanel.StyleInRibbonPageGroup}" BasedOn="{StaticResource {dxt:LWKey BarEditItemLayoutPanel.StyleInBar}}" TargetType="{x:Type dxb:BarItemLayoutPanel}">
+        <Style.Triggers>
+            <Trigger Property="IsInSimplifiedRibbon" Value="True">
+                <Setter Property="Margin" Value="{StaticResource BarEditItemLayoutPanel.StyleInRibbonPageGroup.Margin}" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="{dxt:LWKey BarCheckItemLayoutPanel.StyleInRibbonPageGroup}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInRibbonPageGroup}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <Style x:Key="{dxt:LWKey BarSplitCheckItemLayoutPanel.StyleInRibbonPageGroup}" BasedOn="{StaticResource {dxt:LWKey BarSubItemLayoutPanel.StyleInRibbonPageGroup}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <!-- In Ribbon Page Header -->
+
+    <Style x:Key="{dxt:LWKey BarButtonItemLayoutPanel.StyleInRibbonPageHeader}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInBar}}" TargetType="{x:Type dxb:BarItemLayoutPanel}">
+        <Setter Property="MinHeight" Value="28" />
+        <Setter Property="AdditionalContentMargin" Value="6" />
+        <Setter Property="ArrowMargin" Value="6" />
+        <Setter Property="ArrowThemeKey" Value="{dxt:LWKey BarSubItem.ArrowTemplateInRibbonPageHeader}" />
+        <Setter Property="BorderThemeKey" Value="{dxbt:BarItemBorderInRibbonPageHeaderThemeKey}" />
+        <Setter Property="BottomArrowMargin" Value="6" />
+        <Setter Property="BottomCommonContentMargin" Value="0" />
+        <Setter Property="BottomContentAndGlyphMargin" Value="0" />
+        <Setter Property="BottomGlyphMargin" Value="6" />
+        <Setter Property="CommonContentMargin" Value="0" />
+        <Setter Property="CommonMargin" Value="0" />
+        <Setter Property="Content2Margin" Value="6" />
+        <Setter Property="ContentAndGlyphMargin" Value="0" />
+        <Setter Property="ContentMargin" Value="6" />
+        <Setter Property="DescriptionMargin" Value="6" />
+        <Setter Property="FirstBorderUseNormalStateOnly" Value="True" />
+        <Setter Property="GlyphMargin" Value="6" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="KeyGestureMargin" Value="6" />
+        <Setter Property="LeftArrowMargin" Value="3,6,3,6" />
+        <Setter Property="LeftCommonContentMargin" Value="0" />
+        <Setter Property="LeftContentAndGlyphMargin" Value="0" />
+        <Setter Property="LeftGlyphMargin" Value="3,6,0,6" />
+        <Setter Property="Margin" Value="0,0,1,1" />
+        <Setter Property="RightArrowMargin" Value="3,6,3,6" />
+        <Setter Property="RightCommonContentMargin" Value="0" />
+        <Setter Property="RightContentAndGlyphMargin" Value="0" />
+        <Setter Property="RightGlyphMargin" Value="0,6,3,6" />
+        <Setter Property="SecondBorderUseNormalStateOnly" Value="True" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="TextSplitterStyleKey" Value="{dxt:LWKey TextSplitter.BarSubItem}" />
+        <Setter Property="TopArrowMargin" Value="6" />
+        <Setter Property="TopCommonContentMargin" Value="0" />
+        <Setter Property="TopContentAndGlyphMargin" Value="0" />
+        <Setter Property="TopGlyphMargin" Value="6" />
+        <Setter Property="TouchSplitterThemeKey" Value="{dxt:LWKey BarItemTouchSplitter.Template}" />
+        <Setter Property="VerticalAlignment" Value="Stretch" />
+        <Style.Triggers>
+            <Trigger Property="dx:ThemeManager.IsTouchEnabled" Value="True">
+                <Setter Property="AdditionalContentMargin" Value="14" />
+                <Setter Property="ArrowMargin" Value="14" />
+                <Setter Property="BottomArrowMargin" Value="14" />
+                <Setter Property="BottomGlyphMargin" Value="14" />
+                <Setter Property="Content2Margin" Value="14" />
+                <Setter Property="ContentMargin" Value="14" />
+                <Setter Property="DescriptionMargin" Value="14" />
+                <Setter Property="GlyphMargin" Value="14" />
+                <Setter Property="KeyGestureMargin" Value="14" />
+                <Setter Property="LeftArrowMargin" Value="14" />
+                <Setter Property="LeftGlyphMargin" Value="14,14,0,14" />
+                <Setter Property="RightArrowMargin" Value="14" />
+                <Setter Property="RightGlyphMargin" Value="0,14,14,14" />
+                <Setter Property="TopArrowMargin" Value="14" />
+                <Setter Property="TopGlyphMargin" Value="14" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="{dxt:LWKey BarSubItemLayoutPanel.StyleInRibbonPageHeader}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInRibbonPageHeader}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <Style x:Key="{dxt:LWKey BarSplitButtonItemLayoutPanel.StyleInRibbonPageHeader}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInRibbonPageHeader}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <Style x:Key="{dxt:LWKey BarStaticItemLayoutPanel.StyleInRibbonPageHeader}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInBar}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <Style x:Key="{dxt:LWKey BarEditItemLayoutPanel.StyleInRibbonPageHeader}" BasedOn="{StaticResource {dxt:LWKey BarEditItemLayoutPanel.StyleInBar}}" TargetType="{x:Type dxb:BarItemLayoutPanel}">
+        <Setter Property="MinHeight" Value="22" />
+        <Setter Property="AdditionalContentMargin" Value="3" />
+        <Setter Property="ArrowMargin" Value="3,6,3,6" />
+        <Setter Property="BottomArrowMargin" Value="3" />
+        <Setter Property="BottomCommonContentMargin" Value="0" />
+        <Setter Property="BottomContentAndGlyphMargin" Value="0" />
+        <Setter Property="BottomGlyphMargin" Value="6" />
+        <Setter Property="CommonContentMargin" Value="0" />
+        <Setter Property="CommonMargin" Value="0" />
+        <Setter Property="Content2Margin" Value="3" />
+        <Setter Property="ContentAndGlyphMargin" Value="0" />
+        <Setter Property="ContentMargin" Value="3" />
+        <Setter Property="DescriptionMargin" Value="3" />
+        <Setter Property="GlyphMargin" Value="3,6,3,6" />
+        <Setter Property="KeyGestureMargin" Value="3" />
+        <Setter Property="LeftArrowMargin" Value="3" />
+        <Setter Property="LeftCommonContentMargin" Value="0" />
+        <Setter Property="LeftContentAndGlyphMargin" Value="0" />
+        <Setter Property="LeftGlyphMargin" Value="3,6,0,6" />
+        <Setter Property="Margin" Value="0,0,1,1" />
+        <Setter Property="RightArrowMargin" Value="3" />
+        <Setter Property="RightCommonContentMargin" Value="0" />
+        <Setter Property="RightContentAndGlyphMargin" Value="0" />
+        <Setter Property="RightGlyphMargin" Value="0,6,3,6" />
+        <Setter Property="TopArrowMargin" Value="6,0,6,0" />
+        <Setter Property="TopCommonContentMargin" Value="0" />
+        <Setter Property="TopContentAndGlyphMargin" Value="0" />
+        <Setter Property="TopGlyphMargin" Value="3,6,3,6" />
+        <Style.Triggers>
+            <Trigger Property="dx:ThemeManager.IsTouchEnabled" Value="True">
+                <Setter Property="AdditionalContentMargin" Value="14,0,14,0" />
+                <Setter Property="ArrowMargin" Value="14" />
+                <Setter Property="BottomArrowMargin" Value="14,0,14,0" />
+                <Setter Property="BottomGlyphMargin" Value="14" />
+                <Setter Property="Content2Margin" Value="14,0,14,0" />
+                <Setter Property="ContentMargin" Value="14,0,14,0" />
+                <Setter Property="DescriptionMargin" Value="14,0,14,0" />
+                <Setter Property="GlyphMargin" Value="14" />
+                <Setter Property="KeyGestureMargin" Value="14,0,14,0" />
+                <Setter Property="LeftArrowMargin" Value="14,0,14,0" />
+                <Setter Property="LeftGlyphMargin" Value="14,14,0,14" />
+                <Setter Property="RightArrowMargin" Value="14,0,14,0" />
+                <Setter Property="RightGlyphMargin" Value="0,14,14,14" />
+                <Setter Property="TopArrowMargin" Value="14,0,14,0" />
+                <Setter Property="TopGlyphMargin" Value="14" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="{dxt:LWKey BarCheckItemLayoutPanel.StyleInRibbonPageHeader}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInRibbonPageHeader}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <Style x:Key="{dxt:LWKey BarSplitCheckItemLayoutPanel.StyleInRibbonPageHeader}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInRibbonPageHeader}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <!-- In Ribbon Status Bar LEFT -->
+
+    <Style x:Key="{dxt:LWKey BarButtonItemLayoutPanel.StyleInRibbonStatusBarLeft}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInStatusBar}}" TargetType="{x:Type dxb:BarItemLayoutPanel}">
+        <Setter Property="ArrowThemeKey" Value="{dxt:LWKey BarSubItem.ArrowTemplateInRibbonStatusBarLeft}" />
+        <Setter Property="BorderThemeKey" Value="{dxbt:BarItemBorderInRibbonStatusBarLeftThemeKey}" />
+    </Style>
+
+    <Style x:Key="{dxt:LWKey BarSubItemLayoutPanel.StyleInRibbonStatusBarLeft}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInRibbonStatusBarLeft}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <Style x:Key="{dxt:LWKey BarSplitButtonItemLayoutPanel.StyleInRibbonStatusBarLeft}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInRibbonStatusBarLeft}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <Style x:Key="{dxt:LWKey BarStaticItemLayoutPanel.StyleInRibbonStatusBarLeft}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInBar}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <Style x:Key="{dxt:LWKey BarEditItemLayoutPanel.StyleInRibbonStatusBarLeft}" BasedOn="{StaticResource {dxt:LWKey BarEditItemLayoutPanel.StyleInBar}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <Style x:Key="{dxt:LWKey BarCheckItemLayoutPanel.StyleInRibbonStatusBarLeft}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInRibbonStatusBarLeft}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <Style x:Key="{dxt:LWKey BarSplitCheckItemLayoutPanel.StyleInRibbonStatusBarLeft}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInRibbonStatusBarLeft}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <!-- In Ribbon Status Bar RIGHT -->
+
+    <Style x:Key="{dxt:LWKey BarButtonItemLayoutPanel.StyleInRibbonStatusBarRight}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInStatusBar}}" TargetType="{x:Type dxb:BarItemLayoutPanel}">
+        <Setter Property="ArrowThemeKey" Value="{dxt:LWKey BarSubItem.ArrowTemplateInRibbonStatusBarRight}" />
+        <Setter Property="BorderThemeKey" Value="{dxbt:BarItemBorderInRibbonStatusBarRightThemeKey}" />
+    </Style>
+
+    <Style x:Key="{dxt:LWKey BarSubItemLayoutPanel.StyleInRibbonStatusBarRight}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInRibbonStatusBarRight}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <Style x:Key="{dxt:LWKey BarSplitButtonItemLayoutPanel.StyleInRibbonStatusBarRight}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInRibbonStatusBarRight}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <Style x:Key="{dxt:LWKey BarStaticItemLayoutPanel.StyleInRibbonStatusBarRight}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInBar}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <Style x:Key="{dxt:LWKey BarEditItemLayoutPanel.StyleInRibbonStatusBarRight}" BasedOn="{StaticResource {dxt:LWKey BarEditItemLayoutPanel.StyleInBar}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <Style x:Key="{dxt:LWKey BarCheckItemLayoutPanel.StyleInRibbonStatusBarRight}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInRibbonStatusBarRight}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <Style x:Key="{dxt:LWKey BarSplitCheckItemLayoutPanel.StyleInRibbonStatusBarRight}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInRibbonStatusBarRight}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <!-- In Application Menu -->
+
+    <Style x:Key="{dxt:LWKey BarButtonItemLayoutPanel.StyleInApplicationMenu}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInMenu}}" TargetType="{x:Type dxb:BarItemLayoutPanel}">
+        <Setter Property="BorderThemeKey" Value="{dxbt:BarItemBorderInMenuThemeKey}" />
+    </Style>
+
+    <Style x:Key="{dxt:LWKey BarSubItemLayoutPanel.StyleInApplicationMenu}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInApplicationMenu}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <Style x:Key="{dxt:LWKey BarSplitButtonItemLayoutPanel.StyleInApplicationMenu}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInApplicationMenu}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <Style x:Key="{dxt:LWKey BarStaticItemLayoutPanel.StyleInApplicationMenu}" BasedOn="{StaticResource {dxt:LWKey BarStaticItemLayoutPanel.StyleInMenu}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <Style x:Key="{dxt:LWKey BarEditItemLayoutPanel.StyleInApplicationMenu}" BasedOn="{StaticResource {dxt:LWKey BarEditItemLayoutPanel.StyleInMenu}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <Style x:Key="{dxt:LWKey BarCheckItemLayoutPanel.StyleInApplicationMenu}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInApplicationMenu}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <Style x:Key="{dxt:LWKey BarSplitCheckItemLayoutPanel.StyleInApplicationMenu}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInApplicationMenu}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <!-- In ButtonGroup -->
+
+    <Style x:Key="{dxt:LWKey BarButtonItemLayoutPanel.StyleInButtonGroup}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInBar}}" TargetType="{x:Type dxb:BarItemLayoutPanel}">
+        <Setter Property="ArrowThemeKey" Value="{dxt:LWKey BarSubItem.ArrowTemplateInBarButtonGroup}" />
+        <Setter Property="BorderThemeKey" Value="{dxbt:BarItemBorderInButtonGroupThemeKey}" />
+    </Style>
+
+    <Style x:Key="{dxt:LWKey BarSubItemLayoutPanel.StyleInButtonGroup}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInButtonGroup}}" TargetType="{x:Type dxb:BarItemLayoutPanel}">
+        <Style.Triggers>
+            <Trigger Property="IsInSimplifiedRibbon" Value="True">
+                <Setter Property="LeftGlyphMargin" Value="8,8,0,8" />
+                <Setter Property="GlyphMargin" Value="8,8,4,8" />
+                <Setter Property="ContentMargin" Value="8,0,4,0" />
+                <Setter Property="RightArrowMargin" Value="4,0,6,0" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="{dxt:LWKey BarSplitButtonItemLayoutPanel.StyleInButtonGroup}" BasedOn="{StaticResource {dxt:LWKey BarSubItemLayoutPanel.StyleInButtonGroup}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <Style x:Key="{dxt:LWKey BarStaticItemLayoutPanel.StyleInButtonGroup}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInBar}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <Style x:Key="{dxt:LWKey BarEditItemLayoutPanel.StyleInButtonGroup}" BasedOn="{StaticResource {dxt:LWKey BarEditItemLayoutPanel.StyleInBar}}" TargetType="{x:Type dxb:BarItemLayoutPanel}">
+        <Style.Triggers>
+            <Trigger Property="IsInSimplifiedRibbon" Value="True">
+                <Setter Property="Margin" Value="3,3,3,4" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="{dxt:LWKey BarCheckItemLayoutPanel.StyleInButtonGroup}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInButtonGroup}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <Style x:Key="{dxt:LWKey BarSplitCheckItemLayoutPanel.StyleInButtonGroup}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInButtonGroup}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <!-- in Quick Access Toolbar -->
+
+    <Style x:Key="{dxt:LWKey BarButtonItemLayoutPanel.StyleInQAT}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInRibbonPageHeader}}" TargetType="{x:Type dxb:BarItemLayoutPanel}">
+        <Setter Property="ArrowThemeKey" Value="{dxt:LWKey BarSubItem.ArrowTemplateInRibbonQuickAccessToolbar}" />
+        <Setter Property="BorderThemeKey" Value="{dxbt:BarItemBorderInQATThemeKey}" />
+    </Style>
+
+    <Style x:Key="{dxt:LWKey BarSubItemLayoutPanel.StyleInQAT}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInQAT}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <Style x:Key="{dxt:LWKey BarSplitButtonItemLayoutPanel.StyleInQAT}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInQAT}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <Style x:Key="{dxt:LWKey BarStaticItemLayoutPanel.StyleInQAT}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInRibbonPageHeader}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <Style x:Key="{dxt:LWKey BarEditItemLayoutPanel.StyleInQAT}" BasedOn="{StaticResource {dxt:LWKey BarEditItemLayoutPanel.StyleInRibbonPageHeader}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <Style x:Key="{dxt:LWKey BarCheckItemLayoutPanel.StyleInQAT}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInQAT}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <Style x:Key="{dxt:LWKey BarSplitCheckItemLayoutPanel.StyleInQAT}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInQAT}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <!-- In Quick Access Toolbar FOOTER -->
+
+    <Style x:Key="{dxt:LWKey BarButtonItemLayoutPanel.StyleInQATFooter}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInRibbonPageHeader}}" TargetType="{x:Type dxb:BarItemLayoutPanel}">
+        <Setter Property="ArrowThemeKey" Value="{dxt:LWKey BarSubItem.ArrowTemplateInRibbonQuickAccessToolbarFooter}" />
+        <Setter Property="BorderThemeKey" Value="{dxbt:BarItemBorderThemeKey}" />
+    </Style>
+
+    <Style x:Key="{dxt:LWKey BarSubItemLayoutPanel.StyleInQATFooter}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInQATFooter}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <Style x:Key="{dxt:LWKey BarSplitButtonItemLayoutPanel.StyleInQATFooter}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInQATFooter}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <Style x:Key="{dxt:LWKey BarStaticItemLayoutPanel.StyleInQATFooter}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInRibbonPageHeader}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <Style x:Key="{dxt:LWKey BarEditItemLayoutPanel.StyleInQATFooter}" BasedOn="{StaticResource {dxt:LWKey BarEditItemLayoutPanel.StyleInRibbonPageHeader}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <Style x:Key="{dxt:LWKey BarCheckItemLayoutPanel.StyleInQATFooter}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInQATFooter}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <Style x:Key="{dxt:LWKey BarSplitCheckItemLayoutPanel.StyleInQATFooter}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInQATFooter}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <!-- In DropDown Gallery -->
+
+    <Style x:Key="{dxt:LWKey BarButtonItemLayoutPanel.StyleInDropDownGallery}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInMenu}}" TargetType="{x:Type dxb:BarItemLayoutPanel}">
+        <Setter Property="BorderThemeKey" Value="{dxbt:BarItemBorderThemeKey}" />
+    </Style>
+
+    <Style x:Key="{dxt:LWKey BarSubItemLayoutPanel.StyleInDropDownGallery}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInDropDownGallery}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <Style x:Key="{dxt:LWKey BarSplitButtonItemLayoutPanel.StyleInDropDownGallery}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInDropDownGallery}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <Style x:Key="{dxt:LWKey BarStaticItemLayoutPanel.StyleInDropDownGallery}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInMenu}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <Style x:Key="{dxt:LWKey BarEditItemLayoutPanel.StyleInDropDownGallery}" BasedOn="{StaticResource {dxt:LWKey BarEditItemLayoutPanel.StyleInMenu}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <Style x:Key="{dxt:LWKey BarCheckItemLayoutPanel.StyleInDropDownGallery}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInDropDownGallery}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+
+    <Style x:Key="{dxt:LWKey BarSplitCheckItemLayoutPanel.StyleInDropDownGallery}" BasedOn="{StaticResource {dxt:LWKey BarButtonItemLayoutPanel.StyleInDropDownGallery}}" TargetType="{x:Type dxb:BarItemLayoutPanel}" />
+    <!--#endregion Base\Core\Core\Bars\Themes\Base\BarItems\BarItemStyles.xaml-->
+
+    <!--#region Base\Core\Core\Bars\Themes\Base\FloatingBarPopup\ButtonClose.xaml-->
+    <!-- General -->
+    <!--#endregion Base\Core\Core\Bars\Themes\Base\FloatingBarPopup\ButtonClose.xaml-->
+
+    <!--#region Base\Core\Core\Bars\Themes\Base\FloatingBarPopup\Caption.xaml-->
+    <!-- General -->
+
+    <ControlTemplate x:Key="{dxt:LWKey FloatingBarPopup.CaptionBackgroundTemplate}" TargetType="{x:Type ContentControl}">
+        <dx:DXBorder Background="{dx:LWBrush 'Brush.Button.Background, Office2019Black=Brush.Window.Background, Office2019Colorful=Brush.Window.Background, Office2019HighContrast=Brush.Window.Background, VS2019Blue=Brush.ControlDark.Background, Win11=Brush.Button.SimpleButtonBackground'}" Cursor="SizeAll" CornerRadius="{dx:LWCornerRadius '0, Win11=(5,5,0,0)'}">
+            <ContentPresenter />
+        </dx:DXBorder>
+    </ControlTemplate>
+    <!--#endregion Base\Core\Core\Bars\Themes\Base\FloatingBarPopup\Caption.xaml-->
+
+    <!--#region Base\Core\Core\Bars\Themes\Base\FloatingBarPopup.xaml-->
+    <!-- General -->
+
+    <ControlTemplate x:Key="{dxt:LWKey FloatingBarPopup.QuickCustomizationButtonTemplate}" TargetType="{x:Type Button}">
+        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+    </ControlTemplate>
+
+    <Style x:Key="{dxt:LWKey FloatingBarPopup.QuickCustomizationButtonStyle}" TargetType="{x:Type Button}">
+        <Setter Property="Content" Value="Y" />
+        <Setter Property="Foreground" Value="{dx:LWBrush 'Brush.Foreground, Win11=Brush.Foreground.Primary'}" />
+        <Setter Property="Height" Value="16" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="Template" Value="{DynamicResource {dxt:LWKey FloatingBarPopup.QuickCustomizationButtonTemplate}}" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="Width" Value="16" />
+        <Style.Triggers>
+            <Trigger Property="dx:ThemeManager.IsTouchEnabled" Value="True">
+                <Setter Property="MinWidth" Value="44" />
+                <Setter Property="MinHeight" Value="44" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <!-- General -->
+
+
+    <ControlTemplate x:Key="{dxt:LWKey FloatingBarPopup.SizeGripTemplate}" TargetType="{x:Type Thumb}" />
+    <!--#endregion Base\Core\Core\Bars\Themes\Base\FloatingBarPopup.xaml-->
+
+    <!--#region Base\Core\Core\Bars\Themes\Base\SubMenuBar\ScrollButtons.xaml-->
+    <!-- General -->
+
+    <ControlTemplate x:Key="{dxt:LWKey SubMenuBarControl.ContentSideBorderTemplate}" TargetType="{x:Type ContentControl}" />
+
+    <ControlTemplate x:Key="{dxt:LWKey SubMenuBarControl.ScrollUpButtonTemplate}" TargetType="{x:Type RepeatButton}">
+        <Grid x:Name="Root">
+            <dx:DXBorder
+                x:Name="IsDefault"
+                Background="{dx:LWBrush 'Brush.Button.Background, Win11=Brush.Button.SimpleButtonBackground'}"
+                BorderBrush="{StaticResource Brush.Delimiter}"
+                BorderThickness="0,0,0,1"
+                CornerRadius="{dx:LWCornerRadius '0, Win11=(4,4,0,0)'}">
+                <Path
+                    x:Name="Content"
+                    Fill="{dx:LWBrush 'Brush.Foreground, Win11=Brush.Foreground.Primary'}"
+                    Margin="4"
+                    Style="{StaticResource UIShape.Up}" />
+            </dx:DXBorder>
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal" />
+                    <VisualState x:Name="MouseOver">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.HoverBackground, Office2019Black=Color.ControlLight.HoverBackground, Office2019Colorful=Color.HoverAltBackground, VS2019Blue=Color.ControlDark.HoverBackground, Win11=Color.ListItem.HoverBackground'}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.Border, Office2019Black=Color.ControlLight.HoverBackground, Office2019Colorful=Color.HoverAltBorder, Office2019HighContrast=Color.HoverBorder, VS2019Blue=Color.Focused, VS2019Dark=Color.Focused, VS2019Light=Color.Focused'}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="Content" Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.SelectionForeground, Office2019Black=Color.ControlLight.Foreground, Office2019Colorful=Color.HoverForeground, Office2019HighContrast=Color.HoverForeground, VS2019Dark=Color.HoverForeground, VS2019Light=Color.HoverForeground, Win11=Color.Foreground.Primary'}" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Pressed">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.SelectionBackground, Office2019Black=Color.ControlLight.SelectionBackground, Office2019Colorful=Color.SelectionAltBackground, VS2019Blue=Color.ControlDark.SelectionBackground, Win11=Color.ListItem.SelectionBackground'}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.Border, Office2019Black=Color.ControlLight.SelectionBackground, Office2019Colorful=Color.SelectionAltBorder, Office2019HighContrast=Color.SelectionBorder, VS2019Blue=Color.Focused, VS2019Dark=Color.Focused, VS2019Light=Color.SelectionBorder'}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="Content" Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.SelectionForeground, Office2019Black=Color.ControlLight.Foreground, VS2019Dark=Color.HoverForeground, Win11=Color.Foreground.Primary'}" />
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </Grid>
+        <ControlTemplate.Triggers>
+            <Trigger Property="dx:ThemeManager.IsTouchEnabled" Value="True">
+                <Setter Property="MinHeight" TargetName="Root" Value="44" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="{dxt:LWKey SubMenuBarControl.ScrollDownButtonTemplate}" TargetType="{x:Type RepeatButton}">
+        <Grid x:Name="Root">
+            <dx:DXBorder
+                x:Name="IsDefault"
+                Background="{dx:LWBrush 'Brush.Button.Background, Win11=Brush.Button.SimpleButtonBackground'}"
+                BorderBrush="{StaticResource Brush.Delimiter}"
+                BorderThickness="0,1,0,0"
+                CornerRadius="{dx:LWCornerRadius '0, Win11=(0,0,4,4)'}">
+                <Path
+                    x:Name="Content"
+                    Fill="{dx:LWBrush 'Brush.Foreground, Office2019Black=Brush.ControlLight.Foreground, Win11=Brush.Foreground.Primary'}"
+                    Margin="4"
+                    Style="{StaticResource UIShape.Down}" />
+            </dx:DXBorder>
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal" />
+                    <VisualState x:Name="MouseOver">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.HoverBackground, Office2019Black=Color.ControlLight.HoverBackground, Office2019Colorful=Color.HoverAltBackground, VS2019Blue=Color.ControlDark.HoverBackground, Win11=Color.ListItem.HoverBackground'}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.Border, Office2019Black=Color.ControlLight.HoverBackground, Office2019Colorful=Color.HoverAltBorder, Office2019HighContrast=Color.HoverBorder, VS2019Blue=Color.Focused, VS2019Dark=Color.Focused, VS2019Light=Color.Focused'}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="Content" Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.HoverForeground, Office2019Black=Color.ControlLight.Foreground, VS2019Blue=Color.Focused, VS2019Dark=Color.Focused, Win11=Color.Foreground.Primary'}" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Pressed">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.SelectionBackground, Office2019Black=Color.ControlLight.SelectionBackground, Office2019Colorful=Color.SelectionAltBackground, VS2019Blue=Color.ControlDark.SelectionBackground, Win11=Color.ListItem.SelectionBackground'}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.Border, Office2019Black=Color.ControlLight.SelectionBackground, Office2019Colorful=Color.SelectionAltBorder, Office2019HighContrast=Color.SelectionBorder, VS2019Blue=Color.Focused, VS2019Dark=Color.Focused, VS2019Light=Color.SelectionBorder'}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="Content" Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.SelectionForeground, Office2019Black=Color.ControlLight.Foreground, VS2019Dark=Color.HoverForeground, Win11=Color.Foreground.Primary'}" />
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </Grid>
+        <ControlTemplate.Triggers>
+            <Trigger Property="dx:ThemeManager.IsTouchEnabled" Value="True">
+                <Setter Property="MinHeight" TargetName="Root" Value="44" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <!-- Styles -->
+
+    <Style x:Key="{dxt:LWKey SubMenuBarControl.ScrollUpButtonStyle}" TargetType="{x:Type RepeatButton}">
+        <Setter Property="ClickMode" Value="Hover" />
+        <Setter Property="Template" Value="{DynamicResource {dxt:LWKey SubMenuBarControl.ScrollUpButtonTemplate}}" />
+    </Style>
+
+    <Style x:Key="{dxt:LWKey SubMenuBarControl.ScrollDownButtonStyle}" TargetType="{x:Type RepeatButton}">
+        <Setter Property="ClickMode" Value="Hover" />
+        <Setter Property="Template" Value="{DynamicResource {dxt:LWKey SubMenuBarControl.ScrollDownButtonTemplate}}" />
+    </Style>
+
+    <ControlTemplate x:Key="{dxt:LWKey SubMenuBarControl.DropIndicatorTemplate}" TargetType="{x:Type ContentControl}">
+        <Grid Name="PART_Content" SnapsToDevicePixels="True">
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="Orientation">
+                    <VisualState x:Name="Horizontal">
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="PART_Content" Storyboard.TargetProperty="RenderTransform">
+                                <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                                    <DiscreteObjectKeyFrame.Value>
+                                        <TransformGroup x:Name="HorizontalTransform">
+                                            <TranslateTransform X="-3" Y="0" />
+                                        </TransformGroup>
+                                    </DiscreteObjectKeyFrame.Value>
+                                </DiscreteObjectKeyFrame>
+                            </ObjectAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Vertical">
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="PART_Content" Storyboard.TargetProperty="RenderTransform">
+                                <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                                    <DiscreteObjectKeyFrame.Value>
+                                        <TransformGroup x:Name="VerticalTransform">
+                                            <RotateTransform Angle="-90" CenterX="0.5" CenterY="0.5" />
+                                            <TranslateTransform X="0" Y="3" />
+                                        </TransformGroup>
+                                    </DiscreteObjectKeyFrame.Value>
+                                </DiscreteObjectKeyFrame>
+                            </ObjectAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+            <dx:DXBorder Width="6" Height="2" Background="Black" VerticalAlignment="Top" Margin="0,5,0,0" />
+            <dx:DXBorder Width="6" Height="2" Background="Black" VerticalAlignment="Bottom" Margin="0,0,0,5" />
+            <dx:PixelSnapper Width="2" HorizontalAlignment="Center" Margin="0,5,0,5">
+                <dx:DXBorder Background="Black" />
+            </dx:PixelSnapper>
+            <Grid.RenderTransform>
+                <TranslateTransform X="-3" Y="0" />
+            </Grid.RenderTransform>
+        </Grid>
+    </ControlTemplate>
+    <!--#endregion Base\Core\Core\Bars\Themes\Base\SubMenuBar\ScrollButtons.xaml-->
+
+    <!--#region Base\Core\Core\Bars\Themes\Base.xaml-->
+    <sys:Boolean x:Key="{dxt:LWKey BarItemRender.UseLightweightTemplates}">True</sys:Boolean>
+
+
+    <!-- BarItemLinkMenuHeader -->
+
+    <Style x:Key="{dxt:LWKey BarItemLinkMenuHeader.HeaderStyle}" TargetType="{x:Type ContentControl}">
+        <Setter Property="Foreground" Value="{dx:LWBrush 'Brush.Foreground, Office2019Black=Brush.ControlLight.Foreground, Win11=Brush.Foreground.Primary'}" />
+    </Style>
+
+    <!-- Gallery -->
+
+    <Style x:Key="{dxt:LWKey GalleryItemControl.SplitLayoutStyle}" TargetType="{x:Type dxb:SplitLayoutPanel}">
+        <Setter Property="BottomContent1Margin" Value="3,0,3,3" />
+        <Setter Property="BottomContent2Margin" Value="3" />
+        <Setter Property="LeftContent1Margin" Value="3,3,0,3" />
+        <Setter Property="LeftContent2Margin" Value="3" />
+        <Setter Property="RightContent1Margin" Value="0,3,3,3" />
+        <Setter Property="RightContent2Margin" Value="3" />
+        <Setter Property="SingleContent1Margin" Value="3" />
+        <Setter Property="SingleContent2Margin" Value="3" />
+        <Setter Property="TopContent1Margin" Value="3,3,3,0" />
+        <Setter Property="TopContent2Margin" Value="3" />
+        <Style.Triggers>
+            <Trigger Property="dx:ThemeManager.IsTouchEnabled" Value="True">
+                <Setter Property="BottomContent1Margin" Value="14,0,14,14" />
+                <Setter Property="BottomContent2Margin" Value="14" />
+                <Setter Property="LeftContent1Margin" Value="14,14,0,14" />
+                <Setter Property="LeftContent2Margin" Value="14" />
+                <Setter Property="RightContent1Margin" Value="0,14,14,14" />
+                <Setter Property="RightContent2Margin" Value="14" />
+                <Setter Property="SingleContent1Margin" Value="14" />
+                <Setter Property="SingleContent2Margin" Value="14" />
+                <Setter Property="TopContent1Margin" Value="14,14,14,0" />
+                <Setter Property="TopContent2Margin" Value="14" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <!-- Caption -->
+
+    <dxb:StatedStyleSelector x:Key="{dxt:LWKey GalleryControl.StandaloneCaptionTextStyleSelector}">
+        <dxb:StatedStyleSelectorState IsDefault="True">
+            <Style TargetType="{x:Type ContentControl}">
+                <Setter Property="Foreground" Value="{dx:LWBrush 'Brush.Foreground, Office2019Black=Brush.ControlLight.Foreground, Win11=Brush.Foreground.Primary'}" />
+            </Style>
+        </dxb:StatedStyleSelectorState>
+        <dxb:StatedStyleSelectorState State="Hover">
+            <Style TargetType="{x:Type ContentControl}">
+                <Setter Property="Foreground" Value="{dx:LWBrush 'Brush.HoverForeground, Office2019Black=Brush.ControlLight.HoverForeground, VS2019Blue=Brush.SelectionForeground, VS2019Dark=Brush.Backstage.Foreground, Win11=Brush.Foreground.Primary'}" />
+            </Style>
+        </dxb:StatedStyleSelectorState>
+        <dxb:StatedStyleSelectorState State="Pressed">
+            <Style TargetType="{x:Type ContentControl}">
+                <Setter Property="Foreground" Value="{dx:LWBrush 'Brush.SelectionForeground, Office2019Black=Brush.ControlLight.SelectionForeground, VS2019Dark=Brush.Backstage.Foreground, VS2019Light=Brush.Backstage.Foreground, Win11=Brush.Foreground.Primary'}" />
+            </Style>
+        </dxb:StatedStyleSelectorState>
+        <dxb:StatedStyleSelectorState State="Checked">
+            <Style TargetType="{x:Type ContentControl}">
+                <Setter Property="Foreground" Value="{dx:LWBrush 'Brush.SelectionForeground, Office2019Black=Brush.ControlLight.SelectionForeground, Win11=Brush.Foreground.Primary'}" />
+            </Style>
+        </dxb:StatedStyleSelectorState>
+        <dxb:StatedStyleSelectorState State="HoverChecked">
+            <Style TargetType="{x:Type ContentControl}">
+                <Setter Property="Foreground" Value="{dx:LWBrush 'Brush.SelectionForeground, Office2019Black=Brush.ControlLight.SelectionForeground, Win11=Brush.Foreground.Primary'}" />
+            </Style>
+        </dxb:StatedStyleSelectorState>
+    </dxb:StatedStyleSelector>
+
+    <!-- Description -->
+
+    <dxb:StatedStyleSelector x:Key="{dxt:LWKey GalleryControl.StandaloneDescriptionTextStyleSelector}">
+        <dxb:StatedStyleSelectorState IsDefault="True">
+            <Style TargetType="{x:Type ContentControl}">
+                <Setter Property="Foreground" Value="{dx:LWBrush 'Brush.Foreground, Office2019Black=Brush.ControlLight.Foreground, Win11=Brush.Foreground.Primary'}" />
+                <Setter Property="Opacity" Value="0.62" />
+            </Style>
+        </dxb:StatedStyleSelectorState>
+        <dxb:StatedStyleSelectorState State="Hover">
+            <Style TargetType="{x:Type ContentControl}">
+                <Setter Property="Foreground" Value="{dx:LWBrush 'Brush.HoverForeground, Office2019Black=Brush.ControlLight.HoverForeground, VS2019Blue=Brush.SelectionForeground, VS2019Dark=Brush.Backstage.Foreground, Win11=Brush.Foreground.Primary'}" />
+                <Setter Property="Opacity" Value="0.62" />
+            </Style>
+        </dxb:StatedStyleSelectorState>
+        <dxb:StatedStyleSelectorState State="Pressed">
+            <Style TargetType="{x:Type ContentControl}">
+                <Setter Property="Foreground" Value="{dx:LWBrush 'Brush.SelectionForeground, Office2019Black=Brush.ControlLight.SelectionForeground, VS2019Dark=Brush.Backstage.Foreground, VS2019Light=Brush.Backstage.Foreground, Win11=Brush.Foreground.Primary'}" />
+                <Setter Property="Opacity" Value="0.62" />
+            </Style>
+        </dxb:StatedStyleSelectorState>
+        <dxb:StatedStyleSelectorState State="Checked">
+            <Style TargetType="{x:Type ContentControl}">
+                <Setter Property="Foreground" Value="{dx:LWBrush 'Brush.SelectionForeground, Office2019Black=Brush.ControlLight.SelectionForeground, Win11=Brush.Foreground.Primary'}" />
+                <Setter Property="Opacity" Value="0.62" />
+            </Style>
+        </dxb:StatedStyleSelectorState>
+        <dxb:StatedStyleSelectorState State="HoverChecked">
+            <Style TargetType="{x:Type ContentControl}">
+                <Setter Property="Foreground" Value="{dx:LWBrush 'Brush.SelectionForeground, Office2019Black=Brush.ControlLight.SelectionForeground, Win11=Brush.Foreground.Primary'}" />
+                <Setter Property="Opacity" Value="0.62" />
+            </Style>
+        </dxb:StatedStyleSelectorState>
+    </dxb:StatedStyleSelector>
+
+    <!-- General -->
+
+    <ControlTemplate x:Key="{dxt:LWKey GalleryItemControl.HoverContentControlTemplate}" TargetType="{x:Type ContentControl}">
+        <dx:DXBorder Background="{StaticResource Brush.Editor.Background}" BorderBrush="{dx:LWBrush 'Brush.Delimiter, Win10Dark=Brush.AltBorder'}" BorderThickness="1">
+            <ContentPresenter Margin="3" />
+        </dx:DXBorder>
+    </ControlTemplate>
+
+    <!-- ToolTip -->
+
+    <ControlTemplate x:Key="{dxt:LWKey GalleryItemControl.ItemToolTipBackgroundTemplate}" TargetType="{x:Type ContentControl}">
+        <dx:DXBorder
+            BorderBrush="{StaticResource Brush.Border}"
+            BorderThickness="1"
+            Padding="2">
+            <ContentPresenter />
+        </dx:DXBorder>
+    </ControlTemplate>
+
+    <!-- Caption & Description -->
+
+    <Style x:Key="{dxt:LWKey GalleryItemControl.DefaultItemCaptionTextStyle}" TargetType="{x:Type ContentControl}">
+        <Setter Property="Foreground" Value="{dx:LWBrush 'Brush.Foreground, Office2019Black=Brush.ControlLight.Foreground, Win11=Brush.Foreground.Primary'}" />
+    </Style>
+
+    <Style x:Key="{dxt:LWKey GalleryItemControl.DefaultItemDescriptionTextStyle}" TargetType="{x:Type ContentControl}">
+        <Setter Property="Foreground" Value="{dx:LWBrush 'Brush.Foreground, Office2019Black=Brush.ControlLight.Foreground, Win11=Brush.Foreground.Primary'}" />
+        <Setter Property="Opacity" Value="0.62" />
+    </Style>
+
+    <Style x:Key="{dxt:LWKey GalleryItemControl.DefaultGroupCaptionTextStyle}" TargetType="{x:Type ContentControl}">
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="Foreground" Value="{dx:LWBrush 'Brush.Foreground, Office2019Black=Brush.ControlLight.Foreground, Win11=Brush.Foreground.Primary'}" />
+    </Style>
+
+    <!-- Filter -->
+
+    <Style x:Key="{dxt:LWKey GalleryItemControl.DefaultNormalFilterCaptionTextStyle}" TargetType="{x:Type ContentControl}">
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="Foreground" Value="{dx:LWBrush 'Brush.Foreground, Office2019Black=Brush.ControlLight.Foreground, Win11=Brush.Foreground.Primary'}" />
+        <Setter Property="Margin" Value="4" />
+        <Style.Triggers>
+            <Trigger Property="dx:ThemeManager.IsTouchEnabled" Value="True">
+                <Setter Property="Margin" Value="14" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="{dxt:LWKey GalleryItemControl.DefaultSelectedFilterCaptionTextStyle}" TargetType="{x:Type ContentControl}">
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="Foreground" Value="{dx:LWBrush 'Brush.Foreground, Office2019Black=Brush.ControlLight.Foreground, Win11=Brush.Foreground.Primary'}" />
+        <Setter Property="Margin" Value="4" />
+        <Style.Triggers>
+            <Trigger Property="dx:ThemeManager.IsTouchEnabled" Value="True">
+                <Setter Property="Margin" Value="14" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <!-- Hint -->
+
+    <Style x:Key="{dxt:LWKey GalleryItemControl.DefaultHintTextStyle}" TargetType="{x:Type ContentControl}">
+        <Setter Property="Foreground" Value="{dx:LWBrush 'Brush.Foreground, Office2019Black=Brush.ControlLight.Foreground, Win11=Brush.Foreground.Primary'}" />
+    </Style>
+
+    <Style x:Key="{dxt:LWKey GalleryItemControl.DefaultHintCaptionTextStyle}" TargetType="{x:Type ContentControl}">
+        <Setter Property="Foreground" Value="{dx:LWBrush 'Brush.Foreground, Office2019Black=Brush.ControlLight.Foreground, Win11=Brush.Foreground.Primary'}" />
+    </Style>
+
+    <!-- General -->
+
+    <ControlTemplate x:Key="{dxt:LWKey GalleryItemGroupControl.CaptionTemplate}" TargetType="{x:Type ContentControl}">
+        <dx:DXBorder Background="{dx:LWBrush 'Brush.Window.Background, Office2019Black=Brush.ControlLight.Background, Win11=Brush.WindowBackground'}" Margin="1,0,1,0" MinHeight="24">
+            <ContentPresenter Margin="2,0,0,0" />
+        </dx:DXBorder>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="{dxt:LWKey GalleryItemGroupControl.BackgroundTemplate}" TargetType="{x:Type ContentControl}">
+        <ContentPresenter />
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="{dxt:LWKey GalleryItemGroupControl.ItemsBackgroundTemplate}" TargetType="{x:Type ContentControl}">
+        <ContentPresenter />
+    </ControlTemplate>
+
+    <!-- General -->
+
+    <Style x:Key="{dxt:LWKey GalleryControl.StandaloneContentStyle}" TargetType="{x:Type ContentControl}">
+        <Setter Property="Foreground" Value="{dx:LWBrush 'Brush.Foreground, Office2019Black=Brush.ControlLight.Foreground, Win11=Brush.Foreground.Primary'}" />
+        <Setter Property="Margin" Value="1" />
+    </Style>
+
+    <Style x:Key="{dxt:LWKey GalleryControl.StandaloneCaptionStyle}" TargetType="{x:Type ToggleButton}">
+        <Setter Property="Foreground" Value="{dx:LWBrush 'Brush.Foreground, Office2019Black=Brush.ControlLight.Foreground, Win11=Brush.Foreground.Primary'}" />
+    </Style>
+
+    <Style x:Key="{dxt:LWKey GalleryControl.StandaloneGroupsBackgroundStyle}" TargetType="{x:Type ContentControl}" />
+
+    <Style x:Key="{dxt:LWKey GalleryControl.StandaloneGroupsViewportStyle}" TargetType="{x:Type dxb:GalleryGroupsViewer}" />
+
+    <Style x:Key="{dxt:LWKey GalleryControl.StandaloneVerticalScrollBarContainerStyle}" TargetType="{x:Type ContentControl}" />
+
+    <!-- Caption -->
+
+    <ControlTemplate x:Key="{dxt:LWKey GalleryControl.StandaloneCaptionTemplate}" TargetType="{x:Type ToggleButton}">
+        <Grid>
+            <dx:DXBorder
+                x:Name="IsDefault"
+                Background="{dx:LWBrush 'Brush.Button.Background, Office2019Black=Brush.ControlLight.Background, Win11=Brush.Control.Background'}"
+                BorderBrush="{dx:LWBrush 'Brush.Delimiter, Win10Dark=Brush.AltBorder, Win11=Brush.Border'}"
+                BorderThickness="0,0,0,1"
+                Margin="1"
+                CornerRadius="{dx:LWCornerRadius '0, Win11=(6,6,0,0)'}">
+                <ContentPresenter />
+            </dx:DXBorder>
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal" />
+                    <VisualState x:Name="MouseOver">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.HoverBackground, Office2019Black=Color.ControlLight.HoverBackground, Office2019Colorful=Color.HoverAltBackground, VS2019Blue=Color.ControlDark.HoverBackground, Win11=Color.Button.HoverBackground'}" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Pressed">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.SelectionBackground, Office2019Black=Color.ControlLight.SelectionBackground, Office2019Colorful=Color.SelectionAltBackground, VS2019Blue=Color.ControlDark.SelectionBackground, Win11=Color.Button.PressedBackground'}" />
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+                <VisualStateGroup x:Name="CheckedStates">
+                    <VisualState x:Name="Unchecked" />
+                    <VisualState x:Name="Checked">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.SelectionBackground, Office2019Black=Color.ControlLight.SelectionBackground, Office2019Colorful=Color.SelectionAltBackground, VS2019Blue=Color.ControlDark.SelectionBackground, Win11=Color.Button.HoverBackground'}" />
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </Grid>
+    </ControlTemplate>
+
+    <!-- Background -->
+
+    <ControlTemplate x:Key="{dxt:LWKey GalleryControl.StandaloneBackgroundTemplate}" TargetType="{x:Type ContentControl}">
+        <dx:DXBorder
+            Background="{dx:LWBrush 'Brush.Editor.Background, Win11=Brush.FlyoutBackground'}"
+            BorderBrush="{dx:LWBrush 'Brush.Border, Win11=Brush.FlyoutBorder'}"
+            BorderThickness="1"
+            CornerRadius="{dx:LWCornerRadius '0, Win11=7'}">
+            <ContentPresenter />
+        </dx:DXBorder>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="{dxt:LWKey GalleryControl.StandaloneGroupsBackgroundTemplate}" TargetType="{x:Type ContentControl}">
+        <ContentPresenter />
+    </ControlTemplate>
+
+    <!-- Item -->
+
+    <ControlTemplate x:Key="{dxt:LWKey GalleryItemControl.StandaloneBorderTemplate}" TargetType="{x:Type dxb:ItemBorderControl}">
+        <Grid x:Name="Root" Background="Transparent">
+            <dx:DXBorder
+                x:Name="IsDefault"
+                Background="Transparent"
+                BorderBrush="Transparent"
+                CornerRadius="{dx:LWCornerRadius '0, Win11=4'}"
+                BorderThickness="1" />
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="State">
+                    <VisualState x:Name="Normal" />
+                    <VisualState x:Name="Hover">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.HoverBackground, Office2019Black=Color.ControlLight.HoverBackground, Office2019Colorful=Color.HoverAltBackground, VS2019Blue=Color.ControlDark.HoverBackground, Win11=Color.ListItem.HoverBackground'}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.HoverBorder, Office2019Black=Color.ControlLight.HoverBackground, Office2019Colorful=Color.HoverAltBorder, VS2019Blue=Color.ControlDark.HoverBorder, Win11=Color.ListItem.HoverBorder'}" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Pressed">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.SelectionBackground, Office2019Black=Color.ControlLight.SelectionBackground, Office2019Colorful=Color.SelectionAltBackground, VS2019Blue=Color.ControlDark.SelectionBackground, Win11=Color.ListItem.PressedBackground'}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.SelectionBorder, Office2019Black=Color.ControlLight.SelectionBackground, Office2019Colorful=Color.SelectionAltBorder, VS2019Blue=Color.ControlDark.SelectionBorder, Win11=Color.ListItem.PressedBorder'}" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Checked">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.SelectionBackground, Office2019Black=Color.ControlLight.SelectionBackground, Office2019Colorful=Color.SelectionAltBackground, VS2019Blue=Color.ControlDark.SelectionBackground, Win11=Color.ListItem.SelectionBackground'}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.SelectionBorder, Office2019Black=Color.ControlLight.SelectionBackground, Office2019Colorful=Color.SelectionAltBorder, VS2019Blue=Color.ControlDark.SelectionBorder, Win11=Color.ListItem.SelectionBorder'}" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="HoverChecked">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.SelectionBackground, Office2019Black=Color.ControlLight.SelectionBackground, Office2019Colorful=Color.SelectionAltBackground, VS2019Blue=Color.ControlDark.SelectionBackground, Win11=Color.Button.HoverBackground'}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.SelectionBorder, Office2019Black=Color.ControlLight.SelectionBackground, Office2019Colorful=Color.SelectionAltBorder, VS2019Blue=Color.ControlDark.SelectionBorder, Win11=Color.ListItem.HoverBorder'}" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Focused">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.HoverBackground, Office2019Black=Color.ControlLight.HoverBackground, Office2019Colorful=Color.HoverAltBackground, VS2019Blue=Color.ControlDark.HoverBackground, Win11=#00FFFFFF'}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.HoverBorder, Office2019Black=Color.ControlLight.HoverBackground, Office2019Colorful=Color.HoverAltBorder, VS2019Blue=Color.ControlDark.HoverBorder, Win11=Color.Foreground.Primary'}" />
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </Grid>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="{dxt:LWKey GalleryItemControl.StandaloneGlyphBorderTemplate}" TargetType="{x:Type dxb:ItemBorderControl}">
+        <Grid x:Name="Root" Background="Transparent">
+            <dx:DXBorder x:Name="IsDefault" Background="Transparent" />
+            <ContentPresenter />
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="State">
+                    <VisualState x:Name="Normal" />
+                    <VisualState x:Name="Hover">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.HoverBackground, Office2019Black=Color.ControlLight.HoverBackground, Office2019Colorful=Color.HoverAltBackground, VS2019Blue=Color.ControlDark.HoverBackground, Win11=Color.Button.HoverBackground'}" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Pressed">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.SelectionBackground, Office2019Black=Color.ControlLight.SelectionBackground, Office2019Colorful=Color.SelectionAltBackground, VS2019Blue=Color.ControlDark.SelectionBackground, Win11=Color.Button.CheckedBackground'}" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Checked">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.SelectionBackground, Office2019Black=Color.ControlLight.SelectionBackground, Office2019Colorful=Color.SelectionAltBackground, VS2019Blue=Color.ControlDark.SelectionBackground, Win11=Color.Button.CheckedBackground'}" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="HoverChecked">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.SelectionBackground, Office2019Black=Color.ControlLight.SelectionBackground, Office2019Colorful=Color.SelectionAltBackground, VS2019Blue=Color.ControlDark.SelectionBackground, Win11=Color.Button.CheckedBackground'}" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Focused">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.HoverBackground, Office2019Black=Color.ControlLight.HoverBackground, Office2019Colorful=Color.HoverAltBackground, VS2019Blue=Color.ControlDark.HoverBackground, Win11=Color.Button.HoverBackground'}" />
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </Grid>
+    </ControlTemplate>
+
+    <!-- BarItemSearchControl -->
+
+    <!-- GlyphSideControl -->
+
+    <ControlTemplate x:Key="{dxt:LWKey GlyphSideControl.Template}" TargetType="{x:Type dxb:GlyphSideControl}">
+        <dx:DXBorder x:Name="PART_Border">
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="AlignmentStates">
+                    <VisualState x:Name="Top" />
+                    <VisualState x:Name="Center" />
+                    <VisualState x:Name="Bottom" />
+                    <VisualState x:Name="Stretch" />
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </dx:DXBorder>
+    </ControlTemplate>
+
+    <!-- PopupControlContainer -->
+
+    <ControlTemplate x:Key="{dxt:LWKey PopupControlContainer.ControlTemplate}" TargetType="{x:Type dxb:PopupContainer}">
+        <dx:DXContentPresenter Background="{TemplateBinding Background}" Content="{TemplateBinding Content}" />
+    </ControlTemplate>
+
+    <Style x:Key="{dxt:LWKey OfficeTabletItemsControl.CaptionStyle}" TargetType="{x:Type TextBlock}">
+        <Setter Property="Foreground" Value="{dx:LWBrush 'Brush.Foreground, Win11=Brush.Foreground.Primary'}" />
+        <Setter Property="Margin" Value="12,3,12,3" />
+    </Style>
+
+    <Style x:Key="{dxt:LWKey OfficeTabletItemsControl.BackgroundStyle}" TargetType="{x:Type Border}">
+        <Setter Property="Background" Value="{dx:LWBrush 'Brush.Window.Background, Win11=Brush.WindowBackground'}" />
+        <Setter Property="BorderBrush" Value="{dx:LWBrush 'Brush.Delimiter, Win10Dark=Brush.AltBorder'}" />
+        <Setter Property="BorderThickness" Value="0,0,0,1" />
+        <Setter Property="MinHeight" Value="22" />
+        <Style.Triggers>
+            <Trigger Property="dx:ThemeManager.IsTouchEnabled" Value="True">
+                <Setter Property="MinHeight" Value="44" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <!-- Back -->
+
+    <Style x:Key="{dxt:LWKey OfficeTabletItemsControl.BackButtonStyle}" TargetType="{x:Type ButtonBase}">
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="MinHeight" Value="22" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ButtonBase}">
+                    <Grid x:Name="Root">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <dx:DXBorder x:Name="IsDefault" Grid.Column="0" Background="Transparent">
+                            <Path Margin="9,7,9,7" Style="{StaticResource UIShape.Left}" />
+                        </dx:DXBorder>
+                        <TextBlock
+                            Grid.Column="1"
+                            Foreground="{dx:LWBrush 'Brush.Foreground, Win11=Brush.Foreground.Primary'}"
+                            MaxWidth="60"
+                            Text="{TemplateBinding Content}"
+                            TextAlignment="Center"
+                            TextTrimming="CharacterEllipsis"
+                            VerticalAlignment="Center" />
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" TargetName="IsDefault" Value="{dx:LWBrush 'Brush.HoverBackground, Office2019Colorful=Brush.HoverAltBackground, VS2019Blue=Brush.ControlDark.HoverBackground, Win11=Brush.Button.HoverBackground'}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="dx:ThemeManager.IsTouchEnabled" Value="True">
+                <Setter Property="MinWidth" Value="44" />
+                <Setter Property="MinHeight" Value="44" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <!-- Customization -->
+
+    <ControlTemplate x:Key="{dxt:LWKey Customization.DragElementTemplate}" TargetType="{x:Type dxbi:BarItemDragElementContent}">
+        <Grid x:Name="Root">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid>
+                <dx:DXBorder
+                    Background="{dx:LWBrush 'Brush.Window.Background, Win11=Brush.PanelBackground'}"
+                    BorderBrush="{dx:LWBrush 'Brush.Border, Win11=Brush.PanelBorder'}"
+                    BorderThickness="1"
+                    CornerRadius="{dx:LWCornerRadius '0, Win11=7'}" />
+                <StackPanel Orientation="Horizontal">
+                    <dx:DXImage Margin="6" Source="{Binding Path=Glyph}" />
+                    <TextBlock Foreground="{dx:LWBrush 'Brush.Foreground, Win11=Brush.Foreground.Primary'}" Margin="0,6,10,6" Text="{Binding Path=Content}" />
+                </StackPanel>
+            </Grid>
+            <dx:DragIconControl
+                x:Name="PART_DragIcon"
+                Grid.Row="1"
+                Grid.Column="1"
+                DragType="{Binding Path=(dxb:BarDragProvider.DragType), RelativeSource={RelativeSource TemplatedParent}}"
+                HorizontalAlignment="Right"
+                Margin="-12,-12,0,0"
+                VerticalAlignment="Bottom" />
+        </Grid>
+    </ControlTemplate>
+
+    <!-- TextSplitter -->
+
+    <Style x:Key="{dxt:LWKey TextSplitter.BarSubItem}" TargetType="{x:Type dxb:TextSplitterControl}">
+        <Setter Property="BottomSideArrowContainerStyle">
+            <Setter.Value>
+                <Style TargetType="{x:Type ContentControl}">
+                    <Setter Property="HorizontalAlignment" Value="Center" />
+                    <Setter Property="Margin" Value="4" />
+                    <Setter Property="VerticalAlignment" Value="Bottom" />
+                </Style>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="FirstStringHorizontalAlignment" Value="Center" />
+        <Setter Property="FirstStringMargin" Value="0" />
+        <Setter Property="Margin" Value="0,-4,0,-2" />
+        <Setter Property="NormalArrowTemplate">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ContentControl}">
+                    <Path Fill="{TemplateBinding Foreground}" Style="{StaticResource UIShape.Down}" />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="NormalTextStyle">
+            <Setter.Value>
+                <Style TargetType="{x:Type ContentControl}" />
+            </Setter.Value>
+        </Setter>
+        <Setter Property="RightSideArrowContainerStyle">
+            <Setter.Value>
+                <Style TargetType="{x:Type ContentControl}">
+                    <Setter Property="HorizontalAlignment" Value="Right" />
+                    <Setter Property="Margin" Value="2" />
+                    <Setter Property="VerticalAlignment" Value="Center" />
+                </Style>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="SecondStringHorizontalAlignment" Value="Center" />
+        <Setter Property="SecondStringMargin" Value="0,-1,0,0" />
+        <Setter Property="SelectedArrowTemplate">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ContentControl}">
+                    <Path Style="{StaticResource UIShape.Down}" />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="SelectedTextStyle">
+            <Setter.Value>
+                <Style TargetType="{x:Type ContentControl}" />
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="{dxt:LWKey TextSplitter.BarButtonItem}" BasedOn="{StaticResource {dxt:LWKey TextSplitter.BarSubItem}}" TargetType="{x:Type dxb:TextSplitterControl}" />
+
+    <Style x:Key="{dxt:LWKey TextSplitter.BarCheckItem}" BasedOn="{StaticResource {dxt:LWKey TextSplitter.BarSubItem}}" TargetType="{x:Type dxb:TextSplitterControl}" />
+
+    <Style x:Key="{dxt:LWKey TextSplitter.BarSplitButtonItem}" BasedOn="{StaticResource {dxt:LWKey TextSplitter.BarSubItem}}" TargetType="{x:Type dxb:TextSplitterControl}" />
+
+    <!-- begin brushes -->
+
+    <!-- end -->
+
+    <!-- begin styles and templates -->
+
+    <Style x:Key="{dxt:LWKey RadialMenuLevelControl.CircleBorderStyle}" TargetType="{x:Type dxb:CircleBorder}">
+        <Setter Property="Stroke" Value="{StaticResource RadialMenuLevelControl_BackColor}" />
+        <Setter Property="Fill" Value="{StaticResource RadialMenuLevelControl_InnerColor}" />
+        <Setter Property="StrokeThickness" Value="26" />
+        <Setter Property="Margin" Value="13" />
+    </Style>
+
+    <DataTemplate x:Key="{dxt:LWKey RadialMenuControl.DefaultBackButtonGlyphTemplate}">
+        <Path
+            Data="F1 M 16,5L 16,7L 4,7L 9,12L 6,12L 0,6L 6,0L 9,0L 4,5L 16,5 Z "
+            Fill="{StaticResource CenterButton_StrokeColor}"
+            Height="12"
+            Stretch="Fill"
+            Width="16" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="{dxt:LWKey RadialMenuControl.DefaultGlyphTemplate}">
+        <Path
+            Data="F1 M 0,0L 16,0L 16,2L 0,2L 0,0 Z M 0,5L 16,5L 16,7L 0,7L 0,5 Z M 0,10L 16,10L 16,12L 0,12L 0,10 Z "
+            Fill="{StaticResource CenterButton_StrokeColor}"
+            Height="12"
+            Stretch="Fill"
+            Width="16" />
+    </DataTemplate>
+
+    <ControlTemplate x:Key="{dxt:LWKey RadialMenuControl.CenterButtonTemplate}" TargetType="Button">
+        <dx:DXBorder
+            x:Name="border"
+            Background="{StaticResource CenterButton_InnerColor}"
+            BorderBrush="{StaticResource CenterButton_StrokeColor}"
+            BorderThickness="3"
+            CornerRadius="21"
+            Height="42"
+            Width="42">
+            <ContentPresenter />
+        </dx:DXBorder>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="true">
+                <Setter Property="Background" TargetName="border" Value="{StaticResource CenterButton_HoverColor}" />
+            </Trigger>
+            <Trigger Property="IsKeyboardFocused" Value="true">
+                <Setter Property="Background" TargetName="border" Value="{StaticResource CenterButton_HoverColor}" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+    <!--#endregion Base\Core\Core\Bars\Themes\Base.xaml-->
+
+
+    <!--#region DEFAULT STYLES-->
+    <Style x:Key="RadialContextMenu.DefaultStyle" BasedOn="{StaticResource RadialContextMenuDefaultStyle}" TargetType="{x:Type dxb:RadialContextMenu}">
+        <Setter Property="TextBlock.FontFamily" Value="Segoe UI" />
+        <Setter Property="TextBlock.Foreground" Value="{dx:LWBrush 'Brush.Foreground, Win11=Brush.Foreground.Primary'}" />
+        <Setter Property="TextElement.FontSize" Value="12" />
+        <Setter Property="TextElement.FontStretch" Value="Normal" />
+        <Setter Property="TextElement.FontStyle" Value="Normal" />
+        <Setter Property="TextElement.FontWeight" Value="Normal" />
+    </Style>
+    <!--#endregion DEFAULT STYLES-->
+
+
+</ResourceDictionary>

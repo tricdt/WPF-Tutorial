@@ -1,0 +1,24 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+    xmlns:dxi="http://schemas.devexpress.com/winfx/2008/xaml/core/internal"
+    xmlns:dxgat="http://schemas.devexpress.com/winfx/2008/xaml/gauges/themekeys"
+    xmlns:dxt="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys">
+    <ResourceDictionary.MergedDictionaries>
+        <dxi:PaletteResourceDictionary />
+    </ResourceDictionary.MergedDictionaries>
+    <SolidColorBrush x:Key="{dxgat:LWKey GaugesBrushes.RangeGreenBrush}" Color="#FF76A797" Opacity="0.7" />
+    <SolidColorBrush x:Key="{dxgat:LWKey GaugesBrushes.RangeYellowBrush}" Color="#FFEAC282" Opacity="0.62" />
+    <SolidColorBrush x:Key="{dxgat:LWKey GaugesBrushes.RangeRedBrush}" Color="#FFD86344" Opacity="0.62" />
+    <SolidColorBrush x:Key="{dxgat:LWKey GaugesBrushes.NeedleFill}" Color="{StaticResource Color.Foreground}" />
+    <SolidColorBrush x:Key="{dxgat:LWKey GaugesBrushes.ForegroundBrush}" Color="{StaticResource Color.Foreground}" />
+    <SolidColorBrush x:Key="{dxgat:LWKey GaugesBrushes.ScaleElementsBrush}" Color="{StaticResource Color.Delimiter}" />
+    <SolidColorBrush x:Key="{dxgat:LWKey GaugesBrushes.ScaleBackgroundBrush}" Color="{StaticResource Color.Delimiter}" Opacity="0.62" />
+    <SolidColorBrush x:Key="{dxgat:LWKey GaugesBrushes.ScaleInnerBackgroundBrush}" Color="{StaticResource Color.Control.Background}" Opacity="0.62" />
+    <SolidColorBrush x:Key="{dxgat:LWKey GaugesBrushes.SpindleCapBackgroundBrush}" Color="{StaticResource Color.Foreground}" />
+    <SolidColorBrush x:Key="{dxgat:LWKey GaugesBrushes.SpindleCapForegroundBrush}" Color="{StaticResource Color.Window.Background}" />
+    <SolidColorBrush x:Key="{dxgat:LWKey GaugesBrushes.MarkerBackgroundBrush}" Color="Transparent" />
+    <SolidColorBrush x:Key="{dxgat:LWKey GaugesBrushes.MarkerForegroundBrush}" Color="{StaticResource Color.Foreground}" />
+    <SolidColorBrush x:Key="{dxgat:LWKey GaugesBrushes.GaugeBackgroundBrush}" Color="Transparent" />
+</ResourceDictionary>

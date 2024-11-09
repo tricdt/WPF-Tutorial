@@ -1,0 +1,49 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:dxa="http://schemas.devexpress.com/winfx/2008/xaml/accordion"
+                    xmlns:dxat="http://schemas.devexpress.com/winfx/2008/xaml/accordion/themekeys"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <SolidColorBrush x:Key="{dxat:AccordionItemThemeKeys ResourceKey=ItemHeaderDefaultForeground}" Color="#FF000000"/>
+
+    <SolidColorBrush x:Key="{dxat:AccordionItemThemeKeys ResourceKey=ItemHeaderHoverForeground}" Color="#FF000000"/>
+
+    <SolidColorBrush x:Key="{dxat:AccordionItemThemeKeys ResourceKey=ItemHeaderPressedForeground}" Color="#FFFFFFFF"/>
+
+    <SolidColorBrush x:Key="{dxat:AccordionItemThemeKeys ResourceKey=ItemHeaderDisabledForeground}" Color="#FF000000"/>
+
+    <SolidColorBrush x:Key="{dxat:AccordionItemThemeKeys ResourceKey=ItemHeaderFocusedForeground}" Color="#FF000000"/>
+
+    <SolidColorBrush x:Key="{dxat:AccordionItemThemeKeys ResourceKey=ItemHeaderSelectedForeground}" Color="#FFFFFFFF"/>
+
+    <SolidColorBrush x:Key="{dxat:AccordionItemThemeKeys ResourceKey=ItemHeaderSelectedInactiveForeground}" Color="#FF000000"/>
+
+    <SolidColorBrush x:Key="{dxat:AccordionItemThemeKeys ResourceKey=RootItemHeaderDefaultForeground}" Color="#FF000000"/>
+
+    <SolidColorBrush x:Key="{dxat:AccordionItemThemeKeys ResourceKey=RootItemHeaderHoverForeground}" Color="#FF000000"/>
+
+    <SolidColorBrush x:Key="{dxat:AccordionItemThemeKeys ResourceKey=RootItemHeaderPressedForeground}" Color="#FF000000"/>
+
+    <SolidColorBrush x:Key="{dxat:AccordionItemThemeKeys ResourceKey=RootItemHeaderDisabledForeground}" Color="#FF000000"/>
+
+    <SolidColorBrush x:Key="{dxat:AccordionItemThemeKeys ResourceKey=RootItemHeaderFocusedForeground}" Color="#FF000000"/>
+
+    <SolidColorBrush x:Key="{dxat:AccordionItemThemeKeys ResourceKey=RootItemHeaderSelectedForeground}" Color="#FF000000"/>
+
+    <SolidColorBrush x:Key="{dxat:AccordionItemThemeKeys ResourceKey=RootItemHeaderSelectedInactiveForeground}" Color="#FF000000"/>
+
+    <SolidColorBrush x:Key="{dxat:AccordionThemeKeys ResourceKey=Background}" Color="#FFF7F7F7"/>
+
+    <SolidColorBrush x:Key="{dxat:AccordionThemeKeys ResourceKey=BorderBrush}" Color="#FFF7F7F7"/>
+
+    <SolidColorBrush x:Key="{dxat:AccordionItemThemeKeys ResourceKey=TextForeground}" Color="#FF000000"/>
+
+    <SolidColorBrush x:Key="{dxat:AccordionThemeKeys ResourceKey=SearchControlNullTextForeground}" Color="#7F000000"/>
+
+    <SolidColorBrush x:Key="{dxat:AccordionThemeKeys ResourceKey=SearchControlClearButtonFill}" Color="#FF000000"/>
+
+    <SolidColorBrush x:Key="{dxat:AccordionThemeKeys ResourceKey=SearchControlSearchButtonFill}" Color="#FF000000"/>
+
+    <SolidColorBrush x:Key="{dxat:AccordionThemeKeys ResourceKey=HeaderForeground}" Color="#FF4D4D4D"/>
+
+</ResourceDictionary>

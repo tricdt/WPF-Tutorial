@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+	<title>csharp</title>
+	<style type="text/css">
+		.Black{fill:#727272;}
+		.Green{fill:#039C23;}
+		.Red{fill:#D11C1C;}
+		.Blue{fill:#1177D7;}
+		.Yellow{fill:#FFB115;}
+		.White{fill:#FFFFFF;}
+	</style>
+		
+	<path class="Blue" d="M30,22.84V9.16a2,2,0,0,0-1-1.74L17,.57a2,2,0,0,0-2,0L3,7.42A2,2,0,0,0,2,9.16V22.84a2,2,0,0,0,1,1.74l12,6.85a2,2,0,0,0,2,0l12-6.85A2,2,0,0,0,30,22.84Z" />
+	<path class="Red" d="M30,22.84V9.16a2,2,0,0,0-1-1.74L17,.57a2,2,0,0,0-2,0L3,7.42A2,2,0,0,0,2,9.16V22.84a2,2,0,0,0,1,1.74l12,6.85a2,2,0,0,0,2,0l12-6.85A2,2,0,0,0,30,22.84Z" opacity="0.38" />
+
+	<path class="White" d="M21.21,19a6,6,0,1,1,0-5.94l3.47-2a10,10,0,1,0,0,9.92Z" />
+
+	<rect class="White" x="24" y="13" width="1" height="6" />
+	<rect class="White" x="23" y="17" width="5" height="1" />
+	<rect class="White" x="23" y="14" width="5" height="1" />
+	<rect class="White" x="26" y="13" width="1" height="6" />
+
+</svg>

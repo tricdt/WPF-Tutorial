@@ -1,0 +1,131 @@
+﻿<ResourceDictionary mc:Ignorable="cs" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:cs="colorscheme_ignorable_uri" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxdst="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys" xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" xmlns:dxeh="http://schemas.devexpress.com/winfx/2008/xaml/editors/internal" xmlns:dxet="http://schemas.devexpress.com/winfx/2008/xaml/editors/themekeys" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <ResourceDictionary.MergedDictionaries>
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2010Silver.v24.1;component/DevExpress.Xpf.Core/DevExpress.Xpf.Core/Editors/Themes/Office2010Silver/ErrorPresenter.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2010Silver.v24.1;component/DevExpress.Xpf.Core/DevExpress.Xpf.Core/Editors/Themes/Office2010Silver/TextEditBase.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2010Silver.v24.1;component/DevExpress.Xpf.Core/DevExpress.Xpf.Core/Editors/Themes/Generic/TextEdit.xaml" />
+  </ResourceDictionary.MergedDictionaries>
+  <SolidColorBrush x:Key="{dxet:TextEditThemeKey ResourceKey=NullTextForeground}" Color="#BF80838F" />
+  <dx:WpfSvgPalette x:Key="{dxet:InplaceBaseEditThemeKey ResourceKey=ValidationErrorSvgPalette}">
+    <SolidColorBrush x:Key="BlackColor" Color="#FF515D7A" />
+    <SolidColorBrush x:Key="WhiteColor" Color="#FFFFFFFF" />
+    <SolidColorBrush x:Key="RedColor" Color="#FFFF2344" />
+    <SolidColorBrush x:Key="YellowColor" Color="#FFCE723D" />
+    <SolidColorBrush x:Key="GreenColor" Color="#FF05A233" />
+    <SolidColorBrush x:Key="BlueColor" Color="#FF00A5D2" />
+  </dx:WpfSvgPalette>
+  <dx:WpfSvgPalette x:Key="{dxet:InplaceBaseEditThemeKey ResourceKey=ConditionalFormattingSvgPalette}">
+    <SolidColorBrush x:Key="BlackColor" Color="#FF515D7A" />
+    <SolidColorBrush x:Key="WhiteColor" Color="#FFFFFFFF" />
+    <SolidColorBrush x:Key="RedColor" Color="#FFFF2344" />
+    <SolidColorBrush x:Key="YellowColor" Color="#FFCE723D" />
+    <SolidColorBrush x:Key="GreenColor" Color="#FF05A233" />
+    <SolidColorBrush x:Key="BlueColor" Color="#FF00A5D2" />
+    <dx:WpfSvgPalette.States>
+      <dx:WpfSvgPalette x:Key="Hover">
+        <SolidColorBrush x:Key="BlackColor" Color="#FF515D7A" />
+        <SolidColorBrush x:Key="WhiteColor" Color="#FFFFFFFF" />
+        <SolidColorBrush x:Key="RedColor" Color="#FFFF2344" />
+        <SolidColorBrush x:Key="YellowColor" Color="#FFCE723D" />
+        <SolidColorBrush x:Key="GreenColor" Color="#FF05A233" />
+        <SolidColorBrush x:Key="BlueColor" Color="#FF00A5D2" />
+      </dx:WpfSvgPalette>
+      <dx:WpfSvgPalette x:Key="Pressed">
+        <SolidColorBrush x:Key="BlackColor" Color="#FF515D7A" />
+        <SolidColorBrush x:Key="WhiteColor" Color="#FFFFFFFF" />
+        <SolidColorBrush x:Key="RedColor" Color="#FFFF2344" />
+        <SolidColorBrush x:Key="YellowColor" Color="#FFCE723D" />
+        <SolidColorBrush x:Key="GreenColor" Color="#FF05A233" />
+        <SolidColorBrush x:Key="BlueColor" Color="#FF00A5D2" />
+      </dx:WpfSvgPalette>
+    </dx:WpfSvgPalette.States>
+  </dx:WpfSvgPalette>
+  <Style x:Key="{dxet:TextEditThemeKey ResourceKey=TextStyle}" BasedOn="{StaticResource BaseTextStyle}" TargetType="{x:Type TextBox}"></Style>
+  <Style x:Key="{dxet:TextEditThemeKey ResourceKey=TextInplaceStyle}" BasedOn="{StaticResource BaseTextInplaceStyle}" TargetType="{x:Type TextBox}">
+    <Setter Property="dxeh:EditorMarginHelper.Margin" Value="2,2,2,2,0,2,2,2" />
+  </Style>
+  <Style x:Key="{dxet:TextEditThemeKey ResourceKey=TextBlockStyle}" BasedOn="{StaticResource BaseTextBlockStyle}" TargetType="{x:Type TextBlock}">
+    <Setter Property="Margin" Value="5,2,5,2" />
+  </Style>
+  <Style x:Key="{dxet:TextEditThemeKey ResourceKey=TextBlockInplaceStyle}" BasedOn="{StaticResource BaseTextBlockInplaceStyle}" TargetType="{x:Type TextBlock}">
+    <Setter Property="dxeh:EditorMarginHelper.Margin" Value="4,2,4,2,2,2,4,2" />
+  </Style>
+  <ControlTemplate x:Key="{dxet:TextEditThemeKey ResourceKey=DisplayInplaceTemplate}">
+    <TextBlock x:Name="PART_Editor" dx:FocusHelper2.Focusable="False" Style="{DynamicResource {dxet:TextEditThemeKey ResourceKey=TextBlockInplaceStyle}}" />
+  </ControlTemplate>
+  <ControlTemplate x:Key="{dxet:TextEditThemeKey ResourceKey=EditNonEditableTemplate}">
+    <TextBlock x:Name="PART_Editor" Style="{DynamicResource {dxet:TextEditThemeKey ResourceKey=TextBlockStyle}}">
+      <TextBlock.FocusVisualStyle>
+        <Style>
+          <Setter Property="Control.Template">
+            <Setter.Value>
+              <ControlTemplate />
+            </Setter.Value>
+          </Setter>
+        </Style>
+      </TextBlock.FocusVisualStyle>
+    </TextBlock>
+  </ControlTemplate>
+  <ControlTemplate x:Key="{dxet:TextEditThemeKey ResourceKey=EditNonEditableInplaceTemplate}">
+    <TextBlock x:Name="PART_Editor" Style="{DynamicResource {dxet:TextEditThemeKey ResourceKey=TextBlockInplaceStyle}}" />
+  </ControlTemplate>
+  <ControlTemplate x:Key="{dxet:TextEditThemeKey ResourceKey=EditInplaceTemplate}">
+    <TextBox x:Name="PART_Editor" Style="{DynamicResource {dxet:TextEditThemeKey ResourceKey=TextInplaceStyle}}" />
+  </ControlTemplate>
+  <ControlTemplate x:Key="{dxet:TextEditThemeKey ResourceKey=EditTemplate}">
+    <TextBox x:Name="PART_Editor" dxeh:EditorMarginHelper.Margin="3,2,3,2,0,2,3,2" Style="{DynamicResource {dxet:TextEditThemeKey ResourceKey=TextStyle}}" />
+  </ControlTemplate>
+  <ControlTemplate x:Key="{dxet:TextEditThemeKey ResourceKey=EmptyBorderTemplate}" TargetType="{x:Type ContentControl}">
+    <Border x:Name="TextEditEmptyBorder">
+      <ContentPresenter Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" ContentTemplate="{TemplateBinding ContentTemplate}" />
+    </Border>
+  </ControlTemplate>
+  <ControlTemplate x:Key="{dxet:TextEditThemeKey ResourceKey=ErrorControlTemplate}" TargetType="{x:Type dxe:ErrorControl}">
+    <ContentPresenter x:Name="content" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" ContentTemplate="{TemplateBinding ContentTemplate}" Margin="3,0,3,0" RenderTransformOrigin="0.5,0.5">
+      <ContentPresenter.Resources>
+        <Storyboard x:Key="showErrorStoryboard">
+          <DoubleAnimation BeginTime="00:00:00" Duration="00:00:00.2000000" From="0" Storyboard.TargetName="content" Storyboard.TargetProperty="Opacity" To="1" />
+          <DoubleAnimation BeginTime="00:00:00" Duration="00:00:00.1000000" From="1" Storyboard.TargetName="content" Storyboard.TargetProperty="RenderTransform.ScaleX" To="1.2" />
+          <DoubleAnimation BeginTime="00:00:00.1000000" Duration="00:00:00.1000000" From="1.2" Storyboard.TargetName="content" Storyboard.TargetProperty="RenderTransform.ScaleX" To="1" />
+          <DoubleAnimation BeginTime="00:00:00" Duration="00:00:00.1000000" From="1" Storyboard.TargetName="content" Storyboard.TargetProperty="RenderTransform.ScaleY" To="1.2" />
+          <DoubleAnimation BeginTime="00:00:00.1000000" Duration="00:00:00.1000000" From="1.2" Storyboard.TargetName="content" Storyboard.TargetProperty="RenderTransform.ScaleY" To="1" />
+        </Storyboard>
+        <Storyboard x:Key="hideErrorStoryboard">
+          <DoubleAnimation BeginTime="00:00:00" Duration="00:00:00" Storyboard.TargetName="content" Storyboard.TargetProperty="Opacity" To="0" />
+        </Storyboard>
+      </ContentPresenter.Resources>
+      <ContentPresenter.RenderTransform>
+        <ScaleTransform />
+      </ContentPresenter.RenderTransform>
+    </ContentPresenter>
+  </ControlTemplate>
+  <ControlTemplate x:Key="{dxet:TextEditThemeKey ResourceKey=BorderTemplate}" TargetType="{x:Type ContentControl}">
+    <Grid>
+      <VisualStateManager.VisualStateGroups>
+        <VisualStateGroup x:Name="InternalFocusStates">
+          <VisualState x:Name="InternalFocused">
+            <Storyboard>
+              <DoubleAnimation Duration="0" Storyboard.TargetName="FocusElement" Storyboard.TargetProperty="Opacity" To="1" />
+            </Storyboard>
+          </VisualState>
+          <VisualState x:Name="InternalUnfocused" />
+        </VisualStateGroup>
+      </VisualStateManager.VisualStateGroups>
+      <Border x:Name="FocusElement" Background="#7FFFCC00" CornerRadius="1" Margin="-1" Opacity="0" />
+      <Border x:Name="Border" Background="#FFFFFFFF" BorderBrush="#FFA5ACB5" BorderThickness="1" />
+      <ContentPresenter Margin="0,1" />
+    </Grid>
+    <ControlTemplate.Triggers>
+      <Trigger Property="IsEnabled" Value="False">
+        <Setter Property="Opacity" TargetName="Border" Value="0.35"></Setter>
+      </Trigger>
+      <DataTrigger Binding="{Binding Path=(dxe:BaseEdit.OwnerEdit).IsReadOnly, RelativeSource={RelativeSource Self}}" Value="True">
+        <Setter Property="Background" TargetName="Border" Value="#A2FFFFFF" />
+      </DataTrigger>
+    </ControlTemplate.Triggers>
+  </ControlTemplate>
+  <Thickness x:Key="{dxet:EmbeddedEditorLabelsThemeKey ResourceKey=Margin}">4,2,0,0</Thickness>
+  <Thickness x:Key="{dxet:EmbeddedEditorLabelsThemeKey ResourceKey=Padding}">0</Thickness>
+  <sys:Double x:Key="{dxet:EmbeddedEditorLabelsThemeKey ResourceKey=FontSize}">12</sys:Double>
+  <SolidColorBrush x:Key="{dxet:EmbeddedEditorLabelsThemeKey ResourceKey=Foreground}" Color="Gray" />
+  <Thickness x:Key="{dxet:EmbeddedEditorLabelsThemeKey ResourceKey=ContentMargin}">0,0,0,2</Thickness>
+</ResourceDictionary>

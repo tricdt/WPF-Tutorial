@@ -1,0 +1,23 @@
+<ResourceDictionary mc:Ignorable="cs" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:cs="colorscheme_ignorable_uri" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxi="http://schemas.devexpress.com/winfx/2008/xaml/core/internal" xmlns:dxt="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sys="clr-namespace:System;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ResourceDictionary.MergedDictionaries>
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.VS2017Blue.v24.1;component/Core/Core/Themes/DXPanel.xaml" />
+    <dxt:ResourceDictionaryEx Source="{dxt:ThemePartLoader Path=/Core/Core/Themes/Generic.XAML}" />
+    <dxt:ResourceDictionaryEx Source="{dxt:ThemePartLoader Path=/Core/Core/Bars/Themes/VS2017Blue.xaml}" />
+    <dxt:ResourceDictionaryEx Source="{dxt:ThemePartLoader Path=/Core/Core/TabControl/VS2017Blue.xaml}" />
+    <dxt:ResourceDictionaryEx Source="{dxt:ThemePartLoader Path=/Core/Core/Themes/VS2017Blue/StandardControls/GroupBox.XAML}" />
+    <dxt:ResourceDictionaryEx Source="{dxt:ThemePartLoader Path=/Core/Core/Editors/Themes/Generic/Generic.XAML}" />
+    <dxt:ResourceDictionaryEx Source="{dxt:ThemePartLoader Path=/Core/Core/Editors/Themes/VS2017Blue.XAML}" />
+    <dxt:ResourceDictionaryEx Source="{dxt:ThemePartLoader Path=/Core/Core/Themes/VS2017Blue/StandardControlstyles.XAML}" />
+    <dxt:ResourceDictionaryEx Source="{dxt:ThemePartLoader Path=/Core/Core/Themes/VS2017Blue/Window.xaml}" />
+    <dxt:ResourceDictionaryEx Source="{dxt:ThemePartLoader Path=/Core/Core/Themes/VS2017Blue/SuperTip.xaml}" />
+    <dxt:ResourceDictionaryEx Source="{dxt:ThemePartLoader Path=/Core/Core/Themes/VS2017Blue/PopUp.xaml}" />
+    <dxt:ResourceDictionaryEx Source="{dxt:ThemePartLoader Path=/Core/Core/Themes/VS2017Blue/PseudoWindow.xaml}" />
+    <dxt:ResourceDictionaryEx Source="{dxt:ThemePartLoader Path=/Core/Core/Themes/VS2017Blue/ThemedWindow.xaml}" />
+    <dxt:ResourceDictionaryEx Source="{dxt:ThemePartLoader Path=/Core/Core/Themes/VS2017Blue/CustomTemplates.xaml}" />
+    <dxt:ResourceDictionaryEx Source="{dxt:ThemePartLoader Path=/Core/Core/Themes/VS2017Blue/SearchPanel.xaml}" />
+    <dxt:ResourceDictionaryEx Source="{dxt:ThemePartLoader Path=/Core/Core/Themes/VS2017Blue/WaitIndicators.xaml}" />
+    <dxt:ResourceDictionaryEx Source="{dxt:ThemePartLoader Path=/Core/Core/Themes/VS2017Blue/ThemedBorder.xaml}" />
+    <dxt:ResourceDictionaryEx Source="{dxt:ThemePartLoader Path=/Core/Core/Themes/VS2017Blue/DragDrop.xaml}" />
+  </ResourceDictionary.MergedDictionaries>
+  <!-- General -->
+</ResourceDictionary>

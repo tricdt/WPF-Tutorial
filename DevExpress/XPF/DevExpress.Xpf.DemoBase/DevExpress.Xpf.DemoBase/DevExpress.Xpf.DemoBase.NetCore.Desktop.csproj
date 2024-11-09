@@ -1,0 +1,538 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <ProjectGuid>{C034F065-F96F-0414-171B-173BA7BBD2E0}</ProjectGuid>
+    <EnableDefaultItems>False</EnableDefaultItems>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWPF>True</UseWPF>
+    <UseWindowsForms>True</UseWindowsForms>
+    <Configurations>Debug;Release</Configurations>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <AppendTargetFrameworkToOutputPath>False</AppendTargetFrameworkToOutputPath>
+    <EmbeddedResourceUseDependentUponConvention>False</EmbeddedResourceUseDependentUponConvention>
+    <RootNamespace>DevExpress.Xpf.DemoBase</RootNamespace>
+    <AssemblyName>DevExpress.Xpf.DemoBase.v24.1</AssemblyName>
+    <LangVersion>6</LangVersion>
+    <FileAlignment>512</FileAlignment>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>library</OutputType>
+    <WarningLevel>4</WarningLevel>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\..\..\DevExpress.Key\StrongKey.snk</AssemblyOriginatorKeyFile>
+    <EnableNETAnalyzers>True</EnableNETAnalyzers>
+    <AnalysisLevel>8.0-recommended</AnalysisLevel>
+    <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+    <IntermediateOutputPath>obj.NCD</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>..\..\..\..\Bin\NetCore\</OutputPath>
+    <DefineConstants>TRACE;WPF;</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <ErrorReport>prompt</ErrorReport>
+    <OutputPath>..\..\..\..\Bin\NetCore\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;DEBUGTEST;WPF;METASHARP;</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.Desktop.v24.1">
+      <HintPath>..\..\..\..\Bin\NetCore\DevExpress.Data.Desktop.v24.1.dll</HintPath>
+    <Private>False</Private></Reference>
+    <Reference Include="DevExpress.Data.v24.1">
+      <HintPath>..\..\..\..\Bin\NetCore\DevExpress.Data.v24.1.dll</HintPath>
+    <Private>False</Private></Reference>
+    <Reference Include="DevExpress.Drawing.v24.1">
+      <HintPath>..\..\..\..\Bin\NetCore\DevExpress.Drawing.v24.1.dll</HintPath>
+    <Private>False</Private></Reference>
+    <Reference Include="DevExpress.DemoData.v24.1">
+      <HintPath>..\..\..\..\Bin\NetCore\DevExpress.DemoData.v24.1.dll</HintPath>
+    <Private>False</Private></Reference>
+    <Reference Include="DevExpress.Images.v24.1">
+      <HintPath>..\..\..\..\Bin\NetCore\DevExpress.Images.v24.1.dll</HintPath>
+    <Private>False</Private></Reference>
+    <Reference Include="DevExpress.Xpf.Accordion.v24.1">
+      <HintPath>..\..\..\..\Bin\NetCore\DevExpress.Xpf.Accordion.v24.1.dll</HintPath>
+    <Private>False</Private></Reference>
+    <Reference Include="DevExpress.Xpf.Controls.v24.1">
+      <HintPath>..\..\..\..\Bin\NetCore\DevExpress.Xpf.Controls.v24.1.dll</HintPath>
+    <Private>False</Private></Reference>
+    <Reference Include="DevExpress.Xpf.Core.v24.1">
+      <HintPath>..\..\..\..\Bin\NetCore\DevExpress.Xpf.Core.v24.1.dll</HintPath>
+    <Private>False</Private></Reference>
+    <Reference Include="DevExpress.Mvvm.v24.1">
+      <HintPath>..\..\..\..\Bin\NetCore\DevExpress.Mvvm.v24.1.dll</HintPath>
+    <Private>False</Private></Reference>
+    <Reference Include="DevExpress.Xpf.Docking.v24.1">
+      <HintPath>..\..\..\..\Bin\NetCore\DevExpress.Xpf.Docking.v24.1.dll</HintPath>
+    <Private>False</Private></Reference>
+    <Reference Include="DevExpress.Xpf.Layout.v24.1.Core">
+      <HintPath>..\..\..\..\Bin\NetCore\DevExpress.Xpf.Layout.v24.1.Core.dll</HintPath>
+    <Private>False</Private></Reference>
+    <Reference Include="DevExpress.Xpf.LayoutControl.v24.1">
+      <HintPath>..\..\..\..\Bin\NetCore\DevExpress.Xpf.LayoutControl.v24.1.dll</HintPath>
+    <Private>False</Private></Reference>
+    <Reference Include="DevExpress.Xpf.Ribbon.v24.1">
+      <HintPath>..\..\..\..\Bin\NetCore\DevExpress.Xpf.Ribbon.v24.1.dll</HintPath>
+    <Private>False</Private></Reference>
+    <Reference Include="DevExpress.Xpf.Themes.Office2019Colorful.v24.1">
+      <HintPath>..\..\..\..\Bin\NetCore\DevExpress.Xpf.Themes.Office2019Colorful.v24.1.dll</HintPath>
+    <Private>False</Private></Reference>
+    <PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Compile Include="Data\NWindContextNetCore.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\VehiclesContext.cs" />
+    <Compile Include="DemoActions\DemoActions.cs" />
+    <Compile Include="DemoBaseControl\DemoBaseControlStartup.cs" />
+    <Compile Include="DemoBaseControl\DemoBaseTesting.cs" />
+    <Compile Include="DemoBaseControl\DemoDescription.cs" />
+    <Compile Include="DemoBaseControl\DemoModuleDescription.cs" />
+    <Compile Include="DemoBaseControl\Helpers\DangerousHelper.cs" />
+    <Compile Include="DemoBaseControl\Helpers\DocumentPresenterContentAdapter.cs" />
+    <Compile Include="DemoBaseControl\Helpers\DpiAwareSizeCorrector.cs" />
+    <Compile Include="DemoBaseControl\Helpers\Converters.cs" />
+    <Compile Include="DemoBaseControl\Helpers\FeedbackHelper.cs" />
+    <Compile Include="DemoBaseControl\Helpers\LWThemeHelper.cs" />
+    <Compile Include="DemoBaseControl\Helpers\RibbonDynamicCategoryBehavior.cs" />
+    <Compile Include="DemoBaseControl\Helpers\ThemesRibbonGalleryBarItem.cs" />
+    <Compile Include="DemoBaseControl\Helpers\DXBindingHelper.cs" />
+    <Compile Include="DemoBaseControl\Helpers\TouchUICoerceBehavior.cs" />
+    <Compile Include="DemoBaseControl\Helpers\ThemesRibbonGalleryBarItemShowMoreButton.cs" />
+    <Compile Include="DemoCenterBase\AdaptiveContentControl.cs" />
+    <Compile Include="DemoCenter\DemoCenterFeatureDemos.cs" />
+    <Compile Include="DemoCenter\PlatformTitles.cs" />
+    <Compile Include="DemoCenter\PlatformViewModel.cs" />
+    <Compile Include="DemoChooser\Helpers\NetPipeServerHelper.cs" />
+    <Compile Include="DemoChooser\Helpers\RunOnceHelper.cs" />
+    <Compile Include="DemoChooser\Pages\CrossPlatformPageViewModel.cs" />
+    <Compile Include="DemoChooser\Pages\CrossPlatformPage.xaml.cs">
+      <DependentUpon>CrossPlatformPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DemoChooser\DemoChooserWindow.xaml.cs">
+      <DependentUpon>DemoChooserWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DemoChooser\DemoCarouselLinkFactory.cs" />
+    <Compile Include="DemoChooser\Pages\FrameworkPage.xaml.cs">
+      <DependentUpon>FrameworkPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DemoChooser\Pages\FrameworkPageViewModel.cs" />
+    <Compile Include="DemoChooser\Pages\ReportsFullPage.xaml.cs">
+      <DependentUpon>ReportsFullPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DemoLauncher\AssemblyLoading.xaml.cs">
+      <DependentUpon>AssemblyLoading.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DemoChooser\CrossPlatformDemoCarouselControl.cs" />
+    <Compile Include="DemoCenterBase\OpenSolutionMenuItemExtensions.cs" />
+    <Compile Include="DemoCenterBase\DemoRunner.cs" />
+    <Compile Include="DemosHelpers\FilterFieldsHelper.cs" />
+    <Compile Include="Dll\AssemblyResolver.cs" />
+    <Compile Include="Fonts\CustomFonts.cs" />
+    <Compile Include="DemoCenter\Helpers\RunNonElevated.cs" />
+    <Compile Include="Helpers\DemoThemeKeyExtension.cs" />
+    <Compile Include="Helpers\Errors.cs" />
+    <Compile Include="Helpers\SensitiveData.cs" />
+    <Compile Include="Helpers\SvgImageBehavior.cs" />
+    <Compile Include="DemoCenter\DemoCenterWindow.xaml.cs">
+      <DependentUpon>DemoCenterWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DemoCenter\Program.cs" />
+    <Compile Include="DemoCenterBase\ColumnScrollControl.cs" />
+    <Compile Include="DemoCenterBase\DemoCarouselControl.cs" />
+    <Compile Include="DemoChooser\Pages\ProductPageViewModel.cs" />
+    <Compile Include="DemoChooser\Pages\ProductPage.xaml.cs">
+      <DependentUpon>ProductPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DemoChooser\DemoChooserWindowViewModel.cs" />
+    <Compile Include="DemoChooser\Pages\PlatformPageViewModel.cs" />
+    <Compile Include="DemoChooser\Pages\PlatformPage.xaml.cs">
+      <DependentUpon>PlatformPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DemoCenterBase\DemoScreenFooterControl.cs" />
+    <Compile Include="DemoCenterBase\DemoWindow\Win\DemoCenterErrorMessage.cs" />
+    <Compile Include="DemoCenterBase\DumbBaseSvgImageSourceExtension.cs" />
+    <Compile Include="DemoChooser\FilterLineControl.cs" />
+    <Compile Include="DemoChooser\GroupedLinksControl\GroupedLinksControl.cs" />
+    <Compile Include="DemoChooser\GroupedLinksControl\GroupedLinksControlAlignedGroupsCalc.cs" />
+    <Compile Include="DemoChooser\GroupedLinksControl\GroupedLinksControlCalc.cs" />
+    <Compile Include="DemoChooser\GroupedLinksControl\GroupedLinksControlOneGroupPerColumnCalc.cs" />
+    <Compile Include="DemoChooser\GroupedLinksControl\GroupedLinksControlPanel.cs" />
+    <Compile Include="DemoChooser\GroupedLinksControl\GroupedLinksControlWrappedCalc.cs" />
+    <Compile Include="DemoChooser\Converters.cs" />
+    <Compile Include="DemoCenterBase\ImageButton.cs" />
+    <Compile Include="DemoCenterBase\MessageBoxHelper.cs" />
+    <Compile Include="DemoCenterBase\MouseTouchAdapter.cs" />
+    <Compile Include="DemoChooser\Program.cs" />
+    <Compile Include="DemoLauncher\LogFile.cs" />
+    <Compile Include="DemoLauncher\LogHelper.cs" />
+    <Compile Include="DemoLauncher\WpfDemoLoader.cs" />
+    <Compile Include="DemoModule\CodeFileAttribute.cs" />
+    <Compile Include="DemosHelpers\LogControl.cs" />
+    <Compile Include="DemosHelpers\PinnedDemoWindowBehavior.cs" />
+    <Compile Include="DemoBaseControl\DemoModuleOwner.cs" />
+    <Compile Include="DemoBaseControl\Helpers\AccordionSearchFocusBehavior.cs" />
+    <Compile Include="DemoBaseControl\Helpers\BarSplitButtonItemBehavior.cs" />
+    <Compile Include="DemosHelpers\ShowcaseBrowser\ShowcaseBrowserModule.cs" />
+    <Compile Include="DemosHelpers\ShowcaseBrowser\ShowcaseBrowserModuleCore.xaml.cs">
+      <DependentUpon>ShowcaseBrowserModuleCore.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DemoTesting\Helpers\ContainerSizeHelpers.cs" />
+    <Compile Include="DemosHelpers\AndConverter.cs" />
+    <Compile Include="DemoBaseControl\Helpers\DemoHelper.cs" />
+    <Compile Include="DemoBaseControl\Helpers\DemoTransferDecorator.cs" />
+    <Compile Include="Helpers\DemoJumpList.cs" />
+    <Compile Include="Helpers\Func\Observable.cs" />
+    <Compile Include="Helpers\Func\DispatcherTasks.cs" />
+    <Compile Include="Helpers\ExceptionHelper.cs" />
+    <Compile Include="DemoBaseControl\Helpers\LayoutPanel.cs" />
+    <Compile Include="Helpers\LinksHelper.cs" />
+    <Compile Include="Helpers\Logger.cs" />
+    <Compile Include="Helpers\TagsHelper.cs" />
+    <Compile Include="Helpers\ThemeSelector\Behaviors\BarItemThemeSelectorBehavior.cs" />
+    <Compile Include="Helpers\ThemeSelector\Behaviors\BarSplitItemThemeSelectorBehavior.cs" />
+    <Compile Include="Helpers\ThemeSelector\Behaviors\GalleryThemeSelectorBehavior.cs" />
+    <Compile Include="Helpers\ThemeSelector\Behaviors\RibbonGalleryItemThemeSelectorBehavior.cs" />
+    <Compile Include="Helpers\ThemeSelector\Behaviors\SelectorBehavior.cs" />
+    <Compile Include="Helpers\ThemeSelector\Behaviors\ThemeSelector.cs" />
+    <Compile Include="Helpers\ThemeSelector\Converter.cs" />
+    <Compile Include="Serialization\GeneratedXmlSerializers.cs" />
+    <EmbeddedResource Include="Serialization\GeneratedXmlSerializers.cs" />
+    <Compile Include="ThemeDesigner\PartsControl.cs" />
+    <Compile Include="DemoTesting\Helpers\RichTextBoxHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DemoBaseControl\Helpers\SidebarWindow.cs" />
+    <Compile Include="DemoBaseControl\Helpers\TopTextPanel.cs" />
+    <Compile Include="DemoBaseControl\Helpers\WindowTitleService.cs" />
+    <Compile Include="Meta\Completions.meta.designer.cs" />
+    <Compile Include="DemosHelpers\DispatchFocusBehavior.cs" />
+    <Compile Include="DemosHelpers\ExternalHyperlink.cs" />
+    <Compile Include="DemosHelpers\ParagraphContainer.cs" />
+    <Compile Include="DemosHelpers\ServerMode\FillDatabaseView.xaml.cs">
+      <DependentUpon>FillDatabaseView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DemosHelpers\ServerMode\GenerateDataView.xaml.cs">
+      <DependentUpon>GenerateDataView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DemosHelpers\ServerMode\SQLiteDataBaseGenerator.cs" />
+    <Compile Include="DemoBaseControl\DemoBaseControl.cs" />
+    <Compile Include="DemoBaseControl\Helpers\CodeViewControl\TextColorizer\CodeBlocks.cs" />
+    <Compile Include="ThemeDesigner\DataLoader.cs" />
+    <Compile Include="ThemeDesigner\DemoBaseControlData.cs" />
+    <Compile Include="ThemeDesigner\DemoModuleControl.cs" />
+    <Resource Include="DemosHelpers\DataClasses.vb" />
+    <Compile Include="DemoBaseControl\CodeTextDescription.cs" />
+    <Compile Include="DemoTesting\IDemoBaseTesting.cs" />
+    <Compile Include="DemoTesting\Assert.cs" />
+    <Compile Include="DemoTesting\BaseDemoTestingFixture.cs" />
+    <Compile Include="DemoTesting\CheckAllDemosFixture.cs" />
+    <Compile Include="DemoTesting\DemoTestingHelper.cs" />
+    <Compile Include="DemoTesting\Helpers.cs" />
+    <Compile Include="DemoTesting\InputHelper.cs" />
+    <Compile Include="DemoTesting\KeysStringParser.cs" />
+    <Compile Include="DemoTesting\TestImports.cs" />
+    <Compile Include="DemoTesting\TestServiceHelper.cs" />
+    <Compile Include="DemoTesting\WCFConnection.cs" />
+    <Compile Include="DemoModule\DemoModule.cs" />
+    <Compile Include="DemosHelpers\BindableRun.cs" />
+    <Compile Include="DemosHelpers\DataClasses.cs" />
+    <Compile Include="DemosHelpers\DemoExpander.cs" />
+    <Compile Include="DemosHelpers\ExportImage.cs" />
+    <Compile Include="DemosHelpers\ImageControl.cs" />
+    <Compile Include="DemosHelpers\SliderControl.xaml.cs">
+      <DependentUpon>SliderControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DemoTesting\WindowsTesterBase.cs" />
+    <Compile Include="DemoTesting\WindowTester.cs" />
+    <Compile Include="DemoBaseControl\Helpers\CodeViewControl\CodeViewControl.cs" />
+    <Compile Include="DemoBaseControl\Helpers\CodeViewControl\CodeViewer.cs" />
+    <Compile Include="DemoBaseControl\Helpers\CodeViewControl\CodeViewItem.cs" />
+    <Compile Include="DemoBaseControl\Helpers\CodeViewControl\CodeViewPresenter.cs" />
+    <Compile Include="DemoBaseControl\Helpers\CodeViewControl\RichTextPresenter.cs" />
+    <Compile Include="DemoBaseControl\Helpers\CodeViewControl\TextColorizer\CodeLanguage.cs" />
+    <Compile Include="DemoBaseControl\Helpers\CodeViewControl\TextColorizer\Parsers.cs" />
+    <Compile Include="DemoBaseControl\Helpers\CodeViewControl\TextColorizer\RichTextBlockHelper.cs" />
+    <Compile Include="Properties\AssemblyMarker.cs" />
+    <Compile Include="Properties\XmlNamespaceConstants.cs" />
+    <Page Include="DemoCenter\DemoCenterWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DemoChooser\Pages\CrossPlatformPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DemoChooser\Pages\FrameworkPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DemoChooser\Pages\ProductPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DemoChooser\Pages\PlatformPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DemoChooser\DemoChooserWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DemoChooser\Pages\ReportsFullPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DemoChooser\Pages\DirectXSwitchCheckEdit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DemoLauncher\AssemblyLoading.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DemoCenterBase\DemoWindow\DemoScrollBar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DemoCenterBase\DemoWindow\Win\DemoCenterErrorMessage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DemoCenterBase\Themes\ColumnScrollControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DemoChooser\Themes\CrossPlatformDemoCarouselControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DemoCenterBase\Themes\DemoCarouselControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DemoCenterBase\Themes\DemoScreenFooterControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DemoChooser\Themes\FilterLineControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DemoChooser\Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DemoChooser\Themes\GroupedLinksControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DemoCenterBase\Themes\ImageButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DemoCenterBase\Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DemosHelpers\ServerMode\FillDatabaseView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DemosHelpers\ServerMode\GenerateDataView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DemoBaseControl\Themes\DemoBaseControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DemosHelpers\ShowcaseBrowser\ShowcaseBrowserModuleCore.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DemosHelpers\SliderControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DemosHelpers\Themes\Expander.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DemosHelpers\Themes\ExportImage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DemosHelpers\Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DemosHelpers\Themes\ImageControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DemosHelpers\Themes\LogControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DemoBaseControl\Helpers\CodeViewControl\Themes\CodeViewControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Helpers\ThemeSelector\Themes\Gallery.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Resource Include="DemoChooser\Images\ReportsAwards.png" />
+    <Resource Include="DemosHelpers\Images\Person_Miss.svg" />
+    <Resource Include="DemosHelpers\Images\Person_Mr.svg" />
+    <Resource Include="DemosHelpers\Images\Person_Mrs.svg" />
+    <Resource Include="DemosHelpers\Images\Person_Ms.svg" />
+    <Resource Include="DemoCenter\Images\Platforms\Blazor.svg" />
+    <Resource Include="DemoCenter\Images\Platforms\XAFSecurity.svg" />
+    <EmbeddedResource Include="Dll\Mono.Cecil.dll" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Resource Include="Data\Cars.xml" />
+    <Resource Include="Data\Employees.xml" />
+    <Resource Include="Data\EmployeesWithPhoto.xml" />
+    <Resource Include="Data\NWindOrdToNewEmployee.xml" />
+    <Resource Include="DemoChooser\Icons\Asp.ico" />
+    <Resource Include="DemoChooser\Icons\Bootstrap.ico" />
+    <Resource Include="DemoChooser\Icons\Blazor.ico" />
+    <Resource Include="DemoChooser\Icons\Dashboards.ico" />
+    <Resource Include="DemoChooser\Icons\DevExpress.ico" />
+    <Resource Include="DemoChooser\Icons\Docs.ico" />
+    <Resource Include="DemoChooser\Icons\Frameworks.ico" />
+    <Resource Include="DemoChooser\Icons\Mvc.ico" />
+    <Resource Include="DemoChooser\Icons\Reporting.ico" />
+    <Resource Include="DemoChooser\Icons\Universal.ico" />
+    <Resource Include="DemoChooser\Icons\Win.ico" />
+    <Resource Include="DemoChooser\demoicon.ico" />
+    <Resource Include="DemoChooser\Images\BackButtonWhite.svg" />
+    <Resource Include="DemoCenterBase\Images\Footer\BuyNow.svg" />
+    <Resource Include="DemoCenterBase\Images\Footer\BuyNowHover.svg" />
+    <Resource Include="DemoCenterBase\Images\Footer\GetStarted.svg" />
+    <Resource Include="DemoCenterBase\Images\Footer\GetStartedHover.svg" />
+    <Resource Include="DemoCenterBase\Images\Footer\Support.svg" />
+    <Resource Include="DemoCenterBase\Images\Footer\SupportHover.svg" />
+    <Resource Include="DemoChooser\Images\Magnifier.svg" />
+    <Resource Include="DemoChooser\Icons\Wpf.ico" />
+    <Resource Include="DemoCenter\demoicon.ico" />
+    <Resource Include="DemoBaseControl\Images\Close.svg" />
+    <Resource Include="DemoBaseControl\Images\No.svg" />
+    <Resource Include="DemoBaseControl\Images\Yes.svg" />
+    <Resource Include="DemoCenter\Images\Platforms\Asp.svg" />
+    <Resource Include="DemoCenter\Images\Platforms\Bootstrap.svg" />
+    <Resource Include="DemoCenter\Images\Platforms\AspNetCore.svg" />
+    <Resource Include="DemoCenter\Images\Platforms\DevExtreme.svg" />
+    <Resource Include="DemoCenter\Images\Platforms\Docs.svg" />
+    <Resource Include="DemoCenter\Images\Platforms\Frameworks.svg" />
+    <Resource Include="DemoCenter\Images\Platforms\Mvc.svg" />
+    <Resource Include="DemoCenter\Images\Platforms\Reporting.svg" />
+    <Resource Include="DemoCenter\Images\Platforms\Win.svg" />
+    <Resource Include="DemoCenter\Images\Platforms\Wpf.svg" />
+    <Resource Include="DemoCenter\Images\Platforms\Dashboards.svg" />
+    <Resource Include="DemoBaseControl\Images\About.svg" />
+    <Resource Include="DemoBaseControl\Images\Navigation.svg" />
+    <Resource Include="DemoBaseControl\Images\Next.svg" />
+    <Resource Include="DemoBaseControl\Images\Previous.svg" />
+    <Resource Include="DemoBaseControl\Images\FullWindowView.svg" />
+    <Resource Include="DemoBaseControl\Images\GetStarted.svg" />
+    <Resource Include="DemoBaseControl\Images\GetSupport.svg" />
+    <Resource Include="DemoBaseControl\Images\BuyNow.svg" />
+    <Resource Include="DemoBaseControl\Images\CopyLink.svg" />
+    <Resource Include="DemoBaseControl\Images\ShowCode.svg" />
+    <Resource Include="DemoBaseControl\Images\OpenSolution.svg" />
+    <Resource Include="DemoChooser\Images\Next.svg" />
+    <Resource Include="DemoChooser\Images\Prev.svg" />
+    <Resource Include="DemoLauncher\Images\DevExpress.svg" />
+    <Resource Include="DemoChooser\Images\FullListLayout.svg" />
+    <Resource Include="DemoChooser\Images\ProductsLayout.svg" />
+    <Resource Include="DemoBaseControl\Images\About_20x20.svg" />
+    <Resource Include="DemoBaseControl\Images\BuyNow_20x20.svg" />
+    <Resource Include="DemoBaseControl\Images\CopyLink_20x20.svg" />
+    <Resource Include="DemoBaseControl\Images\GetStarted_20x20.svg" />
+    <Resource Include="DemoBaseControl\Images\GetSupport_20x20.svg" />
+    <Resource Include="DemoBaseControl\Images\Navigation_20x20.svg" />
+    <Resource Include="DemoBaseControl\Images\Next_20x20.svg" />
+    <Resource Include="DemoBaseControl\Images\OpenSolution_20x20.svg" />
+    <Resource Include="DemoBaseControl\Images\Previous_20x20.svg" />
+    <Resource Include="DemoBaseControl\Images\ShowCode_20x20.svg" />
+    <Resource Include="DemoBaseControl\Images\FullWindowView_20x20.svg" />
+    <Resource Include="DemoBaseControl\Images\Themes_20x20.svg" />
+    <Resource Include="DemoBaseControl\Images\csharp.svg" />
+    <Resource Include="DemoBaseControl\Images\visualbasic.svg" />
+    <Resource Include="DemoCenter\Images\LogoWhite.svg" />
+    <Resource Include="DemoCenter\Images\Awards.png" />
+    <Resource Include="DemoCenterBase\Images\Close.svg" />
+    <Resource Include="DemoChooser\Images\Maximize.svg" />
+    <Resource Include="DemoChooser\Images\Minimize.svg" />
+    <Resource Include="DemoChooser\Images\Restore.svg" />
+    <Resource Include="DemoLauncher\Images\Logo.svg" />
+    <Content Include="DevExpress.Build.XamlResourceProcessing.targets" />
+    <Resource Include="Fonts\OpenSansCondensed-Bold.ttf" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <Resource Include="DemosHelpers\Images\Person_Female.png" />
+    <Resource Include="DemosHelpers\Images\Person_Male.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="DevExpress.Build.XamlResourceProcessing.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <PackageReference Include="System.ServiceModel.Http" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" />
+  </ItemGroup>
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent" Condition="Exists('$(TargetDir)\Preprocess\MetaSharp\MetaSharp.Console.exe')">
+    <Exec Command="del &quot;$(ProjectDir)Meta\*.designer.cs&quot;&#xD;&#xA;$(TargetDir)\Preprocess\MetaSharp\MetaSharp.Console.exe -p &quot;$(ProjectDir)Meta&quot; -t &quot;$(TargetDir)&quot;" />
+  </Target>
+</Project>

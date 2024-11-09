@@ -1,0 +1,15 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+                    xmlns:dxdasht="http://schemas.devexpress.com/winfx/2008/xaml/dashboard/themekeys"
+                    xmlns:dxt="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.DXStyle.v24.1;component/DevExpress.Xpf.Dashboard/Generic/DateFilterItem.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+    <SolidColorBrush x:Key="{dxdasht:DateFilterItemThemeKey ResourceKey=PopupBackground}">#FFDEE0E6</SolidColorBrush>
+
+    <SolidColorBrush x:Key="{dxdasht:DateFilterItemThemeKey ResourceKey=PopupForeground}">#FF201F35</SolidColorBrush>
+
+</ResourceDictionary>

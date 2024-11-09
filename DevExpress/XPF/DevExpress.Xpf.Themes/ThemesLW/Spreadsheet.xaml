@@ -1,0 +1,51 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+    xmlns:dxi="http://schemas.devexpress.com/winfx/2008/xaml/core/internal"
+    xmlns:dxsps="http://schemas.devexpress.com/winfx/2008/xaml/spreadsheet"
+    xmlns:dxspsi="http://schemas.devexpress.com/winfx/2008/xaml/spreadsheet/internal">
+
+    <ResourceDictionary.MergedDictionaries>
+        <dxi:ThemeResourceDictionary Path="Spreadsheet\Spreadsheet.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Spreadsheet.Internal.FormatBorderControl'}" BasedOn="{StaticResource FormatBorderControl.DefaultStyleBase}" TargetType="{x:Type dxspsi:FormatBorderControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Spreadsheet.Internal.PageMarginsPreviewControl'}" BasedOn="{StaticResource PageMarginsPreviewControl.DefaultStyleBase}" TargetType="{x:Type dxspsi:PageMarginsPreviewControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Spreadsheet.Internal.HeaderFooterEditControl'}" BasedOn="{StaticResource HeaderFooterEditControl.DefaultStyleBase}" TargetType="{x:Type dxspsi:HeaderFooterEditControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Spreadsheet.Internal.HeaderFooterPreviewControl'}" BasedOn="{StaticResource HeaderFooterPreviewControl.DefaultStyleBase}" TargetType="{x:Type dxspsi:HeaderFooterPreviewControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Spreadsheet.Internal.PageSetupPrintButtonsControl'}" BasedOn="{StaticResource PageSetupPrintButtonsControl.DefaultStyleBase}" TargetType="{x:Type dxspsi:PageSetupPrintButtonsControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Spreadsheet.SpreadsheetFormulaBarControl'}" BasedOn="{StaticResource SpreadsheetFormulaBarControl.DefaultStyleBase}" TargetType="{x:Type dxsps:SpreadsheetFormulaBarControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Spreadsheet.Internal.CellControl'}" BasedOn="{StaticResource CellControl.DefaultStyleBase}" TargetType="{x:Type dxspsi:CellControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Spreadsheet.Internal.VisualFeedbackControl'}" BasedOn="{StaticResource VisualFeedbackControl.DefaultStyleBase}" TargetType="{x:Type dxspsi:VisualFeedbackControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Spreadsheet.Internal.WorksheetBackgroundControl'}" BasedOn="{StaticResource WorksheetBackgroundControl.DefaultStyleBase}" TargetType="{x:Type dxspsi:WorksheetBackgroundControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Spreadsheet.Internal.ChartsheetBackgroundControl'}" BasedOn="{StaticResource ChartsheetBackgroundControl.DefaultStyleBase}" TargetType="{x:Type dxspsi:ChartsheetBackgroundControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Spreadsheet.Internal.WorksheetLineControl'}" BasedOn="{StaticResource WorksheetLineControl.DefaultStyleBase}" TargetType="{x:Type dxspsi:WorksheetLineControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Spreadsheet.Internal.CellPresenter'}" BasedOn="{StaticResource CellPresenter.DefaultStyleBase}" TargetType="{x:Type dxspsi:CellPresenter}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Spreadsheet.Internal.TabSelectorItem'}" BasedOn="{StaticResource TabSelectorItem.DefaultStyleBase}" TargetType="{x:Type dxspsi:TabSelectorItem}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Spreadsheet.Internal.WorksheetHeadersControl'}" BasedOn="{StaticResource WorksheetHeadersControl.DefaultStyleBase}" TargetType="{x:Type dxspsi:WorksheetHeadersControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Spreadsheet.Internal.WorksheetGroupControl'}" BasedOn="{StaticResource WorksheetGroupControl.DefaultStyleBase}" TargetType="{x:Type dxspsi:WorksheetGroupControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Spreadsheet.Internal.SpreadsheetTabSelector'}" BasedOn="{StaticResource SpreadsheetTabSelector.DefaultStyleBase}" TargetType="{x:Type dxspsi:SpreadsheetTabSelector}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Spreadsheet.Internal.WorksheetControl'}" BasedOn="{StaticResource WorksheetControl.DefaultStyleBase}" TargetType="{x:Type dxspsi:WorksheetControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Spreadsheet.Internal.SpreadsheetViewControl'}" BasedOn="{StaticResource SpreadsheetViewControl.DefaultStyleBase}" TargetType="{x:Type dxspsi:SpreadsheetViewControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Spreadsheet.SpreadsheetControl'}" BasedOn="{StaticResource SpreadsheetControl.DefaultStyleBase}" TargetType="{x:Type dxsps:SpreadsheetControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Spreadsheet.SpreadsheetDefaultBarItemDataTemplates'}" BasedOn="{StaticResource SpreadsheetDefaultBarItemDataTemplates.DefaultStyleBase}" TargetType="{x:Type dxsps:SpreadsheetDefaultBarItemDataTemplates}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Spreadsheet.Internal.WorksheetIndicatorControl'}" BasedOn="{StaticResource WorksheetIndicatorControl.DefaultStyleBase}" TargetType="{x:Type dxspsi:WorksheetIndicatorControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Spreadsheet.Internal.WorksheetCommentPanel'}" BasedOn="{StaticResource WorksheetCommentPanel.DefaultStyleBase}" TargetType="{x:Type dxspsi:WorksheetCommentPanel}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Spreadsheet.Internal.CommentItem'}" BasedOn="{StaticResource CommentItem.DefaultStyleBase}" TargetType="{x:Type dxspsi:CommentItem}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Spreadsheet.Internal.XpfCommentInplaceEditor'}" BasedOn="{StaticResource XpfCommentInplaceEditor.DefaultStyleBase}" TargetType="{x:Type dxspsi:XpfCommentInplaceEditor}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Spreadsheet.Internal.WorksheetDataValidationPanel'}" BasedOn="{StaticResource WorksheetDataValidationPanel.DefaultStyleBase}" TargetType="{x:Type dxspsi:WorksheetDataValidationPanel}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Spreadsheet.Internal.ReferenceEdit'}" BasedOn="{StaticResource ReferenceEdit.DefaultStyleBase}" TargetType="{x:Type dxspsi:ReferenceEdit}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Spreadsheet.UI.SpreadsheetChangeNumberFormatComboBoxEdit'}" BasedOn="{StaticResource SpreadsheetChangeNumberFormatComboBoxEdit.DefaultStyleBase}" TargetType="{x:Type dxsps:SpreadsheetChangeNumberFormatComboBoxEdit}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Spreadsheet.Internal.SpreadsheetPopupColorEdit'}" BasedOn="{StaticResource SpreadsheetPopupColorEdit.DefaultStyleBase}" TargetType="{x:Type dxspsi:SpreadsheetPopupColorEdit}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Spreadsheet.UI.CellStyleGalleryBarItemLinkControl'}" BasedOn="{StaticResource CellStyleGalleryBarItemLinkControl.DefaultStyleBase}" TargetType="{x:Type dxsps:CellStyleGalleryBarItemLinkControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Spreadsheet.UI.TableStyleGalleryBarItemLinkControl'}" BasedOn="{StaticResource TableStyleGalleryBarItemLinkControl.DefaultStyleBase}" TargetType="{x:Type dxsps:TableStyleGalleryBarItemLinkControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Spreadsheet.UI.ChartLayoutGalleryBarItemLinkControl'}" BasedOn="{StaticResource ChartLayoutGalleryBarItemLinkControl.DefaultStyleBase}" TargetType="{x:Type dxsps:ChartLayoutGalleryBarItemLinkControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Spreadsheet.UI.ChartStyleGalleryBarItemLinkControl'}" BasedOn="{StaticResource ChartStyleGalleryBarItemLinkControl.DefaultStyleBase}" TargetType="{x:Type dxsps:ChartStyleGalleryBarItemLinkControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Spreadsheet.Internal.PlaceholderPanel'}" BasedOn="{StaticResource PlaceholderPanel.DefaultStyleBase}" TargetType="{x:Type dxspsi:PlaceholderPanel}" />
+
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Spreadsheet.Internal.FormulaBarEditor'}" BasedOn="{StaticResource FormulaBarEditor.DefaultStyle}" TargetType="{x:Type dxspsi:FormulaBarEditor}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Spreadsheet.Internal.XpfCellInplaceEditor'}" BasedOn="{StaticResource XpfCellInplaceEditor.DefaultStyle}" TargetType="{x:Type dxspsi:XpfCellInplaceEditor}" />
+
+</ResourceDictionary>

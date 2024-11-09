@@ -1,0 +1,715 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:cs="colorscheme_ignorable_uri"
+    xmlns:dxcoi="http://schemas.devexpress.com/winfx/2008/xaml/controls/internal"
+    xmlns:dxcot="http://schemas.devexpress.com/winfx/2008/xaml/controls/themekeys"
+    xmlns:dxt="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys"
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+    xmlns:dxwuit="http://schemas.devexpress.com/winfx/2008/xaml/windowsui/themekeys"
+    xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
+    xmlns:dxnavi="clr-namespace:DevExpress.Xpf.Navigation.Internal;assembly=DevExpress.Xpf.Controls.v24.1"
+    xmlns:dxwuii="http://schemas.devexpress.com/winfx/2008/xaml/windowsui/internal"
+    xmlns:dxwui="http://schemas.devexpress.com/winfx/2008/xaml/windowsui"
+    xmlns:dxi="http://schemas.devexpress.com/winfx/2008/xaml/core/internal"
+    xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
+    xmlns:dxmvvmi="clr-namespace:DevExpress.Mvvm.UI.Interactivity;assembly=DevExpress.Xpf.Core.v24.1"
+    xmlns:dxnav="http://schemas.devexpress.com/winfx/2008/xaml/navigation"
+    xmlns:dxcop="clr-namespace:DevExpress.Xpf.Controls.Primitives;assembly=DevExpress.Xpf.Controls.v24.1"
+    mc:Ignorable="cs">
+
+    <ResourceDictionary.MergedDictionaries>
+        <dxi:ThemeResourceDictionary Path="Controls/Generic.xaml" />
+        <!--<dxi:ThemeResourceDictionary Path="Controls/_{ThemeCategory}.xaml" />-->
+    </ResourceDictionary.MergedDictionaries>
+
+
+    <dx:BoolToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+    <dx:BoolToVisibilityInverseConverter x:Key="boolToVisibilityInverseConverter" />
+    <dxwuii:OrientationInvertConverter x:Key="orientationInvertConverter" />
+    <dxwuii:DoubleToThicknessConverter x:Key="doubleToThicknessConverter" />
+
+
+    <!--#region c:\Work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Controls\WindowsUI\Base\BreadcrumbControl.xaml-->
+
+
+
+
+
+
+
+
+
+
+    <Style x:Key="{dxcot:LWKey BreadcrumbControl.ItemsControlStyle}" BasedOn="{StaticResource {dxcot:LWKey BreadcrumbControl.ItemsControlStyleBase}}" TargetType="{x:Type dxcoi:BreadcrumbItemsControl}">
+        <Setter Property="Margin" Value="1" />
+    </Style>
+
+
+
+
+
+
+
+    <!-- BreadcrumbSelectedItemThemeKeyExtension -->
+
+    <!-- BreadcrumbPopupItemThemeKeys -->
+    <!--#endregion c:\Work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Controls\WindowsUI\Base\BreadcrumbControl.xaml-->
+
+    <!--#region c:\Work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Controls\WindowsUI\Base\UICustom.xaml-->
+
+
+    <!--#endregion c:\Work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Controls\WindowsUI\Base\UICustom.xaml-->
+
+    <!--#region c:\Work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Controls\WindowsUI\Base\UIPreset.xaml-->
+    <sys:Double x:Key="{dxcot:LWKey AppBarElements.AppBarButtonDefaultWidth}">100</sys:Double>
+    <sys:Double x:Key="{dxcot:LWKey MenuFlyoutElements.FontSize}">12</sys:Double>
+    <Thickness x:Key="{dxcot:LWKey MenuFlyoutElements.SelectionPadding}">1</Thickness>
+    <Thickness x:Key="{dxcot:LWKey MenuFlyoutElements.Padding}">12,8,12,8</Thickness>
+    <Thickness x:Key="{dxcot:LWKey PageViewElements.HeaderMargin}">16,12</Thickness>
+    <Thickness x:Key="{dxcot:LWKey TileNavPaneElements.TileNavButtonDropDownButtonMargin}">10</Thickness>
+
+    <sys:Double x:Key="{dxcot:LWKey HamburgerMenuElements.SplitViewOpenPaneWidth}">320</sys:Double>
+    <sys:Double x:Key="{dxcot:LWKey HamburgerMenuElements.SplitViewCompactPaneWidth}">48</sys:Double>
+    <sys:Double x:Key="{dxcot:LWKey HamburgerMenuElements.DefaultCompactWidth}">44</sys:Double>
+    <sys:Double x:Key="{dxcot:LWKey HamburgerMenuElements.DefaultHeaderHeight}">44</sys:Double>
+    <sys:Double x:Key="{dxcot:LWKey HamburgerMenuElements.DefaultItemHeight}">44</sys:Double>
+    <sys:Double x:Key="{dxcot:LWKey HamburgerMenuElements.HeaderFontSize}">16</sys:Double>
+    <sys:Double x:Key="{dxcot:LWKey HamburgerMenuElements.ItemSelectionIndicatorThickness}">3</sys:Double>
+    <sys:Double x:Key="{dxcot:LWKey HamburgerMenuElements.FlyoutItemSelectionIndicatorThickness}">3</sys:Double>
+    <Thickness x:Key="{dxcot:LWKey HamburgerMenuElements.ItemSeparatorPadding}">4,2</Thickness>
+    <Thickness x:Key="{dxcot:LWKey HamburgerMenuElements.HeaderPadding}">16,0,0,0</Thickness>
+    <Thickness x:Key="{dxcot:LWKey HamburgerMenuElements.HeaderWithIconPadding}">4,0,0,0</Thickness>
+    <Thickness x:Key="{dxcot:LWKey HamburgerMenuElements.NavigationItemPadding}">0,10,12,10</Thickness>
+    <Thickness x:Key="{dxcot:LWKey HamburgerMenuElements.NavigationItemContentPadding}">4,0,0,0</Thickness>
+    <Thickness x:Key="{dxcot:LWKey HamburgerMenuElements.SubMenuFlyoutItemPadding}">16,10,12,10</Thickness>
+    <Thickness x:Key="{dxcot:LWKey HamburgerMenuElements.BottomBarItemPadding}">0,6</Thickness>
+    <Thickness x:Key="{dxcot:LWKey HamburgerMenuElements.HyperlinkItemPadding}">12</Thickness>
+    <Thickness x:Key="{dxcot:LWKey HamburgerMenuElements.ToggleStateButtonPadding}">6</Thickness>
+    <Thickness x:Key="{dxcot:LWKey HamburgerMenuElements.FlyoutBackButtonPadding}">16</Thickness>
+
+
+
+
+
+
+
+
+    <!-- Converters -->
+
+    <!-- AppBar -->
+
+    <!-- Flyout -->
+
+    <!-- PageView -->
+
+    <!-- TileNavPane -->
+
+    <!-- TouchNavigator -->
+
+    <dxnavi:SizeEx x:Key="{dxcot:LWKey NavigationBarElements.CustomizationFormFloatSize}" Height="{dx:LWDouble '275, Win11=310'}" Width="{dx:LWDouble '325, Win11=365'}" />
+
+    <!-- Hamburger -->
+    <!--#endregion c:\Work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Controls\WindowsUI\Base\UIPreset.xaml-->
+
+    <!--#region c:\Work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Controls\WindowsUI\Base\UICore.xaml-->
+
+
+
+
+
+
+
+
+    <!-- AppBar -->
+
+    <!-- CommandButton -->
+
+    <!-- Flyout -->
+
+    <!-- MessageBox -->
+
+    <!-- PageView -->
+
+    <!-- TileNavPane -->
+
+    <!-- TouchNavigator -->
+
+    <!-- Hamburger -->
+    <!--#endregion c:\Work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Controls\WindowsUI\Base\UICore.xaml-->
+
+    <!--#region c:\Work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Controls\WindowsUI\Base\HamburgerMenu.xaml-->
+    <ControlTemplate x:Key="{dxcot:LWKey HamburgerMenuElements.MenuToggleStateButtonTemplate}" TargetType="{x:Type dxwui:HamburgerMenuToggleStateButton}">
+        <Grid>
+            <dx:DXBorder
+                x:Name="border"
+                Background="{TemplateBinding Background}"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}"
+                Padding="{TemplateBinding Padding}"
+                SnapsToDevicePixels="True" />
+            <dx:DXBorder BorderThickness="{TemplateBinding BorderThickness}" Padding="{TemplateBinding Padding}">
+                <Grid>
+                    <ContentPresenter x:Name="contentPresenter" Visibility="Collapsed" />
+                    <Path
+                        Fill="{TemplateBinding Foreground}"
+                        HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                        Stretch="Uniform"
+                        Style="{StaticResource UIShape.Menu}"
+                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                </Grid>
+            </dx:DXBorder>
+        </Grid>
+        <ControlTemplate.Triggers>
+            <DataTrigger Binding="{Binding Path=(dxwui:HamburgerMenu.TemplateSettings).ShowRevealHighlightEffect, RelativeSource={RelativeSource Self}}" Value="True">
+                <Setter Property="dxwui:RevealHighlightOptions.Mode" TargetName="border" Value="BackgroundAndBorder" />
+            </DataTrigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="{dxcot:LWKey HamburgerMenuElements.SubMenuPaneBackButtonTemplate}" TargetType="{x:Type dxwuii:HamburgerSubMenuPaneBackButton}">
+        <Grid>
+            <dx:DXBorder
+                x:Name="border"
+                Background="{TemplateBinding Background}"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}"
+                Padding="{TemplateBinding Padding}"
+                SnapsToDevicePixels="True" />
+            <dx:DXBorder BorderThickness="{TemplateBinding BorderThickness}" Padding="{TemplateBinding Padding}" SnapsToDevicePixels="True">
+                <Grid>
+                    <ContentPresenter x:Name="contentPresenter" Visibility="Collapsed" />
+                    <Path
+                        Fill="{TemplateBinding Foreground}"
+                        HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                        Stretch="Uniform"
+                        Style="{StaticResource UIShape.MenuBack}"
+                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                </Grid>
+            </dx:DXBorder>
+        </Grid>
+        <ControlTemplate.Triggers>
+            <DataTrigger Binding="{Binding Path=(dxwui:HamburgerMenu.TemplateSettings).ShowRevealHighlightEffect, RelativeSource={RelativeSource Self}}" Value="True">
+                <Setter Property="dxwui:RevealHighlightOptions.Mode" TargetName="border" Value="BackgroundAndBorder" />
+            </DataTrigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+    <!--#endregion c:\Work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Controls\WindowsUI\Base\HamburgerMenu.xaml-->
+
+    <!--#region c:\Work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Controls\Wizard\Base\UICustom.xaml-->
+    <!--#endregion c:\Work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Controls\Wizard\Base\UICustom.xaml-->
+
+    <!--#region c:\Work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Controls\Wizard\Base\UIPreset.xaml-->
+    <!-- General -->
+    <!--#endregion c:\Work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Controls\Wizard\Base\UIPreset.xaml-->
+
+    <!--#region c:\Work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Controls\Wizard\Base\UICore.xaml-->
+
+
+
+
+
+
+
+
+    <!-- General -->
+    <!--#endregion c:\Work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Controls\Wizard\Base\UICore.xaml-->
+
+    <!--#region c:\Work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Controls\WindowsUI\Base\FadingButton.xaml-->
+    <!-- General -->
+
+
+    <!--#endregion c:\Work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Controls\WindowsUI\Base\FadingButton.xaml-->
+
+    <!--#region c:\Work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Controls\WindowsUI\Base\FlipView.xaml-->
+    <!-- General -->
+
+    <ControlTemplate x:Key="{dxcot:LWKey WindowsUIElements.FlipViewTemplate}" TargetType="dxwui:FlipView">
+        <Grid x:Name="Root">
+            <dx:DXBorder
+                Background="{TemplateBinding Background}"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}"
+                Margin="{TemplateBinding Padding}">
+                <Grid>
+                    <ScrollViewer
+                        x:Name="ScrollingHost"
+                        dx:ScrollBarExtensions.AllowMouseScrolling="False"
+                        Focusable="False"
+                        HorizontalScrollBarVisibility="Disabled"
+                        IsTabStop="False"
+                        Padding="{TemplateBinding Padding}"
+                        VerticalScrollBarVisibility="Disabled">
+                        <ItemsPresenter />
+                    </ScrollViewer>
+                    <dxwuii:FadingButton
+                        x:Name="PreviousButtonHorizontal"
+                        Height="40"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                        Width="70" />
+                    <dxwuii:FadingButton
+                        x:Name="NextButtonHorizontal"
+                        Height="40"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Center"
+                        Width="70" />
+                    <dxwuii:FadingButton
+                        x:Name="PreviousButtonVertical"
+                        Height="40"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Top"
+                        Width="70" />
+                    <dxwuii:FadingButton
+                        x:Name="NextButtonVertical"
+                        Height="40"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Bottom"
+                        Width="70" />
+                </Grid>
+            </dx:DXBorder>
+            <Rectangle
+                x:Name="FocusVisualWhite"
+                IsHitTestVisible="False"
+                Opacity="0"
+                Stroke="{dx:LWBrush 'Brush.Backstage.Foreground, Office2019Black=Brush.Foreground, Win11=Brush.Foreground.Alt'}"
+                StrokeDashArray="1,1"
+                StrokeDashOffset="1.5"
+                StrokeEndLineCap="Square" />
+            <Rectangle
+                x:Name="FocusVisualBlack"
+                IsHitTestVisible="False"
+                Opacity="0"
+                Stroke="{dx:LWBrush 'Brush.Foreground, Win11=Brush.Foreground.Primary'}"
+                StrokeDashArray="1,1"
+                StrokeDashOffset="0.5"
+                StrokeEndLineCap="Square" />
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="FocusStates">
+                    <VisualState x:Name="Focused">
+                        <Storyboard>
+                            <DoubleAnimation Duration="0" Storyboard.TargetName="FocusVisualWhite" Storyboard.TargetProperty="Opacity" To="1" />
+                            <DoubleAnimation Duration="0" Storyboard.TargetName="FocusVisualBlack" Storyboard.TargetProperty="Opacity" To="1" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Unfocused" />
+                    <VisualState x:Name="PointerFocused" />
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </Grid>
+    </ControlTemplate>
+
+    <!-- Item -->
+
+    <ControlTemplate x:Key="{dxcot:LWKey WindowsUIElements.FlipViewItemTemplate}" TargetType="dxwui:FlipViewItem">
+        <Grid x:Name="Root" Background="{TemplateBinding Background}">
+            <ContentPresenter />
+        </Grid>
+    </ControlTemplate>
+    <!--#endregion c:\Work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Controls\WindowsUI\Base\FlipView.xaml-->
+
+    <!--#region c:\Work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Controls\WindowsUI\Base\PageView.xaml-->
+    <!-- General -->
+
+    <ItemsPanelTemplate x:Key="{dxcot:LWKey PageViewElements.ItemsPanelHorizontal}">
+        <dxwuii:PageViewPanel ItemSpacing="1" Orientation="Horizontal" />
+    </ItemsPanelTemplate>
+
+    <ItemsPanelTemplate x:Key="{dxcot:LWKey PageViewElements.ItemsPanelVertical}">
+        <dxwuii:PageViewPanel ItemSpacing="1" Orientation="Vertical" />
+    </ItemsPanelTemplate>
+
+    <!-- Item -->
+
+
+    <!--#endregion c:\Work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Controls\WindowsUI\Base\PageView.xaml-->
+
+    <!--#region c:\Work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Controls\WindowsUI\Base\SlideView.xaml-->
+    <!-- General -->
+
+    <DataTemplate x:Key="{dxcot:LWKey SlideViewElements.InteractiveHeader}">
+        <Path Fill="{dx:LWBrush 'Brush.Foreground, Win11=Brush.Foreground.Primary'}" Style="{StaticResource UIShape.Right}" />
+    </DataTemplate>
+
+    <!-- Item -->
+
+    <ControlTemplate x:Key="{dxcot:LWKey SlideViewElements.ItemTemplate}" TargetType="dxwui:SlideViewItem">
+        <dx:DXBorder Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+            <Grid Margin="{TemplateBinding Padding}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <dx:DXBorder x:Name="PART_HeaderPlaceHolder" />
+                <dxwuii:SlideViewItemHeader
+                    x:Name="PART_Header"
+                    Grid.Row="1"
+                    Content="{TemplateBinding Header}"
+                    ContentTemplate="{TemplateBinding HeaderTemplate}"
+                    ContentTemplateSelector="{TemplateBinding HeaderTemplateSelector}"
+                    InteractiveHeaderTemplate="{TemplateBinding InteractiveHeaderTemplate}"
+                    IsHeaderInteractive="{TemplateBinding IsHeaderInteractive}" />
+                <ContentPresenter Grid.Row="2" />
+            </Grid>
+        </dx:DXBorder>
+    </ControlTemplate>
+
+    <!-- Header -->
+
+    <ControlTemplate x:Key="{dxcot:LWKey SlideViewElements.ItemHeaderTemplate}" TargetType="dxwuii:SlideViewItemHeader">
+        <dxwuii:SlideViewHeaderPanel x:Name="PART_HeaderPanel" ClipToBounds="True">
+            <Grid x:Name="Root" Margin="-3,0,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <dx:DXBorder
+                    x:Name="IsDefault"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Background="Transparent" />
+                <ContentControl
+                    x:Name="content"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="1"
+                    Content="{TemplateBinding Content}"
+                    ContentTemplate="{TemplateBinding ContentTemplate}"
+                    Margin="4,0,0,2" />
+                <ContentPresenter
+                    x:Name="interactiveContent"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="1"
+                    ContentTemplate="{TemplateBinding InteractiveHeaderTemplate}"
+                    Margin="4,0,4,0"
+                    Opacity="0" />
+            </Grid>
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal" />
+                    <VisualState x:Name="MouseOver">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.HoverBackground, Win11=Color.ListItem.HoverBackground'}" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Pressed">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.SelectionBackground, Win11=Color.ListItem.SelectionBackground'}" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Disabled">
+                        <Storyboard>
+                            <DoubleAnimation Duration="0" Storyboard.TargetName="PART_HeaderPanel" Storyboard.TargetProperty="Opacity" To="0.38" />
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+                <VisualStateGroup x:Name="InteractiveGroup">
+                    <VisualState x:Name="Interactive">
+                        <Storyboard>
+                            <DoubleAnimation Duration="0" Storyboard.TargetName="interactiveContent" Storyboard.TargetProperty="Opacity" To="1" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Noninteractive" />
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </dxwuii:SlideViewHeaderPanel>
+    </ControlTemplate>
+    <!--#endregion c:\Work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Controls\WindowsUI\Base\SlideView.xaml-->
+
+    <!--#region c:\Work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Controls\WindowsUI\Base\CommandButton.xaml-->
+    <!-- General -->
+
+    <DataTemplate x:Key="{dxcot:LWKey CommandButtonElements.ExitGlyph}">
+        <Path Height="16" Style="{StaticResource UIShape.Editor.Cancel}" Width="16" />
+    </DataTemplate>
+
+    <!--#endregion c:\Work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Controls\WindowsUI\Base\CommandButton.xaml-->
+
+    <!--#region c:\Work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Controls\WindowsUI\Base\AppBar.xaml-->
+
+
+
+
+
+
+
+    <!-- General -->
+
+
+
+    <!--#endregion c:\Work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Controls\WindowsUI\Base\AppBar.xaml-->
+
+    <!--#region c:\Work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Controls\WindowsUI\Base\Flyout.xaml-->
+    <!-- General -->
+
+    <ControlTemplate x:Key="{dxcot:LWKey WindowsUIElements.FlyoutCommandButtonTemplate}" TargetType="dxwuii:FlyoutCommandButton">
+        <Grid x:Name="Root" Margin="1">
+            <dx:DXBorder x:Name="IsDefault" Background="Transparent" />
+            <Path Margin="4" Style="{StaticResource UIShape.RightDown}" />
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal" />
+                    <VisualState x:Name="MouseOver">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.HoverBackground, Win11=Color.ListItem.HoverBackground'}" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Pressed">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.SelectionBackground, Win11=Color.ListItem.SelectionBackground'}" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Focused">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.SelectionBackground, Win11=Color.ListItem.SelectionBackground'}" />
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </Grid>
+    </ControlTemplate>
+    <!--#endregion c:\Work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Controls\WindowsUI\Base\Flyout.xaml-->
+
+    <!--#region c:\Work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Controls\WindowsUI\Base\TouchNavigator.xaml-->
+    <!-- General -->
+
+    <!-- Customization -->
+
+    <DataTemplate x:Key="{dxcot:LWKey NavigationBarElements.CustomizationButtonContentTemplate}">
+        <Path Fill="{Binding Path=(Control.Foreground), RelativeSource={RelativeSource TemplatedParent}}">
+            <Path.Data>
+                <GeometryGroup>
+                    <EllipseGeometry Center="2,2" RadiusX="2" RadiusY="2" />
+                    <EllipseGeometry Center="9,2" RadiusX="2" RadiusY="2" />
+                    <EllipseGeometry Center="16,2" RadiusX="2" RadiusY="2" />
+                </GeometryGroup>
+            </Path.Data>
+        </Path>
+    </DataTemplate>
+
+    <!-- Customization -->
+
+    <ControlTemplate x:Key="{dxcot:LWKey NavigationBarElements.CustomizationSeparatorControlTemplate}" TargetType="{x:Type dxnavi:CustomizationSeparatorControl}">
+        <Grid x:Name="Root">
+            <Path x:Name="PART_VerticalRootElement" Style="{StaticResource UIShape.SizeGrip.Vertical}" />
+            <Path x:Name="PART_HorizontalRootElement" Style="{StaticResource UIShape.SizeGrip.Horizontal}" />
+        </Grid>
+    </ControlTemplate>
+    <!--#endregion c:\Work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Controls\WindowsUI\Base\TouchNavigator.xaml-->
+
+    <!--#region c:\Work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Controls\WindowsUI\Base\TileNavPane.xaml-->
+    <!-- General -->
+
+    <DataTemplate x:Key="{dxcot:LWKey TileNavPaneElements.TileNavButtonSeparatorTemplate}">
+        <Path Fill="{dx:LWBrush 'Brush.Backstage.Foreground, Office2019Black=Brush.ForegroundDark, Win11Dark=Brush.Foreground.Primary, Win11Light=Brush.Foreground.Alt'}" Style="{StaticResource UIShape.Beak.Right}" />
+    </DataTemplate>
+
+    <!-- TileNavPane -->
+
+
+
+    <!--#endregion c:\Work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Controls\WindowsUI\Base\TileNavPane.xaml-->
+    <!--#region StepProgressBar-->
+    <Duration x:Key="{dxcot:LWKey StepProgressBar.ProgressAnimationDuration}">0:0:0.5</Duration>
+
+
+    <SolidColorBrush x:Key="{dxcot:LWKey StepProgressBar.OuterBorderBrush}" Color="{dx:LWColor '#00FFFFFF, Win11=Color.Border'}" />
+    <SolidColorBrush x:Key="{dxcot:LWKey StepProgressBar.OuterIndentBrush}" Color="{dx:LWColor '#00FFFFFF, Win11=Color.Button.SimpleButtonBackground'}" />
+
+
+
+
+
+    <SolidColorBrush x:Key="{dxcot:LWKey StepProgressBar.ProgressBackground}" Color="{dx:LWColor 'Color.Delimiter, Office2019HighContrast=#FF656565, VS2019Blue=Color.Border, Win11=Color.PanelBorder'}" />
+    <SolidColorBrush x:Key="{dxcot:LWKey StepProgressBar.ProgressForeground}" Color="{dx:LWColor 'Color.Focused, VS2019Blue=Color.SelectionBackground, Win11=Color.Accent'}" />
+    <SolidColorBrush x:Key="{dxcot:LWKey StepProgressBar.ProgressAccentBorderBrush}" Color="{dx:LWColor 'Color.Focused, VS2019Blue=Color.SelectionBackground, Win11=Color.Accent'}" />
+    <SolidColorBrush x:Key="{dxcot:LWKey StepProgressBar.ProgressNeutralBorderBrush}" Color="{dx:LWColor 'Color.Delimiter, Office2019HighContrast=#FF656565, VS2019Blue=Color.Border, Win11=#00FFFFFF'}" />
+
+
+
+    <EllipseGeometry
+        x:Key="{dxcot:LWKey StepProgressBar.IndicatorGeometry}"
+        Center="20,20"
+        RadiusX="20"
+        RadiusY="20" />
+
+    <SolidColorBrush x:Key="{dxcot:LWKey StepProgressBar.NotStartedItemForeground}" Color="{dx:LWColor 'Color.Backstage.Foreground, Office2019HighContrast=Color.Foreground, Win10Dark=Color.Foreground, Win10Light=Color.HighlightedForeground, Win11=Color.Foreground.Primary'}" />
+    <SolidColorBrush x:Key="{dxcot:LWKey StepProgressBar.NotStartedIndicatorFill}" Color="{dx:LWColor 'Color.Border, Office2019HighContrast=#FF656565, Win10Dark=Color.Delimiter, Win11=Color.PanelBorder'}" />
+    <SolidColorBrush x:Key="{dxcot:LWKey StepProgressBar.NotStartedIndicatorStroke}" Color="{dx:LWColor 'Color.Border, Office2019HighContrast=#FF656565, VS2019Blue=Color.Backstage.Delimiter, Win10Dark=Color.Delimiter, Win11=Color.PanelBorder'}" />
+    <SolidColorBrush x:Key="{dxcot:LWKey StepProgressBar.NotStartedMouseOverFill}" Color="{dx:LWColor 'Color.Foreground, Office2019Black=Color.ControlLight.HoverBackground, Office2019HighContrast=#7D7D7D, VS2019Blue=Color.Backstage.Delimiter, Win10Dark=Color.HoverBackground, Win10Light=Color.AltPressed, Win11=Color.Border'}" />
+    <SolidColorBrush x:Key="{dxcot:LWKey StepProgressBar.NotStartedMouseOverStroke}" Color="{dx:LWColor 'Color.Foreground, Office2019Black=Color.ControlLight.HoverBackground, Office2019HighContrast=#7D7D7D, VS2019Blue=Color.Backstage.Button.Background, Win10Dark=Color.HoverBackground, Win10Light=Color.AltPressed, Win11=Color.Border'}" />
+    <SolidColorBrush x:Key="{dxcot:LWKey StepProgressBar.DisabledNotStartedIndicatorFill}" Color="{dx:LWColor '#D2D2D2, Office2019Black=#474747, Office2019HighContrast=#FF3D3D3D, VS2019Blue=#B2BCD7, VS2019Dark=#505052, VS2019Light=#DADBE4, Win10Dark=#424242, Win10Light=#ECECEC, Win11Light=#FFEFEFEF, Win11Dark=#2B2B2B'}" />
+    <SolidColorBrush x:Key="{dxcot:LWKey StepProgressBar.DisabledNotStartedIndicatorStroke}" Color="{dx:LWColor '#D2D2D2, Office2019Black=#474747, Office2019HighContrast=#FF3D3D3D, VS2019Blue=#94A3C2, VS2019Dark=#505052, VS2019Light=#DADBE4, Win10Dark=#424242, Win10Light=#ECECEC, Win11Light=#FFEFEFEF, Win11Dark=#242424'}" />
+
+    <SolidColorBrush x:Key="{dxcot:LWKey StepProgressBar.IndeterminateItemForeground}" Color="{dx:LWColor 'Color.Backstage.Foreground, Office2019Black=Color.Control.Background, Office2019HighContrast=Color.SelectionForeground, VS2019Blue=Color.Foreground, Win11=Color.Foreground.Primary'}" />
+    <SolidColorBrush x:Key="{dxcot:LWKey StepProgressBar.IndeterminateIndicatorFill}" Color="{dx:LWColor 'Color.Backstage.HoverBackground, Office2019Black=Color.Backstage.Focused, VS2019Blue=Color.SelectionBackground, Win10Dark=Color.Editor.Background, Win10Light=Color.Editor.Background, Win11=Color.Button.SimpleButtonBackground'}" />
+    <SolidColorBrush x:Key="{dxcot:LWKey StepProgressBar.IndeterminateIndicatorStroke}" Color="{dx:LWColor 'Color.Backstage.HoverBackground, Office2019Black=Color.Backstage.Focused, VS2019Blue=Color.Focused, Win10Dark=Color.FocusedBorder, Win10Light=Color.Foreground, Win11=Color.Accent'}" />
+    <SolidColorBrush x:Key="{dxcot:LWKey StepProgressBar.IndeterminateMouseOverStroke}" Color="{dx:LWColor 'Color.Backstage.HoverBackground, Office2019Black=Color.Window.HeaderButton.SelectionBackground, VS2019Blue=Color.Focused, Win10Dark=Color.FocusedBorder, Win10Light=Color.Foreground, Win11=Color.Accent'}" />
+    <SolidColorBrush x:Key="{dxcot:LWKey StepProgressBar.IndeterminateMouseOverFill}" Color="{dx:LWColor 'Color.Backstage.HoverBackground, Office2019Black=Color.Window.HeaderButton.SelectionBackground, VS2019Blue=Color.SelectionBackground, Win10Light=Color.Editor.Background, Win11=Color.Editor.HoverBackground'}" />
+    <SolidColorBrush x:Key="{dxcot:LWKey StepProgressBar.DisabledIndeterminateIndicatorFill}" Color="{dx:LWColor '#91C1E6, Office2019Black=#6D6D6D, Office2019HighContrast=#FF0A5E66, VS2019Blue=#F1E5D9, VS2019Dark=#1B4C6E, VS2019Light=#8FC0E3, Win10Dark=#191919, Win10Light=#FFFFFF, Win11Light=#FFFFFFFF, Win11Dark=#2B2B2B'}" />
+    <SolidColorBrush x:Key="{dxcot:LWKey StepProgressBar.DisabledIndeterminateIndicatorStroke}" Color="{dx:LWColor '#91C1E6, Office2019Black=#6D6D6D, Office2019HighContrast=#FF0A5E66, VS2019Blue=#EEE0CE, VS2019Dark=#1B4C6E, VS2019Light=#8FC0E3, Win10Dark=#757575, Win10Light=#AFAFAF, Win11Light=#FF649DD3, Win11Dark=#376377'}" />
+
+    <SolidColorBrush x:Key="{dxcot:LWKey StepProgressBar.CompletedItemForeground}" Color="{dx:LWColor 'Color.Backstage.Foreground, Office2019Black=Color.Control.Background, Office2019HighContrast=Color.SelectionForeground, VS2019Blue=Color.Foreground, Win11=Color.Foreground.Alt'}" />
+    <SolidColorBrush x:Key="{dxcot:LWKey StepProgressBar.CompletedIndicatorFill}" Color="{dx:LWColor 'Color.Focused, Office2019Black=Color.Backstage.Focused, VS2019Blue=Color.SelectionBackground, Win10Light=Color.Editor.Background, Win11Dark=Color.Accent, Win11Light=Color.Backstage.Background'}" />
+    <SolidColorBrush x:Key="{dxcot:LWKey StepProgressBar.CompletedIndicatorStroke}" Color="{dx:LWColor 'Color.Focused, Office2019Black=Color.Backstage.Focused, Win10Dark=Color.FocusedBorder, Win11Dark=Color.Accent, Win11Light=Color.Backstage.Background'}" />
+    <SolidColorBrush x:Key="{dxcot:LWKey StepProgressBar.CompletedMouseOverFill}" Color="{dx:LWColor 'Color.Backstage.HoverBackground, Office2019Black=Color.Window.HeaderButton.SelectionBackground, VS2019Blue=Color.HoverBackground, Win10Light=Color.HoverBackground, Win11Dark=Color.Button.CheckedHoverBackground, Win11Light=Color.Backstage.ItemHoverBackground'}" />
+    <SolidColorBrush x:Key="{dxcot:LWKey StepProgressBar.CompletedMouseOverStroke}" Color="{dx:LWColor 'Color.Backstage.HoverBackground, Office2019Black=Color.Window.HeaderButton.SelectionBackground, VS2019Blue=Color.Focused, Win10Dark=Color.FocusedBorder, Win10Light=Color.Focused, Win11Dark=Color.Button.CheckedHoverBorder, Win11Light=Color.Backstage.ItemHoverBackground'}" />
+    <SolidColorBrush x:Key="{dxcot:LWKey StepProgressBar.DisabledCompletedIndicatorFill}" Color="{dx:LWColor '#91C1E6, Office2019Black=#6D6D6D, Office2019HighContrast=#FF0A5E66, VS2019Blue=#F1E5D9, VS2019Dark=#1B4C6E, VS2019Light=#8FC0E3, Win10Dark=#0A528B, Win10Light=#FFFFFF, Win11Light=#FF95BBE0, Win11Dark=#376377'}" />
+    <SolidColorBrush x:Key="{dxcot:LWKey StepProgressBar.DisabledCompletedIndicatorStroke}" Color="{dx:LWColor '#91C1E6, Office2019Black=#6D6D6D, Office2019HighContrast=#FF0A5E66, VS2019Blue=#EEE0CE, VS2019Dark=#1B4C6E, VS2019Light=#8FC0E3, Win10Dark=#A3A3A3, Win10Light=#66AEE7, Win11Light=#FF95BBE0, Win11Dark=#376377'}" />
+
+    <!--#endregion StepProgressBar-->
+    <Color x:Key="contentColor">#FFE3EFFF</Color>
+    <SolidColorBrush x:Key="contentBrush" Color="{StaticResource contentColor}" />
+    <Color x:Key="AppBarTileButtonHoveredColor">#FFFFFFFF</Color>
+    <SolidColorBrush Color="{StaticResource AppBarTileButtonHoveredColor}" x:Key="AppBarTileButtonHoveredFore" />
+    <SolidColorBrush Color="#FF5E81B4" x:Key="AppBarTileButtonHoveredBack" />
+    <Thickness x:Key="AppBarTileButtonPressedMargin">2</Thickness>
+    
+    <ControlTemplate x:Key="{dxcot:LWKey AppBarElements.AppBarTileBorderButtonTemplate}" TargetType="dxwuii:AppBarTileButtonBorder">
+        <dx:DXBorder x:Name="border" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" >
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal" />
+                    <VisualState x:Name="MouseOver">
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="border" Storyboard.TargetProperty="Background">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource AppBarTileButtonHoveredBack}" />
+                            </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="border" Storyboard.TargetProperty="BorderBrush">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource AppBarTileButtonHoveredBack}" />
+                            </ObjectAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Pressed">
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="border" Storyboard.TargetProperty="Background">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource AppBarTileButtonHoveredBack}" />
+                            </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="border" Storyboard.TargetProperty="BorderBrush">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource AppBarTileButtonHoveredBack}" />
+                            </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="border" Storyboard.TargetProperty="Margin">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource AppBarTileButtonPressedMargin}" />
+                            </ObjectAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Disabled" />
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+            <ContentPresenter />
+        </dx:DXBorder>
+    </ControlTemplate>
+    <ControlTemplate x:Key="{dxcot:LWKey AppBarElements.AppBarTileDropDownButtonTemplate}" TargetType="dxwuii:AppBarTileButtonArrowBorder">
+        <dx:DXBorder x:Name="border" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+            <ContentPresenter />
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal" />
+                    <VisualState x:Name="MouseOver">
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="border" Storyboard.TargetProperty="Background">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource AppBarTileButtonHoveredBack}" />
+                            </ObjectAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Pressed">
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="border" Storyboard.TargetProperty="Background">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource AppBarTileButtonHoveredBack}" />
+                            </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="border" Storyboard.TargetProperty="BorderBrush">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource AppBarTileButtonHoveredBack}" />
+                            </ObjectAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </dx:DXBorder>
+    </ControlTemplate>
+    <ControlTemplate TargetType="dxwui:AppBarTileButton" x:Key="{dxcot:LWKey AppBarElements.AppBarTileButtonTemplate}">
+        <Grid x:Name="root">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <dxwuii:AppBarTileButtonBorder x:Name="PART_Button" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                    <Grid Margin="10,10,10,20">
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <dxwuii:ShapeContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" x:Name="PART_Content" Foreground="{StaticResource contentBrush}" AccentColor="{StaticResource contentColor}" />
+                    </Grid>
+                </dxwuii:AppBarTileButtonBorder>
+
+                <dxwuii:AppBarTileButtonArrowBorder x:Name="PART_FlyoutButton" Width="40" Margin="2,0,0,0" Grid.Column="1" Foreground="{StaticResource contentBrush}" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                    <Path x:Name="Glyph" Stretch="Fill" Fill="{Binding Path=(TextElement.Foreground), RelativeSource={RelativeSource Self}}"
+                                  Data="F1 M 692,518L 692,529L 702,524L 702,523L 692,518 Z" RenderTransformOrigin="0.5,0.5"
+                                  Width="8" Height="9"
+                                  HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Path.RenderTransform>
+                            <RotateTransform x:Name="rotateTransform" Angle="90" />
+                        </Path.RenderTransform>
+                    </Path>
+                </dxwuii:AppBarTileButtonArrowBorder>
+            </Grid>
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal" />
+                    <VisualState x:Name="MouseOver">
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="PART_Content" Storyboard.TargetProperty="AccentColor">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource AppBarTileButtonHoveredColor}" />
+                            </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Glyph" Storyboard.TargetProperty="Fill">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource AppBarTileButtonHoveredFore}" />
+                            </ObjectAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Pressed">
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="PART_Content" Storyboard.TargetProperty="AccentColor">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource AppBarTileButtonHoveredColor}" />
+                            </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Glyph" Storyboard.TargetProperty="Fill">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource AppBarTileButtonHoveredFore}" />
+                            </ObjectAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Disabled">
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetName="root" Storyboard.TargetProperty="Opacity" To="0.6" Duration="0" />
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+                <VisualStateGroup x:Name="FlyoutEnabledStates">
+                    <VisualState x:Name="FlyoutEnabled" />
+                    <VisualState x:Name="FlyoutDisabled">
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="PART_FlyoutButton" Storyboard.TargetProperty="Visibility">
+                                <DiscreteObjectKeyFrame KeyTime="0">
+                                    <DiscreteObjectKeyFrame.Value>
+                                        <Visibility>Collapsed</Visibility>
+                                    </DiscreteObjectKeyFrame.Value>
+                                </DiscreteObjectKeyFrame>
+                            </ObjectAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+                <VisualStateGroup x:Name="FlyoutStates">
+                    <VisualState x:Name="FlyoutClosed" />
+                    <VisualState x:Name="FlyoutOpened">
+                        <Storyboard>
+                            <DoubleAnimation Duration="0" Storyboard.TargetName="rotateTransform" Storyboard.TargetProperty="Angle" To="270" />
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </Grid>
+    </ControlTemplate>
+
+</ResourceDictionary>

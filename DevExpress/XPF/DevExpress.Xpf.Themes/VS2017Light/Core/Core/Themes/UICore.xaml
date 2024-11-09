@@ -1,0 +1,81 @@
+<ResourceDictionary mc:Ignorable="cs" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:cs="colorscheme_ignorable_uri" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxi="http://schemas.devexpress.com/winfx/2008/xaml/core/internal" xmlns:dxt="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sys="clr-namespace:System;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ResourceDictionary.MergedDictionaries>
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.VS2017Light.v24.1;component/UICore/UIData.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.VS2017Light.v24.1;component/Core/Core/Themes/UICustom.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.VS2017Light.v24.1;component/Core/Core/Themes/UIPreset.xaml" />
+  </ResourceDictionary.MergedDictionaries>
+  <!-- SuperTip -->
+  <SolidColorBrush x:Key="{dxt:SuperTipThemeKey ResourceKey=Foreground}" x:Uid="@Content_Property=Foreground">#FF1E1E1E</SolidColorBrush>
+  <!-- FloatingContainer -->
+  <SolidColorBrush x:Key="{dxt:FloatingContainerThemeKey ResourceKey=FloatingContainerBackground}" Color="#FFEEEEF2" x:Uid="@Color=Window.Background" />
+  <SolidColorBrush x:Key="{dxt:ThemeColorsThemeKey ResourceKey=WhiteForegroundColor}" Color="#FF1E1E1E" x:Uid="@Color=Foreground" />
+  <SolidColorBrush x:Key="{dxt:ThemeColorsThemeKey ResourceKey=BlackForegroundColor}" Color="#FF1E1E1E" x:Uid="@Color=Foreground" />
+  <SolidColorBrush x:Key="{dxt:ThemeColorsThemeKey ResourceKey=DXMessageBoxForegroundColor}" Color="#FF1E1E1E" x:Uid="@Color=Foreground" />
+  <!-- In Aero -->
+  <SolidColorBrush x:Key="{dxt:DXWindowThemeKey ResourceKey=AeroWindowContainerBackground}" Color="#FF007ACC" x:Uid="@Color=Backstage.Window.Background" />
+  <!-- Button -->
+  <SolidColorBrush x:Key="{dxt:DropDownButtonThemeKey ResourceKey=Foreground}" Color="#FF1E1E1E" x:Uid="@Color=Foreground" />
+  <SolidColorBrush x:Key="{dxt:DropDownButtonThemeKey ResourceKey=MouseOverForeground}" Color="#FF1E1E1E" x:Uid="@Color=Foreground" />
+  <SolidColorBrush x:Key="{dxt:DropDownButtonThemeKey ResourceKey=PressedForeground}" Color="#FFFFFFFF" x:Uid="@Color=SelectionForeground" />
+  <SolidColorBrush x:Key="{dxt:DropDownButtonThemeKey ResourceKey=CheckedForeground}" Color="#FFFFFFFF" x:Uid="@Color=Backstage.Foreground" />
+  <Color x:Key="{dxt:DropDownButtonThemeKey ResourceKey=ArrowForegroundColor}" x:Uid="@Content_Property=Foreground">#FF1E1E1E</Color>
+  <Color x:Key="{dxt:DropDownButtonThemeKey ResourceKey=ArrowPressedForegroundColor}" x:Uid="@Content_Property=Backstage.Foreground">#FFFFFFFF</Color>
+  <Color x:Key="{dxt:DropDownButtonThemeKey ResourceKey=ArrowMouseOverForegroundColor}" x:Uid="@Content_Property=Foreground">#FF1E1E1E</Color>
+  <SolidColorBrush x:Key="{dxt:DropDownButtonThemeKey ResourceKey=ArrowForeground}" Color="{StaticResource {dxt:DropDownButtonThemeKey ResourceKey=ArrowForegroundColor}}" />
+  <SolidColorBrush x:Key="{dxt:DropDownButtonThemeKey ResourceKey=ArrowPressedForeground}" Color="{StaticResource {dxt:DropDownButtonThemeKey ResourceKey=ArrowPressedForegroundColor}}" />
+  <SolidColorBrush x:Key="{dxt:DropDownButtonThemeKey ResourceKey=ArrowMouseOverForeground}" Color="{StaticResource {dxt:DropDownButtonThemeKey ResourceKey=ArrowMouseOverForegroundColor}}" />
+  <!-- SearchPanel -->
+  <SolidColorBrush x:Key="{dxt:SearchPanelThemeKey ResourceKey=ButtonBorderBrush}" Color="#FFCCCEDB" x:Uid="@Color=Delimiter" />
+  <SolidColorBrush x:Key="{dxt:SearchPanelThemeKey ResourceKey=SearchPanelBorderBrush}" Color="#FFCCCEDB" x:Uid="@Color=Delimiter" />
+  <SolidColorBrush x:Key="{dxt:SearchPanelThemeKey ResourceKey=SearchPanelBackgroundBrush}" Color="#FFCCCEDB" x:Uid="@Color=Delimiter" />
+  <SolidColorBrush x:Key="{dxt:SearchPanelThemeKey ResourceKey=SearchPanelTextBrush}" Color="#FF1E1E1E" x:Uid="@Color=Foreground" />
+  <SolidColorBrush x:Key="{dxt:SearchPanelThemeKey ResourceKey=SearchPanelGlyphBrush}" Color="#FF1E1E1E" x:Uid="@Color=Foreground" />
+  <!-- PseudoWindow -->
+  <SolidColorBrush x:Key="{dxt:DXWindowThemeKey ResourceKey=BorderEffectActiveColor}" Color="#FF007ACC" x:Uid="@Color=Backstage.Window.Background" />
+  <SolidColorBrush x:Key="{dxt:DXWindowThemeKey ResourceKey=BorderEffectInactiveColor}" Color="#FFCCCEDB" x:Uid="@Color=Border" />
+  <SolidColorBrush x:Key="{dxt:DXWindowThemeKey ResourceKey=FloatingContainerActiveBodyBorder}" Color="#FFCCCEDB" x:Uid="@Color=Border" />
+  <SolidColorBrush x:Key="{dxt:DXWindowThemeKey ResourceKey=FloatingContainerInactiveBodyBorder}" Color="#FFCCCEDB" x:Uid="@Color=Border" />
+  <SolidColorBrush x:Key="{dxt:DXWindowThemeKey ResourceKey=FloatingContainerInactiveBackground}" Color="#FFEEEEF2" x:Uid="@Color=Window.Background" />
+  <SolidColorBrush x:Key="{dxt:DXWindowThemeKey ResourceKey=FloatingContainerBorder}" Color="#FF007ACC" x:Uid="@Color=Backstage.Window.Background" />
+  <SolidColorBrush x:Key="{dxt:DXWindowThemeKey ResourceKey=FloatingContainerInactiveBorder}" Color="#FFCCCEDB" x:Uid="@Color=Border" />
+  <SolidColorBrush x:Key="{dxt:DXWindowThemeKey ResourceKey=FloatingContainerBackground}" Color="#FFEEEEF2" x:Uid="@Color=Window.Background" />
+  <SolidColorBrush x:Key="{dxt:DXWindowThemeKey ResourceKey=ActiveHeaderBackground}" Color="#FFEEEEF2" x:Uid="@Color=Window.Background" />
+  <SolidColorBrush x:Key="{dxt:DXWindowThemeKey ResourceKey=InactiveHeaderBackground}" Color="#FFEEEEF2" x:Uid="@Color=Window.Background" />
+  <SolidColorBrush x:Key="{dxt:FloatingContainerThemeKey ResourceKey=FloatingContainerDefaultButtonForegroundNormalState}" Color="#FF1E1E1E" x:Uid="@Color=Foreground" />
+  <SolidColorBrush x:Key="{dxt:FloatingContainerThemeKey ResourceKey=FloatingContainerDefaultButtonForegroundMouseOverState}" Color="#FF007ACC" x:Uid="@Color=Focused" />
+  <SolidColorBrush x:Key="{dxt:FloatingContainerThemeKey ResourceKey=FloatingContainerDefaultButtonForegroundPressedState}" Color="#FFFFFFFF" x:Uid="@Color=Backstage.Foreground" />
+  <SolidColorBrush x:Key="{dxt:FloatingContainerThemeKey ResourceKey=FloatingContainerCloseButtonForegroundNormalState}" Color="#FF1E1E1E" x:Uid="@Color=Foreground" />
+  <SolidColorBrush x:Key="{dxt:FloatingContainerThemeKey ResourceKey=FloatingContainerCloseButtonForegroundMouseOverState}" Color="#FF007ACC" x:Uid="@Color=Focused" />
+  <SolidColorBrush x:Key="{dxt:FloatingContainerThemeKey ResourceKey=FloatingContainerCloseButtonForegroundPressedState}" Color="#FFFFFFFF" x:Uid="@Color=Backstage.Foreground" />
+  <!-- ThemedWindowPreset -->
+  <Color x:Key="{dxt:AcrylicThemedWindowThemeKey ResourceKey=AcrylicColor}" x:Uid="@Content_Property=Window.Background">#FFEEEEF2</Color>
+  <SolidColorBrush x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowActiveBackground}" Color="#FFEEEEF2" x:Uid="@Color=Window.Background" />
+  <SolidColorBrush x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowActiveBorderBrush}" Color="#FF007ACC" x:Uid="@Color=Backstage.Window.Background" />
+  <SolidColorBrush x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowActiveContentBackground}" Color="#FFEEEEF2" x:Uid="@Color=Window.Background" />
+  <SolidColorBrush x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowActiveContentBorderBrush}" Color="#FFCCCEDB" x:Uid="@Color=Border" />
+  <SolidColorBrush x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowInactiveBackground}" Color="#FFEEEEF2" x:Uid="@Color=Window.Background" />
+  <SolidColorBrush x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowInactiveBorderBrush}" Color="#FF007ACC" x:Uid="@Color=Backstage.Window.Background" />
+  <SolidColorBrush x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowInactiveContentBackground}" Color="#FFEEEEF2" x:Uid="@Color=Window.Background" />
+  <SolidColorBrush x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowInactiveContentBorderBrush}" Color="#FFCCCEDB" x:Uid="@Color=Border" />
+  <SolidColorBrush x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowTitleForeground}" Color="#FF1E1E1E" x:Uid="@Color=Foreground" />
+  <SolidColorBrush x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowRibbonTitleForeground}" Color="#FFFFFFFF" x:Uid="@Color=Backstage.Foreground" />
+  <SolidColorBrush x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowContentForeground}" Color="#FF1E1E1E" x:Uid="@Color=Foreground" />
+  <SolidColorBrush x:Key="{dxt:ThemedWindowThemeKey ResourceKey=HeaderControlBoxBackground}" Color="Transparent" />
+  <SolidColorBrush x:Key="{dxt:ThemedWindowThemeKey ResourceKey=HeaderControlBoxBorderBrush}" Color="Transparent" />
+  <SolidColorBrush x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowActiveHeaderBackground}" Color="#FFEEEEF2" x:Uid="@Color=Window.Background" />
+  <SolidColorBrush x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowInactiveHeaderBackground}" Color="#FFEEEEF2" x:Uid="@Color=Window.Background" />
+  <SolidColorBrush x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowRibbonActiveHeaderBackground}" Color="#FF007ACC" x:Uid="@Color=Backstage.Window.Background" />
+  <SolidColorBrush x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowRibbonInactiveHeaderBackground}" Color="#FF007ACC" x:Uid="@Color=Backstage.Window.Background" />
+  <!-- BackButton -->
+  <SolidColorBrush x:Key="{dxt:ThemedWindowThemeKey ResourceKey=BackButtonForegroundNormalState}" Color="#FF1E1E1E" x:Uid="@Color=Foreground" />
+  <SolidColorBrush x:Key="{dxt:ThemedWindowThemeKey ResourceKey=BackButtonForegroundMouseoverState}" Color="#FF1E1E1E" x:Uid="@Color=HoverForeground" />
+  <SolidColorBrush x:Key="{dxt:ThemedWindowThemeKey ResourceKey=BackButtonForegroundPressedState}" Color="#FFFFFFFF" x:Uid="@Color=SelectionForeground" />
+  <!-- Drag -->
+  <SolidColorBrush x:Key="{dxt:DragDropThemeKey ResourceKey=DropMarkerBackground}" Color="#FFFFFFFF" x:Uid="@Color=Editor.Background" />
+  <SolidColorBrush x:Key="{dxt:DragDropThemeKey ResourceKey=DropMarkerBorderBrush}" Color="#FF007ACC" x:Uid="@Color=Focused" />
+  <SolidColorBrush x:Key="{dxt:DragDropThemeKey ResourceKey=DragHintBackground}" Color="#FFF5F5F7" x:Uid="@Color=Control.Background" />
+  <SolidColorBrush x:Key="{dxt:DragDropThemeKey ResourceKey=DragHintBorderBrush}" Color="#FFCCCEDB" x:Uid="@Color=Border" />
+  <CornerRadius x:Key="{dxt:DragDropThemeKey ResourceKey=DragHintCornerRadius}">0</CornerRadius>
+  <SolidColorBrush x:Key="{dxt:DragDropThemeKey ResourceKey=DragHintCaptionForeground}" Color="#FF007ACC" x:Uid="@Color=Focused" />
+  <SolidColorBrush x:Key="{dxt:DragDropThemeKey ResourceKey=DragHintDescriptionForeground}" Color="#FF1E1E1E" x:Uid="@Color=Foreground" />
+</ResourceDictionary>

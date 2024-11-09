@@ -1,0 +1,55 @@
+﻿<wpf:ResourceDictionary mc:Ignorable="cs" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:cs="colorscheme_ignorable_uri" xmlns:dxpgi="http://schemas.devexpress.com/winfx/2008/xaml/pivotgrid/internal" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sys="clr-namespace:System;assembly=mscorlib" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <wpf:SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=FilterPanelForeground}" Color="#FF262626" />
+  <wpf:SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=ResizingIndicatorBrush}" Color="#FFABABAB" />
+  <wpf:SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=DataAreaCuttedTextForeground}" Color="#FF262626" />
+  <wpf:SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=PivotBackground}" Color="#FFE3E3E3" />
+  <wpf:SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=PivotBorderBrush}" Color="#FFABABAB" />
+  <wpf:SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=HeaderEmptyTextForeground}" Color="#FF262626" />
+  <wpf:SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=HeaderNormalGradient}" Color="#FFE3E3E3" />
+  <wpf:SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=HeaderActiveGradient}" Color="#FFD8D8D8" />
+  <wpf:SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=HeaderControlsColor}" Color="#FF666666" />
+  <wpf:SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=HeaderForeground}" Color="#FF262626" />
+  <wpf:SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=HeaderMouseOverForeground}" Color="#FF262626" />
+  <wpf:SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=FilterColor}" Color="#FF666666" />
+  <wpf:SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=FilterMouseOverColor}" Color="#FF2B579A" />
+  <wpf:SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=FieldValueBorderBrush}" Color="#FFABABAB" />
+  <wpf:SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=FieldValueOuterBorderBrush}" Color="#FFABABAB" />
+  <wpf:SolidColorBrush x:Key="{dxpgi:PivotGridThemeKey ResourceKey=FieldListBackgroundBrush}" Color="#FFFFFFFF" />
+  <wpf:SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=FieldValueBackground}" Color="#FFE3E3E3" />
+  <wpf:SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=FieldValueSelectedBrush}" Color="#FFE3E3E3" />
+  <wpf:SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=FieldTotalBrush}" Color="#FFE3E3E3" />
+  <wpf:SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=ValueTotalSelectedBrush}" Color="#FFE3E3E3" />
+  <wpf:SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=ValueSelectedForegroundBrush}" Color="#FF2B579A" />
+  <wpf:SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=CellForegroundBrush}" Color="#FF262626" />
+  <wpf:SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=CellTotalForegroundBrush}" Color="#FF262626" />
+  <wpf:SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=CellTotalSelectedForegroundBrush}" Color="#FF262626" />
+  <wpf:SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=CellSelectedForegroundBrush}" Color="#FF262626" />
+  <wpf:SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=ValueForegroundBrush}" Color="#FF262626" />
+  <wpf:SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=ValueTotalForegroundBrush}" Color="#FF262626" />
+  <wpf:SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=ValueTotalSelectedForegroundBrush}" Color="#FF262626" />
+  <wpf:SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=ExpandButtonColor}" Color="#00000000" />
+  <wpf:SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=ExpandButtonBackground}" Color="#00000000" />
+  <wpf:SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=ExpandButtonInnerBackground}" Color="#00000000" />
+  <wpf:SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=CellValueBrush}" Color="#FFFFFFFF" />
+  <wpf:SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=CellValueBorderBrush}" Color="#FFD6D6D6" />
+  <wpf:SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=CellTotalBrush}" Color="#FFF3F3F3" />
+  <wpf:SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=CellSelectedBrush}" Color="#3F3EA9F1" />
+  <wpf:SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=CellTotalSelectedBrush}" Color="#5F2592DA" />
+  <wpf:SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=FocusedDataItemStroke}" Color="#FF2B579A" />
+  <wpf:SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=FieldListDragTextForeground}" Color="#FF262626" />
+  <wpf:SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=GroupBorderShadowColor}" Color="#00000000" />
+  <wpf:SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=GroupButtonFill}" Color="#FF666666" />
+  <wpf:SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=GroupBorderBrush}" Color="#FFABABAB" />
+  <wpf:SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=ScrollingCornerGradient}" Color="#FFD3D3D3" />
+  <wpf:SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=AreaSeparatorBrush}" Color="#FFABABAB" />
+  <wpf:Style x:Key="{dxpgi:AppearanceThemeKey ResourceKey=EmptyAreaHighlighterStyle}" TargetType="{x:Type Border}">
+    <wpf:Setter Property="Background" Value="#3F009AFF" />
+  </wpf:Style>
+  <wpf:Style x:Key="{dxpgi:AppearanceThemeKey ResourceKey=FieldListDragOverBorderStyle}" TargetType="{x:Type Border}">
+    <wpf:Setter Property="BorderBrush" Value="#3F009AFF" />
+    <wpf:Setter Property="Opacity" Value="1" />
+  </wpf:Style>
+  <sys:Double x:Key="{dxpgi:AppearanceThemeKey ResourceKey=FieldListHiddenFieldsShowGridMinHeight}">16</sys:Double>
+  <sys:Double x:Key="{dxpgi:AppearanceThemeKey ResourceKey=FieldListUpdateButtonMinHeight}">24</sys:Double>
+  <sys:Double x:Key="{dxpgi:AppearanceThemeKey ResourceKey=FieldListUpdateButtonMinWidth}">78</sys:Double>
+</wpf:ResourceDictionary>

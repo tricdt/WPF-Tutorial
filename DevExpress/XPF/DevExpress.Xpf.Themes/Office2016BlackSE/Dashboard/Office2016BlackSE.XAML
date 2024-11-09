@@ -1,0 +1,23 @@
+<ResourceDictionary mc:Ignorable="cs" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:cs="colorscheme_ignorable_uri" xmlns:dxdst="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ResourceDictionary.MergedDictionaries>
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016BlackSE.v24.1;component/Dashboard/Generic/Generic.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016BlackSE.v24.1;component/Dashboard/Office2016BlackSE/Templates.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016BlackSE.v24.1;component/Dashboard/Office2016BlackSE/DeltaValuePresenter.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016BlackSE.v24.1;component/Dashboard/Office2016BlackSE/CardItem.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016BlackSE.v24.1;component/Dashboard/Office2016BlackSE/MapItem.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016BlackSE.v24.1;component/Dashboard/Office2016BlackSE/BoundImageItem.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016BlackSE.v24.1;component/Dashboard/Office2016BlackSE/ChartItem.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016BlackSE.v24.1;component/Dashboard/Office2016BlackSE/ComboBoxItem.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016BlackSE.v24.1;component/Dashboard/Office2016BlackSE/GaugeItem.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016BlackSE.v24.1;component/Dashboard/Office2016BlackSE/GridItem.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016BlackSE.v24.1;component/Dashboard/Office2016BlackSE/ImageItem.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016BlackSE.v24.1;component/Dashboard/Office2016BlackSE/ListBoxItem.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016BlackSE.v24.1;component/Dashboard/Office2016BlackSE/PieItem.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016BlackSE.v24.1;component/Dashboard/Office2016BlackSE/PivotItem.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016BlackSE.v24.1;component/Dashboard/Office2016BlackSE/RangeItem.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016BlackSE.v24.1;component/Dashboard/Office2016BlackSE/TextBoxItem.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016BlackSE.v24.1;component/Dashboard/Office2016BlackSE/TreemapItem.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016BlackSE.v24.1;component/Dashboard/Office2016BlackSE/TreeViewItem.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016BlackSE.v24.1;component/Dashboard/Office2016BlackSE/DateFilterItem.xaml" />
+  </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

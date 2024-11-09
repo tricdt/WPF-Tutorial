@@ -1,0 +1,53 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+    xmlns:dxi="http://schemas.devexpress.com/winfx/2008/xaml/core/internal"
+    xmlns:dxt="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys"
+    xmlns:dxgnt="http://schemas.devexpress.com/winfx/2008/xaml/gantt/themekeys"
+    xmlns:dxgni="http://schemas.devexpress.com/winfx/2008/xaml/gantt/internal"
+    xmlns:cs="colorscheme_ignorable_uri">
+    <ResourceDictionary.MergedDictionaries>
+        <dxi:ThemeResourceDictionary Path="Gantt/_{ThemeName}.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+    <SolidColorBrush x:Key="{dxgnt:LWKey Timescale.TickBrush}" Color="{StaticResource Color.Border}" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey Timescale.BorderBrush}" Color="{StaticResource Color.Border}" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttItems.TaskBrush}" Color="{StaticResource Color.Focused}" Opacity="0.62" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttItems.TaskProgressBrush}" Color="{dx:LWColor 'VS2019Blue=Color.SelectionBorder, VS2019Dark=Color.Focused, VS2019Light=Color.Focused'}" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttItems.TaskCriticalPathBrush}" Color="{StaticResource Color.Custom.Red}" Opacity="0.62" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttItems.TaskCriticalPathProgressBrush}" Color="{StaticResource Color.Custom.Red}" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttItems.TaskForeground}" Color="{StaticResource Color.Foreground}" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttItems.SummaryTaskBrush}" Color="{StaticResource Color.Focused}" Opacity="0.62" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttItems.SummaryTaskProgressBrush}" Color="{dx:LWColor 'VS2019Blue=Color.SelectionBorder, VS2019Dark=Color.Focused, VS2019Light=Color.Focused'}" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttItems.SummaryTaskForeground}" Color="{StaticResource Color.Foreground}" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttItems.SummaryTaskBracketBrush}" Color="{StaticResource Color.Foreground}" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttItems.MilestoneBrush}" Color="{StaticResource Color.Focused}" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttItems.MilestoneCriticalPathBrush}" Color="{StaticResource Color.Custom.Red}" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttItems.TaskBaselineBrush}" Color="{dx:LWColor 'VS2019Blue=Color.Delimiter, VS2019Dark=Color.Foreground, VS2019Light=Color.Foreground'}" Opacity="0.62" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttItems.SummaryTaskBaselineBrush}" Color="{dx:LWColor 'VS2019Blue=Color.Delimiter, VS2019Dark=Color.Foreground, VS2019Light=Color.Foreground'}" Opacity="0.62" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttItems.MilestoneBaselineBrush}" Color="{dx:LWColor 'VS2019Blue=Color.Delimiter, VS2019Dark=Color.Foreground, VS2019Light=Color.Foreground'}" Opacity="0.62" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttItems.MilestoneBaselineBorderBrush}" Color="{dx:LWColor 'VS2019Blue=Color.Delimiter, VS2019Dark=Color.Foreground, VS2019Light=Color.Foreground'}" Opacity="0.62" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttItems.TaskPreviewBrush}" Color="{dx:LWColor 'VS2019Blue=Color.SelectionBorder, VS2019Dark=Color.Focused, VS2019Light=Color.Focused'}" Opacity="0.62" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttItems.TaskPreviewBorderBrush}" Color="{dx:LWColor 'VS2019Blue=Color.SelectionBorder, VS2019Dark=Color.Focused, VS2019Light=Color.Focused'}" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttItems.SummaryTaskPreviewBrush}" Color="{dx:LWColor 'VS2019Blue=Color.SelectionBorder, VS2019Dark=Color.Focused, VS2019Light=Color.Focused'}" Opacity="0.62" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttItems.SummaryTaskPreviewBorderBrush}" Color="{dx:LWColor 'VS2019Blue=Color.SelectionBorder, VS2019Dark=Color.Focused, VS2019Light=Color.Focused'}" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttItems.MilestonePreviewBrush}" Color="{dx:LWColor 'VS2019Blue=Color.SelectionBorder, VS2019Dark=Color.Focused, VS2019Light=Color.Focused'}" Opacity="0.52" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttItems.MilestonePreviewBorderBrush}" Color="{dx:LWColor 'VS2019Blue=Color.SelectionBorder, VS2019Dark=Color.Focused, VS2019Light=Color.Focused'}" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttControl.SplitterBorderBrush}" Color="{StaticResource Color.Border}" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttControl.SplitterBackground}" Color="{StaticResource Color.Control.Background}" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttControl.RowBackground}" Color="{StaticResource Color.Editor.Background}" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttItems.ConnectorStroke}" Color="{dx:LWColor 'VS2019Blue=Color.SelectionBorder, VS2019Dark=Color.Focused, VS2019Light=Color.Focused'}" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttItems.ConnectorHighlightedShadowBrush}" Color="{StaticResource Color.Focused}" Opacity="0.32" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttItems.InvalidConnectorStroke}" Color="#FFFF0000" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttItems.InvalidConnectorHighlightedShadowBrush}" Color="#30FF0000" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttItems.ConnectorCriticalPathStroke}" Color="{StaticResource Color.Custom.Red}" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttItems.CriticalPathConnectorHighlightedShadowBrush}" Color="{StaticResource Color.Custom.Red}" Opacity="0.32" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttItems.NonworkingTimeBrush}" Color="{StaticResource Color.Delimiter}" Opacity="0.25" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttItems.GroupHighlightBrush}" Color="{dx:LWColor 'VS2019Blue=Color.ControlLight.SelectionBackground, VS2019Dark=Color.Focused, VS2019Light=Color.Focused'}" Opacity="0.16" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttControl.StripLineBackground}" Color="{dx:LWColor 'VS2019Blue=#FF76A797, VS2019Dark=#FF7AC142, VS2019Light=#FF2EB072'}" Opacity="0.25" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttControl.CurrentDateTimeStripLineBackground}" Color="{dx:LWColor 'VS2019Blue=#FFD86344, VS2019Dark=#FFF26543, VS2019Light=#FFF37453'}" />
+    <sys:Double x:Key="{dxgnt:LWKey GanttControl.RowIndent}">12</sys:Double>
+    <sys:Double x:Key="{dxgnt:LWKey Timescale.MinHeight}">21</sys:Double>
+    <sys:Double x:Key="{dxgnt:LWKey Timescale.TickHeight}">9</sys:Double>
+</ResourceDictionary>

@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <ProjectGuid>{2864D6D5-7F28-0A75-28EC-292EC2D5D6C6}</ProjectGuid>
+    <EnableDefaultItems>False</EnableDefaultItems>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWPF>True</UseWPF>
+    <UseWindowsForms>True</UseWindowsForms>
+    <Configurations>Debug;Release</Configurations>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <AppendTargetFrameworkToOutputPath>False</AppendTargetFrameworkToOutputPath>
+    <EmbeddedResourceUseDependentUponConvention>False</EmbeddedResourceUseDependentUponConvention>
+    <RootNamespace>DevExpress.Mvvm.DataModel</RootNamespace>
+    <AssemblyName>DevExpress.Mvvm.v24.1.DataModel</AssemblyName>
+    <LangVersion>6</LangVersion>
+    <FileAlignment>512</FileAlignment>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <OutputType>Library</OutputType>
+    <IntermediateOutputPath>obj.NCD</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>..\..\..\..\Bin\NetCore\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;DEBUGTEST;</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <WarningLevel>4</WarningLevel>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <ErrorReport>prompt</ErrorReport>
+    <OutputPath>..\..\..\..\Bin\NetCore\</OutputPath>
+    <DefineConstants>TRACE;</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v24.1">
+      <HintPath>..\..\..\..\Bin\NetCore\DevExpress.Data.v24.1.dll</HintPath>
+    <Private>False</Private></Reference>
+    <Reference Include="DevExpress.Mvvm.v24.1">
+      <HintPath>..\..\..\..\Bin\NetCore\DevExpress.Mvvm.v24.1.dll</HintPath>
+    <Private>False</Private></Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\DataModel\DbExceptions.cs" />
+    <Compile Include="Common\DataModel\DesignTime\DesignTimeInstantFeedbackSource.cs" />
+    <Compile Include="Common\DataModel\DesignTime\DesignTimeReadOnlyRepository.cs" />
+    <Compile Include="Common\DataModel\DesignTime\DesignTimeRepository.cs" />
+    <Compile Include="Common\DataModel\DesignTime\DesignTimeUnitOfWork.cs" />
+    <Compile Include="Common\DataModel\DesignTime\DesignTimeUnitOfWorkFactory.cs" />
+    <Compile Include="Common\DataModel\EntityState.cs" />
+    <Compile Include="Common\DataModel\IReadOnlyRepository.cs" />
+    <Compile Include="Common\DataModel\IRepository.cs" />
+    <Compile Include="Common\DataModel\IUnitOfWork.cs" />
+    <Compile Include="Common\DataModel\Objects\ObjectInstantFeedbackSource.cs" />
+    <Compile Include="Common\DataModel\Objects\ObjectReadOnlyRepository.cs" />
+    <Compile Include="Common\DataModel\Objects\ObjectRepository.cs" />
+    <Compile Include="Common\DataModel\Objects\ObjectUnitOfWork.cs" />
+    <Compile Include="Common\DataModel\Objects\ObjectUnitOfWorkFactory.cs" />
+    <Compile Include="Common\DataModel\UnitOfWorkBase.cs" />
+    <Compile Include="Common\Utils\DbExtensions.cs" />
+    <Compile Include="Common\Utils\ExpressionHelper.cs" />
+    <Compile Include="Localization\ScaffoldingLocalizerGenerator.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ScaffoldingLocalizerGenerator.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Localization\Localization.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Localization\LocalizationRes.resx">
+      <DependentUpon>ScaffoldingLocalizerGenerator.tt</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Localization\LocalizationRes.ja.resx"><DependentUpon>ScaffoldingLocalizerGenerator.tt</DependentUpon></EmbeddedResource>
+    <EmbeddedResource Include="Localization\LocalizationRes.es.resx"><DependentUpon>ScaffoldingLocalizerGenerator.tt</DependentUpon></EmbeddedResource>
+    <EmbeddedResource Include="Localization\LocalizationRes.de.resx"><DependentUpon>ScaffoldingLocalizerGenerator.tt</DependentUpon></EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Localization\ScaffoldingLocalizerGenerator.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ScaffoldingLocalizerGenerator.cs</LastGenOutput>
+    </Content>
+    <Content Include="Localization\LocalizerGenerator.ttinclude" />
+  </ItemGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

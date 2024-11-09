@@ -1,0 +1,26 @@
+<ResourceDictionary mc:Ignorable="cs" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:cs="colorscheme_ignorable_uri" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxi="http://schemas.devexpress.com/winfx/2008/xaml/core/internal" xmlns:dxsch="http://schemas.devexpress.com/winfx/2008/xaml/scheduler" xmlns:dxschi="http://schemas.devexpress.com/winfx/2008/xaml/scheduler/internal" xmlns:dxscht="http://schemas.devexpress.com/winfx/2008/xaml/scheduler/themekeys" xmlns:dxt="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sys="clr-namespace:System;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ResourceDictionary.MergedDictionaries>
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win10Light.v24.1;component/Scheduler/Win10Light/UICore.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win10Light.v24.1;component/Scheduler/Win10Light/ScrollBar.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win10Light.v24.1;component/Scheduler/Win10Light/NavigationButton.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win10Light.v24.1;component/Scheduler/Win10Light/BaseView/MoreButtonToolTip.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win10Light.v24.1;component/Scheduler/Win10Light/ResourceNavigator.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win10Light.v24.1;component/Scheduler/Win10Light/CurrentTimeIndicator.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win10Light.v24.1;component/Scheduler/Win10Light/SchedulerControl.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win10Light.v24.1;component/Scheduler/Win10Light/Appointments/VerticalAppointment.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win10Light.v24.1;component/Scheduler/Win10Light/Appointments/HorizontalAppointment.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win10Light.v24.1;component/Scheduler/Win10Light/Appointments/HorizontalAppointmentSameDay.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win10Light.v24.1;component/Scheduler/Win10Light/Appointments/DragDropHoverTimeCells.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win10Light.v24.1;component/Scheduler/Win10Light/Containers.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win10Light.v24.1;component/Scheduler/Win10Light/Selection.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win10Light.v24.1;component/Scheduler/Win10Light/BaseView/Header.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win10Light.v24.1;component/Scheduler/Win10Light/DayView/TimeRuler.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win10Light.v24.1;component/Scheduler/Win10Light/DayView/MoreButton.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win10Light.v24.1;component/Scheduler/Win10Light/DayView/HorizontalTimeMarker.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win10Light.v24.1;component/Scheduler/Win10Light/TimelineView/VerticalTimeMarker.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win10Light.v24.1;component/Scheduler/Win10Light/RangeControl/Header.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win10Light.v24.1;component/Scheduler/Win10Light/RangeControl/Thumbnail.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win10Light.v24.1;component/Scheduler/Win10Light/RangeControl/RulerCell.xaml" />
+  </ResourceDictionary.MergedDictionaries>
+  <!-- General -->
+</ResourceDictionary>

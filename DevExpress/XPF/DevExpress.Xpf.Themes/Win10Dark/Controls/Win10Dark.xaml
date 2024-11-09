@@ -1,0 +1,18 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:dxt="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys">
+  <ResourceDictionary.MergedDictionaries>
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win10Dark.v24.1;component/Controls/WindowsUI/Win10Dark/FadingButton.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win10Dark.v24.1;component/Controls/WindowsUI/Win10Dark/FlipView.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win10Dark.v24.1;component/Controls/WindowsUI/Win10Dark/PageView.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win10Dark.v24.1;component/Controls/WindowsUI/Win10Dark/SlideView.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win10Dark.v24.1;component/Controls/WindowsUI/Win10Dark/CommandButton.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win10Dark.v24.1;component/Controls/WindowsUI/Win10Dark/AppBar.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win10Dark.v24.1;component/Controls/WindowsUI/Win10Dark/Flyout.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win10Dark.v24.1;component/Controls/WindowsUI/Win10Dark/TouchNavigator.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win10Dark.v24.1;component/Controls/WindowsUI/Win10Dark/TileNavPane.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win10Dark.v24.1;component/Controls/WindowsUI/Win10Dark/HamburgerMenu.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win10Dark.v24.1;component/Controls/WindowsUI/Win10Dark/BreadcrumbControl.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win10Dark.v24.1;component/Controls/Wizard/Win10Dark/UICore.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win10Dark.v24.1;component/Controls/Win10Dark/StepProgressBar.xaml" />
+  </ResourceDictionary.MergedDictionaries>
+  <!-- General -->
+</ResourceDictionary>

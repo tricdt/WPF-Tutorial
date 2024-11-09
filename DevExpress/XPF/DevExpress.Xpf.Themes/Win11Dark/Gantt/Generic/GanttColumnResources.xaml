@@ -1,0 +1,90 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:dxgn="http://schemas.devexpress.com/winfx/2008/xaml/gantt" xmlns:sys="clr-namespace:System;assembly=mscorlib" xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid" xmlns:dxgnt="http://schemas.devexpress.com/winfx/2008/xaml/gantt/themekeys" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxdst="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys">
+  <Style x:Key="StartDateEditSettings" TargetType="dxe:DateEditSettings" />
+  <Style x:Key="BaselineStartDateEditSettings" TargetType="dxe:DateEditSettings" />
+  <Style x:Key="FinishDateEditSettings" TargetType="dxe:DateEditSettings" />
+  <Style x:Key="BaselineFinishDateEditSettings" TargetType="dxe:DateEditSettings" />
+  <Style x:Key="DurationEditSettings" TargetType="dxe:TextEditSettings">
+    <Setter Property="MaskType" Value="TimeSpan" />
+    <Setter Property="Mask" Value="[dD ][hH ][mM ][sS ][fffN ]" />
+    <Setter Property="dxe:TimeSpanMaskOptions.AllowNegativeValue" Value="False" />
+    <Setter Property="dxe:TimeSpanMaskOptions.InputMode" Value="NotRestricted" />
+    <Setter Property="dxe:TimeSpanMaskOptions.DefaultPart" Value="Days" />
+    <Setter Property="NullValue" Value="{x:Static sys:TimeSpan.Zero}" />
+    <Setter Property="AllowNullInput" Value="True" />
+    <Setter Property="MaskUseAsDisplayFormat" Value="True" />
+  </Style>
+  <Style x:Key="BaselineDurationEditSettings" TargetType="dxe:TextEditSettings" BasedOn="{StaticResource DurationEditSettings}" />
+  <Style x:Key="ProgressEditSettings" TargetType="dxe:SpinEditSettings">
+    <Setter Property="MinValue" Value="0" />
+    <Setter Property="MaxValue" Value="1" />
+    <Setter Property="Increment" Value="0.05" />
+    <Setter Property="AllowDefaultButton" Value="False" />
+    <Setter Property="Mask" Value="p0" />
+    <Setter Property="MaskUseAsDisplayFormat" Value="True" />
+  </Style>
+  <Style x:Key="NameEditSettings" TargetType="dxe:TextEditSettings" />
+  <Style x:Key="ResourceLinksEditSettings" TargetType="dxg:LookUpEditSettings">
+    <Setter Property="ItemsSource" Value="{Binding Path=(dxgn:GanttControl.ActiveView).EditableResourceLinks, RelativeSource={RelativeSource Self}}" />
+    <Setter Property="DisplayMember" Value="Name" />
+    <Setter Property="IsPopupAutoWidth" Value="False" />
+    <Setter Property="AddNewButtonPlacement" Value="None" />
+    <Setter Property="AutoPopulateColumns" Value="False" />
+    <Setter Property="AllowRejectUnknownValues" Value="True" />
+    <Setter Property="StyleSettings">
+      <Setter.Value>
+        <dxgn:ResourceEditStyleSettings AllowEditTokens="False" SelectionMode="Multiple" NewTokenPosition="None" FilterOutSelectedTokens="False" />
+      </Setter.Value>
+    </Setter>
+    <Setter Property="PopupContentTemplate">
+      <Setter.Value>
+        <ControlTemplate>
+          <dxg:GridControl x:Name="PART_GridControl" SelectionMode="MultipleRow" ItemsSource="{Binding RowData.Source.EditableResourceLinks}">
+            <dxg:GridColumn FieldName="Name" Header="{dxgn:GanttStringId ResourceNameColumnHeader}" AllowEditing="False" Width="Auto" />
+            <dxg:GridColumn FieldName="AllocationPercentage" AllowEditing="True" Header="{dxgn:GanttStringId AllocationPercentageColumnHeader}" Width="Auto">
+              <dxg:GridColumn.EditSettings>
+                <dxe:SpinEditSettings MinValue="0" Increment="0.05" Mask="p0" MaskUseAsDisplayFormat="True" />
+              </dxg:GridColumn.EditSettings>
+            </dxg:GridColumn>
+            <dxg:GridControl.View>
+              <dxg:TableView ShowCheckBoxSelectorColumn="True" AllowEditing="True" NavigationStyle="Cell" ShowIndicator="False" FocusedCellBorderTemplate="{x:Null}">
+                <dxg:TableView.Style>
+                  <Style x:Key="{dxdst:DefaultStyleThemeKey FullName=http://schemas.devexpress.com/winfx/2008/xaml/grid.TableView}" TargetType="{x:Type dxg:TableView}">
+                    <Setter Property="CheckBoxSelectorColumnWidth" Value="30" />
+                    <Style.Triggers>
+                      <Trigger Property="dx:ThemeManager.IsTouchlineTheme" Value="True">
+                        <Setter Property="CheckBoxSelectorColumnWidth" Value="60" />
+                      </Trigger>
+                      <Trigger Property="dx:ThemeManager.IsTouchEnabled" Value="True">
+                        <Setter Property="CheckBoxSelectorColumnWidth" Value="60" />
+                      </Trigger>
+                    </Style.Triggers>
+                  </Style>
+                </dxg:TableView.Style>
+              </dxg:TableView>
+            </dxg:GridControl.View>
+            <dxg:GridControl.Resources>
+              <Style x:Key="{dxdst:DefaultStyleThemeKey FullName=http://schemas.devexpress.com/winfx/2008/xaml/grid.GridColumn}" TargetType="{x:Type dxg:GridColumn}">
+                <Style.Triggers>
+                  <Trigger Property="FieldName" Value="{x:Static dxg:TableView.CheckBoxSelectorColumnName}">
+                    <Setter Property="CellStyle">
+                      <Setter.Value>
+                        <Style x:Key="{dxdst:DefaultStyleThemeKey FullName=http://schemas.devexpress.com/winfx/2008/xaml/grid.LightweightCellEditor}" TargetType="{x:Type dxg:LightweightCellEditor}">
+                          <Setter Property="BorderBrush" Value="Transparent" />
+                        </Style>
+                      </Setter.Value>
+                    </Setter>
+                  </Trigger>
+                </Style.Triggers>
+              </Style>
+            </dxg:GridControl.Resources>
+          </dxg:GridControl>
+          <ControlTemplate.Triggers>
+            <DataTrigger Binding="{Binding Path=(dxgn:GanttControl.ActiveView).EditFormShowMode, RelativeSource={RelativeSource Self}}" Value="None">
+              <Setter TargetName="PART_GridControl" Property="ItemsSource" Value="{Binding RowData.EditableResourceLinks}" />
+            </DataTrigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+</ResourceDictionary>

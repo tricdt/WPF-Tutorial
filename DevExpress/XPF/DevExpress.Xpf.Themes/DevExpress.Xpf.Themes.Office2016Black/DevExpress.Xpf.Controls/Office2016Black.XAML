@@ -1,0 +1,18 @@
+﻿<ResourceDictionary mc:Ignorable="cs" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:cs="colorscheme_ignorable_uri" xmlns:dxdst="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ResourceDictionary.MergedDictionaries>
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016Black.v24.1;component/DevExpress.Xpf.Controls/WindowsUI/Office2016Black/FadingButton.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016Black.v24.1;component/DevExpress.Xpf.Controls/WindowsUI/Office2016Black/FlipView.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016Black.v24.1;component/DevExpress.Xpf.Controls/WindowsUI/Office2016Black/PageView.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016Black.v24.1;component/DevExpress.Xpf.Controls/WindowsUI/Office2016Black/SlideView.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016Black.v24.1;component/DevExpress.Xpf.Controls/WindowsUI/Office2016Black/CommandButton.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016Black.v24.1;component/DevExpress.Xpf.Controls/WindowsUI/Office2016Black/AppBar.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016Black.v24.1;component/DevExpress.Xpf.Controls/WindowsUI/Office2016Black/MessageBox.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016Black.v24.1;component/DevExpress.Xpf.Controls/WindowsUI/Office2016Black/Flyout.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016Black.v24.1;component/DevExpress.Xpf.Controls/WindowsUI/Office2016Black/TouchNavigator.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016Black.v24.1;component/DevExpress.Xpf.Controls/WindowsUI/Office2016Black/TileNavPane.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016Black.v24.1;component/DevExpress.Xpf.Controls/WindowsUI/Office2016Black/HamburgerMenu.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016Black.v24.1;component/DevExpress.Xpf.Controls/WindowsUI/Office2016Black/BreadcrumbControl.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016Black.v24.1;component/DevExpress.Xpf.Controls/Wizard/Office2016Black/Colors.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016Black.v24.1;component/DevExpress.Xpf.Controls/Office2016Black/StepProgressBar.xaml" />
+  </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

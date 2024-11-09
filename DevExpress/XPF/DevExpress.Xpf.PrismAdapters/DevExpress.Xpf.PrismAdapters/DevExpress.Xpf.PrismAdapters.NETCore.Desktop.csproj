@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <ProjectGuid>{ADC07F7F-EA41-0D5D-0437-E438FD0BCBA2}</ProjectGuid>
+    <EnableDefaultItems>False</EnableDefaultItems>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWPF>True</UseWPF>
+    <UseWindowsForms>True</UseWindowsForms>
+    <Configurations>Debug;Release</Configurations>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <AppendTargetFrameworkToOutputPath>False</AppendTargetFrameworkToOutputPath>
+    <EmbeddedResourceUseDependentUponConvention>False</EmbeddedResourceUseDependentUponConvention>
+    <RootNamespace>DevExpress.Xpf.PrismAdapters</RootNamespace>
+    <AssemblyName>DevExpress.Xpf.PrismAdapters.v24.1</AssemblyName>
+    <LangVersion>6</LangVersion>
+    <FileAlignment>512</FileAlignment>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <OutputType>Library</OutputType>
+    <IntermediateOutputPath>obj.NCD</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <ErrorReport>prompt</ErrorReport>
+    <OutputPath>..\..\..\..\Bin\NetCore\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <ErrorReport>prompt</ErrorReport>
+    <OutputPath>..\..\..\..\Bin\NetCore\</OutputPath>
+    <DefineConstants>TRACE;</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.Desktop.v24.1">
+      <HintPath>..\..\..\..\Bin\NetCore\DevExpress.Data.Desktop.v24.1.dll</HintPath>
+    <Private>False</Private></Reference>
+    <Reference Include="DevExpress.Data.v24.1">
+      <HintPath>..\..\..\..\Bin\NetCore\DevExpress.Data.v24.1.dll</HintPath>
+    <Private>False</Private></Reference>
+    <Reference Include="DevExpress.Mvvm.v24.1">
+      <HintPath>..\..\..\..\Bin\NetCore\DevExpress.Mvvm.v24.1.dll</HintPath>
+    <Private>False</Private></Reference>
+    <Reference Include="DevExpress.Xpf.Controls.v24.1">
+      <HintPath>..\..\..\..\Bin\NetCore\DevExpress.Xpf.Controls.v24.1.dll</HintPath>
+    <Private>False</Private></Reference>
+    <Reference Include="DevExpress.Xpf.Core.v24.1">
+      <HintPath>..\..\..\..\Bin\NetCore\DevExpress.Xpf.Core.v24.1.dll</HintPath>
+    <Private>False</Private></Reference>
+    <Reference Include="DevExpress.Xpf.Docking.v24.1">
+      <HintPath>..\..\..\..\Bin\NetCore\DevExpress.Xpf.Docking.v24.1.dll</HintPath>
+    <Private>False</Private></Reference>
+    <Reference Include="DevExpress.Xpf.NavBar.v24.1">
+      <HintPath>..\..\..\..\Bin\NetCore\DevExpress.Xpf.NavBar.v24.1.dll</HintPath>
+    <Private>False</Private></Reference>
+    <Reference Include="DevExpress.Xpf.Layout.v24.1.Core">
+      <HintPath>..\..\..\..\Bin\NetCore\DevExpress.Xpf.Layout.v24.1.Core.dll</HintPath>
+    <Private>False</Private></Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Prism601\CommonAdapters.cs" />
+    <Compile Include="Prism601\DockingAdapters.cs" />
+    <Compile Include="DXRegionManager\DXDelayedRegionCreationBehavior.cs" />
+    <Compile Include="DXRegionManager\DXRegionManager.cs" />
+    <Compile Include="Prism601\DXTabControlAdapter.cs" />
+    <Compile Include="Prism601\NavBarAdapters.cs" />
+    <Compile Include="Prism601\ContentControlAdapter.cs" />
+    <Compile Include="Prism601\NavigationFrameAdapter.cs" />
+    <Compile Include="Prism800\CommonAdapters.cs" />
+    <Compile Include="Prism800\ContentControlAdapter.cs" />
+    <Compile Include="Prism800\DockingAdapters.cs" />
+    <Compile Include="Prism800\DXTabControlAdapter.cs" />
+    <Compile Include="Prism800\NavBarAdapters.cs" />
+    <Compile Include="Prism800\NavigationFrameAdapter.cs" />
+    <Compile Include="Prism710\CommonAdapters.cs" />
+    <Compile Include="Prism710\ContentControlAdapter.cs" />
+    <Compile Include="Prism710\DockingAdapters.cs" />
+    <Compile Include="Prism710\DXTabControlAdapter.cs" />
+    <Compile Include="Prism710\NavBarAdapters.cs" />
+    <Compile Include="Prism710\NavigationFrameAdapter.cs" />
+    <Compile Include="RuntimeWrappers\Prism5RuntimeWrappers.partial.cs" />
+    <Compile Include="RuntimeWrappers\Prism5RuntimeWrappers.cs" />
+    <Compile Include="RuntimeWrappers\Prism800RuntimeWrappers.partial.cs" />
+    <Compile Include="RuntimeWrappers\Prism710RuntimeWrappers.partial.cs" />
+    <Compile Include="RuntimeWrappers\Prism601RuntimeWrappers.partial.cs" />
+    <Compile Include="RuntimeWrappers\Prism601RuntimeWrappers.cs" />
+    <Compile Include="PrismAdapterFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RuntimeWrappers\Prism710RuntimeWrappers.cs" />
+    <Compile Include="RuntimeWrappers\Prism800RuntimeWrappers.cs" />
+  </ItemGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

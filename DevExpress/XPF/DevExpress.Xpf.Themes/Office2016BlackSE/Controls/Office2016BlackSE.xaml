@@ -1,0 +1,18 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:dxt="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys">
+  <ResourceDictionary.MergedDictionaries>
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016BlackSE.v24.1;component/Controls/WindowsUI/Office2016BlackSE/FadingButton.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016BlackSE.v24.1;component/Controls/WindowsUI/Office2016BlackSE/FlipView.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016BlackSE.v24.1;component/Controls/WindowsUI/Office2016BlackSE/PageView.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016BlackSE.v24.1;component/Controls/WindowsUI/Office2016BlackSE/SlideView.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016BlackSE.v24.1;component/Controls/WindowsUI/Office2016BlackSE/CommandButton.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016BlackSE.v24.1;component/Controls/WindowsUI/Office2016BlackSE/AppBar.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016BlackSE.v24.1;component/Controls/WindowsUI/Office2016BlackSE/Flyout.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016BlackSE.v24.1;component/Controls/WindowsUI/Office2016BlackSE/TouchNavigator.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016BlackSE.v24.1;component/Controls/WindowsUI/Office2016BlackSE/TileNavPane.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016BlackSE.v24.1;component/Controls/WindowsUI/Office2016BlackSE/HamburgerMenu.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016BlackSE.v24.1;component/Controls/WindowsUI/Office2016BlackSE/BreadcrumbControl.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016BlackSE.v24.1;component/Controls/Wizard/Office2016BlackSE/UICore.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016BlackSE.v24.1;component/Controls/Office2016BlackSE/StepProgressBar.xaml" />
+  </ResourceDictionary.MergedDictionaries>
+  <!-- General -->
+</ResourceDictionary>

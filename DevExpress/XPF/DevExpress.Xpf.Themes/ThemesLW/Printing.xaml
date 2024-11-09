@@ -1,0 +1,64 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+    xmlns:dxi="http://schemas.devexpress.com/winfx/2008/xaml/core/internal"
+    xmlns:dxp="http://schemas.devexpress.com/winfx/2008/xaml/printing"
+    xmlns:pcb="http://schemas.devexpress.com/winfx/2008/xaml/printing/bars"
+    xmlns:dxpn="http://schemas.devexpress.com/winfx/2008/xaml/printing/native"
+    xmlns:dxpp="http://schemas.devexpress.com/winfx/2008/xaml/printing/parameters">
+
+    <ResourceDictionary.MergedDictionaries>
+        <dxi:ThemeResourceDictionary Path="Printing\Printing.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Printing.BackstagePrintPreview'}" BasedOn="{StaticResource BackstagePrintPreview.DefaultStyleBase}" TargetType="{x:Type dxp:BackstagePrintPreview}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Printing.PreviewControl.Native.Editing.CharacterCombEdit'}" BasedOn="{StaticResource CharacterCombEdit.DefaultStyleBase}" TargetType="{x:Type dxpn:CharacterCombEdit}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Printing.Native.DateRangeControl'}" BasedOn="{StaticResource DateRangeControl.DefaultStyleBase}" TargetType="{x:Type dxpn:DateRangeControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Printing.Native.DateRangeEdit'}" BasedOn="{StaticResource DateRangeEdit.DefaultStyleBase}" TargetType="{x:Type dxpn:DateRangeEdit}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Printing.DocumentPreview'}" BasedOn="{StaticResource DocumentPreview.DefaultStyleBase}" TargetType="{x:Type dxp:DocumentPreview}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Printing.DocumentPreviewBarManagerController'}" BasedOn="{StaticResource DocumentPreviewBarManagerController.DefaultStyleBase}" TargetType="{x:Type dxp:DocumentPreviewBarManagerController}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Printing.Native.LobControl'}" BasedOn="{StaticResource LobControl.DefaultStyleBase}" TargetType="{x:Type dxpn:LobControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Printing.Native.WinImageEdit'}" BasedOn="{StaticResource WinImageEdit.DefaultStyleBase}" TargetType="{x:Type dxpn:WinImageEdit}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Printing.DocumentViewer'}" BasedOn="{StaticResource DocumentViewer.DefaultStyleBase}" TargetType="{x:Type dxp:DocumentViewer}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Printing.PreviewControl.Native.Editing.BrickImageEdit'}" BasedOn="{StaticResource BrickImageEdit.DefaultStyleBase}" TargetType="dxpn:BrickImageEdit" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Printing.NavigationPaneControl'}" BasedOn="{StaticResource NavigationPaneControl.DefaultStyleBase}" TargetType="{x:Type dxp:NavigationPaneControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Printing.PreviewControl.Bars.DocumentPreviewBarButtonItem'}" BasedOn="{StaticResource DocumentPreviewBarButtonItem.DefaultStyleBase}" TargetType="{x:Type pcb:DocumentPreviewBarButtonItem}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Printing.PreviewControl.Bars.DocumentPreviewBarSubItem'}" BasedOn="{StaticResource DocumentPreviewBarSubItem.DefaultStyleBase}" TargetType="{x:Type pcb:DocumentPreviewBarSubItem}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Printing.PreviewControl.Bars.DocumentPreviewBarCheckItem'}" BasedOn="{StaticResource DocumentPreviewBarCheckItem.DefaultStyleBase}" TargetType="{x:Type pcb:DocumentPreviewBarCheckItem}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Printing.PreviewControl.Bars.PageLayoutBarSubItem'}" BasedOn="{StaticResource PageLayoutBarSubItem.DefaultStyleBase}" TargetType="{x:Type pcb:PageLayoutBarSubItem}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Printing.PreviewControl.Bars.SelectToolBarItem'}" BasedOn="{StaticResource SelectToolBarItem.DefaultStyleBase}" TargetType="{x:Type pcb:SelectToolBarItem}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Printing.PreviewControl.Bars.HandToolBarItem'}" BasedOn="{StaticResource HandToolBarItem.DefaultStyleBase}" TargetType="{x:Type pcb:HandToolBarItem}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Printing.PreviewControl.Bars.PageNumberEditItem'}" BasedOn="{StaticResource PageNumberEditItem.DefaultStyleBase}" TargetType="{x:Type pcb:PageNumberEditItem}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Printing.PreviewControl.Bars.ExportSplitItem'}" BasedOn="{StaticResource ExportSplitItem.DefaultStyleBase}" TargetType="{x:Type pcb:ExportSplitItem}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Printing.PreviewControl.Bars.ZoomFactorEditItem'}" BasedOn="{StaticResource ZoomFactorEditItem.DefaultStyleBase}" TargetType="{x:Type pcb:ZoomFactorEditItem}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Printing.PreviewControl.Bars.ProgressEditItem'}" BasedOn="{StaticResource ProgressEditItem.DefaultStyleBase}" TargetType="{x:Type pcb:ProgressEditItem}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Printing.PreviewControl.Bars.StopPageBuildItem'}" BasedOn="{StaticResource StopPageBuildItem.DefaultStyleBase}" TargetType="{x:Type pcb:StopPageBuildItem}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Printing.PreviewControl.Native.ThumbnailPageControlItem'}" BasedOn="{StaticResource ThumbnailPageControlItem.DefaultStyleBase}" TargetType="{x:Type dxpn:ThumbnailPageControlItem}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Printing.PreviewControl.Native.ThumbnailsViewerControl'}" BasedOn="{StaticResource ThumbnailsViewerControl.DefaultStyleBase}" TargetType="{x:Type dxpn:ThumbnailsViewerControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Printing.PreviewControl.Native.ThumbnailsPresenterControl'}" BasedOn="{StaticResource ThumbnailsPresenterControl.DefaultStyleBase}" TargetType="{x:Type dxpn:ThumbnailsPresenterControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Printing.PreviewControl.Native.ThumbnailsPageSelector'}" BasedOn="{StaticResource ThumbnailsPageSelector.DefaultStyleBase}" TargetType="{x:Type dxpn:ThumbnailsPageSelector}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Printing.PreviewControl.Native.DocumentMap'}" BasedOn="{StaticResource DocumentMap.DefaultStyleBase}" TargetType="{x:Type dxpn:DocumentMap}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Printing.PreviewPageControlItem'}" BasedOn="{StaticResource PreviewPageControlItem.DefaultStyleBase}" TargetType="{x:Type dxp:PreviewPageControlItem}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Printing.PreviewControl.Native.SelectionCanvas'}" BasedOn="{StaticResource SelectionCanvas.DefaultStyleBase}" TargetType="{x:Type dxpn:SelectionCanvas}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Printing.PreviewControl.Native.PageSelector'}" BasedOn="{StaticResource PageSelector.DefaultStyleBase}" TargetType="{x:Type dxpn:PageSelector}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Printing.DocumentPresenterControl'}" BasedOn="{StaticResource DocumentPresenterControl.DefaultStyleBase}" TargetType="{x:Type dxp:DocumentPresenterControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Printing.DocumentPreviewControl'}" BasedOn="{StaticResource DocumentPreviewControl.DefaultStyleBase}" TargetType="{x:Type dxp:DocumentPreviewControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Printing.PreviewControl.Native.PageMarginsEditor'}" BasedOn="{StaticResource PageMarginsEditor.DefaultStyleBase}" TargetType="{x:Type dxpn:PageMarginsEditor}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Printing.PreviewControl.Native.MarginThumb'}" BasedOn="{StaticResource MarginThumb.DefaultStyleBase}" TargetType="{x:Type dxpn:MarginThumb}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Printing.Parameters.ParametersPanel'}" BasedOn="{StaticResource ParametersPanel.DefaultStyleBase}" TargetType="dxpp:ParametersPanel" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Printing.Parameters.ParameterLineLayout'}" BasedOn="{StaticResource ParameterLineLayout.DefaultStyleBase}" TargetType="dxpp:ParameterLineLayout" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Printing.DocumentPreviewRibbonController'}" BasedOn="{StaticResource DocumentPreviewRibbonController.DefaultStyleBase}" TargetType="{x:Type dxp:DocumentPreviewRibbonController}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Printing.Native.ScrollablePageView'}" BasedOn="{StaticResource ScrollablePageView.DefaultStyleBase}" TargetType="dxpn:ScrollablePageView" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Printing.RibbonDocumentPreview'}" BasedOn="{StaticResource RibbonDocumentPreview.DefaultStyleBase}" TargetType="{x:Type dxp:RibbonDocumentPreview}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Printing.Native.PdfSecurityOptionsControl'}" BasedOn="{StaticResource PdfSecurityOptionsControl.DefaultStyleBase}" TargetType="dxpn:PdfSecurityOptionsControl" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Printing.Native.WatermarkControl'}" BasedOn="{StaticResource WatermarkControl.DefaultStyleBase}" TargetType="dxpn:WatermarkControl" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Printing.Native.PopupWinImageEdit'}" BasedOn="{StaticResource PopupWinImageEdit.DefaultStyleBase}" TargetType="{x:Type dxpn:PopupWinImageEdit}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Printing.Native.OverlayWindow'}" BasedOn="{StaticResource OverlayWindow.DefaultStyleBase}" TargetType="dxpn:OverlayWindow" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Printing.Native.PreviewSurface'}" BasedOn="{StaticResource PreviewSurface.DefaultStyleBase}" TargetType="{x:Type dxpn:PreviewSurface}" />
+
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Printing.Native.PageBorderControl'}" BasedOn="{StaticResource PageBorderControl.DefaultStyle}" TargetType="{x:Type dxpn:PageBorderControl}" />
+
+
+</ResourceDictionary>

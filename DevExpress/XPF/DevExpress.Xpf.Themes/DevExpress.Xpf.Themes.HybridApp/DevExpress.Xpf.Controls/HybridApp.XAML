@@ -1,0 +1,21 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:dxdst="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.HybridApp.v24.1;component/DevExpress.Xpf.Controls/WindowsUI/HybridApp/FadingButton.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.HybridApp.v24.1;component/DevExpress.Xpf.Controls/WindowsUI/HybridApp/FlipView.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.HybridApp.v24.1;component/DevExpress.Xpf.Controls/WindowsUI/HybridApp/PageView.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.HybridApp.v24.1;component/DevExpress.Xpf.Controls/WindowsUI/HybridApp/SlideView.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.HybridApp.v24.1;component/DevExpress.Xpf.Controls/WindowsUI/HybridApp/CommandButton.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.HybridApp.v24.1;component/DevExpress.Xpf.Controls/WindowsUI/HybridApp/AppBar.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.HybridApp.v24.1;component/DevExpress.Xpf.Controls/WindowsUI/HybridApp/MessageBox.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.HybridApp.v24.1;component/DevExpress.Xpf.Controls/WindowsUI/HybridApp/Flyout.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.HybridApp.v24.1;component/DevExpress.Xpf.Controls/WindowsUI/HybridApp/TouchNavigator.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.HybridApp.v24.1;component/DevExpress.Xpf.Controls/WindowsUI/HybridApp/TileNavPane.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.HybridApp.v24.1;component/DevExpress.Xpf.Controls/WindowsUI/HybridApp/HamburgerMenu.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.HybridApp.v24.1;component/DevExpress.Xpf.Controls/WindowsUI/HybridApp/BreadcrumbControl.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.HybridApp.v24.1;component/DevExpress.Xpf.Controls/Wizard/HybridApp/Colors.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+</ResourceDictionary>

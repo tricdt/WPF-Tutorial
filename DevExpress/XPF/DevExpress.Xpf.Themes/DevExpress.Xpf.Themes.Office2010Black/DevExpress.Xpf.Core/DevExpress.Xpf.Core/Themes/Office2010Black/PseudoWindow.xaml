@@ -1,0 +1,661 @@
+﻿<ResourceDictionary mc:Ignorable="cs"
+                    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:cs="colorscheme_ignorable_uri"
+                    xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/core"
+                    xmlns:dxt="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys"
+                    xmlns:input="clr-namespace:System.Windows.Input;assembly=PresentationCore"
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/DevExpress.Xpf.Themes.Office2010Black.v24.1;component/DevExpress.Xpf.Core/DevExpress.Xpf.Core/Themes/Generic/PseudoWindow.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+    <!--InactiveHeaderOpacity-->
+
+    <sys:Double x:Key="{dxt:DXWindowThemeKey ResourceKey=InactiveHeaderOpacity}">0.6</sys:Double>
+
+    <!--Thickness-->
+
+    <Thickness x:Key="{dxt:DXWindowThemeKey ResourceKey=ResizeBorderThickness}">9</Thickness>
+
+    <Thickness x:Key="{dxt:DXWindowThemeKey ResourceKey=BorderEffectOffset}">32</Thickness>
+
+    <Thickness x:Key="{dxt:DXWindowThemeKey ResourceKey=BorderEffectLeftMargins}">0, 80, 0, 80</Thickness>
+
+    <Thickness x:Key="{dxt:DXWindowThemeKey ResourceKey=BorderEffectRightMargins}">0, 80, 0, 80</Thickness>
+
+    <Thickness x:Key="{dxt:DXWindowThemeKey ResourceKey=BorderEffectTopMargins}">0</Thickness>
+
+    <Thickness x:Key="{dxt:DXWindowThemeKey ResourceKey=BorderEffectBottomMargins}">0</Thickness>
+
+    <Thickness x:Key="{dxt:DXWindowThemeKey ResourceKey=SizeGripMargin}">7,0,7,7</Thickness>
+
+    <sys:Double x:Key="{dxt:DXWindowThemeKey ResourceKey=FloatingContainerClipCornerRadius}">0</sys:Double>
+
+    <Thickness x:Key="{dxt:DXWindowThemeKey ResourceKey=FloatingContainerBodyMargin}">6,0,6,6</Thickness>
+
+    <Thickness x:Key="{dxt:DXWindowThemeKey ResourceKey=FloatingContainerBorderPadding}">1</Thickness>
+
+    <Thickness x:Key="{dxt:FloatingContainerThemeKey ResourceKey=FloatingContainerHeaderDockMargin}">0</Thickness>
+
+    <Thickness x:Key="{dxt:FloatingContainerThemeKey ResourceKey=HeaderItemsControlMargin}">0</Thickness>
+
+    <!--Brushes-->
+
+    <SolidColorBrush x:Key="{dxt:DXWindowThemeKey ResourceKey=BorderEffectActiveColor}"
+                     Color="#FF000000"
+                     cs:Name="SolidColorBrush_0001"
+                     cs:Office2010Blue.Color="#FF000000"
+                     cs:Office2010Silver.Color="#FF000000"/>
+
+    <SolidColorBrush x:Key="{dxt:DXWindowThemeKey ResourceKey=BorderEffectInactiveColor}"
+                     Color="#FF000000"
+                     cs:Name="SolidColorBrush_0002"
+                     cs:Office2010Blue.Color="#FF000000"
+                     cs:Office2010Silver.Color="#FF000000"/>
+
+    <SolidColorBrush x:Key="{dxt:DXWindowThemeKey ResourceKey=FloatingContainerActiveBodyBorder}"
+                     Color="#FF484848"
+                     cs:Name="SolidColorBrush_0003"
+                     cs:Office2010Blue.Color="#FF728EAD"
+                     cs:Office2010Silver.Color="#FF80838F"/>
+
+    <SolidColorBrush x:Key="{dxt:DXWindowThemeKey ResourceKey=FloatingContainerInactiveBodyBorder}"
+                     Color="#FF777777"
+                     cs:Name="SolidColorBrush_0004"
+                     cs:Office2010Blue.Color="#FF728EAD"
+                     cs:Office2010Silver.Color="#FF80838F"/>
+
+    <SolidColorBrush x:Key="{dxt:DXWindowThemeKey ResourceKey=FloatingContainerBorder}"
+                     Color="#FF484848"
+                     cs:Name="SolidColorBrush_0005"
+                     cs:Office2010Blue.Color="#FF728EAD"
+                     cs:Office2010Silver.Color="#FF80838F"/>
+
+    <SolidColorBrush x:Key="{dxt:DXWindowThemeKey ResourceKey=FloatingContainerInactiveBorder}"
+                     Color="#FF777777"
+                     cs:Name="SolidColorBrush_0006"
+                     cs:Office2010Blue.Color="#FF728EAD"
+                     cs:Office2010Silver.Color="#FF80838F"/>
+
+    <SolidColorBrush x:Key="{dxt:DXWindowThemeKey ResourceKey=FloatingContainerBackground}"
+                     Color="#FF717171"
+                     cs:Name="SolidColorBrush_0007"
+                     cs:Office2010Blue.Color="#FFBDD0E8"
+                     cs:Office2010Silver.Color="#FFE3E6E8"/>
+
+    <SolidColorBrush x:Key="{dxt:DXWindowThemeKey ResourceKey=FloatingContainerInactiveBackground}"
+                     Color="#FF9E9E9E"
+                     cs:Name="SolidColorBrush_0008"
+                     cs:Office2010Blue.Color="#FFD5DEE8"
+                     cs:Office2010Silver.Color="#FFCED4DB"/>
+
+    <SolidColorBrush x:Key="{dxt:DXWindowThemeKey ResourceKey=InactiveHeaderBackground}"
+                     Color="#FF9E9E9E"
+                     cs:Name="SolidColorBrush_0009"
+                     cs:Office2010Blue.Color="#FFD5DEE8"
+                     cs:Office2010Silver.Color="#FFCED4DB"/>
+
+    <SolidColorBrush x:Key="{dxt:FloatingContainerThemeKey ResourceKey=FloatingContainerDefaultButtonForegroundNormalState}"
+                     Color="#FFF0F0F0"
+                     cs:Name="SolidColorBrush_0010"
+                     cs:Office2010Blue.Color="#FFF0F0F0"
+                     cs:Office2010Silver.Color="#FFF0F0F0"/>
+
+    <SolidColorBrush x:Key="{dxt:FloatingContainerThemeKey ResourceKey=FloatingContainerDefaultButtonForegroundMouseOverState}"
+                     Color="#FFFFFFFF"
+                     cs:Name="SolidColorBrush_0011"
+                     cs:Office2010Blue.Color="#FFFFFFFF"
+                     cs:Office2010Silver.Color="#FFFFFFFF"/>
+
+    <SolidColorBrush x:Key="{dxt:FloatingContainerThemeKey ResourceKey=FloatingContainerDefaultButtonForegroundPressedState}"
+                     Color="#FFFFFFFF"
+                     cs:Name="SolidColorBrush_0012"
+                     cs:Office2010Blue.Color="#FFFFFFFF"
+                     cs:Office2010Silver.Color="#FFFFFFFF"/>
+
+    <SolidColorBrush x:Key="{dxt:FloatingContainerThemeKey ResourceKey=FloatingContainerCloseButtonForegroundNormalState}"
+                     Color="#FFF0F0F0"
+                     cs:Name="SolidColorBrush_0013"
+                     cs:Office2010Blue.Color="#FFF0F0F0"
+                     cs:Office2010Silver.Color="#FFF0F0F0"/>
+
+    <SolidColorBrush x:Key="{dxt:FloatingContainerThemeKey ResourceKey=FloatingContainerCloseButtonForegroundMouseOverState}"
+                     Color="#FFFFFFFF"
+                     cs:Name="SolidColorBrush_0014"
+                     cs:Office2010Blue.Color="#FFFFFFFF"
+                     cs:Office2010Silver.Color="#FFFFFFFF"/>
+
+    <SolidColorBrush x:Key="{dxt:FloatingContainerThemeKey ResourceKey=FloatingContainerCloseButtonForegroundPressedState}"
+                     Color="#FFFFFFFF"
+                     cs:Name="SolidColorBrush_0015"
+                     cs:Office2010Blue.Color="#FFFFFFFF"
+                     cs:Office2010Silver.Color="#FFFFFFFF"/>
+
+    <!--GradientBrushes-->
+
+    <LinearGradientBrush x:Key="{dxt:DXWindowThemeKey ResourceKey=ActiveHeaderBackground}"
+                         cs:Name="LinearGradientBrush_6444"
+                         EndPoint="0.5,1"
+                         StartPoint="0.5,0">
+        <GradientStop Color="#FF797979"
+                      cs:Name="GradientStop_0023"
+                      Offset="0"
+                      cs:Office2010Blue.Color="#FFC1D4EC"
+                      cs:Office2010Silver.Color="#FFEBEDF0"
+                     />
+        <GradientStop Color="#FF717171"
+                      cs:Name="GradientStop_0024"
+                      Offset="1"
+                      cs:Office2010Blue.Color="#FFBDD0E8"
+                      cs:Office2010Silver.Color="#FFE3E6E8"
+                     />
+    </LinearGradientBrush>
+
+    <!--DragwigetTemplate-->
+
+    <ControlTemplate x:Key="{dxt:FloatingContainerThemeKey ResourceKey=FloatingContainerDragWidgetTemplate}" TargetType="{x:Type Thumb}">
+        <Border Background="Transparent"
+                cs:Name="Border_0001"
+                cs:Office2010Blue.Background="Transparent"
+                cs:Office2010Silver.Background="Transparent"
+               />
+    </ControlTemplate>
+
+    <!--SizeGripTemplate-->
+
+    <ControlTemplate x:Key="{dxt:FloatingContainerThemeKey ResourceKey=FloatingContainerSizeGripTemplate}" TargetType="{x:Type Thumb}">
+        <Grid Background="Transparent"
+              cs:Name="Grid_0001"
+              Height="12"
+              Width="12"
+              cs:Office2010Blue.Background="Transparent"
+              cs:Office2010Silver.Background="Transparent"
+             >
+            <Path cs:Name="Path_0001"
+                  Data="F1 M 309.5,217C 310.329,217 311,217.672 311,218.5C 311,219.328 310.329,220 309.5,220C 308.672,220 308,219.328 308,218.5C 308,217.672 308.672,217 309.5,217 Z M 301.5,225C 302.328,225 303,225.672 303,226.5C 303,227.329 302.328,228 301.5,228C 300.672,228 300,227.329 300,226.5C 300,225.672 300.672,225 301.5,225 Z M 309.5,221C 310.328,221 311,221.672 311,222.5C 311,223.328 310.328,224 309.5,224C 308.672,224 308,223.328 308,222.5C 308,221.672 308.672,221 309.5,221 Z M 305.5,221C 306.328,221 307,221.672 307,222.5C 307,223.328 306.328,224 305.5,224C 304.672,224 304,223.328 304,222.5C 304,221.672 304.672,221 305.5,221 Z M 309.5,225C 310.329,225 311,225.672 311,226.5C 311,227.328 310.328,228 309.5,228C 308.672,228 308,227.328 308,226.5C 308,225.672 308.672,225 309.5,225 Z M 305.5,225C 306.329,225 307,225.672 307,226.5C 307,227.328 306.329,228 305.5,228C 304.672,228 304,227.328 304,226.5C 304,225.672 304.672,225 305.5,225 Z"
+                  Fill="#FF484848"
+                  Height="11"
+                  Margin="0,0,1,1"
+                  Stretch="Fill"
+                  UseLayoutRounding="False"
+                  Width="11"
+                  cs:Office2010Blue.Fill="#FF728EAD"
+                  cs:Office2010Silver.Fill="#FF80838F"
+                 />
+            <Path cs:Name="Path_0002"
+                  Data="F1 M 310.5,218C 311.328,218 312,218.672 312,219.5C 312,220.328 311.328,221 310.5,221C 309.672,221 309,220.328 309,219.5C 309,218.672 309.672,218 310.5,218 Z M 302.5,226C 303.328,226 304,226.672 304,227.5C 304,228.329 303.328,229 302.5,229C 301.671,229 301,228.329 301,227.5C 301,226.672 301.671,226 302.5,226 Z M 310.5,222C 311.328,222 312,222.672 312,223.5C 312,224.329 311.328,225 310.5,225C 309.671,225 309,224.329 309,223.5C 309,222.672 309.671,222 310.5,222 Z M 306.5,222C 307.328,222 308,222.672 308,223.5C 308,224.328 307.328,225 306.5,225C 305.672,225 305,224.328 305,223.5C 305,222.672 305.671,222 306.5,222 Z M 310.5,226C 311.328,226 312,226.672 312,227.5C 312,228.328 311.328,229 310.5,229C 309.672,229 309,228.328 309,227.5C 309,226.672 309.672,226 310.5,226 Z M 306.5,226C 307.328,226 308,226.672 308,227.5C 308,228.328 307.328,229 306.5,229C 305.672,229 305,228.328 305,227.5C 305,226.672 305.672,226 306.5,226 Z"
+                  Fill="#7FFFFFFF"
+                  Height="11"
+                  Margin="1,1,0,0"
+                  Opacity="0.5"
+                  Stretch="Fill"
+                  UseLayoutRounding="False"
+                  Width="11"
+                  cs:Office2010Blue.Fill="#7FFFFFFF"
+                  cs:Office2010Silver.Fill="#7FFFFFFF"
+                 />
+        </Grid>
+    </ControlTemplate>
+
+    <!--CaptionTemplate-->
+
+    <DataTemplate x:Key="{dxt:FloatingContainerThemeKey ResourceKey=FloatingContainerCaptionTemplate}">
+        <Grid x:Name="Root" Height="Auto">
+            <dxc:FloatingContainerHeaderPanel>
+                <TextBlock x:Name="PART_Text"
+                           cs:Name="TextBlock_0001"
+                           Foreground="#FFF0F0F0"
+                           IsHitTestVisible="False"
+                           Margin="6,0,4,0"
+                           Text="{Binding Path=(dxc:FloatingContainer.FloatingContainer).Caption, RelativeSource={RelativeSource AncestorType=ContentPresenter}}"
+                           TextTrimming="CharacterEllipsis"
+                           VerticalAlignment="Center"
+                           cs:Office2010Blue.Foreground="#FF1E395B"
+                           cs:Office2010Silver.Foreground="#FF3C3C3C"
+                          />
+            </dxc:FloatingContainerHeaderPanel>
+        </Grid>
+    </DataTemplate>
+
+    <!--WindowBordersTemplate-->
+
+    <ControlTemplate x:Key="{dxt:DXWindowThemeKey ResourceKey=FloatingActiveBorder}">
+        <Border Background="{DynamicResource {dxt:DXWindowThemeKey ResourceKey=FloatingContainerBorder}}" Padding="{DynamicResource {dxt:DXWindowThemeKey ResourceKey=FloatingContainerBorderPadding}}">
+            <Border Background="{DynamicResource {dxt:DXWindowThemeKey ResourceKey=FloatingContainerBackground}}"/>
+        </Border>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="{dxt:DXWindowThemeKey ResourceKey=FloatingInactiveBorder}">
+        <Border Background="{DynamicResource {dxt:DXWindowThemeKey ResourceKey=FloatingContainerInactiveBorder}}" Padding="{DynamicResource {dxt:DXWindowThemeKey ResourceKey=FloatingContainerBorderPadding}}">
+            <Border Background="{DynamicResource {dxt:DXWindowThemeKey ResourceKey=FloatingContainerInactiveBackground}}"/>
+        </Border>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="{dxt:DXWindowThemeKey ResourceKey=FloatingBackground}">
+        <Border Background="{DynamicResource {dxt:DXWindowThemeKey ResourceKey=FloatingContainerActiveBodyBorder}}" Padding="1">
+            <Border Background="#FF838383"
+                    cs:Name="Border_0006"
+                    cs:Office2010Blue.Background="#FFBDD0E8"
+                    cs:Office2010Silver.Background="#FFE3E6E8"
+                   />
+        </Border>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="{dxt:DXWindowThemeKey ResourceKey=InactiveFloatingBackground}">
+        <Border Background="{DynamicResource {dxt:DXWindowThemeKey ResourceKey=FloatingContainerInactiveBodyBorder}}" Padding="1">
+            <Border Background="#FF838383"
+                    cs:Name="Border_0007"
+                    cs:Office2010Blue.Background="#FFBDD0E8"
+                    cs:Office2010Silver.Background="#FFE3E6E8"
+                   />
+        </Border>
+    </ControlTemplate>
+
+    <!--CloseButtonGlyphTemplate-->
+
+    <DataTemplate x:Key="{dxt:FloatingContainerThemeKey ResourceKey=FloatingContainerCloseButtonGlyph}">
+        <Grid x:Name="Glyph"
+              Height="9"
+              HorizontalAlignment="Center"
+              VerticalAlignment="Center"
+              Width="11">
+            <Path x:Name="Path1"
+                  cs:Name="Path_0003"
+                  Data="F1 M 137,170L 140,166.5L 137,163L 137,162L 141,162L 142.5,163.583L 144,162L 148,162L 148,163L 145,166.5L 148,170L 148,171L 144,171L 142.5,169.417L 141,171L 137,171L 137,170 Z"
+                  Fill="#FF4C4C4C"
+                  Stretch="Fill"
+                  cs:Office2010Blue.Fill="#FF728EAD"
+                  cs:Office2010Silver.Fill="#FF80838F"
+                 />
+            <Path x:Name="Path2"
+                  cs:Name="Path_0004"
+                  Data="F1 M 137,170L 140,166.5L 137,163L 137,162L 141,162L 142.5,163.583L 144,162L 148,162L 148,163L 145,166.5L 148,170L 148,171L 144,171L 142.5,169.417L 141,171L 137,171L 137,170 Z"
+                  Fill="#FF4C4C4C"
+                  Stretch="Fill"
+                  cs:Office2010Blue.Fill="#FF728EAD"
+                  cs:Office2010Silver.Fill="#FF80838F"
+                 />
+            <Path x:Name="Path3"
+                  cs:Name="Path_0005"
+                  Data="F1 M 112,158L 115,154.5L 112,151L 115,151L 116.5,152.75L 118,151L 121,151L 118,154.5L 121,158L 118,158L 116.5,156.25L 115,158L 112,158 Z"
+                  Fill="{Binding Path=(TextElement.Foreground), RelativeSource={RelativeSource Self}}"
+                  Margin="1"
+                  Stretch="Fill"/>
+        </Grid>
+    </DataTemplate>
+
+    <!--RestoreButtonGlyphTemplate-->
+
+    <DataTemplate x:Key="{dxt:FloatingContainerThemeKey ResourceKey=FloatingContainerRestoreButtonGlyph}">
+        <Grid x:Name="Glyph"
+              Height="11"
+              HorizontalAlignment="Center"
+              VerticalAlignment="Center"
+              Width="12">
+            <Path cs:Name="Path_0006"
+                  Data="F1 M 67,42L 68,41L 74,41L 75,42L 75,48L 74,49L 68,49L 68,48L 67,48L 67,42 Z M 70,45.0001L 70,46.0001L 72,46.0001L 72,45.0001L 70,45.0001 Z"
+                  Fill="#FF5C5C5C"
+                  Margin="4,0,0,3"
+                  Stretch="Fill"
+                  cs:Office2010Blue.Fill="#FF728EAD"
+                  cs:Office2010Silver.Fill="#FF80838F"
+                 />
+            <Path cs:Name="Path_0007"
+                  Data="F1 M 68,42L 74,42L 74,48L 68,48L 68,42 Z M 73,47L 73,44L 69,44L 69,47L 73,47 Z"
+                  Fill="{Binding Path=(TextElement.Foreground), RelativeSource={RelativeSource Self}}"
+                  Margin="5,1,1,4"
+                  Stretch="Fill"/>
+            <Path cs:Name="Path_0008"
+                  Data="F1 M 63,45L 64,44L 70,44L 71,45L 71,51L 70,52L 64,52L 63,51L 63,45 Z M 66,48L 66,49L 68,49L 68,48L 66,48 Z"
+                  Fill="#FF5C5C5C"
+                  Margin="0,3,4,0"
+                  Stretch="Fill"
+                  cs:Office2010Blue.Fill="#FF728EAD"
+                  cs:Office2010Silver.Fill="#FF80838F"
+                 />
+            <Path cs:Name="Path_0009"
+                  Data="F1 M 64,45L 70,45L 70,51L 64,51L 64,45 Z M 69,50L 69,47L 65,47L 65,50L 69,50 Z"
+                  Fill="#FFF0F0F0"
+                  Margin="1,4,5,1"
+                  Stretch="Fill"
+                  cs:Office2010Blue.Fill="#FFEAF0F7"
+                  cs:Office2010Silver.Fill="#FFE9EDF1"
+                 />
+        </Grid>
+    </DataTemplate>
+
+    <!--MinimizeButtonGlyphTemplate-->
+
+    <DataTemplate x:Key="{dxt:FloatingContainerThemeKey ResourceKey=FloatingContainerMinimizeButtonGlyph}">
+        <Grid x:Name="Glyph"
+              Height="9"
+              HorizontalAlignment="Center"
+              VerticalAlignment="Center"
+              Width="11">
+            <Rectangle cs:Name="Rectangle_0005"
+                       Fill="#FF5C5C5C"
+                       Height="5"
+                       RadiusX="1"
+                       RadiusY="1"
+                       StrokeThickness="0"
+                       VerticalAlignment="Bottom"
+                       Width="11"
+                       cs:Office2010Blue.Fill="#FF728EAD"
+                       cs:Office2010Silver.Fill="#FF80838F"
+                      />
+            <Rectangle cs:Name="Rectangle_0006"
+                       Fill="{Binding Path=(TextElement.Foreground), RelativeSource={RelativeSource Self}}"
+                       Height="3"
+                       Margin="0,0,0,1"
+                       StrokeThickness="0"
+                       VerticalAlignment="Bottom"
+                       Width="9"/>
+        </Grid>
+    </DataTemplate>
+
+    <!--MaximizeButtonGlyphTemplate-->
+
+    <DataTemplate x:Key="{dxt:FloatingContainerThemeKey ResourceKey=FloatingContainerMaximizeButtonGlyph}">
+        <Grid x:Name="Glyph"
+              Height="9"
+              HorizontalAlignment="Center"
+              VerticalAlignment="Center"
+              Width="11">
+            <Rectangle cs:Name="Rectangle_0001"
+                       Fill="#FF5C5C5C"
+                       Height="9"
+                       RadiusX="1"
+                       RadiusY="1"
+                       StrokeThickness="0"
+                       VerticalAlignment="Bottom"
+                       Width="11"
+                       cs:Office2010Blue.Fill="#FF728EAD"
+                       cs:Office2010Silver.Fill="#FF80838F"
+                      />
+            <Rectangle cs:Name="Rectangle_0002"
+                       Fill="{Binding Path=(TextElement.Foreground), RelativeSource={RelativeSource Self}}"
+                       Height="7"
+                       Margin="0,0,0,1"
+                       StrokeThickness="0"
+                       VerticalAlignment="Bottom"
+                       Width="9"/>
+            <Rectangle cs:Name="Rectangle_0003"
+                       Fill="#FF5C5C5C"
+                       Height="3"
+                       Margin="3"
+                       StrokeThickness="0"
+                       VerticalAlignment="Bottom"
+                       Width="5"
+                       cs:Office2010Blue.Fill="#FF728EAD"
+                       cs:Office2010Silver.Fill="#FF80838F"
+                      />
+            <Rectangle cs:Name="Rectangle_0004"
+                       Fill="#FF838383"
+                       Height="1"
+                       Margin="4"
+                       StrokeThickness="0"
+                       Width="3"
+                       cs:Office2010Blue.Fill="#FFEAF0F7"
+                       cs:Office2010Silver.Fill="#FFE9EDF1"
+                      />
+        </Grid>
+    </DataTemplate>
+
+    <!--HeaderDefaultButton Normal Background-->
+
+    <ControlTemplate x:Key="{dxt:FloatingContainerThemeKey ResourceKey=FloatingContainerDefaultButtonBackgroundNormalState}"/>
+
+    <!--HeaderCloseButton Normal Background-->
+
+    <ControlTemplate x:Key="{dxt:FloatingContainerThemeKey ResourceKey=FloatingContainerCloseButtonBackgroundNormalState}"/>
+
+    <!--HeaderDefaultButton MouseOver Background-->
+
+    <ControlTemplate x:Key="{dxt:FloatingContainerThemeKey ResourceKey=FloatingContainerDefaultButtonBackgroundMouseOverState}">
+        <Grid x:Name="HoverState">
+            <Border Background="#FF515151"
+                    CornerRadius="2"
+                    cs:Name="Border_0004"
+                    cs:Office2010Blue.Background="#FF94ADCC"
+                    cs:Office2010Silver.Background="#FFA5ACB5"
+                   >
+                <Border CornerRadius="1" Margin="1">
+                    <Border.Background>
+                        <LinearGradientBrush cs:Name="LinearGradientBrush_0291"
+                                             EndPoint="0.5,1"
+                                             StartPoint="0.5,0"
+                                            >
+                            <GradientStop Color="#FF949494"
+                                          cs:Name="GradientStop_0008"
+                                          Offset="0"
+                                          cs:Office2010Blue.Color="#FFD4E8FF"
+                                          cs:Office2010Silver.Color="#FFFFFFFF"
+                                         />
+                            <GradientStop Color="#FF777777"
+                                          cs:Name="GradientStop_0009"
+                                          Offset="1"
+                                          cs:Office2010Blue.Color="#FFBDD0E8"
+                                          cs:Office2010Silver.Color="#FFE3E6E8"
+                                         />
+                        </LinearGradientBrush>
+                    </Border.Background>
+                </Border>
+            </Border>
+        </Grid>
+    </ControlTemplate>
+
+    <!--HeaderCloseButton MouseOver Background-->
+
+    <ControlTemplate x:Key="{dxt:FloatingContainerThemeKey ResourceKey=FloatingContainerCloseButtonBackgroundMouseOverState}">
+        <Grid x:Name="HoverState">
+            <Border Background="#FF9B3D3D"
+                    CornerRadius="2"
+                    cs:Name="Border_0002"
+                    cs:Office2010Blue.Background="#FF9B3D3D"
+                    cs:Office2010Silver.Background="#FF9B3D3D"
+                   >
+                <Border CornerRadius="1" Margin="1">
+                    <Border.Background>
+                        <LinearGradientBrush cs:Name="LinearGradientBrush_0288"
+                                             EndPoint="0.5,1"
+                                             StartPoint="0.5,0"
+                                            >
+                            <GradientStop Color="#FFFF8482"
+                                          cs:Name="GradientStop_0001"
+                                          Offset="0"
+                                          cs:Office2010Blue.Color="#FFFF8482"
+                                          cs:Office2010Silver.Color="#FFFF8482"
+                                         />
+                            <GradientStop Color="#FFE46363"
+                                          cs:Name="GradientStop_0002"
+                                          Offset="1"
+                                          cs:Office2010Blue.Color="#FFE46363"
+                                          cs:Office2010Silver.Color="#FFE46363"
+                                         />
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    <Grid Margin="1">
+                        <Border>
+                            <Border.Background>
+                                <LinearGradientBrush cs:Name="LinearGradientBrush_0289"
+                                                     EndPoint="0.5,1"
+                                                     StartPoint="0.5,0"
+                                                    >
+                                    <GradientStop Color="#FFFF8482"
+                                                  cs:Name="GradientStop_0003"
+                                                  Offset="0"
+                                                  cs:Office2010Blue.Color="#FFFF8482"
+                                                  cs:Office2010Silver.Color="#FFFF8482"
+                                                 />
+                                    <GradientStop Color="#FFE46363"
+                                                  cs:Name="GradientStop_0004"
+                                                  Offset="1"
+                                                  cs:Office2010Blue.Color="#FFE46363"
+                                                  cs:Office2010Silver.Color="#FFE46363"
+                                                 />
+                                </LinearGradientBrush>
+                            </Border.Background>
+                        </Border>
+                    </Grid>
+                </Border>
+            </Border>
+        </Grid>
+    </ControlTemplate>
+
+    <!--HeaderDefaultButton Pressed Background-->
+
+    <ControlTemplate x:Key="{dxt:FloatingContainerThemeKey ResourceKey=FloatingContainerDefaultButtonBackgroundPressedState}">
+        <Grid x:Name="PressedState">
+            <Border Background="#FF515151"
+                    CornerRadius="2"
+                    cs:Name="Border_0005"
+                    cs:Office2010Blue.Background="#FF94ADCC"
+                    cs:Office2010Silver.Background="#FFA5ACB5"
+                   >
+                <Border CornerRadius="1" Margin="1">
+                    <Border.Background>
+                        <LinearGradientBrush cs:Name="LinearGradientBrush_0292"
+                                             EndPoint="0.5,1"
+                                             StartPoint="0.5,0"
+                                            >
+                            <GradientStop Color="#FF636363"
+                                          cs:Name="GradientStop_0010"
+                                          Offset="0"
+                                          cs:Office2010Blue.Color="#FFAEC2DB"
+                                          cs:Office2010Silver.Color="#FFC0C4C9"
+                                         />
+                            <GradientStop Color="#FF717171"
+                                          cs:Name="GradientStop_0011"
+                                          Offset="1"
+                                          cs:Office2010Blue.Color="#FFBBCEE6"
+                                          cs:Office2010Silver.Color="#FFDCE1E8"
+                                         />
+                            <GradientStop Color="#FF717171"
+                                          cs:Name="GradientStop_0012"
+                                          Offset="0.15"
+                                          cs:Office2010Blue.Color="#FFBBCEE6"
+                                          cs:Office2010Silver.Color="#FFDCE1E8"
+                                         />
+                        </LinearGradientBrush>
+                    </Border.Background>
+                </Border>
+            </Border>
+        </Grid>
+    </ControlTemplate>
+
+    <!--HeaderCloseButton Pressed Background-->
+
+    <ControlTemplate x:Key="{dxt:FloatingContainerThemeKey ResourceKey=FloatingContainerCloseButtonBackgroundPressedState}">
+        <Grid x:Name="PressedState">
+            <Border Background="#FF9B3D3D"
+                    CornerRadius="2"
+                    cs:Name="Border_0003"
+                    cs:Office2010Blue.Background="#FF9B3D3D"
+                    cs:Office2010Silver.Background="#FF9B3D3D"
+                   >
+                <Border CornerRadius="1" Margin="1">
+                    <Border.Background>
+                        <LinearGradientBrush cs:Name="LinearGradientBrush_0290"
+                                             EndPoint="0.5,1"
+                                             StartPoint="0.5,0"
+                                            >
+                            <GradientStop Color="#FFD86665"
+                                          cs:Name="GradientStop_0005"
+                                          Offset="0"
+                                          cs:Office2010Blue.Color="#FFD86665"
+                                          cs:Office2010Silver.Color="#FFD86665"
+                                         />
+                            <GradientStop Color="#FFF27776"
+                                          cs:Name="GradientStop_0006"
+                                          Offset="1"
+                                          cs:Office2010Blue.Color="#FFF27776"
+                                          cs:Office2010Silver.Color="#FFF27776"
+                                         />
+                            <GradientStop Color="#FFED7473"
+                                          cs:Name="GradientStop_0007"
+                                          Offset="0.25"
+                                          cs:Office2010Blue.Color="#FFE46363"
+                                          cs:Office2010Silver.Color="#FFE46363"
+                                         />
+                        </LinearGradientBrush>
+                    </Border.Background>
+                </Border>
+            </Border>
+        </Grid>
+    </ControlTemplate>
+
+    <!--WindowTemplate-->
+
+    <ControlTemplate x:Key="{dxt:FloatingContainerThemeKey ResourceKey=FloatingContainerWindowTemplate}" TargetType="{x:Type dxc:FloatingContainerControl}">
+        <dxc:FloatingWindowContainer Style="{DynamicResource {dxt:FloatingContainerThemeKey ResourceKey=FloatingContainerStyle}}"/>
+    </ControlTemplate>
+
+    <!--AdornerTemplate-->
+
+    <ControlTemplate x:Key="{dxt:FloatingContainerThemeKey ResourceKey=FloatingContainerAdornerTemplate}" TargetType="{x:Type dxc:FloatingContainerControl}">
+        <dxc:FloatingAdornerContainer Style="{DynamicResource {dxt:FloatingContainerThemeKey ResourceKey=FloatingContainerStyle}}"/>
+    </ControlTemplate>
+
+    <!--DXWindowIconStyle-->
+
+    <Style x:Key="{dxt:FloatingContainerThemeKey ResourceKey=DXWindowIconStyle}" TargetType="{x:Type Image}">
+        <Setter Property="Width" Value="16"/>
+        <Setter Property="Height" Value="16"/>
+        <Setter Property="Margin" Value="6,0,4,0"/>
+        <Setter Property="Stretch" Value="Fill"/>
+    </Style>
+
+    <!--Base HeaderItem Style-->
+
+    <Style x:Key="headerItemControlStyle"
+           BasedOn="{StaticResource headerItemControlBaseStyle}"
+           TargetType="{x:Type dxc:HeaderItemControl}">
+        <Setter Property="MinWidth" Value="31"/>
+        <Setter Property="MinHeight" Value="17"/>
+    </Style>
+
+    <!--FLOATING CONTAINER HEADER ITEMS STYLES-->
+
+    <!--HeaderButtonStyle-->
+
+    <Style x:Key="{dxt:FloatingContainerThemeKey ResourceKey=FloatingContainerHeaderButtonStyle}"
+           BasedOn="{StaticResource ResourceKey=headerItemControlStyle}"
+           TargetType="{x:Type dxc:HeaderItemControl}">
+        <Setter Property="Width" Value="31"/>
+        <Setter Property="Height" Value="17"/>
+        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+        <Setter Property="VerticalContentAlignment" Value="Stretch"/>
+    </Style>
+
+    <!--HeaderCloseButtonStyle-->
+
+    <Style x:Key="{dxt:FloatingContainerThemeKey ResourceKey=FloatingContainerHeaderCloseButtonStyle}"
+           BasedOn="{StaticResource ResourceKey={dxt:FloatingContainerThemeKey ResourceKey=FloatingContainerHeaderButtonStyle}}"
+           TargetType="{x:Type dxc:HeaderItemControl}">
+        <Setter Property="TemplateProvider" Value="{Binding Path=(dxc:HeaderItemControl.CloseTemplateProvider), RelativeSource={RelativeSource Self}}"/>
+    </Style>
+
+    <!--THEMEDWINDOW HEADER ITEMS STYLES-->
+
+    <!--HeaderButtonStyle-->
+
+    <Style x:Key="{dxt:ThemedWindowHeaderItemsThemeKey ResourceKey=HeaderButtonStyle}"
+           BasedOn="{StaticResource ResourceKey=headerItemControlStyle}"
+           TargetType="{x:Type dxc:HeaderItemControl}">
+        <Setter Property="Width" Value="31"/>
+        <Setter Property="Height" Value="17"/>
+        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+        <Setter Property="VerticalContentAlignment" Value="Stretch"/>
+    </Style>
+
+    <!--HeaderCloseButtonStyle-->
+
+    <Style x:Key="{dxt:ThemedWindowHeaderItemsThemeKey ResourceKey=HeaderCloseButtonStyle}"
+           BasedOn="{StaticResource ResourceKey={dxt:ThemedWindowHeaderItemsThemeKey ResourceKey=HeaderButtonStyle}}"
+           TargetType="{x:Type dxc:HeaderItemControl}">
+    </Style>
+
+</ResourceDictionary>

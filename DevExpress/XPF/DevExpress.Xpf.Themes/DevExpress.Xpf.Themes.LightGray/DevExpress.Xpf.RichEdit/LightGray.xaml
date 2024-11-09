@@ -1,0 +1,27 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+                    xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+                    xmlns:dxec="clr-namespace:DevExpress.Xpf.Editors.Controls;assembly=DevExpress.Xpf.Core.v24.1"
+                    xmlns:dxre="http://schemas.devexpress.com/winfx/2008/xaml/richedit"
+                    xmlns:dxrec="http://schemas.devexpress.com/winfx/2008/xaml/richedit/internal"
+                    xmlns:dxreui="http://schemas.devexpress.com/winfx/2008/xaml/richedit"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+                    xmlns:util="http://schemas.devexpress.com/winfx/2008/xaml/richedit/internal"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!--BEGIN WPF-->
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/DevExpress.Xpf.Themes.LightGray.v24.1;component/DevExpress.Xpf.RichEdit/LightGray/PageNumberWindow.xaml"/>
+        <ResourceDictionary Source="/DevExpress.Xpf.Themes.LightGray.v24.1;component/DevExpress.Xpf.RichEdit/LightGray/XpfRichEditFlowSelection.xaml"/>
+        <ResourceDictionary Source="/DevExpress.Xpf.Themes.LightGray.v24.1;component/DevExpress.Xpf.RichEdit/LightGray/XpfRichEditSizerSelection.xaml"/>
+        <ResourceDictionary Source="/DevExpress.Xpf.Themes.LightGray.v24.1;component/DevExpress.Xpf.RichEdit/LightGray/RichEditViewPage.xaml"/>
+        <ResourceDictionary Source="/DevExpress.Xpf.Themes.LightGray.v24.1;component/DevExpress.Xpf.RichEdit/LightGray/Ruler.xaml"/>
+        <ResourceDictionary Source="/DevExpress.Xpf.Themes.LightGray.v24.1;component/DevExpress.Xpf.RichEdit/LightGray/RichEditControl.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+    <!--END WPF-->
+
+</ResourceDictionary>
+
+    

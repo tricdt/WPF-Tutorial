@@ -1,0 +1,65 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+    xmlns:dxi="http://schemas.devexpress.com/winfx/2008/xaml/core/internal"
+    xmlns:dxt="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys"
+    xmlns:dxgnt="http://schemas.devexpress.com/winfx/2008/xaml/gantt/themekeys"
+    xmlns:dxgni="http://schemas.devexpress.com/winfx/2008/xaml/gantt/internal"
+    xmlns:cs="colorscheme_ignorable_uri">
+    <ResourceDictionary.MergedDictionaries>
+        <dxi:PaletteResourceDictionary />
+    </ResourceDictionary.MergedDictionaries>
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttControl.RowSelectedBackground}" Color="{StaticResource Color.SelectionBackground}" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttControl.RowFadeSelectionBackground}" Color="{StaticResource Color.Item.FadeSelection}" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey Timescale.TickBrush}" Color="{StaticResource Color.Border}" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey Timescale.BorderBrush}" Color="{StaticResource Color.Border}" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttItems.TaskBrush}" Color="{dx:LWColor 'Win10Dark=Color.FocusedBorder, Win10Light=Color.Focused'}" Opacity="0.62" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttItems.TaskProgressBrush}" Color="{StaticResource Color.Focused}" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttItems.TaskCriticalPathBrush}" Color="{StaticResource Color.Custom.Red}" Opacity="0.62" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttItems.TaskCriticalPathProgressBrush}" Color="{StaticResource Color.Custom.Red}" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttItems.TaskForeground}" Color="{StaticResource Color.Foreground}" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttItems.SummaryTaskBrush}" Color="{dx:LWColor 'Win10Dark=Color.FocusedBorder, Win10Light=Color.Focused'}" Opacity="0.62" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttItems.SummaryTaskProgressBrush}" Color="{StaticResource Color.Focused}" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttItems.SummaryTaskForeground}" Color="{StaticResource Color.Foreground}" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttItems.SummaryTaskBracketBrush}" Color="{StaticResource Color.Foreground}" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttItems.MilestoneBrush}" Color="{StaticResource Color.Focused}" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttItems.MilestoneCriticalPathBrush}" Color="{StaticResource Color.Custom.Red}" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttItems.TaskBaselineBrush}" Color="{StaticResource Color.Backstage.Delimiter}" Opacity="0.62" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttItems.SummaryTaskBaselineBrush}" Color="{StaticResource Color.Backstage.Delimiter}" Opacity="0.62" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttItems.MilestoneBaselineBrush}" Color="{StaticResource Color.Backstage.Delimiter}" Opacity="0.62" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttItems.MilestoneBaselineBorderBrush}" Color="{StaticResource Color.Backstage.Delimiter}" Opacity="0.62" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttItems.TaskPreviewBrush}" Color="{StaticResource Color.Focused}" Opacity="0.62" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttItems.TaskPreviewBorderBrush}" Color="{StaticResource Color.Focused}" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttItems.SummaryTaskPreviewBrush}" Color="{StaticResource Color.Focused}" Opacity="0.62" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttItems.SummaryTaskPreviewBorderBrush}" Color="{StaticResource Color.Focused}" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttItems.MilestonePreviewBrush}" Color="{StaticResource Color.Focused}" Opacity="0.52" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttItems.MilestonePreviewBorderBrush}" Color="{StaticResource Color.Focused}" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttControl.SplitterBorderBrush}" Color="{StaticResource Color.Border}" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttControl.SplitterBackground}" Color="{StaticResource Color.Control.Background}" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttControl.RowBackground}" Color="{StaticResource Color.Editor.Background}" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttItems.ConnectorStroke}" Color="{StaticResource Color.Focused}" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttItems.ConnectorHighlightedShadowBrush}" Color="{StaticResource Color.Focused}" Opacity="0.32" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttItems.InvalidConnectorStroke}" Color="#FFFF0000" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttItems.InvalidConnectorHighlightedShadowBrush}" Color="#30FF0000" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttItems.ConnectorCriticalPathStroke}" Color="{StaticResource Color.Custom.Red}" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttItems.CriticalPathConnectorHighlightedShadowBrush}" Color="{StaticResource Color.Custom.Red}" Opacity="0.32" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttItems.NonworkingTimeBrush}" Color="{dx:LWColor 'Win10Dark=Color.AltBorder, Win10Light=Color.Delimiter'}" Opacity="0.25" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttItems.GroupHighlightBrush}" Color="{StaticResource Color.Focused}" Opacity="0.16" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttControl.StripLineBackground}" Color="#FF76A797" Opacity="0.25" />
+    <SolidColorBrush x:Key="{dxgnt:LWKey GanttControl.CurrentDateTimeStripLineBackground}" Color="#FFD86344" />
+    <sys:Double x:Key="{dxgnt:LWKey GanttControl.RowIndent}">12</sys:Double>
+    <sys:Double x:Key="{dxgnt:LWKey Timescale.MinHeight}">21</sys:Double>
+    <sys:Double x:Key="{dxgnt:LWKey Timescale.TickHeight}">9</sys:Double>
+    <dxgni:GanttResourcePalette x:Key="{dxgnt:LWKey GanttControl.ResourcePalette}">
+        #FFDA0C0C,
+        #FF0A754E,
+        #FFFD4700,
+        #FF2D6905,
+        #FF095E9F,
+        #FF6247AC,
+        #FF108195,
+        #FFA03583
+    </dxgni:GanttResourcePalette>
+</ResourceDictionary>

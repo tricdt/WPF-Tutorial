@@ -1,0 +1,18 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+    xmlns:dxi="http://schemas.devexpress.com/winfx/2008/xaml/core/internal"
+    xmlns:dxee="http://schemas.devexpress.com/winfx/2008/xaml/expressioneditor"
+    xmlns:dxeen="http://schemas.devexpress.com/winfx/2008/xaml/expressioneditor/internal">
+
+    <ResourceDictionary.MergedDictionaries>
+        <dxi:ThemeResourceDictionary Path="ExpressionEditor\Generic.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.ExpressionEditor.Native.FieldsPlainControl'}" BasedOn="{StaticResource FieldsPlainControl.DefaultStyleBase}" TargetType="{x:Type dxeen:FieldsPlainControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.ExpressionEditor.Native.DocumentationControl'}" BasedOn="{StaticResource DocumentationControl.DefaultStyleBase}" TargetType="{x:Type dxeen:DocumentationControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.ExpressionEditor.ExpressionEditorControl'}" BasedOn="{StaticResource ExpressionEditor.DefaultStyle}" TargetType="{x:Type dxee:ExpressionEditorControl}" />
+
+
+</ResourceDictionary>

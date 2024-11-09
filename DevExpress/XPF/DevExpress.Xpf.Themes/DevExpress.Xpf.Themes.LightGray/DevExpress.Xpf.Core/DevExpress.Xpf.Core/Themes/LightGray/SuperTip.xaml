@@ -1,0 +1,65 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+                    xmlns:dxdst="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys"
+                    xmlns:dxt="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <SolidColorBrush x:Key="{dxt:SuperTipThemeKey ResourceKey=Foreground}">#FF000000</SolidColorBrush>
+
+    <Style x:Key="{dxt:SuperTipThemeKey ResourceKey=ItemContentStyle}">
+        <Setter Property="TextElement.Foreground" Value="{StaticResource {dxt:SuperTipThemeKey ResourceKey=Foreground}}"/>
+        <Setter Property="TextElement.FontSize" Value="12"/>
+        <Setter Property="TextElement.FontFamily" Value="Segoe UI"/>
+        <Setter Property="TextElement.FontStyle" Value="Normal"/>
+        <Setter Property="TextElement.FontWeight" Value="Normal"/>
+    </Style>
+
+    <Style x:Key="{dxt:SuperTipThemeKey ResourceKey=HeaderContentStyle}">
+        <Setter Property="TextElement.Foreground" Value="{StaticResource {dxt:SuperTipThemeKey ResourceKey=Foreground}}"/>
+        <Setter Property="TextElement.FontSize" Value="12"/>
+        <Setter Property="TextElement.FontFamily" Value="Segoe UI"/>
+        <Setter Property="TextElement.FontStyle" Value="Normal"/>
+        <Setter Property="TextElement.FontWeight" Value="Bold"/>
+    </Style>
+
+    <Style x:Key="{dxt:SuperTipThemeKey ResourceKey=SeparatorContentStyle}" TargetType="{x:Type ContentControl}"></Style>
+
+    <Style x:Key="{dxt:SuperTipThemeKey ResourceKey=ItemLayoutStyle}" TargetType="{x:Type dx:Items2Panel}">
+        <Setter Property="HorizontalIndent" Value="4"/>
+    </Style>
+
+    <Style x:Key="{dxt:SuperTipThemeKey ResourceKey=HeaderLayoutStyle}" TargetType="{x:Type dx:Items2Panel}">
+        <Setter Property="HorizontalIndent" Value="4"/>
+    </Style>
+
+    <DataTemplate x:Key="{dxt:SuperTipThemeKey ResourceKey=ItemContentTemplate}">
+        <TextBlock Text="{Binding}">
+            <!--ONLY SL<TextBlock.Foreground>White</TextBlock.Foreground>ONLY SL-->
+            <!--BEGIN WPF-->
+            <TextBlock.Foreground>
+                <SolidColorBrush Color="White"/>
+            </TextBlock.Foreground>
+            <!--END WPF-->
+        </TextBlock>
+    </DataTemplate>
+
+    <DataTemplate x:Key="{dxt:SuperTipThemeKey ResourceKey=HeaderContentTemplate}">
+        <TextBlock FontWeight="Bold" Text="{Binding}">
+            <!--ONLY SL<TextBlock.Foreground>White</TextBlock.Foreground>ONLY SL-->
+            <!--BEGIN WPF-->
+            <TextBlock.Foreground>
+                <SolidColorBrush Color="White"/>
+            </TextBlock.Foreground>
+            <!--END WPF-->
+        </TextBlock>
+    </DataTemplate>
+
+    <DataTemplate x:Key="{dxt:SuperTipThemeKey ResourceKey=SeparatorContentTemplate}">
+        <Border Background="White" Height="1"/>
+    </DataTemplate>
+
+    <ControlTemplate x:Key="{dxt:SuperTipThemeKey ResourceKey=BorderTemplate}" TargetType="ContentControl">
+        <ContentPresenter/>
+    </ControlTemplate>
+
+</ResourceDictionary>

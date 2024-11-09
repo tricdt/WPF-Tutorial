@@ -1,0 +1,35 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+    xmlns:dxi="http://schemas.devexpress.com/winfx/2008/xaml/core/internal"
+    xmlns:dxpdf="http://schemas.devexpress.com/winfx/2008/xaml/pdf"
+    xmlns:dxpdfi="http://schemas.devexpress.com/winfx/2008/xaml/pdf/internal">
+
+    <ResourceDictionary.MergedDictionaries>
+        <dxi:ThemeResourceDictionary Path="PdfViewer\PdfViewer.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.PdfViewer.PdfBarContainerControl'}" BasedOn="{StaticResource PdfBarContainerControl.DefaultStyleBase}" TargetType="{x:Type dxpdf:PdfBarContainerControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.PdfViewer.PdfBarControl'}" BasedOn="{StaticResource PdfBarControl.DefaultStyleBase}" TargetType="{x:Type dxpdf:PdfBarControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.PdfViewer.PdfPresenterControl'}" BasedOn="{StaticResource PdfPresenterControl.DefaultStyleBase}" TargetType="{x:Type dxpdf:PdfPresenterControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.PdfViewer.PdfPageControlItem'}" BasedOn="{StaticResource PdfPageControlItem.DefaultStyleBase}" TargetType="{x:Type dxpdf:PdfPageControlItem}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.PdfViewer.PdfThumbnailPageControlItem'}" BasedOn="{StaticResource PdfThumbnailPageControlItem.DefaultStyleBase}" TargetType="{x:Type dxpdf:PdfThumbnailPageControlItem}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.PdfViewer.PdfViewerControl'}" BasedOn="{StaticResource PdfViewerControl.DefaultStyleBase}" TargetType="{x:Type dxpdf:PdfViewerControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.PdfViewer.SelectionCanvas'}" BasedOn="{StaticResource SelectionCanvas.DefaultStyleBase}" TargetType="{x:Type dxpdf:SelectionCanvas}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.PdfViewer.StartScreenControl'}" BasedOn="{StaticResource StartScreenControl.DefaultStyleBase}" TargetType="{x:Type dxpdf:StartScreenControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.PdfViewer.LoadingProgressControl'}" BasedOn="{StaticResource LoadingProgressControl.DefaultStyleBase}" TargetType="{x:Type dxpdf:LoadingProgressControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.PdfViewer.StickyNotesEdit'}" BasedOn="{StaticResource StickyNotesEdit.DefaultStyleBase}" TargetType="{x:Type dxpdf:StickyNotesEdit}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.PdfViewer.Internal.PrintDialogDataPager'}" BasedOn="{StaticResource PrintDialogDataPager.DefaultStyleBase}" TargetType="{x:Type dxpdfi:PrintDialogDataPager}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.PdfViewer.PdfOutlinesViewerControl'}" BasedOn="{StaticResource PdfOutlinesViewerControl.DefaultStyleBase}" TargetType="{x:Type dxpdf:PdfOutlinesViewerControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.PdfViewer.PdfAttachmentsViewerControl'}" BasedOn="{StaticResource PdfAttachmentsViewerControl.DefaultStyleBase}" TargetType="{x:Type dxpdf:PdfAttachmentsViewerControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.PdfViewer.PdfThumbnailsViewerControl'}" BasedOn="{StaticResource PdfThumbnailsViewerControl.DefaultStyleBase}" TargetType="{x:Type dxpdf:PdfThumbnailsViewerControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.PdfViewer.PdfCommentViewerControl'}" BasedOn="{StaticResource PdfCommentViewerControl.DefaultStyleBase}" TargetType="{x:Type dxpdf:PdfCommentViewerControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.PdfViewer.PdfSignaturesViewerControl'}" BasedOn="{StaticResource PdfSignaturesViewerControl.DefaultStyleBase}" TargetType="{x:Type dxpdf:PdfSignaturesViewerControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.PdfViewer.PdfLayersViewerControl'}" BasedOn="{StaticResource PdfLayersViewerControl.DefaultStyleBase}" TargetType="{x:Type dxpdf:PdfLayersViewerControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.PdfViewer.ThumbnailsViewerPresenterControl'}" BasedOn="{StaticResource ThumbnailsViewerPresenterControl.DefaultStyleBase}" TargetType="{x:Type dxpdf:ThumbnailsViewerPresenterControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.PdfViewer.ThumbnailsViewerPagesSelector'}" BasedOn="{StaticResource ThumbnailsViewerPagesSelector.DefaultStyleBase}" TargetType="{x:Type dxpdf:ThumbnailsViewerPagesSelector}" />
+
+
+</ResourceDictionary>

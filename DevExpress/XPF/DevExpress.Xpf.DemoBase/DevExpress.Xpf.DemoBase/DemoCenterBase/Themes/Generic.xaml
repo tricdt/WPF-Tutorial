@@ -1,0 +1,11 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/DevExpress.Xpf.DemoBase.v24.1;component/DemoCenterBase/DemoWindow/Win/DemoCenterErrorMessage.xaml" />
+        <ResourceDictionary Source="/DevExpress.Xpf.DemoBase.v24.1;component/DemoCenterBase/Themes/DemoCarouselControl.xaml"/>
+        <ResourceDictionary Source="/DevExpress.Xpf.DemoBase.v24.1;component/DemoCenterBase/Themes/ColumnScrollControl.xaml"/>
+        <ResourceDictionary Source="/DevExpress.Xpf.DemoBase.v24.1;component/DemoCenterBase/Themes/DemoScreenFooterControl.xaml"/>
+        <ResourceDictionary Source="/DevExpress.Xpf.DemoBase.v24.1;component/DemoCenterBase/Themes/ImageButton.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

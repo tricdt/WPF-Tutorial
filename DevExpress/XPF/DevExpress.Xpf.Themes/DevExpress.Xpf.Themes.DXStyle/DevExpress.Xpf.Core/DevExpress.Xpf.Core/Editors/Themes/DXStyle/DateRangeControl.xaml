@@ -1,0 +1,61 @@
+<ResourceDictionary mc:Ignorable="cs"
+                    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:cs="colorscheme_ignorable_uri"
+                    xmlns:dxet="http://schemas.devexpress.com/winfx/2008/xaml/editors/themekeys"
+                    xmlns:dxtEx="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys"
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <dxtEx:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.DXStyle.v24.1;component/DevExpress.Xpf.Core/DevExpress.Xpf.Core/Editors/Themes/Generic/DateRangeControl.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+    <SolidColorBrush x:Key="{dxet:DateRangeControlThemeKey ResourceKey=EditorBackground}" Color="White"/>
+
+    <CornerRadius x:Key="{dxet:DateRangeControlThemeKey ResourceKey=CalendarButtonCornerRadius}">0,1,1,0</CornerRadius>
+
+    <CornerRadius x:Key="{dxet:DateRangeControlThemeKey ResourceKey=StartEditorBorderCornerRadius}">1,0,0,1</CornerRadius>
+
+    <CornerRadius x:Key="{dxet:DateRangeControlThemeKey ResourceKey=EndEditorBorderCornerRadius}">0,0,0,0</CornerRadius>
+
+    <Thickness x:Key="{dxet:DateRangeControlThemeKey ResourceKey=EditorBorderThickness}">1</Thickness>
+
+    <LinearGradientBrush x:Key="{dxet:DateRangeControlThemeKey ResourceKey=EditorBorderBrush}"
+                         EndPoint="0.5,1"
+                         StartPoint="0.5,0">
+        <GradientStop Color="#7F626777"
+                      Offset="0"
+                      cs:id="GradientStop_0000"/>
+        <GradientStop Color="#7FD8D9DC"
+                      Offset="1"
+                      cs:id="GradientStop_0001"/>
+    </LinearGradientBrush>
+
+    <Thickness x:Key="{dxet:DateRangeControlThemeKey ResourceKey=CurrentEditorBorderThickness}">1</Thickness>
+
+    <LinearGradientBrush x:Key="{dxet:DateRangeControlThemeKey ResourceKey=CurrentEditorBorderBrush}"
+                         EndPoint="0.5,1"
+                         StartPoint="0.5,0">
+        <GradientStop Color="#FF7E8FBB"
+                      Offset="0"
+                      cs:id="GradientStop_0000"/>
+        <GradientStop Color="#FFAEBDE6"
+                      Offset="1"
+                      cs:id="GradientStop_0001"/>
+    </LinearGradientBrush>
+
+    <SolidColorBrush x:Key="{dxet:DateRangeControlThemeKey ResourceKey=PredefinedRangesPanelBackground}" Color="Transparent"/>
+
+    <Thickness x:Key="{dxet:DateRangeControlThemeKey ResourceKey=PredefinedRangesPanelMargin}">5</Thickness>
+
+    <Thickness x:Key="{dxet:DateRangeControlThemeKey ResourceKey=PredefinedRangesItemPadding}">5</Thickness>
+
+    <Thickness x:Key="{dxet:DateRangeControlThemeKey ResourceKey=FooterButtonsPadding}">20,2</Thickness>
+
+    <SolidColorBrush x:Key="{dxet:DateRangeControlThemeKey ResourceKey=Foreground}" Color="Black"/>
+
+    <SolidColorBrush x:Key="{dxet:DateRangeControlThemeKey ResourceKey=EditorDecoratedBorderBrush}" Color="Transparent"/>
+
+    <SolidColorBrush x:Key="{dxet:DateRangeControlThemeKey ResourceKey=CurrentEditorDecoratedBorderBrush}" Color="Transparent"/>
+
+</ResourceDictionary>

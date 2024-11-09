@@ -1,0 +1,678 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+    xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
+    xmlns:dxe="clr-namespace:DevExpress.Xpf.Editors;assembly=DevExpress.Xpf.Core.v24.1"
+    xmlns:dxei="http://schemas.devexpress.com/winfx/2008/xaml/editors/internal"
+    xmlns:dxi="http://schemas.devexpress.com/winfx/2008/xaml/core/internal"
+    xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
+    xmlns:dxprg="clr-namespace:DevExpress.Xpf.PropertyGrid;assembly=DevExpress.Xpf.PropertyGrid.v24.1"
+    xmlns:dxprgi="clr-namespace:DevExpress.Xpf.PropertyGrid.Internal;assembly=DevExpress.Xpf.PropertyGrid.v24.1"
+    xmlns:dxprgt="clr-namespace:DevExpress.Xpf.PropertyGrid.Themes;assembly=DevExpress.Xpf.PropertyGrid.v24.1"
+    xmlns:dxt="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys">
+
+    <ResourceDictionary.MergedDictionaries>
+        <dxi:ThemeResourceDictionary Path="PropertyGrid\PropertyGrid.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+
+    <dxi:RenderTemplate x:Key="trimmedTextTemplate">
+        <dxi:RenderTextBlock Name="textBlock" TextTrimming="CharacterEllipsis" />
+        <dxi:RenderTemplate.Triggers>
+            <dxi:RenderBinding DependencyProperty="{x:Static dxprg:RowData.HeaderProperty}" TargetProperty="Text" TargetName="textBlock" />
+        </dxi:RenderTemplate.Triggers>
+    </dxi:RenderTemplate>
+    <dxe:BrushType x:Key="NoneBrushType">None</dxe:BrushType>
+    <dxe:BrushType x:Key="SolidColorBrushType">SolidColorBrush</dxe:BrushType>
+    <dxe:BrushType x:Key="LinearGradientBrushType">LinearGradientBrush</dxe:BrushType>
+    <dxe:BrushType x:Key="RadialGradientBrushType">RadialGradientBrush</dxe:BrushType>
+    <dxei:GradientBrushType x:Key="LinearGradientBrushType2">Linear</dxei:GradientBrushType>
+    <dxei:GradientBrushType x:Key="RadialGradientBrushType2">Radial</dxei:GradientBrushType>
+    <dxprg:BrushTypeCheckedConverter x:Key="brushTypeCheckedConverter" />
+    <dxprgi:AlternationIndexConverter x:Key="AlternationIndexConverter" />
+
+
+    <!--#region C:\work\2023.1\XPF\DevExpress.Xpf.PropertyGrid\DevExpress.Xpf.PropertyGrid\Themes\Generic\RenderTemplates.xaml-->
+
+
+    <dxi:RenderTemplate x:Key="{dxprgt:LWKey VSViewRenderTemplate.HeaderHost}">
+        <dxi:RenderPanel LayoutProvider="{dxi:DockPanelLayoutProvider LastChildFill=True}">
+            <dxi:RenderBorder Name="PART_Indent" Dock="Left" />
+            <dxprg:RenderExpander
+                Name="PART_CheckBox"
+                Width="{StaticResource {dxprgt:LWKey DataRow.ExpanderWidth}}"
+                MinHeight="20"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Dock="Left"
+                RenderTemplate="{StaticResource {dxprgt:LWKey VSViewRenderTemplate.Expander}}"
+                RenderTemplateSelector="{x:Null}"
+                UsePropagatedIsMouseOver="True"
+                Visibility="Hidden" />
+            <dxi:RenderContentControl
+                Name="PART_ContentPresenter"
+                HorizontalContentAlignment="Stretch"
+                VerticalContentAlignment="Stretch"
+                Dock="Right"
+                PreferRenderTemplate="False"
+                RenderContentTemplate="{StaticResource trimmedTextTemplate}" />
+        </dxi:RenderPanel>
+        <dxi:RenderTemplate.Triggers>
+            <dxi:RenderBinding DependencyProperty="{x:Static dxprg:RowControlBase.ActualIndentProperty}" TargetProperty="Width" TargetName="PART_Indent" />
+            <dxi:RenderBinding DependencyProperty="{x:Static dxprg:RowControlBase.ExpandButtonWidthProperty}" TargetProperty="Width" TargetName="PART_CheckBox" />
+            <dxi:RenderBinding DependencyProperty="{x:Static dxprg:RowControl.RowDataProperty}" TargetProperty="Content" TargetName="PART_ContentPresenter" />
+            <dxi:RenderBinding DependencyProperty="{x:Static dxprg:RowControl.HeaderTemplateSelectorProperty}" TargetProperty="ContentTemplateSelector" TargetName="PART_ContentPresenter" />
+            <dxi:RenderTrigger DependencyProperty="{x:Static dxprg:RowControl.CanExpandProperty}" Value="True">
+                <dxi:RenderSetter TargetName="PART_CheckBox" Property="Visibility" Value="Visible" />
+            </dxi:RenderTrigger>
+            <dxi:MultiRenderTrigger>
+                <dxi:MultiRenderTrigger.Conditions>
+                    <dxi:RenderCondition DependencyProperty="{x:Static dxprg:RowControl.CanExpandProperty}" Value="False" />
+                    <dxi:RenderCondition DependencyProperty="{x:Static dxprg:RowControl.CategoriesShowModeProperty}" Value="Tabbed" />
+                    <dxi:RenderCondition DependencyProperty="{x:Static dxprg:RowControl.ExpandButtonVisibilityProperty}" Value="Visible" />
+                </dxi:MultiRenderTrigger.Conditions>
+                <dxi:RenderSetter TargetName="PART_CheckBox" Property="Visibility" Value="Hidden" />
+            </dxi:MultiRenderTrigger>
+            <dxi:RenderTrigger DependencyProperty="{x:Static dxprg:RowControl.ExpandButtonVisibilityProperty}" Value="Hidden">
+                <dxi:RenderSetter TargetName="PART_CheckBox" Property="Visibility" Value="Hidden" />
+            </dxi:RenderTrigger>
+            <dxi:RenderTrigger DependencyProperty="{x:Static dxprg:RowControl.ExpandButtonVisibilityProperty}" Value="Collapsed">
+                <dxi:RenderSetter TargetName="PART_CheckBox" Property="Visibility" Value="Collapsed" />
+            </dxi:RenderTrigger>
+        </dxi:RenderTemplate.Triggers>
+    </dxi:RenderTemplate>
+    <dxi:RenderTemplate x:Key="{dxprgt:LWKey VSViewRenderTemplate.Separator}">
+        <dxi:RenderBorder MinWidth="1" MinHeight="1" Background="{StaticResource {dxprgt:LWKey VSViewBrush.BorderBrush}}" />
+    </dxi:RenderTemplate>
+    <dxi:RenderTemplate x:Key="{dxprgt:LWKey VSViewRenderTemplate.RowControl}">
+        <dxi:RenderBorder Name="PART_Root" BorderBrush="{StaticResource {dxprgt:LWKey VSViewBrush.BorderBrush}}" BorderThickness="0,0,0,1">
+            <dxprg:RenderResizingPanel Dock="Left">
+                <dxi:RenderBorder Name="PART_HeaderBackground">
+                    <dxi:RenderControl Name="PART_HeaderHost" RenderTemplate="{StaticResource {dxprgt:LWKey VSViewRenderTemplate.HeaderHost}}" />
+                </dxi:RenderBorder>
+                <dxi:RenderBorder Name="PART_EditorBackground">
+                    <dxi:RenderPanel Dock="Right" LayoutProvider="{dxi:DockPanelLayoutProvider LastChildFill=True}">
+                        <dxprg:RenderCommandButton
+                            Name="PART_CommandButton"
+                            VerticalAlignment="Center"
+                            Dock="Right"
+                            PreferRenderTemplate="False"
+                            RenderTemplate="{StaticResource {dxprgt:LWKey VSViewRenderTemplate.RowCommandButton}}"
+                            RenderTemplateSelector="{x:Null}"
+                            UsePropagatedIsMouseOver="True" />
+                        <dxprg:RenderCollectionButton
+                            Name="PART_CollectionButton"
+                            Dock="Right"
+                            RenderTemplate="{StaticResource {dxprgt:LWKey VSViewRenderTemplate.RowCollectionButton}}"
+                            RenderTemplateSelector="{x:Null}"
+                            UsePropagatedIsMouseOver="True"
+                            Visibility="Collapsed" />
+                        <dxi:RenderPanel Dock="Left" LayoutProvider="{dxi:DockPanelLayoutProvider LastChildFill=True}">
+                            <dxi:RenderPanel
+                                Name="PART_OnlyExpanderModePanel"
+                                Dock="Left"
+                                LayoutProvider="{dxi:DockPanelLayoutProvider LastChildFill=True}"
+                                Visibility="Collapsed">
+                                <dxi:RenderBorder Name="PART_Indent" Dock="Left" />
+                                <dxprg:RenderExpander
+                                    Name="PART_CheckBox"
+                                    Width="{StaticResource {dxprgt:LWKey DataRow.ExpanderWidth}}"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    Dock="Left"
+                                    RenderTemplate="{StaticResource {dxprgt:LWKey VSViewRenderTemplate.Expander}}"
+                                    RenderTemplateSelector="{x:Null}"
+                                    UsePropagatedIsMouseOver="True"
+                                    Visibility="Collapsed" />
+                            </dxi:RenderPanel>
+                            <dxi:RenderContentControl
+                                Name="PART_ContentHost"
+                                HorizontalContentAlignment="Stretch"
+                                VerticalContentAlignment="Stretch"
+                                Dock="Right"
+                                PreferRenderTemplate="False" />
+                        </dxi:RenderPanel>
+                    </dxi:RenderPanel>
+                </dxi:RenderBorder>
+                <dxi:RenderControl
+                    Name="PART_Separator"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch"
+                    RenderTemplate="{StaticResource {dxprgt:LWKey VSViewRenderTemplate.Separator}}" />
+            </dxprg:RenderResizingPanel>
+        </dxi:RenderBorder>
+        <dxi:RenderTemplate.Triggers>
+            <dxi:RenderBinding DependencyProperty="{x:Static dxprg:RowControl.HeaderForegroundProperty}" TargetProperty="Foreground" TargetName="PART_HeaderBackground"/>
+            <dxi:RenderBinding DependencyProperty="{x:Static dxprg:RowControl.HeaderBackgroundProperty}" TargetProperty="Background" TargetName="PART_HeaderBackground"/>
+            <dxi:RenderBinding DependencyProperty="{x:Static dxprg:RowControl.HeaderPaddingProperty}" TargetProperty="Padding" TargetName="PART_HeaderBackground" />
+            <dxi:RenderBinding DependencyProperty="{x:Static dxprg:RowControl.ContentForegroundProperty}" TargetProperty="Foreground" TargetName="PART_EditorBackground"/>
+            <dxi:RenderBinding DependencyProperty="{x:Static dxprg:RowControl.ContentBackgroundProperty}" TargetProperty="Background" TargetName="PART_EditorBackground"/>
+            <dxi:RenderBinding DependencyProperty="{x:Static dxprg:RowControl.ContentPaddingProperty}" TargetProperty="Padding" TargetName="PART_EditorBackground" />
+            <dxi:RenderBinding DependencyProperty="{x:Static dxprg:RowControlBase.ExpandButtonWidthProperty}" TargetProperty="Width" TargetName="PART_CheckBox" />
+            <dxi:RenderTrigger DependencyProperty="{x:Static dxprg:RowControl.ShowGridLinesProperty}" Value="False">
+                <dxi:RenderSetter TargetName="PART_Root" Property="BorderThickness" Value="0" />
+                <dxi:RenderSetter TargetName="PART_Separator" Property="Visibility" Value="Collapsed" />
+            </dxi:RenderTrigger>
+            <dxi:RenderTrigger DependencyProperty="{x:Static dxprg:RowControl.HeaderShowModeProperty}" Value="OnlyHeader">
+                <dxi:RenderSetter TargetName="PART_EditorBackground" Property="Visibility" Value="Collapsed" />
+            </dxi:RenderTrigger>
+            <dxi:RenderTrigger DependencyProperty="{x:Static dxprg:RowControl.HeaderShowModeProperty}" Value="OnlyExpander">
+                <dxi:RenderSetter TargetName="PART_OnlyExpanderModePanel" Property="Visibility" Value="Visible" />
+            </dxi:RenderTrigger>
+            <dxi:RenderTrigger DependencyProperty="{x:Static dxprg:RowControl.CanExpandProperty}" Value="True">
+                <dxi:RenderSetter TargetName="PART_CheckBox" Property="Visibility" Value="Visible" />
+            </dxi:RenderTrigger>
+            <dxi:MultiRenderTrigger>
+                <dxi:MultiRenderTrigger.Conditions>
+                    <dxi:RenderCondition DependencyProperty="{x:Static dxprg:RowControl.CanExpandProperty}" Value="False" />
+                    <dxi:RenderCondition DependencyProperty="{x:Static dxprg:RowControl.CategoriesShowModeProperty}" Value="Tabbed" />
+                    <dxi:RenderCondition DependencyProperty="{x:Static dxprg:RowControl.ExpandButtonVisibilityProperty}" Value="Visible" />
+                </dxi:MultiRenderTrigger.Conditions>
+                <dxi:RenderSetter TargetName="PART_CheckBox" Property="Visibility" Value="Hidden" />
+            </dxi:MultiRenderTrigger>
+            <dxi:RenderTrigger DependencyProperty="{x:Static dxprg:RowControl.ExpandButtonVisibilityProperty}" Value="Hidden">
+                <dxi:RenderSetter TargetName="PART_CheckBox" Property="Visibility" Value="Hidden" />
+            </dxi:RenderTrigger>
+            <dxi:RenderTrigger DependencyProperty="{x:Static dxprg:RowControl.ExpandButtonVisibilityProperty}" Value="Collapsed">
+                <dxi:RenderSetter TargetName="PART_CheckBox" Property="Visibility" Value="Collapsed" />
+            </dxi:RenderTrigger>
+            <dxi:RenderBinding DependencyProperty="{x:Static dxprg:RowControlBase.ActualIndentProperty}" TargetProperty="Width" TargetName="PART_Indent" />
+            <dxi:RenderBinding DependencyProperty="{x:Static dxprg:RowControl.RowDataProperty}" TargetProperty="Content" TargetName="PART_ContentHost" />
+            <dxi:RenderBinding DependencyProperty="{x:Static dxprg:RowControl.EditorHorizontalAlignmentProperty}" TargetProperty="HorizontalContentAlignment" TargetName="PART_ContentHost" />
+            <dxi:RenderBinding DependencyProperty="{x:Static dxprg:RowControl.ContentTemplateSelectorProperty}" TargetProperty="ContentTemplateSelector" TargetName="PART_ContentHost" />
+            <dxi:RenderBinding DependencyProperty="{x:Static dxprg:RowControl.MenuButtonTemplateProperty}" TargetProperty="ContentTemplate" TargetName="PART_CommandButton" />
+            <dxi:RenderTrigger DependencyProperty="{x:Static dxprg:RowControlBase.ActualShowCommandButtonProperty}" Value="False">
+                <dxi:RenderSetter TargetName="PART_CommandButton" Property="Visibility" Value="Collapsed" />
+            </dxi:RenderTrigger>
+            <dxi:RenderTrigger DependencyProperty="{x:Static dxprg:RowControlBase.ShowCollectionButtonProperty}" Value="True">
+                <dxi:RenderSetter TargetName="PART_CollectionButton" Property="Visibility" Value="Visible" />
+            </dxi:RenderTrigger>
+        </dxi:RenderTemplate.Triggers>
+    </dxi:RenderTemplate>
+    <!--#endregion C:\work\2023.1\XPF\DevExpress.Xpf.PropertyGrid\DevExpress.Xpf.PropertyGrid\Themes\Generic\RenderTemplates.xaml-->
+
+    <!--#region C:\work\2023.1\XPF\DevExpress.Xpf.PropertyGrid\DevExpress.Xpf.PropertyGrid\Themes\Generic\DefaultStyles.xaml-->
+    <Style x:Key="commonRowStyle" TargetType="{x:Type dxprg:RowControlBase}">
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="KeyboardNavigation.TabNavigation" Value="None" />
+        <Setter Property="KeyboardNavigation.ControlTabNavigation" Value="None" />
+        <Setter Property="KeyboardNavigation.DirectionalNavigation" Value="None" />
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+    </Style>
+    <!--#endregion C:\work\2023.1\XPF\DevExpress.Xpf.PropertyGrid\DevExpress.Xpf.PropertyGrid\Themes\Generic\DefaultStyles.xaml-->
+
+    <!--#region C:\work\2023.1\XPF\DevExpress.Xpf.PropertyGrid\DevExpress.Xpf.PropertyGrid\Themes\Generic.xaml-->
+    <!--#endregion C:\work\2023.1\XPF\DevExpress.Xpf.PropertyGrid\DevExpress.Xpf.PropertyGrid\Themes\Generic.xaml-->
+
+    <!--#region C:\work\2023.1\XPF\DevExpress.Xpf.PropertyGrid\DevExpress.Xpf.PropertyGrid\Themes\Generic\BrushEdit.xaml-->
+
+
+    <dx:EnumToObjectConverter x:Key="EnumToObjectConverter" DefaultValue="{StaticResource LinearGradientBrushType2}">
+        <dx:EnumToObjectConverter.Values>
+            <dx:EnumObjectProvider x:Key="LinearGradientBrush" Value="{StaticResource LinearGradientBrushType2}" />
+            <dx:EnumObjectProvider x:Key="RadialGradientBrush" Value="{StaticResource RadialGradientBrushType2}" />
+        </dx:EnumToObjectConverter.Values>
+    </dx:EnumToObjectConverter>
+    <dxprg:EditableObjectConverter x:Key="brushTypeConverter" Converter="{StaticResource EnumToObjectConverter}" />
+    <dxprg:EditableObjectConverter x:Key="brushTypeEditableObjectCheckedConverter" Converter="{StaticResource brushTypeCheckedConverter}" />
+    <ControlTemplate x:Key="{dxprgt:LWKey PopupBrushEdit.PopupContentTemplate}">
+        <dxprg:PropertyGridControl x:Name="PART_GridControl" />
+    </ControlTemplate>
+    <DataTemplate x:Key="{dxprgt:LWKey PopupBrushEdit.GradientsTemplate}">
+        <StackPanel dxprg:NavigationManager.NavigationMode="Local">
+            <dxei:ColorPicker Padding="12" Color="{Binding Path=SelectedThumbColor, ElementName=GradientMultiSlider, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+            <dxei:GradientMultiSlider
+                x:Name="GradientMultiSlider"
+                Margin="0,0,0,12"
+                Brush="{Binding Path=EditableObject, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, Converter={dxprg:EditableObjectConverter}}"
+                BrushType="{Binding Path=Parent.EditableObject.BrushType, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource brushTypeConverter}}" />
+        </StackPanel>
+    </DataTemplate>
+    <DataTemplate x:Key="{dxprgt:LWKey PopupBrushEdit.BrushSelectorTemplate}">
+        <dxe:ButtonsPanel Margin="12,12,12,0">
+            <ToggleButton
+                Command="{Binding Path=(dxprg:PropertyGridHelper.RowData).Definition.Command, RelativeSource={RelativeSource TemplatedParent}}"
+                CommandParameter="{StaticResource NoneBrushType}"
+                Content="{dxe:EditorStringId BrushEditNone}"
+                Focusable="False"
+                IsChecked="{Binding Path=Parent.EditableObject.BrushType, Converter={StaticResource brushTypeEditableObjectCheckedConverter}, ConverterParameter={StaticResource NoneBrushType}}"
+                Template="{DynamicResource {dxprgt:LWKey PopupBrushEdit.BrushTypeButtonTemplate}}" />
+            <ToggleButton
+                Command="{Binding Path=(dxprg:PropertyGridHelper.RowData).Definition.Command, RelativeSource={RelativeSource TemplatedParent}}"
+                CommandParameter="{StaticResource SolidColorBrushType}"
+                Content="{dxe:EditorStringId BrushEditSolid}"
+                Focusable="False"
+                IsChecked="{Binding Path=Parent.EditableObject.BrushType, Converter={StaticResource brushTypeEditableObjectCheckedConverter}, ConverterParameter={StaticResource SolidColorBrushType}}"
+                Template="{DynamicResource {dxprgt:LWKey PopupBrushEdit.BrushTypeButtonTemplate}}" />
+            <ToggleButton
+                Command="{Binding Path=(dxprg:PropertyGridHelper.RowData).Definition.Command, RelativeSource={RelativeSource TemplatedParent}}"
+                CommandParameter="{StaticResource LinearGradientBrushType}"
+                Content="{dxe:EditorStringId BrushEditLinear}"
+                Focusable="False"
+                IsChecked="{Binding Path=Parent.EditableObject.BrushType, Converter={StaticResource brushTypeEditableObjectCheckedConverter}, ConverterParameter={StaticResource LinearGradientBrushType}}"
+                Template="{DynamicResource {dxprgt:LWKey PopupBrushEdit.BrushTypeButtonTemplate}}" />
+            <ToggleButton
+                Command="{Binding Path=(dxprg:PropertyGridHelper.RowData).Definition.Command, RelativeSource={RelativeSource TemplatedParent}}"
+                CommandParameter="{StaticResource RadialGradientBrushType}"
+                Content="{dxe:EditorStringId BrushEditRadial}"
+                Focusable="False"
+                IsChecked="{Binding Path=Parent.EditableObject.BrushType, Converter={StaticResource brushTypeEditableObjectCheckedConverter}, ConverterParameter={StaticResource RadialGradientBrushType}}"
+                Template="{DynamicResource {dxprgt:LWKey PopupBrushEdit.BrushTypeButtonTemplate}}" />
+        </dxe:ButtonsPanel>
+    </DataTemplate>
+    <!--#endregion C:\work\2023.1\XPF\DevExpress.Xpf.PropertyGrid\DevExpress.Xpf.PropertyGrid\Themes\Generic\BrushEdit.xaml-->
+
+    <!--#region C:\work\2023.1\XPF\DevExpress.Xpf.PropertyGrid\DevExpress.Xpf.PropertyGrid\Themes\Generic\CategoryRowControl.xaml-->
+    <!--#endregion C:\work\2023.1\XPF\DevExpress.Xpf.PropertyGrid\DevExpress.Xpf.PropertyGrid\Themes\Generic\CategoryRowControl.xaml-->
+
+    <!--#region C:\work\2023.1\XPF\DevExpress.Xpf.PropertyGrid\DevExpress.Xpf.PropertyGrid\Themes\Generic\PropertyGridControl.xaml-->
+    <ControlTemplate x:Key="{dxprgt:LWKey PropertyGridControl.ControlTemplate}" TargetType="{x:Type dxprg:PropertyGridControl}">
+        <dx:DXBorder Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <ContentControl
+                    x:Name="PART_TopPanel"
+                    Grid.Row="0"
+                    Focusable="False"
+                    Style="{DynamicResource {dxprgt:LWKey PropertyGridControl.TopPanelStyle}}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <dxprg:PropertyGridViewKindSelectorControl
+                            x:Name="PART_Selector"
+                            Grid.Column="0"
+                            Focusable="False"
+                            PropertyGrid="{Binding RelativeSource={RelativeSource TemplatedParent}}"
+                            ShowCategories="{Binding ShowCategories, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}"
+                            Visibility="{Binding ShowToolPanel, RelativeSource={RelativeSource TemplatedParent}, Converter={dx:BooleanToVisibilityConverter}}" />
+                        <dx:DXBorder
+                            x:Name="PART_SelectorAndSearchSeparator"
+                            Grid.Column="1"
+                            Width="{DynamicResource {dxprgt:LWKey PropertyGridControl.SelectorAndSearchSeparatorWidth}}"
+                            Background="Transparent"
+                            IsHitTestVisible="False" />
+                        <dxprg:FilterColumnProvider
+                            x:Name="PART_ColumnProvider"
+                            Width="0"
+                            Height="0"
+                            IsHitTestVisible="False"
+                            Opacity="0"
+                            Owner="{Binding RelativeSource={RelativeSource TemplatedParent}}" />
+                        <dxprg:PropertyGridSearchControl
+                            x:Name="PART_SearchControl"
+                            Grid.Row="0"
+                            Grid.Column="2"
+                            ColumnProvider="{Binding ElementName=PART_ColumnProvider}"
+                            FilterByColumnsMode="Default"
+                            FilterCondition="Contains"
+                            FindMode="Always"
+                            Focusable="False"
+                            ImmediateMRUPopup="False"
+                            KeyboardNavigation.ControlTabNavigation="Continue"
+                            KeyboardNavigation.DirectionalNavigation="Continue"
+                            KeyboardNavigation.TabNavigation="Continue"
+                            MRULength="10"
+                            PostMode="Delayed"
+                            SearchTextPostDelay="1000"
+                            ShowFindButton="True"
+                            ShowMRUButton="False"
+                            Style="{DynamicResource {dxprgt:LWKey PropertyGridControl.SearchControlStyle}}"
+                            Visibility="{Binding ShowSearchBox, RelativeSource={RelativeSource TemplatedParent}, Converter={dx:BooleanToVisibilityConverter}}" />
+                    </Grid>
+                </ContentControl>
+                <ContentPresenter
+                    x:Name="PART_ViewPresenter"
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2" />
+                <dxprg:PropertyDescriptionPresenterControl
+                    x:Name="PART_DescriptionPresenter"
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Focusable="False"
+                    SelectedRow="{Binding ElementName=PART_ViewPresenter, Path=Content.SelectedItem}"
+                    Style="{TemplateBinding ActualDescriptionContainerStyle}">
+                    <dxprg:PropertyDescriptionPresenterControl.Visibility>
+                        <Binding Path="ShowDescriptionIn" RelativeSource="{RelativeSource TemplatedParent}">
+                            <Binding.Converter>
+                                <dxprg:DescriptionLocationConverter>
+                                    <dxprg:DescriptionLocationConverter.TrueValue>
+                                        <Visibility>Visible</Visibility>
+                                    </dxprg:DescriptionLocationConverter.TrueValue>
+                                    <dxprg:DescriptionLocationConverter.FalseValue>
+                                        <Visibility>Collapsed</Visibility>
+                                    </dxprg:DescriptionLocationConverter.FalseValue>
+                                </dxprg:DescriptionLocationConverter>
+                            </Binding.Converter>
+                            <Binding.ConverterParameter>
+                                <dxprg:DescriptionLocation>Panel</dxprg:DescriptionLocation>
+                            </Binding.ConverterParameter>
+                        </Binding>
+                    </dxprg:PropertyDescriptionPresenterControl.Visibility>
+                </dxprg:PropertyDescriptionPresenterControl>
+            </Grid>
+        </dx:DXBorder>
+        <ControlTemplate.Triggers>
+            <Trigger Property="ShowToolPanel" Value="False">
+                <Setter TargetName="PART_SelectorAndSearchSeparator" Property="Visibility" Value="Collapsed" />
+            </Trigger>
+            <Trigger Property="ShowSearchBox" Value="False">
+                <Setter TargetName="PART_SelectorAndSearchSeparator" Property="Visibility" Value="Collapsed" />
+            </Trigger>
+            <Trigger Property="ShowCategories" Value="Tabbed">
+                <Setter TargetName="PART_TopPanel" Property="Visibility" Value="Collapsed" />
+            </Trigger>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="ShowToolPanel" Value="False" />
+                    <Condition Property="ShowSearchBox" Value="False" />
+                </MultiTrigger.Conditions>
+                <Setter TargetName="PART_TopPanel" Property="Visibility" Value="Collapsed" />
+            </MultiTrigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="{dxprgt:LWKey PropertyGridControl.ViewKindSelectorTemplate}" TargetType="{x:Type dxprg:PropertyGridViewKindSelectorControl}">
+        <ControlTemplate.Resources>
+            <sys:Boolean x:Key="true">True</sys:Boolean>
+            <sys:Boolean x:Key="false">False</sys:Boolean>
+        </ControlTemplate.Resources>
+        <StackPanel Focusable="False" Orientation="Horizontal">
+            <RadioButton
+                x:Name="PART_ShowCategories"
+                dxprg:NavigationManager.NavigationMode="Auto"
+                Command="{x:Static dxprg:PropertyGridCommands.SelectView}"
+                CommandParameter="{x:Static dxprg:ApplyingMode.WhenGrouping}"
+                CommandTarget="{Binding RelativeSource={RelativeSource TemplatedParent}}"
+                DataContext="{x:Static dxprg:ApplyingMode.WhenGrouping}"
+                Focusable="True"
+                GroupName="{Binding RelativeSource={RelativeSource TemplatedParent}, Converter={dxprgi:IndexedStringConverter}, ConverterParameter=Categories}"
+                SnapsToDevicePixels="True"
+                Style="{DynamicResource {dxprgt:LWKey PropertyGridControl.ViewKindButtonStyle}}" />
+            <dx:DXBorder Width="{DynamicResource {dxprgt:LWKey PropertyGridControl.ViewKindButtonsIndent}}" Background="Transparent" IsHitTestVisible="False" />
+            <RadioButton
+                x:Name="PART_HideCategories"
+                dxprg:NavigationManager.NavigationMode="Auto"
+                Command="{x:Static dxprg:PropertyGridCommands.SelectView}"
+                CommandParameter="{x:Static dxprg:ApplyingMode.WhenNoGrouping}"
+                CommandTarget="{Binding RelativeSource={RelativeSource TemplatedParent}}"
+                DataContext="{x:Static dxprg:ApplyingMode.WhenNoGrouping}"
+                Focusable="True"
+                GroupName="{Binding RelativeSource={RelativeSource TemplatedParent}, Converter={dxprgi:IndexedStringConverter}, ConverterParameter=Categories}"
+                SnapsToDevicePixels="True"
+                Style="{DynamicResource {dxprgt:LWKey PropertyGridControl.ViewKindButtonStyle}}" />
+        </StackPanel>
+    </ControlTemplate>
+
+    <DataTemplate x:Key="{dxprgt:LWKey PropertyGridControl.DefaultDescriptionTemplate}">
+        <TextBlock x:Name="PART_TextBlock" Text="{Binding}" TextWrapping="Wrap" />
+        <DataTemplate.Triggers>
+            <Trigger SourceName="PART_TextBlock" Property="Text" Value="{x:Null}">
+                <Setter TargetName="PART_TextBlock" Property="Visibility" Value="Collapsed" />
+            </Trigger>
+            <Trigger SourceName="PART_TextBlock" Property="Text" Value="{x:Static sys:String.Empty}">
+                <Setter TargetName="PART_TextBlock" Property="Visibility" Value="Collapsed" />
+            </Trigger>
+        </DataTemplate.Triggers>
+    </DataTemplate>
+    <!--#endregion C:\work\2023.1\XPF\DevExpress.Xpf.PropertyGrid\DevExpress.Xpf.PropertyGrid\Themes\Generic\PropertyGridControl.xaml-->
+
+    <!--#region C:\work\2023.1\XPF\DevExpress.Xpf.PropertyGrid\DevExpress.Xpf.PropertyGrid\Themes\Generic\PropertyGridView.xaml-->
+    <ControlTemplate x:Key="{dxprgt:LWKey PropertyGridView.ControlTemplate}" TargetType="{x:Type dxprg:PropertyGridView}">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <dxprgi:CategorySelectorControl
+                x:Name="PART_CategorySelector"
+                Grid.Row="0"
+                Focusable="False"
+                ItemsSource="{TemplateBinding CategoriesSource}"
+                Visibility="Collapsed" />
+            <ScrollViewer
+                x:Name="PART_ScrollViewer"
+                Grid.Row="1"
+                CanContentScroll="True"
+                Focusable="false"
+                HorizontalScrollBarVisibility="{TemplateBinding ScrollViewer.HorizontalScrollBarVisibility}"
+                VerticalScrollBarVisibility="{TemplateBinding ScrollViewer.VerticalScrollBarVisibility}">
+                <dxmvvm:Interaction.Behaviors>
+                    <dx:ScrollViewerTouchBehavior Orientation="Vertical" />
+                </dxmvvm:Interaction.Behaviors>
+                <ItemsPresenter x:Name="PART_ItemsPresenter" />
+            </ScrollViewer>
+        </Grid>
+        <ControlTemplate.Triggers>
+            <Trigger Property="ShowCategories" Value="Tabbed">
+                <Setter TargetName="PART_CategorySelector" Property="Visibility" Value="Visible" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+    <ControlTemplate x:Key="{dxprgt:LWKey PropertyGridView.CategorySelectorTemplate}" TargetType="{x:Type dxprgi:CategorySelectorControl}">
+        <ContentControl Focusable="False" Style="{DynamicResource {dxprgt:LWKey PropertyGridControl.TopPanelStyle}}">
+            <ItemsPresenter />
+        </ContentControl>
+    </ControlTemplate>
+    <ControlTemplate x:Key="{dxprgt:LWKey PropertyGridView.CategoryHeaderTemplate}" TargetType="{x:Type dxprgi:CategoryHeaderRowControl}">
+        <Grid>
+            <Control
+                x:Name="PART_NormalBackground"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Template="{DynamicResource {dxprgt:LWKey PropertyGridView.CategoryHeaderNormalTemplate}}"
+                Visibility="Visible" />
+            <Control
+                x:Name="PART_MouseOverBackground"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Template="{DynamicResource {dxprgt:LWKey PropertyGridView.CategoryHeaderMouseOverTemplate}}"
+                Visibility="Collapsed" />
+            <Control
+                x:Name="PART_SelectedBackground"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Template="{DynamicResource {dxprgt:LWKey PropertyGridView.CategoryHeaderSelectedTemplate}}"
+                Visibility="Collapsed" />
+            <ContentPresenter Margin="{TemplateBinding Padding}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        </Grid>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsSelected" Value="True">
+                <Setter TargetName="PART_NormalBackground" Property="Visibility" Value="Collapsed" />
+                <Setter TargetName="PART_MouseOverBackground" Property="Visibility" Value="Collapsed" />
+                <Setter TargetName="PART_SelectedBackground" Property="Visibility" Value="Visible" />
+            </Trigger>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter TargetName="PART_NormalBackground" Property="Visibility" Value="Collapsed" />
+                <Setter TargetName="PART_MouseOverBackground" Property="Visibility" Value="Visible" />
+                <Setter TargetName="PART_SelectedBackground" Property="Visibility" Value="Collapsed" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+    <ItemsPanelTemplate x:Key="{dxprgt:LWKey PropertyGridView.ItemsPanelTemplate}">
+        <dxprg:PGVirtualizingStackPanel CanHorizontallyScroll="False" CanVerticallyScroll="True" IsStandardPanel="True" />
+    </ItemsPanelTemplate>
+    <ItemsPanelTemplate x:Key="{dxprgt:LWKey PropertyGridView.CategorySelectorItemsPanelTemplate}">
+        <WrapPanel />
+    </ItemsPanelTemplate>
+    <!--#endregion C:\work\2023.1\XPF\DevExpress.Xpf.PropertyGrid\DevExpress.Xpf.PropertyGrid\Themes\Generic\PropertyGridView.xaml-->
+
+
+    <!--#region DEFAULT STYLES-->
+
+    <Style x:Key="CategorySelectorControl.DefaultStyleBase" TargetType="{x:Type dxprgi:CategorySelectorControl}">
+        <Setter Property="ItemsPanel" Value="{DynamicResource {dxprgt:LWKey PropertyGridView.CategorySelectorItemsPanelTemplate}}" />
+        <Setter Property="Template" Value="{DynamicResource {dxprgt:LWKey PropertyGridView.CategorySelectorTemplate}}" />
+    </Style>
+    <Style x:Key="PropertyGridView.DefaultStyleBase" TargetType="{x:Type dxprg:PropertyGridView}">
+        <Setter Property="ItemContainerStyle" Value="{Binding Path=PropertyGrid.RowStyle, RelativeSource={RelativeSource Mode=Self}}"/>
+        <Setter Property="ItemContainerStyleSelector" Value="{Binding Path=PropertyGrid.RowStyleSelector, RelativeSource={RelativeSource Mode=Self}}"/>
+        <Setter Property="AlternationCount" Value="{Binding Path=PropertyGrid.AlternationCount, RelativeSource={RelativeSource Mode=Self}}"/>
+        <Setter Property="Template" Value="{DynamicResource {dxprgt:LWKey PropertyGridView.ControlTemplate}}" />
+        <Setter Property="ItemsPanel" Value="{DynamicResource {dxprgt:LWKey PropertyGridView.ItemsPanelTemplate}}" />
+        <Setter Property="VirtualizingStackPanel.VirtualizationMode" Value="{Binding Path=PropertyGrid.(VirtualizingStackPanel.VirtualizationMode), RelativeSource={RelativeSource Self}}" />
+        <Setter Property="VirtualizingStackPanel.IsVirtualizing" Value="True" />
+        <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Disabled" />
+        <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="{Binding Path=PropertyGrid.(ScrollViewer.VerticalScrollBarVisibility), RelativeSource={RelativeSource Self}}" />
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+
+        <Setter Property="KeyboardNavigation.TabNavigation" Value="None" />
+        <Setter Property="KeyboardNavigation.ControlTabNavigation" Value="None" />
+        <Setter Property="KeyboardNavigation.DirectionalNavigation" Value="None" />
+    </Style>
+    <Style x:Key="PropertyGridControl.DefaultStyleBase" TargetType="{x:Type dxprg:PropertyGridControl}">
+        <Setter Property="Template" Value="{DynamicResource {dxprgt:LWKey PropertyGridControl.ControlTemplate}}" />
+        <Setter Property="DescriptionTemplate" Value="{DynamicResource {dxprgt:LWKey PropertyGridControl.DefaultDescriptionTemplate}}" />
+        <Setter Property="ValueColumnMinWidth" Value="{DynamicResource {dxprgt:LWKey PropertyGridControl.ValueColumnMinWidth}}" />
+        <Setter Property="HeaderColumnMinWidth" Value="{DynamicResource {dxprgt:LWKey PropertyGridControl.HeaderColumnMinWidth}}" />
+        <Setter Property="VirtualizingStackPanel.VirtualizationMode" Value="{dxprg:PropertyGridVirtualizationMode}" />
+        <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Visible" />
+        <Setter Property="KeyboardNavigation.TabNavigation" Value="Continue" />
+        <Setter Property="KeyboardNavigation.DirectionalNavigation" Value="Continue" />
+        <Setter Property="KeyboardNavigation.ControlTabNavigation" Value="Once" />
+
+        <Setter Property="BorderBrush" Value="{DynamicResource {dxprgt:LWKey PropertyGridControl.BorderBrush}}" />
+        <Setter Property="BorderThickness" Value="{DynamicResource {dxprgt:LWKey PropertyGridControl.BorderThickness}}" />
+        <Setter Property="Background" Value="{DynamicResource {dxprgt:LWKey PropertyGridControl.Background}}" />
+        <Setter Property="dxprgi:PropertyGridEditSettingsHelper.HasBackground" Value="{Binding RelativeSource={RelativeSource Self}, Path=Background, Converter={dxprgi:PropertyGridControlBackgroundToBooleanConverter}}" />
+        <Style.Triggers>
+            <Trigger Property="dxprgi:PropertyGridEditSettingsHelper.HasBackground" Value="True">
+                <Trigger.Setters>
+                    <Setter Property="Foreground" Value="{DynamicResource {dxprgt:LWKey VSViewBrush.Foreground_Header_Normal}}" />
+                </Trigger.Setters>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <Style x:Key="PropertyGridViewKindSelectorControl.DefaultStyleBase" TargetType="{x:Type dxprg:PropertyGridViewKindSelectorControl}">
+        <Setter Property="Template" Value="{DynamicResource {dxprgt:LWKey PropertyGridControl.ViewKindSelectorTemplate}}" />
+        <Setter Property="KeyboardNavigation.TabNavigation" Value="Continue" />
+        <Setter Property="KeyboardNavigation.DirectionalNavigation" Value="Continue" />
+    </Style>
+    <Style x:Key="PropertyDescriptionPresenterControl.DefaultStyleBase" TargetType="{x:Type dxprg:PropertyDescriptionPresenterControl}">
+        <Setter Property="Content" Value="{Binding SelectedRow.Description, RelativeSource={RelativeSource Self}}" />
+        <Setter Property="ContentTemplateSelector" Value="{Binding ActualDescriptionTemplateSelector, RelativeSource={RelativeSource TemplatedParent}}" />
+        <Setter Property="Template" Value="{DynamicResource {dxprgt:LWKey PropertyGridControl.DescriptionPresenterTemplate}}" />
+    </Style>
+    <Style x:Key="RowControl.DefaultStyleBase" TargetType="{x:Type dxprg:RowControl}">
+        <Setter Property="KeyboardNavigation.TabNavigation" Value="None" />
+        <Setter Property="KeyboardNavigation.ControlTabNavigation" Value="None" />
+        <Setter Property="KeyboardNavigation.DirectionalNavigation" Value="None" />
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="HeaderBackground" Value="{Binding Background, RelativeSource={RelativeSource Mode=Self}}"/>
+        <Setter Property="HeaderForeground" Value="{Binding Foreground, RelativeSource={RelativeSource Mode=Self}}"/>
+        <Setter Property="ContentBackground" Value="{Binding Background, RelativeSource={RelativeSource Mode=Self}}"/>
+        <Setter Property="ContentForeground" Value="{Binding Foreground, RelativeSource={RelativeSource Mode=Self}}"/>
+        <Setter Property="ExpandButtonWidth" Value="{DynamicResource {dxprgt:LWKey DataRow.ExpanderWidth}}" />
+        <Style.Triggers>
+            <Trigger Property="dx:ThemeManager.IsTouchEnabled" Value="True">
+                <Setter Property="ExpandButtonWidth" Value="{DynamicResource {dxprgt:LWKey DataRow.TouchExpanderWidth}}" />
+            </Trigger>
+            <Trigger Property="IsCategory" Value="True">
+                <Setter Property="FontWeight" Value="Bold" />
+            </Trigger>
+            <DataTrigger Value="True">
+                <DataTrigger.Binding>
+                    <MultiBinding Converter="{StaticResource AlternationIndexConverter}">
+                        <Binding Path="(ItemsControl.AlternationIndex)" RelativeSource="{RelativeSource Mode=Self}"/>
+                        <Binding Path="OwnerView" RelativeSource="{RelativeSource Mode=Self}"/>
+                    </MultiBinding>
+                </DataTrigger.Binding>
+                <Setter Property="Background" Value="{DynamicResource {dxprgt:LWKey DataRow.AlternateRowBackgroundBrush}}"/>
+            </DataTrigger>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="State" Value="Selected"/>
+                    <Condition Property="ActualHighlightHeader" Value="True"/>
+                </MultiTrigger.Conditions>
+                <Setter Property="HeaderBackground" Value="{DynamicResource {dxprgt:VSViewBrushThemeKey ResourceKey=Background_Header_Selected}}"/>
+                <Setter Property="HeaderForeground" Value="{DynamicResource {dxprgt:VSViewBrushThemeKey ResourceKey=Foreground_Header_Selected}}"/>
+            </MultiTrigger>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="State" Value="Selected"/>
+                    <Condition Property="ActualHighlightContent" Value="True"/>
+                </MultiTrigger.Conditions>
+                <Setter Property="ContentBackground" Value="{DynamicResource {dxprgt:VSViewBrushThemeKey ResourceKey=Background_Editor_Selected}}"/>
+                <Setter Property="ContentForeground" Value="{DynamicResource {dxprgt:VSViewBrushThemeKey ResourceKey=Foreground_Editor_Selected}}"/>
+            </MultiTrigger>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="State" Value="SelectedInactive"/>
+                    <Condition Property="ActualHighlightHeader" Value="True"/>
+                </MultiTrigger.Conditions>
+                <Setter Property="HeaderBackground" Value="{DynamicResource {dxprgt:VSViewBrushThemeKey ResourceKey=Background_Header_SelectedInactive}}"/>
+                <Setter Property="HeaderForeground" Value="{DynamicResource {dxprgt:VSViewBrushThemeKey ResourceKey=Foreground_Header_SelectedInactive}}"/>
+            </MultiTrigger>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="State" Value="SelectedInactive"/>
+                    <Condition Property="ActualHighlightContent" Value="True"/>
+                </MultiTrigger.Conditions>
+                <Setter Property="ContentBackground" Value="{DynamicResource {dxprgt:VSViewBrushThemeKey ResourceKey=Background_Editor_SelectedInactive}}"/>
+                <Setter Property="ContentForeground" Value="{DynamicResource {dxprgt:VSViewBrushThemeKey ResourceKey=Foreground_Editor_SelectedInactive}}"/>
+            </MultiTrigger>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="State" Value="SelectedInactiveReadOnly"/>
+                    <Condition Property="ActualHighlightHeader" Value="True"/>
+                </MultiTrigger.Conditions>
+                <Setter Property="HeaderBackground" Value="{DynamicResource {dxprgt:VSViewBrushThemeKey ResourceKey=Background_Header_SelectedInactiveReadOnly}}"/>
+                <Setter Property="HeaderForeground" Value="{DynamicResource {dxprgt:VSViewBrushThemeKey ResourceKey=Foreground_Header_SelectedInactiveReadOnly}}"/>
+            </MultiTrigger>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="State" Value="SelectedInactiveReadOnly"/>
+                    <Condition Property="ActualHighlightContent" Value="True"/>
+                </MultiTrigger.Conditions>
+                <Setter Property="ContentBackground" Value="{DynamicResource {dxprgt:VSViewBrushThemeKey ResourceKey=Background_Editor_SelectedInactiveReadOnly}}"/>
+                <Setter Property="ContentForeground" Value="{DynamicResource {dxprgt:VSViewBrushThemeKey ResourceKey=Foreground_Editor_SelectedInactiveReadOnly}}"/>
+            </MultiTrigger>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="State" Value="SelectedReadOnly"/>
+                    <Condition Property="ActualHighlightHeader" Value="True"/>
+                </MultiTrigger.Conditions>
+                <Setter Property="HeaderBackground" Value="{DynamicResource {dxprgt:VSViewBrushThemeKey ResourceKey=Background_Header_SelectedReadOnly}}"/>
+                <Setter Property="HeaderForeground" Value="{DynamicResource {dxprgt:VSViewBrushThemeKey ResourceKey=Foreground_Header_SelectedReadOnly}}"/>
+            </MultiTrigger>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="State" Value="SelectedReadOnly"/>
+                    <Condition Property="ActualHighlightContent" Value="True"/>
+                </MultiTrigger.Conditions>
+                <Setter Property="ContentBackground" Value="{DynamicResource {dxprgt:VSViewBrushThemeKey ResourceKey=Background_Editor_SelectedReadOnly}}"/>
+                <Setter Property="ContentForeground" Value="{DynamicResource {dxprgt:VSViewBrushThemeKey ResourceKey=Foreground_Editor_SelectedReadOnly}}"/>
+            </MultiTrigger>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="State" Value="ReadOnly"/>
+                    <Condition Property="ActualHighlightHeader" Value="True"/>
+                </MultiTrigger.Conditions>
+                <Setter Property="HeaderForeground" Value="{DynamicResource {dxprgt:VSViewBrushThemeKey ResourceKey=Foreground_Header_ReadOnly}}"/>
+            </MultiTrigger>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="State" Value="ReadOnly"/>
+                    <Condition Property="ActualHighlightContent" Value="True"/>
+                </MultiTrigger.Conditions>
+                <Setter Property="ContentForeground" Value="{DynamicResource {dxprgt:VSViewBrushThemeKey ResourceKey=Foreground_Editor_ReadOnly}}"/>
+            </MultiTrigger>
+        </Style.Triggers>
+    </Style>
+    <Style x:Key="BrushEdit.DefaultStyleBase" BasedOn="{dx:TargetStaticResource BrushEditBase.DefaultStyleBase, TargetDictionary={dxi:ThemeResourceDictionary Path='Core/Editors/Editors.Generic.xaml'}}" TargetType="{x:Type dxprg:BrushEdit}" />
+    <Style x:Key="PopupBrushEdit.DefaultStyleBase" BasedOn="{dx:TargetStaticResource PopupBrushEditBase.DefaultStyleBase, TargetDictionary={dxi:ThemeResourceDictionary Path='Core/Editors/Editors.Generic.xaml'}}" TargetType="{x:Type dxprg:PopupBrushEdit}">
+        <Setter Property="PopupContentTemplate" Value="{DynamicResource {dxprgt:LWKey PopupBrushEdit.PopupContentTemplate}}" />
+        <Setter Property="PopupMinHeight" Value="275" />
+    </Style>
+    <!--#endregion DEFAULT STYLES-->
+</ResourceDictionary>

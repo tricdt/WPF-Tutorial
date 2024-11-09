@@ -1,0 +1,26 @@
+<ResourceDictionary mc:Ignorable="cs" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:cs="colorscheme_ignorable_uri" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxi="http://schemas.devexpress.com/winfx/2008/xaml/core/internal" xmlns:dxsch="http://schemas.devexpress.com/winfx/2008/xaml/scheduler" xmlns:dxschi="http://schemas.devexpress.com/winfx/2008/xaml/scheduler/internal" xmlns:dxscht="http://schemas.devexpress.com/winfx/2008/xaml/scheduler/themekeys" xmlns:dxt="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sys="clr-namespace:System;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ResourceDictionary.MergedDictionaries>
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.VS2017Light.v24.1;component/Scheduler/VS2017Light/UICore.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.VS2017Light.v24.1;component/Scheduler/VS2017Light/ScrollBar.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.VS2017Light.v24.1;component/Scheduler/VS2017Light/NavigationButton.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.VS2017Light.v24.1;component/Scheduler/VS2017Light/BaseView/MoreButtonToolTip.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.VS2017Light.v24.1;component/Scheduler/VS2017Light/ResourceNavigator.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.VS2017Light.v24.1;component/Scheduler/VS2017Light/CurrentTimeIndicator.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.VS2017Light.v24.1;component/Scheduler/VS2017Light/SchedulerControl.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.VS2017Light.v24.1;component/Scheduler/VS2017Light/Appointments/VerticalAppointment.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.VS2017Light.v24.1;component/Scheduler/VS2017Light/Appointments/HorizontalAppointment.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.VS2017Light.v24.1;component/Scheduler/VS2017Light/Appointments/HorizontalAppointmentSameDay.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.VS2017Light.v24.1;component/Scheduler/VS2017Light/Appointments/DragDropHoverTimeCells.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.VS2017Light.v24.1;component/Scheduler/VS2017Light/Containers.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.VS2017Light.v24.1;component/Scheduler/VS2017Light/Selection.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.VS2017Light.v24.1;component/Scheduler/VS2017Light/BaseView/Header.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.VS2017Light.v24.1;component/Scheduler/VS2017Light/DayView/TimeRuler.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.VS2017Light.v24.1;component/Scheduler/VS2017Light/DayView/MoreButton.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.VS2017Light.v24.1;component/Scheduler/VS2017Light/DayView/HorizontalTimeMarker.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.VS2017Light.v24.1;component/Scheduler/VS2017Light/TimelineView/VerticalTimeMarker.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.VS2017Light.v24.1;component/Scheduler/VS2017Light/RangeControl/Header.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.VS2017Light.v24.1;component/Scheduler/VS2017Light/RangeControl/Thumbnail.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.VS2017Light.v24.1;component/Scheduler/VS2017Light/RangeControl/RulerCell.xaml" />
+  </ResourceDictionary.MergedDictionaries>
+  <!-- General -->
+</ResourceDictionary>

@@ -1,0 +1,76 @@
+﻿<ResourceDictionary mc:Ignorable="cs" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:cs="colorscheme_ignorable_uri" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxfuit="http://schemas.devexpress.com/winfx/2008/xaml/core/filteringui/themekeys" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sys="clr-namespace:System;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <!--#region FilterEditor-->
+  <!-- Control -->
+  <SolidColorBrush x:Key="{dxfuit:FilterEditorThemeKey ResourceKey=BorderBrush}" Color="#6A000000" />
+  <SolidColorBrush x:Key="{dxfuit:FilterEditorThemeKey ResourceKey=Background}" Color="#FFD4D4D4" />
+  <SolidColorBrush x:Key="{dxfuit:FilterEditorThemeKey ResourceKey=Foreground}" Color="#E3000000" />
+  <!-- Property Selector -->
+  <SolidColorBrush x:Key="{dxfuit:FilterEditorThemeKey ResourceKey=PropertySelectorBackground}" Color="#FFE8BC94" />
+  <SolidColorBrush x:Key="{dxfuit:FilterEditorThemeKey ResourceKey=PropertySelectorForeground}" Color="#FF000000" />
+  <!-- Operator Selector -->
+  <SolidColorBrush x:Key="{dxfuit:FilterEditorThemeKey ResourceKey=OperatorSelectorBackground}" Color="#FF95BDD4" />
+  <SolidColorBrush x:Key="{dxfuit:FilterEditorThemeKey ResourceKey=OperatorSelectorForeground}" Color="#FF000000" />
+  <!-- Group Selector -->
+  <SolidColorBrush x:Key="{dxfuit:FilterEditorThemeKey ResourceKey=GroupOperatorSelectorBackground}" Color="#FFD36E80" />
+  <SolidColorBrush x:Key="{dxfuit:FilterEditorThemeKey ResourceKey=GroupOperatorSelectorForeground}" Color="#FF000000" />
+  <!-- Inplace Active -->
+  <SolidColorBrush x:Key="{dxfuit:FilterEditorThemeKey ResourceKey=InplaceEditorActiveBackground}" Color="#FFFFFFFF" />
+  <SolidColorBrush x:Key="{dxfuit:FilterEditorThemeKey ResourceKey=InplaceEditorActiveBorderBrush}" Color="#FFFFFFFF" />
+  <SolidColorBrush x:Key="{dxfuit:FilterEditorThemeKey ResourceKey=InplaceEditorActiveForeground}" Color="#E3000000" />
+  <!-- Property Inactive -->
+  <SolidColorBrush x:Key="{dxfuit:FilterEditorThemeKey ResourceKey=InplaceEditorInactiveBackground}" Color="#FF86C796" />
+  <SolidColorBrush x:Key="{dxfuit:FilterEditorThemeKey ResourceKey=InplaceEditorInactiveBorderBrush}" Color="#60000000" />
+  <SolidColorBrush x:Key="{dxfuit:FilterEditorThemeKey ResourceKey=InplaceEditorInactiveForeground}" Color="#FF000000" />
+  <!-- Options -->
+  <CornerRadius x:Key="{dxfuit:FilterEditorThemeKey ResourceKey=ItemCornerRadius}">0</CornerRadius>
+  <CornerRadius x:Key="{dxfuit:FilterEditorThemeKey ResourceKey=FormatConditionCornerRadius}">0</CornerRadius>
+  <sys:Double x:Key="{dxfuit:FilterEditorThemeKey ResourceKey=RowMinHeight}">22</sys:Double>
+  <sys:Double x:Key="{dxfuit:FilterEditorThemeKey ResourceKey=InplaceEditorCellMinWidth}">38</sys:Double>
+  <Thickness x:Key="{dxfuit:FilterEditorThemeKey ResourceKey=PropertySelectorContentMargin}">4,2,4,2</Thickness>
+  <SolidColorBrush x:Key="{dxfuit:FilterEditorThemeKey ResourceKey=AddChildSplitButtonMouseOverFill}" Color="#FF69A891" />
+  <!--#endregion-->
+  <!--#region FilterElements-->
+  <Thickness x:Key="{dxfuit:ExcelStyleFilterElementThemeKey ResourceKey=HeaderPadding}">12,3,12,6</Thickness>
+  <SolidColorBrush x:Key="{dxfuit:CheckedTreeListFilterElementThemeKey ResourceKey=DataPresenterBackground}" Color="#FFd4d4d4" />
+  <sys:Double x:Key="{dxfuit:FilteringUIThemeKey ResourceKey=DatePeriodsFilterElementHeight}">145</sys:Double>
+  <sys:Double x:Key="{dxfuit:FilteringUIThemeKey ResourceKey=DatePeriodsFilterElementHeightTouch}">320</sys:Double>
+  <SolidColorBrush x:Key="{dxfuit:ExcelStyleFilterElementThemeKey ResourceKey=HeaderPanelBottomBorderColor}" Color="#6A000000" />
+  <SolidColorBrush x:Key="{dxfuit:ExcelStyleFilterElementThemeKey ResourceKey=HeaderPanelSeparatorColor}" Color="#60000000" />
+  <SolidColorBrush x:Key="{dxfuit:ExcelStyleFilterElementThemeKey ResourceKey=HeaderPanelSelectionMarkerBackground}" Color="#FFB2B2B2" />
+  <SolidColorBrush x:Key="{dxfuit:ExcelStyleFilterElementThemeKey ResourceKey=BorderBrush}" Color="#6A000000" />
+  <SolidColorBrush x:Key="{dxfuit:ExcelStyleFilterElementThemeKey ResourceKey=Background}" Color="#FFB2B2B2" />
+  <SolidColorBrush x:Key="{dxfuit:ExcelStyleFilterElementThemeKey ResourceKey=FilterValueContainerTopAreaBackground}" Color="#FF696969" />
+  <SolidColorBrush x:Key="{dxfuit:ExcelStyleFilterElementThemeKey ResourceKey=FilterValueContainerTopAreaBorderColor}" Color="#FFABABAB" />
+  <Thickness x:Key="{dxfuit:ExcelStyleFilterElementThemeKey ResourceKey=FilterValueContainerTopAreaMargin}">2,1</Thickness>
+  <Thickness x:Key="{dxfuit:ExcelStyleFilterElementThemeKey ResourceKey=FilterValueContainerTopAreaMarginTouch}">11,9</Thickness>
+  <SolidColorBrush x:Key="{dxfuit:ExcelStyleFilterElementThemeKey ResourceKey=HeaderPanelBackground}" Color="Transparent" />
+  <!--#endregion-->
+  <SolidColorBrush x:Key="{dxfuit:FilteringPanelThemeKey ResourceKey=ControlBackground}" Color="#FF696969" />
+  <SolidColorBrush x:Key="{dxfuit:FilteringPanelThemeKey ResourceKey=ControlButtonsBackgroundPressed}" Color="#FF414141" />
+  <SolidColorBrush x:Key="{dxfuit:FilteringPanelThemeKey ResourceKey=ControlButtonsBorderBrushPressed}" Color="#FF414141" />
+  <SolidColorBrush x:Key="{dxfuit:FilteringPanelThemeKey ResourceKey=ControlButtonsBackgroundHover}" Color="#FF555555" />
+  <SolidColorBrush x:Key="{dxfuit:FilteringPanelThemeKey ResourceKey=ControlButtonsBorderBrushHover}" Color="#FF555555" />
+  <SolidColorBrush x:Key="{dxfuit:FilteringPanelThemeKey ResourceKey=ControlBorderBrush}" Color="#FF444444" />
+  <SolidColorBrush x:Key="{dxfuit:FilteringPanelThemeKey ResourceKey=PropertyBackground}" Color="#FFE8BC94" />
+  <SolidColorBrush x:Key="{dxfuit:FilteringPanelThemeKey ResourceKey=ValueBackground}" Color="#FF86C796" />
+  <SolidColorBrush x:Key="{dxfuit:FilteringPanelThemeKey ResourceKey=HighlightedBackground}" Color="#FF95BDD4" />
+  <SolidColorBrush x:Key="{dxfuit:FilteringPanelThemeKey ResourceKey=Foreground}" Color="#E3FFFFFF" />
+  <SolidColorBrush x:Key="{dxfuit:FilteringPanelThemeKey ResourceKey=ElementForeground}" Color="#FF000000" />
+  <SolidColorBrush x:Key="{dxfuit:FilteringPanelThemeKey ResourceKey=BracketBorderBrush}" Color="#E3FFFFFF" />
+  <dx:WpfSvgPalette x:Key="{dxfuit:FilteringPanelThemeKey ResourceKey=SvgPalette}">
+    <SolidColorBrush x:Key="BlackColor" Color="#E3FFFFFF" />
+  </dx:WpfSvgPalette>
+  <dx:WpfSvgPalette x:Key="{dxfuit:FilteringPanelThemeKey ResourceKey=ButtonSvgPalette}">
+    <SolidColorBrush x:Key="BlackColor" Color="#FFEFEFEF" />
+    <dx:WpfSvgPalette.States>
+      <dx:WpfSvgPalette x:Key="Hover">
+        <SolidColorBrush x:Key="BlackColor" Color="#FFEFEFEF" />
+      </dx:WpfSvgPalette>
+      <dx:WpfSvgPalette x:Key="Pressed">
+        <SolidColorBrush x:Key="BlackColor" Color="White" />
+      </dx:WpfSvgPalette>
+    </dx:WpfSvgPalette.States>
+  </dx:WpfSvgPalette>
+  <SolidColorBrush x:Key="{dxfuit:FilteringPanelThemeKey ResourceKey=PopupElementPressedBackground}" Color="#FF414141" Opacity="0.5" />
+  <SolidColorBrush x:Key="{dxfuit:FilteringPanelThemeKey ResourceKey=PopupElementHoverBackground}" Color="#FF414141" Opacity="0.3" />
+</ResourceDictionary>

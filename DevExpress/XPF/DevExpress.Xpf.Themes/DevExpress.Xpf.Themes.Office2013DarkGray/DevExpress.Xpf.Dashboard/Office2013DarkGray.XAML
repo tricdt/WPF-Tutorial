@@ -1,0 +1,24 @@
+﻿<ResourceDictionary mc:Ignorable="cs" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:cs="colorscheme_ignorable_uri" xmlns:dxdst="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ResourceDictionary.MergedDictionaries>
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2013DarkGray.v24.1;component/DevExpress.Xpf.Dashboard/Generic/Generic.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2013DarkGray.v24.1;component/DevExpress.Xpf.Dashboard/Office2013DarkGray/UICore.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2013DarkGray.v24.1;component/DevExpress.Xpf.Dashboard/Office2013DarkGray/Templates.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2013DarkGray.v24.1;component/DevExpress.Xpf.Dashboard/Office2013DarkGray/DeltaValuePresenter.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2013DarkGray.v24.1;component/DevExpress.Xpf.Dashboard/Office2013DarkGray/CardItem.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2013DarkGray.v24.1;component/DevExpress.Xpf.Dashboard/Office2013DarkGray/MapItem.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2013DarkGray.v24.1;component/DevExpress.Xpf.Dashboard/Office2013DarkGray/BoundImageItem.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2013DarkGray.v24.1;component/DevExpress.Xpf.Dashboard/Office2013DarkGray/ChartItem.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2013DarkGray.v24.1;component/DevExpress.Xpf.Dashboard/Office2013DarkGray/ComboBoxItem.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2013DarkGray.v24.1;component/DevExpress.Xpf.Dashboard/Office2013DarkGray/GaugeItem.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2013DarkGray.v24.1;component/DevExpress.Xpf.Dashboard/Office2013DarkGray/GridItem.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2013DarkGray.v24.1;component/DevExpress.Xpf.Dashboard/Office2013DarkGray/ImageItem.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2013DarkGray.v24.1;component/DevExpress.Xpf.Dashboard/Office2013DarkGray/ListBoxItem.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2013DarkGray.v24.1;component/DevExpress.Xpf.Dashboard/Office2013DarkGray/PieItem.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2013DarkGray.v24.1;component/DevExpress.Xpf.Dashboard/Office2013DarkGray/PivotItem.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2013DarkGray.v24.1;component/DevExpress.Xpf.Dashboard/Office2013DarkGray/RangeItem.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2013DarkGray.v24.1;component/DevExpress.Xpf.Dashboard/Office2013DarkGray/TextBoxItem.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2013DarkGray.v24.1;component/DevExpress.Xpf.Dashboard/Office2013DarkGray/TreemapItem.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2013DarkGray.v24.1;component/DevExpress.Xpf.Dashboard/Office2013DarkGray/TreeViewItem.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2013DarkGray.v24.1;component/DevExpress.Xpf.Dashboard/Office2013DarkGray/DateFilterItem.xaml" />
+  </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

@@ -1,0 +1,18 @@
+﻿<ResourceDictionary mc:Ignorable="cs" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:cs="colorscheme_ignorable_uri" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <SolidColorBrush x:Key="Text.Foreground" Color="#FF1E395B" />
+  <Color x:Key="LayerSeparator.NormalColor">#FF94ADCC</Color>
+  <Color x:Key="LayerSeparator.MouseOverColor">#FF94ADCC</Color>
+  <Color x:Key="ElementSizer.GlyphNormalColor">#FF585B5E</Color>
+  <Color x:Key="ElementSizer.GlyphMouseOverColor">#FF94ADCC</Color>
+  <Color x:Key="ElementSizer.GlyphBackgroundColor">#3FFFFFFF</Color>
+  <Color x:Key="GroupBoxButton.NormalColor">#FF585B5E</Color>
+  <Color x:Key="GroupBoxButton.MouseOverColor">#FFEB8900</Color>
+  <Color x:Key="GroupBoxButton.PressedColor">#FF515D7A</Color>
+  <SolidColorBrush x:Key="GroupBox.Background" Color="#FFCFDDEE" />
+  <SolidColorBrush x:Key="GroupBox.BorderBrush" Color="#FF94ADCC" />
+  <SolidColorBrush x:Key="GroupBox.SeparatorBrush" Color="#FF94ADCC" />
+  <SolidColorBrush x:Key="GroupBox.TitleBackground" Color="#FFCFDDEE" />
+  <SolidColorBrush x:Key="GroupSeparator.Brush1" Color="#FF94ADCC" />
+  <SolidColorBrush x:Key="GroupSeparator.Brush2" Color="Transparent" />
+  <SolidColorBrush x:Key="GroupBox.TitleForeground" Color="#FF1E395B" />
+</ResourceDictionary>

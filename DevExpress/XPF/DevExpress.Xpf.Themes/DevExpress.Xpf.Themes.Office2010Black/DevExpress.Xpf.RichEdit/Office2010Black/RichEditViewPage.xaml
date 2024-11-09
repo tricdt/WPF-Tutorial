@@ -1,0 +1,444 @@
+﻿<ResourceDictionary mc:Ignorable="cs"
+                    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:cs="colorscheme_ignorable_uri"
+                    xmlns:dxrec="http://schemas.devexpress.com/winfx/2008/xaml/richedit/internal"
+                    xmlns:dxret="http://schemas.devexpress.com/winfx/2008/xaml/richedit/themekeys"
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <sys:Double x:Key="{dxret:RichEditControlThemeKey ResourceKey=CommentsAreaLeftPadding}">20</sys:Double>
+
+    <sys:Double x:Key="{dxret:RichEditControlThemeKey ResourceKey=CommentsAreaRightPadding}">10</sys:Double>
+
+    <Thickness x:Key="{dxret:RichEditControlThemeKey ResourceKey=CommentContentPadding}">10,10,10,10</Thickness>
+
+    <Point x:Key="{dxret:RichEditControlThemeKey ResourceKey=CommentLineOffset}">0,20</Point>
+
+    <ControlTemplate x:Key="{dxret:RichEditControlThemeKey ResourceKey=PrintLayoutViewPageBorderControlTemplate}" TargetType="{x:Type dxrec:RichEditViewPageContentControl}">
+        <Grid>
+            <Grid x:Name="Shadow">
+                <Border Background="#FF000000"
+                        cs:Name="Border_0001"
+                        Opacity="0.05"
+                        cs:Office2010Blue.Background="#7F000000"
+                        cs:Office2010Silver.Background="#FF666666"
+                       />
+                <Border Background="#FF000000"
+                        CornerRadius="12"
+                        cs:Name="Border_2405"
+                        Margin="-1"
+                        Opacity="0.03"
+                        cs:Office2010Blue.Background="#FF000000"
+                        cs:Office2010Silver.Background="#FF000000"
+                       />
+                <Border Background="#FF000000"
+                        CornerRadius="13"
+                        cs:Name="Border_0003"
+                        Margin="-2"
+                        Opacity="0.03"
+                        cs:Office2010Blue.Background="#7F000000"
+                        cs:Office2010Silver.Background="#FF666666"
+                       />
+                <Border Background="#FF000000"
+                        CornerRadius="14"
+                        cs:Name="Border_0004"
+                        Margin="-3"
+                        Opacity="0.02"
+                        cs:Office2010Blue.Background="#7F000000"
+                        cs:Office2010Silver.Background="#FF666666"
+                       />
+                <Border Background="#FF000000"
+                        CornerRadius="15"
+                        cs:Name="Border_0005"
+                        Margin="-4"
+                        Opacity="0.02"
+                        cs:Office2010Blue.Background="#7F000000"
+                        cs:Office2010Silver.Background="#FF666666"
+                       />
+                <Border Background="#FF000000"
+                        CornerRadius="16"
+                        cs:Name="Border_0006"
+                        Margin="-5"
+                        Opacity="0.02"
+                        cs:Office2010Blue.Background="#7F000000"
+                        cs:Office2010Silver.Background="#FF666666"
+                       />
+                <Border Background="#FF000000"
+                        CornerRadius="17"
+                        cs:Name="Border_0007"
+                        Margin="-6"
+                        Opacity="0.01"
+                        cs:Office2010Blue.Background="#7F000000"
+                        cs:Office2010Silver.Background="#FF666666"
+                       />
+                <Border Background="#FF000000"
+                        CornerRadius="18"
+                        cs:Name="Border_0008"
+                        Margin="-7"
+                        Opacity="0.01"
+                        cs:Office2010Blue.Background="#7F000000"
+                        cs:Office2010Silver.Background="#FF666666"
+                       />
+                <Border Background="#FF000000"
+                        CornerRadius="19"
+                        cs:Name="Border_0009"
+                        Margin="-8"
+                        Opacity="0.01"
+                        cs:Office2010Blue.Background="#7F000000"
+                        cs:Office2010Silver.Background="#FF666666"
+                       />
+                <Border Background="#FF000000"
+                        CornerRadius="20"
+                        cs:Name="Border_0010"
+                        Margin="-9"
+                        Opacity="0.01"
+                        cs:Office2010Blue.Background="#7F000000"
+                        cs:Office2010Silver.Background="#FF666666"
+                       />
+                <Border Background="#FF000000"
+                        CornerRadius="21"
+                        cs:Name="Border_0011"
+                        Margin="-10"
+                        Opacity="0.01"
+                        cs:Office2010Blue.Background="#7F000000"
+                        cs:Office2010Silver.Background="#FF666666"
+                       />
+            </Grid>
+            <Border Background="{TemplateBinding Background}"
+                    BorderBrush="#3F484848"
+                    BorderThickness="1"
+                    cs:Name="Border_0012"
+                    cs:Office2010Blue.BorderBrush="#7F7994B4"
+                    cs:Office2010Silver.BorderBrush="#3FA5ACB5"
+                   >
+                <Grid>
+                    <ContentPresenter Content="{TemplateBinding Content}"
+                                      ContentTemplate="{TemplateBinding ContentTemplate}"
+                                      Margin="-1"
+                                      SnapsToDevicePixels="True"
+                                      UseLayoutRounding="True"/>
+                    <Border Background="#FFFAFAFA"
+                            cs:Name="Border_0015"
+                            HorizontalAlignment="Right"
+                            Visibility="{TemplateBinding CommentsVisibility}"
+                            cs:Office2010Blue.Background="#FFFAFAFA"
+                            cs:Office2010Silver.Background="#FFFAFAFA"
+                           >
+                        <dxrec:RichEditViewCommentsPresenter x:Name="CommentsArea"
+                                                             HorizontalAlignment="Right"
+                                                             Visibility="{TemplateBinding CommentsVisibility}"
+                                                             Width="{TemplateBinding CommentsWidth}"/>
+                    </Border>
+                </Grid>
+            </Border>
+        </Grid>
+    </ControlTemplate>
+
+    <!--RichEditViewCommentsPresenterControlTemplate-->
+
+    <ControlTemplate x:Key="{dxret:RichEditControlThemeKey ResourceKey=RichEditViewCommentsPresenterControlTemplate}" TargetType="{x:Type ContentControl}">
+        <ContentPresenter Content="{TemplateBinding Content}"
+                          ContentTemplate="{TemplateBinding ContentTemplate}"
+                          SnapsToDevicePixels="True"
+                          UseLayoutRounding="True"/>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="{dxret:RichEditControlThemeKey ResourceKey=SimpleViewPageBorderControlTemplate}" TargetType="{x:Type dxrec:RichEditViewPageContentControl}">
+        <Border Background="{TemplateBinding Background}">
+            <Grid>
+                <ContentPresenter Content="{TemplateBinding Content}"
+                                  ContentTemplate="{TemplateBinding ContentTemplate}"
+                                  SnapsToDevicePixels="True"
+                                  UseLayoutRounding="True"/>
+                <Border Background="#FFFAFAFA"
+                        cs:Name="Border_0015"
+                        HorizontalAlignment="Right"
+                        Visibility="{TemplateBinding CommentsVisibility}"
+                        cs:Office2010Blue.Background="#FFFAFAFA"
+                        cs:Office2010Silver.Background="#FFFAFAFA"
+                       >
+                    <dxrec:RichEditViewCommentsPresenter x:Name="CommentsArea"
+                                                         HorizontalAlignment="Right"
+                                                         Visibility="{TemplateBinding CommentsVisibility}"
+                                                         Width="{TemplateBinding CommentsWidth}"/>
+                </Border>
+            </Grid>
+        </Border>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="{dxret:RichEditControlThemeKey ResourceKey=DraftViewPageBorderControlTemplate}" TargetType="{x:Type dxrec:RichEditViewPageContentControl}">
+        <Border Background="{TemplateBinding Background}">
+            <Grid>
+                <ContentPresenter Content="{TemplateBinding Content}"
+                                  ContentTemplate="{TemplateBinding ContentTemplate}"
+                                  SnapsToDevicePixels="True"
+                                  UseLayoutRounding="True"/>
+                <Border Background="#FFFAFAFA"
+                        cs:Name="Border_0015"
+                        HorizontalAlignment="Right"
+                        Visibility="{TemplateBinding CommentsVisibility}"
+                        cs:Office2010Blue.Background="#FFFAFAFA"
+                        cs:Office2010Silver.Background="#FFFAFAFA"
+                       >
+                    <dxrec:RichEditViewCommentsPresenter x:Name="CommentsArea"
+                                                         HorizontalAlignment="Right"
+                                                         Visibility="{TemplateBinding CommentsVisibility}"
+                                                         Width="{TemplateBinding CommentsWidth}"/>
+                </Border>
+            </Grid>
+        </Border>
+    </ControlTemplate>
+
+    <!--RichEditCommentBorderControlTemplate -->
+
+    <ControlTemplate x:Key="{dxret:RichEditControlThemeKey ResourceKey=RichEditCommentBorderControlTemplate}" TargetType="{x:Type ContentControl}">
+        <Grid>
+            <Border Background="#FFFFFFFF"
+                    BorderBrush="{TemplateBinding Background}"
+                    BorderThickness="1"
+                    CornerRadius="2"
+                    cs:Name="Border_0016"
+                    Margin="1"
+                    cs:Office2010Blue.Background="#FFFFFFFF"
+                    cs:Office2010Silver.Background="#FFFFFFFF"
+                   >
+                <ContentPresenter Content="{TemplateBinding Content}"
+                                  ContentTemplate="{TemplateBinding ContentTemplate}"
+                                  Margin="-1"
+                                  SnapsToDevicePixels="True"
+                                  UseLayoutRounding="True"/>
+            </Border>
+            <Border Background="{TemplateBinding Background}"
+                    CornerRadius="2"
+                    IsHitTestVisible="False"
+                    Margin="1"
+                    Opacity="0.1"/>
+        </Grid>
+    </ControlTemplate>
+
+    <!-- CommentMoreButtonStyle -->
+
+    <Style x:Key="{dxret:RichEditControlThemeKey ResourceKey=CommentMoreButtonStyle}" TargetType="{x:Type Button}">
+        <Setter Property="HorizontalAlignment" Value="Right"/>
+        <Setter Property="VerticalAlignment" Value="Bottom"/>
+        <Setter Property="Margin" Value="3"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid>
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Disabled">
+                                    <Storyboard>
+                                        <DoubleAnimation Duration="0"
+                                                         Storyboard.TargetName="Root"
+                                                         Storyboard.TargetProperty="Opacity"
+                                                         To="0"/>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Normal">
+                                    <Storyboard>
+                                        <DoubleAnimation Duration="0"
+                                                         Storyboard.TargetName="Root"
+                                                         Storyboard.TargetProperty="Opacity"
+                                                         To="0.75"/>
+                                        <DoubleAnimation Duration="0"
+                                                         Storyboard.TargetName="NormalState"
+                                                         Storyboard.TargetProperty="Opacity"
+                                                         To="1"/>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="MouseOver">
+                                    <Storyboard>
+                                        <DoubleAnimation Duration="0"
+                                                         Storyboard.TargetName="HoverState"
+                                                         Storyboard.TargetProperty="Opacity"
+                                                         To="1"/>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Pressed">
+                                    <Storyboard>
+                                        <DoubleAnimation Duration="0"
+                                                         Storyboard.TargetName="PressedState"
+                                                         Storyboard.TargetProperty="Opacity"
+                                                         To="1"/>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <Grid x:Name="Root"
+                              Height="16"
+                              Width="16">
+                            <Border x:Name="NormalState"
+                                    Background="#FF6A6A6A"
+                                    CornerRadius="64"
+                                    cs:Name="Border_0002"
+                                    Opacity="0"
+                                    cs:Office2010Blue.Background="#7F000000"
+                                    cs:Office2010Silver.Background="#FF666666"
+                                   >
+                                <Border CornerRadius="64" Margin="1">
+                                    <Border.Background>
+                                        <LinearGradientBrush cs:Name="LinearGradientBrush_0715"
+                                                             EndPoint="0.5,1"
+                                                             StartPoint="0.5,0"
+                                                            >
+                                            <GradientStop Color="#FFB3B3B3"
+                                                          cs:Name="GradientStop_0015"
+                                                          Offset="0"
+                                                          cs:Office2010Blue.Color="#FFB3B3B3"
+                                                          cs:Office2010Silver.Color="#FFB3B3B3"
+                                                         />
+                                            <GradientStop Color="#FF9F9F9F"
+                                                          cs:Name="GradientStop_0016"
+                                                          Offset="1"
+                                                          cs:Office2010Blue.Color="#FF9F9F9F"
+                                                          cs:Office2010Silver.Color="#FF9F9F9F"
+                                                         />
+                                        </LinearGradientBrush>
+                                    </Border.Background>
+                                </Border>
+                            </Border>
+                            <Border x:Name="HoverState"
+                                    CornerRadius="24"
+                                    Opacity="0">
+                                <Border.Background>
+                                    <LinearGradientBrush cs:Name="LinearGradientBrush_0716"
+                                                         EndPoint="0.5,1"
+                                                         StartPoint="0.5,0"
+                                                        >
+                                        <GradientStop Color="#BFD7A820"
+                                                      cs:Name="GradientStop_0017"
+                                                      Offset="0"
+                                                      cs:Office2010Blue.Color="#BFD7A820"
+                                                      cs:Office2010Silver.Color="#BFD7A820"
+                                                     />
+                                        <GradientStop Color="#BFB89407"
+                                                      cs:Name="GradientStop_0018"
+                                                      Offset="1"
+                                                      cs:Office2010Blue.Color="#BFB89407"
+                                                      cs:Office2010Silver.Color="#BFB89407"
+                                                     />
+                                    </LinearGradientBrush>
+                                </Border.Background>
+                                <Border CornerRadius="64" Margin="1">
+                                    <Border.Background>
+                                        <LinearGradientBrush cs:Name="LinearGradientBrush_0717"
+                                                             EndPoint="0.5,1"
+                                                             StartPoint="0.5,0"
+                                                            >
+                                            <GradientStop Color="#FFFFFAE6"
+                                                          cs:Name="GradientStop_0019"
+                                                          Offset="0"
+                                                          cs:Office2010Blue.Color="#FFFFFAE6"
+                                                          cs:Office2010Silver.Color="#FFFFFAE6"
+                                                         />
+                                            <GradientStop Color="#FFFFFFED"
+                                                          cs:Name="GradientStop_0020"
+                                                          Offset="1"
+                                                          cs:Office2010Blue.Color="#FFFFFFED"
+                                                          cs:Office2010Silver.Color="#FFFFFFED"
+                                                         />
+                                        </LinearGradientBrush>
+                                    </Border.Background>
+                                    <Border CornerRadius="64" Margin="1">
+                                        <Border.Background>
+                                            <LinearGradientBrush cs:Name="LinearGradientBrush_0718"
+                                                                 EndPoint="0.5,1"
+                                                                 StartPoint="0.5,0"
+                                                                >
+                                                <GradientStop Color="#FFFFEEA8"
+                                                              cs:Name="GradientStop_0021"
+                                                              Offset="0"
+                                                              cs:Office2010Blue.Color="#FFFFEEA8"
+                                                              cs:Office2010Silver.Color="#FFFFEEA8"
+                                                             />
+                                                <GradientStop Color="#FFFFFCE0"
+                                                              cs:Name="GradientStop_0022"
+                                                              Offset="1"
+                                                              cs:Office2010Blue.Color="#FFFFFCE0"
+                                                              cs:Office2010Silver.Color="#FFFFFCE0"
+                                                             />
+                                                <GradientStop Color="#FFFFE277"
+                                                              cs:Name="GradientStop_0023"
+                                                              Offset="0.5"
+                                                              cs:Office2010Blue.Color="#FFFFE277"
+                                                              cs:Office2010Silver.Color="#FFFFE277"
+                                                             />
+                                            </LinearGradientBrush>
+                                        </Border.Background>
+                                    </Border>
+                                </Border>
+                            </Border>
+                            <Border x:Name="PressedState"
+                                    CornerRadius="64"
+                                    Opacity="0">
+                                <Border.Background>
+                                    <LinearGradientBrush cs:Name="LinearGradientBrush_0719"
+                                                         EndPoint="0.5,1"
+                                                         StartPoint="0.5,0"
+                                                        >
+                                        <GradientStop Color="#FFC28F36"
+                                                      cs:Name="GradientStop_0024"
+                                                      Offset="0"
+                                                      cs:Office2010Blue.Color="#FFC28F36"
+                                                      cs:Office2010Silver.Color="#FFC28F36"
+                                                     />
+                                        <GradientStop Color="#FFC2A34C"
+                                                      cs:Name="GradientStop_0025"
+                                                      Offset="1"
+                                                      cs:Office2010Blue.Color="#FFC2A34C"
+                                                      cs:Office2010Silver.Color="#FFC2A34C"
+                                                     />
+                                    </LinearGradientBrush>
+                                </Border.Background>
+                                <Border CornerRadius="64" Margin="1">
+                                    <Border.Background>
+                                        <LinearGradientBrush cs:Name="LinearGradientBrush_0720"
+                                                             EndPoint="0.5,1"
+                                                             StartPoint="0.5,0"
+                                                            >
+                                            <GradientStop Color="#FFFFE575"
+                                                          cs:Name="GradientStop_0026"
+                                                          Offset="0"
+                                                          cs:Office2010Blue.Color="#FFFFE575"
+                                                          cs:Office2010Silver.Color="#FFFFE575"
+                                                         />
+                                            <GradientStop Color="#FFFFF37F"
+                                                          cs:Name="GradientStop_0027"
+                                                          Offset="1"
+                                                          cs:Office2010Blue.Color="#FFFFF37F"
+                                                          cs:Office2010Silver.Color="#FFFFF37F"
+                                                         />
+                                            <GradientStop Color="#FFFFD86C"
+                                                          cs:Name="GradientStop_0028"
+                                                          Offset="0.5"
+                                                          cs:Office2010Blue.Color="#FFFFD86C"
+                                                          cs:Office2010Silver.Color="#FFFFD86C"
+                                                         />
+                                        </LinearGradientBrush>
+                                    </Border.Background>
+                                </Border>
+                            </Border>
+                            <Path x:Name="GlyphDown"
+                                  cs:Name="Path_0002"
+                                  Data="F1 M 209,15.9999L 201,15.9999L 205,20L 209,15.9999 Z"
+                                  Fill="#FF3C3C3C"
+                                  Height="4"
+                                  HorizontalAlignment="Center"
+                                  Margin="0,2,0,0"
+                                  Stretch="Fill"
+                                  VerticalAlignment="Center"
+                                  Width="8"
+                                  cs:Office2010Blue.Fill="#FF3C3C3C"
+                                  cs:Office2010Silver.Fill="#FF3C3C3C"
+                                 />
+                        </Grid>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

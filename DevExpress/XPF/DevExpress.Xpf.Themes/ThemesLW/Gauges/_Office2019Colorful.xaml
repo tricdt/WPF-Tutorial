@@ -1,0 +1,16 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+    xmlns:dxi="http://schemas.devexpress.com/winfx/2008/xaml/core/internal"
+    xmlns:dxgat="http://schemas.devexpress.com/winfx/2008/xaml/gauges/themekeys"
+    xmlns:dxt="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys">
+    <ResourceDictionary.MergedDictionaries>
+        <dxi:PaletteResourceDictionary />
+    </ResourceDictionary.MergedDictionaries>
+    <SolidColorBrush x:Key="{dxgat:LWKey GaugesBrushes.RangeGreenBrush}" Color="#FF6A9788" Opacity="0.7" />
+    <SolidColorBrush x:Key="{dxgat:LWKey GaugesBrushes.RangeYellowBrush}" Color="#FFD3A775" Opacity="0.62" />
+    <SolidColorBrush x:Key="{dxgat:LWKey GaugesBrushes.RangeRedBrush}" Color="#FFC3593D" Opacity="0.62" />
+    <SolidColorBrush x:Key="{dxgat:LWKey GaugesBrushes.ScaleBackgroundBrush}" Color="{StaticResource Color.Delimiter}" Opacity="0.62" />
+    <SolidColorBrush x:Key="{dxgat:LWKey GaugesBrushes.MarkerBackgroundBrush}" Color="Transparent" />
+</ResourceDictionary>

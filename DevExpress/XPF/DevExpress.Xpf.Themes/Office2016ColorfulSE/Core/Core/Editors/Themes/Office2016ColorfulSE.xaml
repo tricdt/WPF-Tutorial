@@ -1,0 +1,47 @@
+<ResourceDictionary mc:Ignorable="cs" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:cs="colorscheme_ignorable_uri" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" xmlns:dxei="http://schemas.devexpress.com/winfx/2008/xaml/editors/internal" xmlns:dxet="http://schemas.devexpress.com/winfx/2008/xaml/editors/themekeys" xmlns:dxi="http://schemas.devexpress.com/winfx/2008/xaml/core/internal" xmlns:dxt="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sys="clr-namespace:System;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ResourceDictionary.MergedDictionaries>
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016ColorfulSE.v24.1;component/Core/Core/Themes/Office2016ColorfulSE/StandardControlstyles.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016ColorfulSE.v24.1;component/Core/Core/Editors/Themes/Generic/BarItemTemplates.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016ColorfulSE.v24.1;component/Core/Core/Editors/Themes/Generic/FontComboBoxEdit.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016ColorfulSE.v24.1;component/Core/Core/Editors/Themes/Generic/FontSizeComboBoxEdit.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016ColorfulSE.v24.1;component/Core/Core/Editors/Themes/Generic/ToggleSwitch.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016ColorfulSE.v24.1;component/Core/Core/Editors/Themes/Generic/ToggleSwitchEdit.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016ColorfulSE.v24.1;component/Core/Core/Editors/Themes/Generic/FontEdit.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016ColorfulSE.v24.1;component/Core/Core/Editors/Themes/Generic/InplaceBaseEdit.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016ColorfulSE.v24.1;component/Core/Core/Editors/Themes/Generic/Common.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016ColorfulSE.v24.1;component/Core/Core/Editors/Themes/Office2016ColorfulSE/UICore.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016ColorfulSE.v24.1;component/Core/Core/Editors/Themes/Office2016ColorfulSE/SpinEdit.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016ColorfulSE.v24.1;component/Core/Core/Editors/Themes/Office2016ColorfulSE/SparklineEdit.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016ColorfulSE.v24.1;component/Core/Core/Editors/Themes/Office2016ColorfulSE/CheckEdit.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016ColorfulSE.v24.1;component/Core/Core/Editors/Themes/Office2016ColorfulSE/ComboBoxEdit.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016ColorfulSE.v24.1;component/Core/Core/Editors/Themes/Office2016ColorfulSE/MemoEdit.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016ColorfulSE.v24.1;component/Core/Core/Editors/Themes/Office2016ColorfulSE/ErrorPresenter.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016ColorfulSE.v24.1;component/Core/Core/Editors/Themes/Office2016ColorfulSE/BrushEdit.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016ColorfulSE.v24.1;component/Core/Core/Editors/Themes/Office2016ColorfulSE/PopupBaseEdit.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016ColorfulSE.v24.1;component/Core/Core/Editors/Themes/Office2016ColorfulSE/DateEdit.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016ColorfulSE.v24.1;component/Core/Core/Editors/Themes/Office2016ColorfulSE/ListBoxEdit.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016ColorfulSE.v24.1;component/Core/Core/Editors/Themes/Office2016ColorfulSE/FilterControl.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016ColorfulSE.v24.1;component/Core/Core/Editors/Themes/Office2016ColorfulSE/ExprEdCtrl.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016ColorfulSE.v24.1;component/Core/Core/Editors/Themes/Office2016ColorfulSE/TrackBarEdit.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016ColorfulSE.v24.1;component/Core/Core/Editors/Themes/Office2016ColorfulSE/ProgressBarEdit.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016ColorfulSE.v24.1;component/Core/Core/Editors/Themes/Office2016ColorfulSE/RatingEdit.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016ColorfulSE.v24.1;component/Core/Core/Editors/Themes/Office2016ColorfulSE/PasswordBoxEdit.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016ColorfulSE.v24.1;component/Core/Core/Editors/Themes/Office2016ColorfulSE/ColorEdit.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016ColorfulSE.v24.1;component/Core/Core/Editors/Themes/Office2016ColorfulSE/CalcEdit.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016ColorfulSE.v24.1;component/Core/Core/Editors/Themes/Office2016ColorfulSE/ImageEdit.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016ColorfulSE.v24.1;component/Core/Core/Editors/Themes/Office2016ColorfulSE/DateNavigator.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016ColorfulSE.v24.1;component/Core/Core/Editors/Themes/Office2016ColorfulSE/DateRangeControl.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016ColorfulSE.v24.1;component/Core/Core/Editors/Themes/Office2016ColorfulSE/DataPager.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016ColorfulSE.v24.1;component/Core/Core/Editors/Themes/Office2016ColorfulSE/PagerControl.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016ColorfulSE.v24.1;component/Core/Core/Editors/Themes/Office2016ColorfulSE/RangeControl.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016ColorfulSE.v24.1;component/Core/Core/Editors/Themes/Office2016ColorfulSE/DateTimePicker.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016ColorfulSE.v24.1;component/Core/Core/Editors/Themes/Office2016ColorfulSE/Flyout.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016ColorfulSE.v24.1;component/Core/Core/Editors/Themes/Office2016ColorfulSE/AutoCompleteBox.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016ColorfulSE.v24.1;component/Core/Core/Editors/Themes/Office2016ColorfulSE/BarCodeEdit.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016ColorfulSE.v24.1;component/Core/Core/Editors/Themes/Office2016ColorfulSE/HyperLinkEdit.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016ColorfulSE.v24.1;component/Core/Core/Editors/Themes/Office2016ColorfulSE/TimePicker.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016ColorfulSE.v24.1;component/Core/Core/Editors/Themes/Office2016ColorfulSE/TextEdit.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016ColorfulSE.v24.1;component/Core/Core/Editors/Themes/Office2016ColorfulSE/ButtonEdit.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016ColorfulSE.v24.1;component/Core/Core/Editors/Themes/Office2016ColorfulSE/Common.xaml" />
+  </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

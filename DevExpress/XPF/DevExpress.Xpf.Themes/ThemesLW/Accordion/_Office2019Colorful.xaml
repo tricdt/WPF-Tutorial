@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:dxa="http://schemas.devexpress.com/winfx/2008/xaml/accordion"
+    xmlns:dxat="http://schemas.devexpress.com/winfx/2008/xaml/accordion/themekeys"
+    xmlns:dxt="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys"
+    xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
+    xmlns:dxi="http://schemas.devexpress.com/winfx/2008/xaml/core/internal"
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+    xmlns:dxai="http://schemas.devexpress.com/winfx/2008/xaml/accordion/internal"
+    xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors">
+    <ResourceDictionary.MergedDictionaries>
+        <dxi:ThemeResourceDictionary Path="Common/{ThemeName}/Common.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+    <dxmvvm:ObjectToObjectConverter x:Key="FlipHorizontalConverter" DefaultTarget="1">
+        <dxmvvm:MapItem Source="True" Target="-1" />
+    </dxmvvm:ObjectToObjectConverter>
+    <!--#region Button-->
+    <ControlTemplate x:Key="{dxat:LWKey AccordionItem.ExpanderButtonTemplate}" TargetType="dxa:AccordionExpandButton">
+        <Grid x:Name="Root" Background="Transparent">
+            <dx:DXBorder
+                x:Name="IsDefault"
+                Background="Transparent"
+                BorderBrush="Transparent"
+                BorderThickness="1" />
+            <dxa:ExpandButtonContentPresenter
+                x:Name="IsUnchecked"
+                Focusable="False"
+                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                ItemType="{TemplateBinding ItemType}"
+                VerticalAlignment="{TemplateBinding VerticalContentAlignment}">
+                <dxa:ExpandButtonContentPresenter.ItemContent>
+                    <Path
+                        x:Name="ItemContentCollapse"
+                        Fill="{StaticResource Brush.Foreground}"
+                        RenderTransformOrigin="0.5,0.5"
+                        Stretch="Fill"
+                        Style="{StaticResource UIShape.Right}">
+                        <Path.RenderTransform>
+                            <ScaleTransform ScaleX="{Binding IsRightExpandButton, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource FlipHorizontalConverter}}" />
+                        </Path.RenderTransform>
+                    </Path>
+                </dxa:ExpandButtonContentPresenter.ItemContent>
+                <dxa:ExpandButtonContentPresenter.RootItemContent>
+                    <Path
+                        x:Name="RootItemContentCollapse"
+                        Fill="{StaticResource Brush.Foreground}"
+                        Stretch="Fill"
+                        Style="{StaticResource UIShape.ArrowDown}" />
+                </dxa:ExpandButtonContentPresenter.RootItemContent>
+            </dxa:ExpandButtonContentPresenter>
+            <dxa:ExpandButtonContentPresenter
+                x:Name="IsChecked"
+                Focusable="False"
+                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                ItemType="{TemplateBinding ItemType}"
+                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                Visibility="Hidden">
+                <dxa:ExpandButtonContentPresenter.ItemContent>
+                    <Path
+                        x:Name="ItemContentExpand"
+                        Fill="{StaticResource Brush.Foreground}"
+                        RenderTransformOrigin="0.5,0.5"
+                        Stretch="Fill"
+                        Style="{StaticResource UIShape.RightDown}">
+                        <Path.RenderTransform>
+                            <ScaleTransform ScaleX="{Binding IsRightExpandButton, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource FlipHorizontalConverter}}" />
+                        </Path.RenderTransform>
+                    </Path>
+                </dxa:ExpandButtonContentPresenter.ItemContent>
+                <dxa:ExpandButtonContentPresenter.RootItemContent>
+                    <Path
+                        x:Name="RootItemContentExpand"
+                        Fill="{StaticResource Brush.Foreground}"
+                        Stretch="Fill"
+                        Style="{StaticResource UIShape.ArrowUp}" />
+                </dxa:ExpandButtonContentPresenter.RootItemContent>
+            </dxa:ExpandButtonContentPresenter>
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="CheckStates">
+                    <VisualState x:Name="Unchecked" />
+                    <VisualState x:Name="Checked">
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames dxi:ValueSetter.Visibility="Collapsed" Storyboard.TargetName="IsUnchecked" Storyboard.TargetProperty="(UIElement.Visibility)" />
+                            <ObjectAnimationUsingKeyFrames dxi:ValueSetter.Visibility="Visible" Storyboard.TargetName="IsChecked" Storyboard.TargetProperty="(UIElement.Visibility)" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Indeterminate" />
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </Grid>
+        <ControlTemplate.Triggers>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="ItemType" Value="SubItem" />
+                    <Condition Property="ItemState" Value="Default" />
+                </MultiTrigger.Conditions>
+            </MultiTrigger>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="ItemType" Value="SubItem" />
+                    <Condition Property="ItemState" Value="Hover" />
+                </MultiTrigger.Conditions>
+                <Setter Property="Fill" TargetName="ItemContentCollapse" Value="{StaticResource Brush.HoverForeground}" />
+                <Setter Property="Fill" TargetName="ItemContentExpand" Value="{StaticResource Brush.HoverForeground}" />
+            </MultiTrigger>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="ItemType" Value="SubItem" />
+                    <Condition Property="ItemState" Value="Pressed" />
+                </MultiTrigger.Conditions>
+                <Setter Property="Fill" TargetName="ItemContentCollapse" Value="{StaticResource Brush.SelectionForeground}" />
+                <Setter Property="Fill" TargetName="ItemContentExpand" Value="{StaticResource Brush.SelectionForeground}" />
+            </MultiTrigger>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="ItemType" Value="SubItem" />
+                    <Condition Property="ItemState" Value="Selected" />
+                </MultiTrigger.Conditions>
+                <Setter Property="Fill" TargetName="ItemContentCollapse" Value="{StaticResource Brush.SelectionForeground}" />
+                <Setter Property="Fill" TargetName="ItemContentExpand" Value="{StaticResource Brush.SelectionForeground}" />
+            </MultiTrigger>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="ItemType" Value="SubItem" />
+                    <Condition Property="ItemState" Value="SelectedInactive" />
+                </MultiTrigger.Conditions>
+                <Setter Property="Fill" TargetName="ItemContentCollapse" Value="{StaticResource Brush.HoverForeground}" />
+                <Setter Property="Fill" TargetName="ItemContentExpand" Value="{StaticResource Brush.HoverForeground}" />
+            </MultiTrigger>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="ItemType" Value="SubItem" />
+                    <Condition Property="ItemState" Value="Disabled" />
+                </MultiTrigger.Conditions>
+            </MultiTrigger>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="ItemType" Value="RootItem" />
+                    <Condition Property="ItemState" Value="Default" />
+                </MultiTrigger.Conditions>
+            </MultiTrigger>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="ItemType" Value="RootItem" />
+                    <Condition Property="ItemState" Value="Hover" />
+                </MultiTrigger.Conditions>
+                <Setter Property="Fill" TargetName="RootItemContentCollapse" Value="{StaticResource Brush.HoverForeground}" />
+                <Setter Property="Fill" TargetName="RootItemContentExpand" Value="{StaticResource Brush.HoverForeground}" />
+            </MultiTrigger>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="ItemType" Value="RootItem" />
+                    <Condition Property="ItemState" Value="Pressed" />
+                </MultiTrigger.Conditions>
+                <Setter Property="Fill" TargetName="RootItemContentCollapse" Value="{StaticResource Brush.SelectionForeground}" />
+                <Setter Property="Fill" TargetName="RootItemContentExpand" Value="{StaticResource Brush.SelectionForeground}" />
+            </MultiTrigger>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="ItemType" Value="RootItem" />
+                    <Condition Property="ItemState" Value="Selected" />
+                </MultiTrigger.Conditions>
+                <Setter Property="Fill" TargetName="RootItemContentCollapse" Value="{StaticResource Brush.SelectionForeground}" />
+                <Setter Property="Fill" TargetName="RootItemContentExpand" Value="{StaticResource Brush.SelectionForeground}" />
+            </MultiTrigger>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="ItemType" Value="RootItem" />
+                    <Condition Property="ItemState" Value="SelectedInactive" />
+                </MultiTrigger.Conditions>
+                <Setter Property="Fill" TargetName="RootItemContentCollapse" Value="{StaticResource Brush.HoverForeground}" />
+                <Setter Property="Fill" TargetName="RootItemContentExpand" Value="{StaticResource Brush.HoverForeground}" />
+            </MultiTrigger>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="ItemType" Value="RootItem" />
+                    <Condition Property="ItemState" Value="Disabled" />
+                </MultiTrigger.Conditions>
+            </MultiTrigger>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="ItemType" Value="SubItem" />
+                    <Condition Property="IsMouseOver" Value="True" />
+                </MultiTrigger.Conditions>
+                <Setter Property="Fill" TargetName="ItemContentCollapse" Value="{StaticResource Brush.HoverForeground}" />
+                <Setter Property="Fill" TargetName="ItemContentExpand" Value="{StaticResource Brush.HoverForeground}" />
+            </MultiTrigger>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="ItemType" Value="SubItem" />
+                    <Condition Property="IsPressed" Value="True" />
+                </MultiTrigger.Conditions>
+                <Setter Property="Fill" TargetName="ItemContentCollapse" Value="{StaticResource Brush.SelectionForeground}" />
+                <Setter Property="Fill" TargetName="ItemContentExpand" Value="{StaticResource Brush.SelectionForeground}" />
+            </MultiTrigger>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="ItemType" Value="RootItem" />
+                    <Condition Property="IsMouseOver" Value="True" />
+                </MultiTrigger.Conditions>
+                <Setter Property="Background" TargetName="IsDefault" Value="{StaticResource Brush.HoverBackground}" />
+                <Setter Property="BorderBrush" TargetName="IsDefault" Value="{StaticResource Brush.HoverBorder}" />
+                <Setter Property="Fill" TargetName="RootItemContentCollapse" Value="{StaticResource Brush.HoverForeground}" />
+                <Setter Property="Fill" TargetName="RootItemContentExpand" Value="{StaticResource Brush.HoverForeground}" />
+            </MultiTrigger>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="ItemType" Value="RootItem" />
+                    <Condition Property="IsPressed" Value="True" />
+                </MultiTrigger.Conditions>
+                <Setter Property="Background" TargetName="IsDefault" Value="{StaticResource Brush.SelectionBackground}" />
+                <Setter Property="BorderBrush" TargetName="IsDefault" Value="{StaticResource Brush.SelectionBorder}" />
+                <Setter Property="Fill" TargetName="RootItemContentCollapse" Value="{StaticResource Brush.Foreground}" />
+                <Setter Property="Fill" TargetName="RootItemContentExpand" Value="{StaticResource Brush.Foreground}" />
+            </MultiTrigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+    <!--#endregion Button-->
+    <!--#region DropDownButton-->
+    <!--#endregion DropDownButton-->
+    <!--#region UIPreset-->
+    <!--#region UIPreset-->
+    <!--#endregion UIPreset-->
+    <!--#region Item-->
+    <!--#endregion Item-->
+    <!--#region PopupWindow-->
+    <!--#endregion PopupWindow-->
+</ResourceDictionary>

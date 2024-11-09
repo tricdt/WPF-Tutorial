@@ -1,0 +1,200 @@
+﻿<ResourceDictionary mc:Ignorable="cs"
+                    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:cs="colorscheme_ignorable_uri"
+                    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+                    xmlns:dxsch="http://schemas.devexpress.com/winfx/2008/xaml/scheduler"
+                    xmlns:dxschd="http://schemas.devexpress.com/winfx/2008/xaml/scheduler/internal"
+                    xmlns:dxscht="http://schemas.devexpress.com/winfx/2008/xaml/scheduler/themekeys"
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <dxschd:ToolTipVisibilityToVisibilityConverter x:Key="ToolTipVisibilityConverter"/>
+
+    <dx:BooleanToVisibilityConverter x:Key="boolToVisibilityConverter"/>
+
+    <dxschd:ColorResourcesConverter x:Key="colorResourcesConverter"/>
+
+    <dxschd:BrushResourcesConverter x:Key="brushResourcesConverter"/>
+
+    <ControlTemplate x:Key="{dxscht:SchedulerViewThemeKey ResourceKey=VerticalAppointmentTemplate}" TargetType="{x:Type dxschd:VisualVerticalAppointmentControl}">
+        <dxschd:AppointmentColorConvertControl x:Name="clrConvCtrl"
+                                               ControlColor="{Binding ViewInfo.LabelColor, RelativeSource={RelativeSource TemplatedParent}}"
+                                               SnapsToDevicePixels="True">
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="DraggedStates">
+                    <VisualState x:Name="NotDragged">
+                        <Storyboard>
+                            <DoubleAnimation Duration="0:0:0.15"
+                                             Storyboard.TargetName="AppointmentRoundedBorder"
+                                             Storyboard.TargetProperty="Opacity"
+                                             To="1"/>
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Dragged">
+                        <Storyboard>
+                            <DoubleAnimation Duration="0:0:0.15"
+                                             Storyboard.TargetName="AppointmentRoundedBorder"
+                                             Storyboard.TargetProperty="Opacity"
+                                             To="0.3"/>
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+            <dxschd:AppointmentColorConvertControl.BaseColors>
+                <dxschd:ColorCollection>
+                    <dxschd:ColorDefinition Name="ColorDefinition_AppointmentBackgroundGradientStart" Value="#FF515151"/>
+                    <dxschd:ColorDefinition Name="ColorDefinition_AppointmentBackgroundGradientEnd" Value="#FF515151"/>
+                </dxschd:ColorCollection>
+            </dxschd:AppointmentColorConvertControl.BaseColors>
+            <dxschd:AppointmentColorConvertControl.BaseBrushColors>
+                <dxschd:ColorCollection>
+                    <dxschd:ColorDefinition Name="ColorDefinition_AppointmentSelection" Value="#FFFFFFFF"/>
+                    <dxschd:ColorDefinition Name="ColorDefinition_MainBorderBrush" Value="#FFF78A09"/>
+                </dxschd:ColorCollection>
+            </dxschd:AppointmentColorConvertControl.BaseBrushColors>
+            <Grid x:Name="PART_ToolTipContainer"
+                  dxsch:SchedulerControl.HitTestType="AppointmentContent"
+                  dxsch:SchedulerControl.SelectableIntervalViewInfo="{TemplateBinding ViewInfo}"
+                  Margin="0,0,-4,-4">
+                <Grid.Resources>
+                    <dxschd:BoolToThicknessConverter x:Key="selectionBoolToThicknessConverter"
+                                                     ThicknessWhenFalse="0"
+                                                     ThicknessWhenTrue="2"/>
+                </Grid.Resources>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="6"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="4"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="6"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="4"/>
+                </Grid.RowDefinitions>
+                <ToolTipService.ToolTip>
+                    <ToolTip Content="{TemplateBinding ViewInfo}"
+                             ContentTemplate="{Binding ViewInfo.View.AppointmentToolTipContentTemplate, RelativeSource={RelativeSource TemplatedParent}}"
+                             Visibility="{Binding ViewInfo.View.AppointmentToolTipVisibility, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource ToolTipVisibilityConverter}}"/>
+                </ToolTipService.ToolTip>
+                <dxschd:AppointmentBorder x:Name="Shadow"
+                                          Background="Transparent"
+                                          DefaultCornerRadius="0"
+                                          Grid.Column="1"
+                                          Grid.ColumnSpan="2"
+                                          Grid.Row="1"
+                                          Grid.RowSpan="2"
+                                          ViewInfo="{TemplateBinding ViewInfo}"/>
+                <dxschd:AppointmentRoundedBorder x:Name="AppointmentRoundedBorder"
+                                                 BorderBrush="#FFF78A09"
+                                                 CornerRadius="0"
+                                                 cs:Name="AppointmentRoundedBorder_0001"
+                                                 DefaultCornerRadius="0"
+                                                 DefaultRoundBorderThickness="{Binding ViewInfo.Selected, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource selectionBoolToThicknessConverter}}"
+                                                 Grid.ColumnSpan="2"
+                                                 Grid.RowSpan="2"
+                                                 ViewInfo="{TemplateBinding ViewInfo}">
+                    <Grid>
+                        <Grid.Resources>
+                            <dxschd:AppointmentStatusDisplayTypeToGridLengthConverter x:Key="StatusDisplayTypeToGridLengthConverter" DefaultValue="7"/>
+                            <dxschd:AppointmentStatusDisplayTypeToVisibilityConverter x:Key="AppointmentStatusDisplayTypeToVisibilityConverter"/>
+                        </Grid.Resources>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition x:Name="ContentContainerStatusColumn" Width="{Binding StatusDisplayType, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource StatusDisplayTypeToGridLengthConverter}}"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Border x:Name="Status"
+                                Background="#FF666666"
+                                cs:Name="Border_0001"
+                                Visibility="{Binding StatusDisplayType, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource AppointmentStatusDisplayTypeToVisibilityConverter}}">
+                            <dxsch:AppointmentStatusControl Background="#FF666666"
+                                                            cs:Name="AppointmentStatusControl_0001"
+                                                            Orientation="Vertical"
+                                                            ViewInfo="{TemplateBinding ViewInfo}">
+                                <dxschd:AppointmentBorder Background="{Binding ViewInfo.StatusBrush, RelativeSource={RelativeSource TemplatedParent}}"
+                                                          BorderBrush="#FFF78A98"
+                                                          DefaultBorderThickness="0"
+                                                          ViewInfo="{TemplateBinding ViewInfo}"/>
+                            </dxsch:AppointmentStatusControl>
+                        </Border>
+                        <Border x:Name="border"
+                                Background="{Binding ViewInfo.LabelBrush, RelativeSource={RelativeSource TemplatedParent}}"
+                                Grid.Column="1"/>
+                        <ContentPresenter x:Name="PART_Content"
+                                          Content="{TemplateBinding ViewInfo}"
+                                          ContentTemplate="{TemplateBinding ContentTemplate}"
+                                          Grid.Column="1"
+                                          Margin="5"/>
+                    </Grid>
+                </dxschd:AppointmentRoundedBorder>
+                <Rectangle Cursor="SizeNS"
+                           dxsch:SchedulerControl.HitTestType="AppointmentResizingTopEdge"
+                           dxsch:SchedulerControl.SelectableIntervalViewInfo="{TemplateBinding ViewInfo}"
+                           Fill="Transparent"
+                           Grid.ColumnSpan="2"
+                           Grid.RowSpan="2"
+                           Height="5"
+                           IsHitTestVisible="True"
+                           VerticalAlignment="Top"
+                           Visibility="{Binding Path=ViewInfo.CanResizeStart, RelativeSource={RelativeSource TemplatedParent} ,Converter={StaticResource boolToVisibilityConverter}}"/>
+                <Rectangle Cursor="SizeNS"
+                           dxsch:SchedulerControl.HitTestType="AppointmentResizingBottomEdge"
+                           dxsch:SchedulerControl.SelectableIntervalViewInfo="{TemplateBinding ViewInfo}"
+                           Fill="Transparent"
+                           Grid.ColumnSpan="2"
+                           Grid.RowSpan="2"
+                           Height="5"
+                           IsHitTestVisible="True"
+                           VerticalAlignment="Bottom"
+                           Visibility="{Binding Path=ViewInfo.CanResizeEnd, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource boolToVisibilityConverter}}"/>
+            </Grid>
+        </dxschd:AppointmentColorConvertControl>
+    </ControlTemplate>
+
+    <DataTemplate x:Key="{dxscht:SchedulerViewThemeKey ResourceKey=VerticalAppointmentContentTemplate}">
+        <Grid Background="Transparent"
+              cs:Name="Grid_0001"
+              SnapsToDevicePixels="True">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition MinWidth="0" Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <dxschd:AppointmentImagesControl Grid.Column="0"
+                                             Orientation="Vertical"
+                                             ViewInfo="{Binding}"/>
+            <dxschd:VerticalAppointmentContentPanel Grid.Column="1">
+                <dxschd:VerticalAppointmentClockControl ViewInfo="{Binding}"/>
+                <TextBlock Foreground="{DynamicResource {dxscht:SchedulerViewThemeKey ResourceKey=AppointmentForegroundColor}}"
+                           Margin="0,0,2,0"
+                           Text="{Binding Subject}"
+                           TextWrapping="Wrap">
+                    <!--BEGIN WPF-->
+                    <TextBlock.TextTrimming>
+                        <TextTrimming>CharacterEllipsis</TextTrimming>
+                    </TextBlock.TextTrimming>
+                    <!--END WPF-->
+                </TextBlock>
+                <TextBlock Foreground="{DynamicResource {dxscht:SchedulerViewThemeKey ResourceKey=AppointmentForegroundColor}}"
+                           Text="{Binding Location}"
+                           TextWrapping="Wrap">
+                    <!--BEGIN WPF-->
+                    <TextBlock.TextTrimming>
+                        <TextTrimming>CharacterEllipsis</TextTrimming>
+                    </TextBlock.TextTrimming>
+                    <!--END WPF-->
+                </TextBlock>
+                <TextBlock dxschd:VerticalAppointmentContentPanel.AlwaysOnNewRow="True"
+                           Foreground="{DynamicResource {dxscht:SchedulerViewThemeKey ResourceKey=AppointmentForegroundColor}}"
+                           Margin="0,6,0,0"
+                           Text="{Binding Description}"
+                           TextWrapping="Wrap">
+                    <!--BEGIN WPF-->
+                    <TextBlock.TextTrimming>
+                        <TextTrimming>CharacterEllipsis</TextTrimming>
+                    </TextBlock.TextTrimming>
+                    <!--END WPF-->
+                </TextBlock>
+            </dxschd:VerticalAppointmentContentPanel>
+        </Grid>
+    </DataTemplate>
+
+</ResourceDictionary>
