@@ -1,15 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-<style>
-.Red {fill: #D11C1C;}
-.Yellow {fill: #FFB115;}
-.Green {fill: #039C23;}
-.Blue {fill: #1177D7; }
-.Black {fill: #727272;}
-.White {fill: #FFFFFF;}
-</style>
-<title>Solution_20x20</title>
-<path d="M13,7,8.25,11.09,5.62,9.48,4,11v3l1.53.58L8.06,13,13,17l3-2V8ZM6,13.21,6,11l1.35,1.1ZM9.7,12,13,10v4Z" class="Blue"/>
-<path d="M13,7,8.25,11.09,5.62,9.48,4,11v3l1.53.58L8.06,13,13,17l3-2V8ZM6,13.21,6,11l1.35,1.1ZM9.7,12,13,10v4Z" class="Red" opacity="0.38" />
-<path d="M18.1,1H1.9a.9.9,0,0,0-.9.9V18.1a.9.9,0,0,0,.9.9H18.1a.9.9,0,0,0,.9-.9V1.9A.9.9,0,0,0,18.1,1ZM18,18H2V5H18Z" class="Black"/>
-</svg>

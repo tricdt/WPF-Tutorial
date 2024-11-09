@@ -1,0 +1,40 @@
+﻿<Window x:Class="LedSignControl.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LedSignControl"
+        xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        xmlns:syncfusionskin ="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
+        syncfusionskin:SfSkinManager.Theme="{syncfusionskin:SkinManagerExtension ThemeName=Windows11Light}"
+        xmlns:utilsOuter="clr-namespace:Syncfusion.Windows.Shared;assembly=Syncfusion.Shared.WPF">
+    <Window.Resources>
+    </Window.Resources>
+
+    <!--<local:FillDropdownItem/>-->
+    <!--<ScrollViewer HorizontalScrollBarVisibility="Auto"
+                  VerticalScrollBarVisibility="Disabled">
+        <StackPanel Orientation="Horizontal">
+            <ScrollViewer CanContentScroll="True"
+                      HorizontalScrollBarVisibility="Auto"
+                      VerticalScrollBarVisibility="Auto">
+                <local:SampleLedControl LedCount="20" LedStart="1" LedTheme="DARK"/>
+            </ScrollViewer>
+            <ScrollViewer CanContentScroll="True"
+                      HorizontalScrollBarVisibility="Auto"
+                      VerticalScrollBarVisibility="Auto">
+                <local:SampleLedControl LedCount="20" LedShape="Circle"/>
+            </ScrollViewer>
+        </StackPanel>
+    </ScrollViewer>-->
+    <ScrollViewer HorizontalScrollBarVisibility="Auto"
+                  VerticalScrollBarVisibility="Disabled">
+        <StackPanel Orientation="Horizontal">
+
+            <local:LedGroup/>
+            <local:LedGroup/>
+        </StackPanel>
+    </ScrollViewer>
+</Window>

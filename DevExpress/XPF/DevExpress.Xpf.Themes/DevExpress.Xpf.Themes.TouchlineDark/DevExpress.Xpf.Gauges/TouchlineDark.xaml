@@ -1,8 +1,0 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:dxdst="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys">
-
-    <ResourceDictionary.MergedDictionaries>
-        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.TouchlineDark.v24.1;component/DevExpress.Xpf.Gauges/TouchlineDark/CircularGaugeControl.xaml"/>
-        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.TouchlineDark.v24.1;component/DevExpress.Xpf.Gauges/TouchlineDark/LinearGaugeControl.xaml"/>
-    </ResourceDictionary.MergedDictionaries>
-
-</ResourceDictionary>

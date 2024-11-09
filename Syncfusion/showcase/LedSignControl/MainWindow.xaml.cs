@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace LedSign
+namespace LedSignControl
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -11,7 +11,5 @@ namespace LedSign
         {
             InitializeComponent();
         }
-
-
     }
 }
