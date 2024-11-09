@@ -1,0 +1,57 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+    xmlns:dxi="http://schemas.devexpress.com/winfx/2008/xaml/core/internal"
+    xmlns:dxre="http://schemas.devexpress.com/winfx/2008/xaml/richedit"
+    xmlns:dxrei="http://schemas.devexpress.com/winfx/2008/xaml/richedit/internal">
+
+    <ResourceDictionary.MergedDictionaries>
+        <dxi:ThemeResourceDictionary Path="RichEdit\RichEdit.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.RichEdit.UI.RichEditFontSizeComboBoxEdit'}" BasedOn="{StaticResource RichEditFontSizeComboBoxEdit.DefaultStyleBase}" TargetType="{x:Type dxre:RichEditFontSizeComboBoxEdit}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.RichEdit.UI.RichEditBorderLineWidthEdit'}" BasedOn="{StaticResource RichEditBorderLineWidthEdit.DefaultStyleBase}" TargetType="{x:Type dxre:RichEditBorderLineWidthEdit}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.RichEdit.UI.RichEditBorderLineComboBoxEdit'}" BasedOn="{StaticResource RichEditBorderLineComboBoxEdit.DefaultStyleBase}" TargetType="{x:Type dxre:RichEditBorderLineComboBoxEdit}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.RichEdit.UI.RichEditStyleGalleryItemGroup'}" BasedOn="{StaticResource RichEditStyleGalleryItemGroup.DefaultStyleBase}" TargetType="{x:Type dxre:RichEditStyleGalleryItemGroup}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.RichEdit.UI.RichEditStyleEdit'}" BasedOn="{StaticResource RichEditStyleEdit.DefaultStyleBase}" TargetType="{x:Type dxre:RichEditStyleEdit}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.RichEdit.UI.PageNumberWindow'}" BasedOn="{StaticResource PageNumberWindow.DefaultStyleBase}" TargetType="{x:Type dxre:PageNumberWindow}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.RichEdit.Controls.Internal.XpfRichEditCaret'}" BasedOn="{StaticResource XpfRichEditCaret.DefaultStyleBase}" TargetType="{x:Type dxrei:XpfRichEditCaret}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.RichEdit.Controls.Internal.XpfRichEditDragCaret'}" BasedOn="{StaticResource XpfRichEditDragCaret.DefaultStyleBase}" TargetType="{x:Type dxrei:XpfRichEditDragCaret}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.RichEdit.Controls.Internal.XpfRichEditFlowSelection'}" BasedOn="{StaticResource XpfRichEditFlowSelection.DefaultStyleBase}" TargetType="{x:Type dxrei:XpfRichEditFlowSelection}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.RichEdit.Controls.Internal.XpfRichEditSizerSelection'}" BasedOn="{StaticResource XpfRichEditSizerSelection.DefaultStyleBase}" TargetType="{x:Type dxrei:XpfRichEditSizerSelection}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.RichEdit.Controls.Internal.XpfRichEditImageSelection'}" BasedOn="{StaticResource XpfRichEditImageSelection.DefaultStyleBase}" TargetType="{x:Type dxrei:XpfRichEditImageSelection}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.RichEdit.RichEditControl'}" BasedOn="{StaticResource RichEditControl.DefaultStyleBase}" TargetType="{x:Type dxre:RichEditControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.RichEdit.Controls.Internal.RichEditViewPage'}" BasedOn="{StaticResource RichEditViewPage.DefaultStyleBase}" TargetType="{x:Type dxrei:RichEditViewPage}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.RichEdit.Controls.Internal.RichEditViewCommentsPresenter'}" BasedOn="{StaticResource RichEditViewCommentsPresenter.DefaultStyleBase}" TargetType="{x:Type dxrei:RichEditViewCommentsPresenter}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.RichEdit.Controls.Internal.SimpleViewPage'}" BasedOn="{StaticResource SimpleViewPage.DefaultStyleBase}" TargetType="{x:Type dxrei:SimpleViewPage}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.RichEdit.Controls.Internal.DraftViewPage'}" BasedOn="{StaticResource DraftViewPage.DefaultStyleBase}" TargetType="{x:Type dxrei:DraftViewPage}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.RichEdit.Controls.Internal.RichEditComment'}" BasedOn="{StaticResource RichEditComment.DefaultStyleBase}" TargetType="{x:Type dxrei:RichEditComment}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.RichEdit.UI.AgFontSizeListBox'}" BasedOn="{StaticResource AgFontSizeListBox.DefaultStyleBase}" TargetType="{x:Type dxre:AgFontSizeListBox}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.RichEdit.UI.ZoomComboBoxEdit'}" BasedOn="{StaticResource ZoomComboBoxEdit.DefaultStyleBase}" TargetType="{x:Type dxre:ZoomComboBoxEdit}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.RichEdit.UI.DefaultBarItemDataTemplates'}" BasedOn="{StaticResource DefaultBarItemDataTemplates.DefaultStyleBase}" TargetType="{x:Type dxre:DefaultBarItemDataTemplates}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.RichEdit.CommentSuperTipItem'}" BasedOn="{StaticResource CommentSuperTipItem.DefaultStyleBase}" TargetType="{x:Type dxre:CommentSuperTipItem}" />
+
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.RichEdit.Controls.Internal.RulerNumberTickMarkControl'}" BasedOn="{StaticResource RulerNumberTickMarkControl.DefaultStyle}" TargetType="{x:Type dxrei:RulerNumberTickMarkControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.RichEdit.Controls.Internal.RulerActiveAreaControl'}" BasedOn="{StaticResource RulerActiveAreaControl.DefaultStyle}" TargetType="{x:Type dxrei:RulerActiveAreaControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.RichEdit.Controls.Internal.HorizontalRulerSpaceAreaControl'}" BasedOn="{StaticResource HorizontalRulerSpaceAreaControl.DefaultStyle}" TargetType="{x:Type dxrei:HorizontalRulerSpaceAreaControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.RichEdit.Controls.Internal.VerticalRulerSpaceAreaControl'}" BasedOn="{StaticResource VerticalRulerSpaceAreaControl.DefaultStyle}" TargetType="{x:Type dxrei:VerticalRulerSpaceAreaControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.RichEdit.Controls.Internal.RulerTickMarkControl'}" BasedOn="{StaticResource RulerTickMarkControl.DefaultStyle}" TargetType="{x:Type dxrei:RulerTickMarkControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.RichEdit.Controls.Internal.DefaultTabControl'}" BasedOn="{StaticResource DefaultTabControl.DefaultStyle}" TargetType="{x:Type dxrei:DefaultTabControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.RichEdit.Controls.Internal.DisabledHotZoneControl'}" BasedOn="{StaticResource DisabledHotZoneControl.DefaultStyle}" TargetType="{x:Type dxrei:DisabledHotZoneControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.RichEdit.Controls.Internal.LeftIndentHotZoneControl'}" BasedOn="{StaticResource LeftIndentHotZoneControl.DefaultStyle}" TargetType="{x:Type dxrei:LeftIndentHotZoneControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.RichEdit.Controls.Internal.RightIndentHotZoneControl'}" BasedOn="{StaticResource RightIndentHotZoneControl.DefaultStyle}" TargetType="{x:Type dxrei:RightIndentHotZoneControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.RichEdit.Controls.Internal.FirstLineIndentHotZoneControl'}" BasedOn="{StaticResource FirstLineIndentHotZoneControl.DefaultStyle}" TargetType="{x:Type dxrei:FirstLineIndentHotZoneControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.RichEdit.Controls.Internal.LeftIndentBottomHotZoneControl'}" BasedOn="{StaticResource LeftIndentBottomHotZoneControl.DefaultStyle}" TargetType="{x:Type dxrei:LeftIndentBottomHotZoneControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.RichEdit.Controls.Internal.RightTabHotZoneControl'}" BasedOn="{StaticResource RightTabHotZoneControl.DefaultStyle}" TargetType="{x:Type dxrei:RightTabHotZoneControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.RichEdit.Controls.Internal.LeftTabHotZoneControl'}" BasedOn="{StaticResource LeftTabHotZoneControl.DefaultStyle}" TargetType="{x:Type dxrei:LeftTabHotZoneControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.RichEdit.Controls.Internal.HorizontalTableHotZoneControl'}" BasedOn="{StaticResource HorizontalTableHotZoneControl.DefaultStyle}" TargetType="{x:Type dxrei:HorizontalTableHotZoneControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.RichEdit.Controls.Internal.CenterTabHotZoneControl'}" BasedOn="{StaticResource CenterTabHotZoneControl.DefaultStyle}" TargetType="{x:Type dxrei:CenterTabHotZoneControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.RichEdit.Controls.Internal.DecimalTabHotZoneControl'}" BasedOn="{StaticResource DecimalTabHotZoneControl.DefaultStyle}" TargetType="{x:Type dxrei:DecimalTabHotZoneControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.RichEdit.Controls.Internal.TabTypeToggleBackgroundControl'}" BasedOn="{StaticResource TabTypeToggleBackgroundControl.DefaultStyle}" TargetType="{x:Type dxrei:TabTypeToggleBackgroundControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.RichEdit.Controls.Internal.TabTypeToggleHotZoneControl'}" BasedOn="{StaticResource TabTypeToggleHotZoneControl.DefaultStyle}" TargetType="{x:Type dxrei:TabTypeToggleHotZoneControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.RichEdit.Controls.Internal.XpfRichEditContentControlSelection'}" BasedOn="{StaticResource XpfRichEditContentControlSelection.DefaultStyle}" TargetType="{x:Type dxrei:XpfRichEditContentControlSelection}" />
+
+
+</ResourceDictionary>

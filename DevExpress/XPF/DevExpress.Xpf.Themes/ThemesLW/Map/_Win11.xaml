@@ -1,0 +1,62 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+    xmlns:dxi="http://schemas.devexpress.com/winfx/2008/xaml/core/internal"
+    xmlns:dxmt="http://schemas.devexpress.com/winfx/2008/xaml/map/themekeys"
+    xmlns:dxt="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys"
+    xmlns:dxm="http://schemas.devexpress.com/winfx/2008/xaml/map"
+    xmlns:cs="colorscheme_ignorable_uri">
+    <ResourceDictionary.MergedDictionaries>
+        <dxi:PaletteResourceDictionary />
+    </ResourceDictionary.MergedDictionaries>
+    <SolidColorBrush x:Key="{dxmt:LWKey MapBrushes.ShapeTitleForeground}" Color="Black" />
+    <SolidColorBrush x:Key="{dxmt:LWKey MapBrushes.MapBackground}" Color="{StaticResource Color.Editor.Background}" />
+    <SolidColorBrush x:Key="{dxmt:LWKey MapBrushes.ShapeFill}" Color="{StaticResource Color.ListItem.HoverBorder}" />
+    <SolidColorBrush x:Key="{dxmt:LWKey MapBrushes.ShapeStroke}" Color="{StaticResource Color.Editor.Background}" />
+    <SolidColorBrush x:Key="{dxmt:LWKey MapBrushes.HighlightShapeStroke}" Color="{StaticResource Color.Accent}" />
+    <SolidColorBrush x:Key="{dxmt:LWKey MapBrushes.SelectedShapeStroke}" Color="{StaticResource Color.Accent}" />
+    <SolidColorBrush x:Key="{dxmt:LWKey MapBrushes.ShapeTitleStroke}" Color="White" />
+    <SolidColorBrush x:Key="{dxmt:LWKey MapBrushes.OverlayBackground}" Color="{StaticResource Color.Editor.Background}" Opacity="0.84" />
+    <SolidColorBrush x:Key="{dxmt:LWKey MapBrushes.OverlayElementForeground}" Color="{StaticResource Color.Foreground.Primary}" />
+    <SolidColorBrush x:Key="{dxmt:LWKey MapBrushes.OverlayElementAccentColor}" Color="{StaticResource Color.Accent}" />
+    <dx:ColorStaticResource x:Key="{dxmt:LWKey MapBrushes.OverlayElementHotColor}" Color="{StaticResource Color.Accent}" />
+    <dx:ColorStaticResource x:Key="{dxmt:LWKey MapBrushes.OverlayElementPressedColor}" Color="{StaticResource Color.Accent}" />
+    <SolidColorBrush x:Key="{dxmt:LWKey MapBrushes.ToolTipForeground}" Color="{StaticResource Color.Foreground.Alt}" />
+    <SolidColorBrush x:Key="{dxmt:LWKey MapBrushes.ToolTipBackground}" Color="{StaticResource Color.Accent}" />
+    <SolidColorBrush x:Key="{dxmt:LWKey MapBrushes.SearchPanelBackground}" Color="{StaticResource Color.Control.Background}" />
+    <SolidColorBrush x:Key="{dxmt:LWKey MapBrushes.SearchPanelForeground}" Color="{StaticResource Color.Foreground.Primary}" />
+    <SolidColorBrush x:Key="{dxmt:LWKey MapBrushes.SearchPanelNullTextForeground}" Color="{StaticResource Color.Foreground.Primary}" Opacity="0.62" />
+    <SolidColorBrush x:Key="{dxmt:LWKey MapBrushes.SearchPanelClearButtonFill}" Color="{StaticResource Color.Custom.Red}" />
+    <SolidColorBrush x:Key="{dxmt:LWKey MapBrushes.SearchPanelLoadingBrush}" Color="{StaticResource Color.Accent}" />
+    <SolidColorBrush x:Key="{dxmt:LWKey MapBrushes.PushpinBackground}" Color="{StaticResource Color.Border}" />
+    <SolidColorBrush x:Key="{dxmt:LWKey MapBrushes.PushpinForeground}" Color="{StaticResource Color.Foreground.Primary}" />
+    <SolidColorBrush x:Key="{dxmt:LWKey MapBrushes.PushpinSelectionBrush}" Color="{StaticResource Color.Accent}" />
+    <SolidColorBrush x:Key="{dxmt:LWKey MapBrushes.PushpinSelectionForeground}" Color="{StaticResource Color.Foreground.Alt}" />
+    <SolidColorBrush x:Key="{dxmt:LWKey Adorners.ResizeBoxBackground}" Color="{StaticResource Color.Editor.Background}" />
+    <SolidColorBrush x:Key="{dxmt:LWKey Adorners.SelectionAdornerStroke}" Color="{StaticResource Color.Accent}" />
+    <SolidColorBrush x:Key="{dxmt:LWKey Adorners.EditablePointBackground}" Color="{StaticResource Color.Editor.Background}" />
+    <SolidColorBrush x:Key="{dxmt:LWKey Adorners.EditablePointStroke}" Color="{StaticResource Color.Foreground.Primary}" />
+    <SolidColorBrush x:Key="{dxmt:LWKey ButtonPanel.SeparatorColor}" Color="{StaticResource Color.Backstage.Separator}" />
+    <SolidColorBrush x:Key="{dxmt:LWKey ButtonPanel.ItemBackground}" Color="{StaticResource Color.ListItem.SelectionBackground}" />
+    <SolidColorBrush x:Key="{dxmt:LWKey Measurements.RulerFill}" Color="{StaticResource Color.Editor.Background}" />
+    <SolidColorBrush x:Key="{dxmt:LWKey Measurements.RulerStroke}" Color="{StaticResource Color.Foreground.Primary}" />
+    <SolidColorBrush x:Key="{dxmt:LWKey Measurements.LabelFill}" Color="{StaticResource Color.Editor.Background}" />
+    <SolidColorBrush x:Key="{dxmt:LWKey Measurements.DeleteCrossFill}" Color="Gray" />
+    <SolidColorBrush x:Key="{dxmt:LWKey Measurements.DeleteCrossHighlightedFill}" Color="Red" />
+    <CornerRadius x:Key="{dxmt:LWKey Map.OverlayRadius}">3</CornerRadius>
+    <dxm:StrokeStyle x:Key="{dxmt:LWKey Map.HighlightShapeStroke}" Thickness="1.0" />
+    <dxm:StrokeStyle x:Key="{dxmt:LWKey Map.SelectedShapeStroke}" Thickness="2.0" />
+    <sys:Double x:Key="{dxmt:LWKey Adorners.ResizePointSize}">7</sys:Double>
+    <Thickness x:Key="{dxmt:LWKey Adorners.RotationAdornerMargin}">-10,-30,-13,0</Thickness>
+    <sys:Double x:Key="{dxmt:LWKey Adorners.EditablePointSize}">10</sys:Double>
+    <Thickness x:Key="{dxmt:LWKey ButtonPanel.ItemMargin}">4</Thickness>
+    <sys:Double x:Key="{dxmt:LWKey ButtonPanel.ItemSize}">16</sys:Double>
+    <sys:Double x:Key="{dxmt:LWKey ButtonPanel.PressedItemOpacity}">0.35</sys:Double>
+    <sys:Double x:Key="{dxmt:LWKey ButtonPanel.ActiveItemOpacity}">0.5</sys:Double>
+    <sys:Double x:Key="{dxmt:LWKey ButtonPanel.DisabledItemOpacity}">.3</sys:Double>
+    <sys:Double x:Key="{dxmt:LWKey Measurements.RulerBorderThickness}">2</sys:Double>
+    <sys:Double x:Key="{dxmt:LWKey Measurements.AreaRulerOpacity}">0.7</sys:Double>
+    <SolidColorBrush x:Key="{dxmt:LWKey MapBrushes.VectorLayerForeground}" Color="{StaticResource Color.Foreground.Primary}" />
+</ResourceDictionary>

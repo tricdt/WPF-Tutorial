@@ -1,0 +1,36 @@
+﻿<#@ template language="C#" debug="True" hostspecific="true" #>
+<#@ import namespace="System.IO" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.Text.RegularExpressions" #>
+<#@ include file="LocalizerGenerator.ttinclude" #>
+using System.ComponentModel;
+using System;
+
+namespace DevExpress.Mvvm.Localization {
+<#
+    new LocalizerTemplate(Host, "ScaffoldingStringId", "ScaffoldingLocalizer", GetData()).Render(this);
+#>
+}
+
+<#+
+    string[,] GetData() {
+        return new string[,] {
+// { <Enum Value Name> , <Default Value> , <Enum Value Attributes> }
+{"Confirmation_Delete", "Do you want to delete this {0}?", ""},
+{"Confirmation_Save", "Do you want to save changes?", ""},
+{"Confirmation_Reset", "Click OK to reload the entity and lose unsaved changes. Click Cancel to continue editing data.", ""},
+{"Confirmation_ResetLayout", "Are you sure you want to reset layout? Reopen this view for the new layout to take effect.", ""},
+{"Confirmation_Caption", "Confirmation", ""},
+{"Confirmation_SaveParent", "You need to save the parent {0} entity before adding a new record. Do you want to save it now?", ""},
+{"Warning_Caption", "Warning", ""},
+{"Warning_SomeFieldsContainInvalidData", "Some fields contain invalid data. Click OK to close the page and lose unsaved changes. Press Cancel to continue editing data.", ""},
+{"Exception_UpdateErrorCaption", "Update Error", ""},
+{"Exception_ValidationErrorCaption", "Validation Error", ""},
+{"Exception_DataServiceRequestErrorCaption", "DataService Request Error", ""},
+{"Entity_Changed", " *", ""},
+{"Entity_New", " (New)", ""},
+{"Entity_Deleted", " (Deleted)", ""},
+{"AddRemoveDetailEntities_SelectObjects", "Select objects to add", ""},
+        };
+    }
+#>

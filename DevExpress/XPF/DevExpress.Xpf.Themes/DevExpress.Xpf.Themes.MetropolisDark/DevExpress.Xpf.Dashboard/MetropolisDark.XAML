@@ -1,0 +1,31 @@
+﻿<ResourceDictionary mc:Ignorable="cs"
+                    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:cs="colorscheme_ignorable_uri"
+                    xmlns:dxdst="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys"
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.MetropolisDark.v24.1;component/DevExpress.Xpf.Dashboard/Generic/Generic.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.MetropolisDark.v24.1;component/DevExpress.Xpf.Dashboard/MetropolisDark/Templates.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.MetropolisDark.v24.1;component/DevExpress.Xpf.Dashboard/MetropolisDark/UICore.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.MetropolisDark.v24.1;component/DevExpress.Xpf.Dashboard/MetropolisDark/DeltaValuePresenter.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.MetropolisDark.v24.1;component/DevExpress.Xpf.Dashboard/MetropolisDark/DateFilterItem.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.MetropolisDark.v24.1;component/DevExpress.Xpf.Dashboard/MetropolisDark/CardItem.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.MetropolisDark.v24.1;component/DevExpress.Xpf.Dashboard/MetropolisDark/MapItem.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.MetropolisDark.v24.1;component/DevExpress.Xpf.Dashboard/MetropolisDark/BoundImageItem.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.MetropolisDark.v24.1;component/DevExpress.Xpf.Dashboard/MetropolisDark/ChartItem.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.MetropolisDark.v24.1;component/DevExpress.Xpf.Dashboard/MetropolisDark/ComboBoxItem.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.MetropolisDark.v24.1;component/DevExpress.Xpf.Dashboard/MetropolisDark/GaugeItem.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.MetropolisDark.v24.1;component/DevExpress.Xpf.Dashboard/MetropolisDark/GridItem.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.MetropolisDark.v24.1;component/DevExpress.Xpf.Dashboard/MetropolisDark/ImageItem.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.MetropolisDark.v24.1;component/DevExpress.Xpf.Dashboard/MetropolisDark/ListBoxItem.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.MetropolisDark.v24.1;component/DevExpress.Xpf.Dashboard/MetropolisDark/PieItem.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.MetropolisDark.v24.1;component/DevExpress.Xpf.Dashboard/MetropolisDark/PivotItem.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.MetropolisDark.v24.1;component/DevExpress.Xpf.Dashboard/MetropolisDark/RangeItem.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.MetropolisDark.v24.1;component/DevExpress.Xpf.Dashboard/MetropolisDark/TextBoxItem.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.MetropolisDark.v24.1;component/DevExpress.Xpf.Dashboard/MetropolisDark/TreemapItem.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.MetropolisDark.v24.1;component/DevExpress.Xpf.Dashboard/MetropolisDark/TreeViewItem.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+</ResourceDictionary>

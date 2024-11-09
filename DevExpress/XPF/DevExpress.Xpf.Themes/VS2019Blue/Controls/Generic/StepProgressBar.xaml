@@ -1,0 +1,208 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:dxco="http://schemas.devexpress.com/winfx/2008/xaml/controls" xmlns:dxcot="http://schemas.devexpress.com/winfx/2008/xaml/controls/themekeys" xmlns:dxcoi="http://schemas.devexpress.com/winfx/2008/xaml/controls/internal" xmlns:dxdst="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys">
+  <dxcoi:NegativeThicknessConverter x:Key="negativeThicknessConverter" />
+  <dxcoi:BooleanToVisibilityConverter x:Key="booleanToVisibilityInvertedConverter" />
+  <dxcoi:AddWithParameterConverter x:Key="addWithParameterConverter" />
+  <Style x:Key="progressBarDefaultStyle" TargetType="ProgressBar">
+    <Setter Property="BorderThickness" Value="{DynamicResource {dxcot:StepProgressBarThemeKey ResourceKey=ProgressBorderThickness}}" />
+    <Setter Property="Background" Value="{DynamicResource {dxcot:StepProgressBarThemeKey ResourceKey=ProgressBackground}}" />
+    <Setter Property="Foreground" Value="{DynamicResource {dxcot:StepProgressBarThemeKey ResourceKey=ProgressForeground}}" />
+    <Setter Property="MinHeight" Value="0" />
+    <Setter Property="BorderBrush" Value="{DynamicResource {dxcot:StepProgressBarThemeKey ResourceKey=ProgressNeutralBorderBrush}}" />
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="ProgressBar">
+          <Grid x:Name="PART_Track" Background="{TemplateBinding Background}">
+            <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+              <Grid x:Name="PART_Indicator" HorizontalAlignment="Left" Background="{TemplateBinding Foreground}" Margin="{TemplateBinding BorderThickness, Converter={StaticResource negativeThicknessConverter}}">
+                <Border BorderBrush="{DynamicResource {dxcot:StepProgressBarThemeKey ResourceKey=ProgressAccentBorderBrush}}" BorderThickness="{TemplateBinding BorderThickness}" />
+              </Grid>
+            </Border>
+          </Grid>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <ControlTemplate x:Key="verticalStepProgressBarItemTemplate" TargetType="{x:Type dxco:StepProgressBarItem}">
+    <Grid x:Name="PART_ItemRootGrid">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="{Binding NearContentLength, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=dxco:StepProgressBar}, Mode=OneWay}" />
+        <ColumnDefinition Width="{Binding IndicatorLength, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=dxco:StepProgressBar}, Mode=OneWay}" />
+        <ColumnDefinition Width="{Binding FarContentLength, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=dxco:StepProgressBar}, Mode=OneWay}" />
+      </Grid.ColumnDefinitions>
+      <ContentPresenter x:Name="PART_NearContent" Grid.Column="0" ContentSource="NearContent" HorizontalAlignment="{TemplateBinding NearContentHorizontalAlignment}" VerticalAlignment="{TemplateBinding NearContentVerticalAlignment}" />
+      <Grid x:Name="PART_IndicatorGrid" Grid.Column="1" Margin="{DynamicResource {dxcot:StepProgressBarThemeKey ResourceKey=IndicatorPanelMargin}}">
+        <Path x:Name="PART_IndicatorsGeometry" Stroke="{TemplateBinding BorderBrush}" StrokeThickness="{TemplateBinding IndicatorBorderSize}" Fill="{TemplateBinding Background}" HorizontalAlignment="Center" VerticalAlignment="Center" Data="{TemplateBinding IndicatorGeometry}" />
+        <Path x:Name="PART_IndicatorsGeometry_MouseOver" Fill="{TemplateBinding HoverBackground}" Stroke="{TemplateBinding HoverBorderBrush}" StrokeThickness="{TemplateBinding IndicatorBorderSize}" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="{TemplateBinding IsEnabled,Converter={StaticResource booleanToVisibilityInvertedConverter}}" Data="{TemplateBinding IndicatorGeometry}" Opacity="0" />
+        <ContentPresenter x:Name="PART_Content" ContentSource="Content" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+      </Grid>
+      <ContentPresenter x:Name="PART_FarContent" Grid.Column="2" ContentSource="FarContent" HorizontalAlignment="{TemplateBinding FarContentHorizontalAlignment}" VerticalAlignment="{TemplateBinding FarContentVerticalAlignment}" />
+    </Grid>
+    <ControlTemplate.Triggers>
+      <Trigger Property="IsEnabled" Value="False">
+        <Setter TargetName="PART_Content" Property="Opacity" Value="0.66" />
+      </Trigger>
+      <Trigger Property="State" Value="NotStarted">
+        <Setter TargetName="PART_Content" Property="TextElement.Foreground" Value="{DynamicResource {dxcot:StepProgressBarThemeKey ResourceKey=NotStartedItemForeground}}" />
+      </Trigger>
+      <Trigger Property="State" Value="Indeterminate">
+        <Setter TargetName="PART_Content" Property="TextElement.Foreground" Value="{DynamicResource {dxcot:StepProgressBarThemeKey ResourceKey=IndeterminateItemForeground}}" />
+      </Trigger>
+      <Trigger Property="State" Value="Completed">
+        <Setter TargetName="PART_Content" Property="TextElement.Foreground" Value="{DynamicResource {dxcot:StepProgressBarThemeKey ResourceKey=CompletedItemForeground}}" />
+      </Trigger>
+    </ControlTemplate.Triggers>
+  </ControlTemplate>
+  <Style x:Key="{dxdst:DefaultStyleThemeKey FullName=DevExpress.Xpf.Controls.StepProgressBar}" TargetType="{x:Type dxco:StepProgressBar}">
+    <Setter Property="NearContentLength" Value="Auto" />
+    <Setter Property="IndicatorLength" Value="Auto" />
+    <Setter Property="FarContentLength" Value="Auto" />
+    <Setter Property="ProgressAnimationDuration" Value="{DynamicResource {dxcot:StepProgressBarThemeKey ResourceKey=ProgressAnimationDuration}}" />
+    <Setter Property="ShowOuterBorder" Value="{DynamicResource {dxcot:StepProgressBarThemeKey ResourceKey=ShowOuterBorder}}" />
+    <Setter Property="OuterBorderBrush" Value="{DynamicResource {dxcot:StepProgressBarThemeKey ResourceKey=OuterBorderBrush}}" />
+    <Setter Property="Background" Value="{DynamicResource {dxcot:StepProgressBarThemeKey ResourceKey=OuterIndentBrush}}" />
+    <Setter Property="OuterBorderSize" Value="{DynamicResource {dxcot:StepProgressBarThemeKey ResourceKey=OuterBorderSize}}" />
+    <Setter Property="OuterBorderIndent" Value="{DynamicResource {dxcot:StepProgressBarThemeKey ResourceKey=OuterBorderIndent}}" />
+    <Setter Property="ProgressSize" Value="{DynamicResource {dxcot:StepProgressBarThemeKey ResourceKey=ProgressBarThickness}}" />
+    <Setter Property="ProgressStyle" Value="{StaticResource progressBarDefaultStyle}" />
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type dxco:StepProgressBar}">
+          <ScrollViewer x:Name="PART_ScrollViewer" Focusable="False" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+            <Grid x:Name="PART_Root" UseLayoutRounding="False">
+              <Canvas x:Name="PART_Canvas">
+                <ProgressBar x:Name="PART_ProgressBar" Height="{TemplateBinding ProgressSize}" Visibility="{TemplateBinding ShowProgress, Converter={StaticResource booleanToVisibilityInvertedConverter}}" Value="{TemplateBinding Progress}" Style="{TemplateBinding ProgressStyle}" />
+              </Canvas>
+              <ItemsPresenter />
+            </Grid>
+          </ScrollViewer>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+    <Setter Property="ItemsPanel">
+      <Setter.Value>
+        <ItemsPanelTemplate>
+          <dxcoi:ReversibleStepProgressBarPanel ReverseOrder="{Binding ReverseOrder                         , RelativeSource={RelativeSource Mode=FindAncestor                         , AncestorType=dxco:StepProgressBar}}" Orientation="{Binding Orientation, RelativeSource={RelativeSource Mode=FindAncestor                         , AncestorType=dxco:StepProgressBar}}" Offset="{Binding Offset, RelativeSource={RelativeSource Mode=FindAncestor                         , AncestorType=dxco:StepProgressBar}}" />
+        </ItemsPanelTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style x:Key="{dxdst:DefaultStyleThemeKey FullName=DevExpress.Xpf.Controls.StepProgressBarItem}" TargetType="{x:Type dxco:StepProgressBarItem}">
+    <Setter Property="HorizontalContentAlignment" Value="Center" />
+    <Setter Property="VerticalContentAlignment" Value="Center" />
+    <Setter Property="IndicatorBorderSize" Value="{DynamicResource {dxcot:StepProgressBarThemeKey ResourceKey=IndicatorBorderSize}}" />
+    <Setter Property="Content" Value="{Binding Path=Index, RelativeSource={RelativeSource Mode=Self}, Mode=OneWay, Converter={StaticResource addWithParameterConverter}, ConverterParameter=1}" />
+    <Setter Property="IndicatorGeometry" Value="{DynamicResource {dxcot:StepProgressBarThemeKey ResourceKey=IndicatorGeometry}}" />
+    <Setter Property="IsHitTestVisible" Value="{Binding Path = AllowItemClick, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=dxco:StepProgressBar}}" />
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type dxco:StepProgressBarItem}">
+          <Grid x:Name="PART_ItemRootGrid">
+            <Grid.RowDefinitions>
+              <RowDefinition Height="{Binding NearContentLength, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=dxco:StepProgressBar}, Mode=OneWay}" />
+              <RowDefinition Height="{Binding IndicatorLength, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=dxco:StepProgressBar}, Mode=OneWay}" />
+              <RowDefinition Height="{Binding FarContentLength, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=dxco:StepProgressBar}, Mode=OneWay}" />
+            </Grid.RowDefinitions>
+            <ContentPresenter x:Name="PART_NearContent" Grid.Row="0" ContentSource="NearContent" HorizontalAlignment="{TemplateBinding NearContentHorizontalAlignment}" VerticalAlignment="{TemplateBinding NearContentVerticalAlignment}" />
+            <Grid x:Name="PART_IndicatorGrid" Grid.Row="1" Margin="{DynamicResource {dxcot:StepProgressBarThemeKey ResourceKey=IndicatorPanelMargin}}">
+              <Path x:Name="PART_IndicatorsGeometry" Stroke="{TemplateBinding BorderBrush}" StrokeThickness="{TemplateBinding IndicatorBorderSize}" Fill="{TemplateBinding Background}" HorizontalAlignment="Center" VerticalAlignment="Center" Data="{TemplateBinding IndicatorGeometry}" />
+              <Path x:Name="PART_IndicatorsGeometry_MouseOver" Fill="{TemplateBinding HoverBackground}" Stroke="{TemplateBinding HoverBorderBrush}" StrokeThickness="{TemplateBinding IndicatorBorderSize}" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="{TemplateBinding IsEnabled,Converter={StaticResource booleanToVisibilityInvertedConverter}}" Data="{TemplateBinding IndicatorGeometry}" Opacity="0" />
+              <ContentPresenter x:Name="PART_Content" ContentSource="Content" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+            </Grid>
+            <ContentPresenter x:Name="PART_FarContent" Grid.Row="2" ContentSource="FarContent" HorizontalAlignment="{TemplateBinding FarContentHorizontalAlignment}" VerticalAlignment="{TemplateBinding FarContentVerticalAlignment}" />
+          </Grid>
+          <ControlTemplate.Triggers>
+            <Trigger Property="IsEnabled" Value="False">
+              <Setter TargetName="PART_Content" Property="Opacity" Value="0.66" />
+            </Trigger>
+            <Trigger Property="State" Value="NotStarted">
+              <Setter TargetName="PART_Content" Property="TextElement.Foreground" Value="{DynamicResource {dxcot:StepProgressBarThemeKey ResourceKey=NotStartedItemForeground}}" />
+            </Trigger>
+            <Trigger Property="State" Value="Indeterminate">
+              <Setter TargetName="PART_Content" Property="TextElement.Foreground" Value="{DynamicResource {dxcot:StepProgressBarThemeKey ResourceKey=IndeterminateItemForeground}}" />
+            </Trigger>
+            <Trigger Property="State" Value="Completed">
+              <Setter TargetName="PART_Content" Property="TextElement.Foreground" Value="{DynamicResource {dxcot:StepProgressBarThemeKey ResourceKey=CompletedItemForeground}}" />
+            </Trigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+    <Style.Triggers>
+      <DataTrigger Binding="{Binding Orientation, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=dxco:StepProgressBar}}" Value="Vertical">
+        <Setter Property="Template" Value="{StaticResource verticalStepProgressBarItemTemplate}" />
+      </DataTrigger>
+      <Trigger Property="State" Value="NotStarted">
+        <Setter Property="HoverBorderBrush" Value="{DynamicResource {dxcot:StepProgressBarThemeKey ResourceKey=NotStartedMouseOverStroke}}" />
+        <Setter Property="HoverBackground" Value="{DynamicResource {dxcot:StepProgressBarThemeKey ResourceKey=NotStartedMouseOverFill}}" />
+      </Trigger>
+      <Trigger Property="State" Value="Indeterminate">
+        <Setter Property="HoverBorderBrush" Value="{DynamicResource {dxcot:StepProgressBarThemeKey ResourceKey=IndeterminateMouseOverStroke}}" />
+        <Setter Property="HoverBackground" Value="{DynamicResource {dxcot:StepProgressBarThemeKey ResourceKey=IndeterminateMouseOverFill}}" />
+      </Trigger>
+      <Trigger Property="State" Value="Completed">
+        <Setter Property="HoverBorderBrush" Value="{DynamicResource {dxcot:StepProgressBarThemeKey ResourceKey=CompletedMouseOverStroke}}" />
+        <Setter Property="HoverBackground" Value="{DynamicResource {dxcot:StepProgressBarThemeKey ResourceKey=CompletedMouseOverFill}}" />
+      </Trigger>
+      <MultiTrigger>
+        <MultiTrigger.Conditions>
+          <Condition Property="IsEnabled" Value="True" />
+          <Condition Property="State" Value="NotStarted" />
+        </MultiTrigger.Conditions>
+        <MultiTrigger.Setters>
+          <Setter Property="Background" Value="{DynamicResource {dxcot:StepProgressBarThemeKey ResourceKey=NotStartedIndicatorFill}}" />
+          <Setter Property="BorderBrush" Value="{DynamicResource {dxcot:StepProgressBarThemeKey ResourceKey=NotStartedIndicatorStroke}}" />
+        </MultiTrigger.Setters>
+      </MultiTrigger>
+      <MultiTrigger>
+        <MultiTrigger.Conditions>
+          <Condition Property="IsEnabled" Value="True" />
+          <Condition Property="State" Value="Indeterminate" />
+        </MultiTrigger.Conditions>
+        <MultiTrigger.Setters>
+          <Setter Property="Background" Value="{DynamicResource {dxcot:StepProgressBarThemeKey ResourceKey=IndeterminateIndicatorFill}}" />
+          <Setter Property="BorderBrush" Value="{DynamicResource {dxcot:StepProgressBarThemeKey ResourceKey=IndeterminateIndicatorStroke}}" />
+        </MultiTrigger.Setters>
+      </MultiTrigger>
+      <MultiTrigger>
+        <MultiTrigger.Conditions>
+          <Condition Property="IsEnabled" Value="True" />
+          <Condition Property="State" Value="Completed" />
+        </MultiTrigger.Conditions>
+        <MultiTrigger.Setters>
+          <Setter Property="Background" Value="{DynamicResource {dxcot:StepProgressBarThemeKey ResourceKey=CompletedIndicatorFill}}" />
+          <Setter Property="BorderBrush" Value="{DynamicResource {dxcot:StepProgressBarThemeKey ResourceKey=CompletedIndicatorStroke}}" />
+        </MultiTrigger.Setters>
+      </MultiTrigger>
+      <MultiTrigger>
+        <MultiTrigger.Conditions>
+          <Condition Property="IsEnabled" Value="False" />
+          <Condition Property="State" Value="NotStarted" />
+        </MultiTrigger.Conditions>
+        <MultiTrigger.Setters>
+          <Setter Property="Background" Value="{DynamicResource {dxcot:StepProgressBarThemeKey ResourceKey=DisabledNotStartedIndicatorFill}}" />
+          <Setter Property="BorderBrush" Value="{DynamicResource {dxcot:StepProgressBarThemeKey ResourceKey=DisabledNotStartedIndicatorStroke}}" />
+        </MultiTrigger.Setters>
+      </MultiTrigger>
+      <MultiTrigger>
+        <MultiTrigger.Conditions>
+          <Condition Property="IsEnabled" Value="False" />
+          <Condition Property="State" Value="Indeterminate" />
+        </MultiTrigger.Conditions>
+        <MultiTrigger.Setters>
+          <Setter Property="Background" Value="{DynamicResource {dxcot:StepProgressBarThemeKey ResourceKey=DisabledIndeterminateIndicatorFill}}" />
+          <Setter Property="BorderBrush" Value="{DynamicResource {dxcot:StepProgressBarThemeKey ResourceKey=DisabledIndeterminateIndicatorStroke}}" />
+        </MultiTrigger.Setters>
+      </MultiTrigger>
+      <MultiTrigger>
+        <MultiTrigger.Conditions>
+          <Condition Property="IsEnabled" Value="False" />
+          <Condition Property="State" Value="Completed" />
+        </MultiTrigger.Conditions>
+        <MultiTrigger.Setters>
+          <Setter Property="Background" Value="{DynamicResource {dxcot:StepProgressBarThemeKey ResourceKey=DisabledCompletedIndicatorFill}}" />
+          <Setter Property="BorderBrush" Value="{DynamicResource {dxcot:StepProgressBarThemeKey ResourceKey=DisabledCompletedIndicatorStroke}}" />
+        </MultiTrigger.Setters>
+      </MultiTrigger>
+    </Style.Triggers>
+  </Style>
+</ResourceDictionary>

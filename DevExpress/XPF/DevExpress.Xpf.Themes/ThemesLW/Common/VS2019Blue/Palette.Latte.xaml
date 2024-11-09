@@ -1,0 +1,91 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+    xmlns:dxi="http://schemas.devexpress.com/winfx/2008/xaml/core/internal"
+    xmlns:cs="colorscheme_ignorable_uri">
+
+    <Color x:Key="Color.Backstage.Focused">#FFF5CC84</Color>
+    <Color x:Key="Color.Backstage.SelectionBackground">#FFF5CC84</Color>
+    <Color x:Key="Color.Control.NeutralBackground">#FFD8DAEB</Color>
+    <Color x:Key="Color.Custom.Blue">#FF0026C1</Color>
+    <Color x:Key="Color.Custom.Green">#FF00C126</Color>
+    <Color x:Key="Color.Custom.Red">#FFC12600</Color>
+    <Color x:Key="Color.ControlLight.HoverBackground">#FFC4D5FF</Color>
+    <Color x:Key="Color.ControlLight.HoverBorder">#FFC4D5FF</Color>
+    <Color x:Key="Color.ControlLight.SelectionBackground">#FFC4D5FF</Color>
+    <Color x:Key="Color.ControlLight.SelectionBorder">#FFC4D5FF</Color>
+
+    <!-- Latte -->
+    <Color x:Key="Color.Backstage.Button.Background">#FF745E49</Color>
+    <Color x:Key="Color.Backstage.Delimiter">#FFCBB9A8</Color>
+    <Color x:Key="Color.Backstage.Editor.Background">#FF745E49</Color>
+    <Color x:Key="Color.Backstage.Foreground">#FFFFFFFF</Color>
+    <Color x:Key="Color.Backstage.HoverBackground">#FFD6C5B3</Color>
+    <Color x:Key="Color.Backstage.Window.Background">#FFA58E77</Color>
+    <Color x:Key="Color.Button.Background">#FFFFFFFF</Color>
+    <Color x:Key="Color.Control.Background">#FFEAE5E0</Color>
+    <Color x:Key="Color.Editor.Background">#FFFFFFFF</Color>
+    <Color x:Key="Color.Border">#FFBDAFA8</Color>
+    <Color x:Key="Color.Delimiter">#FFD9C8BF</Color>
+    <Color x:Key="Color.Focused">#FFF5CC84</Color>
+    <Color x:Key="Color.Foreground">#FF302B26</Color>
+    <Color x:Key="Color.HoverBackground">#FFFFF6E7</Color>
+    <Color x:Key="Color.HoverBorder">#FFDCC299</Color>
+    <Color x:Key="Color.HoverForeground">#FF171615</Color>
+    <Color x:Key="Color.SelectionBackground">#FFFCD89F</Color>
+    <Color x:Key="Color.SelectionBorder">#FFE5C365</Color>
+    <Color x:Key="Color.SelectionForeground">#FF171615</Color>
+    <Color x:Key="Color.Window.Background">#FFFFFAF8</Color>
+    <Color x:Key="Color.ControlDark.Background">#FFE6DACB</Color>
+    <Color x:Key="Color.ControlDark.HoverBackground">#FFF6F6F4</Color>
+    <Color x:Key="Color.ControlDark.HoverBorder">#FFCFC1B0</Color>
+    <Color x:Key="Color.ControlDark.SelectionBackground">#FFFFFFFF</Color>
+    <Color x:Key="Color.ControlDark.SelectionBorder">#FFDED0BF</Color>
+    <Color x:Key="Color.ControlLight.Hover">#FFF3DFBC</Color>
+    <Color x:Key="Color.ControlLight.Selection">#FFF5CC84</Color>
+    <Color x:Key="Color.Unfocused">#FFEBE5D8</Color>
+    <Color x:Key="Color.Window.HeaderButton.HoverBackground">#FFD8CBBA</Color>
+    <Color x:Key="Color.Window.HeaderButton.SelectionBackground">#FFF5CC84</Color>
+
+
+    <SolidColorBrush x:Key="Brush.Backstage.Button.Background" Color="{StaticResource Color.Backstage.Button.Background}" />
+    <SolidColorBrush x:Key="Brush.Backstage.Delimiter" Color="{StaticResource Color.Backstage.Delimiter}" />
+    <SolidColorBrush x:Key="Brush.Backstage.Editor.Background" Color="{StaticResource Color.Backstage.Editor.Background}" />
+    <SolidColorBrush x:Key="Brush.Backstage.Focused" Color="{StaticResource Color.Backstage.Focused}" />
+    <SolidColorBrush x:Key="Brush.Backstage.Foreground" Color="{StaticResource Color.Backstage.Foreground}" />
+    <SolidColorBrush x:Key="Brush.Backstage.HoverBackground" Color="{StaticResource Color.Backstage.HoverBackground}" />
+    <SolidColorBrush x:Key="Brush.Backstage.SelectionBackground" Color="{StaticResource Color.Backstage.SelectionBackground}" />
+    <SolidColorBrush x:Key="Brush.Backstage.Window.Background" Color="{StaticResource Color.Backstage.Window.Background}" />
+    <SolidColorBrush x:Key="Brush.Border" Color="{StaticResource Color.Border}" />
+    <SolidColorBrush x:Key="Brush.Button.Background" Color="{StaticResource Color.Button.Background}" />
+    <SolidColorBrush x:Key="Brush.Control.Background" Color="{StaticResource Color.Control.Background}" />
+    <SolidColorBrush x:Key="Brush.Control.NeutralBackground" Color="{StaticResource Color.Control.NeutralBackground}" />
+    <SolidColorBrush x:Key="Brush.Custom.Blue" Color="{StaticResource Color.Custom.Blue}" />
+    <SolidColorBrush x:Key="Brush.Custom.Green" Color="{StaticResource Color.Custom.Green}" />
+    <SolidColorBrush x:Key="Brush.Custom.Red" Color="{StaticResource Color.Custom.Red}" />
+    <SolidColorBrush x:Key="Brush.Delimiter" Color="{StaticResource Color.Delimiter}" />
+    <SolidColorBrush x:Key="Brush.Editor.Background" Color="{StaticResource Color.Editor.Background}" />
+    <SolidColorBrush x:Key="Brush.Focused" Color="{StaticResource Color.Focused}" />
+    <SolidColorBrush x:Key="Brush.Foreground" Color="{StaticResource Color.Foreground}" />
+    <SolidColorBrush x:Key="Brush.HoverBackground" Color="{StaticResource Color.HoverBackground}" />
+    <SolidColorBrush x:Key="Brush.HoverBorder" Color="{StaticResource Color.HoverBorder}" />
+    <SolidColorBrush x:Key="Brush.HoverForeground" Color="{StaticResource Color.HoverForeground}" />
+    <SolidColorBrush x:Key="Brush.SelectionBackground" Color="{StaticResource Color.SelectionBackground}" />
+    <SolidColorBrush x:Key="Brush.SelectionBorder" Color="{StaticResource Color.SelectionBorder}" />
+    <SolidColorBrush x:Key="Brush.SelectionForeground" Color="{StaticResource Color.SelectionForeground}" />
+    <SolidColorBrush x:Key="Brush.Window.Background" Color="{StaticResource Color.Window.Background}" />
+    <SolidColorBrush x:Key="Brush.ControlDark.Background" Color="{StaticResource Color.ControlDark.Background}" />
+    <SolidColorBrush x:Key="Brush.ControlDark.HoverBackground" Color="{StaticResource Color.ControlDark.HoverBackground}" />
+    <SolidColorBrush x:Key="Brush.ControlDark.HoverBorder" Color="{StaticResource Color.ControlDark.HoverBorder}" />
+    <SolidColorBrush x:Key="Brush.ControlDark.SelectionBackground" Color="{StaticResource Color.ControlDark.SelectionBackground}" />
+    <SolidColorBrush x:Key="Brush.ControlDark.SelectionBorder" Color="{StaticResource Color.ControlDark.SelectionBorder}" />
+    <SolidColorBrush x:Key="Brush.ControlLight.HoverBackground" Color="{StaticResource Color.ControlLight.HoverBackground}" />
+    <SolidColorBrush x:Key="Brush.ControlLight.HoverBorder" Color="{StaticResource Color.ControlLight.HoverBorder}" />
+    <SolidColorBrush x:Key="Brush.ControlLight.SelectionBackground" Color="{StaticResource Color.ControlLight.SelectionBackground}" />
+    <SolidColorBrush x:Key="Brush.ControlLight.SelectionBorder" Color="{StaticResource Color.ControlLight.SelectionBorder}" />
+    <SolidColorBrush x:Key="Brush.Unfocused" Color="{StaticResource Color.Unfocused}" />
+    <SolidColorBrush x:Key="Brush.Window.HeaderButton.HoverBackground" Color="{StaticResource Color.Window.HeaderButton.HoverBackground}" />
+    <SolidColorBrush x:Key="Brush.Window.HeaderButton.SelectionBackground" Color="{StaticResource Color.Window.HeaderButton.SelectionBackground}" />
+
+</ResourceDictionary>

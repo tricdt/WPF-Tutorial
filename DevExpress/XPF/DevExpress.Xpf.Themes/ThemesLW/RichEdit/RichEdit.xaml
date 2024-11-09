@@ -1,0 +1,421 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:dxi="http://schemas.devexpress.com/winfx/2008/xaml/core/internal"
+    xmlns:dxt="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys"
+    xmlns:dxret="http://schemas.devexpress.com/winfx/2008/xaml/richedit/themekeys"
+    xmlns:cs="colorscheme_ignorable_uri"
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+    xmlns:dxrei="http://schemas.devexpress.com/winfx/2008/xaml/richedit/internal"
+    xmlns:dxre="http://schemas.devexpress.com/winfx/2008/xaml/richedit"
+    mc:Ignorable="cs">
+
+    <ResourceDictionary.MergedDictionaries>
+        <dxi:ThemeResourceDictionary Path="RichEdit/_{ThemeCategory}.xaml" />
+        <dxi:ThemeResourceDictionary Path="RichEdit\Generic.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <!--#region c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\RichEdit\Base\UICustom.xaml-->
+    <!-- General -->
+    <!--#endregion c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\RichEdit\Base\UICustom.xaml-->
+
+    <!--#region c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\RichEdit\Base\UIPreset.xaml-->
+    <Thickness x:Key="{dxret:LWKey RichEditControl.CommentContentPadding}">10</Thickness>
+    <sys:Double x:Key="{dxret:LWKey RichEditControl.CommentsAreaLeftPadding}">20</sys:Double>
+    <sys:Double x:Key="{dxret:LWKey RichEditControl.CommentsAreaRightPadding}">10</sys:Double>
+    <Point x:Key="{dxret:LWKey RichEditControl.CommentLineOffset}">0,20</Point>
+
+
+    <!-- General -->
+    <!--#endregion c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\RichEdit\Base\UIPreset.xaml-->
+
+    <!--#region c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\RichEdit\Base\UICore.xaml-->
+
+
+    <!-- General -->
+
+    <!-- Selection -->
+    <!--#endregion c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\RichEdit\Base\UICore.xaml-->
+
+    <!--#region c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\RichEdit\Base\Comment.xaml-->
+    <!-- Comment -->
+
+    <ControlTemplate x:Key="{dxret:LWKey RichEditControl.RichEditViewCommentsPresenterControlTemplate}" TargetType="{x:Type ContentControl}">
+        <ContentPresenter Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}" />
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="{dxret:LWKey RichEditControl.RichEditCommentBorderControlTemplate}" TargetType="{x:Type ContentControl}">
+        <Grid x:Name="Root">
+            <dx:DXBorder
+                Background="{TemplateBinding Background}"
+                BorderBrush="{TemplateBinding Background}"
+                BorderThickness="1"
+                Margin="1">
+                <ContentPresenter Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}" />
+            </dx:DXBorder>
+            <dx:DXBorder Background="{TemplateBinding Background}" Margin="1" Opacity="0.1" />
+        </Grid>
+    </ControlTemplate>
+
+    <Style x:Key="{dxret:LWKey RichEditControl.CommentMoreButtonStyle}" TargetType="{x:Type Button}">
+        <Setter Property="HorizontalAlignment" Value="Right" />
+        <Setter Property="Margin" Value="3" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid x:Name="Root">
+                        <Path x:Name="Path" Margin="4" Style="{StaticResource UIShape.Down}" />
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal" />
+                                <VisualState x:Name="MouseOver">
+                                    <Storyboard>
+                                        <DoubleAnimation Duration="0" Storyboard.TargetName="Path" Storyboard.TargetProperty="Opacity" To="1" />
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Pressed">
+                                    <Storyboard>
+                                        <DoubleAnimation Duration="0" Storyboard.TargetName="Path" Storyboard.TargetProperty="Opacity" To="1" />
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Disabled">
+                                    <Storyboard>
+                                        <DoubleAnimation Duration="0" Storyboard.TargetName="Root" Storyboard.TargetProperty="Opacity" To="0.38" />
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="VerticalAlignment" Value="Bottom" />
+        <Style.Triggers>
+            <Trigger Property="dx:ThemeManager.IsTouchEnabled" Value="True">
+                <Setter Property="Margin" Value="14" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <!--#endregion c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\RichEdit\Base\Comment.xaml-->
+
+    <!--#region c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\RichEdit\Base\Ruler\RulerControl.xaml-->
+    <!-- General -->
+
+    <ControlTemplate x:Key="{dxret:LWKey RichEditRuler.HorizontalRulerBackgroundControlTemplate}" TargetType="{x:Type ContentControl}" />
+
+    <ControlTemplate x:Key="{dxret:LWKey RichEditRuler.VerticalRulerBackgroundControlTemplate}" TargetType="{x:Type ContentControl}" />
+
+    <Style x:Key="{dxret:LWKey RichEditRuler.HorizontalRulerContentStyle}" TargetType="{x:Type Canvas}">
+        <Setter Property="Margin" Value="0,6,0,6" />
+    </Style>
+
+    <Style x:Key="{dxret:LWKey RichEditRuler.VerticalRulerContentStyle}" TargetType="{x:Type Canvas}">
+        <Setter Property="Margin" Value="6,0,6,0" />
+    </Style>
+
+    <Style x:Key="{dxret:LWKey RichEditRuler.HorizontalRulerShadowStyle}" TargetType="{x:Type Border}" />
+
+    <Style x:Key="{dxret:LWKey RichEditRuler.VerticalRulerShadowStyle}" TargetType="{x:Type Border}" />
+
+    <ControlTemplate x:Key="{dxret:LWKey RichEditRuler.TabTypeToggleBackgroundControlTemplate}" TargetType="dxrei:TabTypeToggleBackgroundControl" />
+    <!--#endregion c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\RichEdit\Base\Ruler\RulerControl.xaml-->
+
+    <!--#region c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\RichEdit\Base\Ruler\RulerStyles.xaml-->
+    <!-- General -->
+    <!--#endregion c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\RichEdit\Base\Ruler\RulerStyles.xaml-->
+
+    <!--#region c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\RichEdit\Base\Ruler\RulerArea.xaml-->
+    <!-- General -->
+
+    <ControlTemplate x:Key="{dxret:LWKey RichEditRuler.HorizontalSpaceAreaControlTemplate}" TargetType="dxrei:HorizontalRulerSpaceAreaControl">
+        <dx:DXBorder Background="{dx:LWBrush 'Brush.Button.Background, Office2019Black=Brush.Control.Background, Office2019Colorful=Brush.Control.NeutralBackground, Office2019HighContrast=#00000000, Win11=Brush.Button.SimpleButtonBackground'}" BorderBrush="{dx:LWBrush 'Brush.Delimiter, Office2019Black=Brush.Border, Office2019Colorful=#00000000, Win10Dark=Brush.AltBorder'}" BorderThickness="1" />
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="{dxret:LWKey RichEditRuler.VerticalSpaceAreaControlTemplate}" TargetType="dxrei:VerticalRulerSpaceAreaControl">
+        <dx:DXBorder Background="{dx:LWBrush 'Brush.Button.Background, Office2019Black=Brush.Control.Background, Office2019Colorful=Brush.Control.NeutralBackground, Office2019HighContrast=#00000000, Win11=Brush.Button.SimpleButtonBackground'}" BorderBrush="{dx:LWBrush 'Brush.Delimiter, Office2019Black=Brush.Border, Office2019Colorful=#00000000, Win10Dark=Brush.AltBorder'}" BorderThickness="1" />
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="{dxret:LWKey RichEditRuler.ActiveAreaControlTemplate}" TargetType="dxrei:RulerActiveAreaControl">
+        <dx:DXBorder Background="{dx:LWBrush 'Brush.Editor.Background, Office2019Black=Brush.ControlLight.SelectionBackground'}" BorderBrush="{dx:LWBrush 'Brush.Delimiter, Office2019Black=Brush.Border, Office2019Colorful=#00000000, Office2019HighContrast=#00000000, Win10Dark=Brush.AltBorder'}" BorderThickness="1" />
+    </ControlTemplate>
+    <!--#endregion c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\RichEdit\Base\Ruler\RulerArea.xaml-->
+
+    <!--#region c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\RichEdit\Base\Ruler\RulerHotZone.xaml-->
+    <!-- General -->
+
+    <ControlTemplate x:Key="{dxret:LWKey RichEditRuler.TabTypeToggleHotZoneControlTemplate}" TargetType="dxrei:TabTypeToggleHotZoneControl">
+        <dx:DXBorder Background="{dx:LWBrush 'Brush.Button.Background, Office2019Black=Brush.Control.NeutralBackground, Win11=Brush.Button.SimpleButtonBackground'}" BorderBrush="{dx:LWBrush 'Brush.Delimiter, Office2019Black=#00000000, Office2019Colorful=#00000000, Win10Dark=Brush.AltBorder'}" BorderThickness="1" />
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="{dxret:LWKey RichEditRuler.DisabledHotZoneControlTemplate}" TargetType="dxrei:DisabledHotZoneControl">
+        <dx:DXBorder Background="{StaticResource Brush.Border}" Height="7" Width="9" />
+    </ControlTemplate>
+
+    <!-- Indent -->
+
+    <ControlTemplate x:Key="{dxret:LWKey RichEditRuler.FirstLineIndentHotZoneControlTemplate}" TargetType="dxrei:FirstLineIndentHotZoneControl">
+        <Grid x:Name="Root">
+            <Path Style="{StaticResource UIShape.FirstLineIndent}" Visibility="{TemplateBinding EnabledVisibility}" />
+            <Path Opacity="0.38" Style="{StaticResource UIShape.FirstLineIndent}" Visibility="{TemplateBinding DisabledVisibility}" />
+        </Grid>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="{dxret:LWKey RichEditRuler.LeftIndentHotZoneControlTemplate}" TargetType="dxrei:HorizontalHotZoneControl">
+        <Grid x:Name="Root">
+            <Path Style="{StaticResource UIShape.LeftIndent}" Visibility="{TemplateBinding EnabledVisibility}" />
+            <Path Opacity="0.38" Style="{StaticResource UIShape.LeftIndent}" Visibility="{TemplateBinding DisabledVisibility}" />
+        </Grid>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="{dxret:LWKey RichEditRuler.LeftIndentBottomHotZoneControlTemplate}" TargetType="dxrei:LeftIndentBottomHotZoneControl">
+        <Grid x:Name="Root">
+            <dx:DXBorder
+                Background="{dx:LWBrush 'Brush.Button.Background, Office2019HighContrast=Brush.Focused, Win11=Brush.Button.SimpleButtonBackground'}"
+                BorderBrush="{dx:LWBrush 'Brush.Border, Office2019HighContrast=Brush.Button.Background'}"
+                BorderThickness="1,0,1,1"
+                Height="5"
+                Visibility="{TemplateBinding EnabledVisibility}"
+                Width="10" />
+            <dx:DXBorder
+                Background="{dx:LWBrush 'Brush.Button.Background, Office2019HighContrast=Brush.Focused, Win11=Brush.Button.SimpleButtonBackground'}"
+                BorderBrush="{dx:LWBrush 'Brush.Border, Office2019HighContrast=Brush.Button.Background'}"
+                BorderThickness="1,0,1,1"
+                Height="5"
+                Opacity="0.38"
+                Visibility="{TemplateBinding DisabledVisibility}"
+                Width="10" />
+        </Grid>
+    </ControlTemplate>
+
+    <!-- Tab -->
+
+    <ControlTemplate x:Key="{dxret:LWKey RichEditRuler.DecimalTabHotZoneControlTemplate}" TargetType="dxrei:DecimalTabHotZoneControl">
+        <Grid x:Name="Root">
+            <Path Style="{StaticResource UIShape.DecimalTab}" Visibility="{TemplateBinding EnabledVisibility}" />
+            <Path Opacity="0.38" Style="{StaticResource UIShape.DecimalTab}" Visibility="{TemplateBinding DisabledVisibility}" />
+        </Grid>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="{dxret:LWKey RichEditRuler.HorizontalTableHotZoneControlTemplate}" TargetType="dxrei:HorizontalTableHotZoneControl">
+        <Grid x:Name="Root">
+            <dx:DXBorder
+                Background="{dx:LWBrush 'Brush.Window.Background, Office2019Black=Brush.Border, Office2019Colorful=Brush.Control.NeutralBackground, Office2019HighContrast=#00000000, Win11=Brush.WindowBackground'}"
+                BorderBrush="{dx:LWBrush 'Brush.Delimiter, Office2019Black=Brush.Border, Office2019Colorful=#00000000, Win10Dark=Brush.AltBorder'}"
+                BorderThickness="1"
+                Padding="2">
+                <Grid>
+                    <Path Style="{StaticResource UIShape.HorizontalTable}" Visibility="{TemplateBinding EnabledVisibility}" />
+                    <Path Opacity="0.38" Style="{StaticResource UIShape.HorizontalTable}" Visibility="{TemplateBinding DisabledVisibility}" />
+                </Grid>
+            </dx:DXBorder>
+        </Grid>
+    </ControlTemplate>
+    <!--#endregion c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\RichEdit\Base\Ruler\RulerHotZone.xaml-->
+
+    <!--#region c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\RichEdit\Base\Ruler\RulerTick.xaml-->
+    <!-- General -->
+
+    <ControlTemplate x:Key="{dxret:LWKey RichEditRuler.TickMarkControlTemplate}" TargetType="dxrei:RulerTickMarkControl">
+        <dx:DXBorder Background="{dx:LWBrush 'Brush.Border, Office2019Black=Brush.ForegroundDark, Office2019Colorful=Brush.Foreground, Office2019HighContrast=Brush.Foreground'}" />
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="{dxret:LWKey RichEditRuler.DefaultTabControlTemplate}" TargetType="dxrei:DefaultTabControl">
+        <dx:DXBorder Background="{dx:LWBrush 'Brush.Border, Office2019Black=Brush.ForegroundDark'}" />
+    </ControlTemplate>
+    <!--#endregion c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\RichEdit\Base\Ruler\RulerTick.xaml-->
+
+    <!--#region c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\RichEdit\Base\Ruler\RulerTab.xaml-->
+    <!-- General -->
+
+    <ControlTemplate x:Key="{dxret:LWKey RichEditRuler.LeftTabHotZoneControlTemplate}" TargetType="dxrei:LeftTabHotZoneControl">
+        <Grid Margin="1">
+            <Path Style="{StaticResource UIShape.Ruler.Tab.Left}" Visibility="{TemplateBinding DisabledVisibility}" />
+            <Path Style="{StaticResource UIShape.Ruler.Tab.Left}" Visibility="{TemplateBinding EnabledVisibility}" />
+        </Grid>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="{dxret:LWKey RichEditRuler.CenterTabHotZoneControlTemplate}" TargetType="dxrei:CenterTabHotZoneControl">
+        <Grid Margin="1">
+            <Path Style="{StaticResource UIShape.Ruler.Tab.Center}" Visibility="{TemplateBinding DisabledVisibility}" />
+            <Path Style="{StaticResource UIShape.Ruler.Tab.Center}" Visibility="{TemplateBinding EnabledVisibility}" />
+        </Grid>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="{dxret:LWKey RichEditRuler.RightTabHotZoneControlTemplate}" TargetType="dxrei:RightTabHotZoneControl">
+        <Grid Margin="1">
+            <Path Style="{StaticResource UIShape.Ruler.Tab.Right}" Visibility="{TemplateBinding DisabledVisibility}" />
+            <Path Style="{StaticResource UIShape.Ruler.Tab.Right}" Visibility="{TemplateBinding EnabledVisibility}" />
+        </Grid>
+    </ControlTemplate>
+    <!--#endregion c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\RichEdit\Base\Ruler\RulerTab.xaml-->
+
+    <!--#region c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\RichEdit\Base\PageNumberWindow.xaml-->
+    <ControlTemplate x:Key="{dxret:LWKey RichEditControl.PageNumberWindowControlTemplate}" TargetType="{x:Type dxre:PageNumberWindow}">
+        <dx:DXBorder Background="{dx:LWBrush 'Brush.Window.Background, Win11=Brush.WindowBackground'}">
+            <TextBlock
+                FontSize="13"
+                Foreground="{dx:LWBrush 'Brush.Foreground, Office2019Black=Brush.ControlLight.Foreground, Win11=Brush.Foreground.Primary'}"
+                Margin="12,5,12,5"
+                Text="{TemplateBinding Text}" />
+        </dx:DXBorder>
+    </ControlTemplate>
+    <!--#endregion c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\RichEdit\Base\PageNumberWindow.xaml-->
+
+    <!--#region c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\RichEdit\Base\FlowSelection.xaml-->
+    <Style x:Key="{dxret:LWKey RichEditControl.SelectionPathStyle}" TargetType="{x:Type Path}">
+        <Setter Property="Fill" Value="{dx:LWBrush 'Brush.Focused, Win11=Brush.Accent'}" />
+        <Setter Property="Opacity" Value="0.4" />
+    </Style>
+    <!--#endregion c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\RichEdit\Base\FlowSelection.xaml-->
+
+    <!--#region c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\RichEdit\Base\SizerSelection.xaml-->
+    <Style x:Key="{dxret:LWKey RichEditControl.ResizePicturePlaceholderRectangleStyle}" TargetType="{x:Type Rectangle}">
+        <Setter Property="Fill" Value="{StaticResource RichEditSelectionFill}" />
+        <Setter Property="Stroke" Value="{StaticResource RichEditSelectionStroke}" />
+        <Setter Property="StrokeDashArray" Value="2,2" />
+        <Setter Property="StrokeThickness" Value="1" />
+    </Style>
+    <!--#endregion c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\RichEdit\Base\SizerSelection.xaml-->
+
+    <!--#region c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\RichEdit\Base\PageView.xaml-->
+    <!-- General -->
+
+    <ControlTemplate x:Key="{dxret:LWKey RichEditControl.PrintLayoutViewPageBorderControlTemplate}" TargetType="{x:Type dxrei:RichEditViewPageContentControl}">
+        <Grid x:Name="Root">
+            <dx:DXBorder Background="{TemplateBinding Background}" BorderBrush="{StaticResource Brush.Border}" BorderThickness="1">
+                <Grid>
+                    <ContentPresenter Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}" Margin="-1" />
+                    <dx:DXBorder Background="{dx:LWBrush 'Brush.Window.Background, Win11=Brush.WindowBackground'}" HorizontalAlignment="Right" Visibility="{TemplateBinding CommentsVisibility}">
+                        <dxrei:RichEditViewCommentsPresenter
+                            x:Name="CommentsArea"
+                            HorizontalAlignment="Right"
+                            Visibility="{TemplateBinding CommentsVisibility}"
+                            Width="{TemplateBinding CommentsWidth}" />
+                    </dx:DXBorder>
+                </Grid>
+            </dx:DXBorder>
+        </Grid>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="{dxret:LWKey RichEditControl.SimpleViewPageBorderControlTemplate}" TargetType="{x:Type dxrei:RichEditViewPageContentControl}">
+        <dx:DXBorder Background="{TemplateBinding Background}">
+            <Grid>
+                <ContentPresenter Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}" />
+                <dx:DXBorder Background="{dx:LWBrush 'Brush.Window.Background, Win11=Brush.WindowBackground'}" HorizontalAlignment="Right" Visibility="{TemplateBinding CommentsVisibility}">
+                    <dxrei:RichEditViewCommentsPresenter
+                        x:Name="CommentsArea"
+                        HorizontalAlignment="Right"
+                        Visibility="{TemplateBinding CommentsVisibility}"
+                        Width="{TemplateBinding CommentsWidth}" />
+                </dx:DXBorder>
+            </Grid>
+        </dx:DXBorder>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="{dxret:LWKey RichEditControl.DraftViewPageBorderControlTemplate}" TargetType="{x:Type dxrei:RichEditViewPageContentControl}">
+        <dx:DXBorder Background="{TemplateBinding Background}">
+            <Grid>
+                <ContentPresenter Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}" />
+                <dx:DXBorder Background="{dx:LWBrush 'Brush.Window.Background, Win11=Brush.WindowBackground'}" HorizontalAlignment="Right" Visibility="{TemplateBinding CommentsVisibility}">
+                    <dxrei:RichEditViewCommentsPresenter
+                        x:Name="CommentsArea"
+                        HorizontalAlignment="Right"
+                        Visibility="{TemplateBinding CommentsVisibility}"
+                        Width="{TemplateBinding CommentsWidth}" />
+                </dx:DXBorder>
+            </Grid>
+        </dx:DXBorder>
+    </ControlTemplate>
+    <!--#endregion c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\RichEdit\Base\PageView.xaml-->
+
+    <!--#region c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\RichEdit\Base\Ruler.xaml-->
+    <!-- General -->
+    <!--#endregion c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\RichEdit\Base\Ruler.xaml-->
+
+    <!--#region c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\RichEdit\Base\RichEditControl.xaml-->
+    <!-- General -->
+
+    <ControlTemplate x:Key="{dxret:LWKey RichEditControl.BackgroundControlTemplate}" TargetType="{x:Type ContentControl}">
+        <dx:DXBorder Background="{dx:LWBrush 'Brush.Window.Background, Win11=Brush.WindowBackground'}">
+            <ContentPresenter Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}" />
+        </dx:DXBorder>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="{dxret:LWKey RichEditControl.BorderControlTemplate}" TargetType="{x:Type ContentControl}">
+        <dx:DXBorder BorderBrush="{StaticResource Brush.Border}" BorderThickness="1" CornerRadius="{dx:LWCornerRadius '0, Win11=7'}">
+            <ContentPresenter Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}" dx:FrameworkElementHelper.ClipCornerRadius="{dx:LWDouble '0, Win11=7'}" />
+        </dx:DXBorder>
+    </ControlTemplate>
+    <!--#endregion c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\RichEdit\Base\RichEditControl.xaml-->
+
+    <!--#region c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\RichEdit\Base.xaml-->
+    <!-- General -->
+    <!--#endregion c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\RichEdit\Base.xaml-->
+
+
+    <!--#region DEFAULT STYLES-->
+
+    <Style x:Key="RulerNumberTickMarkControl.DefaultStyle" TargetType="{x:Type dxrei:RulerNumberTickMarkControl}">
+        <Setter Property="FontFamily" Value="Segoe UI" />
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="FontStyle" Value="Normal" />
+        <Setter Property="FontWeight" Value="Normal" />
+        <Setter Property="Foreground" Value="{dx:LWBrush 'Brush.Foreground, Win11=Brush.Foreground.Primary'}" />
+    </Style>
+    <Style x:Key="RulerActiveAreaControl.DefaultStyle" TargetType="{x:Type dxrei:RulerActiveAreaControl}">
+        <Setter Property="Template" Value="{DynamicResource {dxret:LWKey RichEditRuler.ActiveAreaControlTemplate}}" />
+    </Style>
+    <Style x:Key="HorizontalRulerSpaceAreaControl.DefaultStyle" TargetType="{x:Type dxrei:HorizontalRulerSpaceAreaControl}">
+        <Setter Property="Template" Value="{DynamicResource {dxret:LWKey RichEditRuler.HorizontalSpaceAreaControlTemplate}}" />
+    </Style>
+    <Style x:Key="VerticalRulerSpaceAreaControl.DefaultStyle" TargetType="{x:Type dxrei:VerticalRulerSpaceAreaControl}">
+        <Setter Property="Template" Value="{DynamicResource {dxret:LWKey RichEditRuler.VerticalSpaceAreaControlTemplate}}" />
+    </Style>
+    <Style x:Key="RulerTickMarkControl.DefaultStyle" TargetType="{x:Type dxrei:RulerTickMarkControl}">
+        <Setter Property="Template" Value="{DynamicResource {dxret:LWKey RichEditRuler.TickMarkControlTemplate}}" />
+    </Style>
+    <Style x:Key="DefaultTabControl.DefaultStyle" TargetType="{x:Type dxrei:DefaultTabControl}">
+        <Setter Property="Template" Value="{DynamicResource {dxret:LWKey RichEditRuler.DefaultTabControlTemplate}}" />
+    </Style>
+    <Style x:Key="DisabledHotZoneControl.DefaultStyle" TargetType="{x:Type dxrei:DisabledHotZoneControl}">
+        <Setter Property="Template" Value="{DynamicResource {dxret:LWKey RichEditRuler.DisabledHotZoneControlTemplate}}" />
+    </Style>
+    <Style x:Key="LeftIndentHotZoneControl.DefaultStyle" TargetType="{x:Type dxrei:LeftIndentHotZoneControl}">
+        <Setter Property="Template" Value="{DynamicResource {dxret:LWKey RichEditRuler.LeftIndentHotZoneControlTemplate}}" />
+    </Style>
+    <Style x:Key="RightIndentHotZoneControl.DefaultStyle" TargetType="{x:Type dxrei:RightIndentHotZoneControl}">
+        <Setter Property="Template" Value="{DynamicResource {dxret:LWKey RichEditRuler.LeftIndentHotZoneControlTemplate}}" />
+    </Style>
+    <Style x:Key="FirstLineIndentHotZoneControl.DefaultStyle" TargetType="{x:Type dxrei:FirstLineIndentHotZoneControl}">
+        <Setter Property="Template" Value="{DynamicResource {dxret:LWKey RichEditRuler.FirstLineIndentHotZoneControlTemplate}}" />
+    </Style>
+    <Style x:Key="LeftIndentBottomHotZoneControl.DefaultStyle" TargetType="{x:Type dxrei:LeftIndentBottomHotZoneControl}">
+        <Setter Property="Template" Value="{DynamicResource {dxret:LWKey RichEditRuler.LeftIndentBottomHotZoneControlTemplate}}" />
+    </Style>
+    <Style x:Key="RightTabHotZoneControl.DefaultStyle" TargetType="{x:Type dxrei:RightTabHotZoneControl}">
+        <Setter Property="Template" Value="{DynamicResource {dxret:LWKey RichEditRuler.RightTabHotZoneControlTemplate}}" />
+    </Style>
+    <Style x:Key="LeftTabHotZoneControl.DefaultStyle" TargetType="{x:Type dxrei:LeftTabHotZoneControl}">
+        <Setter Property="Template" Value="{DynamicResource {dxret:LWKey RichEditRuler.LeftTabHotZoneControlTemplate}}" />
+    </Style>
+    <Style x:Key="HorizontalTableHotZoneControl.DefaultStyle" TargetType="{x:Type dxrei:HorizontalTableHotZoneControl}">
+        <Setter Property="Template" Value="{DynamicResource {dxret:LWKey RichEditRuler.HorizontalTableHotZoneControlTemplate}}" />
+    </Style>
+    <Style x:Key="CenterTabHotZoneControl.DefaultStyle" TargetType="{x:Type dxrei:CenterTabHotZoneControl}">
+        <Setter Property="Template" Value="{DynamicResource {dxret:LWKey RichEditRuler.CenterTabHotZoneControlTemplate}}" />
+    </Style>
+    <Style x:Key="DecimalTabHotZoneControl.DefaultStyle" TargetType="{x:Type dxrei:DecimalTabHotZoneControl}">
+        <Setter Property="Template" Value="{DynamicResource {dxret:LWKey RichEditRuler.DecimalTabHotZoneControlTemplate}}" />
+    </Style>
+    <Style x:Key="TabTypeToggleBackgroundControl.DefaultStyle" TargetType="{x:Type dxrei:TabTypeToggleBackgroundControl}">
+        <Setter Property="Template" Value="{DynamicResource {dxret:LWKey RichEditRuler.TabTypeToggleBackgroundControlTemplate}}" />
+    </Style>
+    <Style x:Key="TabTypeToggleHotZoneControl.DefaultStyle" TargetType="{x:Type dxrei:TabTypeToggleHotZoneControl}">
+        <Setter Property="Template" Value="{DynamicResource {dxret:LWKey RichEditRuler.TabTypeToggleHotZoneControlTemplate}}" />
+    </Style>
+    <!--#endregion DEFAULT STYLES-->
+
+
+</ResourceDictionary>

@@ -1,0 +1,25 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+    xmlns:dxi="http://schemas.devexpress.com/winfx/2008/xaml/core/internal"
+    xmlns:dxprgi="http://schemas.devexpress.com/winfx/2008/xaml/propertygrid/internal"
+    xmlns:dxprg="http://schemas.devexpress.com/winfx/2008/xaml/propertygrid">
+
+    <ResourceDictionary.MergedDictionaries>
+        <dxi:ThemeResourceDictionary Path="PropertyGrid\Generic.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.PropertyGrid.Internal.CategorySelectorControl'}" BasedOn="{StaticResource CategorySelectorControl.DefaultStyleBase}" TargetType="{x:Type dxprgi:CategorySelectorControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.PropertyGrid.Internal.CategoryHeaderRowControl'}" BasedOn="{StaticResource CategoryHeaderRowControl.DefaultStyleBase}" TargetType="{x:Type dxprgi:CategoryHeaderRowControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.PropertyGrid.PropertyGridView'}" BasedOn="{StaticResource PropertyGridView.DefaultStyleBase}" TargetType="{x:Type dxprg:PropertyGridView}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.PropertyGrid.PropertyGridControl'}" BasedOn="{StaticResource PropertyGridControl.DefaultStyleBase}" TargetType="{x:Type dxprg:PropertyGridControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.PropertyGrid.PropertyGridViewKindSelectorControl'}" BasedOn="{StaticResource PropertyGridViewKindSelectorControl.DefaultStyleBase}" TargetType="{x:Type dxprg:PropertyGridViewKindSelectorControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.PropertyGrid.PropertyDescriptionPresenterControl'}" BasedOn="{StaticResource PropertyDescriptionPresenterControl.DefaultStyleBase}" TargetType="{x:Type dxprg:PropertyDescriptionPresenterControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.PropertyGrid.RowControl'}" BasedOn="{StaticResource RowControl.DefaultStyleBase}" TargetType="{x:Type dxprg:RowControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.PropertyGrid.BrushEdit'}" BasedOn="{StaticResource BrushEdit.DefaultStyleBase}" TargetType="{x:Type dxprg:BrushEdit}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.PropertyGrid.PopupBrushEdit'}" BasedOn="{StaticResource PopupBrushEdit.DefaultStyleBase}" TargetType="{x:Type dxprg:PopupBrushEdit}" />
+
+
+</ResourceDictionary>

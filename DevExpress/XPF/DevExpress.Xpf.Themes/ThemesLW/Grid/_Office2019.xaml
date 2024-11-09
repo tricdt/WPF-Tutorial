@@ -1,0 +1,253 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:dxt="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys"
+    xmlns:dxgt="http://schemas.devexpress.com/winfx/2008/xaml/grid/themekeys"
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+    xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
+    xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+    xmlns:dxgtl="clr-namespace:DevExpress.Xpf.Grid.TreeList;assembly=DevExpress.Xpf.Grid.v24.1"
+    xmlns:dxfuit="http://schemas.devexpress.com/winfx/2008/xaml/core/filteringui/themekeys"
+    xmlns:dxgi="http://schemas.devexpress.com/winfx/2008/xaml/grid/internal"
+    xmlns:dxi="http://schemas.devexpress.com/winfx/2008/xaml/core/internal"
+    xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
+    xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
+    xmlns:dxfui_local_native="http://schemas.devexpress.com/winfx/2008/xaml/core/filteringui/internal"
+    xmlns:dxgn="clr-namespace:DevExpress.Xpf.Grid.Native;assembly=DevExpress.Xpf.Grid.v24.1">
+
+    <ResourceDictionary.MergedDictionaries>
+        <dxi:ThemeResourceDictionary Path="Grid/_Base.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+    <Thickness x:Key="{dxgt:LWKey GridRow.RowBreakThickness}">0,0,0,2</Thickness>
+    <dx:WpfSvgPalette x:Key="{dxgt:LWKey FilteringPanel.SvgPalette}">
+        <SolidColorBrush x:Key="BlackColor" Color="{dx:LWColor 'Office2019Black=Color.ForegroundDark, Office2019Colorful=Color.Foreground, Office2019HighContrast=Color.Foreground'}" />
+    </dx:WpfSvgPalette>
+    <dx:WpfSvgPalette x:Key="{dxgt:LWKey FilteringPanel.ButtonSvgPalette}">
+        <SolidColorBrush x:Key="BlackColor" Color="{dx:LWColor 'Office2019Black=Color.ForegroundDark, Office2019Colorful=Color.Foreground, Office2019HighContrast=Color.Foreground'}" />
+        <dx:WpfSvgPalette.States>
+            <dx:WpfSvgPalette x:Key="Hover">
+                <SolidColorBrush x:Key="BlackColor" Color="{dx:LWColor 'Office2019Black=Color.Foreground, Office2019Colorful=Color.Foreground, Office2019HighContrast=Color.SelectionForeground'}" />
+            </dx:WpfSvgPalette>
+            <dx:WpfSvgPalette x:Key="Pressed">
+                <SolidColorBrush x:Key="BlackColor" Color="{dx:LWColor 'Office2019Black=Color.Foreground, Office2019Colorful=Color.Foreground, Office2019HighContrast=Color.SelectionForeground'}" />
+            </dx:WpfSvgPalette>
+        </dx:WpfSvgPalette.States>
+    </dx:WpfSvgPalette>
+    <SolidColorBrush x:Key="{dxgt:LWKey TableView.AnnotationErrorBrush}" Color="{StaticResource Color.Custom.Red}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey TableView.AnnotationSearchBrush}" Color="#FFEEC833" />
+    <SolidColorBrush x:Key="{dxgt:LWKey TableView.AnnotationSelectionBrush}" Color="{dx:LWColor 'Office2019Black=Color.ControlLight.HoverBackground, Office2019Colorful=Color.HoverBackground, Office2019HighContrast=Color.HoverBackground'}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey TableView.AnnotationFocusedRowBrush}" Color="{dx:LWColor 'Office2019Black=Color.Control.SelectionBackground, Office2019Colorful=Color.Focused, Office2019HighContrast=Color.Focused'}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey ExcelColumnFilterPopup.FilterPanelBackground}" Color="Transparent" />
+    <SolidColorBrush x:Key="{dxgt:LWKey CardView.Background}" Color="{StaticResource Color.Editor.Background}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey CardView.GroupPanelBackground}" Color="{dx:LWColor 'Office2019Black=Color.Window.Background, Office2019Colorful=Color.Control.Background, Office2019HighContrast=Color.Control.Background'}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey CardView.GroupPanelBorderBrush}" Color="{StaticResource Color.Border}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey CardTemplates.CellFocusedBackground}" Color="{StaticResource Color.Editor.Background}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey CardTemplates.CellFocusedBrush}" Color="{StaticResource Color.Focused}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey CardTemplates.CellFocusedForeground}" Color="{StaticResource Color.Foreground}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey GridColumnHeader.BorderBrush}" Color="{StaticResource Color.Border}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey GridColumnHeader.Background}" Color="{StaticResource Color.Window.Background}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey GridColumnHeader.BackgroundMouseOver}" Color="{dx:LWColor 'Office2019Black=Color.HoverBackground, Office2019Colorful=Color.HoverAltBackground, Office2019HighContrast=Color.HoverBackground'}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey GridColumnHeader.BackgroundPressed}" Color="{dx:LWColor 'Office2019Black=Color.SelectionBackground, Office2019Colorful=Color.SelectionAltBackground, Office2019HighContrast=Color.SelectionBackground'}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey GridColumnHeader.HeaderCaptionForeground}" Color="{StaticResource Color.Foreground}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey GridColumnHeader.HeaderHoverCaptionForeground}" Color="{dx:LWColor 'Office2019Black=Color.Foreground, Office2019Colorful=Color.Foreground, Office2019HighContrast=Color.HoverForeground'}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey GridColumnHeader.HeaderPressedCaptionForeground}" Color="{dx:LWColor 'Office2019Black=Color.Foreground, Office2019Colorful=Color.Foreground, Office2019HighContrast=Color.HoverForeground'}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey GridColumnHeader.FilterPopupForegroundBrush}" Color="{dx:LWColor 'Office2019Black=Color.ControlLight.Foreground, Office2019Colorful=Color.Foreground, Office2019HighContrast=Color.Foreground'}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey TableView.GroupPanelBorderBrush}" Color="{StaticResource Color.Border}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey TableView.GroupPanelSeparatorBrush}" Color="{dx:LWColor 'Office2019Black=Color.Border, Office2019Colorful=Color.Delimiter, Office2019HighContrast=Color.Delimiter'}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey TableView.SearchPanelBorderBottomBrush}" Color="{StaticResource Color.Border}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey TableView.EditFormBackground}" Color="{StaticResource Color.Button.Background}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey TableView.EditFormForeground}" Color="{dx:LWColor 'Office2019Black=Color.ControlLight.Foreground, Office2019Colorful=Color.Foreground, Office2019HighContrast=Color.Foreground'}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey TableView.DataNavigatorBorderBrush}" Color="{StaticResource Color.Border}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey TableView.DataNavigatorBackground}" Color="{StaticResource Color.Button.Background}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey TableView.DataNavigatorFocusedBackground}" Color="{dx:LWColor 'Office2019Black=Color.ControlLight.HoverBackground, Office2019Colorful=Color.HoverBackground, Office2019HighContrast=Color.HoverBackground'}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey TableView.DataNavigatorDisableBackground}" Color="{StaticResource Color.Button.Background}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey TableView.DataNavigatorTextBrush}" Color="{dx:LWColor 'Office2019Black=Color.ControlLight.Foreground, Office2019Colorful=Color.Foreground, Office2019HighContrast=Color.Foreground'}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey TableView.DataNavigatorHoverTextBrush}" Color="{dx:LWColor 'Office2019Black=Color.ControlLight.Foreground, Office2019Colorful=Color.Foreground, Office2019HighContrast=Color.HoverForeground'}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey TableView.DataNavigatorBackgroundText}" Color="{StaticResource Color.Editor.Background}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey TableView.ColumnChooserBackgroundBrush}" Color="{dx:LWColor 'Office2019Black=Color.Window.Background, Office2019Colorful=Color.Control.Background, Office2019HighContrast=Color.Control.Background'}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey TableView.ColumnChooserBorderBrush}" Color="{StaticResource Color.Border}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey GridRow.UpdateRowButtonsControlBackground}" Color="{StaticResource Color.Window.Background}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey GridRow.UpdateRowRectangleBackground}" Color="{StaticResource Color.Editor.Background}" Opacity="0.75" />
+    <SolidColorBrush x:Key="{dxgt:LWKey GridRow.BorderBrush}" Color="{StaticResource Color.Delimiter}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey GridRow.GridDataRowDelimiterBrush}" Color="{StaticResource Color.Delimiter}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey GridRow.EvenRowBackgroundBrush}" Color="{StaticResource Color.Delimiter}" Opacity="0.16" />
+    <SolidColorBrush x:Key="{dxgt:LWKey GridRow.BorderNoneBrush}" Color="{StaticResource Color.Editor.Background}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey GridRow.BorderSelectedBrush}" Color="{dx:LWColor 'Office2019Black=Color.Control.HoverBackground, Office2019Colorful=Color.HoverBackground, Office2019HighContrast=Color.HoverBackground'}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey GridRow.BorderFocusedBrush}" Color="{dx:LWColor 'Office2019Black=Color.Control.SelectionBackground, Office2019Colorful=Color.SelectionBackground, Office2019HighContrast=Color.SelectionBackground'}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey GridRow.TextUnfocusedBrush}" Color="{dx:LWColor 'Office2019Black=Color.ControlLight.Foreground, Office2019Colorful=Color.Foreground, Office2019HighContrast=Color.Foreground'}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey GridRow.TextFocusedBrush}" Color="{dx:LWColor 'Office2019Black=Color.ControlLight.SelectionForeground, Office2019Colorful=Color.SelectionForeground, Office2019HighContrast=Color.SelectionForeground'}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey GridRow.TextRowSelectedBrush}" Color="{dx:LWColor 'Office2019Black=Color.ControlLight.HoverForeground, Office2019Colorful=Color.Foreground, Office2019HighContrast=Color.SelectionForeground'}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey GridRow.CellMergeNoneBrush}" Color="{StaticResource Color.Editor.Background}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey GridRow.CellBorderNoneBrush}" Color="Transparent" />
+    <SolidColorBrush x:Key="{dxgt:LWKey GridRow.CellBorderFocusedBorderBrush}" Color="{StaticResource Color.Delimiter}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey GridRow.CellBorderFocusedBrush}" Color="{StaticResource Color.Editor.Background}" Opacity="0.74" />
+    <SolidColorBrush x:Key="{dxgt:LWKey GridRow.CellTextFocusedBrush}" Color="{dx:LWColor 'Office2019Black=Color.ControlLight.SelectionForeground, Office2019Colorful=Color.Foreground, Office2019HighContrast=Color.Foreground'}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey GridRow.TotalSummaryBrush}" Color="{dx:LWColor 'Office2019Black=Color.ForegroundDark, Office2019Colorful=Color.Foreground, Office2019HighContrast=Color.Foreground'}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey GridRow.TotalSummaryBorderBrush}" Color="{dx:LWColor 'Office2019Black=Color.Border, Office2019Colorful=Color.Delimiter, Office2019HighContrast=Color.Border'}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey GridRow.FixedSummaryFillBrush}" Color="{dx:LWColor 'Office2019Black=Color.Window.Background, Office2019Colorful=Color.Editor.Background, Office2019HighContrast=Color.Editor.Background'}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey GridRow.RowBreakBrush}" Color="{dx:LWColor 'Office2019Black=Color.Delimiter, Office2019Colorful=Color.Backstage.Delimiter, Office2019HighContrast=Color.Backstage.Delimiter'}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey GridRow.SelectionRectangleBackground}" Color="{dx:LWColor 'Office2019Black=Color.ControlLight.SelectionBackground, Office2019Colorful=Color.SelectionBackground, Office2019HighContrast=Color.SelectionBackground'}" Opacity="0.38" />
+    <SolidColorBrush x:Key="{dxgt:LWKey GridRow.SelectionRectangleBorderBrush}" Color="{dx:LWColor 'Office2019Black=Color.ControlLight.SelectionBackground, Office2019Colorful=Color.SelectionBackground, Office2019HighContrast=Color.SelectionBackground'}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey GridRow.NewItemRowBorderFocusedBrush}" Color="{dx:LWColor 'Office2019Black=Color.ControlLight.SelectionBackground, Office2019Colorful=Color.SelectionBackground, Office2019HighContrast=Color.SelectionBackground'}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey GridRow.NewItemRowFadeBorderFocusedBrush}" Color="{dx:LWColor 'Office2019Black=Color.ControlLight.SelectionBackground, Office2019Colorful=Color.SelectionBackground, Office2019HighContrast=Color.SelectionBackground'}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey GridRow.RowSeparatorBrush}" Color="{StaticResource Color.Editor.Background}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey GroupRow.GroupGridRowHeaderTextBrush}" Color="{dx:LWColor 'Office2019Black=Color.ControlLight.Foreground, Office2019Colorful=Color.Foreground, Office2019HighContrast=Color.Foreground'}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey GroupRow.GroupRowBackground}" Color="{StaticResource Color.Control.Background}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey GroupRow.GroupRowBackgroundSelected}" Color="{dx:LWColor 'Office2019Black=Color.Control.HoverBackground, Office2019Colorful=Color.HoverBackground, Office2019HighContrast=Color.HoverBackground'}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey GroupRow.GroupRowBackgroundFocused}" Color="{dx:LWColor 'Office2019Black=Color.Control.SelectionBackground, Office2019Colorful=Color.SelectionBackground, Office2019HighContrast=Color.SelectionBackground'}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey GroupRow.GroupRowForeground}" Color="{StaticResource Color.Foreground}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey GroupRow.GroupRowFocusForeground}" Color="{dx:LWColor 'Office2019Black=Color.Foreground, Office2019Colorful=Color.SelectionForeground, Office2019HighContrast=Color.SelectionForeground'}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey GroupRow.GroupBandSummaryNormalBorderBrush}" Color="{StaticResource Color.Delimiter}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey GroupRow.GroupBandSummaryFocusedBorderBrush}" Color="{dx:LWColor 'Office2019Black=Color.Border, Office2019Colorful=Color.Delimiter, Office2019HighContrast=Color.Delimiter'}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey GroupRow.GroupBandSummaryNormalBackground}" Color="{StaticResource Color.Editor.Background}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey GroupRow.GroupBandSummaryFocusedBackground}" Color="{dx:LWColor 'Office2019Black=Color.ControlLight.SelectionBackground, Office2019Colorful=Color.SelectionBackground, Office2019HighContrast=Color.SelectionBackground'}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey GroupRow.GroupColumnSummaryFocusedBorderBrush}" Color="{StaticResource Color.Delimiter}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey GroupRow.GroupFooterRowContentBackground}" Color="{StaticResource Color.Editor.Background}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey TreeListView.RowMarginBackgroundBrush}" Color="{StaticResource Color.Editor.Background}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey TreeListView.NodeFooterRowContentBackground}" Color="{dx:LWColor 'Office2019Black=Color.Window.Background, Office2019Colorful=Color.Control.Background, Office2019HighContrast=Color.Control.Background'}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey ExcelColumnFilterPopup.HeaderPanelBottomBorderColor}" Color="{StaticResource Color.Border}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey ExcelColumnFilterPopup.HeaderPanelSeparatorColor}" Color="{StaticResource Color.Delimiter}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey ExcelColumnFilterPopup.ButtonHeaderForeground}" Color="{StaticResource Color.Foreground}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey ExcelColumnFilterPopup.ButtonHeaderSelectedForeground}" Color="{dx:LWColor 'Office2019Black=Color.Foreground, Office2019Colorful=Color.Focused, Office2019HighContrast=Color.Focused'}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey ExcelColumnFilterPopup.ButtonHeaderFocusedForeground}" Color="{StaticResource Color.Focused}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey ExcelColumnFilterPopup.ButtonHeaderBackground}" Color="{dx:LWColor 'Office2019Black=Color.Window.Background, Office2019Colorful=Color.Control.Background, Office2019HighContrast=Color.Control.Background'}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey ExcelColumnFilterPopup.HeaderPanelBackground}" Color="{dx:LWColor 'Office2019Black=Color.Window.Background, Office2019Colorful=Color.Control.Background, Office2019HighContrast=Color.Control.Background'}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey ExcelColumnFilterPopup.SearchControlAdditionalButtonColor}" Color="{dx:LWColor 'Office2019Black=Color.ControlLight.Foreground, Office2019Colorful=Color.Foreground, Office2019HighContrast=Color.Foreground'}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey ExcelColumnFilterPopup.ButtonHeaderDecorationBackground}" Color="{dx:LWColor 'Office2019Black=Color.Window.Background, Office2019Colorful=Color.Control.Background, Office2019HighContrast=Color.Control.Background'}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey TableView.CompactPanelForeground}" Color="{StaticResource Color.Foreground}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey TableView.CompactPanelMouseOverForeground}" Color="{StaticResource Color.HoverForeground}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey TableView.CompactPanelMousePressedForeground}" Color="{StaticResource Color.SelectionForeground}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey TableView.CompactPanelMouseOverBorderBrush}" Color="{StaticResource Color.HoverBorder}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey TableView.CompactPanelMouseOverBackground}" Color="{StaticResource Color.HoverBackground}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey TableView.CompactPanelMousePressedBorderBrush}" Color="{StaticResource Color.SelectionBorder}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey TableView.CompactPanelMousePressedBackground}" Color="{StaticResource Color.SelectionBackground}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey ExtendedColumnChooser.SearchPanelBackground}" Color="{StaticResource Color.Window.Background}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey ExtendedColumnChooser.SearchPanelBorderBrush}" Color="Transparent" />
+    <SolidColorBrush x:Key="{dxgt:LWKey GridRow.HoverForeground}" Color="{StaticResource Color.HoverForeground}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey GridRow.HoverBackground}" Color="{StaticResource Color.HoverBackground}" Opacity="0.74" />
+    <SolidColorBrush x:Key="{dxgt:LWKey GroupRow.GroupRowHoverForeground}" Color="{StaticResource Color.HoverForeground}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey GroupRow.GroupRowHoverBackground}" Color="{StaticResource Color.HoverBackground}" Opacity="0.74" />
+    <SolidColorBrush x:Key="{dxgt:LWKey GridControl.Foreground}" Color="{StaticResource Color.Foreground}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey RowIndicator.ForegroundBrush}" Color="{dx:LWColor 'Office2019Black=Color.ForegroundDark, Office2019Colorful=Color.Foreground, Office2019HighContrast=Color.Foreground'}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey TableView.NoRecordsForeground}" Color="{StaticResource Color.Foreground}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey FilterEditor.PropertySelectorForeground}" Color="#FF000000" />
+    <SolidColorBrush x:Key="{dxgt:LWKey FilterEditor.OperatorSelectorForeground}" Color="#FF000000" />
+    <SolidColorBrush x:Key="{dxgt:LWKey FilterEditor.GroupOperatorSelectorForeground}" Color="{dx:LWColor 'Office2019Black=Color.Backstage.Foreground, Office2019Colorful=Color.Editor.Background, Office2019HighContrast=Color.Foreground'}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey FilterEditor.InplaceEditorActiveForeground}" Color="{StaticResource Color.Foreground}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey FilterEditor.InplaceEditorInactiveForeground}" Color="#FF000000" />
+    <SolidColorBrush x:Key="{dxgt:LWKey FilterEditor.PropertySelectorBackground}" Color="{dx:LWColor 'Office2019Black=#FFD4A67C, Office2019Colorful=#FFF9D3B0, Office2019HighContrast=#FFE4A469'}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey FilterEditor.OperatorSelectorBackground}" Color="{dx:LWColor 'Office2019Black=#FF86B0C9, Office2019Colorful=#FFBCD7E7, Office2019HighContrast=#FF86B0C9'}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey FilterEditor.GroupOperatorSelectorBackground}" Color="{dx:LWColor 'Office2019Black=#FF5988CD, Office2019Colorful=#FF4371A0, Office2019HighContrast=#FF4371A0'}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey FilterEditor.InplaceEditorActiveBackground}" Color="{StaticResource Color.Editor.Background}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey FilterEditor.InplaceEditorInactiveBackground}" Color="{dx:LWColor 'Office2019Black=#FF7CB68A, Office2019Colorful=#FFBBE2C5, Office2019HighContrast=#FF5AB972'}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey FilterEditor.InplaceEditorActiveBorderBrush}" Color="{StaticResource Color.Focused}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey FilterEditor.InplaceEditorInactiveBorderBrush}" Color="{StaticResource Color.Delimiter}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey FilterEditor.BorderBrush}" Color="{StaticResource Color.Border}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey FilterEditor.Background}" Color="{StaticResource Color.Editor.Background}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey FilterEditor.Foreground}" Color="{StaticResource Color.Foreground}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey FilterEditor.AddChildSplitButtonMouseOverFill}" Color="{dx:LWColor 'Office2019Black=#FF569867, Office2019Colorful=#FF6A9788, Office2019HighContrast=#FF6A9788'}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey CheckedTreeListFilterElement.DataPresenterBackground}" Color="{StaticResource Color.Editor.Background}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey ExcelStyleFilterElement.BorderBrush}" Color="{StaticResource Color.Border}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey ExcelStyleFilterElement.Background}" Color="{dx:LWColor 'Office2019Black=Color.Window.Background, Office2019Colorful=Color.Control.Background, Office2019HighContrast=Color.Control.Background'}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey ExcelStyleFilterElement.HeaderPanelBottomBorderColor}" Color="{StaticResource Color.Border}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey ExcelStyleFilterElement.HeaderPanelSeparatorColor}" Color="{StaticResource Color.Delimiter}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey ExcelStyleFilterElement.HeaderPanelSelectionMarkerBackground}" Color="{StaticResource Color.Control.Background}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey ExcelStyleFilterElement.FilterValueContainerTopAreaBackground}" Color="{StaticResource Color.Window.Background}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey ExcelStyleFilterElement.FilterValueContainerTopAreaBorderColor}" Color="{StaticResource Color.Border}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey ExcelStyleFilterElement.HeaderPanelBackground}" Color="{dx:LWColor 'Office2019Black=Color.Window.Background, Office2019Colorful=Color.Control.Background, Office2019HighContrast=Color.Control.Background'}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey FilteringPanel.ControlBackground}" Color="{StaticResource Color.Control.Background}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey FilteringPanel.ControlButtonsBackgroundPressed}" Color="{dx:LWColor 'Office2019Black=Color.SelectionBackground, Office2019Colorful=Color.SelectionAltBackground, Office2019HighContrast=Color.SelectionBackground'}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey FilteringPanel.ControlButtonsBorderBrushPressed}" Color="{dx:LWColor 'Office2019Black=Color.SelectionBorder, Office2019Colorful=Color.SelectionAltBorder, Office2019HighContrast=Color.SelectionBorder'}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey FilteringPanel.ControlButtonsBackgroundHover}" Color="{dx:LWColor 'Office2019Black=Color.HoverBackground, Office2019Colorful=Color.HoverAltBackground, Office2019HighContrast=Color.HoverBackground'}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey FilteringPanel.ControlButtonsBorderBrushHover}" Color="{dx:LWColor 'Office2019Black=Color.HoverBorder, Office2019Colorful=Color.HoverAltBorder, Office2019HighContrast=Color.HoverBorder'}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey FilteringPanel.ControlBorderBrush}" Color="{StaticResource Color.Delimiter}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey FilteringPanel.PropertyBackground}" Color="{dx:LWColor 'Office2019Black=#FFD4A67C, Office2019Colorful=#FFF9D3B0, Office2019HighContrast=#FFE4A469'}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey FilteringPanel.ValueBackground}" Color="{dx:LWColor 'Office2019Black=#FF7CB68A, Office2019Colorful=#FFBBE2C5, Office2019HighContrast=#FF5AB972'}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey FilteringPanel.HighlightedBackground}" Color="{dx:LWColor 'Office2019Black=#FF86B0C9, Office2019Colorful=#FFBCD7E7, Office2019HighContrast=#FF86B0C9'}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey FilteringPanel.ElementForeground}" Color="#FF000000" />
+    <SolidColorBrush x:Key="{dxgt:LWKey FilteringPanel.Foreground}" Color="{StaticResource Color.Foreground}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey FilteringPanel.BracketBorderBrush}" Color="{dx:LWColor 'Office2019Black=Color.Delimiter, Office2019Colorful=Color.Border, Office2019HighContrast=Color.Delimiter'}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey FilteringPanel.PopupElementHoverBackground}" Color="{dx:LWColor 'Office2019Black=Color.Backstage.Focused, Office2019Colorful=Color.Border, Office2019HighContrast=Color.Border'}" Opacity="0.13" />
+    <SolidColorBrush x:Key="{dxgt:LWKey FilteringPanel.PopupElementPressedBackground}" Color="{dx:LWColor 'Office2019Black=Color.Backstage.Focused, Office2019Colorful=Color.SelectionAltBackground, Office2019HighContrast=Color.Border'}" Opacity="0.22" />
+    <SolidColorBrush x:Key="{dxgt:LWKey TableView.DataPresenterBackground}" Color="{StaticResource Color.Editor.Background}" />
+    <ControlTemplate x:Key="{dxgt:LWKey GridCard.ExpandButtonTemplate}" TargetType="{x:Type dx:ToggleStateButton}">
+        <Grid x:Name="Root" Height="16" Width="16">
+            <dx:DXBorder
+                x:Name="IsDefault"
+                Background="Transparent"
+                BorderBrush="Transparent"
+                BorderThickness="1" />
+            <Grid x:Name="Path">
+                <Path x:Name="Collapsed" Fill="{TemplateBinding Foreground}" Style="{StaticResource UIShape.ArrowDown}" />
+                <Path
+                    x:Name="Expanded"
+                    Fill="{TemplateBinding Foreground}"
+                    Style="{StaticResource UIShape.ArrowUp}"
+                    Visibility="Collapsed" />
+            </Grid>
+        </Grid>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Fill" TargetName="Collapsed" Value="{dx:LWBrush 'Office2019Black=Brush.Foreground, Office2019Colorful=Brush.HoverForeground, Office2019HighContrast=Brush.HoverForeground'}" />
+                <Setter Property="Fill" TargetName="Expanded" Value="{dx:LWBrush 'Office2019Black=Brush.Foreground, Office2019Colorful=Brush.HoverForeground, Office2019HighContrast=Brush.HoverForeground'}" />
+                <Setter Property="Background" TargetName="IsDefault" Value="{dx:LWBrush 'Office2019Black=Brush.ControlLight.HoverBackground, Office2019Colorful=Brush.HoverBackground, Office2019HighContrast=Brush.HoverBackground'}" />
+                <Setter Property="BorderBrush" TargetName="IsDefault" Value="{dx:LWBrush 'Office2019Black=Brush.ControlLight.HoverBackground, Office2019Colorful=Brush.HoverBorder, Office2019HighContrast=Brush.HoverBorder'}" />
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True">
+                <Setter Property="Fill" TargetName="Collapsed" Value="{dx:LWBrush 'Office2019Black=Brush.Foreground, Office2019Colorful=Brush.SelectionForeground, Office2019HighContrast=Brush.SelectionForeground'}" />
+                <Setter Property="Fill" TargetName="Expanded" Value="{dx:LWBrush 'Office2019Black=Brush.Foreground, Office2019Colorful=Brush.SelectionForeground, Office2019HighContrast=Brush.SelectionForeground'}" />
+                <Setter Property="Background" TargetName="IsDefault" Value="{dx:LWBrush 'Office2019Black=Brush.ControlLight.SelectionBackground, Office2019Colorful=Brush.SelectionBackground, Office2019HighContrast=Brush.SelectionBackground'}" />
+                <Setter Property="BorderBrush" TargetName="IsDefault" Value="{dx:LWBrush 'Office2019Black=Brush.ControlLight.SelectionBackground, Office2019Colorful=Brush.SelectionBorder, Office2019HighContrast=Brush.SelectionBorder'}" />
+            </Trigger>
+            <DataTrigger Binding="{Binding Path=SelectionState}" Value="Selected" />
+            <Trigger Property="IsChecked" Value="true">
+                <Setter Property="Visibility" TargetName="Collapsed" Value="Collapsed" />
+                <Setter Property="Visibility" TargetName="Expanded" Value="Visible" />
+            </Trigger>
+            <Trigger Property="dx:ThemeManager.IsTouchEnabled" Value="True">
+                <Setter Property="MinHeight" TargetName="Root" Value="44" />
+                <Setter Property="Width" TargetName="Root" Value="44" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+    <ControlTemplate x:Key="{dxgt:LWKey RowIndicator.RowIndicatorTemplate}" TargetType="{x:Type dxg:RowIndicator}">
+        <Grid>
+            <dx:DXBorder
+                x:Name="PART_ContentBorder"
+                Background="{StaticResource Brush.Editor.Background}"
+                BorderBrush="{dx:LWBrush 'Office2019Black=Brush.Border, Office2019Colorful=Brush.Delimiter, Office2019HighContrast=Brush.Border'}"
+                BorderThickness="0,0,1,0" />
+        </Grid>
+        <ControlTemplate.Triggers>
+            <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=(dxg:GridControl.ActiveView).DataControl.(dxi:AppearanceOptions.HasBackground)}" Value="True">
+                <Setter Property="Background" TargetName="PART_ContentBorder" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=(dxg:GridControl.ActiveView).DataControl.(dxi:AppearanceOptions.Background)}" />
+            </DataTrigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+    <ControlTemplate x:Key="{dxgt:LWKey RowIndicator.GroupRowIndicatorTemplate}" TargetType="{x:Type dxg:RowIndicator}">
+        <dx:DXBorder
+            x:Name="PART_ContentBorder"
+            Background="{StaticResource Brush.Editor.Background}"
+            BorderBrush="{dx:LWBrush 'Office2019Black=Brush.Border, Office2019Colorful=Brush.Delimiter, Office2019HighContrast=Brush.Border'}"
+            BorderThickness="0,0,1,0" />
+        <ControlTemplate.Triggers>
+            <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=(dxg:GridControl.ActiveView).DataControl.(dxi:AppearanceOptions.HasBackground)}" Value="True">
+                <Setter Property="Background" TargetName="PART_ContentBorder" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=(dxg:GridControl.ActiveView).DataControl.(dxi:AppearanceOptions.Background)}" />
+            </DataTrigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+    <SolidColorBrush x:Key="{dxgt:LWKey GridColumnHeader.HeaderFilterContainerBackground}" Color="{dx:LWColor 'Office2019Black=Color.Editor.Background, Office2019Colorful=#FFFFFFFF, Office2019HighContrast=Color.Editor.Background'}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey GridColumnHeader.HeaderFilterForeground}" Color="{StaticResource Color.Foreground}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey GridColumnHeader.HeaderFilterDisplayForeground}" Color="{StaticResource Color.Focused}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey GridColumnHeader.HeaderFilterDisplayForegroundHeaderHover}" Color="{dx:LWColor 'Color.Focused, Office2019HighContrast=Color.HoverForeground'}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey GridColumnHeader.HeaderFilterDisplayForegroundHeaderPressed}" Color="{dx:LWColor 'Color.Focused, Office2019HighContrast=Color.HoverForeground'}" />
+    <SolidColorBrush x:Key="{dxgt:LWKey GridColumnHeader.HeaderFilterDisplayForegroundHover}" Color="{dx:LWColor 'Color.Foreground, Office2019HighContrast=Color.HoverForeground'}" />
+    <DataTemplate x:Key="{dxgt:LWKey RowIndicator.FocusedIconTemplate}">
+        <Path Fill="{StaticResource Brush.Foreground}" Style="{StaticResource UIShape.Right}" />
+    </DataTemplate>
+    <DataTemplate x:Key="{dxgt:LWKey RowIndicator.FocusedErrorIconTemplate}">
+        <Path Fill="{StaticResource Brush.Custom.Red}" Style="{StaticResource UIShape.Row.FocusedError}" />
+    </DataTemplate>
+    <sys:Double x:Key="TreeViewControl.RowMarginControlOpacity">0.25</sys:Double>
+</ResourceDictionary>

@@ -1,0 +1,63 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:dxt="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys"
+    xmlns:dxprgt="http://schemas.devexpress.com/winfx/2008/xaml/propertygrid/themekeys"
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+    xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+    xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
+    xmlns:dxprg="http://schemas.devexpress.com/winfx/2008/xaml/propertygrid"
+    xmlns:dxprgi="http://schemas.devexpress.com/winfx/2008/xaml/propertygrid/internal"
+    xmlns:dxbi="http://schemas.devexpress.com/winfx/2008/xaml/bars/internal"
+    xmlns:dxi="http://schemas.devexpress.com/winfx/2008/xaml/core/internal">
+    <ResourceDictionary.MergedDictionaries>
+        <dxi:ThemeResourceDictionary Path="PropertyGrid/_{ThemeName}.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+    <SolidColorBrush x:Key="{dxprgt:LWKey VSViewBrush.BorderBrush}" Color="{StaticResource Color.Delimiter}" />
+    <SolidColorBrush x:Key="{dxprgt:LWKey VSViewBrush.Background_Editor_Normal}" Color="{StaticResource Color.Editor.Background}" />
+    <SolidColorBrush x:Key="{dxprgt:LWKey VSViewBrush.Background_Editor_ReadOnly}" Color="{StaticResource Color.Editor.Background}" />
+    <SolidColorBrush x:Key="{dxprgt:LWKey VSViewBrush.Background_Editor_Selected}" Color="{StaticResource Color.Editor.Background}" Opacity="0.16" />
+    <SolidColorBrush x:Key="{dxprgt:LWKey VSViewBrush.Background_Editor_SelectedInactive}" Color="{StaticResource Color.Editor.Background}" Opacity="0.16" />
+    <SolidColorBrush x:Key="{dxprgt:LWKey VSViewBrush.Background_Editor_SelectedReadOnly}" Color="{StaticResource Color.Editor.Background}" Opacity="0.16" />
+    <SolidColorBrush x:Key="{dxprgt:LWKey VSViewBrush.Background_Editor_SelectedInactiveReadOnly}" Color="{StaticResource Color.Editor.Background}" Opacity="0.16" />
+    <SolidColorBrush x:Key="{dxprgt:LWKey VSViewBrush.Foreground_Editor_Normal}" Color="{dx:LWColor 'Office2019Black=Color.ControlLight.Foreground, Office2019Colorful=Color.Foreground, Office2019HighContrast=Color.Foreground'}" />
+    <SolidColorBrush x:Key="{dxprgt:LWKey VSViewBrush.Foreground_Editor_ReadOnly}" Color="{dx:LWColor 'Office2019Black=Color.ControlLight.Foreground, Office2019Colorful=Color.Foreground, Office2019HighContrast=Color.Foreground'}" Opacity="0.62" />
+    <SolidColorBrush x:Key="{dxprgt:LWKey VSViewBrush.Foreground_Editor_Selected}" Color="{dx:LWColor 'Office2019Black=Color.ControlLight.SelectionForeground, Office2019Colorful=Color.Foreground, Office2019HighContrast=Color.Foreground'}" />
+    <SolidColorBrush x:Key="{dxprgt:LWKey VSViewBrush.Foreground_Editor_SelectedInactive}" Color="{dx:LWColor 'Office2019Black=Color.ControlLight.SelectionForeground, Office2019Colorful=Color.Foreground, Office2019HighContrast=Color.Foreground'}" />
+    <SolidColorBrush x:Key="{dxprgt:LWKey VSViewBrush.Foreground_Editor_SelectedReadOnly}" Color="{dx:LWColor 'Office2019Black=Color.ControlLight.SelectionForeground, Office2019Colorful=Color.Foreground, Office2019HighContrast=Color.Foreground'}" Opacity="0.62" />
+    <SolidColorBrush x:Key="{dxprgt:LWKey VSViewBrush.Foreground_Editor_SelectedInactiveReadOnly}" Color="{dx:LWColor 'Office2019Black=Color.ControlLight.SelectionForeground, Office2019Colorful=Color.Foreground, Office2019HighContrast=Color.Foreground'}" />
+    <SolidColorBrush x:Key="{dxprgt:LWKey VSViewBrush.Background_Header_Normal}" Color="{StaticResource Color.Editor.Background}" />
+    <SolidColorBrush x:Key="{dxprgt:LWKey VSViewBrush.Background_Header_ReadOnly}" Color="{StaticResource Color.Editor.Background}" Opacity="0.62" />
+    <SolidColorBrush x:Key="{dxprgt:LWKey VSViewBrush.Background_Header_Selected}" Color="{dx:LWColor 'Office2019Black=Color.ControlLight.SelectionBackground, Office2019Colorful=Color.SelectionBackground, Office2019HighContrast=Color.SelectionBackground'}" />
+    <SolidColorBrush x:Key="{dxprgt:LWKey VSViewBrush.Background_Header_SelectedInactive}" Color="{dx:LWColor 'Office2019Black=Color.ControlLight.HoverBackground, Office2019Colorful=Color.HoverBackground, Office2019HighContrast=Color.HoverBackground'}" />
+    <SolidColorBrush x:Key="{dxprgt:LWKey VSViewBrush.Background_Header_SelectedReadOnly}" Color="{dx:LWColor 'Office2019Black=Color.ControlLight.SelectionBackground, Office2019Colorful=Color.SelectionBackground, Office2019HighContrast=Color.SelectionBackground'}" Opacity="0.62" />
+    <SolidColorBrush x:Key="{dxprgt:LWKey VSViewBrush.Background_Header_SelectedInactiveReadOnly}" Color="{dx:LWColor 'Office2019Black=Color.ControlLight.HoverBackground, Office2019Colorful=Color.HoverBackground, Office2019HighContrast=Color.HoverBackground'}" Opacity="0.62" />
+    <SolidColorBrush x:Key="{dxprgt:LWKey VSViewBrush.Foreground_Header_Normal}" Color="{dx:LWColor 'Office2019Black=Color.ControlLight.Foreground, Office2019Colorful=Color.Foreground, Office2019HighContrast=Color.Foreground'}" />
+    <SolidColorBrush x:Key="{dxprgt:LWKey VSViewBrush.Foreground_Header_ReadOnly}" Color="{dx:LWColor 'Office2019Black=Color.ControlLight.Foreground, Office2019Colorful=Color.Foreground, Office2019HighContrast=Color.Foreground'}" Opacity="0.62" />
+    <SolidColorBrush x:Key="{dxprgt:LWKey VSViewBrush.Foreground_Header_Selected}" Color="{dx:LWColor 'Office2019Black=Color.ControlLight.SelectionForeground, Office2019Colorful=Color.Foreground, Office2019HighContrast=Color.SelectionForeground'}" />
+    <SolidColorBrush x:Key="{dxprgt:LWKey VSViewBrush.Foreground_Header_SelectedInactive}" Color="{dx:LWColor 'Office2019Black=Color.ControlLight.SelectionForeground, Office2019Colorful=Color.Foreground, Office2019HighContrast=Color.SelectionForeground'}" />
+    <SolidColorBrush x:Key="{dxprgt:LWKey VSViewBrush.Foreground_Header_SelectedReadOnly}" Color="{dx:LWColor 'Office2019Black=Color.ControlLight.SelectionForeground, Office2019Colorful=Color.Foreground, Office2019HighContrast=Color.Foreground'}" Opacity="0.62" />
+    <SolidColorBrush x:Key="{dxprgt:LWKey VSViewBrush.Foreground_Header_SelectedInactiveReadOnly}" Color="{dx:LWColor 'Office2019Black=Color.ControlLight.SelectionForeground, Office2019Colorful=Color.Foreground, Office2019HighContrast=Color.Foreground'}" Opacity="0.62" />
+    <SolidColorBrush x:Key="{dxprgt:LWKey PropertyGridControl.Background}" Color="{StaticResource Color.Editor.Background}" />
+    <SolidColorBrush x:Key="{dxprgt:LWKey PropertyGridControl.BorderBrush}" Color="{StaticResource Color.Border}" />
+    <ControlTemplate x:Key="{dxprgt:LWKey PropertyGridView.CategoryHeaderNormalTemplate}">
+        <dx:DXBorder Background="Transparent" MinHeight="22" MinWidth="22" />
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="{dxprgt:LWKey PropertyGridView.CategoryHeaderMouseOverTemplate}">
+        <dx:DXBorder
+            x:Name="HoverState"
+            Background="{StaticResource Brush.HoverBackground}"
+            MinHeight="22"
+            MinWidth="22" />
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="{dxprgt:LWKey PropertyGridView.CategoryHeaderSelectedTemplate}">
+        <dx:DXBorder
+            x:Name="PressedState"
+            Background="{StaticResource Brush.SelectionBackground}"
+            MinHeight="22"
+            MinWidth="22" />
+    </ControlTemplate>
+</ResourceDictionary>

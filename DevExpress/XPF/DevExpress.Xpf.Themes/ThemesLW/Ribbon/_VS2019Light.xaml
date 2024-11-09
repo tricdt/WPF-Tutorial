@@ -1,0 +1,353 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:dxt="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys"
+    xmlns:dxr="http://schemas.devexpress.com/winfx/2008/xaml/ribbon"
+    xmlns:dxri="http://schemas.devexpress.com/winfx/2008/xaml/ribbon/internal"
+    xmlns:dxrt="http://schemas.devexpress.com/winfx/2008/xaml/ribbon/themekeys"
+    xmlns:dxbi="http://schemas.devexpress.com/winfx/2008/xaml/bars/internal"
+    xmlns:dxbt="http://schemas.devexpress.com/winfx/2008/xaml/bars/themekeys"
+    xmlns:dxi="http://schemas.devexpress.com/winfx/2008/xaml/core/internal"
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+    xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
+    xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm">
+    <ResourceDictionary.MergedDictionaries>
+        <dxi:ThemeResourceDictionary Path="Common/{ThemeName}/Common.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+    <!--#region Svg-->
+    <!--#endregion Svg-->
+    <!--#region UIPreset.xaml-->
+    <!--#endregion UIPreset.xaml-->
+    <!--#region RibbonFooterQuickAccessToolbar.xaml-->
+    <!--#endregion RibbonFooterQuickAccessToolbar.xaml-->
+    <!--#region RibbonMinimizationButton.xaml-->
+    <!--#endregion RibbonMinimizationButton.xaml-->
+    <!--#region RibbonStatusBar.xaml-->
+    <!--#endregion RibbonStatusBar.xaml-->
+    <!--#region RibbonStyles.xaml-->
+    <!--#endregion RibbonStyles.xaml-->
+    <!--#region ApplicationButton2010.xaml-->
+    <!--#endregion ApplicationButton2010.xaml-->
+    <!--#region ApplicationButtonSlim.xaml-->
+    <!--#endregion ApplicationButtonSlim.xaml-->
+    <!--#region ApplicationButtonStyles.xaml-->
+    <Style x:Key="{dxrt:LWKey ApplicationButton.NormalTextStyle}" TargetType="{x:Type ContentControl}">
+        <Setter Property="Foreground" Value="{StaticResource Brush.Backstage.Foreground}" />
+    </Style>
+    <Style x:Key="{dxrt:LWKey ApplicationButton.PressedTextStyle}" BasedOn="{StaticResource {dxrt:LWKey ApplicationButton.NormalTextStyle}}" TargetType="{x:Type ContentControl}" />
+    <Style x:Key="{dxrt:LWKey ApplicationButton.SelectedTextStyle}" BasedOn="{StaticResource {dxrt:LWKey ApplicationButton.NormalTextStyle}}" TargetType="{x:Type ContentControl}" />
+    <Style x:Key="{dxrt:LWKey ApplicationButton.CheckedTextStyle}" BasedOn="{StaticResource {dxrt:LWKey ApplicationButton.NormalTextStyle}}" TargetType="{x:Type ContentControl}" />
+    <!--#endregion ApplicationButtonStyles.xaml-->
+    <!--#region ApplicationButtonTablet.xaml-->
+    <!--#endregion ApplicationButtonTablet.xaml-->
+    <!--#region BackstageView.xaml-->
+    <ControlTemplate x:Key="RibbonBackstageButton">
+        <Grid Background="Transparent">
+            <dx:DXBorder x:Name="IsDefault" Background="{StaticResource Brush.Backstage.Window.Background}" />
+            <dx:DXBorder
+                x:Name="InnerBorder"
+                HorizontalAlignment="Left"
+                Margin="11,10,24,10"
+                VerticalAlignment="Center">
+                <dx:DXBorder
+                    x:Name="Circle"
+                    Background="Transparent"
+                    BorderBrush="{StaticResource Brush.Backstage.Foreground}"
+                    BorderThickness="2"
+                    CornerRadius="96"
+                    Height="32"
+                    Width="32">
+                    <Path
+                        x:Name="Content"
+                        Fill="{StaticResource Brush.Backstage.Foreground}"
+                        Height="12"
+                        Style="{StaticResource UIShape.RibbonBack}"
+                        Width="16" />
+                </dx:DXBorder>
+            </dx:DXBorder>
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="Common">
+                    <VisualState x:Name="Normal" />
+                    <VisualState x:Name="Hover">
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="Background">
+                                <DiscreteObjectKeyFrame KeyTime="0">
+                                    <DiscreteObjectKeyFrame.Value>
+                                        <SolidColorBrush Color="{StaticResource Color.Backstage.HoverBackground}" />
+                                    </DiscreteObjectKeyFrame.Value>
+                                </DiscreteObjectKeyFrame>
+                            </ObjectAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Pressed">
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="Background">
+                                <DiscreteObjectKeyFrame KeyTime="0">
+                                    <DiscreteObjectKeyFrame.Value>
+                                        <SolidColorBrush Color="{StaticResource Color.Backstage.SelectionBackground}" />
+                                    </DiscreteObjectKeyFrame.Value>
+                                </DiscreteObjectKeyFrame>
+                            </ObjectAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </Grid>
+        <ControlTemplate.Triggers>
+            <Trigger Property="dx:ThemeManager.IsTouchEnabled" Value="True">
+                <Setter Property="Height" TargetName="Circle" Value="44" />
+                <Setter Property="Width" TargetName="Circle" Value="44" />
+                <Setter Property="Margin" TargetName="InnerBorder" Value="44,14,44,14" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+    <!--#endregion BackstageView.xaml-->
+    <!--#region HighlightedRibbonPageCaption.xaml-->
+    <ControlTemplate x:Key="{dxrt:LWKey RibbonPage.HighlightedCaptionBackgroundTemplate}" TargetType="{x:Type dxr:RibbonCheckedBorderControl}">
+        <Grid x:Name="PART_Root">
+            <dx:DXBorder x:Name="OuterBorder">
+                <Grid>
+                    <dx:DXBorder
+                        x:Name="IsDefault"
+                        Background="{StaticResource Brush.Control.Background}"
+                        CornerRadius="{Binding ElementName=OuterBorder, Path=CornerRadius}"
+                        Opacity="0" />
+                    <dx:DXBorder x:Name="BackgroundBorder" CornerRadius="{Binding ElementName=OuterBorder, Path=CornerRadius}" />
+                </Grid>
+            </dx:DXBorder>
+            <ContentPresenter x:Name="PART_ContentPresenter" />
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="CommonStateGroup">
+                    <VisualState x:Name="NormalUnchecked">
+                        <Storyboard>
+                            <DoubleAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="Opacity" To="0" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="NormalChecked">
+                        <Storyboard>
+                            <DoubleAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="Opacity" To="1" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="HoverUnchecked">
+                        <Storyboard>
+                            <DoubleAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="Opacity" To="0.38" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="HoverChecked">
+                        <Storyboard>
+                            <DoubleAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="Opacity" To="1" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="PressedChecked">
+                        <Storyboard>
+                            <DoubleAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="Opacity" To="1" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Focused">
+                        <Storyboard>
+                            <DoubleAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="Opacity" To="0.62" />
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </Grid>
+        <ControlTemplate.Triggers>
+            <DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Page.(dxi:AppearanceOptions.HasBorderThickness)}" Value="True">
+                <Setter Property="BorderThickness" TargetName="OuterBorder" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=TemplatedParent.Page.(dxi:AppearanceOptions.BorderThickness)}" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Page.(dxi:AppearanceOptions.HasBorderBrush)}" Value="True">
+                <Setter Property="BorderBrush" TargetName="OuterBorder" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=TemplatedParent.Page.(dxi:AppearanceOptions.BorderBrush)}" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Page.(dxi:AppearanceOptions.HasBackground)}" Value="True">
+                <Setter Property="Background" TargetName="BackgroundBorder" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=DataContext.(dxi:AppearanceOptions.Background)}" />
+                <Setter Property="Visibility" TargetName="IsDefault" Value="Collapsed" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Page.(dxi:AppearanceOptions.HasCornerRadius)}" Value="True">
+                <Setter Property="CornerRadius" TargetName="OuterBorder" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=TemplatedParent.Page.(dxi:AppearanceOptions.CornerRadius)}" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Page.(dxi:AppearanceOptions.HasMargin)}" Value="True">
+                <Setter Property="Margin" TargetName="PART_Root" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=TemplatedParent.Page.(dxi:AppearanceOptions.Margin)}" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Page.(dxi:AppearanceOptions.HasPadding)}" Value="True">
+                <Setter Property="Margin" TargetName="PART_ContentPresenter" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=TemplatedParent.Page.(dxi:AppearanceOptions.Padding)}" />
+            </DataTrigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+    <!--#endregion HighlightedRibbonPageCaption.xaml-->
+    <!--#region HighlightedRibbonPageCategoryHeaderBackground.xaml-->
+    <!--#endregion HighlightedRibbonPageCategoryHeaderBackground.xaml-->
+    <!--#region HighlightedRibbonPageGroupBorder.xaml-->
+    <!--#endregion HighlightedRibbonPageGroupBorder.xaml-->
+    <!--#region RibbonPageControl.xaml-->
+    <!--#endregion RibbonPageControl.xaml-->
+    <!--#region RibbonPageCategoryHeaderBackground.xaml-->
+    <!--#endregion RibbonPageCategoryHeaderBackground.xaml-->
+    <!--#region RibbonPageGroupBorder.xaml-->
+    <!--#endregion RibbonPageGroupBorder.xaml-->
+    <!--#region RibbonPageGroupCaptionButton.xaml-->
+    <!--#endregion RibbonPageGroupCaptionButton.xaml-->
+    <!--#region InRibbonGalleryItem.xaml-->
+    <!--#endregion InRibbonGalleryItem.xaml-->
+    <!--#region DropDownGalleryPopup.xaml-->
+    <ControlTemplate x:Key="{dxrt:LWKey GalleryDropDownControl.PopupBorderTemplate}" TargetType="{x:Type dxr:GalleryDropDownPopupBorderControl}">
+        <Grid x:Name="Root">
+            <dx:DXBorder Background="{StaticResource Brush.Border}" Margin="5">
+                <dx:DXBorder.Effect>
+                    <DropShadowEffect
+                        x:Name="Shadow"
+                        BlurRadius="4"
+                        Direction="315"
+                        Opacity="0.5"
+                        ShadowDepth="3" />
+                </dx:DXBorder.Effect>
+            </dx:DXBorder>
+            <dx:DXBorder Background="{StaticResource Brush.Border}" BorderThickness="1" Margin="0,0,5,5">
+                <ContentPresenter Content="{TemplateBinding Content}" />
+            </dx:DXBorder>
+        </Grid>
+    </ControlTemplate>
+    <!--#endregion DropDownGalleryPopup.xaml-->
+    <!--#region RibbonSelectedPage.xaml-->
+    <dxri:RibbonPageCategoryCornerRadiusConverter x:Key="CornerRadiusConverter" />
+    <ControlTemplate x:Key="{dxrt:LWKey Ribbon.SelectedPageBorderTemplate}" TargetType="{x:Type ContentControl}">
+        <Grid x:Name="Root">
+            <dx:DXBorder
+                x:Name="Border"
+                Background="{StaticResource Brush.Control.Background}"
+                BorderBrush="{StaticResource Brush.Border}"
+                BorderThickness="0,0,0,1" />
+            <ContentPresenter />
+        </Grid>
+        <ControlTemplate.Triggers>
+            <DataTrigger Binding="{Binding Path=(dxr:RibbonControl.Ribbon).(dxi:AppearanceOptions.HasCornerRadius), RelativeSource={RelativeSource Self}}" Value="True">
+                <Setter Property="CornerRadius" TargetName="Border" Value="{Binding Path=(dxr:RibbonControl.Ribbon).(dxi:AppearanceOptions.CornerRadius), RelativeSource={RelativeSource Self}, Converter={StaticResource CornerRadiusConverter}, ConverterParameter=Bottom}" />
+            </DataTrigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+    <ControlTemplate x:Key="{dxrt:LWKey Ribbon.SelectedPageBorderTemplateInPopup}" TargetType="{x:Type ContentControl}">
+        <Grid x:Name="Root">
+            <dx:DXBorder Background="{StaticResource Brush.Control.Background}" BorderBrush="{StaticResource Brush.Border}" BorderThickness="0,0,0,1">
+                <dx:DXBorder Background="{StaticResource Brush.Backstage.Window.Background}" Height="1" VerticalAlignment="Top" />
+            </dx:DXBorder>
+            <ContentPresenter />
+        </Grid>
+    </ControlTemplate>
+    <!--#endregion RibbonSelectedPage.xaml-->
+    <!--#region HighlightedRibbonSelectedPage.xaml-->
+    <ControlTemplate x:Key="{dxrt:LWKey Ribbon.HighlightedSelectedPageBorderTemplate}" TargetType="{x:Type ContentControl}">
+        <Grid x:Name="Root">
+            <dx:DXBorder Background="{StaticResource Brush.Control.Background}" BorderBrush="{StaticResource Brush.Border}" BorderThickness="0,0,0,1" />
+            <ContentPresenter />
+        </Grid>
+    </ControlTemplate>
+    <ControlTemplate x:Key="{dxrt:LWKey Ribbon.HighlightedSelectedPageBorderTemplateInPopup}" TargetType="{x:Type ContentControl}">
+        <Grid x:Name="Root">
+            <dx:DXBorder Background="{StaticResource Brush.Control.Background}" BorderBrush="{StaticResource Brush.Border}" BorderThickness="0,0,0,1">
+                <dx:DXBorder Background="{StaticResource Brush.Backstage.Window.Background}" Height="1" VerticalAlignment="Top" />
+            </dx:DXBorder>
+            <ContentPresenter />
+        </Grid>
+    </ControlTemplate>
+    <!--#endregion HighlightedRibbonSelectedPage.xaml-->
+    <!--#region RibbonPageCaption.xaml-->
+    <ControlTemplate x:Key="{dxrt:LWKey RibbonPage.CaptionBackgroundTemplate}" TargetType="{x:Type dxr:RibbonCheckedBorderControl}">
+        <Grid x:Name="PART_Root">
+            <dx:DXBorder x:Name="OuterBorder">
+                <Grid>
+                    <dx:DXBorder x:Name="IsDefault" Background="Transparent" CornerRadius="{Binding ElementName=OuterBorder, Path=CornerRadius}" />
+                    <dx:DXBorder x:Name="BackgroundBorder" CornerRadius="{Binding ElementName=OuterBorder, Path=CornerRadius}" />
+                </Grid>
+            </dx:DXBorder>
+            <ContentPresenter x:Name="PART_ContentPresenter" />
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="CommonStateGroup">
+                    <VisualState x:Name="NormalUnchecked">
+                        <Storyboard>
+                            <DoubleAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="Opacity" To="0" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="NormalChecked">
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="Background">
+                                <DiscreteObjectKeyFrame KeyTime="0">
+                                    <DiscreteObjectKeyFrame.Value>
+                                        <SolidColorBrush Color="{StaticResource Color.Control.Background}" />
+                                    </DiscreteObjectKeyFrame.Value>
+                                </DiscreteObjectKeyFrame>
+                            </ObjectAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="HoverUnchecked">
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="Background">
+                                <DiscreteObjectKeyFrame KeyTime="0">
+                                    <DiscreteObjectKeyFrame.Value>
+                                        <SolidColorBrush Color="{StaticResource Color.Backstage.HoverBackground}" />
+                                    </DiscreteObjectKeyFrame.Value>
+                                </DiscreteObjectKeyFrame>
+                            </ObjectAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="HoverChecked">
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="Background">
+                                <DiscreteObjectKeyFrame KeyTime="0">
+                                    <DiscreteObjectKeyFrame.Value>
+                                        <SolidColorBrush Color="{StaticResource Color.Control.Background}" />
+                                    </DiscreteObjectKeyFrame.Value>
+                                </DiscreteObjectKeyFrame>
+                            </ObjectAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="PressedChecked">
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="Background">
+                                <DiscreteObjectKeyFrame KeyTime="0">
+                                    <DiscreteObjectKeyFrame.Value>
+                                        <SolidColorBrush Color="{StaticResource Color.Control.Background}" />
+                                    </DiscreteObjectKeyFrame.Value>
+                                </DiscreteObjectKeyFrame>
+                            </ObjectAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Focused">
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="Background">
+                                <DiscreteObjectKeyFrame KeyTime="0">
+                                    <DiscreteObjectKeyFrame.Value>
+                                        <SolidColorBrush Color="{StaticResource Color.Backstage.HoverBackground}" />
+                                    </DiscreteObjectKeyFrame.Value>
+                                </DiscreteObjectKeyFrame>
+                            </ObjectAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </Grid>
+        <ControlTemplate.Triggers>
+            <DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Page.(dxi:AppearanceOptions.HasBorderThickness)}" Value="True">
+                <Setter Property="BorderThickness" TargetName="OuterBorder" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=TemplatedParent.Page.(dxi:AppearanceOptions.BorderThickness)}" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Page.(dxi:AppearanceOptions.HasBorderBrush)}" Value="True">
+                <Setter Property="BorderBrush" TargetName="OuterBorder" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=TemplatedParent.Page.(dxi:AppearanceOptions.BorderBrush)}" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Page.(dxi:AppearanceOptions.HasBackground)}" Value="True">
+                <Setter Property="Background" TargetName="BackgroundBorder" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=DataContext.(dxi:AppearanceOptions.Background)}" />
+                <Setter Property="Visibility" TargetName="IsDefault" Value="Collapsed" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Page.(dxi:AppearanceOptions.HasCornerRadius)}" Value="True">
+                <Setter Property="CornerRadius" TargetName="OuterBorder" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=TemplatedParent.Page.(dxi:AppearanceOptions.CornerRadius)}" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Page.(dxi:AppearanceOptions.HasMargin)}" Value="True">
+                <Setter Property="Margin" TargetName="PART_Root" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=TemplatedParent.Page.(dxi:AppearanceOptions.Margin)}" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Page.(dxi:AppearanceOptions.HasPadding)}" Value="True">
+                <Setter Property="Margin" TargetName="PART_ContentPresenter" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=TemplatedParent.Page.(dxi:AppearanceOptions.Padding)}" />
+            </DataTrigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+    <!--#endregion RibbonPageCaption.xaml-->
+    <!--#region RibbonOverflowButton.xaml-->
+    <!--#endregion RibbonOverflowButton.xaml-->
+</ResourceDictionary>

@@ -1,0 +1,84 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+                    xmlns:dxsch="http://schemas.devexpress.com/winfx/2008/xaml/scheduling"
+                    xmlns:dxscht="http://schemas.devexpress.com/winfx/2008/xaml/scheduling/themekeys"
+                    xmlns:dxt="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <dxt:ResourceDictionaryEx Source="{dx:SchedulingResource Generic/DefaultUICustom.xaml}"/>
+    </ResourceDictionary.MergedDictionaries>
+
+    <dxsch:BrushProvider x:Shared="False"
+                         x:Key="{dxscht:SchedulerThemeKey ResourceKey=BrushProvider}"
+                         BasedOn="{StaticResource BrushProvider_Classic}"/>
+
+    <dxsch:BrushSet x:Key="{dxscht:SchedulerThemeKey ResourceKey=BrushSet}" BasedOn="{StaticResource DefaultBrushSet.Light}"/>
+
+    <!--#region Legacy-->
+
+    <dxsch:BrushProvider x:Shared="False"
+                         x:Key="{dxscht:SchedulerThemeKey ResourceKey=BrushProvider_Classic}"
+                         BasedOn="{StaticResource BrushProvider_Classic}"/>
+
+    <!--<dxsch:ColorCollection x:Key="{dxscht:SchedulerThemeKey ResourceKey=ResourceColors}">
+        <Color>#FFF3FFE5</Color>
+        <Color>#FFE5FBFF</Color>
+        <Color>#FFFFF1E5</Color>
+        <Color>#FFF0E5FF</Color>
+        <Color>#FFE5FFEB</Color>
+        <Color>#FFFFE5F2</Color>
+        <Color>#FFFFF8E5</Color>
+        <Color>#FFFFE8E5</Color>
+        <Color>#FFE5FDFF</Color>
+        <Color>#FFEFFFE5</Color>
+        <Color>#FFFDFFE5</Color>
+    </dxsch:ColorCollection>
+    <dxsch:ColorCollection x:Key="{dxscht:SchedulerThemeKey ResourceKey=LabelColors}">
+        <Color>Transparent</Color>
+        <Color>#FFFFAFB3</Color>
+        <Color>#FFAFCAFF</Color>
+        <Color>#FFC4F7C1</Color>
+        <Color>#FFFFD5AF</Color>
+        <Color>#FFFFC5AF</Color>
+        <Color>#FF8FE2FA</Color>
+        <Color>#FFD2E186</Color>
+        <Color>#FFEBB5D9</Color>
+        <Color>#FF8CE4C6</Color>
+        <Color>#FFF7DD93</Color>
+    </dxsch:ColorCollection>-->
+
+    <dxsch:ColorCollection x:Key="{dxscht:SchedulerThemeKey ResourceKey=ResourceColors_Classic}">
+        <Color>#FFFFFFFF</Color>
+        <Color>#FFF3FFE5</Color>
+        <Color>#FFE5FBFF</Color>
+        <Color>#FFFFF1E5</Color>
+        <Color>#FFF0E5FF</Color>
+        <Color>#FFE5FFEB</Color>
+        <Color>#FFFFE5F2</Color>
+        <Color>#FFFFF8E5</Color>
+        <Color>#FFFFE8E5</Color>
+        <Color>#FFE5FDFF</Color>
+        <Color>#FFEFFFE5</Color>
+        <Color>#FFFDFFE5</Color>
+    </dxsch:ColorCollection>
+
+    <dxsch:ColorCollection x:Key="{dxscht:SchedulerThemeKey ResourceKey=LabelColors_Classic}">
+        <Color>#FFFFFFFF</Color>
+        <Color>#FFFFAFB3</Color>
+        <Color>#FFAFCAFF</Color>
+        <Color>#FFC4F7C1</Color>
+        <Color>#FFFFD5AF</Color>
+        <Color>#FFFFC5AF</Color>
+        <Color>#FF8FE2FA</Color>
+        <Color>#FFD2E186</Color>
+        <Color>#FFEBB5D9</Color>
+        <Color>#FF8CE4C6</Color>
+        <Color>#FFF7DD93</Color>
+    </dxsch:ColorCollection>
+
+    <!--#endregion-->
+
+</ResourceDictionary>
+
+

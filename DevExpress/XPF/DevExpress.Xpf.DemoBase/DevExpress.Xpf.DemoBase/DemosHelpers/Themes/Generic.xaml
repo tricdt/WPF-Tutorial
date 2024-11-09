@@ -1,0 +1,10 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/DevExpress.Xpf.DemoBase.v24.1;component/DemosHelpers/Themes/Expander.xaml" />
+        <ResourceDictionary Source="/DevExpress.Xpf.DemoBase.v24.1;component/DemosHelpers/Themes/ImageControl.xaml" />
+        <ResourceDictionary Source="/DevExpress.Xpf.DemoBase.v24.1;component/DemosHelpers/Themes/ExportImage.xaml" />
+        <ResourceDictionary Source="/DevExpress.Xpf.DemoBase.v24.1;component/DemosHelpers/Themes/LogControl.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

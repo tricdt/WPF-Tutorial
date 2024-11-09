@@ -1,0 +1,78 @@
+﻿<ResourceDictionary mc:Ignorable="cs" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:cs="colorscheme_ignorable_uri" xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars" xmlns:dxbt="http://schemas.devexpress.com/winfx/2008/xaml/bars/themekeys" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <Thickness x:Key="{dxbt:BarCheckItemThemeKey ResourceKey=BorderMarginInMenu}">-1,1,-1,1</Thickness>
+  <Style x:Key="{dxbt:BarCheckItemThemeKey ResourceKey=TextSplitterStyleInRibbonPageGroup}" TargetType="{x:Type dxb:TextSplitterControl}">
+    <Setter Property="FirstStringHorizontalAlignment" Value="Center" />
+    <Setter Property="SecondStringHorizontalAlignment" Value="Center" />
+    <Setter Property="SecondStringMargin" Value="0,-3,0,0" />
+    <Setter Property="Margin" Value="0,-2,0,0" />
+  </Style>
+  <Style x:Key="{dxbt:BarCheckItemThemeKey ResourceKey=SelectedTextStyleInTextSplitter}" TargetType="{x:Type ContentControl}">
+    <Setter Property="Foreground" Value="#FF373A3D" />
+  </Style>
+  <Style x:Key="{dxbt:BarCheckItemThemeKey ResourceKey=NormalTextStyleInTextSplitter}" TargetType="{x:Type ContentControl}">
+    <Setter Property="Foreground" Value="#FF373A3D" />
+  </Style>
+  <ControlTemplate x:Key="{dxbt:BarCheckItemThemeKey ResourceKey=CheckInMenu}" TargetType="{x:Type ContentControl}">
+    <Grid x:Name="glyphCheck" Background="Transparent" MinHeight="18" MinWidth="18">
+      <Path Data="F1 M 135,156L 135,159L 139,163L 145,156L 145,153L 139,160L 135,156 Z " Fill="#FFB9B9B9" Height="10" Stretch="Fill" Width="10" />
+    </Grid>
+    <ControlTemplate.Triggers>
+      <Trigger Property="FlowDirection" Value="RightToLeft">
+        <Setter Property="RenderTransform" TargetName="glyphCheck">
+          <Setter.Value>
+            <ScaleTransform ScaleX="-1" ScaleY="1" />
+          </Setter.Value>
+        </Setter>
+      </Trigger>
+    </ControlTemplate.Triggers>
+  </ControlTemplate>
+  <ControlTemplate x:Key="{dxbt:BarCheckItemThemeKey ResourceKey=TriStateBorderInMenu}" TargetType="{x:Type ContentControl}">
+    <Grid x:Name="glyphCheck" Background="Transparent" MinHeight="18" MinWidth="18">
+      <Path Data="F1 M 135,156L 135,159L 139,163L 145,156L 145,153L 139,160L 135,156 Z " Fill="#FF373A3D" Height="10" Stretch="Fill" Width="10" />
+    </Grid>
+    <ControlTemplate.Triggers>
+      <Trigger Property="FlowDirection" Value="RightToLeft">
+        <Setter Property="RenderTransform" TargetName="glyphCheck">
+          <Setter.Value>
+            <ScaleTransform ScaleX="-1" ScaleY="1" />
+          </Setter.Value>
+        </Setter>
+      </Trigger>
+    </ControlTemplate.Triggers>
+  </ControlTemplate>
+  <ControlTemplate x:Key="{dxbt:BarCheckItemThemeKey ResourceKey=GlyphCheckBorderInMenu}" TargetType="{x:Type ContentControl}">
+    <Border Background="#FFF78A09" MinHeight="18" MinWidth="18">
+      <ContentPresenter />
+    </Border>
+  </ControlTemplate>
+  <ControlTemplate x:Key="{dxbt:BarCheckItemThemeKey ResourceKey=GlyphTriStateBorderInMenu}" TargetType="{x:Type ContentControl}">
+    <Border Background="#FFF78A09" MinHeight="18" MinWidth="18">
+      <ContentPresenter />
+    </Border>
+  </ControlTemplate>
+  <ControlTemplate x:Key="CheckTriStateTemplate" TargetType="{x:Type ContentControl}">
+    <Grid x:Name="Root" MinHeight="18" MinWidth="18" RenderTransformOrigin="0.5,0.5">
+      <Border>
+        <Path x:Name="glyphCheck" Data="F1 M 135,156L 135,159L 139,163L 145,156L 145,153L 139,160L 135,156 Z " Fill="#BF666666" Height="10" Stretch="Fill" Visibility="{Binding Path=(dxb:BarCheckItemLinkControlStatesProvider.CheckVisibility), RelativeSource={RelativeSource TemplatedParent}}" Width="10" />
+      </Border>
+      <Border>
+        <Border Background="#BFFFFFFF" Height="10" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="{Binding Path=(dxb:BarCheckItemLinkControlStatesProvider.TriStateVisibility), RelativeSource={RelativeSource TemplatedParent}}" Width="10" />
+      </Border>
+      <Border Background="#FFF78A09" Visibility="{Binding Path=(dxb:BarCheckItemLinkControlStatesProvider.GlyphCheckVisibility), RelativeSource={RelativeSource TemplatedParent}}">
+        <ContentPresenter />
+      </Border>
+      <Border Background="#FFF78A09" MinHeight="18" MinWidth="18" Opacity="0.35" Visibility="{Binding Path=(dxb:BarCheckItemLinkControlStatesProvider.GlyphTriStateVisibility), RelativeSource={RelativeSource TemplatedParent}}">
+        <ContentPresenter />
+      </Border>
+    </Grid>
+    <ControlTemplate.Triggers>
+      <Trigger Property="FlowDirection" Value="RightToLeft">
+        <Setter Property="RenderTransform" TargetName="Root">
+          <Setter.Value>
+            <ScaleTransform ScaleX="-1" ScaleY="1" />
+          </Setter.Value>
+        </Setter>
+      </Trigger>
+    </ControlTemplate.Triggers>
+  </ControlTemplate>
+</ResourceDictionary>

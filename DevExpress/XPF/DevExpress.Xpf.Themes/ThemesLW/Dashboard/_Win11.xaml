@@ -1,0 +1,89 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+    xmlns:dxi="http://schemas.devexpress.com/winfx/2008/xaml/core/internal"
+    xmlns:dxdasht="http://schemas.devexpress.com/winfx/2008/xaml/dashboard/themekeys"
+    xmlns:dxt="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys"
+    xmlns:windows="clr-namespace:System.Windows;assembly=PresentationCore">
+    <ResourceDictionary.MergedDictionaries>
+        <dxi:ThemeResourceDictionary Path="Common/{ThemeName}/Common.xaml" />
+        <dxi:ThemeResourceDictionary Path="Dashboard/_{ThemeName}.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+    <SolidColorBrush x:Key="{dxdasht:LWKey DashboardControl.SelectedItemBackground}" Color="{StaticResource Color.Button.HoverBackground}" />
+    <SolidColorBrush x:Key="{dxdasht:LWKey DashboardControl.SelectedItemBorder}" Color="{StaticResource Color.Button.SimpleButtonBorder}" />
+    <SolidColorBrush x:Key="{dxdasht:LWKey DashboardControl.Background}" Color="{StaticResource Color.WindowBackground}" />
+    <SolidColorBrush x:Key="{dxdasht:LWKey DashboardControl.TitleForeground}" Color="{StaticResource Color.Foreground.Primary}" />
+    <SolidColorBrush x:Key="{dxdasht:LWKey DashboardControl.SubTitleForeground}" Color="{StaticResource Color.Foreground.Primary}" Opacity="0.62" />
+    <dx:ColorStaticResource x:Key="{dxdasht:LWKey DashboardControl.MasterFilterIconColor}" Color="{StaticResource Color.Foreground.Primary}" />
+    <SolidColorBrush x:Key="{dxdasht:LWKey DashboardControl.FormatConditionBarDrawAxisBrush}" Color="{StaticResource Color.Accent}" />
+    <SolidColorBrush x:Key="{dxdasht:LWKey DashboardLayoutItem.Background}" Color="{StaticResource Color.Editor.Background}" />
+    <SolidColorBrush x:Key="{dxdasht:LWKey DashboardLayoutItem.BorderBrush}" Color="{StaticResource Color.Border}" />
+    <SolidColorBrush x:Key="{dxdasht:LWKey DashboardLayoutItem.CaptionBackground}" Color="{StaticResource Color.Control.Background}" />
+    <SolidColorBrush x:Key="{dxdasht:LWKey DashboardLayoutItem.CaptionForeground}" Color="{StaticResource Color.Foreground.Primary}" />
+    <SolidColorBrush x:Key="{dxdasht:LWKey DashboardLayoutItem.WaitIndicatorForeground}" Color="{StaticResource Color.Accent}" />
+    <SolidColorBrush x:Key="{dxdasht:LWKey CardItem.Background}" Color="{StaticResource Color.Button.SimpleButtonBackground}" />
+    <SolidColorBrush x:Key="{dxdasht:LWKey CardItem.MainTextForeground}" Color="{StaticResource Color.Foreground.Primary}" />
+    <SolidColorBrush x:Key="{dxdasht:LWKey CardItem.CardItemBackground}" Color="{StaticResource Color.Control.Background}" />
+    <SolidColorBrush x:Key="{dxdasht:LWKey CardItem.CardItemBorderBrush}" Color="{StaticResource Color.Border}" />
+    <SolidColorBrush x:Key="{dxdasht:LWKey CardItem.HighlightedBackground}" Color="{StaticResource Color.Button.HoverBackground}" />
+    <SolidColorBrush x:Key="{dxdasht:LWKey CardItem.HighlightedBorderBrush}" Color="{StaticResource Color.Button.SimpleButtonHoverBorder}" />
+    <SolidColorBrush x:Key="{dxdasht:LWKey GaugeItem.GaugeHighlightedBackgroundBrush}" Color="{StaticResource Color.ListItem.HoverBackground}" />
+    <SolidColorBrush x:Key="{dxdasht:LWKey GaugeItem.GaugeHighlightedBorderBrush}" Color="{StaticResource Color.ListItem.HoverBorder}" />
+    <SolidColorBrush x:Key="{dxdasht:LWKey GaugeItem.GaugeCaptionForeground}" Color="{StaticResource Color.Foreground.Primary}" />
+    <SolidColorBrush x:Key="{dxdasht:LWKey GaugeItem.GaugeScaleLabelForeground}" Color="{StaticResource Color.Foreground.Primary}" />
+    <SolidColorBrush x:Key="{dxdasht:LWKey GaugeItem.GaugeSubCaptionForeground}" Color="{StaticResource Color.Foreground.Primary}" Opacity="0.62" />
+    <SolidColorBrush x:Key="{dxdasht:LWKey MapItem.GeoPointBackgroundBrush}" Color="{StaticResource Color.Border}" />
+    <SolidColorBrush x:Key="{dxdasht:LWKey MapItem.GeoPointHighLightedBackgroundBrush}" Color="{StaticResource Color.Accent}" />
+    <SolidColorBrush x:Key="{dxdasht:LWKey MapItem.GeoPointBorderBrush}" Color="{StaticResource Color.Foreground.Alt}" />
+    <SolidColorBrush x:Key="{dxdasht:LWKey PieItem.PieHighlightedBackgroundBrush}" Color="{StaticResource Color.ListItem.HoverBackground}" />
+    <SolidColorBrush x:Key="{dxdasht:LWKey PieItem.PieHighlightedBorderBrush}" Color="{StaticResource Color.ListItem.HoverBorder}" />
+    <SolidColorBrush x:Key="{dxdasht:LWKey ChartItem.LegendBackgroundBrush}" Color="{StaticResource Color.Editor.Background}" />
+    <SolidColorBrush x:Key="{dxdasht:LWKey ChartItem.LegendForegroundBrush}" Color="{StaticResource Color.Foreground.Primary}" />
+    <SolidColorBrush x:Key="{dxdasht:LWKey TreemapItem.ToolTipForeground}" Color="{StaticResource Color.Foreground.Alt}" />
+    <SolidColorBrush x:Key="{dxdasht:LWKey ListBoxItem.Foreground}" Color="{StaticResource Color.Foreground.Primary}" />
+    <dx:ColorStaticResource x:Key="{dxdasht:LWKey PivotItem.DefaultBackgroundColor}" Color="{StaticResource Color.Editor.Background}" />
+    <dx:ColorStaticResource x:Key="{dxdasht:LWKey GridItem.DefaultBackgroundColor}" Color="{StaticResource Color.Editor.Background}" />
+    <dx:ColorStaticResource x:Key="{dxdasht:LWKey CardItem.DefaultBackgroundColor}" Color="{StaticResource Color.Editor.Background}" />
+    <dx:ColorStaticResource x:Key="{dxdasht:LWKey ChartItem.DefaultBackgroundColor}" Color="{StaticResource Color.Editor.Background}" />
+    <Color x:Key="{dxdasht:LWKey MapItem.GradientColorStart}">#FF7482AA</Color>
+    <Color x:Key="{dxdasht:LWKey MapItem.GradientColorEnd}">#FFAA7474</Color>
+    <Color x:Key="{dxdasht:LWKey MapItem.DeltaColorGood}">#FF5F957D</Color>
+    <Color x:Key="{dxdasht:LWKey MapItem.DeltaColorBad}">#FFBA4D51</Color>
+    <Color x:Key="{dxdasht:LWKey MapItem.DeltaColorWarning}">#FFAF8A53</Color>
+    <Color x:Key="{dxdasht:LWKey MapItem.ClusterColorTens}">#FF5F6595</Color>
+    <Color x:Key="{dxdasht:LWKey MapItem.ClusterColorHundreds}">#FF00CC00</Color>
+    <Color x:Key="{dxdasht:LWKey MapItem.ClusterColorThousands}">#FFAF8A53</Color>
+    <Color x:Key="{dxdasht:LWKey MapItem.ClusterColorMillions}">#FFBA4D51</Color>
+    <SolidColorBrush x:Key="{dxdasht:LWKey DeltaValuePresenter.GoodForeground}">
+        #FF5F957D
+    </SolidColorBrush>
+    <SolidColorBrush x:Key="{dxdasht:LWKey DeltaValuePresenter.BadForeground}">
+        #FFBA4D51
+    </SolidColorBrush>
+    <SolidColorBrush x:Key="{dxdasht:LWKey DeltaValuePresenter.WarningForeground}">
+        #FFAF8A53
+    </SolidColorBrush>
+    <SolidColorBrush x:Key="{dxdasht:LWKey DeltaValuePresenter.NeutralForeground}">
+        #FF666666
+    </SolidColorBrush>
+    <SolidColorBrush x:Key="{dxdasht:LWKey DateFilterItem.PopupBackground}" Color="{StaticResource Color.Control.Background}" />
+    <SolidColorBrush x:Key="{dxdasht:LWKey DateFilterItem.PopupForeground}" Color="{StaticResource Color.Foreground.Primary}" />
+    <sys:Double x:Key="{dxdasht:LWKey GaugeItem.GaugeCaptionFontSize}">12</sys:Double>
+    <sys:Double x:Key="{dxdasht:LWKey GaugeItem.GaugeSubCaptionFontSize}">12</sys:Double>
+    <sys:Double x:Key="{dxdasht:LWKey TreemapItem.ToolTipFontSize}">12</sys:Double>
+    <FontWeight x:Key="{dxdasht:LWKey TreemapItem.ToolTipFontWeight}">Bold</FontWeight>
+    <Thickness x:Key="{dxdasht:LWKey DashboardLayoutItem.BorderThickness}">1</Thickness>
+    <sys:Double x:Key="{dxdasht:LWKey DashboardControl.TitleFontSize}">12</sys:Double>
+    <FontWeight x:Key="{dxdasht:LWKey DashboardControl.TitleFontWeight}">Bold</FontWeight>
+    <sys:Double x:Key="{dxdasht:LWKey DashboardControl.SubTitleFontSize}">12</sys:Double>
+    <FontWeight x:Key="{dxdasht:LWKey DashboardControl.SubTitleFontWeight}">Normal</FontWeight>
+    <sys:Double x:Key="{dxdasht:LWKey DashboardLayoutItem.CaptionFontSize}">12</sys:Double>
+    <FontWeight x:Key="{dxdasht:LWKey DashboardLayoutItem.CaptionFontWeight}">Bold</FontWeight>
+    <CornerRadius x:Key="{dxdasht:LWKey CardItem.CardBackgroundCornerRadius}">7</CornerRadius>
+    <CornerRadius x:Key="{dxdasht:LWKey GaugeItem.GaugeBackgroundCornerRadius}">0</CornerRadius>
+    <sys:Double x:Key="{dxdasht:LWKey MapItem.GeoPointDisplayTextFontSize}">12</sys:Double>
+    <windows:FontWeight x:Key="{dxdasht:LWKey MapItem.GeoPointDisplayTextFontWeight}">Bold</windows:FontWeight>
+    <CornerRadius x:Key="{dxdasht:LWKey PieItem.PieBackgroundCornerRadius}">0</CornerRadius>
+</ResourceDictionary>

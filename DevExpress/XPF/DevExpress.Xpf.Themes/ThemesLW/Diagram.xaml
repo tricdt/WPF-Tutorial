@@ -1,0 +1,70 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+    xmlns:dxi="http://schemas.devexpress.com/winfx/2008/xaml/core/internal"
+    xmlns:dxdiagi="http://schemas.devexpress.com/winfx/2008/xaml/diagram/internal"
+    xmlns:dxdiag="http://schemas.devexpress.com/winfx/2008/xaml/diagram">
+
+    <ResourceDictionary.MergedDictionaries>
+        <dxi:ThemeResourceDictionary Path="Diagram\Diagram.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Diagram.Native.CollectionEditorBase'}" BasedOn="{StaticResource CollectionEditorBase.DefaultStyleBase}" TargetType="dxdiagi:CollectionEditorBase" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Diagram.Native.ExtendedSelectionCollectionEditor'}" BasedOn="{StaticResource ExtendedSelectionCollectionEditor.DefaultStyleBase}" TargetType="dxdiagi:ExtendedSelectionCollectionEditor" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Diagram.ShapeToolboxPreview'}" BasedOn="{StaticResource ShapeToolboxPreview.DefaultStyleBase}" TargetType="{x:Type dxdiag:ShapeToolboxPreview}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Diagram.DiagramToolboxControl'}" BasedOn="{StaticResource DiagramToolboxControl.DefaultStyleBase}" TargetType="{x:Type dxdiag:DiagramToolboxControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Diagram.SelectionAdorner'}" BasedOn="{StaticResource SelectionAdorner.DefaultStyleBase}" TargetType="{x:Type dxdiag:SelectionAdorner}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Diagram.SelectionPartAdorner'}" BasedOn="{StaticResource SelectionPartAdorner.DefaultStyleBase}" TargetType="{x:Type dxdiag:SelectionPartAdorner}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Diagram.ShapeParametersAdorner'}" BasedOn="{StaticResource ShapeParametersAdorner.DefaultStyleBase}" TargetType="{x:Type dxdiag:ShapeParametersAdorner}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Diagram.ConnectorSelectionAdorner'}" BasedOn="{StaticResource ConnectorSelectionAdorner.DefaultStyleBase}" TargetType="{x:Type dxdiag:ConnectorSelectionAdorner}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Diagram.ConnectorSegmentAdorner'}" BasedOn="{StaticResource ConnectorSegmentAdorner.DefaultStyleBase}" TargetType="{x:Type dxdiag:ConnectorSegmentAdorner}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Diagram.ConnectorPointAdorner'}" BasedOn="{StaticResource ConnectorPointAdorner.DefaultStyleBase}" TargetType="{x:Type dxdiag:ConnectorPointAdorner}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Diagram.ConnectorSelectionPartAdorner'}" BasedOn="{StaticResource ConnectorSelectionPartAdorner.DefaultStyleBase}" TargetType="{x:Type dxdiag:ConnectorSelectionPartAdorner}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Diagram.ConnectorDragPreviewAdorner'}" BasedOn="{StaticResource ConnectorDragPreviewAdorner.DefaultStyleBase}" TargetType="{x:Type dxdiag:ConnectorDragPreviewAdorner}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Diagram.ConnectorMovePointPreviewAdorner'}" BasedOn="{StaticResource ConnectorMovePointPreviewAdorner.DefaultStyleBase}" TargetType="{x:Type dxdiag:ConnectorMovePointPreviewAdorner}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Diagram.GlueToItemAdorner'}" BasedOn="{StaticResource GlueToItemAdorner.DefaultStyleBase}" TargetType="{x:Type dxdiag:GlueToItemAdorner}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Diagram.InsertTargetAdorner'}" BasedOn="{StaticResource InsertTargetAdorner.DefaultStyleBase}" TargetType="{x:Type dxdiag:InsertTargetAdorner}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Diagram.GlueToPointAdorner'}" BasedOn="{StaticResource GlueToPointAdorner.DefaultStyleBase}" TargetType="{x:Type dxdiag:GlueToPointAdorner}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Diagram.ConnectionPointsAdorner'}" BasedOn="{StaticResource ConnectionPointsAdorner.DefaultStyleBase}" TargetType="{x:Type dxdiag:ConnectionPointsAdorner}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Diagram.Native.HorizontalBoundsSnapLineAdorner'}" BasedOn="{StaticResource HorizontalBoundsSnapLineAdorner.DefaultStyleBase}" TargetType="{x:Type dxdiagi:HorizontalBoundsSnapLineAdorner}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Diagram.Native.VerticalBoundsSnapLineAdorner'}" BasedOn="{StaticResource VerticalBoundsSnapLineAdorner.DefaultStyleBase}" TargetType="{x:Type dxdiagi:VerticalBoundsSnapLineAdorner}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Diagram.Native.HorizontalSizeSnapLineAdorner'}" BasedOn="{StaticResource HorizontalSizeSnapLineAdorner.DefaultStyleBase}" TargetType="{x:Type dxdiagi:HorizontalSizeSnapLineAdorner}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Diagram.Native.VerticalSizeSnapLineAdorner'}" BasedOn="{StaticResource VerticalSizeSnapLineAdorner.DefaultStyleBase}" TargetType="{x:Type dxdiagi:VerticalSizeSnapLineAdorner}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Diagram.ShapeStylePresenter'}" BasedOn="{StaticResource ShapeStylePresenter.DefaultStyleBase}" TargetType="{x:Type dxdiag:ShapeStylePresenter}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Diagram.Native.BindingIndicatorAdorner'}" BasedOn="{StaticResource BindingIndicatorAdorner.DefaultStyleBase}" TargetType="{x:Type dxdiagi:BindingIndicatorAdorner}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Diagram.Native.CollapseButtonAdorner'}" BasedOn="{StaticResource CollapseButtonAdorner.DefaultStyleBase}" TargetType="{x:Type dxdiagi:CollapseButtonAdorner}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Diagram.HorizontalRulerScale'}" BasedOn="{StaticResource HorizontalRulerScale.DefaultStyleBase}" TargetType="{x:Type dxdiag:HorizontalRulerScale}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Diagram.VerticalRulerScale'}" BasedOn="{StaticResource VerticalRulerScale.DefaultStyleBase}" TargetType="{x:Type dxdiag:VerticalRulerScale}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Diagram.RulerShadow'}" BasedOn="{StaticResource RulerShadow.DefaultStyleBase}" TargetType="{x:Type dxdiag:RulerShadow}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Diagram.Native.LayersHost'}" BasedOn="{StaticResource LayersHost.DefaultStyleBase}" TargetType="{x:Type dxdiagi:LayersHost}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Diagram.DiagramShape'}" BasedOn="{StaticResource DiagramShape.DefaultStyleBase}" TargetType="{x:Type dxdiag:DiagramShape}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Diagram.BaseDiagramContainer'}" BasedOn="{StaticResource BaseDiagramContainer.DefaultStyleBase}" TargetType="{x:Type dxdiag:BaseDiagramContainer}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Diagram.DiagramContainer'}" BasedOn="{StaticResource DiagramContainer.DefaultStyleBase}" TargetType="{x:Type dxdiag:DiagramContainer}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Diagram.DiagramContentItem'}" BasedOn="{StaticResource DiagramContentItem.DefaultStyleBase}" TargetType="{x:Type dxdiag:DiagramContentItem}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Diagram.DiagramConnector'}" BasedOn="{StaticResource DiagramConnector.DefaultStyleBase}" TargetType="{x:Type dxdiag:DiagramConnector}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Diagram.DiagramImage'}" BasedOn="{StaticResource DiagramImage.DefaultStyleBase}" TargetType="{x:Type dxdiag:DiagramImage}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Diagram.DiagramRoot'}" BasedOn="{StaticResource DiagramRoot.DefaultStyleBase}" TargetType="{x:Type dxdiag:DiagramRoot}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Diagram.DragPreview'}" BasedOn="{StaticResource DragPreview.DefaultStyleBase}" TargetType="{x:Type dxdiag:DragPreview}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Diagram.SelectionPreview'}" BasedOn="{StaticResource SelectionPreview.DefaultStyleBase}" TargetType="{x:Type dxdiag:SelectionPreview}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Diagram.ScaleItemsControl'}" BasedOn="{StaticResource ScaleItemsControl.DefaultStyleBase}" TargetType="dxdiag:ScaleItemsControl" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Diagram.PageBackgroundControl'}" BasedOn="{StaticResource PageBackgroundControl.DefaultStyleBase}" TargetType="{x:Type dxdiag:PageBackgroundControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Diagram.PagesBackgroundControl'}" BasedOn="{StaticResource PagesBackgroundControl.DefaultStyleBase}" TargetType="{x:Type dxdiag:PagesBackgroundControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Diagram.ItemEditorControl'}" BasedOn="{StaticResource ItemEditorControl.DefaultStyleBase}" TargetType="{x:Type dxdiag:ItemEditorControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Diagram.Native.ShapeGeometryPresenter'}" BasedOn="{StaticResource ShapeGeometryPresenter.DefaultStyleBase}" TargetType="{x:Type dxdiagi:ShapeGeometryPresenter}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Diagram.ShapePresenter'}" BasedOn="{StaticResource ShapePresenter.DefaultStyleBase}" TargetType="{x:Type dxdiag:ShapePresenter}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Diagram.DiagramControl'}" BasedOn="{StaticResource DiagramControl.DefaultStyleBase}" TargetType="{x:Type dxdiag:DiagramControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Diagram.ThemePresenter'}" BasedOn="{StaticResource ThemePresenter.DefaultStyleBase}" TargetType="{x:Type dxdiag:ThemePresenter}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Diagram.DiagramDesignerControl'}" BasedOn="{StaticResource DiagramDesignerControl.DefaultStyleBase}" TargetType="{x:Type dxdiag:DiagramDesignerControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Diagram.Native.PrintPreviewControl'}" BasedOn="{StaticResource PrintPreviewControl.DefaultStyleBase}" TargetType="{x:Type dxdiagi:PrintPreviewControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Diagram.Native.DocumentViewerItemsControl'}" BasedOn="{StaticResource DocumentViewerItemsControl.DefaultStyleBase}" TargetType="{x:Type dxdiagi:DocumentViewerItemsControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Diagram.Native.PageControl'}" BasedOn="{StaticResource PageControl.DefaultStyleBase}" TargetType="{x:Type dxdiagi:PageControl}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Diagram.Native.PageControlItem'}" BasedOn="{StaticResource PageControlItem.DefaultStyleBase}" TargetType="{x:Type dxdiagi:PageControlItem}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Diagram.PanAndZoomClientFramePresenter'}" BasedOn="{StaticResource PanAndZoomClientFramePresenter.DefaultStyleBase}" TargetType="{x:Type dxdiag:PanAndZoomClientFramePresenter}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Diagram.PanAndZoomPreviewFramePresenter'}" BasedOn="{StaticResource PanAndZoomPreviewFramePresenter.DefaultStyleBase}" TargetType="{x:Type dxdiag:PanAndZoomPreviewFramePresenter}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Diagram.PanAndZoomDiagramPresenter'}" BasedOn="{StaticResource PanAndZoomDiagramPresenter.DefaultStyleBase}" TargetType="{x:Type dxdiag:PanAndZoomDiagramPresenter}" />
+    <Style x:Key="{dx:LWDefaultStyleKey 'DevExpress.Xpf.Diagram.DiagramPanAndZoomControl'}" BasedOn="{StaticResource DiagramPanAndZoomControl.DefaultStyleBase}" TargetType="{x:Type dxdiag:DiagramPanAndZoomControl}" />
+
+
+</ResourceDictionary>

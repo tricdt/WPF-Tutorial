@@ -1,0 +1,59 @@
+<ResourceDictionary mc:Ignorable="cs" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:cs="colorscheme_ignorable_uri" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/charts" xmlns:dxct="http://schemas.devexpress.com/winfx/2008/xaml/charts/themekeys" xmlns:dxh="http://schemas.devexpress.com/winfx/2008/xaml/heatmap/themekeys" xmlns:dxi="http://schemas.devexpress.com/winfx/2008/xaml/core/internal" xmlns:dxsat="http://schemas.devexpress.com/winfx/2008/xaml/sankey/themekeys" xmlns:dxt="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sys="clr-namespace:System;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ResourceDictionary.MergedDictionaries>
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win10Dark.v24.1;component/UICore/UIData.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win10Dark.v24.1;component/Charts/Win10Dark/UICustom.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win10Dark.v24.1;component/Charts/Win10Dark/UIPreset.xaml" />
+  </ResourceDictionary.MergedDictionaries>
+  <!-- Axis -->
+  <SolidColorBrush x:Key="{dxct:ChartBrushesThemeKey ResourceKey=AxisBrush}" Color="#FF2B2B2B" x:Uid="@Color=Border" />
+  <SolidColorBrush x:Key="{dxct:ChartBrushesThemeKey ResourceKey=AxisLabelForeground}" Color="#FFF2F2F2" x:Uid="@Color=Foreground" />
+  <SolidColorBrush x:Key="{dxct:ChartBrushesThemeKey ResourceKey=AxisTitleForeground}" Color="#FFF2F2F2" x:Uid="@Color=Foreground" />
+  <SolidColorBrush x:Key="{dxct:ChartBrushesThemeKey ResourceKey=Axis2DInterlacedBrush}" Color="#FF808080" Opacity="0.16" x:Uid="@Color=Delimiter" />
+  <SolidColorBrush x:Key="{dxct:ChartBrushesThemeKey ResourceKey=Axis3DInterlacedBrush}" Color="#FF808080" Opacity="0.16" x:Uid="@Color=Delimiter" />
+  <SolidColorBrush x:Key="{dxct:ChartBrushesThemeKey ResourceKey=GridLineBrush}" Color="#FF808080" Opacity="1.00" x:Uid="@Color=Delimiter" />
+  <SolidColorBrush x:Key="{dxct:ChartBrushesThemeKey ResourceKey=MinorGridLineBrush}" Color="#FF808080" Opacity="0.38" x:Uid="@Color=Delimiter" />
+  <!-- ChartControl -->
+  <SolidColorBrush x:Key="{dxct:ChartBrushesThemeKey ResourceKey=ChartBorderBrush}" Color="#FF2B2B2B" x:Uid="@Color=Border" />
+  <SolidColorBrush x:Key="{dxct:ChartBrushesThemeKey ResourceKey=ChartBackgroundBrush}" Color="#FF191919" x:Uid="@Color=Editor.Background" />
+  <SolidColorBrush x:Key="{dxct:ChartBrushesThemeKey ResourceKey=AnnotationBorderBrush}" Color="#FF2B2B2B" x:Uid="@Color=Border" />
+  <SolidColorBrush x:Key="{dxct:ChartBrushesThemeKey ResourceKey=AnnotationBackground}" Color="#FF191919" x:Uid="@Color=Window.Background" />
+  <SolidColorBrush x:Key="{dxct:ChartBrushesThemeKey ResourceKey=AnnotationForeground}" Color="#FFF2F2F2" x:Uid="@Color=Foreground" />
+  <SolidColorBrush x:Key="{dxct:ChartBrushesThemeKey ResourceKey=RangeControlClientViewBrush}" Color="#FFF2F2F2" x:Uid="@Color=Foreground" />
+  <SolidColorBrush x:Key="{dxct:ChartBrushesThemeKey ResourceKey=RangeControlClientViewMarkerBrush}" Color="#FFF2F2F2" x:Uid="@Color=Foreground" />
+  <SolidColorBrush x:Key="{dxct:ChartBrushesThemeKey ResourceKey=RangeControlClientGridLineBrush}" Color="#FF808080" x:Uid="@Color=Delimiter" />
+  <!-- Crosshair -->
+  <SolidColorBrush x:Key="{dxct:ChartBrushesThemeKey ResourceKey=CrosshairSeriesLabelForeground}" Color="#FFF2F2F2" x:Uid="@Color=Foreground" />
+  <!-- Diagram2D -->
+  <SolidColorBrush x:Key="{dxct:ChartBrushesThemeKey ResourceKey=Domain2DBrush}" Color="#FF191919" x:Uid="@Color=Editor.Background" />
+  <SolidColorBrush x:Key="{dxct:ChartBrushesThemeKey ResourceKey=DomainBorderBrush}" Color="#FF2B2B2B" x:Uid="@Color=Border" />
+  <!-- Diagram3D -->
+  <SolidColorBrush x:Key="{dxct:ChartBrushesThemeKey ResourceKey=Domain3DBrush}" Color="#FF191919" x:Uid="@Color=Editor.Background" />
+  <!-- Legend -->
+  <SolidColorBrush x:Key="{dxct:ChartBrushesThemeKey ResourceKey=LegendBorderBrush}" Color="#FF2B2B2B" x:Uid="@Color=Border" />
+  <SolidColorBrush x:Key="{dxct:ChartBrushesThemeKey ResourceKey=LegendBackgroundBrush}" Color="#FF191919" x:Uid="@Color=Window.Background" />
+  <SolidColorBrush x:Key="{dxct:ChartBrushesThemeKey ResourceKey=LegendForeground}" Color="#FFF2F2F2" x:Uid="@Color=Foreground" />
+  <!-- Titles -->
+  <SolidColorBrush x:Key="{dxct:ChartBrushesThemeKey ResourceKey=TitleForeground}" Color="#FFF2F2F2" x:Uid="@Color=Foreground" />
+  <SolidColorBrush x:Key="{dxct:ChartBrushesThemeKey ResourceKey=PaneTitleForeground}" x:Uid="@Content_Property=Foreground">#FFF2F2F2</SolidColorBrush>
+  <SolidColorBrush x:Key="{dxct:ChartBrushesThemeKey ResourceKey=PaneTitleForegroundHot}" x:Uid="@Content_Property=Focused">#FF0078D7</SolidColorBrush>
+  <SolidColorBrush x:Key="{dxct:ChartBrushesThemeKey ResourceKey=PaneTitleForegroundDisabled}" x:Uid="@Content_Property=Border">#FF2B2B2B</SolidColorBrush>
+  <!-- Tooltip -->
+  <SolidColorBrush x:Key="{dxct:ChartBrushesThemeKey ResourceKey=ToolTipForeground}" Color="#FFF2F2F2" x:Uid="@Color=Foreground" />
+  <!-- Sankey diagram control-->
+  <SolidColorBrush x:Key="{dxsat:SankeyBrushesThemeKey ResourceKey=BackgroundBrush}" Color="#FF191919" x:Uid="@Color=Editor.Background" />
+  <SolidColorBrush x:Key="{dxsat:SankeyBrushesThemeKey ResourceKey=BorderBrush}" Color="#FF2B2B2B" x:Uid="@Color=Border" />
+  <SolidColorBrush x:Key="{dxsat:SankeyBrushesThemeKey ResourceKey=ToolTipForeground}" Color="#FFF2F2F2" x:Uid="@Color=Foreground" />
+  <SolidColorBrush x:Key="{dxsat:SankeyBrushesThemeKey ResourceKey=ToolTipBackground}" Color="#FF191919" x:Uid="@Color=Window.Background" />
+  <SolidColorBrush x:Key="{dxsat:SankeyBrushesThemeKey ResourceKey=ToolTipBorder}" Color="#FF2B2B2B" x:Uid="@Color=Border" />
+  <SolidColorBrush x:Key="{dxsat:SankeyBrushesThemeKey ResourceKey=TitleForeground}" Color="#FFF2F2F2" x:Uid="@Color=Foreground" />
+  <SolidColorBrush x:Key="{dxsat:SankeyBrushesThemeKey ResourceKey=TextElementForeground}" Color="#FFF2F2F2" x:Uid="@Color=Foreground" />
+  <SolidColorBrush x:Key="{dxsat:SankeyBrushesThemeKey ResourceKey=NodeLabelForeground}" Color="#FFF2F2F2" x:Uid="@Color=Foreground" />
+  <!-- Heatmap control-->
+  <SolidColorBrush x:Key="{dxh:HeatmapBrushesThemeKey ResourceKey=BackgroundBrush}" Color="#FF191919" x:Uid="@Color=Editor.Background" />
+  <SolidColorBrush x:Key="{dxh:HeatmapBrushesThemeKey ResourceKey=BorderBrush}" Color="#FF2B2B2B" x:Uid="@Color=Border" />
+  <SolidColorBrush x:Key="{dxh:HeatmapBrushesThemeKey ResourceKey=ToolTipForeground}" Color="#FFF2F2F2" x:Uid="@Color=Foreground" />
+  <SolidColorBrush x:Key="{dxh:HeatmapBrushesThemeKey ResourceKey=ToolTipBackground}" Color="#FF191919" x:Uid="@Color=Window.Background" />
+  <SolidColorBrush x:Key="{dxh:HeatmapBrushesThemeKey ResourceKey=ToolTipBorder}" Color="#FF2B2B2B" x:Uid="@Color=Border" />
+  <SolidColorBrush x:Key="{dxh:HeatmapBrushesThemeKey ResourceKey=LabelForeground}" Color="#FFF2F2F2" x:Uid="@Color=Foreground" />
+  <SolidColorBrush x:Key="{dxh:HeatmapBrushesThemeKey ResourceKey=HighlightBrush}" Color="#FF191919" x:Uid="@Color=Editor.Background" />
+</ResourceDictionary>

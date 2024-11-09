@@ -1,0 +1,37 @@
+<ResourceDictionary mc:Ignorable="cs" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:cs="colorscheme_ignorable_uri" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars" xmlns:dxbc="http://schemas.devexpress.com/winfx/2008/xaml/bars/internal" xmlns:dxbt="http://schemas.devexpress.com/winfx/2008/xaml/bars/themekeys" xmlns:dxcn="http://schemas.devexpress.com/winfx/2008/xaml/core/internal" xmlns:dxdst="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sys="clr-namespace:System;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ResourceDictionary.MergedDictionaries>
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2019HighContrast.v24.1;component/Core/Core/Bars/Themes/Office2019HighContrast/RenderTemplates/_Common_Base.xaml" />
+  </ResourceDictionary.MergedDictionaries>
+  <!-- CheckGlyph -->
+  <dxcn:RenderTemplate x:Key="{dxbt:BarItemRenderThemeKey ResourceKey=CheckGlyph}">
+    <dxcn:RenderPanel>
+      <dxcn:RenderBorder Name="PART_NullGlyph" Background="#FFFFFFFF" Height="8" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed" Width="8" x:Uid="@Background=Foreground" />
+      <dxbc:RenderArrowPath Name="PART_CheckGlyph" Data="F1 M 0,3 0,5 3,8 8,3 8,1 3,6 0,3 Z " Height="8" HorizontalAlignment="Center" Opacity="1" Stretch="None" VerticalAlignment="Center" Width="8" cs:id="RenderPath_0000" />
+    </dxcn:RenderPanel>
+    <dxcn:RenderTemplate.Triggers>
+      <dxcn:RenderStateGroup Name="CheckedStates">
+        <dxcn:RenderStateTrigger Name="Default" />
+        <dxcn:RenderStateTrigger Name="Null">
+          <dxcn:RenderSetter Property="Visibility" TargetName="PART_CheckGlyph" Value="Collapsed" />
+          <dxcn:RenderSetter Property="Visibility" TargetName="PART_NullGlyph" Value="Visible" />
+        </dxcn:RenderStateTrigger>
+      </dxcn:RenderStateGroup>
+    </dxcn:RenderTemplate.Triggers>
+  </dxcn:RenderTemplate>
+  <!-- Arrow -->
+  <dxcn:RenderTemplate x:Key="{dxbt:BarItemRenderThemeKey ResourceKey=DefaultArrowTemplate}">
+    <dxcn:RenderPanel>
+      <dxbc:RenderArrowPath Data="F1 M 0,0 8,0 4,4 0,0 Z " Height="4" HorizontalAlignment="Center" Margin="0,1,0,0" Stretch="Fill" VerticalAlignment="Center" Width="8" cs:id="RenderPath_0000" />
+    </dxcn:RenderPanel>
+  </dxcn:RenderTemplate>
+  <dxcn:RenderTemplate x:Key="{dxbt:BarItemRenderThemeKey ResourceKey=ArrowTemplateInPageHeader}">
+    <dxcn:RenderPanel>
+      <dxbc:RenderArrowPath Data="F1 M 0,0 8,0 4,4 0,0 Z " Height="4" HorizontalAlignment="Center" Margin="0,1,0,0" Stretch="Fill" VerticalAlignment="Center" Width="8" cs:id="RenderPath_0000" />
+    </dxcn:RenderPanel>
+  </dxcn:RenderTemplate>
+  <dxcn:RenderTemplate x:Key="{dxbt:BarItemRenderThemeKey ResourceKey=ArrowTemplateInMenu}">
+    <dxcn:RenderPanel Margin="6">
+      <dxbc:RenderArrowPath Data="F1 M 0,0 0,8 4,4 0,0 Z " Height="8" HorizontalAlignment="Center" Margin="0" Stretch="Fill" VerticalAlignment="Center" Width="4" cs:id="RenderPath_0000" />
+    </dxcn:RenderPanel>
+  </dxcn:RenderTemplate>
+</ResourceDictionary>

@@ -1,0 +1,18 @@
+﻿<ResourceDictionary mc:Ignorable="cs" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:cs="colorscheme_ignorable_uri" xmlns:dxdst="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ResourceDictionary.MergedDictionaries>
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2010Blue.v24.1;component/DevExpress.Xpf.Controls/WindowsUI/Office2010Blue/FadingButton.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2010Blue.v24.1;component/DevExpress.Xpf.Controls/WindowsUI/Office2010Blue/FlipView.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2010Blue.v24.1;component/DevExpress.Xpf.Controls/WindowsUI/Office2010Blue/PageView.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2010Blue.v24.1;component/DevExpress.Xpf.Controls/WindowsUI/Office2010Blue/SlideView.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2010Blue.v24.1;component/DevExpress.Xpf.Controls/WindowsUI/Office2010Blue/CommandButton.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2010Blue.v24.1;component/DevExpress.Xpf.Controls/WindowsUI/Office2010Blue/AppBar.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2010Blue.v24.1;component/DevExpress.Xpf.Controls/WindowsUI/Office2010Blue/MessageBox.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2010Blue.v24.1;component/DevExpress.Xpf.Controls/WindowsUI/Office2010Blue/Flyout.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2010Blue.v24.1;component/DevExpress.Xpf.Controls/WindowsUI/Office2010Blue/TouchNavigator.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2010Blue.v24.1;component/DevExpress.Xpf.Controls/WindowsUI/Office2010Blue/TileNavPane.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2010Blue.v24.1;component/DevExpress.Xpf.Controls/WindowsUI/Office2010Blue/HamburgerMenu.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2010Blue.v24.1;component/DevExpress.Xpf.Controls/WindowsUI/Office2010Blue/BreadcrumbControl.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2010Blue.v24.1;component/DevExpress.Xpf.Controls/Wizard/Office2010Blue/Colors.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2010Blue.v24.1;component/DevExpress.Xpf.Controls/Office2010Blue/StepProgressBar.xaml" />
+  </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

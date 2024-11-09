@@ -1,0 +1,85 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:dxi="http://schemas.devexpress.com/winfx/2008/xaml/core/internal"
+    xmlns:dxpt="http://schemas.devexpress.com/winfx/2008/xaml/printing/themekeys"
+    xmlns:dxt="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys"
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+    xmlns:dxpn="http://schemas.devexpress.com/winfx/2008/xaml/printing/native"
+    xmlns:cs="colorscheme_ignorable_uri"
+    xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
+    mc:Ignorable="cs">
+
+    <ResourceDictionary.MergedDictionaries>
+        <dxi:PaletteResourceDictionary />
+        <dxi:ThemeResourceDictionary Path="Printing\Generic.xaml" />
+        <dxi:ThemeResourceDictionary Path="Printing/_{ThemeCategory}.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+
+    <!--#region c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Printing\Base\DocumentPreviewControl.xaml-->
+    <DataTemplate x:Key="{dxpt:LWKey NewDocumentViewer.PageBorderTemplate}">
+        <Grid x:Name="Root">
+            <dx:DXBorder
+                x:Name="Border"
+                BorderBrush="{StaticResource Brush.Border}"
+                BorderThickness="1"
+                Margin="-1" />
+        </Grid>
+        <DataTemplate.Triggers>
+            <DataTrigger Binding="{Binding IsSelected}" Value="true">
+                <Setter Property="BorderBrush" TargetName="Border" Value="{dx:LWBrush 'Brush.Focused, Win11=Brush.Accent'}" />
+            </DataTrigger>
+        </DataTemplate.Triggers>
+    </DataTemplate>
+    <!--#endregion c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Printing\Base\DocumentPreviewControl.xaml-->
+
+    <!--#region c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Printing\Base\UICustom.xaml-->
+    <!-- General -->
+    <!--#endregion c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Printing\Base\UICustom.xaml-->
+
+    <!--#region c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Printing\Base\UIPreset.xaml-->
+    <!-- General -->
+    <!--#endregion c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Printing\Base\UIPreset.xaml-->
+
+    <!--#region c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Printing\Base\UICore.xaml-->
+    <!-- General -->
+    <!--#endregion c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Printing\Base\UICore.xaml-->
+
+    <!--#region c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Printing\Base\PreviewSurface.xaml-->
+    <!-- General -->
+
+    <ControlTemplate x:Key="{dxpt:LWKey Printing.PreviewSurfaceTemplate}" TargetType="{x:Type dxpn:PreviewSurface}">
+        <dx:BackgroundPanel />
+    </ControlTemplate>
+    <!--#endregion c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Printing\Base\PreviewSurface.xaml-->
+
+    <!--#region c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Printing\Base\NavigationPane.xaml-->
+    <!--#endregion c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Printing\Base\NavigationPane.xaml-->
+
+    <!--#region c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Printing\Base\PageBorderControl.xaml-->
+    <ControlTemplate x:Key="PageBorderTemplate" TargetType="{x:Type dxpn:PageBorderControl}">
+        <dx:DXBorder Background="{StaticResource Brush.Editor.Background}" BorderBrush="{StaticResource Brush.Border}" BorderThickness="1">
+            <ContentPresenter Content="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=Content}" />
+        </dx:DXBorder>
+    </ControlTemplate>
+
+
+    <!-- General -->
+    <!--#endregion c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Printing\Base\PageBorderControl.xaml-->
+
+    <!--#region c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Printing\Base.xaml-->
+    <!-- General -->
+    <!--#endregion c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Printing\Base.xaml-->
+
+
+    <!--#region DEFAULT STYLES-->
+
+    <Style x:Key="PageBorderControl.DefaultStyle" TargetType="{x:Type dxpn:PageBorderControl}">
+        <Setter Property="Template" Value="{StaticResource PageBorderTemplate}" />
+    </Style>
+    <!--#endregion DEFAULT STYLES-->
+
+
+</ResourceDictionary>

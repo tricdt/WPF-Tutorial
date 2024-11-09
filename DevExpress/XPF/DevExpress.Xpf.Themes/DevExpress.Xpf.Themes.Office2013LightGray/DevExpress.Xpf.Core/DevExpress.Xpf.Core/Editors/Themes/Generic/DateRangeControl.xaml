@@ -1,0 +1,163 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" xmlns:dxet="http://schemas.devexpress.com/winfx/2008/xaml/editors/themekeys" xmlns:dxp="http://schemas.devexpress.com/winfx/2008/xaml/editors" xmlns:helpers="http://schemas.devexpress.com/winfx/2008/xaml/editors/internal" xmlns:dxdst="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys">
+  <helpers:BrushToSvgPaletteConverter x:Key="BrushToSvgPaletteConverter" />
+  <Style x:Key="CalendarButtonStyle" TargetType="{x:Type dxe:ImageButtonInfo}">
+    <Setter Property="Glyph" Value="{dx:SvgImageSource Uri={dx:EditorsResource Images/DateEdit/Date.svg}}" />
+    <Setter Property="GlyphStyle">
+      <Setter.Value>
+        <Style x:Key="{dxdst:DefaultStyleThemeKey FullName=DevExpress.Xpf.Core.DXImage}" TargetType="{x:Type dx:DXImage}">
+          <Setter Property="dx:WpfSvgPalette.Palette" Value="{Binding Path=(TextElement.Foreground), Converter={StaticResource BrushToSvgPaletteConverter}, ConverterParameter=BlackColor, RelativeSource={RelativeSource Self}}" />
+          <Setter Property="Width" Value="16" />
+          <Setter Property="Height" Value="16" />
+        </Style>
+      </Setter.Value>
+    </Setter>
+    <Setter Property="IsLeft" Value="True" />
+    <Setter Property="Command" Value="{Binding Path=(dxe:PopupBaseEdit.PopupOwnerEdit).OpenPopupCommand, RelativeSource={RelativeSource Self}}" />
+  </Style>
+  <ControlTemplate x:Key="{dxet:DateRangeControlThemeKey ResourceKey=EditTemplate}" TargetType="{x:Type dxe:EditorControl}">
+    <Grid Background="{Binding Path=(dxe:DateRangeControl.DateRangeControl).Background, RelativeSource={RelativeSource Self}}">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition x:Name="PART_StartColumn" Width="*" />
+        <ColumnDefinition x:Name="PART_EndColumn" Width="*" />
+        <ColumnDefinition Width="Auto" />
+      </Grid.ColumnDefinitions>
+      <Border x:Name="PART_StartBorder" Grid.Column="0" BorderBrush="{Binding Path=(dxe:DateRangeControl.DateRangeControl).BorderBrush, RelativeSource={RelativeSource Self}}" BorderThickness="{Binding Path=(dxe:DateRangeControl.DateRangeControl).BorderThickness, RelativeSource={RelativeSource Self}}" CornerRadius="{DynamicResource {dxet:DateRangeControlThemeKey ResourceKey=StartEditorBorderCornerRadius}}" Background="{DynamicResource {dxet:DateRangeControlThemeKey ResourceKey=EditorBackground}}">
+        <Grid>
+          <Border x:Name="PART_StartDecoratedLayer" BorderThickness="{Binding ElementName=PART_StartBorder, Path=BorderThickness}" CornerRadius="{Binding ElementName=PART_StartBorder, Path=CornerRadius}" Height="10" BorderBrush="Transparent" VerticalAlignment="Bottom" Margin="-1" />
+          <dxp:DateRangeButtonEdit x:Name="PART_StartEdit" TabIndex="0" NullText="{Binding Path=(dxe:DateRangeControl.DateRangeControl).StartNullText, RelativeSource={RelativeSource Self}}" EditValue="{Binding Path=(dxe:DateRangeControl.DateRangeControl).Start, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, RelativeSource={RelativeSource Self}}" ValidationErrorTemplate="{Binding Path=(dxe:DateRangeControl.DateRangeControl).StartValidationErrorTemplate, RelativeSource={RelativeSource Self}}" Style="{Binding Path=(dxe:DateRangeControl.DateRangeControl).StartEditStyle, RelativeSource={RelativeSource Self}}">
+            <dxp:ButtonEdit.Buttons>
+              <dxp:ImageButtonInfo x:Name="PART_EditStartButton" Style="{StaticResource CalendarButtonStyle}" />
+              <dxp:ButtonInfo x:Name="PART_StartClearButton" GlyphKind="Cancel" Command="{Binding Path=(dxe:DateRangeControl.DateRangeControl).ClearCommand, RelativeSource={RelativeSource Self}}" />
+            </dxp:ButtonEdit.Buttons>
+          </dxp:DateRangeButtonEdit>
+        </Grid>
+      </Border>
+      <Border x:Name="PART_EndBorder" Grid.Column="1" Margin="-1,0,0,0" BorderBrush="{Binding Path=(dxe:DateRangeControl.DateRangeControl).BorderBrush, RelativeSource={RelativeSource Self}}" BorderThickness="{Binding Path=(dxe:DateRangeControl.DateRangeControl).BorderThickness, RelativeSource={RelativeSource Self}}" CornerRadius="{DynamicResource {dxet:DateRangeControlThemeKey ResourceKey=EndEditorBorderCornerRadius}}" Background="{DynamicResource {dxet:DateRangeControlThemeKey ResourceKey=EditorBackground}}">
+        <Grid>
+          <Border x:Name="PART_EndDecoratedLayer" BorderThickness="{Binding ElementName=PART_EndBorder, Path=BorderThickness}" CornerRadius="{Binding ElementName=PART_EndBorder, Path=CornerRadius}" Height="10" BorderBrush="Transparent" VerticalAlignment="Bottom" Margin="-1" />
+          <dxp:DateRangeButtonEdit x:Name="PART_EndEdit" TabIndex="1" NullText="{Binding Path=(dxe:DateRangeControl.DateRangeControl).EndNullText, RelativeSource={RelativeSource Self}}" EditValue="{Binding Path=(dxe:DateRangeControl.DateRangeControl).End, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, RelativeSource={RelativeSource Self}}" ValidationErrorTemplate="{Binding Path=(dxe:DateRangeControl.DateRangeControl).EndValidationErrorTemplate, RelativeSource={RelativeSource Self}}" Style="{Binding Path=(dxe:DateRangeControl.DateRangeControl).EndEditStyle, RelativeSource={RelativeSource Self}}">
+            <dxp:ButtonEdit.Buttons>
+              <dxp:ImageButtonInfo x:Name="PART_EditEndButton" Style="{StaticResource CalendarButtonStyle}" />
+              <dxp:ButtonInfo x:Name="PART_EndClearButton" GlyphKind="Cancel" Command="{Binding Path=(dxe:DateRangeControl.DateRangeControl).ClearEndCommand, RelativeSource={RelativeSource Self}}" />
+            </dxp:ButtonEdit.Buttons>
+          </dxp:DateRangeButtonEdit>
+        </Grid>
+      </Border>
+      <dx:SimpleButton x:Name="PART_PopupButton" Grid.Column="2" IsTabStop="False" Margin="-1,0,0,0" Padding="5,1" CornerRadius="{DynamicResource {dxet:DateRangeControlThemeKey ResourceKey=CalendarButtonCornerRadius}}" Command="{Binding Path=(dxe:PopupBaseEdit.PopupOwnerEdit).OpenPopupCommand, RelativeSource={RelativeSource Self}}">
+        <Image Source="{dx:SvgImageSource Uri={dx:EditorsResource Images/DateEdit/Date.svg}}" Height="16" Width="16" />
+      </dx:SimpleButton>
+    </Grid>
+    <ControlTemplate.Triggers>
+      <DataTrigger Binding="{Binding Path=(dxe:DateRangeControl.DateRangeControl).ShowClearButtons, RelativeSource={RelativeSource Self}}" Value="False">
+        <Setter TargetName="PART_StartClearButton" Property="Visibility" Value="Collapsed" />
+        <Setter TargetName="PART_EndClearButton" Property="Visibility" Value="Collapsed" />
+      </DataTrigger>
+      <DataTrigger Binding="{Binding Path=(dxe:DateRangeControl.DateRangeControl).IsTextReadOnly, RelativeSource={RelativeSource Self}}" Value="True">
+        <Setter TargetName="PART_PopupButton" Property="Visibility" Value="Visible" />
+        <Setter TargetName="PART_EditStartButton" Property="Visibility" Value="Collapsed" />
+        <Setter TargetName="PART_EditEndButton" Property="Visibility" Value="Collapsed" />
+      </DataTrigger>
+      <DataTrigger Binding="{Binding Path=(dxe:DateRangeControl.DateRangeControl).IsTextReadOnly, RelativeSource={RelativeSource Self}}" Value="False">
+        <Setter TargetName="PART_PopupButton" Property="Visibility" Value="Collapsed" />
+        <Setter TargetName="PART_EditStartButton" Property="Visibility" Value="Visible" />
+        <Setter TargetName="PART_EditEndButton" Property="Visibility" Value="Visible" />
+      </DataTrigger>
+      <DataTrigger Binding="{Binding Path=(dxe:DateRangeControl.DateRangeControl).BorderBrush, RelativeSource={RelativeSource Self}}" Value="{x:Null}">
+        <Setter TargetName="PART_StartBorder" Property="BorderBrush" Value="{DynamicResource {dxet:DateRangeControlThemeKey ResourceKey=EditorBorderBrush}}" />
+        <Setter TargetName="PART_StartDecoratedLayer" Property="BorderBrush" Value="{DynamicResource {dxet:DateRangeControlThemeKey ResourceKey=EditorDecoratedBorderBrush}}" />
+        <Setter TargetName="PART_EndBorder" Property="BorderBrush" Value="{DynamicResource {dxet:DateRangeControlThemeKey ResourceKey=EditorBorderBrush}}" />
+        <Setter TargetName="PART_EndDecoratedLayer" Property="BorderBrush" Value="{DynamicResource {dxet:DateRangeControlThemeKey ResourceKey=EditorDecoratedBorderBrush}}" />
+      </DataTrigger>
+      <DataTrigger Binding="{Binding Path=(dxe:DateRangeControl.DateRangeControl).BorderThickness, RelativeSource={RelativeSource Self}}" Value="0">
+        <Setter TargetName="PART_StartBorder" Property="BorderThickness" Value="{DynamicResource {dxet:DateRangeControlThemeKey ResourceKey=EditorBorderThickness}}" />
+        <Setter TargetName="PART_EndBorder" Property="BorderThickness" Value="{DynamicResource {dxet:DateRangeControlThemeKey ResourceKey=EditorBorderThickness}}" />
+      </DataTrigger>
+      <DataTrigger Binding="{Binding Path=(dxe:DateRangeControl.DateRangeControl).State, RelativeSource={RelativeSource Self}}" Value="StartEditing">
+        <Setter TargetName="PART_StartBorder" Property="BorderBrush" Value="{DynamicResource {dxet:DateRangeControlThemeKey ResourceKey=CurrentEditorBorderBrush}}" />
+        <Setter TargetName="PART_StartDecoratedLayer" Property="Background" Value="{DynamicResource {dxet:DateRangeControlThemeKey ResourceKey=CurrentEditorDecoratedBorderBrush}}" />
+        <Setter TargetName="PART_StartBorder" Property="BorderThickness" Value="{DynamicResource {dxet:DateRangeControlThemeKey ResourceKey=CurrentEditorBorderThickness}}" />
+        <Setter TargetName="PART_StartDecoratedLayer" Property="BorderThickness" Value="0" />
+        <Setter TargetName="PART_StartBorder" Property="Panel.ZIndex" Value="999" />
+      </DataTrigger>
+      <DataTrigger Binding="{Binding Path=(dxe:DateRangeControl.DateRangeControl).State, RelativeSource={RelativeSource Self}}" Value="EndEditing">
+        <Setter TargetName="PART_EndBorder" Property="BorderBrush" Value="{DynamicResource {dxet:DateRangeControlThemeKey ResourceKey=CurrentEditorBorderBrush}}" />
+        <Setter TargetName="PART_EndDecoratedLayer" Property="Background" Value="{DynamicResource {dxet:DateRangeControlThemeKey ResourceKey=CurrentEditorDecoratedBorderBrush}}" />
+        <Setter TargetName="PART_EndBorder" Property="BorderThickness" Value="{DynamicResource {dxet:DateRangeControlThemeKey ResourceKey=CurrentEditorBorderThickness}}" />
+        <Setter TargetName="PART_EndDecoratedLayer" Property="BorderThickness" Value="0" />
+        <Setter TargetName="PART_EndBorder" Property="Panel.ZIndex" Value="999" />
+      </DataTrigger>
+    </ControlTemplate.Triggers>
+  </ControlTemplate>
+  <ControlTemplate x:Key="{dxet:DateRangeControlThemeKey ResourceKey=PopupContentTemplate}" TargetType="{x:Type dxp:PopupContentControl}">
+    <dxp:RangeDateNavigator x:Name="PART_DateNavigator" SelectionMode="Range" MinValue="{Binding Path=(dxe:DateRangeControl.DateRangeControl).MinValue, RelativeSource={RelativeSource Self}}" MaxValue="{Binding Path=(dxe:DateRangeControl.DateRangeControl).MaxValue, RelativeSource={RelativeSource Self}}" Style="{Binding Path=(dxe:DateRangeControl.DateRangeControl).DateNavigatorStyle, RelativeSource={RelativeSource Self}}" />
+  </ControlTemplate>
+  <ControlTemplate x:Key="DateRangeControlPopupContentContainerTemplate" TargetType="{x:Type dxp:PopupContentContainer}">
+    <Grid>
+      <Grid.RowDefinitions>
+        <RowDefinition x:Name="RowTopFooter" Height="Auto" />
+        <RowDefinition x:Name="RowTopContent" Height="Auto" />
+        <RowDefinition Height="*" />
+        <RowDefinition x:Name="RowBottomFooter" Height="Auto" />
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="Auto" />
+        <ColumnDefinition Width="*" />
+      </Grid.ColumnDefinitions>
+      <dxp:ListBoxEdit x:Name="PART_PredefinedRangesItemsControl" Grid.Column="0" Grid.Row="1" Grid.RowSpan="3" ShowBorder="False" HorizontalContentAlignment="Center" AllowItemHighlighting="True" Background="{DynamicResource {dxet:DateRangeControlThemeKey ResourceKey=PredefinedRangesPanelBackground}}" Margin="{DynamicResource {dxet:DateRangeControlThemeKey ResourceKey=PredefinedRangesPanelMargin}}" ItemsSource="{Binding Path=(dxe:DateRangeControl.DateRangeControl).PredefinedRanges, RelativeSource={RelativeSource Self}}" ItemTemplate="{Binding Path=(dxe:DateRangeControl.DateRangeControl).PredefinedRangeTemplate, RelativeSource={RelativeSource Self}}" />
+      <ContentControl x:Name="PART_Top" Grid.Row="1" Grid.Column="1" Style="{DynamicResource {dxet:PopupBaseEditThemeKey ResourceKey=PopupTopAreaStyle}}" />
+      <ContentPresenter x:Name="Content" Grid.Row="2" Grid.Column="1" />
+      <ContentControl x:Name="PART_Footer" Grid.Row="3" Grid.Column="1" Style="{DynamicResource {dxet:PopupBaseEditThemeKey ResourceKey=PopupBottomAreaStyle}}" />
+    </Grid>
+    <ControlTemplate.Triggers>
+      <Trigger Property="DropOpposite" Value="True">
+        <Setter TargetName="PART_Footer" Property="Grid.Row" Value="0" />
+      </Trigger>
+      <DataTrigger Binding="{Binding Path=(dxe:DateRangeControl.DateRangeControl).PredefinedRangeTemplate, RelativeSource={RelativeSource Self}}" Value="{x:Null}">
+        <Setter TargetName="PART_PredefinedRangesItemsControl" Property="ItemTemplate">
+          <Setter.Value>
+            <DataTemplate DataType="{x:Type dxe:PredefinedDateRange}">
+              <TextBlock Text="{Binding Name}" MaxWidth="400" TextTrimming="CharacterEllipsis" Padding="{DynamicResource {dxet:DateRangeControlThemeKey ResourceKey=PredefinedRangesItemPadding}}" />
+            </DataTemplate>
+          </Setter.Value>
+        </Setter>
+      </DataTrigger>
+      <DataTrigger Binding="{Binding Path=(dxe:DateRangeControl.DateRangeControl).ShowPredefinedRanges, RelativeSource={RelativeSource Self}}" Value="False">
+        <Setter TargetName="PART_PredefinedRangesItemsControl" Property="Visibility" Value="Collapsed" />
+      </DataTrigger>
+      <DataTrigger Binding="{Binding Path=(dxe:DateRangeControl.DateRangeControl).PredefinedRanges.Count, RelativeSource={RelativeSource Self}}" Value="0">
+        <Setter TargetName="PART_PredefinedRangesItemsControl" Property="Visibility" Value="Collapsed" />
+      </DataTrigger>
+    </ControlTemplate.Triggers>
+  </ControlTemplate>
+  <ControlTemplate x:Key="{dxet:DateRangeControlThemeKey ResourceKey=PopupBottomAreaTemplate}" TargetType="{x:Type ContentControl}">
+    <ControlTemplate.Resources>
+      <dx:EditorStringIdConverter x:Key="EditorStringIdConverter" />
+    </ControlTemplate.Resources>
+    <dx:UniformStackPanel Margin="15,0,15,0" ChildSpacing="0" Orientation="Horizontal" Width="Auto" HorizontalAlignment="Center">
+      <dx:SimpleButton x:Name="PART_OkButton" HorizontalAlignment="Stretch" VerticalAlignment="Center" dx:FocusHelper2.Focusable="False" IsDefault="True" Content="{Binding IsTabStop, RelativeSource={RelativeSource Self}, ConverterParameter=OK, Converter={StaticResource EditorStringIdConverter}}" Padding="{DynamicResource {dxet:DateRangeControlThemeKey ResourceKey=FooterButtonsPadding}}" Margin="3,6,3,6" Command="{Binding Path=(dxe:BaseEdit.OwnerEdit).ClosePopupCommand, RelativeSource={RelativeSource TemplatedParent}}" CommandParameter="{x:Static dxe:PopupCloseMode.Normal}" />
+      <dx:SimpleButton x:Name="PART_CancelButton" HorizontalAlignment="Stretch" VerticalAlignment="Center" dx:FocusHelper2.Focusable="False" IsCancel="True" Content="{Binding IsTabStop, RelativeSource={RelativeSource Self}, ConverterParameter=Cancel, Converter={StaticResource EditorStringIdConverter}}" Padding="{DynamicResource {dxet:DateRangeControlThemeKey ResourceKey=FooterButtonsPadding}}" Margin="3,6,3,6" Command="{Binding Path=(dxe:BaseEdit.OwnerEdit).ClosePopupCommand, RelativeSource={RelativeSource TemplatedParent}}" CommandParameter="{x:Static dxe:PopupCloseMode.Cancel}" />
+    </dx:UniformStackPanel>
+    <ControlTemplate.Triggers>
+      <DataTrigger Binding="{Binding Path=(dxe:DateRangeControl.DateRangeControl).PopupFooterButtons, RelativeSource={RelativeSource Self}}" Value="None">
+        <Setter TargetName="PART_CancelButton" Property="Visibility" Value="Collapsed" />
+        <Setter TargetName="PART_OkButton" Property="Visibility" Value="Collapsed" />
+      </DataTrigger>
+      <DataTrigger Binding="{Binding Path=(dxe:DateRangeControl.DateRangeControl).PopupFooterButtons, RelativeSource={RelativeSource Self}}" Value="OkCancel">
+        <Setter TargetName="PART_CancelButton" Property="Visibility" Value="Visible" />
+        <Setter TargetName="PART_OkButton" Property="Visibility" Value="Visible" />
+      </DataTrigger>
+      <DataTrigger Binding="{Binding Path=(dxe:DateRangeControl.DateRangeControl).PopupFooterButtons, RelativeSource={RelativeSource Self}}" Value="Close">
+        <Setter TargetName="PART_CancelButton" Property="Visibility" Value="Visible" />
+        <Setter TargetName="PART_OkButton" Property="Visibility" Value="Collapsed" />
+      </DataTrigger>
+    </ControlTemplate.Triggers>
+  </ControlTemplate>
+  <ControlTemplate x:Key="{dxet:DateRangeControlThemeKey ResourceKey=Template}" TargetType="{x:Type dxe:DateRangeControl}">
+    <dxp:PopupBaseEdit x:Name="PART_Root" IsTabStop="False" ShowEditorButtons="False" FocusPopupOnOpen="True" ShowBorder="False" PopupFooterButtons="{TemplateBinding PopupFooterButtons}" EditTemplate="{DynamicResource {dxet:DateRangeControlThemeKey ResourceKey=EditTemplate}}" PopupContentTemplate="{DynamicResource {dxet:DateRangeControlThemeKey ResourceKey=PopupContentTemplate}}" PopupTopAreaTemplate="{TemplateBinding PopupTopAreaTemplate}" PopupBottomAreaTemplate="{TemplateBinding PopupBottomAreaTemplate}" PopupContentContainerTemplate="{StaticResource DateRangeControlPopupContentContainerTemplate}" />
+    <ControlTemplate.Triggers>
+      <Trigger Property="PopupBottomAreaTemplate" Value="{x:Null}">
+        <Setter TargetName="PART_Root" Property="PopupBottomAreaTemplate" Value="{DynamicResource {dxet:DateRangeControlThemeKey ResourceKey=PopupBottomAreaTemplate}}" />
+      </Trigger>
+    </ControlTemplate.Triggers>
+  </ControlTemplate>
+</ResourceDictionary>

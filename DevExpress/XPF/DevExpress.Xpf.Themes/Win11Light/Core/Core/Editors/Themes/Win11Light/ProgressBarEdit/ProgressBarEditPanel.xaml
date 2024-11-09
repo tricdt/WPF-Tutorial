@@ -1,0 +1,148 @@
+<ResourceDictionary mc:Ignorable="cs" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:cs="colorscheme_ignorable_uri" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" xmlns:dxei="http://schemas.devexpress.com/winfx/2008/xaml/editors/internal" xmlns:dxet="http://schemas.devexpress.com/winfx/2008/xaml/editors/themekeys" xmlns:dxi="http://schemas.devexpress.com/winfx/2008/xaml/core/internal" xmlns:dxt="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sys="clr-namespace:System;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ResourceDictionary.MergedDictionaries>
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win11Light.v24.1;component/Core/Core/Editors/Themes/Generic/ProgressBarEdit.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win11Light.v24.1;component/Core/Core/Editors/Themes/Win11Light/UICore.xaml" />
+  </ResourceDictionary.MergedDictionaries>
+  <Thickness x:Key="{dxet:ProgressBarEditThemeKey ResourceKey=PanelNoContentHorizontalMargin}">0, 8</Thickness>
+  <Thickness x:Key="{dxet:ProgressBarEditThemeKey ResourceKey=PanelNoContentVerticalMargin}">8, 0</Thickness>
+  <sys:Boolean x:Key="{dxet:ProgressBarEditThemeKey ResourceKey=ShowBorderDefault}">False</sys:Boolean>
+  <!-- Panel -->
+  <!--#region Panel Templates -->
+  <ControlTemplate x:Key="{dxet:ProgressBarEditStyleThemeKey ResourceKey=PanelTemplateHorizontal}" TargetType="{x:Type dxe:RangeEditBasePanel}">
+    <Grid x:Name="rootGrid">
+      <Grid.RowDefinitions>
+        <RowDefinition />
+        <RowDefinition />
+      </Grid.RowDefinitions>
+      <ContentControl Name="back" dxi:AppearanceOptions.Background="{Binding Path=(dxe:BaseEdit.OwnerEdit).(dxi:AppearanceOptions.Background), RelativeSource={RelativeSource Self}}" dxi:AppearanceOptions.BorderBrush="{Binding Path=(dxe:BaseEdit.OwnerEdit).(dxi:AppearanceOptions.BorderBrush), RelativeSource={RelativeSource Self}}" dxi:AppearanceOptions.BorderThickness="{Binding Path=(dxe:BaseEdit.OwnerEdit).(dxi:AppearanceOptions.BorderThickness), RelativeSource={RelativeSource Self}}" dxi:AppearanceOptions.CornerRadius="{Binding Path=(dxe:BaseEdit.OwnerEdit).(dxi:AppearanceOptions.CornerRadius), RelativeSource={RelativeSource Self}}" dxi:AppearanceOptions.HasBackground="{Binding Path=(dxe:BaseEdit.OwnerEdit).(dxi:AppearanceOptions.HasBackground), RelativeSource={RelativeSource Self}}" dxi:AppearanceOptions.HasBorderBrush="{Binding Path=(dxe:BaseEdit.OwnerEdit).(dxi:AppearanceOptions.HasBorderBrush), RelativeSource={RelativeSource Self}}" dxi:AppearanceOptions.HasBorderThickness="{Binding Path=(dxe:BaseEdit.OwnerEdit).(dxi:AppearanceOptions.HasBorderThickness), RelativeSource={RelativeSource Self}}" dxi:AppearanceOptions.HasCornerRadius="{Binding Path=(dxe:BaseEdit.OwnerEdit).(dxi:AppearanceOptions.HasCornerRadius), RelativeSource={RelativeSource Self}}" Grid.RowSpan="2" Style="{DynamicResource {dxet:ProgressBarEditThemeKey ResourceKey=PanelBackgroundHorizontalStyle}}" />
+      <ContentControl Name="foreground" Grid.RowSpan="2" Style="{DynamicResource {dxet:ProgressBarEditThemeKey ResourceKey=PanelForegroundStyle}}" />
+      <Grid x:Name="progressLine" Grid.Row="1" Grid.RowSpan="2" UseLayoutRounding="False">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="{Binding Path=(dxe:RangeEditBaseInfo.LayoutInfo).LeftSidePosition, Converter={dxe:GridLengthConverter}}" />
+          <ColumnDefinition Width="{Binding Path=(dxe:RangeEditBaseInfo.LayoutInfo).RightSidePosition, Converter={dxe:GridLengthConverter}}" />
+        </Grid.ColumnDefinitions>
+        <ContentControl Name="right" Grid.ColumnSpan="2" Style="{DynamicResource {dxet:ProgressBarEditThemeKey ResourceKey=PanelRightSideHorizontalStyle}}" />
+        <ContentControl Name="left" dxei:BaseEditAppearanceOptions.HasProgressBrush="{Binding Path=(dxe:BaseEdit.OwnerEdit).(dxei:BaseEditAppearanceOptions.HasProgressBrush), RelativeSource={RelativeSource Self}}" dxei:BaseEditAppearanceOptions.ProgressBrush="{Binding Path=(dxe:BaseEdit.OwnerEdit).(dxei:BaseEditAppearanceOptions.ProgressBrush), RelativeSource={RelativeSource Self}}" Style="{DynamicResource {dxet:ProgressBarEditThemeKey ResourceKey=PanelLeftSideHorizontalStyle}}" />
+      </Grid>
+      <ContentControl x:Name="PART_InnerContent" Content="{Binding Path=(dxe:BaseEdit.OwnerEdit).DisplayText}" ContentTemplate="{Binding Path=(dxe:BaseEdit.OwnerEdit).ContentTemplate}" HorizontalAlignment="Stretch" HorizontalContentAlignment="{Binding Path=(dxe:BaseEdit.OwnerEdit).HorizontalContentAlignment}" Opacity="{Binding Path=(dxe:BaseEdit.OwnerEdit).ContentDisplayMode, Converter={dx:BoolToVisibilityViaOpacityConverter}}" Style="{DynamicResource {dxet:ProgressBarEditThemeKey ResourceKey=ContentStyle}}" />
+    </Grid>
+    <ControlTemplate.Triggers>
+      <DataTrigger Binding="{Binding Path=(dxe:BaseEdit.OwnerEdit).ContentDisplayMode, RelativeSource={RelativeSource TemplatedParent}}" Value="Content">
+        <Setter Property="Content" TargetName="PART_InnerContent" Value="{Binding Path=(dxe:BaseEdit.OwnerEdit).Content}" />
+        <Setter Property="Grid.Row" TargetName="progressLine" Value="1" />
+      </DataTrigger>
+      <DataTrigger Binding="{Binding Path=(dxe:BaseEdit.OwnerEdit).ContentDisplayMode, RelativeSource={RelativeSource TemplatedParent}}" Value="None">
+        <Setter Property="Content" TargetName="PART_InnerContent" Value="{x:Null}" />
+        <Setter Property="Grid.Row" TargetName="progressLine" Value="0" />
+        <Setter Property="Margin" TargetName="rootGrid" Value="{DynamicResource {dxet:ProgressBarEditThemeKey ResourceKey=PanelNoContentHorizontalMargin}}" />
+      </DataTrigger>
+    </ControlTemplate.Triggers>
+  </ControlTemplate>
+  <ControlTemplate x:Key="{dxet:ProgressBarEditStyleThemeKey ResourceKey=PanelTemplateVertical}" TargetType="{x:Type dxe:RangeEditBasePanel}">
+    <Grid x:Name="rootGrid">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition />
+        <ColumnDefinition />
+      </Grid.ColumnDefinitions>
+      <ContentControl Name="back" dxi:AppearanceOptions.Background="{Binding Path=(dxe:BaseEdit.OwnerEdit).(dxi:AppearanceOptions.Background), RelativeSource={RelativeSource Self}}" dxi:AppearanceOptions.BorderBrush="{Binding Path=(dxe:BaseEdit.OwnerEdit).(dxi:AppearanceOptions.BorderBrush), RelativeSource={RelativeSource Self}}" dxi:AppearanceOptions.BorderThickness="{Binding Path=(dxe:BaseEdit.OwnerEdit).(dxi:AppearanceOptions.BorderThickness), RelativeSource={RelativeSource Self}}" dxi:AppearanceOptions.CornerRadius="{Binding Path=(dxe:BaseEdit.OwnerEdit).(dxi:AppearanceOptions.CornerRadius), RelativeSource={RelativeSource Self}}" dxi:AppearanceOptions.HasBackground="{Binding Path=(dxe:BaseEdit.OwnerEdit).(dxi:AppearanceOptions.HasBackground), RelativeSource={RelativeSource Self}}" dxi:AppearanceOptions.HasBorderBrush="{Binding Path=(dxe:BaseEdit.OwnerEdit).(dxi:AppearanceOptions.HasBorderBrush), RelativeSource={RelativeSource Self}}" dxi:AppearanceOptions.HasBorderThickness="{Binding Path=(dxe:BaseEdit.OwnerEdit).(dxi:AppearanceOptions.HasBorderThickness), RelativeSource={RelativeSource Self}}" dxi:AppearanceOptions.HasCornerRadius="{Binding Path=(dxe:BaseEdit.OwnerEdit).(dxi:AppearanceOptions.HasCornerRadius), RelativeSource={RelativeSource Self}}" Grid.ColumnSpan="2" Style="{DynamicResource {dxet:ProgressBarEditThemeKey ResourceKey=PanelBackgroundVerticalStyle}}" />
+      <ContentControl Name="foreground" Grid.ColumnSpan="2" Style="{DynamicResource {dxet:ProgressBarEditThemeKey ResourceKey=PanelForegroundStyle}}" />
+      <Grid x:Name="progressLine" Grid.Column="1" Grid.ColumnSpan="2" UseLayoutRounding="False">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="{Binding Path=(dxe:RangeEditBaseInfo.LayoutInfo).RightSidePosition, Converter={dxe:GridLengthConverter}}" />
+          <RowDefinition Height="{Binding Path=(dxe:RangeEditBaseInfo.LayoutInfo).LeftSidePosition, Converter={dxe:GridLengthConverter}}" />
+        </Grid.RowDefinitions>
+        <ContentControl Name="right" Grid.RowSpan="2" Style="{DynamicResource {dxet:ProgressBarEditThemeKey ResourceKey=PanelRightSideVerticalStyle}}" />
+        <ContentControl Name="left" dxei:BaseEditAppearanceOptions.HasProgressBrush="{Binding Path=(dxe:BaseEdit.OwnerEdit).(dxei:BaseEditAppearanceOptions.HasProgressBrush), RelativeSource={RelativeSource Self}}" dxei:BaseEditAppearanceOptions.ProgressBrush="{Binding Path=(dxe:BaseEdit.OwnerEdit).(dxei:BaseEditAppearanceOptions.ProgressBrush), RelativeSource={RelativeSource Self}}" Grid.Row="1" Style="{DynamicResource {dxet:ProgressBarEditThemeKey ResourceKey=PanelLeftSideVerticalStyle}}" />
+      </Grid>
+      <ContentControl x:Name="PART_InnerContent" Content="{Binding Path=(dxe:BaseEdit.OwnerEdit).DisplayText}" ContentTemplate="{Binding Path=(dxe:BaseEdit.OwnerEdit).ContentTemplate}" Opacity="{Binding Path=(dxe:BaseEdit.OwnerEdit).ContentDisplayMode, Converter={dx:BoolToVisibilityViaOpacityConverter}}" RenderTransformOrigin="0.5, 0.5" Style="{DynamicResource {dxet:ProgressBarEditThemeKey ResourceKey=ContentStyle}}" VerticalAlignment="Stretch">
+        <ContentControl.LayoutTransform>
+          <RotateTransform Angle="-90" />
+        </ContentControl.LayoutTransform>
+      </ContentControl>
+    </Grid>
+    <ControlTemplate.Triggers>
+      <DataTrigger Binding="{Binding Path=(dxe:BaseEdit.OwnerEdit).ContentDisplayMode, RelativeSource={RelativeSource TemplatedParent}}" Value="Content">
+        <Setter Property="Content" TargetName="PART_InnerContent" Value="{Binding Path=(dxe:BaseEdit.OwnerEdit).Content}" />
+        <Setter Property="Grid.Column" TargetName="progressLine" Value="1" />
+      </DataTrigger>
+      <DataTrigger Binding="{Binding Path=(dxe:BaseEdit.OwnerEdit).ContentDisplayMode, RelativeSource={RelativeSource TemplatedParent}}" Value="None">
+        <Setter Property="Content" TargetName="PART_InnerContent" Value="{x:Null}" />
+        <Setter Property="Grid.Column" TargetName="progressLine" Value="0" />
+        <Setter Property="Margin" TargetName="rootGrid" Value="{DynamicResource {dxet:ProgressBarEditThemeKey ResourceKey=PanelNoContentVerticalMargin}}" />
+      </DataTrigger>
+    </ControlTemplate.Triggers>
+  </ControlTemplate>
+  <!--#endregion-->
+  <!--#region Content Templates -->
+  <DataTemplate x:Key="{dxet:ProgressBarEditThemeKey ResourceKey=ContentTemplate}">
+    <TextBlock HorizontalAlignment="Stretch" Text="{Binding}" TextAlignment="Center" VerticalAlignment="Center" />
+  </DataTemplate>
+  <!--#endregion-->
+  <!--#region Foreground And Background Templates -->
+  <ControlTemplate x:Key="{dxet:ProgressBarEditThemeKey ResourceKey=PanelForegroundTemplate}" TargetType="{x:Type ContentControl}">
+    <Rectangle Fill="Transparent" cs:id="Rectangle_0000" />
+  </ControlTemplate>
+  <Style x:Key="{dxet:ProgressBarEditThemeKey ResourceKey=PanelForegroundStyle}" TargetType="{x:Type ContentControl}">
+    <Setter Property="Focusable" Value="False" />
+    <Setter Property="Template" Value="{DynamicResource {dxet:ProgressBarEditThemeKey ResourceKey=PanelForegroundTemplate}}" />
+  </Style>
+  <ControlTemplate x:Key="{dxet:ProgressBarEditThemeKey ResourceKey=PanelBackgroundHorizontalTemplate}" TargetType="{x:Type ContentControl}">
+    <Border x:Name="Root" Background="Transparent" cs:id="Grid_0000">
+      <ContentPresenter x:Name="Content" />
+    </Border>
+    <ControlTemplate.Triggers>
+      <DataTrigger Binding="{Binding Path=(dxe:BaseEdit.OwnerEdit).EditMode}" Value="InplaceInactive">
+        <Setter Property="Background" TargetName="Root" Value="Transparent" cs:id="Setter_0000" />
+      </DataTrigger>
+      <DataTrigger Binding="{Binding Path=(dxe:BaseEdit.OwnerEdit).EditMode}" Value="InplaceActive">
+        <Setter Property="Background" TargetName="Root" Value="Transparent" cs:id="Setter_0001" />
+      </DataTrigger>
+      <Trigger Property="dxi:AppearanceOptions.HasBackground" Value="True">
+        <Setter Property="Background" TargetName="Root" Value="{Binding Path=(dxi:AppearanceOptions.Background), RelativeSource={RelativeSource TemplatedParent}}" />
+      </Trigger>
+      <Trigger Property="dxi:AppearanceOptions.HasBorderBrush" Value="True">
+        <Setter Property="BorderBrush" TargetName="Root" Value="{Binding Path=(dxi:AppearanceOptions.BorderBrush), RelativeSource={RelativeSource TemplatedParent}}" />
+      </Trigger>
+      <Trigger Property="dxi:AppearanceOptions.HasBorderThickness" Value="True">
+        <Setter Property="BorderThickness" TargetName="Root" Value="{Binding Path=(dxi:AppearanceOptions.BorderThickness), RelativeSource={RelativeSource TemplatedParent}}" />
+      </Trigger>
+      <Trigger Property="dxi:AppearanceOptions.HasCornerRadius" Value="True">
+        <Setter Property="CornerRadius" TargetName="Root" Value="{Binding Path=(dxi:AppearanceOptions.CornerRadius), RelativeSource={RelativeSource TemplatedParent}}" />
+      </Trigger>
+    </ControlTemplate.Triggers>
+  </ControlTemplate>
+  <ControlTemplate x:Key="{dxet:ProgressBarEditThemeKey ResourceKey=PanelBackgroundVerticalTemplate}" TargetType="{x:Type ContentControl}">
+    <Border x:Name="Root" Background="Transparent" cs:id="Grid_0000">
+      <ContentPresenter x:Name="Content" />
+    </Border>
+    <ControlTemplate.Triggers>
+      <DataTrigger Binding="{Binding Path=(dxe:BaseEdit.OwnerEdit).EditMode}" Value="InplaceInactive">
+        <Setter Property="Background" TargetName="Root" Value="Transparent" cs:id="Setter_0000" />
+      </DataTrigger>
+      <DataTrigger Binding="{Binding Path=(dxe:BaseEdit.OwnerEdit).EditMode}" Value="InplaceActive">
+        <Setter Property="Background" TargetName="Root" Value="Transparent" cs:id="Setter_0001" />
+      </DataTrigger>
+      <Trigger Property="dxi:AppearanceOptions.HasBackground" Value="True">
+        <Setter Property="Background" TargetName="Root" Value="{Binding Path=(dxi:AppearanceOptions.Background), RelativeSource={RelativeSource TemplatedParent}}" />
+      </Trigger>
+      <Trigger Property="dxi:AppearanceOptions.HasBorderBrush" Value="True">
+        <Setter Property="BorderBrush" TargetName="Root" Value="{Binding Path=(dxi:AppearanceOptions.BorderBrush), RelativeSource={RelativeSource TemplatedParent}}" />
+      </Trigger>
+      <Trigger Property="dxi:AppearanceOptions.HasBorderThickness" Value="True">
+        <Setter Property="BorderThickness" TargetName="Root" Value="{Binding Path=(dxi:AppearanceOptions.BorderThickness), RelativeSource={RelativeSource TemplatedParent}}" />
+      </Trigger>
+      <Trigger Property="dxi:AppearanceOptions.HasCornerRadius" Value="True">
+        <Setter Property="CornerRadius" TargetName="Root" Value="{Binding Path=(dxi:AppearanceOptions.CornerRadius), RelativeSource={RelativeSource TemplatedParent}}" />
+      </Trigger>
+    </ControlTemplate.Triggers>
+  </ControlTemplate>
+  <Style x:Key="{dxet:ProgressBarEditThemeKey ResourceKey=PanelBackgroundHorizontalStyle}" TargetType="{x:Type ContentControl}">
+    <Setter Property="Focusable" Value="False" />
+    <Setter Property="Template" Value="{DynamicResource {dxet:ProgressBarEditThemeKey ResourceKey=PanelBackgroundHorizontalTemplate}}" />
+  </Style>
+  <Style x:Key="{dxet:ProgressBarEditThemeKey ResourceKey=PanelBackgroundVerticalStyle}" TargetType="{x:Type ContentControl}">
+    <Setter Property="Focusable" Value="False" />
+    <Setter Property="Template" Value="{DynamicResource {dxet:ProgressBarEditThemeKey ResourceKey=PanelBackgroundVerticalTemplate}}" />
+  </Style>
+  <!--#endregion-->
+</ResourceDictionary>

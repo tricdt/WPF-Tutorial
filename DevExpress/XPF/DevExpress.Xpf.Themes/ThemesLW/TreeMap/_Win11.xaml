@@ -1,0 +1,27 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+    xmlns:dxi="http://schemas.devexpress.com/winfx/2008/xaml/core/internal"
+    xmlns:dxt="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys"
+    xmlns:dxtmt="http://schemas.devexpress.com/winfx/2008/xaml/treemap/themekeys"
+    xmlns:cs="colorscheme_ignorable_uri">
+    <ResourceDictionary.MergedDictionaries>
+        <dxi:PaletteResourceDictionary />
+    </ResourceDictionary.MergedDictionaries>
+    <SolidColorBrush x:Key="{dxtmt:LWKey TreeMapBrushes.ControlBorderBrush}" Color="{StaticResource Color.Border}" />
+    <SolidColorBrush x:Key="{dxtmt:LWKey TreeMapBrushes.GroupBorderBrush}" Color="{StaticResource Color.Border}" />
+    <SolidColorBrush x:Key="{dxtmt:LWKey TreeMapBrushes.GroupBackground}" Color="{StaticResource Color.Control.Background}" Opacity="0.62" />
+    <SolidColorBrush x:Key="{dxtmt:LWKey TreeMapBrushes.GroupForeground}" Color="{StaticResource Color.Accent}" />
+    <SolidColorBrush x:Key="{dxtmt:LWKey TreeMapBrushes.SubGroupBackground}" Color="{StaticResource Color.Editor.Background}" />
+    <SolidColorBrush x:Key="{dxtmt:LWKey TreeMapBrushes.SubGroupForeground}" Color="{StaticResource Color.Foreground.Primary}" />
+    <SolidColorBrush x:Key="{dxtmt:LWKey TreeMapBrushes.ToolTipBackground}" Color="{StaticResource Color.Accent}" />
+    <SolidColorBrush x:Key="{dxtmt:LWKey TreeMapBrushes.ToolTipForeground}" Color="{StaticResource Color.Foreground.Alt}" />
+    <sys:Double x:Key="{dxtmt:LWKey TreeMapBrushes.GroupFontSize}">12</sys:Double>
+    <FontWeight x:Key="{dxtmt:LWKey TreeMapBrushes.GroupFontWeight}">Bold</FontWeight>
+    <sys:Double x:Key="{dxtmt:LWKey TreeMapBrushes.SubGroupFontSize}">12</sys:Double>
+    <FontWeight x:Key="{dxtmt:LWKey TreeMapBrushes.SubGroupFontWeight}">Bold</FontWeight>
+    <sys:Double x:Key="{dxtmt:LWKey TreeMapBrushes.ToolTipFontSize}">12</sys:Double>
+    <FontWeight x:Key="{dxtmt:LWKey TreeMapBrushes.ToolTipFontWeight}">Bold</FontWeight>
+</ResourceDictionary>

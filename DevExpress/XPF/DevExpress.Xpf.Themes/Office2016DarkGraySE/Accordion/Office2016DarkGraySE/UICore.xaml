@@ -1,0 +1,28 @@
+<ResourceDictionary mc:Ignorable="cs" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:cs="colorscheme_ignorable_uri" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxa="http://schemas.devexpress.com/winfx/2008/xaml/accordion" xmlns:dxat="http://schemas.devexpress.com/winfx/2008/xaml/accordion/themekeys" xmlns:dxi="http://schemas.devexpress.com/winfx/2008/xaml/core/internal" xmlns:dxt="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sys="clr-namespace:System;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ResourceDictionary.MergedDictionaries>
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016DarkGraySE.v24.1;component/UICore/UIData.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016DarkGraySE.v24.1;component/Accordion/Office2016DarkGraySE/UICustom.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016DarkGraySE.v24.1;component/Accordion/Office2016DarkGraySE/UIPreset.xaml" />
+  </ResourceDictionary.MergedDictionaries>
+  <SolidColorBrush x:Key="{dxat:AccordionItemThemeKeys ResourceKey=ItemHeaderDefaultForeground}" Color="#FFEFEFEF" x:Uid="@Color=Foreground" />
+  <SolidColorBrush x:Key="{dxat:AccordionItemThemeKeys ResourceKey=ItemHeaderHoverForeground}" Color="#FFEFEFEF" x:Uid="@Color=HoverForeground" />
+  <SolidColorBrush x:Key="{dxat:AccordionItemThemeKeys ResourceKey=ItemHeaderPressedForeground}" Color="#FFEFEFEF" x:Uid="@Color=SelectionForeground" />
+  <SolidColorBrush x:Key="{dxat:AccordionItemThemeKeys ResourceKey=ItemHeaderDisabledForeground}" Color="#FFEFEFEF" x:Uid="@Color=Foreground" />
+  <SolidColorBrush x:Key="{dxat:AccordionItemThemeKeys ResourceKey=ItemHeaderFocusedForeground}" Color="#FFEFEFEF" x:Uid="@Color=Foreground" />
+  <SolidColorBrush x:Key="{dxat:AccordionItemThemeKeys ResourceKey=ItemHeaderSelectedForeground}" Color="#FFEFEFEF" x:Uid="@Color=SelectionForeground" />
+  <SolidColorBrush x:Key="{dxat:AccordionItemThemeKeys ResourceKey=ItemHeaderSelectedInactiveForeground}" Color="#FFEFEFEF" x:Uid="@Color=SelectionForeground" />
+  <SolidColorBrush x:Key="{dxat:AccordionItemThemeKeys ResourceKey=RootItemHeaderDefaultForeground}" Color="#FFC2C2C2" x:Uid="@Color=ForegroundDark" />
+  <SolidColorBrush x:Key="{dxat:AccordionItemThemeKeys ResourceKey=RootItemHeaderHoverForeground}" Color="#FFEFEFEF" x:Uid="@Color=Foreground" />
+  <SolidColorBrush x:Key="{dxat:AccordionItemThemeKeys ResourceKey=RootItemHeaderPressedForeground}" Color="#FFEFEFEF" x:Uid="@Color=Foreground" />
+  <SolidColorBrush x:Key="{dxat:AccordionItemThemeKeys ResourceKey=RootItemHeaderDisabledForeground}" Color="#FFC2C2C2" x:Uid="@Color=ForegroundDark" />
+  <SolidColorBrush x:Key="{dxat:AccordionItemThemeKeys ResourceKey=RootItemHeaderFocusedForeground}" Color="#FFEFEFEF" x:Uid="@Color=Foreground" />
+  <SolidColorBrush x:Key="{dxat:AccordionItemThemeKeys ResourceKey=RootItemHeaderSelectedForeground}" Color="#FFEFEFEF" x:Uid="@Color=Foreground" />
+  <SolidColorBrush x:Key="{dxat:AccordionItemThemeKeys ResourceKey=RootItemHeaderSelectedInactiveForeground}" Color="#FFEFEFEF" x:Uid="@Color=Foreground" />
+  <SolidColorBrush x:Key="{dxat:AccordionThemeKeys ResourceKey=Background}" Color="#FF666666" x:Uid="@Color=Window.Background" />
+  <SolidColorBrush x:Key="{dxat:AccordionThemeKeys ResourceKey=BorderBrush}" Color="#FF666666" x:Uid="@Color=Window.Background" />
+  <SolidColorBrush x:Key="{dxat:AccordionItemThemeKeys ResourceKey=TextForeground}" Color="#FFEFEFEF" x:Uid="@Color=Foreground" />
+  <SolidColorBrush x:Key="{dxat:AccordionThemeKeys ResourceKey=SearchControlNullTextForeground}" Color="#FFEFEFEF" Opacity="0.62" x:Uid="@Color=Foreground" />
+  <SolidColorBrush x:Key="{dxat:AccordionThemeKeys ResourceKey=SearchControlClearButtonFill}" Color="#FFEFEFEF" x:Uid="@Color=Foreground" />
+  <SolidColorBrush x:Key="{dxat:AccordionThemeKeys ResourceKey=SearchControlSearchButtonFill}" Color="#FFEFEFEF" x:Uid="@Color=Foreground" />
+  <SolidColorBrush x:Key="{dxat:AccordionThemeKeys ResourceKey=HeaderForeground}" Color="#FFEFEFEF" x:Uid="@Color=Foreground" />
+</ResourceDictionary>

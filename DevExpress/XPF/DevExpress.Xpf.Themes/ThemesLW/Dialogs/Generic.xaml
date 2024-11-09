@@ -1,0 +1,616 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+    xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
+    xmlns:dxbt="http://schemas.devexpress.com/winfx/2008/xaml/bars/themekeys"
+    xmlns:dxdlg="clr-namespace:DevExpress.Xpf.Dialogs;assembly=DevExpress.Xpf.Dialogs.v24.1"
+    xmlns:dxdlgn="clr-namespace:DevExpress.Xpf.Dialogs.Native;assembly=DevExpress.Xpf.Dialogs.v24.1"
+    xmlns:dxdlgt="clr-namespace:DevExpress.Xpf.Dialogs.Themes;assembly=DevExpress.Xpf.Dialogs.v24.1"
+    xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+    xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
+    xmlns:dxgh="clr-namespace:DevExpress.Xpf.Grid.Hierarchy;assembly=DevExpress.Xpf.Grid.v24.1.Core"
+    xmlns:dxgt="http://schemas.devexpress.com/winfx/2008/xaml/grid/themekeys"
+    xmlns:dxi="http://schemas.devexpress.com/winfx/2008/xaml/core/internal"
+    xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
+    xmlns:dxt="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys">
+
+    <dxdlgn:DialogStringIdConverter x:Key="DialogStringIdConverter" />
+    <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+    <dx:ObjectToVisibilityConverter x:Key="ObjectToVisibilityConverter" />
+
+
+    <!--#region C:\work\2023.1\XPF\DevExpress.Xpf.Dialogs\DevExpress.Xpf.Dialogs\Themes\Generic\Controls.xaml-->
+    <Style x:Key="{dxdlgt:LWKey Dialogs.DialogWindowStyle}" BasedOn="{dx:TargetStaticResource {dxt:LWKey ThemedWindow.WindowStyle}, TargetDictionary={dxi:ThemeResourceDictionary Path='Core/Controls/Controls.Generic.xaml'}}" TargetType="{x:Type dxdlg:DialogWindow}">
+        <Setter Property="ShowIcon" Value="True" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="ResizeBorderThickness" Value="3" />
+        <Style.Triggers>
+            <Trigger Property="WindowStyle" Value="ToolWindow">
+                <Setter Property="ShowIcon" Value="True" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <Style x:Key="{dxdlgt:LWKey Dialogs.FileDialogWindowStyle}" BasedOn="{StaticResource {dxdlgt:LWKey Dialogs.DialogWindowStyle}}" TargetType="{x:Type dxdlg:FileDialogWindow}">
+        <Setter Property="Width" Value="900" />
+        <Setter Property="MinWidth" Value="600" />
+        <Setter Property="Height" Value="600" />
+        <Setter Property="MinHeight" Value="400" />
+    </Style>
+    <Style x:Key="{dxdlgt:LWKey Dialogs.FolderBrowserWindowStyle}" BasedOn="{StaticResource {dxdlgt:LWKey Dialogs.DialogWindowStyle}}" TargetType="{x:Type dxdlg:FolderBrowserWindow}">
+        <Setter Property="Width" Value="400" />
+        <Setter Property="MinWidth" Value="320" />
+        <Setter Property="Height" Value="600" />
+        <Setter Property="MinHeight" Value="380" />
+    </Style>
+
+    <Style x:Key="{dxdlgt:LWKey Dialogs.FoldersViewerViewStyle}" TargetType="{x:Type dxdlgn:DialogTreeListView}">
+        <Setter Property="AllowEditing" Value="True" />
+        <Setter Property="AllowScrollingOnDrag" Value="True" />
+        <Setter Property="AllowTreeIndentScrolling" Value="True" />
+        <Setter Property="FetchSublevelChildrenOnExpand" Value="False" />
+        <Setter Property="NavigationStyle" Value="Row" />
+        <Setter Property="ShowColumnHeaders" Value="False" />
+        <Setter Property="ShowIndicator" Value="False" />
+        <Setter Property="ShowHorizontalLines" Value="False" />
+        <Setter Property="ShowNodeImages" Value="True" />
+        <Setter Property="ShowVerticalLines" Value="False" />
+        <Setter Property="ShowFocusedRectangle" Value="False" />
+        <Setter Property="TreeLineStyle" Value="None" />
+        <Setter Property="TreeDerivationMode" Value="ChildNodesSelector" />
+        <Setter Property="VerticalScrollbarVisibility" Value="Auto" />
+        <Setter Property="dx:ScrollBarExtensions.ScrollBarMode" Value="TouchOverlap" />
+    </Style>
+
+    <!-- begin view styles -->
+    <Style x:Key="ViewBaseStyle" TargetType="{x:Type dxdlgn:DialogCardView}">
+        <Style.Resources>
+            <!-- begin Image Style -->
+            <Style x:Key="ImageStyle" TargetType="{x:Type dxe:ImageEdit}">
+                <Setter Property="IsReadOnly" Value="True" />
+                <Setter Property="EditMode" Value="InplaceInactive" />
+                <Setter Property="ShowMenu" Value="False" />
+                <Setter Property="ShowBorder" Value="False" />
+                <Setter Property="SnapsToDevicePixels" Value="True" />
+                <Setter Property="dxmvvm:Interaction.BehaviorsTemplate">
+                    <Setter.Value>
+                        <DataTemplate>
+                            <ItemsControl>
+                                <dxdlgn:DialogCardViewQueryImageBehavior ImageSelector="{Binding RelativeSource={RelativeSource AncestorType={x:Type dxdlgn:DialogViewModeViewBase}}}" Item="{Binding Path=Row}" />
+                            </ItemsControl>
+                        </DataTemplate>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="RenderOptions.BitmapScalingMode" Value="HighQuality" />
+            </Style>
+            <!-- endbegin -->
+            <!-- begin Name Styles -->
+            <Style x:Key="PropertyValueStyle" TargetType="{x:Type dxg:CardCellContentPresenter}">
+                <Setter Property="Foreground" Value="{DynamicResource {dxgt:LWKey GridRow.TextUnfocusedBrush}}" />
+                <Style.Triggers>
+                    <DataTrigger Binding="{Binding IsMouseOver, RelativeSource={RelativeSource AncestorType=Border}}" Value="True">
+                        <Setter Property="Foreground" Value="{DynamicResource {dxgt:LWKey GridRow.TextRowSelectedBrush}}" />
+                    </DataTrigger>
+                    <DataTrigger Binding="{Binding IsSelected}" Value="True">
+                        <Setter Property="Foreground" Value="{DynamicResource {dxgt:LWKey GridRow.TextFocusedBrush}}" />
+                    </DataTrigger>
+                    <Trigger Property="IsFocusedCell" Value="True">
+                        <Setter Property="Foreground" Value="{DynamicResource {dxgt:LWKey GridRow.TextUnfocusedBrush}}" />
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+            <Style x:Key="EditablePropertyValueStyle" BasedOn="{StaticResource PropertyValueStyle}" TargetType="{x:Type dxg:CardCellContentPresenter}">
+                <Setter Property="NavigationIndex" Value="0" />
+                <Setter Property="FieldName" Value="Name" />
+            </Style>
+
+            <Style x:Key="PropertyNameStyle" TargetType="{x:Type TextBlock}">
+                <Setter Property="Margin" Value="5,4" />
+                <Setter Property="Foreground" Value="{DynamicResource {dxgt:LWKey GridRow.TextUnfocusedBrush}}" />
+                <Style.Triggers>
+                    <DataTrigger Binding="{Binding IsMouseOver, RelativeSource={RelativeSource AncestorType=Border}}" Value="True">
+                        <Setter Property="Foreground" Value="{DynamicResource {dxgt:LWKey GridRow.TextRowSelectedBrush}}" />
+                    </DataTrigger>
+                    <DataTrigger Binding="{Binding IsSelected}" Value="True">
+                        <Setter Property="Foreground" Value="{DynamicResource {dxgt:LWKey GridRow.TextFocusedBrush}}" />
+                    </DataTrigger>
+                </Style.Triggers>
+            </Style>
+            <!-- end -->
+
+            <!-- begin Card Container Template -->
+            <Style x:Key="CardBorderStyle" TargetType="{x:Type Border}">
+                <Setter Property="Background" Value="{DynamicResource {dxgt:LWKey GridRow.BorderNoneBrush}}" />
+                <Style.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter Property="Background" Value="{DynamicResource {dxgt:LWKey GridRow.BorderSelectedBrush}}" />
+                    </Trigger>
+                    <DataTrigger Binding="{Binding IsSelected}" Value="True">
+                        <Setter Property="Background" Value="{DynamicResource {dxgt:LWKey GridRow.BorderFocusedBrush}}" />
+                    </DataTrigger>
+                </Style.Triggers>
+            </Style>
+            <ControlTemplate x:Key="CardContainerTemplate" TargetType="{x:Type ContentControl}">
+                <Grid
+                    Width="Auto"
+                    Height="Auto"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Top"
+                    ClipToBounds="False">
+                    <dx:DXBorder
+                        x:Name="borderCard"
+                        Width="Auto"
+                        Height="Auto"
+                        Style="{StaticResource CardBorderStyle}">
+                        <ContentPresenter />
+                    </dx:DXBorder>
+                </Grid>
+            </ControlTemplate>
+            <!-- end -->
+            <!-- begin Card Header Template -->
+            <ControlTemplate x:Key="{dxgt:LWKey GridCard.HeaderPanelTemplate}" TargetType="{x:Type dxg:GridCardHeaderControl}">
+                <ContentPresenter Visibility="Collapsed" />
+            </ControlTemplate>
+            <!-- end -->
+            <!-- begin GridCard Style -->
+            <Style TargetType="{x:Type dxg:GridCard}">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate>
+                            <ContentControl
+                                x:Name="card"
+                                FocusVisualStyle="{x:Null}"
+                                Focusable="False"
+                                Style="{Binding Path=(dxg:GridControl.ActiveView).CardStyle, RelativeSource={RelativeSource TemplatedParent}}"
+                                Template="{StaticResource CardContainerTemplate}">
+                                <ContentControl ClipToBounds="False" FocusVisualStyle="{x:Null}" Focusable="False">
+                                    <dxg:GridCardContentPresenter x:Name="presenter" Margin="3,0" ClipToBounds="False" />
+                                </ContentControl>
+                            </ContentControl>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <!-- end -->
+        </Style.Resources>
+        <Setter Property="IsColumnChooserVisible" Value="False" />
+        <Setter Property="NavigationStyle" Value="Row" />
+        <Setter Property="SeparatorThickness" Value="0" />
+        <Setter Property="ShowCardExpandButton" Value="False" />
+        <Setter Property="ShowColumnHeaders" Value="False" />
+        <Setter Property="ShowFilterPanelMode" Value="Never" />
+        <Setter Property="ShowGroupedColumns" Value="False" />
+        <Setter Property="ShowGroupPanel" Value="False" />
+        <Setter Property="ShowSearchPanelMode" Value="Never" />
+        <Setter Property="ShowFocusedRectangle" Value="False" />
+        <Setter Property="ShowSelectionRectangle" Value="True" />
+    </Style>
+
+    <Style x:Key="{dxdlgt:LWKey Dialogs.IconViewStyle}" BasedOn="{StaticResource ViewBaseStyle}" TargetType="{x:Type dxdlgn:DialogCardView}">
+        <Style.Resources>
+            <ResourceDictionary>
+                <!-- begin IconViewCardTemplate -->
+                <DataTemplate x:Key="IconViewCardTemplate">
+                    <ContentControl Background="Transparent">
+                        <Grid ClipToBounds="False">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <dxe:ImageEdit
+                                x:Name="lblImage"
+                                Grid.Column="1"
+                                Margin="6,1"
+                                Style="{StaticResource ImageStyle}" />
+                            <dxg:CardCellContentPresenter
+                                x:Name="lblFileName"
+                                Grid.Row="1"
+                                MaxWidth="60"
+                                MaxHeight="60"
+                                Style="{StaticResource EditablePropertyValueStyle}" />
+                        </Grid>
+                    </ContentControl>
+                </DataTemplate>
+                <!-- end -->
+            </ResourceDictionary>
+        </Style.Resources>
+        <Setter Property="CardMargin" Value="1" />
+        <Setter Property="CardLayout" Value="Rows" />
+        <Setter Property="CardTemplate" Value="{StaticResource IconViewCardTemplate}" />
+    </Style>
+    <Style x:Key="{dxdlgt:LWKey Dialogs.SmallIconViewStyle}" BasedOn="{StaticResource ViewBaseStyle}" TargetType="{x:Type dxdlgn:DialogCardView}">
+        <Style.Resources>
+            <ResourceDictionary>
+                <!-- begin SmallIconViewCardTemplate -->
+                <DataTemplate x:Key="SmallIconViewCardTemplate">
+                    <ContentControl Background="Transparent">
+                        <Grid
+                            Width="340"
+                            Margin="0,3"
+                            ClipToBounds="False"
+                            UseLayoutRounding="True">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <dxe:ImageEdit Style="{StaticResource ImageStyle}" />
+                            <dxg:CardCellContentPresenter x:Name="lblFileName" Grid.Column="1" Style="{StaticResource EditablePropertyValueStyle}" />
+                        </Grid>
+                    </ContentControl>
+                </DataTemplate>
+                <!-- end -->
+            </ResourceDictionary>
+        </Style.Resources>
+        <Setter Property="CardMargin" Value="1" />
+        <Setter Property="CardLayout" Value="Rows" />
+        <Setter Property="CardTemplate" Value="{StaticResource SmallIconViewCardTemplate}" />
+    </Style>
+    <Style x:Key="{dxdlgt:LWKey Dialogs.ListViewStyle}" BasedOn="{StaticResource ViewBaseStyle}" TargetType="{x:Type dxdlgn:DialogCardView}">
+        <Style.Resources>
+            <ResourceDictionary>
+                <!-- begin ListViewCardTemplate -->
+                <DataTemplate x:Key="ListViewCardTemplate">
+                    <ContentControl Background="Transparent">
+                        <Grid ClipToBounds="False" UseLayoutRounding="True">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <dxe:ImageEdit Style="{StaticResource ImageStyle}" />
+                            <dxg:CardCellContentPresenter x:Name="lblFileName" Grid.Column="1" Style="{StaticResource EditablePropertyValueStyle}" />
+                        </Grid>
+                    </ContentControl>
+                </DataTemplate>
+                <!-- end -->
+            </ResourceDictionary>
+        </Style.Resources>
+        <Setter Property="CardMargin" Value="10, 1, 5, 1" />
+        <Setter Property="CardLayout" Value="Columns" />
+        <Setter Property="CardTemplate" Value="{StaticResource ListViewCardTemplate}" />
+    </Style>
+    <Style x:Key="{dxdlgt:LWKey Dialogs.TilesViewStyle}" BasedOn="{StaticResource ViewBaseStyle}" TargetType="{x:Type dxdlgn:DialogCardView}">
+        <Style.Resources>
+            <ResourceDictionary>
+                <!-- begin TilesViewCardTemplate -->
+                <DataTemplate x:Key="TilesViewCardTemplate">
+                    <ContentControl Background="Transparent">
+                        <Grid Width="240" ClipToBounds="False" UseLayoutRounding="True">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="5" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <dxe:ImageEdit Grid.RowSpan="3" Style="{StaticResource ImageStyle}" />
+                            <dxg:CardCellContentPresenter
+                                x:Name="lblFileName"
+                                Grid.Row="0"
+                                Grid.Column="2"
+                                Margin="-4,-2"
+                                Style="{StaticResource EditablePropertyValueStyle}" />
+                            <dxg:CardCellContentPresenter
+                                x:Name="lblTypeName"
+                                FieldName="TypeName"
+                                Grid.Row="1"
+                                Grid.Column="2"
+                                Margin="-4,-2"
+                                Style="{StaticResource PropertyValueStyle}" />
+                            <dxg:CardCellContentPresenter
+                                x:Name="lblDate"
+                                FieldName="DateModified"
+                                Grid.Row="2"
+                                Grid.Column="2"
+                                Margin="-4,-2"
+                                Style="{StaticResource PropertyValueStyle}" />
+                        </Grid>
+                    </ContentControl>
+                </DataTemplate>
+                <!-- end -->
+            </ResourceDictionary>
+        </Style.Resources>
+        <Setter Property="CardMargin" Value="3" />
+        <Setter Property="CardLayout" Value="Rows" />
+        <Setter Property="CardTemplate" Value="{StaticResource TilesViewCardTemplate}" />
+    </Style>
+    <Style x:Key="{dxdlgt:LWKey Dialogs.ContentViewStyle}" BasedOn="{StaticResource ViewBaseStyle}" TargetType="{x:Type dxdlgn:DialogCardView}">
+        <Style.Resources>
+            <ResourceDictionary>
+                <!-- begin ContentViewCardTemplate -->
+                <DataTemplate x:Key="ContentViewCardTemplate">
+                    <ContentControl Background="Transparent">
+                        <Grid ClipToBounds="False" UseLayoutRounding="True">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="210" />
+                            </Grid.ColumnDefinitions>
+                            <dxe:ImageEdit Margin="0,0,5,0" Style="{StaticResource ImageStyle}" />
+                            <Grid Grid.Column="1">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <dxg:CardCellContentPresenter
+                                    x:Name="lblFileName"
+                                    Grid.Row="0"
+                                    Grid.ColumnSpan="3"
+                                    MaxWidth="600"
+                                    Style="{StaticResource EditablePropertyValueStyle}" />
+                                <TextBlock
+                                    Grid.Row="1"
+                                    Grid.Column="0"
+                                    Style="{StaticResource PropertyNameStyle}"
+                                    Text="Type:" />
+                                <dxg:CardCellContentPresenter
+                                    x:Name="lblTypeName"
+                                    FieldName="TypeName"
+                                    Grid.Row="1"
+                                    Grid.Column="1"
+                                    Style="{StaticResource PropertyValueStyle}" />
+                            </Grid>
+                            <Grid Grid.Column="3">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <TextBlock
+                                    Grid.Row="0"
+                                    Grid.Column="0"
+                                    Style="{StaticResource PropertyNameStyle}"
+                                    Text="Date modified:" />
+                                <dxg:CardCellContentPresenter
+                                    x:Name="lblDateModified"
+                                    FieldName="DateModified"
+                                    Grid.Row="0"
+                                    Grid.Column="1"
+                                    Style="{StaticResource PropertyValueStyle}" />
+                                <TextBlock
+                                    Grid.Row="1"
+                                    Grid.Column="0"
+                                    Style="{StaticResource PropertyNameStyle}"
+                                    Text="Size:" />
+                                <dxg:CardCellContentPresenter
+                                    x:Name="lblSize"
+                                    FieldName="Size"
+                                    Grid.Row="1"
+                                    Grid.Column="1"
+                                    Style="{StaticResource PropertyValueStyle}" />
+                            </Grid>
+                        </Grid>
+                    </ContentControl>
+                </DataTemplate>
+                <!-- end -->
+            </ResourceDictionary>
+        </Style.Resources>
+        <Setter Property="MaxCardCountInRow" Value="1" />
+        <Setter Property="SeparatorThickness" Value="1" />
+        <Setter Property="CardMargin" Value="0" />
+        <Setter Property="CardLayout" Value="Rows" />
+        <Setter Property="CardAlignment" Value="Stretch" />
+        <Setter Property="CardTemplate" Value="{StaticResource ContentViewCardTemplate}" />
+    </Style>
+    <Style x:Key="{dxdlgt:LWKey Dialogs.DetailsViewStyle}" TargetType="{x:Type dxdlgn:DialogTreeListView}">
+        <Setter Property="AllowTreeIndentScrolling" Value="True" />
+        <Setter Property="AllowEditing" Value="True" />
+        <Setter Property="AllowMoveColumnToDropArea" Value="False" />
+        <Setter Property="AllowColumnFiltering" Value="False" />
+        <Setter Property="NavigationStyle" Value="Row" />
+        <Setter Property="ShowHorizontalLines" Value="False" />
+        <Setter Property="ShowIndicator" Value="False" />
+        <Setter Property="ShowSearchPanelMode" Value="Never" />
+        <Setter Property="ShowNodeImages" Value="True" />
+        <Setter Property="ShowVerticalLines" Value="False" />
+        <Setter Property="ShowFocusedRectangle" Value="False" />
+        <Setter Property="ShowSelectionRectangle" Value="True" />
+        <Setter Property="ShowRootIndent" Value="False" />
+        <Setter Property="TreeLineStyle" Value="None" />
+        <Setter Property="dx:ScrollBarExtensions.ScrollBarMode" Value="TouchOverlap" />
+    </Style>
+    <!-- end view styles -->
+    <!--#endregion C:\work\2023.1\XPF\DevExpress.Xpf.Dialogs\DevExpress.Xpf.Dialogs\Themes\Generic\Controls.xaml-->
+
+    <!--#region C:\work\2023.1\XPF\DevExpress.Xpf.Dialogs\DevExpress.Xpf.Dialogs\Themes\Generic\Resources.xaml-->
+    <dxdlgn:ContextMenuResources
+        x:Key="{dxdlgt:LWKey Dialogs.ContextMenuResources}"
+        MenuBackground="#FFFFFF"
+        MenuItemDisabledBackground="#FFFFFF"
+        MenuItemDisabledForeground="#BBBBBB"
+        MenuItemGlyphPadding="3, 0"
+        MenuItemHoverBackground="#CFE7F8"
+        MenuItemHoverForeground="#3C3C3C"
+        MenuItemImagePadding="6,0"
+        MenuItemNormalBackground="#FFFFFF"
+        MenuItemNormalForeground="#3C3C3C"
+        MenuItemPadding="3"
+        MenuSeparatorBackground="#DDDDDD"
+        MenuSeparatorMargin="9, 3" />
+    <!--#endregion C:\work\2023.1\XPF\DevExpress.Xpf.Dialogs\DevExpress.Xpf.Dialogs\Themes\Generic\Resources.xaml-->
+
+    <!--#region C:\work\2023.1\XPF\DevExpress.Xpf.Dialogs\DevExpress.Xpf.Dialogs\Themes\Generic.xaml-->
+    <!--#endregion C:\work\2023.1\XPF\DevExpress.Xpf.Dialogs\DevExpress.Xpf.Dialogs\Themes\Generic.xaml-->
+
+
+    <!--#region DEFAULT STYLES-->
+
+    <Style x:Key="ViewModeChooserPopup.DefaultStyleBase" TargetType="{x:Type dxdlgn:ViewModeChooserPopup}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type dxdlgn:ViewModeChooserPopup}">
+                    <Grid x:Name="PART_PopupRootGrid" Margin="9,6">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="34" />
+                            <ColumnDefinition Width="9" />
+                            <ColumnDefinition MinWidth="134" />
+                        </Grid.ColumnDefinitions>
+                        <Slider
+                            x:Name="PART_Slider"
+                            Grid.Column="0"
+                            Height="{Binding Path=ActualHeight, ElementName=PART_BarsControl, Converter={dxdlgn:DialogViewModeChooserSliderHeightConverter}}"
+                            AutoToolTipPlacement="None"
+                            IsSnapToTickEnabled="True"
+                            Maximum="{TemplateBinding SliderMaximum}"
+                            Orientation="Vertical"
+                            TickPlacement="None"
+                            Ticks="{TemplateBinding SliderTicks}"
+                            Value="{TemplateBinding SliderValue}" />
+                        <dxb:MenuBarControl x:Name="PART_BarsControl" Grid.Column="2">
+                            <dxb:MenuBarControl.Resources>
+                                <ControlTemplate x:Key="{dxt:LWKey SubMenuBarControl.ContentSideBorderTemplate}" TargetType="{x:Type ContentControl}" />
+                                <ControlTemplate x:Key="{dxt:LWKey GlyphSideControl.Template}" TargetType="{x:Type dxb:GlyphSideControl}" />
+                            </dxb:MenuBarControl.Resources>
+                            <dxb:PopupMenu x:Name="PART_BarsMenu" dxb:BarManagerHelper.ShowPopupWithDelay="True">
+                                <dxdlgn:ViewModeBarButton x:Name="PART_ExtraLargeIconButton" ViewMode="ExtraLargeIcon" />
+                                <dxb:BarStaticItem Content="" />
+                                <dxdlgn:ViewModeBarButton x:Name="PART_LargeIconButton" ViewMode="LargeIcon" />
+                                <dxdlgn:ViewModeBarButton x:Name="PART_MediumIconButton" ViewMode="MediumIcon" />
+                                <dxb:BarStaticItem Content="" />
+                                <dxdlgn:ViewModeBarButton x:Name="PART_SmallIconButton" ViewMode="SmallIcon" />
+                                <dxdlgn:ViewModeBarButton x:Name="PART_ListButton" ViewMode="List" />
+                                <dxdlgn:ViewModeBarButton x:Name="PART_DetailsButton" ViewMode="Details" />
+                                <dxdlgn:ViewModeBarButton x:Name="PART_TilesButton" ViewMode="Tiles" />
+                                <dxdlgn:ViewModeBarButton x:Name="PART_ContentButton" ViewMode="Content" />
+                            </dxb:PopupMenu>
+                        </dxb:MenuBarControl>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="FileDialogBottomPane.DefaultStyleBase" TargetType="{x:Type dxdlgn:FileDialogBottomPane}">
+        <Setter Property="HorizontalAlignment" Value="Stretch" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type dxdlgn:FileDialogBottomPane}">
+                    <Grid x:Name="PART_RootGrid">
+                        <Grid.Resources>
+                            <Style x:Key="{x:Type Button}" TargetType="Button">
+                                <Setter Property="Padding" Value="10,2" />
+                                <Setter Property="MinWidth" Value="95" />
+                                <Setter Property="MaxWidth" Value="145" />
+                                <Setter Property="HorizontalAlignment" Value="Stretch" />
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            </Style>
+                            <Style x:Key="{x:Type TextBlock}" TargetType="TextBlock">
+                                <Setter Property="TextTrimming" Value="CharacterEllipsis" />
+                            </Style>
+                        </Grid.Resources>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock
+                            x:Name="PART_TextEditorCaption"
+                            Margin="0,0,10,0"
+                            VerticalAlignment="Center"
+                            Text="{TemplateBinding Caption}" />
+                        <dxe:TextEdit
+                            x:Name="PART_TextEditor"
+                            Grid.Column="1"
+                            Grid.ColumnSpan="{DXBinding '@e(PART_TypesEditor).IsVisible ? 1 : 3'}"
+                            Text="{Binding Path=Text, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                            <dxmvvm:Interaction.Behaviors>
+                                <dxmvvm:FocusBehavior />
+                            </dxmvvm:Interaction.Behaviors>
+                        </dxe:TextEdit>
+                        <dxe:ComboBoxEdit
+                            x:Name="PART_TypesEditor"
+                            Grid.Column="2"
+                            Grid.ColumnSpan="2"
+                            MinWidth="200"
+                            MaxWidth="300"
+                            Margin="10,0,0,0"
+                            DisplayMember="{TemplateBinding FilterDisplayMember}"
+                            IsTextEditable="False"
+                            ItemsSource="{TemplateBinding FiltersSource}"
+                            SelectedIndex="{Binding Path=SelectedFilterIndex, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}"
+                            TextTrimming="CharacterEllipsis"
+                            Visibility="{TemplateBinding FiltersSource, Converter={StaticResource ObjectToVisibilityConverter}}" />
+                        <Button
+                            x:Name="PART_AcceptButton"
+                            Grid.Row="1"
+                            Grid.Column="2"
+                            Margin="10,10,5,0"
+                            IsDefault="True">
+                            <TextBlock Text="{TemplateBinding AcceptButtonName}" />
+                        </Button>
+                        <Button
+                            x:Name="PART_CancelButton"
+                            Grid.Row="1"
+                            Grid.Column="3"
+                            Margin="5,10,0,0"
+                            IsCancel="True">
+                            <TextBlock Text="{TemplateBinding CancelButtonName}" />
+                        </Button>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="FolderBrowserBottomPane.DefaultStyleBase" TargetType="{x:Type dxdlgn:FolderBrowserBottomPane}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type dxdlgn:FolderBrowserBottomPane}">
+                    <Grid x:Name="PART_ButonsPanel">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="8" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.Resources>
+                            <Style x:Key="{x:Type Button}" TargetType="Button">
+                                <Setter Property="Padding" Value="10,2" />
+                                <Setter Property="MinWidth" Value="70" />
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            </Style>
+                            <Style x:Key="{x:Type TextBlock}" TargetType="TextBlock">
+                                <Setter Property="TextTrimming" Value="CharacterEllipsis" />
+                            </Style>
+                        </Grid.Resources>
+                        <Button
+                            x:Name="PART_NewFolderButton"
+                            Content="{Binding ConverterParameter=MakeNewFolderButtonText, Converter={StaticResource DialogStringIdConverter}}"
+                            IsEnabled="{TemplateBinding IsNewFolderButtonEnabled}"
+                            Visibility="{TemplateBinding ShowNewFolderButton, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                        <Button
+                            x:Name="PART_AcceptButton"
+                            Grid.Column="2"
+                            MaxWidth="80"
+                            IsDefault="True">
+                            <TextBlock Text="{TemplateBinding AcceptButtonName}" />
+                        </Button>
+                        <Button
+                            x:Name="PART_CancelButton"
+                            Grid.Column="4"
+                            MaxWidth="90"
+                            IsCancel="True">
+                            <TextBlock Text="{TemplateBinding CancelButtonName}" />
+                        </Button>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--#endregion DEFAULT STYLES-->
+</ResourceDictionary>

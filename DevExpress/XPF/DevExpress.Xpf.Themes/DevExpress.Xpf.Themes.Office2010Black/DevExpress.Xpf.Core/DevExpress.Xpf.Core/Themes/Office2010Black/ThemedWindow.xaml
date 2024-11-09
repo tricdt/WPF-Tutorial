@@ -1,0 +1,358 @@
+﻿<ResourceDictionary mc:Ignorable="cs"
+                    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:cs="colorscheme_ignorable_uri"
+                    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+                    xmlns:dxcn="http://schemas.devexpress.com/winfx/2008/xaml/core/internal"
+                    xmlns:dxrt="http://schemas.devexpress.com/winfx/2008/xaml/ribbon/themekeys"
+                    xmlns:dxt="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys"
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/DevExpress.Xpf.Themes.Office2010Black.v24.1;component/DevExpress.Xpf.Core/DevExpress.Xpf.Core/Themes/Generic/ThemedWindow.xaml"/>
+        <ResourceDictionary Source="/DevExpress.Xpf.Themes.Office2010Black.v24.1;component/DevExpress.Xpf.Core/DevExpress.Xpf.Core/Themes/Generic/DropShadow.xaml"/>
+        <ResourceDictionary Source="/DevExpress.Xpf.Themes.Office2010Black.v24.1;component/DevExpress.Xpf.Ribbon/Generic/RibbonControlBoxButton.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+    <sys:Boolean x:Key="{dxt:ThemedWindowThemeKey ResourceKey=RoundWindowCorners}">False</sys:Boolean>
+
+    <!--Opacity-->
+
+    <sys:Double x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowInactiveHeaderOpacity}">0.7</sys:Double>
+
+    <!--Header height-->
+
+    <sys:Double x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowHeaderHeight}">30</sys:Double>
+
+    <sys:Double x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowIconHeight}">16</sys:Double>
+
+    <sys:Double x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowIconWidth}">16</sys:Double>
+
+    <!-- SearchBox widths -->
+
+    <sys:Double x:Key="{dxt:ThemedWindowSearchBoxThemeKey ResourceKey=MinWidth}">50</sys:Double>
+
+    <sys:Double x:Key="{dxt:ThemedWindowSearchBoxThemeKey ResourceKey=MaxWidth}">200</sys:Double>
+
+    <!--TitleFont Properties-->
+
+    <sys:Double x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowTitleFontSize}">12</sys:Double>
+
+    <FontWeight x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowTitleFontWeight}">Normal</FontWeight>
+
+    <!--Thickness-->
+
+    <Thickness x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowBorderThickness}">1</Thickness>
+
+    <Thickness x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowContentBorderThickness}">1</Thickness>
+
+    <Thickness x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowRibbonContentBorderThickness}">1</Thickness>
+
+    <Thickness x:Key="{dxt:ThemedWindowThemeKey ResourceKey=HeaderNormalPadding}">4,0,4,0</Thickness>
+
+    <Thickness x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowNormalPadding}">4,0,4,4</Thickness>
+
+    <sys:Double x:Key="{dxt:ThemedWindowThemeKey ResourceKey=TabbedModeDefaultTopMargin}">4</sys:Double>
+
+    <Thickness x:Key="{dxt:ThemedWindowThemeKey ResourceKey=HeaderRibbonPadding}">4,0,4,0</Thickness>
+
+    <Thickness x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowRibbonPadding}">4,0,4,4</Thickness>
+
+    <Thickness x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowIconMargin}">0,0,4,0</Thickness>
+
+    <Thickness x:Key="{dxt:ThemedWindowThemeKey ResourceKey=SizeGripMargin}">0,0,5,5</Thickness>
+
+    <Thickness x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowTitleControlMargin}">0,0,4,0</Thickness>
+
+    <Thickness x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowToolbarMargin}">0,0,4,0</Thickness>
+
+    <Thickness x:Key="{dxt:ThemedWindowThemeKey ResourceKey=HeaderControlBoxBorderThickness}">0</Thickness>
+
+    <!-- Colors -->
+
+    <Color x:Key="{dxt:AcrylicThemedWindowThemeKey ResourceKey=AcrylicColor}"
+           cs:Office2010Blue.Color="#FFBDD0E8"
+           cs:Office2010Silver.Color="#FFE3E6E8">
+        #FF717171
+    </Color>
+
+    <!--Brushes-->
+
+    <SolidColorBrush x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowActiveBackground}"
+                     Color="#FF717171"
+                     cs:Name="SolidColorBrush_0001"
+                     cs:Office2010Blue.Color="#FFBDD0E8"
+                     cs:Office2010Silver.Color="#FFE3E6E8"/>
+
+    <SolidColorBrush x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowActiveBorderBrush}"
+                     Color="#FF484848"
+                     cs:Name="SolidColorBrush_0002"
+                     cs:Office2010Blue.Color="#FF728EAD"
+                     cs:Office2010Silver.Color="#FF80838F"/>
+
+    <SolidColorBrush x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowActiveContentBackground}"
+                     Color="#FF838383"
+                     cs:Name="SolidColorBrush_0003"
+                     cs:Office2010Blue.Color="#FFBDD0E8"
+                     cs:Office2010Silver.Color="#FFE3E6E8"/>
+
+    <SolidColorBrush x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowActiveContentBorderBrush}"
+                     Color="#FF484848"
+                     cs:Name="SolidColorBrush_0004"
+                     cs:Office2010Blue.Color="#FF728EAD"
+                     cs:Office2010Silver.Color="#FF80838F"/>
+
+    <SolidColorBrush x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowInactiveBackground}"
+                     Color="#FF9E9E9E"
+                     cs:Name="SolidColorBrush_0005"
+                     cs:Office2010Blue.Color="#FFD5DEE8"
+                     cs:Office2010Silver.Color="#FFCED4DB"/>
+
+    <SolidColorBrush x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowInactiveBorderBrush}"
+                     Color="#FF777777"
+                     cs:Name="SolidColorBrush_0006"
+                     cs:Office2010Blue.Color="#FF728EAD"
+                     cs:Office2010Silver.Color="#FF80838F"/>
+
+    <SolidColorBrush x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowInactiveContentBackground}"
+                     Color="#FF838383"
+                     cs:Name="SolidColorBrush_0007"
+                     cs:Office2010Blue.Color="#FFBDD0E8"
+                     cs:Office2010Silver.Color="#FFE3E6E8"/>
+
+    <SolidColorBrush x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowInactiveContentBorderBrush}"
+                     Color="#FF777777"
+                     cs:Name="SolidColorBrush_0008"
+                     cs:Office2010Blue.Color="#FF728EAD"
+                     cs:Office2010Silver.Color="#FF80838F"/>
+
+    <SolidColorBrush x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowTitleForeground}"
+                     Color="#FFF0F0F0"
+                     cs:Name="SolidColorBrush_0009"
+                     cs:Office2010Blue.Color="#FF1E395B"
+                     cs:Office2010Silver.Color="#FF000000"/>
+
+    <SolidColorBrush x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowRibbonTitleForeground}"
+                     Color="#FFF0F0F0"
+                     cs:Office2010Blue.Color="#FFF0F0F0"
+                     cs:Office2010Silver.Color="#FFF0F0F0"/>
+
+    <SolidColorBrush x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowContentForeground}"
+                     Color="#FFF0F0F0"
+                     cs:Name="SolidColorBrush_0013"
+                     cs:Office2010Blue.Color="#FF1E395B"
+                     cs:Office2010Silver.Color="#FF000000"/>
+
+    <SolidColorBrush x:Key="{dxt:ThemedWindowThemeKey ResourceKey=HeaderControlBoxBackground}"
+                     Color="Transparent"
+                     cs:Name="SolidColorBrush_0010"
+                     cs:Office2010Blue.Color="Transparent"
+                     cs:Office2010Silver.Color="Transparent"/>
+
+    <SolidColorBrush x:Key="{dxt:ThemedWindowThemeKey ResourceKey=HeaderControlBoxBorderBrush}"
+                     Color="Transparent"
+                     cs:Name="SolidColorBrush_0011"
+                     cs:Office2010Blue.Color="Transparent"
+                     cs:Office2010Silver.Color="Transparent"/>
+
+    <SolidColorBrush x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowInactiveHeaderBackground}"
+                     Color="#FF9E9E9E"
+                     cs:Name="SolidColorBrush_0012"
+                     cs:Office2010Blue.Color="#FFD5DEE8"
+                     cs:Office2010Silver.Color="#FFCED4DB"/>
+
+    <SolidColorBrush x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowRibbonInactiveHeaderBackground}"
+                     Color="#FF9E9E9E"
+                     cs:Name="SolidColorBrush_0014"
+                     cs:Office2010Blue.Color="#FFD5DEE8"
+                     cs:Office2010Silver.Color="#FFCED4DB"/>
+
+    <SolidColorBrush x:Key="{dxt:ThemedWindowThemeKey ResourceKey=BackButtonForegroundNormalState}"
+                     Color="#FFF0F0F0"
+                     cs:Office2010Blue.Color="#FFFFFFFF"
+                     cs:Office2010Silver.Color="#FFF0F0F0"/>
+
+    <SolidColorBrush x:Key="{dxt:ThemedWindowThemeKey ResourceKey=BackButtonForegroundMouseOverState}"
+                     Color="#FFF0F0F0"
+                     cs:Office2010Blue.Color="#FFFFFFFF"
+                     cs:Office2010Silver.Color="#FFF0F0F0"/>
+
+    <SolidColorBrush x:Key="{dxt:ThemedWindowThemeKey ResourceKey=BackButtonForegroundPressedState}"
+                     Color="#FFF0F0F0"
+                     cs:Office2010Blue.Color="#FFFFFFFF"
+                     cs:Office2010Silver.Color="#FFF0F0F0"/>
+
+    <!--GradientBrushes-->
+
+    <LinearGradientBrush x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowActiveHeaderBackground}"
+                         cs:Name="LinearGradientBrush_6486"
+                         EndPoint="0.5,1"
+                         StartPoint="0.5,0">
+        <GradientStop Color="#FF797979"
+                      cs:Name="GradientStop_0001"
+                      Offset="0"
+                      cs:Office2010Blue.Color="#FFC1D4EC"
+                      cs:Office2010Silver.Color="#FFEBEDF0"
+                     />
+        <GradientStop Color="#FF717171"
+                      cs:Name="GradientStop_0002"
+                      Offset="1"
+                      cs:Office2010Blue.Color="#FFBDD0E8"
+                      cs:Office2010Silver.Color="#FFE3E6E8"
+                     />
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowRibbonActiveHeaderBackground}"
+                         cs:Name="LinearGradientBrush_6487"
+                         EndPoint="0.5,1"
+                         StartPoint="0.5,0">
+        <GradientStop Color="#FF797979"
+                      cs:Name="GradientStop_0001"
+                      Offset="0"
+                      cs:Office2010Blue.Color="#FFC1D4EC"
+                      cs:Office2010Silver.Color="#FFEBEDF0"
+                     />
+        <GradientStop Color="#FF717171"
+                      cs:Name="GradientStop_0002"
+                      Offset="1"
+                      cs:Office2010Blue.Color="#FFBDD0E8"
+                      cs:Office2010Silver.Color="#FFE3E6E8"
+                     />
+    </LinearGradientBrush>
+
+    <!--VerticalAlignment-->
+
+    <VerticalAlignment x:Key="{dxt:ThemedWindowThemeKey ResourceKey=HeaderControlBoxVerticalAlignment}">Center</VerticalAlignment>
+
+    <!--TitleAlignment-->
+
+    <dx:WindowTitleAlignment x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowTitleAlignment}">Left</dx:WindowTitleAlignment>
+
+    <!--____Back Button Slyte & Template____-->
+
+    <!--BackButton Glyph Template-->
+
+    <DataTemplate x:Key="{dxt:ThemedWindowThemeKey ResourceKey=BackButtonBackgroundGlyph}">
+        <Grid x:Name="Glyph"
+              HorizontalAlignment="Center"
+              VerticalAlignment="Center">
+            <Path Data="F1 M 1,6L 6,1L 7,2L 7,4L 11,4L 12,5L 12,7L 11,8L 7,8L 7,10L 6,11L 1,6"
+                  Fill="#FF4C4C4C"
+                  Height="10"
+                  Stretch="Fill"
+                  Width="11"
+                  cs:Office2010Blue.Fill="#FF728EAD"
+                  cs:Office2010Silver.Fill="#FF80838F"
+                 />
+            <Path Data="F1 M 1,6L 6,1L 7,2L 7,4L 11,4L 12,5L 12,7L 11,8L 7,8L 7,10L 6,11L 1,6"
+                  Fill="#FF4C4C4C"
+                  Height="10"
+                  Stretch="Fill"
+                  Width="11"
+                  cs:Office2010Blue.Fill="#FF728EAD"
+                  cs:Office2010Silver.Fill="#FF80838F"
+                 />
+            <Path Data="F1 M 0,4L 4,0L 4,3L 9,3L 9,5L 4,5L 4,8L 0,4 Z "
+                  Fill="{Binding Path=(TextElement.Foreground), RelativeSource={RelativeSource Self}}"
+                  Height="8"
+                  Margin="1"
+                  Stretch="Fill"
+                  Width="9"/>
+        </Grid>
+    </DataTemplate>
+
+    <!--BackButton Normal Background-->
+
+    <ControlTemplate x:Key="{dxt:ThemedWindowThemeKey ResourceKey=BackButtonBackgroundNormalState}"/>
+
+    <!--BackButton MouseOver Background-->
+
+    <ControlTemplate x:Key="{dxt:ThemedWindowThemeKey ResourceKey=BackButtonBackgroundMouseoverState}">
+        <Grid x:Name="HoverState">
+            <Border Background="#FF515151"
+                    CornerRadius="2"
+                    cs:Office2010Blue.Background="#FF94ADCC"
+                    cs:Office2010Silver.Background="#FFA5ACB5"
+                   >
+                <Border CornerRadius="1" Margin="1">
+                    <Border.Background>
+                        <LinearGradientBrush cs:Name="LinearGradientBrush_0291"
+                                             EndPoint="0.5,1"
+                                             StartPoint="0.5,0"
+                                            >
+                            <GradientStop Color="#FF949494"
+                                          Offset="0"
+                                          cs:Office2010Blue.Color="#FFD4E8FF"
+                                          cs:Office2010Silver.Color="#FFFFFFFF"
+                                         />
+                            <GradientStop Color="#FF777777"
+                                          Offset="1"
+                                          cs:Office2010Blue.Color="#FFBDD0E8"
+                                          cs:Office2010Silver.Color="#FFE3E6E8"
+                                         />
+                        </LinearGradientBrush>
+                    </Border.Background>
+                </Border>
+            </Border>
+        </Grid>
+    </ControlTemplate>
+
+    <!--BackButton Pressed Background-->
+
+    <ControlTemplate x:Key="{dxt:ThemedWindowThemeKey ResourceKey=BackButtonBackgroundPressedState}">
+        <Grid x:Name="PressedState">
+            <Border Background="#FF515151"
+                    CornerRadius="2"
+                    cs:Office2010Blue.Background="#FF94ADCC"
+                    cs:Office2010Silver.Background="#FFA5ACB5"
+                   >
+                <Border CornerRadius="1" Margin="1">
+                    <Border.Background>
+                        <LinearGradientBrush EndPoint="0.5,1"
+                                             StartPoint="0.5,0"
+                                            >
+                            <GradientStop Color="#FF636363"
+                                          Offset="0"
+                                          cs:Office2010Blue.Color="#FFAEC2DB"
+                                          cs:Office2010Silver.Color="#FFC0C4C9"
+                                         />
+                            <GradientStop Color="#FF717171"
+                                          Offset="1"
+                                          cs:Office2010Blue.Color="#FFBBCEE6"
+                                          cs:Office2010Silver.Color="#FFDCE1E8"
+                                         />
+                            <GradientStop Color="#FF717171"
+                                          Offset="0.15"
+                                          cs:Office2010Blue.Color="#FFBBCEE6"
+                                          cs:Office2010Silver.Color="#FFDCE1E8"
+                                         />
+                        </LinearGradientBrush>
+                    </Border.Background>
+                </Border>
+            </Border>
+        </Grid>
+    </ControlTemplate>
+
+    <!--BackButtonStyle-->
+
+    <Style x:Key="{dxt:ThemedWindowThemeKey ResourceKey=BackButtonStyle}" TargetType="{x:Type dx:ThemedWindowBackButton}">
+        <Setter Property="Visibility" Value="Collapsed"/>
+        <Setter Property="Height" Value="17"/>
+        <Setter Property="Width" Value="31"/>
+        <Setter Property="Margin" Value="0,1,0,0"/>
+        <Setter Property="IsTabStop" Value="False"/>
+        <Setter Property="Template" Value="{DynamicResource {dxt:ThemedWindowThemeKey ResourceKey=BackButtonTemplate}}"/>
+        <Setter Property="dxcn:WindowChrome.IsHitTestVisibleInChrome" Value="True"/>
+    </Style>
+
+    <!--WindowStyle-->
+
+    <Style x:Key="{dxt:DefaultStyleThemeKey FullName=DevExpress.Xpf.Core.ThemedWindow}"
+           BasedOn="{StaticResource ResourceKey={dxt:ThemedWindowThemeKey ResourceKey=WindowStyle}}"
+           TargetType="{x:Type dx:ThemedWindow}">
+        <Setter Property="dx:HeaderItemControl.ExtendedCommonTemplateProvider" Value="{DynamicResource {dxt:RibbonHeaderItemsThemeKey ResourceKey=RibbonHeaderItemControlCommonTemplateProvider}}"/>
+        <Setter Property="dx:HeaderItemControl.ExtendedCloseTemplateProvider" Value="{DynamicResource {dxt:RibbonHeaderItemsThemeKey ResourceKey=RibbonHeaderItemControlCloseTemplateProvider}}"/>
+    </Style>
+
+</ResourceDictionary>

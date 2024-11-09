@@ -1,0 +1,1756 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:dxt="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys"
+    xmlns:dxr="http://schemas.devexpress.com/winfx/2008/xaml/ribbon"
+    xmlns:dxri="http://schemas.devexpress.com/winfx/2008/xaml/ribbon/internal"
+    xmlns:dxrt="http://schemas.devexpress.com/winfx/2008/xaml/ribbon/themekeys"
+    xmlns:dxbi="http://schemas.devexpress.com/winfx/2008/xaml/bars/internal"
+    xmlns:dxbt="http://schemas.devexpress.com/winfx/2008/xaml/bars/themekeys"
+    xmlns:dxi="http://schemas.devexpress.com/winfx/2008/xaml/core/internal"
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+    xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
+    xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm">
+    <ResourceDictionary.MergedDictionaries>
+        <dxi:ThemeResourceDictionary Path="Common/{ThemeName}/Common.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+    <dx:WpfSvgPalette x:Key="{dxrt:LWKey Backstage.SvgPalette}">
+        <SolidColorBrush x:Key="BlackColor" Color="#FFFFFFFF" />
+        <SolidColorBrush x:Key="WhiteColor" Color="{dx:LWColor '#FF185ABD, Win11Dark=#FF005FBA'}" />
+        <SolidColorBrush x:Key="RedColor" Color="#FFE94A48" />
+        <SolidColorBrush x:Key="YellowColor" Color="#FFE89535" />
+        <SolidColorBrush x:Key="GreenColor" Color="#FF51C96C" />
+        <SolidColorBrush x:Key="BlueColor" Color="#FF5FAEEB" />
+        <dx:WpfSvgPalette.States>
+            <dx:WpfSvgPalette x:Key="Hover">
+                <SolidColorBrush x:Key="BlackColor" Color="#FFFFFFFF" />
+                <SolidColorBrush x:Key="WhiteColor" Color="#FF1651AA" />
+                <SolidColorBrush x:Key="RedColor" Color="#FFE94A48" />
+                <SolidColorBrush x:Key="YellowColor" Color="#FFE89535" />
+                <SolidColorBrush x:Key="GreenColor" Color="#FF51C96C" />
+                <SolidColorBrush x:Key="BlueColor" Color="#FF5FAEEB" />
+            </dx:WpfSvgPalette>
+            <dx:WpfSvgPalette x:Key="Pressed">
+                <SolidColorBrush x:Key="BlackColor" Color="#FFFFFFFF" />
+                <SolidColorBrush x:Key="WhiteColor" Color="#FF004F99" />
+                <SolidColorBrush x:Key="RedColor" Color="#FFE94A48" />
+                <SolidColorBrush x:Key="YellowColor" Color="#FFE89535" />
+                <SolidColorBrush x:Key="GreenColor" Color="#FF51C96C" />
+                <SolidColorBrush x:Key="BlueColor" Color="#FF5FAEEB" />
+            </dx:WpfSvgPalette>
+            <dx:WpfSvgPalette x:Key="Checked">
+                <SolidColorBrush x:Key="BlackColor" Color="#FFFFFFFF" />
+                <SolidColorBrush x:Key="WhiteColor" Color="#FF004F99" />
+                <SolidColorBrush x:Key="RedColor" Color="#FFE94A48" />
+                <SolidColorBrush x:Key="YellowColor" Color="#FFE89535" />
+                <SolidColorBrush x:Key="GreenColor" Color="#FF51C96C" />
+                <SolidColorBrush x:Key="BlueColor" Color="#FF5FAEEB" />
+            </dx:WpfSvgPalette>
+            <dx:WpfSvgPalette x:Key="HoverChecked">
+                <SolidColorBrush x:Key="BlackColor" Color="#FFFFFFFF" />
+                <SolidColorBrush x:Key="WhiteColor" Color="#FF004F99" />
+                <SolidColorBrush x:Key="RedColor" Color="#FFE94A48" />
+                <SolidColorBrush x:Key="YellowColor" Color="#FFE89535" />
+                <SolidColorBrush x:Key="GreenColor" Color="#FF51C96C" />
+                <SolidColorBrush x:Key="BlueColor" Color="#FF5FAEEB" />
+            </dx:WpfSvgPalette>
+            <dx:WpfSvgPalette x:Key="PressedChecked">
+                <SolidColorBrush x:Key="BlackColor" Color="#FFFFFFFF" />
+                <SolidColorBrush x:Key="WhiteColor" Color="#FF004F99" />
+                <SolidColorBrush x:Key="RedColor" Color="#FFE94A48" />
+                <SolidColorBrush x:Key="YellowColor" Color="#FFE89535" />
+                <SolidColorBrush x:Key="GreenColor" Color="#FF51C96C" />
+                <SolidColorBrush x:Key="BlueColor" Color="#FF5FAEEB" />
+            </dx:WpfSvgPalette>
+        </dx:WpfSvgPalette.States>
+    </dx:WpfSvgPalette>
+    <dx:WpfSvgPalette x:Key="{dxrt:LWKey ApplicationButton.SvgPalette}">
+        <SolidColorBrush x:Key="BlackColor" Color="{dx:LWColor '#ff727272, Win11Dark=#FFD1D1D1'}" />
+        <SolidColorBrush x:Key="WhiteColor" Color="#ffFFFFFF" />
+    </dx:WpfSvgPalette>
+    <dx:WpfSvgPalette x:Key="{dxrt:LWKey RibbonSvgPalette.SvgPaletteInApplicationMenu}">
+        <SolidColorBrush x:Key="BlackColor" Color="{dx:LWColor '#FF646464, Win11Dark=#FFD1D1D1'}" />
+        <SolidColorBrush x:Key="WhiteColor" Color="{dx:LWColor '#FFFFFFFF, Win11Dark=#FF1C1C1C'}" />
+        <SolidColorBrush x:Key="RedColor" Color="#FFED4341" />
+        <SolidColorBrush x:Key="YellowColor" Color="#FFE89535" />
+        <SolidColorBrush x:Key="GreenColor" Color="#FF42A358" />
+        <SolidColorBrush x:Key="BlueColor" Color="#FF0078D4" />
+        <dx:WpfSvgPalette.States>
+            <dx:WpfSvgPalette x:Key="Hover">
+                <SolidColorBrush x:Key="BlackColor" Color="{dx:LWColor '#FF646464, Win11Dark=#FFFFFFFF'}" />
+                <SolidColorBrush x:Key="WhiteColor" Color="{dx:LWColor '#FFFFFFFF, Win11Dark=#FF1C1C1C'}" />
+                <SolidColorBrush x:Key="RedColor" Color="#FFED4341" />
+                <SolidColorBrush x:Key="YellowColor" Color="#FFE89535" />
+                <SolidColorBrush x:Key="GreenColor" Color="#FF42A358" />
+                <SolidColorBrush x:Key="BlueColor" Color="#FF0078D4" />
+            </dx:WpfSvgPalette>
+            <dx:WpfSvgPalette x:Key="Pressed">
+                <SolidColorBrush x:Key="BlackColor" Color="{dx:LWColor '#FF646464, Win11Dark=#FFD1D1D1'}" />
+                <SolidColorBrush x:Key="WhiteColor" Color="{dx:LWColor '#FFFFFFFF, Win11Dark=#FF1C1C1C'}" />
+                <SolidColorBrush x:Key="RedColor" Color="#FFED4341" />
+                <SolidColorBrush x:Key="YellowColor" Color="#FFE89535" />
+                <SolidColorBrush x:Key="GreenColor" Color="#FF42A358" />
+                <SolidColorBrush x:Key="BlueColor" Color="#FF0078D4" />
+            </dx:WpfSvgPalette>
+        </dx:WpfSvgPalette.States>
+    </dx:WpfSvgPalette>
+    <dx:WpfSvgPalette x:Key="{dxrt:LWKey RibbonSvgPalette.SvgPaletteInRibbonStatusBarLeft}">
+        <SolidColorBrush x:Key="BlackColor" Color="{dx:LWColor '#FF3D3D3D, Win11Dark=#FFD1D1D1'}" />
+        <SolidColorBrush x:Key="WhiteColor" Color="{dx:LWColor '#FFFFFFFF, Win11Dark=#FF272727'}" />
+        <SolidColorBrush x:Key="RedColor" Color="#FFED4341" />
+        <SolidColorBrush x:Key="YellowColor" Color="#FFE89535" />
+        <SolidColorBrush x:Key="GreenColor" Color="#FF42A358" />
+        <SolidColorBrush x:Key="BlueColor" Color="#FF0078D4" />
+        <dx:WpfSvgPalette.States>
+            <dx:WpfSvgPalette x:Key="Hover">
+                <SolidColorBrush x:Key="BlackColor" Color="{dx:LWColor '#FF1A1A1A, Win11Dark=#FFFFFFFF'}" />
+                <SolidColorBrush x:Key="WhiteColor" Color="{dx:LWColor '#FFFFFFFF, Win11Dark=#FF272727'}" />
+                <SolidColorBrush x:Key="RedColor" Color="#FFED4341" />
+                <SolidColorBrush x:Key="YellowColor" Color="#FFE89535" />
+                <SolidColorBrush x:Key="GreenColor" Color="#FF42A358" />
+                <SolidColorBrush x:Key="BlueColor" Color="#FF0078D4" />
+            </dx:WpfSvgPalette>
+            <dx:WpfSvgPalette x:Key="Pressed">
+                <SolidColorBrush x:Key="BlackColor" Color="{dx:LWColor '#FF646464, Win11Dark=#FFD1D1D1'}" />
+                <SolidColorBrush x:Key="WhiteColor" Color="{dx:LWColor '#FFFFFFFF, Win11Dark=#FF272727'}" />
+                <SolidColorBrush x:Key="RedColor" Color="#FFED4341" />
+                <SolidColorBrush x:Key="YellowColor" Color="#FFE89535" />
+                <SolidColorBrush x:Key="GreenColor" Color="#FF42A358" />
+                <SolidColorBrush x:Key="BlueColor" Color="#FF0078D4" />
+            </dx:WpfSvgPalette>
+            <dx:WpfSvgPalette x:Key="Checked">
+                <SolidColorBrush x:Key="BlackColor" Color="{dx:LWColor '#FFFFFFFF, Win11Dark=#FF1C1C1C'}" />
+                <SolidColorBrush x:Key="WhiteColor" Color="{dx:LWColor '#FF005FB8, Win11Dark=#FF60CDFF'}" />
+                <SolidColorBrush x:Key="RedColor" Color="#FFE94A48" />
+                <SolidColorBrush x:Key="YellowColor" Color="#FFE89535" />
+                <SolidColorBrush x:Key="GreenColor" Color="#FF51C96C" />
+                <SolidColorBrush x:Key="BlueColor" Color="#FF5FAEEB" />
+            </dx:WpfSvgPalette>
+        </dx:WpfSvgPalette.States>
+    </dx:WpfSvgPalette>
+    <dx:WpfSvgPalette x:Key="{dxrt:LWKey RibbonSvgPalette.SvgPaletteInRibbonStatusBarRight}">
+        <SolidColorBrush x:Key="BlackColor" Color="{dx:LWColor '#FF3D3D3D, Win11Dark=#FFD1D1D1'}" />
+        <SolidColorBrush x:Key="WhiteColor" Color="{dx:LWColor '#FFFFFFFF, Win11Dark=#FF272727'}" />
+        <SolidColorBrush x:Key="RedColor" Color="#FFED4341" />
+        <SolidColorBrush x:Key="YellowColor" Color="#FFE89535" />
+        <SolidColorBrush x:Key="GreenColor" Color="#FF42A358" />
+        <SolidColorBrush x:Key="BlueColor" Color="#FF0078D4" />
+        <dx:WpfSvgPalette.States>
+            <dx:WpfSvgPalette x:Key="Hover">
+                <SolidColorBrush x:Key="BlackColor" Color="{dx:LWColor '#FF1A1A1A, Win11Dark=#FFFFFFFF'}" />
+                <SolidColorBrush x:Key="WhiteColor" Color="{dx:LWColor '#FFFFFFFF, Win11Dark=#FF272727'}" />
+                <SolidColorBrush x:Key="RedColor" Color="#FFED4341" />
+                <SolidColorBrush x:Key="YellowColor" Color="#FFE89535" />
+                <SolidColorBrush x:Key="GreenColor" Color="#FF42A358" />
+                <SolidColorBrush x:Key="BlueColor" Color="#FF0078D4" />
+            </dx:WpfSvgPalette>
+            <dx:WpfSvgPalette x:Key="Pressed">
+                <SolidColorBrush x:Key="BlackColor" Color="{dx:LWColor '#FF646464, Win11Dark=#FFD1D1D1'}" />
+                <SolidColorBrush x:Key="WhiteColor" Color="{dx:LWColor '#FFFFFFFF, Win11Dark=#FF272727'}" />
+                <SolidColorBrush x:Key="RedColor" Color="#FFED4341" />
+                <SolidColorBrush x:Key="YellowColor" Color="#FFE89535" />
+                <SolidColorBrush x:Key="GreenColor" Color="#FF42A358" />
+                <SolidColorBrush x:Key="BlueColor" Color="#FF0078D4" />
+            </dx:WpfSvgPalette>
+            <dx:WpfSvgPalette x:Key="Checked">
+                <SolidColorBrush x:Key="BlackColor" Color="{dx:LWColor '#FFFFFFFF, Win11Dark=#FF272727'}" />
+                <SolidColorBrush x:Key="WhiteColor" Color="{dx:LWColor '#FF005FB8, Win11Dark=#FF60CDFF'}" />
+                <SolidColorBrush x:Key="RedColor" Color="#FFE94A48" />
+                <SolidColorBrush x:Key="YellowColor" Color="#FFE89535" />
+                <SolidColorBrush x:Key="GreenColor" Color="#FF51C96C" />
+                <SolidColorBrush x:Key="BlueColor" Color="#FF5FAEEB" />
+            </dx:WpfSvgPalette>
+        </dx:WpfSvgPalette.States>
+    </dx:WpfSvgPalette>
+    <dx:WpfSvgPalette x:Key="{dxrt:LWKey RibbonSvgPalette.SvgPaletteInRibbonPageGroup}">
+        <SolidColorBrush x:Key="BlackColor" Color="{dx:LWColor '#FF3D3D3D, Win11Dark=#FFD1D1D1'}" />
+        <SolidColorBrush x:Key="WhiteColor" Color="{dx:LWColor '#FFFFFFFF, Win11Dark=#FF292929'}" />
+        <SolidColorBrush x:Key="RedColor" Color="#FFED4341" />
+        <SolidColorBrush x:Key="YellowColor" Color="#FFE89535" />
+        <SolidColorBrush x:Key="GreenColor" Color="#FF42A358" />
+        <SolidColorBrush x:Key="BlueColor" Color="#FF0078D4" />
+        <dx:WpfSvgPalette.States>
+            <dx:WpfSvgPalette x:Key="Hover">
+                <SolidColorBrush x:Key="BlackColor" Color="{dx:LWColor '#FF1A1A1A, Win11Dark=#FFFFFFFF'}" />
+                <SolidColorBrush x:Key="WhiteColor" Color="{dx:LWColor '#FFFFFFFF, Win11Dark=#FF292929'}" />
+                <SolidColorBrush x:Key="RedColor" Color="#FFED4341" />
+                <SolidColorBrush x:Key="YellowColor" Color="#FFE89535" />
+                <SolidColorBrush x:Key="GreenColor" Color="#FF42A358" />
+                <SolidColorBrush x:Key="BlueColor" Color="#FF0078D4" />
+            </dx:WpfSvgPalette>
+            <dx:WpfSvgPalette x:Key="Pressed">
+                <SolidColorBrush x:Key="BlackColor" Color="{dx:LWColor '#FF646464, Win11Dark=#FFD1D1D1'}" />
+                <SolidColorBrush x:Key="WhiteColor" Color="{dx:LWColor '#FFFFFFFF, Win11Dark=#FF292929'}" />
+                <SolidColorBrush x:Key="RedColor" Color="#FFED4341" />
+                <SolidColorBrush x:Key="YellowColor" Color="#FFE89535" />
+                <SolidColorBrush x:Key="GreenColor" Color="#FF42A358" />
+                <SolidColorBrush x:Key="BlueColor" Color="#FF0078D4" />
+            </dx:WpfSvgPalette>
+            <dx:WpfSvgPalette x:Key="Checked">
+                <SolidColorBrush x:Key="BlackColor" Color="{dx:LWColor '#FFFFFFFF, Win11Dark=#FF292929'}" />
+                <SolidColorBrush x:Key="WhiteColor" Color="{dx:LWColor '#FF000000, Win11Dark=#FF60CDFF'}" />
+                <SolidColorBrush x:Key="RedColor" Color="#FFED4341" />
+                <SolidColorBrush x:Key="YellowColor" Color="#FFE89535" />
+                <SolidColorBrush x:Key="GreenColor" Color="#FF42A358" />
+                <SolidColorBrush x:Key="BlueColor" Color="#FF5FAEEB" />
+            </dx:WpfSvgPalette>
+        </dx:WpfSvgPalette.States>
+    </dx:WpfSvgPalette>
+    <dx:WpfSvgPalette x:Key="{dxrt:LWKey RibbonSvgPalette.SvgPaletteInRibbonPageHeader}">
+        <SolidColorBrush x:Key="BlackColor" Color="{dx:LWColor '#FF3D3D3D, Win11Dark=#FFD1D1D1'}" />
+        <SolidColorBrush x:Key="WhiteColor" Color="{dx:LWColor '#FFFFFFFF, Win11Dark=#FF1C1C1C'}" />
+        <SolidColorBrush x:Key="RedColor" Color="#FFED4341" />
+        <SolidColorBrush x:Key="YellowColor" Color="#FFE89535" />
+        <SolidColorBrush x:Key="GreenColor" Color="#FF42A358" />
+        <SolidColorBrush x:Key="BlueColor" Color="#FF0078D4" />
+        <dx:WpfSvgPalette.States>
+            <dx:WpfSvgPalette x:Key="Hover">
+                <SolidColorBrush x:Key="BlackColor" Color="{dx:LWColor '#FF1A1A1A, Win11Dark=#FFFFFFFF'}" />
+                <SolidColorBrush x:Key="WhiteColor" Color="{dx:LWColor '#FFFFFFFF, Win11Dark=#FF1C1C1C'}" />
+                <SolidColorBrush x:Key="RedColor" Color="#FFED4341" />
+                <SolidColorBrush x:Key="YellowColor" Color="#FFE89535" />
+                <SolidColorBrush x:Key="GreenColor" Color="#FF42A358" />
+                <SolidColorBrush x:Key="BlueColor" Color="#FF0078D4" />
+            </dx:WpfSvgPalette>
+            <dx:WpfSvgPalette x:Key="Pressed">
+                <SolidColorBrush x:Key="BlackColor" Color="{dx:LWColor '#FF646464, Win11Dark=#FFD1D1D1'}" />
+                <SolidColorBrush x:Key="WhiteColor" Color="{dx:LWColor '#FFFFFFFF, Win11Dark=#FF1C1C1C'}" />
+                <SolidColorBrush x:Key="RedColor" Color="#FFED4341" />
+                <SolidColorBrush x:Key="YellowColor" Color="#FFE89535" />
+                <SolidColorBrush x:Key="GreenColor" Color="#FF42A358" />
+                <SolidColorBrush x:Key="BlueColor" Color="#FF0078D4" />
+            </dx:WpfSvgPalette>
+            <dx:WpfSvgPalette x:Key="Checked">
+                <SolidColorBrush x:Key="BlackColor" Color="{dx:LWColor '#FFFFFFFF, Win11Dark=#FF1C1C1C'}" />
+                <SolidColorBrush x:Key="WhiteColor" Color="{dx:LWColor '#FF005FB8, Win11Dark=#FF60CDFF'}" />
+                <SolidColorBrush x:Key="RedColor" Color="#FFED4341" />
+                <SolidColorBrush x:Key="YellowColor" Color="#FFE89535" />
+                <SolidColorBrush x:Key="GreenColor" Color="#FF42A358" />
+                <SolidColorBrush x:Key="BlueColor" Color="#FF5FAEEB" />
+            </dx:WpfSvgPalette>
+        </dx:WpfSvgPalette.States>
+    </dx:WpfSvgPalette>
+    <dx:WpfSvgPalette x:Key="{dxrt:LWKey RibbonSvgPalette.SvgPaletteInRibbonToolbar}">
+        <SolidColorBrush x:Key="BlackColor" Color="{dx:LWColor '#FF3D3D3D, Win11Dark=#FFD1D1D1'}" />
+        <SolidColorBrush x:Key="WhiteColor" Color="{dx:LWColor '#FFFFFFFF, Win11Dark=#FF1C1C1C'}" />
+        <SolidColorBrush x:Key="RedColor" Color="#FFED4341" />
+        <SolidColorBrush x:Key="YellowColor" Color="#FFE89535" />
+        <SolidColorBrush x:Key="GreenColor" Color="#FF42A358" />
+        <SolidColorBrush x:Key="BlueColor" Color="#FF0078D4" />
+        <dx:WpfSvgPalette.States>
+            <dx:WpfSvgPalette x:Key="Hover">
+                <SolidColorBrush x:Key="BlackColor" Color="{dx:LWColor '#FF1A1A1A, Win11Dark=#FFFFFFFF'}" />
+                <SolidColorBrush x:Key="WhiteColor" Color="{dx:LWColor '#FFFFFFFF, Win11Dark=#FF1C1C1C'}" />
+                <SolidColorBrush x:Key="RedColor" Color="#FFED4341" />
+                <SolidColorBrush x:Key="YellowColor" Color="#FFE89535" />
+                <SolidColorBrush x:Key="GreenColor" Color="#FF42A358" />
+                <SolidColorBrush x:Key="BlueColor" Color="#FF0078D4" />
+            </dx:WpfSvgPalette>
+            <dx:WpfSvgPalette x:Key="Pressed">
+                <SolidColorBrush x:Key="BlackColor" Color="{dx:LWColor '#FF646464, Win11Dark=#FFD1D1D1'}" />
+                <SolidColorBrush x:Key="WhiteColor" Color="{dx:LWColor '#FFFFFFFF, Win11Dark=#FF1C1C1C'}" />
+                <SolidColorBrush x:Key="RedColor" Color="#FFED4341" />
+                <SolidColorBrush x:Key="YellowColor" Color="#FFE89535" />
+                <SolidColorBrush x:Key="GreenColor" Color="#FF42A358" />
+                <SolidColorBrush x:Key="BlueColor" Color="#FF0078D4" />
+            </dx:WpfSvgPalette>
+            <dx:WpfSvgPalette x:Key="Checked">
+                <SolidColorBrush x:Key="BlackColor" Color="{dx:LWColor '#FFFFFFFF, Win11Dark=#FF1C1C1C'}" />
+                <SolidColorBrush x:Key="WhiteColor" Color="{dx:LWColor '#FF005FB8, Win11Dark=#FF60CDFF'}" />
+                <SolidColorBrush x:Key="RedColor" Color="#FFE94A48" />
+                <SolidColorBrush x:Key="YellowColor" Color="#FFE89535" />
+                <SolidColorBrush x:Key="GreenColor" Color="#FF51C96C" />
+                <SolidColorBrush x:Key="BlueColor" Color="#FF5FAEEB" />
+            </dx:WpfSvgPalette>
+        </dx:WpfSvgPalette.States>
+    </dx:WpfSvgPalette>
+    <dx:WpfSvgPalette x:Key="{dxrt:LWKey RibbonSvgPalette.SvgPaletteInRibbonToolbarPopup}">
+        <SolidColorBrush x:Key="BlackColor" Color="{dx:LWColor '#FF3D3D3D, Win11Dark=#FFD1D1D1'}" />
+        <SolidColorBrush x:Key="WhiteColor" Color="#FFFFFFFF" />
+        <SolidColorBrush x:Key="RedColor" Color="#FFED4341" />
+        <SolidColorBrush x:Key="YellowColor" Color="#FFE89535" />
+        <SolidColorBrush x:Key="GreenColor" Color="#FF42A358" />
+        <SolidColorBrush x:Key="BlueColor" Color="#FF0078D4" />
+        <dx:WpfSvgPalette.States>
+            <dx:WpfSvgPalette x:Key="Hover">
+                <SolidColorBrush x:Key="BlackColor" Color="{dx:LWColor '#FF1A1A1A, Win11Dark=#FFFFFFFF'}" />
+                <SolidColorBrush x:Key="WhiteColor" Color="#FFFFFFFF" />
+                <SolidColorBrush x:Key="RedColor" Color="#FFED4341" />
+                <SolidColorBrush x:Key="YellowColor" Color="#FFE89535" />
+                <SolidColorBrush x:Key="GreenColor" Color="#FF42A358" />
+                <SolidColorBrush x:Key="BlueColor" Color="#FF0078D4" />
+            </dx:WpfSvgPalette>
+            <dx:WpfSvgPalette x:Key="Pressed">
+                <SolidColorBrush x:Key="BlackColor" Color="{dx:LWColor '#FF646464, Win11Dark=#FFD1D1D1'}" />
+                <SolidColorBrush x:Key="WhiteColor" Color="#FFFFFFFF" />
+                <SolidColorBrush x:Key="RedColor" Color="#FFED4341" />
+                <SolidColorBrush x:Key="YellowColor" Color="#FFE89535" />
+                <SolidColorBrush x:Key="GreenColor" Color="#FF42A358" />
+                <SolidColorBrush x:Key="BlueColor" Color="#FF0078D4" />
+            </dx:WpfSvgPalette>
+            <dx:WpfSvgPalette x:Key="Checked">
+                <SolidColorBrush x:Key="BlackColor" Color="#FFFFFFFF" />
+                <SolidColorBrush x:Key="WhiteColor" Color="#FF005FB8" />
+                <SolidColorBrush x:Key="RedColor" Color="#FFE94A48" />
+                <SolidColorBrush x:Key="YellowColor" Color="#FFE89535" />
+                <SolidColorBrush x:Key="GreenColor" Color="#FF51C96C" />
+                <SolidColorBrush x:Key="BlueColor" Color="#FF5FAEEB" />
+            </dx:WpfSvgPalette>
+        </dx:WpfSvgPalette.States>
+    </dx:WpfSvgPalette>
+    <dx:WpfSvgPalette x:Key="{dxrt:LWKey RibbonSvgPalette.SvgPaletteInRibbonToolbarFooter}">
+        <SolidColorBrush x:Key="BlackColor" Color="{dx:LWColor '#FF3D3D3D, Win11Dark=#FFD1D1D1'}" />
+        <SolidColorBrush x:Key="WhiteColor" Color="#FFFFFFFF" />
+        <SolidColorBrush x:Key="RedColor" Color="#FFED4341" />
+        <SolidColorBrush x:Key="YellowColor" Color="#FFE89535" />
+        <SolidColorBrush x:Key="GreenColor" Color="#FF42A358" />
+        <SolidColorBrush x:Key="BlueColor" Color="#FF0078D4" />
+        <dx:WpfSvgPalette.States>
+            <dx:WpfSvgPalette x:Key="Hover">
+                <SolidColorBrush x:Key="BlackColor" Color="{dx:LWColor '#FF1A1A1A, Win11Dark=#FFFFFFFF'}" />
+                <SolidColorBrush x:Key="WhiteColor" Color="#FFFFFFFF" />
+                <SolidColorBrush x:Key="RedColor" Color="#FFED4341" />
+                <SolidColorBrush x:Key="YellowColor" Color="#FFE89535" />
+                <SolidColorBrush x:Key="GreenColor" Color="#FF42A358" />
+                <SolidColorBrush x:Key="BlueColor" Color="#FF0078D4" />
+            </dx:WpfSvgPalette>
+            <dx:WpfSvgPalette x:Key="Pressed">
+                <SolidColorBrush x:Key="BlackColor" Color="{dx:LWColor '#FF646464, Win11Dark=#FFD1D1D1'}" />
+                <SolidColorBrush x:Key="WhiteColor" Color="#FFFFFFFF" />
+                <SolidColorBrush x:Key="RedColor" Color="#FFED4341" />
+                <SolidColorBrush x:Key="YellowColor" Color="#FFE89535" />
+                <SolidColorBrush x:Key="GreenColor" Color="#FF42A358" />
+                <SolidColorBrush x:Key="BlueColor" Color="#FF0078D4" />
+            </dx:WpfSvgPalette>
+        </dx:WpfSvgPalette.States>
+    </dx:WpfSvgPalette>
+    <SolidColorBrush x:Key="{dxrt:LWKey Ribbon.ApplicationMenuRightPaneForeground}" Color="{StaticResource Color.Foreground.Primary}" />
+    <SolidColorBrush x:Key="{dxrt:LWKey Backstage.Foreground}" Color="{StaticResource Color.Foreground.Primary}" />
+    <dxri:RibbonPageCategoryCornerRadiusConverter x:Key="CornerRadiusConverter" />
+    <dx:ColorOverlayConverter x:Key="ColorOverlayConverter" />
+    <dxr:RibbonStyle x:Key="{dxrt:LWKey Ribbon.RibbonStyle}">Office2010</dxr:RibbonStyle>
+    <sys:Double x:Key="{dxrt:LWKey Ribbon.PageCaptionMinWidth}">20</sys:Double>
+    <ControlTemplate x:Key="{dxrt:LWKey Ribbon.FooterQuickAccessToolbarContainerTemplate}" TargetType="ContentControl">
+        <Grid x:Name="Root" Margin="2,0">
+            <dx:DXBorder
+                x:Name="ShadowBorder1"
+                BorderBrush="#FF000000"
+                BorderThickness="1"
+                CornerRadius="13"
+                Opacity="0.01" />
+            <dx:DXBorder
+                x:Name="ShadowBorder2"
+                BorderBrush="#FF000000"
+                BorderThickness="1"
+                CornerRadius="12"
+                Margin="1,0,1,1"
+                Opacity="0.01" />
+            <dx:DXBorder
+                x:Name="ShadowBorder3"
+                BorderBrush="#FF000000"
+                BorderThickness="1"
+                CornerRadius="11"
+                Margin="2,0,2,2"
+                Opacity="0.02" />
+            <dx:DXBorder
+                x:Name="ShadowBorder4"
+                BorderBrush="#FF000000"
+                BorderThickness="1"
+                CornerRadius="10"
+                Margin="3,0,3,3"
+                Opacity="0.02" />
+            <dx:DXBorder
+                x:Name="Border"
+                Background="{StaticResource Brush.WindowBackground}"
+                BorderBrush="{StaticResource Brush.PanelBorder}"
+                BorderThickness="1,0,1,1"
+                CornerRadius="0,0,10,10"
+                Margin="4,0,4,4">
+                <ContentPresenter HorizontalAlignment="Left" />
+            </dx:DXBorder>
+        </Grid>
+        <ControlTemplate.Triggers>
+            <Trigger Property="Visibility" Value="Visible">
+                <Setter Property="Margin" Value="1,0,0,0" />
+            </Trigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding (dxr:RibbonControl.Ribbon).IsMinimized, RelativeSource={RelativeSource TemplatedParent}}" Value="True" />
+                    <Condition Binding="{Binding (dxr:RibbonControl.Ribbon).IsInRibbonWindow, RelativeSource={RelativeSource TemplatedParent}}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <MultiDataTrigger.Setters>
+                    <Setter Property="CornerRadius" TargetName="Border" Value="10" />
+                    <Setter Property="BorderThickness" TargetName="Border" Value="1" />
+                    <Setter Property="Margin" TargetName="Border" Value="4" />
+                    <Setter Property="Margin" TargetName="ShadowBorder2" Value="1" />
+                    <Setter Property="Margin" TargetName="ShadowBorder3" Value="2" />
+                    <Setter Property="Margin" TargetName="ShadowBorder4" Value="3" />
+                </MultiDataTrigger.Setters>
+            </MultiDataTrigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+    <ControlTemplate x:Key="{dxrt:LWKey Ribbon.MinimizationButtonTemplate}" TargetType="{x:Type dxr:RibbonCheckedBorderControl}">
+        <Grid x:Name="Root">
+            <dx:DXBorder
+                x:Name="IsDefault"
+                Background="{StaticResource Brush.Button.SimpleButtonBackground}"
+                BorderBrush="{StaticResource Brush.Button.SimpleButtonBorder}"
+                BorderThickness="1"
+                CornerRadius="4" />
+            <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Path x:Name="Collapsed" Opacity="0" Style="{StaticResource UIShape.Up}" />
+                <Path x:Name="Expanded" Opacity="0" Style="{StaticResource UIShape.Down}" />
+            </Grid>
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal" />
+                    <VisualState x:Name="Hover">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{StaticResource Color.Button.HoverBackground}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="{StaticResource Color.Button.SimpleButtonHoverBorder}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="Collapsed" Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)" To="{StaticResource Color.Foreground.Primary}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="Expanded" Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)" To="{StaticResource Color.Foreground.Primary}" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Pressed">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{StaticResource Color.Button.PressedBackground}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="{StaticResource Color.Button.SimpleButtonPressedBorder}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="Collapsed" Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)" To="{StaticResource Color.Foreground.Muted}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="Expanded" Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)" To="{StaticResource Color.Foreground.Muted}" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Focused">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{StaticResource Color.ListItem.HoverBackground}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="Collapsed" Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)" To="{StaticResource Color.Foreground.Primary}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="Expanded" Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)" To="{StaticResource Color.Foreground.Primary}" />
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+                <VisualStateGroup x:Name="CheckedStates">
+                    <VisualState x:Name="Checked">
+                        <Storyboard>
+                            <DoubleAnimation Duration="0" Storyboard.TargetName="Expanded" Storyboard.TargetProperty="Opacity" To="1" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Unchecked">
+                        <Storyboard>
+                            <DoubleAnimation Duration="0" Storyboard.TargetName="Collapsed" Storyboard.TargetProperty="Opacity" To="1" />
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </Grid>
+    </ControlTemplate>
+    <ControlTemplate x:Key="{dxrt:LWKey Ribbon.MinimizationButtonTemplateInPageContent}" TargetType="{x:Type dxr:RibbonCheckedBorderControl}">
+        <Grid x:Name="Root">
+            <dx:DXBorder x:Name="IsDefault" Background="{StaticResource Brush.Button.SimpleButtonBackground}" CornerRadius="4" />
+            <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Path x:Name="Collapsed" Opacity="0" Style="{StaticResource UIShape.Up}" />
+                <Path x:Name="Expanded" Opacity="0" Style="{StaticResource UIShape.Down}" />
+            </Grid>
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal" />
+                    <VisualState x:Name="Hover">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{StaticResource Color.ListItem.HoverBackground}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="Collapsed" Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)" To="{StaticResource Color.Foreground.Primary}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="Expanded" Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)" To="{StaticResource Color.Foreground.Primary}" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Pressed">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{StaticResource Color.ListItem.SelectionBackground}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="Collapsed" Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)" To="{StaticResource Color.Foreground.Primary}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="Expanded" Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)" To="{StaticResource Color.Foreground.Primary}" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Focused">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{StaticResource Color.ListItem.HoverBackground}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="Collapsed" Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)" To="{StaticResource Color.Foreground.Primary}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="Expanded" Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)" To="{StaticResource Color.Foreground.Primary}" />
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+                <VisualStateGroup x:Name="CheckedStates">
+                    <VisualState x:Name="Checked">
+                        <Storyboard>
+                            <DoubleAnimation Duration="0" Storyboard.TargetName="Expanded" Storyboard.TargetProperty="Opacity" To="1" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Unchecked">
+                        <Storyboard>
+                            <DoubleAnimation Duration="0" Storyboard.TargetName="Collapsed" Storyboard.TargetProperty="Opacity" To="1" />
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </Grid>
+        <ControlTemplate.Triggers>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding Path=(dxr:RibbonControl.Ribbon).IsMinimized, RelativeSource={RelativeSource Self}}" Value="True" />
+                    <Condition Binding="{Binding Path=(dxr:RibbonControl.Ribbon).AllowSimplifiedRibbon, RelativeSource={RelativeSource Self}}" Value="False" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Style" TargetName="Expanded" Value="{StaticResource UIShape.Unpinned}" />
+            </MultiDataTrigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+    <Style x:Key="{dxrt:LWKey Ribbon.MinimizationButtonStyle}" TargetType="{x:Type dxr:RibbonCheckedBorderControl}">
+        <Setter Property="Height" Value="20" />
+        <Setter Property="Margin" Value="8,8,8,4" />
+        <Setter Property="Width" Value="20" />
+        <Style.Triggers>
+            <Trigger Property="dx:ThemeManager.IsTouchEnabled" Value="True">
+                <Setter Property="Margin" Value="0" />
+                <Setter Property="MinHeight" Value="44" />
+                <Setter Property="MinWidth" Value="44" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <Style x:Key="{dxrt:LWKey Ribbon.MinimizationButtonStyleInPageContent}" TargetType="{x:Type dxr:RibbonCheckedBorderControl}">
+        <Setter Property="Height" Value="20" />
+        <Setter Property="Margin" Value="8" />
+        <Setter Property="Width" Value="20" />
+        <Style.Triggers>
+            <Trigger Property="dx:ThemeManager.IsTouchEnabled" Value="True">
+                <Setter Property="Margin" Value="0" />
+                <Setter Property="MinHeight" Value="44" />
+                <Setter Property="MinWidth" Value="44" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <ControlTemplate x:Key="{dxrt:LWKey RibbonStatusBar.LeftPartTemplate}" TargetType="{x:Type ContentControl}">
+        <dx:DXBorder Background="{StaticResource Brush.PanelBackground}">
+            <ContentPresenter Margin="1,1,0,0" />
+        </dx:DXBorder>
+    </ControlTemplate>
+    <ControlTemplate x:Key="{dxrt:LWKey RibbonStatusBar.RightPartTemplate}" TargetType="{x:Type ContentControl}">
+        <dx:DXBorder Background="{StaticResource Brush.PanelBackground}">
+            <ContentPresenter Margin="1,1,0,0" />
+        </dx:DXBorder>
+    </ControlTemplate>
+    <Style x:Key="{dxrt:LWKey Ribbon.IconAndCaptionAreaStyle}" TargetType="{x:Type ContentControl}" />
+    <Style x:Key="{dxrt:LWKey Ribbon.FooterQuickAccessToolbarContainerStyle}" TargetType="ContentControl">
+        <Setter Property="Margin" Value="1,1,0,0" />
+        <Style.Triggers>
+            <Trigger Property="dx:ThemeManager.IsTouchEnabled" Value="True">
+                <Setter Property="MinHeight" Value="44" />
+                <Setter Property="MinWidth" Value="44" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <DataTemplate x:Key="{dxrt:LWKey RibbonPage.DefaultCaptionContentTemplate}">
+        <TextBlock Text="{Binding}" />
+    </DataTemplate>
+    <Style x:Key="{dxrt:LWKey Ribbon.NormalPageCaptionTextStyle}" TargetType="{x:Type ContentControl}">
+        <Setter Property="Foreground" Value="{StaticResource Brush.Foreground.Primary}" />
+    </Style>
+    <Style x:Key="{dxrt:LWKey Ribbon.HoverPageCaptionTextStyle}" TargetType="{x:Type ContentControl}">
+        <Setter Property="Foreground" Value="{StaticResource Brush.Foreground.Primary}" />
+    </Style>
+    <Style x:Key="{dxrt:LWKey Ribbon.SelectedPageCaptionTextStyle}" TargetType="{x:Type ContentControl}">
+        <Setter Property="Foreground" Value="{StaticResource Brush.Foreground.Primary}" />
+        <Setter Property="FontWeight" Value="Bold" />
+    </Style>
+    <Style x:Key="{dxrt:LWKey Ribbon.GroupCaptionTextStyle}" TargetType="{x:Type ContentControl}">
+        <Setter Property="Foreground" Value="{StaticResource Brush.Foreground.Primary}" />
+    </Style>
+    <ControlTemplate x:Key="{dxrt:LWKey ApplicationButton.BorderTemplate2010}" TargetType="{x:Type ContentControl}">
+        <Grid x:Name="Root" Background="Transparent" Margin="14,0">
+            <ContentPresenter x:Name="Content" Margin="0,0,0,6" />
+            <dx:DXBorder
+                x:Name="SelectionIndicator"
+                Background="Transparent"
+                CornerRadius="2"
+                Height="3"
+                Margin="0,0,0,2"
+                VerticalAlignment="Bottom" />
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal" />
+                    <VisualState x:Name="Hover">
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="SelectionIndicator" Storyboard.TargetProperty="Background">
+                                <DiscreteObjectKeyFrame KeyTime="00:00:0.1">
+                                    <DiscreteObjectKeyFrame.Value>
+                                        <SolidColorBrush Color="{StaticResource Color.Button.SimpleButtonBorder}" />
+                                    </DiscreteObjectKeyFrame.Value>
+                                </DiscreteObjectKeyFrame>
+                            </ObjectAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Checked">
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="SelectionIndicator" Storyboard.TargetProperty="Background">
+                                <DiscreteObjectKeyFrame KeyTime="0">
+                                    <DiscreteObjectKeyFrame.Value>
+                                        <SolidColorBrush Color="{StaticResource Color.Button.SimpleButtonHoverBorder}" />
+                                    </DiscreteObjectKeyFrame.Value>
+                                </DiscreteObjectKeyFrame>
+                            </ObjectAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Focused">
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="SelectionIndicator" Storyboard.TargetProperty="Background">
+                                <DiscreteObjectKeyFrame KeyTime="0">
+                                    <DiscreteObjectKeyFrame.Value>
+                                        <SolidColorBrush Color="{StaticResource Color.Backstage.ItemHoverBackground}" />
+                                    </DiscreteObjectKeyFrame.Value>
+                                </DiscreteObjectKeyFrame>
+                            </ObjectAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </Grid>
+        <ControlTemplate.Triggers>
+            <Trigger Property="dx:ThemeManager.IsTouchEnabled" Value="True">
+                <Setter Property="Margin" TargetName="Content" Value="14" />
+                <Setter Property="MinHeight" TargetName="Root" Value="44" />
+                <Setter Property="MinWidth" TargetName="Root" Value="44" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+    <ControlTemplate x:Key="{dxrt:LWKey ApplicationButton.BorderTemplate2010InPopup}" TargetType="{x:Type ContentControl}" />
+    <ControlTemplate x:Key="{dxrt:LWKey ApplicationButton.BorderTemplateOfficeSlim}" TargetType="{x:Type ContentControl}">
+        <Grid x:Name="Root">
+            <dx:DXBorder x:Name="IsDefault" Background="{StaticResource Brush.Backstage.ItemSelectionBackground}" />
+            <ContentPresenter x:Name="Content" Margin="14,7,14,7" />
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal" />
+                    <VisualState x:Name="Hover">
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="Background">
+                                <DiscreteObjectKeyFrame KeyTime="0">
+                                    <DiscreteObjectKeyFrame.Value>
+                                        <SolidColorBrush Color="{StaticResource Color.Backstage.ItemHoverBackground}" />
+                                    </DiscreteObjectKeyFrame.Value>
+                                </DiscreteObjectKeyFrame>
+                            </ObjectAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Checked">
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="Background">
+                                <DiscreteObjectKeyFrame KeyTime="0">
+                                    <DiscreteObjectKeyFrame.Value>
+                                        <SolidColorBrush Color="{StaticResource Color.Backstage.ItemSelectionBackground}" />
+                                    </DiscreteObjectKeyFrame.Value>
+                                </DiscreteObjectKeyFrame>
+                            </ObjectAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Focused">
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="Background">
+                                <DiscreteObjectKeyFrame KeyTime="0">
+                                    <DiscreteObjectKeyFrame.Value>
+                                        <SolidColorBrush Color="{StaticResource Color.Backstage.ItemHoverBackground}" />
+                                    </DiscreteObjectKeyFrame.Value>
+                                </DiscreteObjectKeyFrame>
+                            </ObjectAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </Grid>
+        <ControlTemplate.Triggers>
+            <Trigger Property="dx:ThemeManager.IsTouchEnabled" Value="True">
+                <Setter Property="Margin" TargetName="Content" Value="14" />
+                <Setter Property="MinHeight" TargetName="Root" Value="44" />
+                <Setter Property="MinWidth" TargetName="Root" Value="44" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+    <ControlTemplate x:Key="{dxrt:LWKey ApplicationButton.BorderTemplateOfficeSlimInPopup}" TargetType="{x:Type ContentControl}">
+        <Grid x:Name="Root">
+            <dx:DXBorder x:Name="IsDefault" Background="{StaticResource Brush.Border}" />
+            <ContentPresenter x:Name="Content" Margin="14,7,14,7" />
+        </Grid>
+        <ControlTemplate.Triggers>
+            <Trigger Property="dx:ThemeManager.IsTouchEnabled" Value="True">
+                <Setter Property="Margin" TargetName="Content" Value="14" />
+                <Setter Property="MinHeight" TargetName="Root" Value="44" />
+                <Setter Property="MinWidth" TargetName="Root" Value="44" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+    <Style x:Key="{dxrt:LWKey ApplicationButton.StyleTabletOffice}" TargetType="{x:Type ContentControl}">
+        <Setter Property="Height" Value="32" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="Margin" Value="1" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="Width" Value="32" />
+        <Style.Triggers>
+            <Trigger Property="dx:ThemeManager.IsTouchEnabled" Value="True">
+                <Setter Property="Margin" Value="0" />
+                <Setter Property="MinHeight" Value="44" />
+                <Setter Property="MinWidth" Value="44" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <Style x:Key="{dxrt:LWKey ApplicationButton.StyleTabletOfficeInPopup}" BasedOn="{StaticResource {dxrt:LWKey ApplicationButton.StyleTabletOffice}}" TargetType="{x:Type ContentControl}" />
+    <Style x:Key="{dxrt:LWKey ApplicationButton.NormalTextStyle}" TargetType="{x:Type ContentControl}">
+        <Setter Property="Foreground" Value="{StaticResource Brush.Foreground.Primary}" />
+        <Setter Property="Margin" Value="3,0,0,0" />
+    </Style>
+    <Style x:Key="{dxrt:LWKey ApplicationButton.PressedTextStyle}" BasedOn="{StaticResource {dxrt:LWKey ApplicationButton.NormalTextStyle}}" TargetType="{x:Type ContentControl}">
+        <Setter Property="Margin" Value="3,0,0,0" />
+    </Style>
+    <Style x:Key="{dxrt:LWKey ApplicationButton.SelectedTextStyle}" BasedOn="{StaticResource {dxrt:LWKey ApplicationButton.NormalTextStyle}}" TargetType="{x:Type ContentControl}">
+        <Setter Property="Margin" Value="3,0,0,0" />
+    </Style>
+    <Style x:Key="{dxrt:LWKey ApplicationButton.CheckedTextStyle}" BasedOn="{StaticResource {dxrt:LWKey ApplicationButton.NormalTextStyle}}" TargetType="{x:Type ContentControl}">
+        <Setter Property="Margin" Value="3,0,0,0" />
+    </Style>
+    <Style x:Key="{dxrt:LWKey ApplicationButton.Style2007}" TargetType="{x:Type ContentControl}">
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="Margin" Value="14" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="MinWidth" Value="36" />
+        <Setter Property="MinHeight" Value="36" />
+        <Style.Triggers>
+            <Trigger Property="dx:ThemeManager.IsTouchEnabled" Value="True">
+                <Setter Property="Margin" Value="22" />
+                <Setter Property="MinHeight" Value="44" />
+                <Setter Property="MinWidth" Value="44" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <Style x:Key="{dxrt:LWKey ApplicationButton.Style2007InPopup}" BasedOn="{StaticResource {dxrt:LWKey ApplicationButton.Style2007}}" TargetType="{x:Type ContentControl}" />
+    <Style x:Key="{dxrt:LWKey ApplicationButton.Style2007InAeroWindow}" BasedOn="{StaticResource {dxrt:LWKey ApplicationButton.Style2007}}" TargetType="{x:Type ContentControl}" />
+    <Style x:Key="{dxrt:LWKey ApplicationButton.Style2010}" TargetType="{x:Type ContentControl}">
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="Margin" Value="0,0,1,0" />
+        <Setter Property="VerticalAlignment" Value="Bottom" />
+    </Style>
+    <Style x:Key="{dxrt:LWKey ApplicationButton.Style2010InPopup}" BasedOn="{StaticResource {dxrt:LWKey ApplicationButton.Style2010}}" TargetType="{x:Type ContentControl}" />
+    <Style x:Key="{dxrt:LWKey ApplicationButton.StyleOfficeSlim}" TargetType="{x:Type ContentControl}">
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="Margin" Value="0,0,1,0" />
+        <Setter Property="VerticalAlignment" Value="Bottom" />
+    </Style>
+    <Style x:Key="{dxrt:LWKey ApplicationButton.StyleOfficeSlimInPopup}" BasedOn="{StaticResource {dxrt:LWKey ApplicationButton.StyleOfficeSlim}}" TargetType="{x:Type ContentControl}" />
+    <ControlTemplate x:Key="{dxrt:LWKey ApplicationButton.BorderTemplateTablet}" TargetType="{x:Type ContentControl}">
+        <Grid x:Name="Root" Background="Transparent">
+            <dx:DXBorder x:Name="IsDefault" Background="{StaticResource Brush.Backstage.Background}" />
+            <Path x:Name="path" Fill="{StaticResource Brush.Foreground.Alt}" Style="{StaticResource UIShape.Menu}" />
+            <dx:DXImage
+                x:Name="image"
+                HorizontalAlignment="Center"
+                Source="{Binding Path=(dxr:RibbonControl.Ribbon).ActualApplicationButtonSmallIcon, RelativeSource={RelativeSource Self}}"
+                Stretch="None"
+                VerticalAlignment="Center"
+                Visibility="Collapsed" />
+        </Grid>
+        <ControlTemplate.Triggers>
+            <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=(dxr:RibbonControl.Ribbon).ActualApplicationButtonSmallIcon, Converter={dxmvvm:ObjectToBooleanConverter}}" Value="True">
+                <Setter Property="Visibility" TargetName="image" Value="Visible" />
+                <Setter Property="Visibility" TargetName="path" Value="Collapsed" />
+            </DataTrigger>
+            <Trigger Property="IsMouseOver" Value="true">
+                <Setter Property="Background" TargetName="IsDefault" Value="{StaticResource Brush.Backstage.ItemHoverBackground}" />
+                <Setter Property="Opacity" TargetName="image" Value="1" />
+            </Trigger>
+            <Trigger Property="dx:ThemeManager.IsTouchEnabled" Value="True">
+                <Setter Property="MinHeight" TargetName="Root" Value="44" />
+                <Setter Property="MinWidth" TargetName="Root" Value="44" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+    <ControlTemplate x:Key="{dxrt:LWKey ApplicationButton.BorderTemplateTabletInPopup}" TargetType="{x:Type ContentControl}">
+        <Grid x:Name="Root" Background="Transparent">
+            <dx:DXBorder x:Name="IsDefault" Background="{StaticResource Brush.Backstage.ItemSelectionBackground}" CornerRadius="62" />
+            <Path x:Name="path" Fill="{StaticResource Brush.Foreground.Alt}" Style="{StaticResource UIShape.Menu}" />
+            <dx:DXImage
+                x:Name="image"
+                HorizontalAlignment="Center"
+                Source="{Binding Path=(dxr:RibbonControl.Ribbon).ActualApplicationButtonSmallIcon, RelativeSource={RelativeSource Self}}"
+                Stretch="None"
+                VerticalAlignment="Center"
+                Visibility="Collapsed" />
+        </Grid>
+        <ControlTemplate.Triggers>
+            <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=(dxr:RibbonControl.Ribbon).ActualApplicationButtonSmallIcon, Converter={dxmvvm:ObjectToBooleanConverter}}" Value="True">
+                <Setter Property="Visibility" TargetName="image" Value="Visible" />
+                <Setter Property="Visibility" TargetName="path" Value="Collapsed" />
+            </DataTrigger>
+            <Trigger Property="IsMouseOver" Value="true">
+                <Setter Property="Background" TargetName="IsDefault" Value="{StaticResource Brush.Backstage.ItemHoverBackground}" />
+                <Setter Property="Opacity" TargetName="image" Value="1" />
+            </Trigger>
+            <Trigger Property="dx:ThemeManager.IsTouchEnabled" Value="True">
+                <Setter Property="MinHeight" TargetName="Root" Value="44" />
+                <Setter Property="MinWidth" TargetName="Root" Value="44" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+    <ControlTemplate x:Key="RibbonBackstageButton">
+        <Grid Background="Transparent">
+            <dx:DXBorder x:Name="IsDefault" Background="{StaticResource Brush.Backstage.Background}" />
+            <dx:DXBorder
+                x:Name="InnerBorder"
+                HorizontalAlignment="Left"
+                Margin="11,10,24,10"
+                VerticalAlignment="Center">
+                <dx:DXBorder
+                    x:Name="Circle"
+                    Background="Transparent"
+                    BorderBrush="{dx:LWBrush 'Brush.Foreground.Alt, Win11Dark=Brush.Foreground.Primary'}"
+                    BorderThickness="2"
+                    CornerRadius="96"
+                    Height="32"
+                    Width="32">
+                    <Path
+                        x:Name="Content"
+                        Fill="{dx:LWBrush 'Brush.Foreground.Alt, Win11Dark=Brush.Foreground.Primary'}"
+                        Height="12"
+                        Style="{StaticResource UIShape.RibbonBack}"
+                        Width="16" />
+                </dx:DXBorder>
+            </dx:DXBorder>
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="Common">
+                    <VisualState x:Name="Normal" />
+                    <VisualState x:Name="Hover">
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="Background">
+                                <DiscreteObjectKeyFrame KeyTime="0">
+                                    <DiscreteObjectKeyFrame.Value>
+                                        <SolidColorBrush Color="{StaticResource Color.Backstage.ItemHoverBackground}" />
+                                    </DiscreteObjectKeyFrame.Value>
+                                </DiscreteObjectKeyFrame>
+                            </ObjectAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Pressed">
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="Background">
+                                <DiscreteObjectKeyFrame KeyTime="0">
+                                    <DiscreteObjectKeyFrame.Value>
+                                        <SolidColorBrush Color="{StaticResource Color.Backstage.ItemSelectionBackground}" />
+                                    </DiscreteObjectKeyFrame.Value>
+                                </DiscreteObjectKeyFrame>
+                            </ObjectAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </Grid>
+        <ControlTemplate.Triggers>
+            <Trigger Property="dx:ThemeManager.IsTouchEnabled" Value="True">
+                <Setter Property="Height" TargetName="Circle" Value="44" />
+                <Setter Property="Width" TargetName="Circle" Value="44" />
+                <Setter Property="Margin" TargetName="InnerBorder" Value="44,14,44,14" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+    <Style x:Key="{dxrt:LWKey Backstage.BackstageViewBackGlyphTemplate}" TargetType="{x:Type dxr:RibbonCheckedBorderControl}">
+        <Setter Property="HorizontalAlignment" Value="Stretch" />
+        <Setter Property="Margin" Value="0,12,0,12" />
+        <Setter Property="Template" Value="{StaticResource RibbonBackstageButton}" />
+        <Setter Property="VerticalAlignment" Value="Top" />
+        <Setter Property="dxr:BackstageViewContentHost.AnimationTime" Value="00:00:00.2" />
+    </Style>
+    <ControlTemplate x:Key="{dxrt:LWKey Backstage.HeaderAndButtonsBackground}" />
+    <ControlTemplate x:Key="{dxrt:LWKey Backstage.LeftPartBackground}" TargetType="{x:Type Control}">
+        <dx:DXBorder
+            Background="{StaticResource Brush.Backstage.Background}"
+            CornerRadius="6,0,0,6"
+            HorizontalAlignment="Stretch"
+            MinWidth="128"
+            VerticalAlignment="Stretch" />
+    </ControlTemplate>
+    <Style x:Key="{dxrt:LWKey Backstage.ControlBoxContainerStyle}" x:Shared="False" TargetType="{x:Type dxri:RibbonControlBoxContainer}">
+        <Setter Property="Margin" Value="-1" />
+        <Setter Property="dx:HeaderItemControl.CloseTemplateProvider">
+            <Setter.Value>
+                <dx:CloseHeaderItemControlTemplateProvider
+                    CloseGlyphTemplate="{DynamicResource {dxt:LWKey FloatingContainer.FloatingContainerCloseButtonGlyph}}"
+                    HeaderItemControlStyle="{DynamicResource {dxt:LWKey RibbonHeaderItems.RibbonHeaderCloseButtonStyle}}"
+                    MouseOverBackgroundTemplate="{DynamicResource {dxt:LWKey FloatingContainer.FloatingContainerCloseButtonBackgroundMouseOverState}}"
+                    MouseOverForeground="{DynamicResource {dxt:LWKey FloatingContainer.FloatingContainerCloseButtonForegroundMouseOverState}}"
+                    NormalBackgroundTemplate="{DynamicResource {dxt:LWKey FloatingContainer.FloatingContainerCloseButtonBackgroundNormalState}}"
+                    NormalForeground="{DynamicResource {dxt:LWKey FloatingContainer.FloatingContainerCloseButtonForegroundNormalState}}"
+                    PressedBackgroundTemplate="{DynamicResource {dxt:LWKey FloatingContainer.FloatingContainerCloseButtonBackgroundPressedState}}"
+                    PressedForeground="{DynamicResource {dxt:LWKey FloatingContainer.FloatingContainerCloseButtonForegroundPressedState}}" />
+            </Setter.Value>
+        </Setter>
+        <Setter Property="dx:HeaderItemControl.CommonTemplateProvider">
+            <Setter.Value>
+                <dx:CommonHeaderItemControlTemplateProvider
+                    HeaderItemControlStyle="{DynamicResource {dxt:LWKey RibbonHeaderItems.RibbonHeaderButtonStyle}}"
+                    MaximizeGlyphTemplate="{DynamicResource {dxt:LWKey FloatingContainer.FloatingContainerMaximizeButtonGlyph}}"
+                    MinimizeGlyphTemplate="{DynamicResource {dxt:LWKey FloatingContainer.FloatingContainerMinimizeButtonGlyph}}"
+                    MouseOverBackgroundTemplate="{DynamicResource {dxt:LWKey FloatingContainer.FloatingContainerDefaultButtonBackgroundMouseOverState}}"
+                    MouseOverForeground="{DynamicResource {dxt:LWKey FloatingContainer.FloatingContainerDefaultButtonForegroundMouseOverState}}"
+                    NormalBackgroundTemplate="{DynamicResource {dxt:LWKey FloatingContainer.FloatingContainerDefaultButtonBackgroundNormalState}}"
+                    NormalForeground="{DynamicResource {dxt:LWKey FloatingContainer.FloatingContainerDefaultButtonForegroundNormalState}}"
+                    PressedBackgroundTemplate="{DynamicResource {dxt:LWKey FloatingContainer.FloatingContainerDefaultButtonBackgroundPressedState}}"
+                    PressedForeground="{DynamicResource {dxt:LWKey FloatingContainer.FloatingContainerDefaultButtonForegroundPressedState}}"
+                    RestoreGlyphTemplate="{DynamicResource {dxt:LWKey FloatingContainer.FloatingContainerRestoreButtonGlyph}}" />
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="{dxrt:LWKey Backstage.HeaderPresenterStyle}" TargetType="{x:Type dxri:BackstageViewHeaderPresenter}">
+        <Setter Property="Margin" Value="0,8,0,0" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding Path=BackstageViewControl.RibbonStyle, RelativeSource={RelativeSource Self}}" Value="Office2007">
+                <Setter Property="Margin" Value="0,9,0,0" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+    <ControlTemplate x:Key="{dxrt:LWKey Backstage.BackgroundTemplate}" TargetType="{x:Type ContentControl}">
+        <dx:DXBorder Background="{StaticResource Brush.WindowBackground}" CornerRadius="6" />
+    </ControlTemplate>
+    <ControlTemplate x:Key="{dxrt:LWKey Backstage.TabPaneTemplate}" TargetType="{x:Type ContentControl}">
+        <ContentPresenter />
+    </ControlTemplate>
+    <ControlTemplate x:Key="{dxrt:LWKey Backstage.ControlPaneTemplate}" TargetType="{x:Type ContentControl}">
+        <ContentPresenter />
+    </ControlTemplate>
+    <Style x:Key="{dxrt:LWKey Backstage.BackgroundGlyphStyle}" TargetType="{x:Type Image}">
+        <Setter Property="HorizontalAlignment" Value="Right" />
+        <Setter Property="Stretch" Value="None" />
+        <Setter Property="VerticalAlignment" Value="Bottom" />
+    </Style>
+    <Style x:Key="{dxrt:LWKey Backstage.BackgroundStyle}" TargetType="{x:Type ContentControl}">
+        <Setter Property="Template" Value="{DynamicResource {dxrt:LWKey Backstage.BackgroundTemplate}}" />
+    </Style>
+    <Style x:Key="{dxrt:LWKey Backstage.TabPaneStyle}" TargetType="{x:Type ContentControl}">
+        <Setter Property="Margin" Value="0,0,0,16" />
+        <Setter Property="Template" Value="{DynamicResource {dxrt:LWKey Backstage.TabPaneTemplate}}" />
+    </Style>
+    <Style x:Key="{dxrt:LWKey Backstage.ControlPaneStyle}" TargetType="{x:Type ContentControl}">
+        <Setter Property="Template" Value="{DynamicResource {dxrt:LWKey Backstage.ControlPaneTemplate}}" />
+    </Style>
+    <Style x:Key="{dxrt:LWKey Backstage.ItemsPresenterStyle}" TargetType="{x:Type ItemsPresenter}">
+        <Setter Property="Margin" Value="1" />
+    </Style>
+    <ControlTemplate x:Key="{dxrt:LWKey RibbonPage.HighlightedCaptionBackgroundTemplate}" TargetType="{x:Type dxr:RibbonCheckedBorderControl}">
+        <Grid x:Name="PART_Root">
+            <dx:DXBorder x:Name="OuterBorder">
+                <Grid>
+                    <dx:DXBorder
+                        x:Name="IsDefault"
+                        Background="{StaticResource Brush.Control.Background}"
+                        CornerRadius="{Binding ElementName=OuterBorder, Path=CornerRadius}"
+                        Opacity="0" />
+                    <dx:DXBorder x:Name="BackgroundBorder" CornerRadius="{Binding ElementName=OuterBorder, Path=CornerRadius}" />
+                    <dx:DXBorder
+                        x:Name="SelectionIndicator"
+                        Background="Transparent"
+                        CornerRadius="2"
+                        Height="3"
+                        Margin="3,0,3,2"
+                        VerticalAlignment="Bottom" />
+                </Grid>
+            </dx:DXBorder>
+            <ContentPresenter x:Name="PART_ContentPresenter" />
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="CommonStateGroup">
+                    <VisualState x:Name="NormalUnchecked" />
+                    <VisualState x:Name="NormalChecked" />
+                    <VisualState x:Name="HoverUnchecked">
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="SelectionIndicator" Storyboard.TargetProperty="Background">
+                                <DiscreteObjectKeyFrame KeyTime="0">
+                                    <DiscreteObjectKeyFrame.Value>
+                                        <SolidColorBrush Color="{StaticResource Color.Button.SimpleButtonBorder}" />
+                                    </DiscreteObjectKeyFrame.Value>
+                                </DiscreteObjectKeyFrame>
+                            </ObjectAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="HoverChecked" />
+                    <VisualState x:Name="PressedChecked" />
+                    <VisualState x:Name="Focused" />
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </Grid>
+        <ControlTemplate.Triggers>
+            <DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Page.(dxi:AppearanceOptions.HasBorderThickness)}" Value="True">
+                <Setter Property="BorderThickness" TargetName="OuterBorder" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=TemplatedParent.Page.(dxi:AppearanceOptions.BorderThickness)}" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Page.(dxi:AppearanceOptions.HasBorderBrush)}" Value="True">
+                <Setter Property="BorderBrush" TargetName="OuterBorder" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=TemplatedParent.Page.(dxi:AppearanceOptions.BorderBrush)}" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Page.(dxi:AppearanceOptions.HasBackground)}" Value="True">
+                <Setter Property="Background" TargetName="BackgroundBorder" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=DataContext.(dxi:AppearanceOptions.Background)}" />
+                <Setter Property="Visibility" TargetName="IsDefault" Value="Collapsed" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Page.(dxi:AppearanceOptions.HasCornerRadius)}" Value="True">
+                <Setter Property="CornerRadius" TargetName="OuterBorder" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=TemplatedParent.Page.(dxi:AppearanceOptions.CornerRadius)}" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Page.(dxi:AppearanceOptions.HasMargin)}" Value="True">
+                <Setter Property="Margin" TargetName="PART_Root" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=TemplatedParent.Page.(dxi:AppearanceOptions.Margin)}" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Page.(dxi:AppearanceOptions.HasPadding)}" Value="True">
+                <Setter Property="Margin" TargetName="PART_ContentPresenter" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=TemplatedParent.Page.(dxi:AppearanceOptions.Padding)}" />
+            </DataTrigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+    <ControlTemplate x:Key="{dxrt:LWKey RibbonPageCategory.HighlightedHeadersBackgroundTemplate}" TargetType="{x:Type dxr:RibbonCheckedBorderControl}">
+        <dx:DXBorder x:Name="PART_BackgroundBorder" Background="{Binding Converter={StaticResource ColorOverlayConverter}, ConverterParameter={dx:LWColor '#FF808080, Win11Dark=#FF4F4F4F'}}" />
+        <ControlTemplate.Triggers>
+            <DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=PageCategory.(dxi:AppearanceOptions.HasBackground)}" Value="True">
+                <Setter Property="Background" TargetName="PART_BackgroundBorder" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=PageCategory.(dxi:AppearanceOptions.Background)}" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=PageCategory.(dxi:AppearanceOptions.HasCornerRadius)}" Value="True">
+                <Setter Property="CornerRadius" TargetName="PART_BackgroundBorder" Value="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type dxr:RibbonPageCategoryControl}}, Path=PageCategory.(dxi:AppearanceOptions.CornerRadius), Converter={StaticResource CornerRadiusConverter}, ConverterParameter=Bottom}" />
+            </DataTrigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+    <ControlTemplate x:Key="{dxrt:LWKey RibbonPageGroup.HighlightedBorderTemplate}" TargetType="{x:Type ContentControl}">
+        <Grid x:Name="Root">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <ContentPresenter Grid.Column="0" />
+            <TextBlock
+                Name="PART_DesignTimeCaption"
+                Grid.Column="1"
+                Text="[PageGroup]"
+                Visibility="Collapsed" />
+            <dx:DXBorder
+                x:Name="Separator"
+                Grid.Column="2"
+                Background="{StaticResource Brush.Separator}"
+                SnapsToDevicePixels="True"
+                Width="1" />
+        </Grid>
+        <ControlTemplate.Triggers>
+            <DataTrigger Binding="{Binding Path=IsDesignTimeCaptionVisible, RelativeSource={RelativeSource AncestorType=dxr:RibbonPageGroupControl}}" Value="True">
+                <Setter Property="Visibility" TargetName="PART_DesignTimeCaption" Value="Visible" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding Path=IsSeparatorVisible, RelativeSource={RelativeSource AncestorType=dxr:RibbonPageGroupControl}}" Value="False">
+                <Setter Property="Visibility" TargetName="Separator" Value="Collapsed" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding Path=PageGroup.(dxi:AppearanceOptions.HasMargin), RelativeSource={RelativeSource AncestorType=dxr:RibbonPageGroupControl}}" Value="True">
+                <Setter Property="Visibility" TargetName="Separator" Value="Collapsed" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding Path=PageGroup.(dxi:AppearanceOptions.HasPadding), RelativeSource={RelativeSource AncestorType=dxr:RibbonPageGroupControl}}" Value="True">
+                <Setter Property="Visibility" TargetName="Separator" Value="Collapsed" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding Path=PageGroup.(dxi:AppearanceOptions.HasBorderBrush), RelativeSource={RelativeSource AncestorType=dxr:RibbonPageGroupControl}}" Value="True">
+                <Setter Property="Visibility" TargetName="Separator" Value="Collapsed" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding Path=PageGroup.(dxi:AppearanceOptions.HasBorderThickness), RelativeSource={RelativeSource AncestorType=dxr:RibbonPageGroupControl}}" Value="True">
+                <Setter Property="Visibility" TargetName="Separator" Value="Collapsed" />
+            </DataTrigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+    <Style x:Key="{dxrt:LWKey RibbonPage.SelectedPageContainerStyle}" TargetType="{x:Type ContentControl}">
+        <Setter Property="Margin" Value="8" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding Ribbon.ToolbarShowMode, RelativeSource={RelativeSource TemplatedParent}}" Value="ShowBelow">
+                <Setter Property="Margin" Value="8,8,8,4" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+    <ControlTemplate x:Key="{dxrt:LWKey RibbonPageCategory.HeaderBackgroundTemplate}" TargetType="{x:Type dxr:RibbonCheckedBorderControl}">
+        <Grid x:Name="Root" MinHeight="32">
+            <dx:DXBorder x:Name="IsDefault" Background="{Binding Path=Color, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource ColorOverlayConverter}, ConverterParameter={dx:LWColor '#FF808080, Win11Dark=#FF4F4F4F'}}" />
+            <ContentPresenter x:Name="Content" Margin="8" />
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="Placement">
+                    <VisualState x:Name="RibbonWindow" />
+                    <VisualState x:Name="Standalone" />
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </Grid>
+        <ControlTemplate.Triggers>
+            <DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Category.(dxi:AppearanceOptions.HasBackground)}" Value="True">
+                <Setter Property="Background" TargetName="IsDefault" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=TemplatedParent.Category.(dxi:AppearanceOptions.Background)}" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Category.(dxi:AppearanceOptions.HasCornerRadius)}" Value="True">
+                <Setter Property="CornerRadius" TargetName="IsDefault" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=TemplatedParent.Category.(dxi:AppearanceOptions.CornerRadius), Converter={StaticResource CornerRadiusConverter}, ConverterParameter=Top}" />
+            </DataTrigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+    <Style x:Key="{dxrt:LWKey Ribbon.SelectionIndicatorStyle}" TargetType="{x:Type dxi:SelectionIndicatorDecorator}">
+        <Setter Property="EnableAnimations" Value="True" />
+        <Setter Property="Duration" Value="70" />
+        <Setter Property="SelectionIndicatorStyle">
+            <Setter.Value>
+                <Style TargetType="{x:Type dxi:SelectionIndicator}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate>
+                                <dx:DXBorder
+                                    x:Name="Border"
+                                    Background="{StaticResource Brush.Accent}"
+                                    CornerRadius="2"
+                                    Margin="0,0,0,2"
+                                    MinHeight="3" />
+                                <ControlTemplate.Triggers>
+                                    <MultiDataTrigger>
+                                        <MultiDataTrigger.Conditions>
+                                            <Condition Binding="{Binding Path=(dxr:RibbonControl.Ribbon).IsMinimized, RelativeSource={RelativeSource Self}}" Value="True" />
+                                            <Condition Binding="{Binding Path=(dxr:RibbonControl.Ribbon).IsMinimizedRibbonCollapsed, RelativeSource={RelativeSource Self}}" Value="True" />
+                                        </MultiDataTrigger.Conditions>
+                                        <Setter Property="Visibility" TargetName="Border" Value="Hidden" />
+                                    </MultiDataTrigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <ControlTemplate x:Key="{dxrt:LWKey RibbonPageGroup.BorderTemplate}" TargetType="{x:Type ContentControl}">
+        <Grid x:Name="Root">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <ContentPresenter Grid.Column="0" />
+            <TextBlock
+                Name="PART_DesignTimeCaption"
+                Grid.Column="1"
+                Text="[PageGroup]"
+                Visibility="Collapsed" />
+            <dx:DXBorder
+                x:Name="Separator"
+                Grid.Column="2"
+                Background="{StaticResource Brush.Separator}"
+                SnapsToDevicePixels="True"
+                Width="1" />
+        </Grid>
+        <ControlTemplate.Triggers>
+            <DataTrigger Binding="{Binding Path=IsDesignTimeCaptionVisible, RelativeSource={RelativeSource AncestorType=dxr:RibbonPageGroupControl}}" Value="True">
+                <Setter Property="Visibility" TargetName="PART_DesignTimeCaption" Value="Visible" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding Path=IsSeparatorVisible, RelativeSource={RelativeSource AncestorType=dxr:RibbonPageGroupControl}}" Value="False">
+                <Setter Property="Visibility" TargetName="Separator" Value="Collapsed" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding Path=PageGroup.(dxi:AppearanceOptions.HasMargin), RelativeSource={RelativeSource AncestorType=dxr:RibbonPageGroupControl}}" Value="True">
+                <Setter Property="Visibility" TargetName="Separator" Value="Collapsed" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding Path=PageGroup.(dxi:AppearanceOptions.HasPadding), RelativeSource={RelativeSource AncestorType=dxr:RibbonPageGroupControl}}" Value="True">
+                <Setter Property="Visibility" TargetName="Separator" Value="Collapsed" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding Path=PageGroup.(dxi:AppearanceOptions.HasBorderBrush), RelativeSource={RelativeSource AncestorType=dxr:RibbonPageGroupControl}}" Value="True">
+                <Setter Property="Visibility" TargetName="Separator" Value="Collapsed" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding Path=PageGroup.(dxi:AppearanceOptions.HasBorderThickness), RelativeSource={RelativeSource AncestorType=dxr:RibbonPageGroupControl}}" Value="True">
+                <Setter Property="Visibility" TargetName="Separator" Value="Collapsed" />
+            </DataTrigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+    <ControlTemplate x:Key="{dxrt:LWKey RibbonPageGroup.CaptionButtonTemplate}" TargetType="{x:Type dxr:RibbonCheckedBorderControl}">
+        <Grid x:Name="Root">
+            <dx:DXBorder x:Name="IsDefault" Background="Transparent" CornerRadius="4" />
+            <Path
+                x:Name="Content"
+                Fill="{StaticResource Brush.Foreground.Primary}"
+                HorizontalAlignment="Right"
+                Margin="3"
+                Style="{StaticResource UIShape.FlyoutButton}"
+                VerticalAlignment="Bottom" />
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal" />
+                    <VisualState x:Name="Hover">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{StaticResource Color.ListItem.HoverBackground}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="Content" Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)" To="{StaticResource Color.Foreground.Primary}" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Pressed">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{StaticResource Color.ListItem.SelectionBackground}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="Content" Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)" To="{StaticResource Color.Foreground.Primary}" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Checked">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{StaticResource Color.ListItem.SelectionBackground}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="Content" Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)" To="{StaticResource Color.Foreground.Primary}" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Disabled">
+                        <Storyboard>
+                            <DoubleAnimation Duration="0" Storyboard.TargetName="Root" Storyboard.TargetProperty="Opacity" To="0.38" />
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </Grid>
+    </ControlTemplate>
+    <Style x:Key="{dxrt:LWKey RibbonPageGroup.CaptionButtonStyle}" TargetType="{x:Type dxr:RibbonCheckedBorderControl}">
+        <Setter Property="Height" Value="16" />
+        <Setter Property="Margin" Value="3" />
+        <Setter Property="Width" Value="16" />
+        <Style.Triggers>
+            <Trigger Property="dx:ThemeManager.IsTouchEnabled" Value="True">
+                <Setter Property="Margin" Value="0" />
+                <Setter Property="MinHeight" Value="44" />
+                <Setter Property="MinWidth" Value="44" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <ControlTemplate x:Key="{dxrt:LWKey InRibbonGallery.GalleryItemBorderTemplate}" TargetType="{x:Type dxb:ItemBorderControl}">
+        <Grid x:Name="Root" Background="Transparent">
+            <dx:DXBorder
+                x:Name="IsDefault"
+                Background="Transparent"
+                BorderBrush="Transparent"
+                BorderThickness="1"
+                CornerRadius="4" />
+            <ContentPresenter />
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="State">
+                    <VisualState x:Name="Normal" />
+                    <VisualState x:Name="Hover">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{StaticResource Color.ListItem.HoverBackground}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="{StaticResource Color.ListItem.HoverBackground}" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Pressed">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{StaticResource Color.ListItem.SelectionBackground}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="{StaticResource Color.ListItem.HoverBackground}" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Checked">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{StaticResource Color.ListItem.SelectionBackground}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="{StaticResource Color.ListItem.HoverBackground}" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="HoverChecked">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{StaticResource Color.ListItem.SelectionBackground}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="{StaticResource Color.ListItem.HoverBackground}" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Focused">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{StaticResource Color.ListItem.HoverBackground}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="{StaticResource Color.ListItem.HoverBackground}" />
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </Grid>
+    </ControlTemplate>
+    <ControlTemplate x:Key="{dxrt:LWKey GalleryDropDownControl.PopupBorderTemplate}" TargetType="{x:Type dxr:GalleryDropDownPopupBorderControl}">
+        <Grid x:Name="Root">
+            <dx:DXBorder
+                Background="{StaticResource Brush.FlyoutBackground}"
+                BorderBrush="{StaticResource Brush.FlyoutBorder}"
+                BorderThickness="1"
+                CornerRadius="7">
+                <dx:DXBorder.Effect>
+                    <DropShadowEffect
+                        x:Name="Shadow"
+                        BlurRadius="4"
+                        Direction="315"
+                        Opacity="0.14"
+                        ShadowDepth="3" />
+                </dx:DXBorder.Effect>
+            </dx:DXBorder>
+            <dx:DXBorder Margin="0">
+                <ContentPresenter Content="{TemplateBinding Content}" Margin="0" />
+            </dx:DXBorder>
+        </Grid>
+    </ControlTemplate>
+    <ControlTemplate x:Key="{dxrt:LWKey Ribbon.SelectedPageBorderTemplate}" TargetType="{x:Type ContentControl}">
+        <Grid x:Name="Root" Margin="2,0">
+            <dx:DXBorder
+                BorderBrush="#FF000000"
+                BorderThickness="1"
+                CornerRadius="13"
+                Opacity="0.01" />
+            <dx:DXBorder
+                BorderBrush="#FF000000"
+                BorderThickness="1"
+                CornerRadius="12"
+                Margin="1"
+                Opacity="0.01" />
+            <dx:DXBorder
+                BorderBrush="#FF000000"
+                BorderThickness="1"
+                CornerRadius="11"
+                Margin="2"
+                Opacity="0.02" />
+            <dx:DXBorder
+                BorderBrush="#FF000000"
+                BorderThickness="1"
+                CornerRadius="10"
+                Margin="3"
+                Opacity="0.02" />
+            <dx:DXBorder
+                x:Name="Border"
+                Background="{StaticResource Brush.Ribbon.Background}"
+                BorderBrush="{StaticResource Brush.PanelBorder}"
+                BorderThickness="1"
+                CornerRadius="9"
+                Margin="4" />
+            <ContentPresenter />
+        </Grid>
+        <ControlTemplate.Triggers>
+            <DataTrigger Binding="{Binding Ribbon.ToolbarShowMode, RelativeSource={RelativeSource TemplatedParent}}" Value="ShowBelow">
+                <Setter Property="CornerRadius" TargetName="Border" Value="9,9,0,0" />
+                <Setter Property="Margin" TargetName="Border" Value="4,4,4,0" />
+                <Setter Property="Margin" Value="1,0,0,0" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding Path=(dxr:RibbonControl.Ribbon).(dxi:AppearanceOptions.HasCornerRadius), RelativeSource={RelativeSource Self}}" Value="True">
+                <Setter Property="CornerRadius" TargetName="Border" Value="{Binding Path=(dxr:RibbonControl.Ribbon).(dxi:AppearanceOptions.CornerRadius), RelativeSource={RelativeSource Self}, Converter={StaticResource CornerRadiusConverter}, ConverterParameter=Bottom}" />
+            </DataTrigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+    <ControlTemplate x:Key="{dxrt:LWKey Ribbon.SelectedPageBorderTemplateInPopup}" TargetType="{x:Type ContentControl}">
+        <Grid x:Name="Root" Margin="2,0">
+            <dx:DXBorder
+                BorderBrush="#FF000000"
+                BorderThickness="1"
+                CornerRadius="13"
+                Opacity="0.01" />
+            <dx:DXBorder
+                BorderBrush="#FF000000"
+                BorderThickness="1"
+                CornerRadius="12"
+                Margin="1"
+                Opacity="0.01" />
+            <dx:DXBorder
+                BorderBrush="#FF000000"
+                BorderThickness="1"
+                CornerRadius="11"
+                Margin="2"
+                Opacity="0.02" />
+            <dx:DXBorder
+                BorderBrush="#FF000000"
+                BorderThickness="1"
+                CornerRadius="10"
+                Margin="3"
+                Opacity="0.02" />
+            <dx:DXBorder
+                x:Name="Border"
+                Background="{StaticResource Brush.Ribbon.Background}"
+                BorderBrush="{StaticResource Brush.PanelBorder}"
+                BorderThickness="1"
+                CornerRadius="9"
+                Margin="4" />
+            <ContentPresenter />
+        </Grid>
+    </ControlTemplate>
+    <ControlTemplate x:Key="{dxrt:LWKey Ribbon.CollapsedSelectedPageBorderTemplate}" TargetType="ContentControl">
+        <dx:DXBorder Background="{StaticResource Brush.Border}" Height="1" />
+    </ControlTemplate>
+    <ControlTemplate x:Key="{dxrt:LWKey Ribbon.HighlightedSelectedPageBorderTemplate}" TargetType="{x:Type ContentControl}">
+        <Grid x:Name="Root" Margin="2,0">
+            <dx:DXBorder
+                BorderBrush="#FF000000"
+                BorderThickness="1"
+                CornerRadius="13"
+                Opacity="0.01" />
+            <dx:DXBorder
+                BorderBrush="#FF000000"
+                BorderThickness="1"
+                CornerRadius="12"
+                Margin="1"
+                Opacity="0.01" />
+            <dx:DXBorder
+                BorderBrush="#FF000000"
+                BorderThickness="1"
+                CornerRadius="11"
+                Margin="2"
+                Opacity="0.02" />
+            <dx:DXBorder
+                BorderBrush="#FF000000"
+                BorderThickness="1"
+                CornerRadius="10"
+                Margin="3"
+                Opacity="0.02" />
+            <dx:DXBorder
+                x:Name="Border"
+                Background="{StaticResource Brush.Ribbon.Background}"
+                BorderBrush="{StaticResource Brush.PanelBorder}"
+                BorderThickness="1"
+                CornerRadius="9"
+                Margin="4" />
+            <ContentPresenter />
+        </Grid>
+        <ControlTemplate.Triggers>
+            <DataTrigger Binding="{Binding Ribbon.ToolbarShowMode, RelativeSource={RelativeSource TemplatedParent}}" Value="ShowBelow">
+                <Setter Property="CornerRadius" TargetName="Border" Value="9,9,0,0" />
+                <Setter Property="Margin" TargetName="Border" Value="4,4,4,0" />
+                <Setter Property="Margin" Value="1,0,0,0" />
+            </DataTrigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+    <ControlTemplate x:Key="{dxrt:LWKey Ribbon.HighlightedSelectedPageBorderTemplateInPopup}" TargetType="{x:Type ContentControl}">
+        <Grid x:Name="Root" Margin="2,0">
+            <dx:DXBorder
+                BorderBrush="#FF000000"
+                BorderThickness="1"
+                CornerRadius="13"
+                Opacity="0.01" />
+            <dx:DXBorder
+                BorderBrush="#FF000000"
+                BorderThickness="1"
+                CornerRadius="12"
+                Margin="1"
+                Opacity="0.01" />
+            <dx:DXBorder
+                BorderBrush="#FF000000"
+                BorderThickness="1"
+                CornerRadius="11"
+                Margin="2"
+                Opacity="0.02" />
+            <dx:DXBorder
+                BorderBrush="#FF000000"
+                BorderThickness="1"
+                CornerRadius="10"
+                Margin="3"
+                Opacity="0.02" />
+            <dx:DXBorder
+                x:Name="Border"
+                Background="{StaticResource Brush.Ribbon.Background}"
+                BorderBrush="{StaticResource Brush.PanelBorder}"
+                BorderThickness="1"
+                CornerRadius="9"
+                Margin="4" />
+            <ContentPresenter />
+        </Grid>
+    </ControlTemplate>
+    <Style x:Key="{dxrt:LWKey Ribbon.PageGroupsControlDropDownButtonStyle}" TargetType="{x:Type dxr:RibbonCheckedBorderControl}">
+        <Setter Property="Margin" Value="0,0,0,1" />
+        <Setter Property="Padding" Value="10,0" />
+    </Style>
+    <ControlTemplate x:Key="{dxrt:LWKey RibbonPage.CaptionBackgroundTemplate}" TargetType="{x:Type dxr:RibbonCheckedBorderControl}">
+        <Grid x:Name="PART_Root">
+            <dx:DXBorder x:Name="OuterBorder">
+                <Grid>
+                    <dx:DXBorder x:Name="IsDefault" Background="Transparent" CornerRadius="{Binding ElementName=OuterBorder, Path=CornerRadius}" />
+                    <dx:DXBorder x:Name="BackgroundBorder" CornerRadius="{Binding ElementName=OuterBorder, Path=CornerRadius}" />
+                    <dx:DXBorder
+                        x:Name="SelectionIndicator"
+                        Background="Transparent"
+                        CornerRadius="2"
+                        Height="3"
+                        Margin="3,0,3,2"
+                        VerticalAlignment="Bottom" />
+                </Grid>
+            </dx:DXBorder>
+            <ContentPresenter x:Name="PART_ContentPresenter" />
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="CommonStateGroup">
+                    <VisualState x:Name="NormalUnchecked" />
+                    <VisualState x:Name="NormalChecked" />
+                    <VisualState x:Name="HoverUnchecked">
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="SelectionIndicator" Storyboard.TargetProperty="Background">
+                                <DiscreteObjectKeyFrame KeyTime="0">
+                                    <DiscreteObjectKeyFrame.Value>
+                                        <SolidColorBrush Color="{StaticResource Color.Button.SimpleButtonBorder}" />
+                                    </DiscreteObjectKeyFrame.Value>
+                                </DiscreteObjectKeyFrame>
+                            </ObjectAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="HoverChecked" />
+                    <VisualState x:Name="PressedChecked" />
+                    <VisualState x:Name="Focused" />
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </Grid>
+        <ControlTemplate.Triggers>
+            <DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Page.(dxi:AppearanceOptions.HasBorderThickness)}" Value="True">
+                <Setter Property="BorderThickness" TargetName="OuterBorder" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=TemplatedParent.Page.(dxi:AppearanceOptions.BorderThickness)}" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Page.(dxi:AppearanceOptions.HasBorderBrush)}" Value="True">
+                <Setter Property="BorderBrush" TargetName="OuterBorder" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=TemplatedParent.Page.(dxi:AppearanceOptions.BorderBrush)}" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Page.(dxi:AppearanceOptions.HasBackground)}" Value="True">
+                <Setter Property="Background" TargetName="BackgroundBorder" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=DataContext.(dxi:AppearanceOptions.Background)}" />
+                <Setter Property="Visibility" TargetName="IsDefault" Value="Collapsed" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Page.(dxi:AppearanceOptions.HasCornerRadius)}" Value="True">
+                <Setter Property="CornerRadius" TargetName="OuterBorder" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=TemplatedParent.Page.(dxi:AppearanceOptions.CornerRadius)}" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Page.(dxi:AppearanceOptions.HasMargin)}" Value="True">
+                <Setter Property="Margin" TargetName="PART_Root" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=TemplatedParent.Page.(dxi:AppearanceOptions.Margin)}" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Page.(dxi:AppearanceOptions.HasPadding)}" Value="True">
+                <Setter Property="Margin" TargetName="PART_ContentPresenter" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=TemplatedParent.Page.(dxi:AppearanceOptions.Padding)}" />
+            </DataTrigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <!-- #regioin Win11Base -->
+    <ControlTemplate x:Key="{dxrt:LWKey Ribbon.RightRepeatButtonTemplate}" TargetType="{x:Type RepeatButton}">
+        <Grid x:Name="Root" Background="Transparent">
+            <dx:DXBorder
+                x:Name="IsDefault"
+                Background="{StaticResource Brush.Button.SimpleButtonBackground}"
+                BorderBrush="{StaticResource Brush.Button.SimpleButtonBorder}"
+                BorderThickness="1"
+                CornerRadius="62">
+                <dx:DXBorder.Effect>
+                    <DropShadowEffect BlurRadius="15" Color="{dx:LWColor '#05F0F0F0, Win11Dark=#0D000000'}" ShadowDepth="0" />
+                </dx:DXBorder.Effect>
+            </dx:DXBorder>
+            <Path x:Name="Glyph" Fill="{StaticResource Brush.Foreground.Secondary}" Style="{StaticResource UIShape.Right}" />
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal" />
+                    <VisualState x:Name="MouseOver">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{StaticResource Color.Button.HoverBackground}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="{StaticResource Color.Button.SimpleButtonHoverBorder}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="Glyph" Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)" To="{StaticResource Color.Foreground.Primary}" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Pressed">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{StaticResource Color.Button.PressedBackground}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="{StaticResource Color.Button.SimpleButtonPressedBorder}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="Glyph" Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)" To="{StaticResource Color.Foreground.Muted}" />
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </Grid>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="{dxrt:LWKey Ribbon.LeftRepeatButtonTemplate}" TargetType="{x:Type RepeatButton}">
+        <Grid x:Name="Root" Background="Transparent">
+            <dx:DXBorder
+                x:Name="IsDefault"
+                Background="{StaticResource Brush.Button.SimpleButtonBackground}"
+                BorderBrush="{StaticResource Brush.Button.SimpleButtonBorder}"
+                BorderThickness="1"
+                CornerRadius="62">
+                <dx:DXBorder.Effect>
+                    <DropShadowEffect BlurRadius="15" Color="{dx:LWColor '#05F0F0F0, Win11Dark=#0D000000'}" ShadowDepth="0" />
+                </dx:DXBorder.Effect>
+            </dx:DXBorder>
+            <Path x:Name="Glyph" Fill="{StaticResource Brush.Foreground.Secondary}" Style="{StaticResource UIShape.Left}" />
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal" />
+                    <VisualState x:Name="MouseOver">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{StaticResource Color.Button.HoverBackground}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="{StaticResource Color.Button.SimpleButtonHoverBorder}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="Glyph" Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)" To="{StaticResource Color.Foreground.Primary}" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Pressed">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{StaticResource Color.Button.PressedBackground}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="{StaticResource Color.Button.SimpleButtonPressedBorder}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="Glyph" Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)" To="{StaticResource Color.Foreground.Muted}" />
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </Grid>
+    </ControlTemplate>
+    <ControlTemplate x:Key="{dxrt:LWKey ApplicationButton.BorderTemplate2007}" TargetType="{x:Type ContentControl}">
+        <Grid x:Name="Root">
+            <dx:DXBorder x:Name="IsDefaultBorder" Background="{StaticResource Brush.Foreground.Alt}" CornerRadius="36">
+                <dx:DXBorder
+                    x:Name="IsDefaultBackground"
+                    Background="{StaticResource Brush.Foreground.Alt}"
+                    CornerRadius="36"
+                    Margin="3" />
+            </dx:DXBorder>
+            <ContentPresenter Margin="4" />
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal" />
+                    <VisualState x:Name="Hover">
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="IsDefaultBorder" Storyboard.TargetProperty="Background">
+                                <DiscreteObjectKeyFrame KeyTime="0">
+                                    <DiscreteObjectKeyFrame.Value>
+                                        <SolidColorBrush Color="{StaticResource Color.ListItem.HoverBackground}" />
+                                    </DiscreteObjectKeyFrame.Value>
+                                </DiscreteObjectKeyFrame>
+                            </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="IsDefaultBackground" Storyboard.TargetProperty="Background">
+                                <DiscreteObjectKeyFrame KeyTime="0">
+                                    <DiscreteObjectKeyFrame.Value>
+                                        <SolidColorBrush Color="{StaticResource Color.ListItem.HoverBackground}" />
+                                    </DiscreteObjectKeyFrame.Value>
+                                </DiscreteObjectKeyFrame>
+                            </ObjectAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Checked">
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="IsDefaultBorder" Storyboard.TargetProperty="Background">
+                                <DiscreteObjectKeyFrame KeyTime="0">
+                                    <DiscreteObjectKeyFrame.Value>
+                                        <SolidColorBrush Color="{StaticResource Color.ListItem.SelectionBackground}" />
+                                    </DiscreteObjectKeyFrame.Value>
+                                </DiscreteObjectKeyFrame>
+                            </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="IsDefaultBackground" Storyboard.TargetProperty="Background">
+                                <DiscreteObjectKeyFrame KeyTime="0">
+                                    <DiscreteObjectKeyFrame.Value>
+                                        <SolidColorBrush Color="{StaticResource Color.ListItem.SelectionBackground}" />
+                                    </DiscreteObjectKeyFrame.Value>
+                                </DiscreteObjectKeyFrame>
+                            </ObjectAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Focused">
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="IsDefaultBorder" Storyboard.TargetProperty="Background">
+                                <DiscreteObjectKeyFrame KeyTime="0">
+                                    <DiscreteObjectKeyFrame.Value>
+                                        <SolidColorBrush Color="{StaticResource Color.ListItem.HoverBackground}" />
+                                    </DiscreteObjectKeyFrame.Value>
+                                </DiscreteObjectKeyFrame>
+                            </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="IsDefaultBackground" Storyboard.TargetProperty="Background">
+                                <DiscreteObjectKeyFrame KeyTime="0">
+                                    <DiscreteObjectKeyFrame.Value>
+                                        <SolidColorBrush Color="{StaticResource Color.ListItem.HoverBackground}" />
+                                    </DiscreteObjectKeyFrame.Value>
+                                </DiscreteObjectKeyFrame>
+                            </ObjectAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </Grid>
+    </ControlTemplate>
+    <ControlTemplate x:Key="{dxrt:LWKey ApplicationButton.BorderTemplate2007InPopup}" TargetType="{x:Type ContentControl}" />
+    <ControlTemplate x:Key="{dxrt:LWKey Ribbon.ApplicationMenuBarControlBorderTemplate2007}" TargetType="{x:Type ContentControl}">
+        <Grid x:Name="Shadow" Grid.Row="0">
+            <dx:DXBorder
+                BorderBrush="#CC000000"
+                BorderThickness="5"
+                CornerRadius="5"
+                Margin="-5,-1,-5,-5"
+                Opacity="0.03" />
+            <dx:DXBorder
+                BorderBrush="#CC000000"
+                BorderThickness="4"
+                CornerRadius="4"
+                Margin="-4"
+                Opacity="0.03" />
+            <dx:DXBorder
+                BorderBrush="#CC000000"
+                BorderThickness="3"
+                CornerRadius="3"
+                Margin="-3"
+                Opacity="0.03" />
+            <dx:DXBorder
+                BorderBrush="#CC000000"
+                BorderThickness="2"
+                CornerRadius="2"
+                Margin="-2"
+                Opacity="0.03" />
+            <dx:DXBorder
+                BorderBrush="#CC000000"
+                BorderThickness="1"
+                CornerRadius="1"
+                Margin="-1"
+                Opacity="0.05" />
+            <dx:DXBorder Background="{StaticResource Brush.Editor.Background}" BorderBrush="{StaticResource Brush.PanelBorder}" BorderThickness="1">
+                <StackPanel>
+                    <dx:DXBorder
+                        Background="{StaticResource Brush.Control.Background}"
+                        BorderBrush="{StaticResource Brush.Border}"
+                        BorderThickness="0,0,0,1"
+                        MinHeight="28" />
+                    <ContentPresenter />
+                </StackPanel>
+            </dx:DXBorder>
+        </Grid>
+    </ControlTemplate>
+    <Style x:Key="{dxrt:LWKey Ribbon.ShowAutoHidePopupButtonStyle}" TargetType="{x:Type dxr:ShowAutoHidePopupButton}">
+        <Setter Property="Height" Value="32" />
+        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+        <Setter Property="VerticalContentAlignment" Value="Stretch" />
+        <Setter Property="MinWidth" Value="46" />
+        <Setter Property="Template" Value="{DynamicResource {dxrt:LWKey Ribbon.ShowAutoHidePopupButtonTemplate}}" />
+        <Style.Triggers>
+            <Trigger Property="dx:ThemeManager.IsTouchEnabled" Value="True">
+                <Setter Property="MinHeight" Value="44" />
+                <Setter Property="MinWidth" Value="44" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <ControlTemplate x:Key="{dxrt:LWKey Ribbon.RightRepeatButtonTemplateInRibbonAeroWindow}" TargetType="{x:Type RepeatButton}">
+        <Grid x:Name="Root" Background="Transparent">
+            <dx:DXBorder
+                x:Name="IsDefault"
+                Background="{StaticResource Brush.Button.SimpleButtonBackground}"
+                BorderBrush="{StaticResource Brush.Button.SimpleButtonBorder}"
+                BorderThickness="1"
+                CornerRadius="62" />
+            <Path x:Name="Glyph" Fill="{StaticResource Brush.Foreground.Secondary}" Style="{StaticResource UIShape.Right}" />
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal" />
+                    <VisualState x:Name="MouseOver">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{StaticResource Color.Button.HoverBackground}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="{StaticResource Color.Button.SimpleButtonHoverBorder}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="Glyph" Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)" To="{StaticResource Color.Foreground.Primary}" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Pressed">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{StaticResource Color.Button.PressedBackground}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="{StaticResource Color.Button.SimpleButtonPressedBorder}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="Glyph" Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)" To="{StaticResource Color.Foreground.Muted}" />
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </Grid>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="{dxrt:LWKey Ribbon.LeftRepeatButtonTemplateInRibbonAeroWindow}" TargetType="{x:Type RepeatButton}">
+        <Grid x:Name="Root" Background="Transparent">
+            <dx:DXBorder
+                x:Name="IsDefault"
+                Background="{StaticResource Brush.Button.SimpleButtonBackground}"
+                BorderBrush="{StaticResource Brush.Button.SimpleButtonBorder}"
+                BorderThickness="1"
+                CornerRadius="62" />
+            <Path x:Name="Glyph" Fill="{StaticResource Brush.Foreground.Secondary}" Style="{StaticResource UIShape.Left}" />
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal" />
+                    <VisualState x:Name="MouseOver">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{StaticResource Color.Button.HoverBackground}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="{StaticResource Color.Button.SimpleButtonHoverBorder}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="Glyph" Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)" To="{StaticResource Color.Foreground.Primary}" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Pressed">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{StaticResource Color.Button.PressedBackground}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="{StaticResource Color.Button.SimpleButtonPressedBorder}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="Glyph" Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)" To="{StaticResource Color.Foreground.Muted}" />
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </Grid>
+    </ControlTemplate>
+    <!-- #endregion -->
+</ResourceDictionary>

@@ -1,0 +1,28 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:dxpt="http://schemas.devexpress.com/winfx/2008/xaml/printing/themekeys"
+                    xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/core"
+>
+    <DataTemplate x:Key="{dxpt:NewDocumentViewerThemeKey ResourceKey=PageBorderTemplate}">
+        <Grid x:Name="Shadow">
+            <dxc:DXBorder BorderBrush="#FF000000" BorderThickness="5" Margin="-6" CornerRadius="5" Opacity="0.01" />
+            <dxc:DXBorder BorderBrush="#FF000000" BorderThickness="4" Margin="-5" CornerRadius="4" Opacity="0.01" />
+            <dxc:DXBorder BorderBrush="#FF000000" BorderThickness="3" Margin="-4" CornerRadius="3" Opacity="0.02" />
+            <dxc:DXBorder BorderBrush="#FF000000" BorderThickness="2" Margin="-3" CornerRadius="2" Opacity="0.03" />
+            <dxc:DXBorder BorderBrush="#FF000000" BorderThickness="1" Margin="-2" CornerRadius="1" Opacity="0.05" />
+            <dxc:DXBorder BorderBrush="#FFFFFFFF" BorderThickness="1" Margin="0" />
+            <dxc:DXBorder x:Name="Selection" BorderBrush="#FFFFDC58" BorderThickness="2" Margin="-2">
+                <dxc:DXBorder.Style>
+                    <Style TargetType="dxc:DXBorder">
+                        <Setter Property="Opacity" Value="0" />
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding IsSelected}" Value="True">
+                                <Setter Property="Opacity" Value="1" />
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </dxc:DXBorder.Style>
+            </dxc:DXBorder>
+        </Grid>
+    </DataTemplate>
+</ResourceDictionary>

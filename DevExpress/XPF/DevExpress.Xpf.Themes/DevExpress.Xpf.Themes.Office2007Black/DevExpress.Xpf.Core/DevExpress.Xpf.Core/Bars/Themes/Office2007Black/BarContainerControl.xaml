@@ -1,0 +1,35 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+                    xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
+                    xmlns:dxbt="http://schemas.devexpress.com/winfx/2008/xaml/bars/themekeys"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Thickness x:Key="{dxbt:BarContainerControlThemeKey ResourceKey=HorizontalPadding}">1,1,1,0</Thickness>
+
+    <Thickness x:Key="{dxbt:BarContainerControlThemeKey ResourceKey=VerticalPadding}">0,0,1,0</Thickness>
+
+    <ControlTemplate x:Key="{dxbt:BarContainerControlThemeKey ResourceKey=BorderTemplate}" TargetType="{x:Type ContentControl}">
+        <Border Background="#FF3F3F3F "
+                CornerRadius="3"
+                Padding="1"
+                SnapsToDevicePixels="True">
+            <Border x:Name="Border"
+                    Background="#FF535353 "
+                    BorderBrush="{x:Null}"
+                    CornerRadius="2"
+                    Padding="4"
+                    SnapsToDevicePixels="True">
+                <ContentPresenter Content="{TemplateBinding Content}"/>
+            </Border>
+        </Border>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="{dxbt:BarContainerControlThemeKey ResourceKey=BackgroundTemplate}" TargetType="{x:Type ContentControl}">
+        <Border x:Name="Background"
+                Background="#FF535353 "
+                SnapsToDevicePixels="True">
+            <ContentPresenter Content="{TemplateBinding Content}"/>
+        </Border>
+    </ControlTemplate>
+
+</ResourceDictionary>

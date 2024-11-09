@@ -1,0 +1,14 @@
+<ResourceDictionary mc:Ignorable="cs" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:cs="colorscheme_ignorable_uri" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxi="http://schemas.devexpress.com/winfx/2008/xaml/core/internal" xmlns:dxn="http://schemas.devexpress.com/winfx/2008/xaml/navbar" xmlns:dxnav="http://schemas.devexpress.com/winfx/2008/xaml/navigation" xmlns:dxnavi="http://schemas.devexpress.com/winfx/2008/xaml/navigation/internal" xmlns:dxnt="http://schemas.devexpress.com/winfx/2008/xaml/navbar/themekeys" xmlns:dxt="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sys="clr-namespace:System;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ResourceDictionary.MergedDictionaries>
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win10Light.v24.1;component/NavBar/Win10Light/NavigationPane/HeaderStyle.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win10Light.v24.1;component/NavBar/Win10Light/NavigationPane/ScrollButtons.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win10Light.v24.1;component/NavBar/Win10Light/NavigationPane/Splitter.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win10Light.v24.1;component/NavBar/Win10Light/NavigationPane/ExpandButton.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win10Light.v24.1;component/NavBar/Win10Light/NavigationPane/Popup.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win10Light.v24.1;component/NavBar/Win10Light/NavigationPane/DropDownButton.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win10Light.v24.1;component/NavBar/Win10Light/NavigationPane/Item.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win10Light.v24.1;component/NavBar/Win10Light/NavigationPane/Group.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win10Light.v24.1;component/NavBar/Win10Light/NavigationPane/Overflow.xaml" />
+  </ResourceDictionary.MergedDictionaries>
+  <!-- General -->
+</ResourceDictionary>

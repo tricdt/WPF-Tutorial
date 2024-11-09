@@ -1,0 +1,716 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:daiqb="clr-namespace:DevExpress.DataAccess.Native.DataFederation.QueryBuilder;assembly=DevExpress.DataAccess.v24.1"
+    xmlns:dal="clr-namespace:DevExpress.DataAccess.Localization;assembly=DevExpress.DataAccess.v24.1"
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+    xmlns:dxi="http://schemas.devexpress.com/winfx/2008/xaml/core/internal"
+    xmlns:dxdadwn="clr-namespace:DevExpress.Xpf.DataAccess.DataSourceWizard.Native;assembly=DevExpress.Xpf.DataAccess.v24.1"
+    xmlns:dxdai="clr-namespace:DevExpress.Xpf.DataAccess.Native;assembly=DevExpress.Xpf.DataAccess.v24.1"
+    xmlns:dxdaid="clr-namespace:DevExpress.Xpf.DataAccess.Native.DataFederation;assembly=DevExpress.Xpf.DataAccess.v24.1"
+    xmlns:dxdaie="clr-namespace:DevExpress.Xpf.DataAccess.Native.Editors;assembly=DevExpress.Xpf.DataAccess.v24.1"
+    xmlns:dxdal="clr-namespace:DevExpress.Xpf.DataAccess.Localization;assembly=DevExpress.Xpf.DataAccess.v24.1"
+    xmlns:dxdat="http://schemas.devexpress.com/winfx/2008/xaml/dataaccess/themekeys"
+    xmlns:dxdiag="http://schemas.devexpress.com/winfx/2008/xaml/diagram"
+    xmlns:dxdo="http://schemas.devexpress.com/winfx/2008/xaml/docking"
+    xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+    xmlns:dxeet="clr-namespace:DevExpress.Xpf.ExpressionEditor.Themes;assembly=DevExpress.Xpf.ExpressionEditor.v24.1"
+    xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
+    xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol"
+    xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm">
+
+    <ResourceDictionary.MergedDictionaries>
+        <dxi:ThemeResourceDictionary Path="DataAccess/Generic.BaseStyles.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <!--#region c:\work\2023.1\XPF\DevExpress.Xpf.ReportDesigner\DevExpress.Xpf.DataAccess\Themes\Generic\QueryBuilder\BaseResources.xaml-->
+    <DataTemplate x:Key="queryBuilderMessageBoxServiceTemplate">
+        <ContentControl>
+            <dx:DXMessageBoxService />
+        </ContentControl>
+    </DataTemplate>
+
+
+    <DataTemplate x:Key="queryBuilderJoinEditorDialogServiceTemplate">
+        <ContentControl>
+            <dx:DialogService>
+                <dx:DialogService.DialogStyle>
+                    <Style BasedOn="{StaticResource ThemedWindowDialogStyleBase}" TargetType="{x:Type dx:ThemedWindow}">
+                        <Setter Property="Width" Value="600" />
+                        <Setter Property="Height" Value="300" />
+                        <Setter Property="MinWidth" Value="250" />
+                        <Setter Property="MinHeight" Value="200" />
+                        <Setter Property="ResizeMode" Value="CanResize" />
+                    </Style>
+                </dx:DialogService.DialogStyle>
+                <dx:DialogService.ViewTemplate>
+                    <DataTemplate>
+                        <dxdaie:JoinEditorControl
+                            AllowAddItems="{Binding AllowAddItems}"
+                            AllowRemoveItems="{Binding AllowRemoveItems}"
+                            ItemsSource="{Binding ItemsSource}"
+                            JoinType="{Binding JoinType}">
+                            <dxmvvm:Interaction.Behaviors>
+                                <dxdaie:JoinEditorBehavior View="{Binding View}" />
+                            </dxmvvm:Interaction.Behaviors>
+                        </dxdaie:JoinEditorControl>
+                    </DataTemplate>
+                </dx:DialogService.ViewTemplate>
+            </dx:DialogService>
+        </ContentControl>
+    </DataTemplate>
+    <DataTemplate x:Key="queryBuilderExpressionEditorServiceTemplate">
+        <ContentControl>
+            <dx:DialogService>
+                <dx:DialogService.DialogStyle>
+                    <Style BasedOn="{StaticResource {dxdat:LWKey ExpressionEditorWindowTemplate.ExpressionEditorControlWindowStyle}}" TargetType="{x:Type dx:ThemedWindow}" />
+                </dx:DialogService.DialogStyle>
+                <dx:DialogService.ViewTemplateSelector>
+                    <dxdadwn:ExpressionEditorViewTemplateSelector>
+                        <dxdadwn:ExpressionEditorViewTemplateSelector.ExpressionEditorTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <dxdaie:QueryBuilderExpressionEditor
+                                        x:Name="ExpressionEditor"
+                                        ExpressionString="{Binding ExpressionString, Mode=TwoWay}"
+                                        IsValidExpression="{Binding IsValidExpression, Mode=OneWayToSource}"
+                                        Presenter="{Binding Presenter}">
+                                        <dxdaie:QueryBuilderExpressionEditor.MessageBoxServiceTemplate>
+                                            <DataTemplate>
+                                                <ContentControl>
+                                                    <dx:DXMessageBoxService />
+                                                </ContentControl>
+                                            </DataTemplate>
+                                        </dxdaie:QueryBuilderExpressionEditor.MessageBoxServiceTemplate>
+                                    </dxdaie:QueryBuilderExpressionEditor>
+                                    <dx:DialogFooter>
+                                        <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
+                                            <dx:DialogButton Command="{Binding SaveCommand, ElementName=ExpressionEditor}" DialogResult="OK" />
+                                            <dx:DialogButton DialogResult="Cancel" />
+                                        </StackPanel>
+                                    </dx:DialogFooter>
+                                </Grid>
+                            </DataTemplate>
+                        </dxdadwn:ExpressionEditorViewTemplateSelector.ExpressionEditorTemplate>
+                        <dxdadwn:ExpressionEditorViewTemplateSelector.ExpressionEditorControlTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <dxdaie:QueryBuilderExpressionEditorControl Context="{Binding Presenter.Context}" EditValue="{Binding ExpressionString, Mode=TwoWay}" Presenter="{Binding Presenter}">
+                                        <dxdaie:QueryBuilderExpressionEditorControl.Resources>
+                                            <DataTemplate x:Key="{dxeet:LWKey DocumentationControlTemplate.FieldsHierarchicalDataTemplateKey}">
+                                                <Grid>
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="auto" />
+                                                        <RowDefinition Height="*" />
+                                                    </Grid.RowDefinitions>
+                                                    <dxg:GridSearchControl
+                                                        Name="PART_SearchControl"
+                                                        Margin="0,0,0,5"
+                                                        FindMode="Always"
+                                                        NullText="{Binding Source={x:Null}, ConverterParameter=ExpressionEditor_FunctionsSearch_NullText, Converter={dxdai:EditorStringIdConverter}}"
+                                                        SearchTextPostDelay="0"
+                                                        ShowCloseButton="False"
+                                                        ShowFindButton="False"
+                                                        ShowMRUButton="False"
+                                                        ShowSearchPanelMode="Always"
+                                                        ShowSearchPanelNavigationButtons="False" />
+                                                    <dxg:GridControl Grid.Row="1" ItemsSource="{Binding Path=(dxee:ExpressionEditorControl.Editor).Context.Columns, RelativeSource={RelativeSource TemplatedParent}}" SelectedItem="{Binding Path=(dxeei:DocumentationControl.Editor).SelectedOperatorInfo, RelativeSource={RelativeSource Self}}">
+                                                        <dxg:GridControl.View>
+                                                            <dxg:TreeListView
+                                                                ChildNodesPath="Children"
+                                                                NavigationStyle="Row"
+                                                                SearchControl="{Binding ElementName=PART_SearchControl}"
+                                                                ShowColumnHeaders="False"
+                                                                ShowHorizontalLines="False"
+                                                                ShowIndicator="False"
+                                                                ShowSearchPanelMode="Never"
+                                                                ShowVerticalLines="False"
+                                                                TreeDerivationMode="ChildNodesSelector">
+                                                                <dxmvvm:Interaction.Behaviors>
+                                                                    <dxdai:ExpandTreeListNodeBehavior />
+                                                                </dxmvvm:Interaction.Behaviors>
+                                                            </dxg:TreeListView>
+                                                        </dxg:GridControl.View>
+                                                        <dxg:GridControl.Columns>
+                                                            <dxg:GridColumn FieldName="Name" Width="*">
+                                                                <dxg:GridColumn.CellStyle>
+                                                                    <Style>
+                                                                        <Setter Property="dxmvvm:Interaction.BehaviorsTemplate">
+                                                                            <Setter.Value>
+                                                                                <DataTemplate>
+                                                                                    <ItemsControl>
+                                                                                        <dxdai:DoubleClickCommandExecutor Command="{Binding Path=AssociatedObject.(dxeei:DocumentationControl.Editor).ItemMouseDoubleClickCommand, RelativeSource={RelativeSource Self}}" />
+                                                                                    </ItemsControl>
+                                                                                </DataTemplate>
+                                                                            </Setter.Value>
+                                                                        </Setter>
+                                                                    </Style>
+                                                                </dxg:GridColumn.CellStyle>
+                                                                <dxg:GridColumn.CellTemplate>
+                                                                    <DataTemplate>
+                                                                        <StackPanel Orientation="Horizontal">
+                                                                            <dx:DXImage VerticalAlignment="Center" Source="{Binding Row.Type, Converter={dxdai:ColumnTypeToImageToImageSourceConverter}}" />
+                                                                            <dxe:TextEdit x:Name="PART_Editor" VerticalAlignment="Center" IsHitTestVisible="False" />
+                                                                        </StackPanel>
+                                                                    </DataTemplate>
+                                                                </dxg:GridColumn.CellTemplate>
+                                                            </dxg:GridColumn>
+                                                        </dxg:GridControl.Columns>
+                                                    </dxg:GridControl>
+                                                </Grid>
+                                            </DataTemplate>
+                                            <dxdaie:ExpressionEditorFieldsPresenterTemplateSelector x:Key="{dxeet:LWKey DocumentationControlTemplate.FieldsPresenterTemplateSelectorKey}" />
+                                        </dxdaie:QueryBuilderExpressionEditorControl.Resources>
+                                    </dxdaie:QueryBuilderExpressionEditorControl>
+                                </Grid>
+                            </DataTemplate>
+                        </dxdadwn:ExpressionEditorViewTemplateSelector.ExpressionEditorControlTemplate>
+                    </dxdadwn:ExpressionEditorViewTemplateSelector>
+                </dx:DialogService.ViewTemplateSelector>
+            </dx:DialogService>
+        </ContentControl>
+    </DataTemplate>
+    <!--#endregion c:\work\2023.1\XPF\DevExpress.Xpf.ReportDesigner\DevExpress.Xpf.DataAccess\Themes\Generic\QueryBuilder\BaseResources.xaml-->
+
+    <!--#region c:\work\2023.1\XPF\DevExpress.Xpf.ReportDesigner\DevExpress.Xpf.DataAccess\Themes\Generic\QueryBuilder\DiagramQueryBuilderView.xaml-->
+    <Style x:Key="joinButtonStyle" TargetType="Button">
+        <Setter Property="Opacity" Value="0.7" />
+        <Setter Property="Width" Value="16" />
+        <Setter Property="Margin" Value="0,0,1,0" />
+        <Setter Property="Cursor" Value="Arrow" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Image Opacity="{TemplateBinding Opacity}" Source="{TemplateBinding Content}" />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Opacity" Value="1" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <Style x:Key="glyphButtonStyle" TargetType="Button">
+        <Setter Property="Margin" Value="0,0,1,0" />
+        <Setter Property="Width" Value="16" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Image Source="{TemplateBinding Content}" />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--#endregion c:\work\2023.1\XPF\DevExpress.Xpf.ReportDesigner\DevExpress.Xpf.DataAccess\Themes\Generic\QueryBuilder\DiagramQueryBuilderView.xaml-->
+
+    <!--#region c:\work\2023.1\XPF\DevExpress.Xpf.ReportDesigner\DevExpress.Xpf.DataAccess\Themes\Generic\QueryBuilder\FederatedQueryBuilderControl.xaml-->
+    <Style x:Key="WizardTableViewBaseStyle" TargetType="{x:Type dxg:TableView}">
+        <Setter Property="ShowSearchPanelMode" Value="Never" />
+        <Setter Property="ShowFilterPanelMode" Value="Never" />
+        <Setter Property="AllowGrouping" Value="False" />
+        <Setter Property="ShowGroupPanel" Value="False" />
+        <Setter Property="AllowColumnFiltering" Value="False" />
+        <Setter Property="AllowColumnMoving" Value="False" />
+        <Setter Property="IsGroupPanelMenuEnabled" Value="False" />
+        <Setter Property="EnableImmediatePosting" Value="True" />
+        <Setter Property="EditorButtonShowMode" Value="ShowAlways" />
+        <Setter Property="IsColumnMenuEnabled" Value="False" />
+    </Style>
+    <Style x:Key="groupBoxStyle" TargetType="{x:Type dxlc:GroupBox}">
+        <Setter Property="Padding" Value="0" />
+    </Style>
+    <DataTemplate x:Key="selectNodeDiagramView">
+        <dx:ThemedBorder BorderThickness="1">
+            <dxdaid:QueryBuilderDiagramControl
+                x:Name="PART_DiagramControl"
+                Margin="1"
+                AllowDrop="True"
+                CanvasSizeMode="Fill"
+                PageSize="640,480"
+                ScrollMode="Content"
+                ShowGrid="False"
+                ShowPageBreaks="False"
+                ShowRulers="False"
+                SnapToGrid="False"
+                SnapToItems="False"
+                Theme="{x:Null}">
+                <!--<dxdaid:QueryBuilderDiagramControl.PageSize>
+                    <MultiBinding Converter=""
+                </dxdaid:QueryBuilderDiagramControl.PageSize>-->
+                <dxmvvm:Interaction.Behaviors>
+                    <dxdaid:QueryBuilderDiagramDataBindingBehavior
+                        ConnectorFromMember="From"
+                        ConnectorToMember="To"
+                        ConnectorsSource="{Binding Path=AssociatedObject.(dxdaid:QueryBuilderControl.QueryBuilder).Connectors, RelativeSource={RelativeSource Self}}"
+                        EnableNotificationToSource="False"
+                        ItemsPath="Columns"
+                        ItemsSource="{Binding Path=AssociatedObject.(dxdaid:QueryBuilderControl.QueryBuilder).Tables, RelativeSource={RelativeSource Self}}"
+                        KeyMember="Id">
+                        <dxdaid:QueryBuilderDiagramDataBindingBehavior.ConnectorTemplate>
+                            <DataTemplate>
+                                <dxdaid:QueryBuilderDiagramConnector
+                                    CanCopy="False"
+                                    CanDelete="False"
+                                    CanDragBeginPoint="False"
+                                    CanDragEndPoint="False"
+                                    CanEdit="False"
+                                    CanMove="False"
+                                    CanResize="False"
+                                    EndArrow="{Binding DataItem, Converter={dxdaie:JoinTypeToConnectorArrowTypeConverter}}"
+                                    Stroke="{Binding Path=(TextElement.Foreground), RelativeSource={RelativeSource Self}}"
+                                    StrokeThickness="1"
+                                    Type="{x:Static dxdiag:ConnectorType.RightAngle}" />
+                            </DataTemplate>
+                        </dxdaid:QueryBuilderDiagramDataBindingBehavior.ConnectorTemplate>
+                    </dxdaid:QueryBuilderDiagramDataBindingBehavior>
+                </dxmvvm:Interaction.Behaviors>
+                <dxdaid:QueryBuilderDiagramControl.Resources>
+                    <Style TargetType="{x:Type dxdiag:ItemEditorControl}">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type dxdiag:ItemEditorControl}">
+                                    <Grid Margin="3">
+                                        <Rectangle Stroke="#FFB9B9B9" StrokeDashArray="2,2" StrokeThickness="1" />
+                                        <TextBox
+                                            x:Name="Editor"
+                                            Margin="0,5"
+                                            AcceptsReturn="False"
+                                            AcceptsTab="False"
+                                            BorderThickness="0"
+                                            TextWrapping="Wrap">
+                                            <dxmvvm:Interaction.Behaviors>
+                                                <dxdaie:TableInplaceEditorBehavior />
+                                            </dxmvvm:Interaction.Behaviors>
+                                        </TextBox>
+                                    </Grid>
+                                    <ControlTemplate.Triggers>
+                                        <DataTrigger Binding="{Binding Path=(dx:ThemeManager.TreeWalker).ThemeName, RelativeSource={RelativeSource TemplatedParent}}" Value="Office2010Black">
+                                            <Setter TargetName="Editor" Property="Foreground" Value="Black" />
+                                        </DataTrigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </dxdaid:QueryBuilderDiagramControl.Resources>
+            </dxdaid:QueryBuilderDiagramControl>
+        </dx:ThemedBorder>
+    </DataTemplate>
+    <ControlTemplate x:Key="columnDataDisplayTemplate">
+        <TextBlock
+            Margin="4,2"
+            VerticalAlignment="Center"
+            Text="{DXBinding '@DataContext.Value.DisplayName ?? $dal:DataAccessLocalizer.GetString($dal:DataAccessStringId.QueryBuilder_AllColumns)'}"
+            TextTrimming="CharacterEllipsis" />
+    </ControlTemplate>
+    <DataTemplate x:Key="unionNodeTablesView">
+        <dxg:GridControl ItemsSource="{Binding Tables}">
+            <dxg:GridControl.Columns>
+                <dxg:GridColumn FieldName="SourceName" Width="*" Header="Source" />
+                <dxg:GridColumn Width="22" FixedWidth="True">
+                    <dxg:GridColumn.CellTemplateSelector>
+                        <dxdadwn:RemoveRowCellTemplateSelector>
+                            <dxdadwn:RemoveRowCellTemplateSelector.ExistingRowCellTemplate>
+                                <DataTemplate>
+                                    <dxe:ButtonsControl HorizontalAlignment="Stretch" HorizontalContentAlignment="Center">
+                                        <dxe:ButtonInfo GlyphKind="Cancel">
+                                            <dxmvvm:Interaction.Behaviors>
+                                                <dxdadwn:ButtonInfoDeleteRowBehavior Row="{Binding RowData.RowHandle.Value}" View="{Binding Path=AssociatedObject.(dxg:DataControlBase.ActiveView), RelativeSource={RelativeSource Self}}" />
+                                            </dxmvvm:Interaction.Behaviors>
+                                        </dxe:ButtonInfo>
+                                    </dxe:ButtonsControl>
+                                </DataTemplate>
+                            </dxdadwn:RemoveRowCellTemplateSelector.ExistingRowCellTemplate>
+                        </dxdadwn:RemoveRowCellTemplateSelector>
+                    </dxg:GridColumn.CellTemplateSelector>
+                </dxg:GridColumn>
+            </dxg:GridControl.Columns>
+            <dxg:GridControl.View>
+                <dxg:TableView
+                    AllowColumnFiltering="False"
+                    AllowSorting="False"
+                    EditorButtonShowMode="ShowOnlyInEditor"
+                    EnableImmediatePosting="True"
+                    NewItemRowPosition="None"
+                    Style="{StaticResource WizardTableViewBaseStyle}"
+                    VerticalScrollbarVisibility="Auto" />
+            </dxg:GridControl.View>
+            <dxmvvm:Interaction.Behaviors>
+                <dxdaie:QueryGridBehavior DisplayNameProvider="{x:Null}" UseQueryBuilderLight="False" />
+            </dxmvvm:Interaction.Behaviors>
+        </dxg:GridControl>
+    </DataTemplate>
+
+    <DataTemplate x:Key="transformNodeViewTemplate">
+        <dxlc:GroupBox Padding="0" Style="{StaticResource groupBoxStyle}">
+            <dxlc:GroupBox.Header>
+                <TextBlock Text="{Binding Source.ActualName, StringFormat={dxdal:DataAccessUIStringId StringId=FederationDataSourceQueryBuilder_TransformationNodeRoot}}" />
+            </dxlc:GroupBox.Header>
+            <dxg:GridControl ItemsSource="{Binding Rules}" ShowBorder="False">
+                <dxg:GridColumn
+                    FieldName="DisplayName"
+                    Width="2*"
+                    AllowEditing="False"
+                    Header="{dxdal:DataAccessUIStringId StringId=QueryBuilderColumn}" />
+                <dxg:GridColumn FieldName="Alias" Width="2*" Header="{dxdal:DataAccessUIStringId StringId=QueryBuilderColumns_Alias}" />
+                <dxg:GridColumn
+                    Name="colTransform"
+                    FieldName="Transform"
+                    Width="*"
+                    Header="Transformation">
+                    <dxg:GridColumn.CellTemplate>
+                        <DataTemplate>
+                            <dxe:CheckEdit Name="PART_Editor" IsEnabled="{Binding Row.CanTransform}" />
+                        </DataTemplate>
+                    </dxg:GridColumn.CellTemplate>
+                </dxg:GridColumn>
+                <dxg:GridControl.View>
+                    <dxg:TableView
+                        AllowColumnFiltering="False"
+                        AllowColumnMoving="False"
+                        AllowSorting="False"
+                        ShowGroupPanel="False"
+                        ShowIndicator="False">
+                        <dxmvvm:Interaction.Behaviors>
+                            <dxdai:TableViewEditorPostBehavior Column="{x:Reference colTransform}" />
+                        </dxmvvm:Interaction.Behaviors>
+                    </dxg:TableView>
+                </dxg:GridControl.View>
+            </dxg:GridControl>
+        </dxlc:GroupBox>
+    </DataTemplate>
+    <DataTemplate x:Key="selectNodeColumnsView">
+        <dxg:GridControl Name="PART_SelectNodeGridView" ItemsSource="{Binding QueryGrid}">
+            <dxg:GridControl.Columns>
+                <dxg:GridColumn
+                    Name="colColumnData"
+                    FieldName="ColumnData"
+                    Width="*"
+                    Header="{dxdal:DataAccessUIStringId StringId=QueryBuilderColumn}">
+                    <dxg:GridColumn.CellTemplate>
+                        <DataTemplate>
+                            <dxg:LookUpEdit
+                                x:Name="PART_Editor"
+                                AutoPopulateColumns="False"
+                                DisplayMember="ColumnDisplayName"
+                                DisplayTemplate="{StaticResource columnDataDisplayTemplate}"
+                                EditNonEditableTemplate="{StaticResource columnDataDisplayTemplate}"
+                                EditTemplate="{StaticResource columnDataDisplayTemplate}"
+                                IsTextEditable="False"
+                                ItemsSource="{Binding Path=(dxdaid:QueryBuilderControl.QueryBuilder).ColumnDataItems, RelativeSource={RelativeSource Self}}"
+                                PopupWidth="240"
+                                ValueMember="ColumnData">
+                                <dxg:LookUpEdit.PopupContentTemplate>
+                                    <ControlTemplate>
+                                        <dxg:GridControl Name="PART_GridControl">
+                                            <dxg:GridControl.Columns>
+                                                <dxg:GridColumn FieldName="ColumnDisplayName" Header="{dxdal:DataAccessUIStringId StringId=QueryBuilderColumn}" />
+                                                <dxg:GridColumn FieldName="TableDisplayName" Header="{dxdal:DataAccessUIStringId StringId=QueryBuilderTable}" />
+                                            </dxg:GridControl.Columns>
+                                            <dxg:GridControl.View>
+                                                <dxg:TableView
+                                                    AllowColumnFiltering="False"
+                                                    AllowColumnMoving="False"
+                                                    AutoWidth="True"
+                                                    IsColumnMenuEnabled="False"
+                                                    ShowIndicator="False" />
+                                            </dxg:GridControl.View>
+                                        </dxg:GridControl>
+                                    </ControlTemplate>
+                                </dxg:LookUpEdit.PopupContentTemplate>
+                                <dxg:LookUpEdit.Buttons>
+                                    <dxe:ButtonInfo GlyphKind="Regular">
+                                        <dxmvvm:Interaction.Behaviors>
+                                            <dxdai:CommandEditorBehavior Command="{Binding Path=AssociatedObject.(dxdaid:QueryBuilderControl.QueryBuilder).EditExpressionCommand, RelativeSource={RelativeSource Self}}" />
+                                        </dxmvvm:Interaction.Behaviors>
+                                    </dxe:ButtonInfo>
+                                </dxg:LookUpEdit.Buttons>
+                            </dxg:LookUpEdit>
+                        </DataTemplate>
+                    </dxg:GridColumn.CellTemplate>
+                </dxg:GridColumn>
+                <dxg:GridColumn
+                    FieldName="Table"
+                    Width="*"
+                    AllowEditing="False"
+                    Header="{dxdal:DataAccessUIStringId StringId=QueryBuilderTable}">
+                    <dxg:GridColumn.CellTemplate>
+                        <DataTemplate>
+                            <dxe:TextEdit Name="PART_Editor" Visibility="{Binding RowData.IsNewItemRow, Converter={dx:BooleanToVisibilityConverter Invert=True}}" />
+                        </DataTemplate>
+                    </dxg:GridColumn.CellTemplate>
+                </dxg:GridColumn>
+                <dxg:GridColumn FieldName="Alias" Width="2*" Header="{dxdal:DataAccessUIStringId StringId=QueryBuilderColumns_Alias}">
+                    <dxg:GridColumn.CellTemplate>
+                        <DataTemplate>
+                            <dxe:TextEdit Name="PART_Editor" />
+                            <DataTemplate.Triggers>
+                                <DataTrigger Binding="{Binding RowData.IsNewItemRow}" Value="True">
+                                    <Setter TargetName="PART_Editor" Property="Visibility" Value="Collapsed" />
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding RowData.Row.ColumnData.ColumnKind}" Value="{x:Static daiqb:ColumnDataItem+Kind.Asterisk}">
+                                    <Setter TargetName="PART_Editor" Property="Visibility" Value="Collapsed" />
+                                </DataTrigger>
+                            </DataTemplate.Triggers>
+                        </DataTemplate>
+                    </dxg:GridColumn.CellTemplate>
+                </dxg:GridColumn>
+                <dxg:GridColumn Width="22" FixedWidth="True">
+                    <dxg:GridColumn.CellTemplateSelector>
+                        <dxdadwn:RemoveRowCellTemplateSelector>
+                            <dxdadwn:RemoveRowCellTemplateSelector.ExistingRowCellTemplate>
+                                <DataTemplate>
+                                    <dxe:ButtonsControl HorizontalAlignment="Stretch" HorizontalContentAlignment="Center">
+                                        <dxe:ButtonInfo GlyphKind="Cancel">
+                                            <dxmvvm:Interaction.Behaviors>
+                                                <dxdadwn:ButtonInfoDeleteRowBehavior Row="{Binding RowData.RowHandle.Value}" View="{Binding Path=AssociatedObject.(dxg:DataControlBase.ActiveView), RelativeSource={RelativeSource Self}}" />
+                                            </dxmvvm:Interaction.Behaviors>
+                                        </dxe:ButtonInfo>
+                                    </dxe:ButtonsControl>
+                                </DataTemplate>
+                            </dxdadwn:RemoveRowCellTemplateSelector.ExistingRowCellTemplate>
+                        </dxdadwn:RemoveRowCellTemplateSelector>
+                    </dxg:GridColumn.CellTemplateSelector>
+                </dxg:GridColumn>
+            </dxg:GridControl.Columns>
+            <dxg:GridControl.View>
+                <dxg:TableView
+                    AllowColumnFiltering="True"
+                    AllowSorting="False"
+                    EditorButtonShowMode="ShowAlways"
+                    EnableImmediatePosting="True"
+                    NewItemRowPosition="Bottom"
+                    Style="{StaticResource WizardTableViewBaseStyle}"
+                    VerticalScrollbarVisibility="Auto" />
+            </dxg:GridControl.View>
+            <dxmvvm:Interaction.Behaviors>
+                <dxdaie:QueryGridBehavior DisplayNameProvider="{x:Null}" UseQueryBuilderLight="False" />
+            </dxmvvm:Interaction.Behaviors>
+        </dxg:GridControl>
+    </DataTemplate>
+    <DataTemplate x:Key="unionNodeColumnsView">
+        <dxg:GridControl ItemsSource="{Binding Columns}">
+            <dxg:GridControl.Columns>
+                <dxg:GridColumn
+                    FieldName="DisplayName"
+                    Width="*"
+                    AllowEditing="False"
+                    Header="{dxdal:DataAccessUIStringId StringId=QueryBuilderColumn}" />
+                <dxg:GridColumn
+                    FieldName="Alias"
+                    Width="2*"
+                    AllowEditing="True"
+                    Header="{dxdal:DataAccessUIStringId StringId=QueryBuilderColumns_Alias}" />
+            </dxg:GridControl.Columns>
+            <dxg:GridControl.View>
+                <dxg:TableView
+                    AllowColumnFiltering="False"
+                    AllowEditing="False"
+                    AllowSorting="False"
+                    Style="{StaticResource WizardTableViewBaseStyle}"
+                    VerticalScrollbarVisibility="Auto" />
+            </dxg:GridControl.View>
+            <dxmvvm:Interaction.Behaviors>
+                <dxdaie:QueryGridBehavior DisplayNameProvider="{x:Null}" UseQueryBuilderLight="False" />
+            </dxmvvm:Interaction.Behaviors>
+        </dxg:GridControl>
+    </DataTemplate>
+    <DataTemplate x:Key="transformNodeColumnsViewTemplate">
+        <dxlc:GroupBox Header="{dxdal:DataAccessUIStringId StringId=FederationDataSourceQueryBuilder_TransformationResult}" Style="{StaticResource groupBoxStyle}">
+            <dxg:GridControl MaxHeight="1000" ItemsSource="{Binding Results}" ShowBorder="False">
+                <dxg:GridControl.Columns>
+                    <dxg:GridColumn Width="22" Binding="{Binding TypeSpecifics, Converter={dxdai:TypeSpecificsToImageSourceConverter}}">
+                        <dxg:GridColumn.CellTemplate>
+                            <DataTemplate>
+                                <dx:DXImage
+                                    Width="16"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    Source="{Binding Value}" />
+                            </DataTemplate>
+                        </dxg:GridColumn.CellTemplate>
+                    </dxg:GridColumn>
+                    <dxg:GridColumn FieldName="ColumnName" Width="*" />
+                </dxg:GridControl.Columns>
+                <dxg:GridControl.View>
+                    <dxg:TableView
+                        AllowEditing="False"
+                        NavigationStyle="None"
+                        ShowColumnHeaders="False"
+                        ShowHorizontalLines="False"
+                        ShowIndicator="False"
+                        ShowVerticalLines="False"
+                        Style="{StaticResource WizardTableViewBaseStyle}"
+                        VerticalScrollbarVisibility="Auto" />
+                </dxg:GridControl.View>
+            </dxg:GridControl>
+        </dxlc:GroupBox>
+    </DataTemplate>
+
+    <ControlTemplate x:Key="queryBuilderTemplate" TargetType="dxdaid:QueryBuilderControl">
+        <Grid DataContext="{TemplateBinding Model}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" SharedSizeGroup="ToolBarRow" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0" VerticalAlignment="Center" Orientation="Horizontal">
+                <TextBlock Margin="0,0,6,0" VerticalAlignment="Center" Text="Query Type:" />
+                <dxe:ListBoxEdit
+                    EditValue="{Binding QueryNodeType, RelativeSource={RelativeSource TemplatedParent}}"
+                    ItemsSource="{dxe:EnumItemsSource EnumType={x:Type daiqb:QueryNodeType}, NameConverter={dxdaie:FederatedQueryNodeTypeToDisplayNameConverter}}"
+                    ShowBorder="False"
+                    StyleSettings="{dxe:RadioListBoxEditStyleSettings}">
+                    <dxe:ListBoxEdit.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Margin="0,0,12,0" Text="{Binding}" />
+                        </DataTemplate>
+                    </dxe:ListBoxEdit.ItemTemplate>
+                    <dxe:ListBoxEdit.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Horizontal" />
+                        </ItemsPanelTemplate>
+                    </dxe:ListBoxEdit.ItemsPanel>
+                </dxe:ListBoxEdit>
+            </StackPanel>
+            <dxdo:DockLayoutManager Grid.Row="1" AllowCustomization="False">
+                <dxdo:DockLayoutManager.Resources>
+                    <Style TargetType="dxdo:LayoutGroup">
+                        <Setter Property="DockItemInterval" Value="12" />
+                        <Setter Property="LayoutItemInterval" Value="12" />
+                    </Style>
+                </dxdo:DockLayoutManager.Resources>
+                <dxdo:DockLayoutManager.LayoutRoot>
+                    <dxdo:LayoutGroup Margin="0" Orientation="Vertical">
+                        <dxdo:LayoutGroup AllowSplitters="True" ItemHeight="*">
+                            <dxdo:LayoutGroup AllowSplitters="True" ItemWidth="*" Orientation="Vertical">
+                                <dxdo:LayoutControlItem ItemHeight="2*">
+                                    <Grid>
+                                        <dxg:GridControl CurrentItem="{Binding SelectedAvailableItem, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}" ItemsSource="{Binding Model.Available, RelativeSource={RelativeSource TemplatedParent}}" ScrollViewer.VerticalScrollBarVisibility="Auto">
+                                            <dxg:GridControl.Resources>
+                                                <Style TargetType="{x:Type dxg:RowControl}">
+                                                    <Setter Property="dxmvvm:Interaction.BehaviorsTemplate">
+                                                        <Setter.Value>
+                                                            <DataTemplate>
+                                                                <ContentControl>
+                                                                    <dxmvvm:EventToCommand Command="{Binding Path=AssociatedObject.(dxdaid:QueryBuilderControl.QueryBuilder).AddSelectedItemCommand, RelativeSource={RelativeSource Self}}" CommandParameter="{Binding Row}" EventName="MouseDoubleClick" />
+                                                                </ContentControl>
+                                                            </DataTemplate>
+                                                        </Setter.Value>
+                                                    </Setter>
+                                                </Style>
+                                            </dxg:GridControl.Resources>
+                                            <dxg:GridControl.View>
+                                                <dxg:TreeListView
+                                                    AllowDragDrop="True"
+                                                    AllowEditing="False"
+                                                    IncrementalSearchMode="Enabled"
+                                                    KeyFieldName="Id"
+                                                    NavigationStyle="Row"
+                                                    NodeImageSelector="{dxdaid:AvailableItemNodeImageSelector}"
+                                                    ParentFieldName="Parent"
+                                                    ShowColumnHeaders="False"
+                                                    ShowDragDropHint="False"
+                                                    ShowHorizontalLines="False"
+                                                    ShowIndicator="False"
+                                                    ShowNodeImages="True"
+                                                    ShowVerticalLines="False">
+                                                    <dxmvvm:Interaction.Behaviors>
+                                                        <dxdai:ExpandTreeListNodeBehavior Depth="1" />
+                                                        <dxdai:GridControlDragDropManager />
+                                                        <dxdai:ProhibitDropToSelfBehavior />
+                                                    </dxmvvm:Interaction.Behaviors>
+                                                </dxg:TreeListView>
+                                            </dxg:GridControl.View>
+                                            <dxg:GridControl.Columns>
+                                                <dxg:GridColumn FieldName="Name" Width="*">
+                                                    <dxg:GridColumn.CellDisplayTemplate>
+                                                        <DataTemplate>
+                                                            <TextBlock Name="name" Text="{Binding Value}" />
+                                                            <DataTemplate.Triggers>
+                                                                <DataTrigger Binding="{Binding Row.Type, Converter={dxdai:QueryItemTypeIsQueryToBooleanConverter}}" Value="True">
+                                                                    <Setter TargetName="name" Property="FontWeight" Value="Bold" />
+                                                                </DataTrigger>
+                                                            </DataTemplate.Triggers>
+                                                        </DataTemplate>
+                                                    </dxg:GridColumn.CellDisplayTemplate>
+                                                </dxg:GridColumn>
+                                            </dxg:GridControl.Columns>
+                                        </dxg:GridControl>
+                                    </Grid>
+                                </dxdo:LayoutControlItem>
+                                <dxdo:LayoutControlItem ItemHeight="1*" Visibility="{DXBinding 'QueryNodeViewModel is $daiqb:TransformationNodeViewModel', Converter={dxmvvm:BooleanToVisibilityConverter Inverse=True}}">
+                                    <dxlc:GroupBox Header="{Binding SelectedAvailableItem.Name, RelativeSource={RelativeSource TemplatedParent}, Converter={dxdai:TableNameToColumnsOfTextConverter}}" Style="{StaticResource groupBoxStyle}">
+                                        <dxg:GridControl MaxHeight="1000" ItemsSource="{Binding SelectedAvailableItem.Columns, RelativeSource={RelativeSource TemplatedParent}}" ShowBorder="False">
+                                            <dxg:GridControl.Columns>
+                                                <dxg:GridColumn Width="22" Binding="{Binding TypeSpecifics, Converter={dxdai:TypeSpecificsToImageSourceConverter}}">
+                                                    <dxg:GridColumn.CellTemplate>
+                                                        <DataTemplate>
+                                                            <dx:DXImage
+                                                                Width="16"
+                                                                HorizontalAlignment="Center"
+                                                                VerticalAlignment="Center"
+                                                                Source="{Binding Value}" />
+                                                        </DataTemplate>
+                                                    </dxg:GridColumn.CellTemplate>
+                                                </dxg:GridColumn>
+                                                <dxg:GridColumn FieldName="DisplayName" Width="*" />
+                                            </dxg:GridControl.Columns>
+                                            <dxg:GridControl.View>
+                                                <dxg:TableView
+                                                    AllowEditing="False"
+                                                    NavigationStyle="None"
+                                                    ShowColumnHeaders="False"
+                                                    ShowHorizontalLines="False"
+                                                    ShowIndicator="False"
+                                                    ShowVerticalLines="False"
+                                                    Style="{StaticResource WizardTableViewBaseStyle}"
+                                                    VerticalScrollbarVisibility="Auto" />
+                                            </dxg:GridControl.View>
+                                        </dxg:GridControl>
+                                    </dxlc:GroupBox>
+                                </dxdo:LayoutControlItem>
+                            </dxdo:LayoutGroup>
+                            <dxdo:LayoutGroup AllowSplitters="True" ItemWidth="4*" Orientation="Vertical">
+                                <dxdo:LayoutControlItem ItemHeight="2*">
+                                    <ContentControl Content="{Binding QueryNodeViewModel}">
+                                        <ContentControl.ContentTemplateSelector>
+                                            <dxdaid:QueryNodeSelectionTemplateSelector SelectNodeTemplate="{StaticResource selectNodeDiagramView}" TransformationNodeTemplate="{StaticResource transformNodeViewTemplate}" UnionNodeTemplate="{StaticResource unionNodeTablesView}" />
+                                        </ContentControl.ContentTemplateSelector>
+                                    </ContentControl>
+                                </dxdo:LayoutControlItem>
+                                <dxdo:LayoutControlItem ItemHeight="1*">
+                                    <ContentControl Content="{Binding QueryNodeViewModel}">
+                                        <ContentControl.ContentTemplateSelector>
+                                            <dxdaid:QueryNodeSelectionTemplateSelector SelectNodeTemplate="{StaticResource selectNodeColumnsView}" TransformationNodeTemplate="{StaticResource transformNodeColumnsViewTemplate}" UnionNodeTemplate="{StaticResource unionNodeColumnsView}" />
+                                        </ContentControl.ContentTemplateSelector>
+                                    </ContentControl>
+                                </dxdo:LayoutControlItem>
+                            </dxdo:LayoutGroup>
+                        </dxdo:LayoutGroup>
+                    </dxdo:LayoutGroup>
+                </dxdo:DockLayoutManager.LayoutRoot>
+            </dxdo:DockLayoutManager>
+        </Grid>
+    </ControlTemplate>
+    <!--#endregion c:\work\2023.1\XPF\DevExpress.Xpf.ReportDesigner\DevExpress.Xpf.DataAccess\Themes\Generic\QueryBuilder\FederatedQueryBuilderControl.xaml-->
+
+    <!--#region c:\work\2023.1\XPF\DevExpress.Xpf.ReportDesigner\DevExpress.Xpf.DataAccess\Themes\Generic\QueryBuilder\LegacyQueryBuilderView.xaml-->
+    <!--#endregion c:\work\2023.1\XPF\DevExpress.Xpf.ReportDesigner\DevExpress.Xpf.DataAccess\Themes\Generic\QueryBuilder\LegacyQueryBuilderView.xaml-->
+
+    <!--#region c:\work\2023.1\XPF\DevExpress.Xpf.ReportDesigner\DevExpress.Xpf.DataAccess\Themes\Generic\QueryBuilder\QueryBuilder.xaml-->
+    <!--<Style x:Key="WizardTableViewBaseStyle" TargetType="{x:Type dxg:TableView}">
+        <Setter Property="ShowSearchPanelMode" Value="Never" />
+        <Setter Property="ShowFilterPanelMode" Value="Never" />
+        <Setter Property="AllowGrouping" Value="False" />
+        <Setter Property="ShowGroupPanel" Value="False" />
+        <Setter Property="AllowColumnFiltering" Value="False" />
+        <Setter Property="AllowColumnMoving" Value="False" />
+        <Setter Property="IsGroupPanelMenuEnabled" Value="False" />
+        <Setter Property="EnableImmediatePosting" Value="True" />
+        <Setter Property="EditorButtonShowMode" Value="ShowAlways" />
+        <Setter Property="IsColumnMenuEnabled" Value="False" />
+    </Style>-->
+    <!--#endregion c:\work\2023.1\XPF\DevExpress.Xpf.ReportDesigner\DevExpress.Xpf.DataAccess\Themes\Generic\QueryBuilder\QueryBuilder.xaml-->
+
+</ResourceDictionary>

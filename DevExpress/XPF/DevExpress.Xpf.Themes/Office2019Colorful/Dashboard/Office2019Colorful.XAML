@@ -1,0 +1,23 @@
+<ResourceDictionary mc:Ignorable="cs" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:cs="colorscheme_ignorable_uri" xmlns:dxdst="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ResourceDictionary.MergedDictionaries>
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2019Colorful.v24.1;component/Dashboard/Generic/Generic.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2019Colorful.v24.1;component/Dashboard/Office2019Colorful/Templates.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2019Colorful.v24.1;component/Dashboard/Office2019Colorful/DeltaValuePresenter.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2019Colorful.v24.1;component/Dashboard/Office2019Colorful/CardItem.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2019Colorful.v24.1;component/Dashboard/Office2019Colorful/MapItem.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2019Colorful.v24.1;component/Dashboard/Office2019Colorful/BoundImageItem.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2019Colorful.v24.1;component/Dashboard/Office2019Colorful/ChartItem.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2019Colorful.v24.1;component/Dashboard/Office2019Colorful/ComboBoxItem.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2019Colorful.v24.1;component/Dashboard/Office2019Colorful/GaugeItem.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2019Colorful.v24.1;component/Dashboard/Office2019Colorful/GridItem.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2019Colorful.v24.1;component/Dashboard/Office2019Colorful/ImageItem.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2019Colorful.v24.1;component/Dashboard/Office2019Colorful/ListBoxItem.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2019Colorful.v24.1;component/Dashboard/Office2019Colorful/PieItem.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2019Colorful.v24.1;component/Dashboard/Office2019Colorful/PivotItem.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2019Colorful.v24.1;component/Dashboard/Office2019Colorful/RangeItem.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2019Colorful.v24.1;component/Dashboard/Office2019Colorful/TextBoxItem.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2019Colorful.v24.1;component/Dashboard/Office2019Colorful/TreemapItem.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2019Colorful.v24.1;component/Dashboard/Office2019Colorful/TreeViewItem.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2019Colorful.v24.1;component/Dashboard/Office2019Colorful/DateFilterItem.xaml" />
+  </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

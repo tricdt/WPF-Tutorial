@@ -1,0 +1,22 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:dxdst="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.TouchlineDark.v24.1;component/DevExpress.Xpf.Controls/WindowsUI/TouchlineDark/FadingButton.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.TouchlineDark.v24.1;component/DevExpress.Xpf.Controls/WindowsUI/TouchlineDark/FlipView.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.TouchlineDark.v24.1;component/DevExpress.Xpf.Controls/WindowsUI/TouchlineDark/PageView.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.TouchlineDark.v24.1;component/DevExpress.Xpf.Controls/WindowsUI/TouchlineDark/SlideView.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.TouchlineDark.v24.1;component/DevExpress.Xpf.Controls/WindowsUI/TouchlineDark/CommandButton.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.TouchlineDark.v24.1;component/DevExpress.Xpf.Controls/WindowsUI/TouchlineDark/AppBar.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.TouchlineDark.v24.1;component/DevExpress.Xpf.Controls/WindowsUI/TouchlineDark/MessageBox.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.TouchlineDark.v24.1;component/DevExpress.Xpf.Controls/WindowsUI/TouchlineDark/Flyout.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.TouchlineDark.v24.1;component/DevExpress.Xpf.Controls/WindowsUI/TouchlineDark/TouchNavigator.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.TouchlineDark.v24.1;component/DevExpress.Xpf.Controls/WindowsUI/TouchlineDark/TileNavPane.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.TouchlineDark.v24.1;component/DevExpress.Xpf.Controls/WindowsUI/TouchlineDark/HamburgerMenu.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.TouchlineDark.v24.1;component/DevExpress.Xpf.Controls/WindowsUI/TouchlineDark/BreadcrumbControl.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.TouchlineDark.v24.1;component/DevExpress.Xpf.Controls/Wizard/TouchlineDark/Colors.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.TouchlineDark.v24.1;component/DevExpress.Xpf.Controls/TouchlineDark/StepProgressBar.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+</ResourceDictionary>

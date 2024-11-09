@@ -1,0 +1,18 @@
+﻿<ResourceDictionary mc:Ignorable="cs" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:cs="colorscheme_ignorable_uri" xmlns:dxdst="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ResourceDictionary.MergedDictionaries>
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2013LightGray.v24.1;component/DevExpress.Xpf.Controls/WindowsUI/Office2013LightGray/FadingButton.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2013LightGray.v24.1;component/DevExpress.Xpf.Controls/WindowsUI/Office2013LightGray/FlipView.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2013LightGray.v24.1;component/DevExpress.Xpf.Controls/WindowsUI/Office2013LightGray/PageView.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2013LightGray.v24.1;component/DevExpress.Xpf.Controls/WindowsUI/Office2013LightGray/SlideView.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2013LightGray.v24.1;component/DevExpress.Xpf.Controls/WindowsUI/Office2013LightGray/CommandButton.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2013LightGray.v24.1;component/DevExpress.Xpf.Controls/WindowsUI/Office2013LightGray/AppBar.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2013LightGray.v24.1;component/DevExpress.Xpf.Controls/WindowsUI/Office2013LightGray/MessageBox.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2013LightGray.v24.1;component/DevExpress.Xpf.Controls/WindowsUI/Office2013LightGray/Flyout.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2013LightGray.v24.1;component/DevExpress.Xpf.Controls/WindowsUI/Office2013LightGray/TouchNavigator.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2013LightGray.v24.1;component/DevExpress.Xpf.Controls/WindowsUI/Office2013LightGray/TileNavPane.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2013LightGray.v24.1;component/DevExpress.Xpf.Controls/WindowsUI/Office2013LightGray/HamburgerMenu.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2013LightGray.v24.1;component/DevExpress.Xpf.Controls/WindowsUI/Office2013LightGray/BreadcrumbControl.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2013LightGray.v24.1;component/DevExpress.Xpf.Controls/Wizard/Office2013LightGray/Colors.xaml" />
+    <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2013LightGray.v24.1;component/DevExpress.Xpf.Controls/Office2013LightGray/StepProgressBar.xaml" />
+  </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

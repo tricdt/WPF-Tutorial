@@ -1,0 +1,127 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+    xmlns:dxi="http://schemas.devexpress.com/winfx/2008/xaml/core/internal"
+    xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/charts"
+    xmlns:dxct="http://schemas.devexpress.com/winfx/2008/xaml/charts/themekeys"
+    xmlns:dxht="http://schemas.devexpress.com/winfx/2008/xaml/heatmap/themekeys"
+    xmlns:dxsat="http://schemas.devexpress.com/winfx/2008/xaml/sankey/themekeys"
+    xmlns:cs="colorscheme_ignorable_uri">
+    <ResourceDictionary.MergedDictionaries>
+        <dxi:ThemeResourceDictionary Path="Charts/_{ThemeName}.xaml" />
+        <dxi:ThemeResourceDictionary Path="Charts/_Base.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+    <SolidColorBrush x:Key="{dxct:LWKey ChartBrushes.AxisBrush}" Color="{StaticResource Color.Border}" />
+    <SolidColorBrush x:Key="{dxct:LWKey ChartBrushes.AxisLabelForeground}" Color="{StaticResource Color.Foreground}" />
+    <SolidColorBrush x:Key="{dxct:LWKey ChartBrushes.AxisTitleForeground}" Color="{StaticResource Color.Foreground}" />
+    <SolidColorBrush x:Key="{dxct:LWKey ChartBrushes.Axis2DInterlacedBrush}" Color="{StaticResource Color.Delimiter}" Opacity="0.16" />
+    <SolidColorBrush x:Key="{dxct:LWKey ChartBrushes.Axis3DInterlacedBrush}" Color="{StaticResource Color.Delimiter}" Opacity="0.16" />
+    <SolidColorBrush x:Key="{dxct:LWKey ChartBrushes.GridLineBrush}" Color="{StaticResource Color.Delimiter}" Opacity="1.00" />
+    <SolidColorBrush x:Key="{dxct:LWKey ChartBrushes.MinorGridLineBrush}" Color="{StaticResource Color.Delimiter}" Opacity="0.38" />
+    <SolidColorBrush x:Key="{dxct:LWKey ChartBrushes.ChartBorderBrush}" Color="{StaticResource Color.Border}" />
+    <SolidColorBrush x:Key="{dxct:LWKey ChartBrushes.ChartBackgroundBrush}" Color="{dx:LWColor 'VS2019Blue=Color.Editor.Background, VS2019Dark=Color.Control.Background, VS2019Light=Color.Editor.Background'}" />
+    <SolidColorBrush x:Key="{dxct:LWKey ChartBrushes.AnnotationBorderBrush}" Color="{StaticResource Color.Border}" />
+    <SolidColorBrush x:Key="{dxct:LWKey ChartBrushes.AnnotationBackground}" Color="{dx:LWColor 'VS2019Blue=Color.Control.Background, VS2019Dark=Color.Editor.Background, VS2019Light=Color.Window.Background'}" />
+    <SolidColorBrush x:Key="{dxct:LWKey ChartBrushes.AnnotationForeground}" Color="{StaticResource Color.Foreground}" />
+    <SolidColorBrush x:Key="{dxct:LWKey ChartBrushes.RangeControlClientViewBrush}" Color="{StaticResource Color.Focused}" />
+    <SolidColorBrush x:Key="{dxct:LWKey ChartBrushes.RangeControlClientViewMarkerBrush}" Color="{StaticResource Color.Focused}" />
+    <SolidColorBrush x:Key="{dxct:LWKey ChartBrushes.RangeControlClientGridLineBrush}" Color="{StaticResource Color.Delimiter}" />
+    <SolidColorBrush x:Key="{dxct:LWKey ChartBrushes.CrosshairSeriesLabelForeground}" Color="{StaticResource Color.Foreground}" />
+    <SolidColorBrush x:Key="{dxct:LWKey ChartBrushes.Domain2DBrush}" Color="{dx:LWColor 'VS2019Blue=Color.Editor.Background, VS2019Dark=Color.Control.Background, VS2019Light=Color.Editor.Background'}" />
+    <SolidColorBrush x:Key="{dxct:LWKey ChartBrushes.DomainBorderBrush}" Color="{StaticResource Color.Border}" />
+    <SolidColorBrush x:Key="{dxct:LWKey ChartBrushes.Domain3DBrush}" Color="{StaticResource Color.Editor.Background}" />
+    <SolidColorBrush x:Key="{dxct:LWKey ChartBrushes.LegendBorderBrush}" Color="{StaticResource Color.Border}" />
+    <SolidColorBrush x:Key="{dxct:LWKey ChartBrushes.LegendBackgroundBrush}" Color="{dx:LWColor 'VS2019Blue=Color.Control.Background, VS2019Dark=Color.Window.Background, VS2019Light=Color.Window.Background'}" />
+    <SolidColorBrush x:Key="{dxct:LWKey ChartBrushes.LegendForeground}" Color="{StaticResource Color.Foreground}" />
+    <SolidColorBrush x:Key="{dxct:LWKey ChartBrushes.TitleForeground}" Color="{StaticResource Color.Foreground}" />
+    <SolidColorBrush x:Key="{dxct:LWKey ChartBrushes.PaneTitleForeground}" Color="{StaticResource Color.Foreground}" />
+    <SolidColorBrush x:Key="{dxct:LWKey ChartBrushes.PaneTitleForegroundHot}" Color="{StaticResource Color.Focused}" />
+    <SolidColorBrush x:Key="{dxct:LWKey ChartBrushes.PaneTitleForegroundDisabled}" Color="{StaticResource Color.Border}" />
+    <SolidColorBrush x:Key="{dxct:LWKey ChartBrushes.ToolTipForeground}" Color="{StaticResource Color.Foreground}" />
+    <SolidColorBrush x:Key="{dxct:LWKey SankeyBrushes.BackgroundBrush}" Color="{dx:LWColor 'VS2019Blue=Color.Editor.Background, VS2019Dark=Color.Control.Background, VS2019Light=Color.Editor.Background'}" />
+    <SolidColorBrush x:Key="{dxct:LWKey SankeyBrushes.BorderBrush}" Color="{StaticResource Color.Border}" />
+    <SolidColorBrush x:Key="{dxct:LWKey SankeyBrushes.ToolTipForeground}" Color="{StaticResource Color.Foreground}" />
+    <SolidColorBrush x:Key="{dxct:LWKey SankeyBrushes.ToolTipBackground}" Color="{dx:LWColor 'VS2019Blue=Color.Window.Background, VS2019Dark=Color.HoverBackground, VS2019Light=Color.Window.Background'}" />
+    <SolidColorBrush x:Key="{dxct:LWKey SankeyBrushes.ToolTipBorder}" Color="{StaticResource Color.Border}" />
+    <SolidColorBrush x:Key="{dxct:LWKey SankeyBrushes.TitleForeground}" Color="{StaticResource Color.Foreground}" />
+    <SolidColorBrush x:Key="{dxct:LWKey SankeyBrushes.TextElementForeground}" Color="{StaticResource Color.Foreground}" />
+    <SolidColorBrush x:Key="{dxct:LWKey SankeyBrushes.NodeLabelForeground}" Color="{StaticResource Color.Foreground}" />
+    <SolidColorBrush x:Key="{dxct:LWKey HeatmapBrushes.BackgroundBrush}" Color="{dx:LWColor 'VS2019Blue=Color.Editor.Background, VS2019Dark=Color.Control.Background, VS2019Light=Color.Editor.Background'}" />
+    <SolidColorBrush x:Key="{dxct:LWKey HeatmapBrushes.BorderBrush}" Color="{StaticResource Color.Border}" />
+    <SolidColorBrush x:Key="{dxct:LWKey HeatmapBrushes.ToolTipForeground}" Color="{StaticResource Color.Foreground}" />
+    <SolidColorBrush x:Key="{dxct:LWKey HeatmapBrushes.ToolTipBackground}" Color="{dx:LWColor 'VS2019Blue=Color.Window.Background, VS2019Dark=Color.HoverBackground, VS2019Light=Color.Window.Background'}" />
+    <SolidColorBrush x:Key="{dxct:LWKey HeatmapBrushes.ToolTipBorder}" Color="{StaticResource Color.Border}" />
+    <SolidColorBrush x:Key="{dxct:LWKey HeatmapBrushes.LabelForeground}" Color="{StaticResource Color.Foreground}" />
+    <SolidColorBrush x:Key="{dxct:LWKey HeatmapBrushes.HighlightBrush}" Color="{dx:LWColor 'VS2019Blue=Color.Editor.Background, VS2019Dark=Color.Control.Background, VS2019Light=Color.Editor.Background'}" />
+    <SolidColorBrush x:Key="{dxct:LWKey ChartBrushes.FinancialReductionBrush}" Color="Red" />
+    <SolidColorBrush x:Key="{dxct:LWKey ChartBrushes.CrosshairPopupBackground}" Color="#FFFFFFFF" />
+    <SolidColorBrush x:Key="{dxct:LWKey ChartBrushes.CrosshairBorderBrush}" Color="#7F999999" />
+    <SolidColorBrush x:Key="{dxct:LWKey ChartBrushes.BreadcrumbForeground}" Color="{StaticResource Color.Foreground}" />
+    <SolidColorBrush x:Key="{dxct:LWKey ChartBrushes.BreadcrumbHoverForeground}" Color="{StaticResource Color.Focused}" />
+    <ControlTemplate x:Key="VerticalThumbTemplate" TargetType="dxc:AxisScrollBarThumb">
+        <Grid x:Name="Root">
+            <dx:DXBorder
+                x:Name="IsDefault"
+                Background="{StaticResource Brush.Control.NeutralBackground}"
+                BorderBrush="{StaticResource Brush.Control.NeutralBackground}"
+                BorderThickness="1"
+                Margin="1" />
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal" />
+                    <VisualState x:Name="MouseOver">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{dx:LWColor 'VS2019Blue=Color.Backstage.Delimiter, VS2019Dark=Color.ControlLight.Background, VS2019Light=Color.HoverForeground'}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.Foreground, VS2019Blue=Color.Backstage.Delimiter, VS2019Dark=Color.ControlLight.Background'}" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Pressed">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.Foreground, VS2019Dark=Color.ControlLight.Background, VS2019Blue=Color.Backstage.Button.Background, VS2019Light=Color.HoverForeground'}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.Foreground, VS2019Blue=Color.Backstage.Button.Background, VS2019Dark=Color.ControlLight.Background'}" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Disabled">
+                        <Storyboard>
+                            <DoubleAnimation Duration="0" Storyboard.TargetName="Root" Storyboard.TargetProperty="Opacity" To="0.38" />
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </Grid>
+    </ControlTemplate>
+    <ControlTemplate x:Key="HorizontalThumbTemplate" TargetType="dxc:AxisScrollBarThumb">
+        <Grid x:Name="Root">
+            <dx:DXBorder
+                x:Name="IsDefault"
+                Background="{StaticResource Brush.Border}"
+                BorderBrush="{StaticResource Brush.Border}"
+                BorderThickness="1"
+                Margin="1" />
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal" />
+                    <VisualState x:Name="MouseOver">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.HoverForeground, VS2019Blue=Color.Backstage.Delimiter, VS2019Dark=Color.ControlLight.Background'}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.Foreground, VS2019Blue=Color.Backstage.Delimiter, VS2019Dark=Color.ControlLight.Background'}" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Pressed">
+                        <Storyboard>
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.HoverForeground, VS2019Blue=Color.Backstage.Button.Background, VS2019Dark=Color.ControlLight.Background'}" />
+                            <ColorAnimation Duration="0" Storyboard.TargetName="IsDefault" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="{dx:LWColor 'Color.Foreground, VS2019Blue=Color.Backstage.Button.Background, VS2019Dark=Color.ControlLight.Background'}" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Disabled">
+                        <Storyboard>
+                            <DoubleAnimation Duration="0" Storyboard.TargetName="Root" Storyboard.TargetProperty="Opacity" To="0.38" />
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </Grid>
+    </ControlTemplate>
+</ResourceDictionary>

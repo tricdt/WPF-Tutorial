@@ -1,0 +1,733 @@
+﻿<ResourceDictionary mc:Ignorable="cs"
+                    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:cs="colorscheme_ignorable_uri"
+                    xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
+                    xmlns:dxbt="http://schemas.devexpress.com/winfx/2008/xaml/bars/themekeys"
+                    xmlns:dxcn="http://schemas.devexpress.com/winfx/2008/xaml/core/internal"
+                    xmlns:dxdv="http://schemas.devexpress.com/winfx/2008/xaml/documentviewer"
+                    xmlns:dxdvt="http://schemas.devexpress.com/winfx/2008/xaml/documentviewer/themekeys"
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/DevExpress.Xpf.Themes.Office2010Black.v24.1;component/DevExpress.Xpf.DocumentViewer/Generic/Templates.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+    <!-- Search Panel -->
+
+    <ControlTemplate x:Key="{dxdvt:DocumentViewerThemeKeyExtension ResourceKey=DocumentViewerBarTemplate}" TargetType="{x:Type ContentControl}">
+        <Grid Margin="0,0,0,3">
+            <Border x:Name="ShadowBorder"
+                    Background="White"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch">
+                <Border.Effect>
+                    <DropShadowEffect x:Name="Shadow"
+                                      BlurRadius="3"
+                                      Direction="270"
+                                      Opacity="0.35"
+                                      ShadowDepth="1"/>
+                </Border.Effect>
+            </Border>
+            <Border BorderThickness="0,0,0,1">
+                <Border.BorderBrush>
+                    <LinearGradientBrush cs:Name="LinearGradientBrush_1492"
+                                         EndPoint="0.5,1"
+                                         StartPoint="0.5,0"
+                                        >
+                        <GradientStop Color="#FF838383"
+                                      cs:Name="GradientStop_0003"
+                                      Offset="0"
+                                      cs:Office2010Blue.Color="#FF94ADCC"
+                                      cs:Office2010Silver.Color="#FFC0C4C9"
+                                     />
+                        <GradientStop Color="#C2454545"
+                                      cs:Name="GradientStop_0004"
+                                      Offset="1"
+                                      cs:Office2010Blue.Color="#FF94ADCC"
+                                      cs:Office2010Silver.Color="#C0C4C9"
+                                     />
+                    </LinearGradientBrush>
+                </Border.BorderBrush>
+                <Border.Background>
+                    <LinearGradientBrush cs:Name="LinearGradientBrush_1493"
+                                         EndPoint="0.5,1"
+                                         StartPoint="0.5,0"
+                                        >
+                        <GradientStop Color="#FFB9B9B9"
+                                      cs:Name="GradientStop_0005"
+                                      Offset="0"
+                                      cs:Office2010Blue.Color="#FFEDF4FD"
+                                      cs:Office2010Silver.Color="#FFFFFF"
+                                     />
+                        <GradientStop Color="#FF9D9D9D"
+                                      cs:Name="GradientStop_0006"
+                                      Offset="1"
+                                      cs:Office2010Blue.Color="#FFD9E4F2"
+                                      cs:Office2010Silver.Color="#E9EDF1"
+                                     />
+                    </LinearGradientBrush>
+                </Border.Background>
+                <ContentPresenter Margin="12,4,4,4"/>
+            </Border>
+        </Grid>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="{dxdv:SearchBarButtonItemItemBorderThemeKeyExtension ResourceKey=Normal}" TargetType="{x:Type dxb:ItemBorderControl}">
+        <Grid Margin="0,1,0,1" SnapsToDevicePixels="True">
+            <Grid x:Name="CustomizationState" Opacity="0">
+                <Border Background="#FFFFFFFF"
+                        BorderBrush="#FF000000"
+                        BorderThickness="1"
+                        cs:Name="Border_0015"
+                        cs:Office2010Blue.Background="#FFFFFFFF"
+                        cs:Office2010Blue.BorderBrush="#FF000000"
+                        cs:Office2010Silver.Background="#FFFFFFFF"
+                        cs:Office2010Silver.BorderBrush="#FF000000"
+                       />
+            </Grid>
+            <Grid x:Name="DefaultState" Opacity="0">
+                <Border Background="#BF6A6A6A"
+                        CornerRadius="2"
+                        cs:Name="Border_0016"
+                        Padding="1"
+                        cs:Office2010Blue.Background="#FF94ADCC"
+                        cs:Office2010Silver.Background="#FFC0C4C9"
+                       >
+                    <Border CornerRadius="1" Padding="1">
+                        <Border.Background>
+                            <LinearGradientBrush cs:Name="LinearGradientBrush_1521"
+                                                 EndPoint="0.5,1"
+                                                 StartPoint="0.5,0"
+                                                >
+                                <GradientStop Color="#FFC9C9C9"
+                                              cs:Name="GradientStop_0007"
+                                              Offset="0"
+                                              cs:Office2010Blue.Color="#FFEDF4FD"
+                                              cs:Office2010Silver.Color="#FFFAFAFA"
+                                             />
+                                <GradientStop Color="#FF9F9F9F"
+                                              cs:Name="GradientStop_0008"
+                                              Offset="1"
+                                              cs:Office2010Blue.Color="#FFD9E4F2"
+                                              cs:Office2010Silver.Color="#E9EDF1"
+                                             />
+                            </LinearGradientBrush>
+                        </Border.Background>
+                    </Border>
+                </Border>
+            </Grid>
+            <Grid x:Name="HoverState" Opacity="0">
+                <Border x:Name="hover1" CornerRadius="2">
+                    <Border.Background>
+                        <LinearGradientBrush cs:Name="LinearGradientBrush_1522"
+                                             EndPoint="0.5,1"
+                                             StartPoint="0.5,0"
+                                            >
+                            <GradientStop Color="#BFD7A820"
+                                          cs:Name="GradientStop_0009"
+                                          Offset="0"
+                                          cs:Office2010Blue.Color="#BFD7A820"
+                                          cs:Office2010Silver.Color="#BFD7A820"
+                                         />
+                            <GradientStop Color="#BFB89407"
+                                          cs:Name="GradientStop_0010"
+                                          Offset="1"
+                                          cs:Office2010Blue.Color="#BFB89407"
+                                          cs:Office2010Silver.Color="#BFB89407"
+                                         />
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    <Border x:Name="hover2"
+                            CornerRadius="1"
+                            Margin="1">
+                        <Border.Background>
+                            <LinearGradientBrush cs:Name="LinearGradientBrush_1523"
+                                                 EndPoint="0.5,1"
+                                                 StartPoint="0.5,0"
+                                                >
+                                <GradientStop Color="#FFFFFAE6"
+                                              cs:Name="GradientStop_0011"
+                                              Offset="0"
+                                              cs:Office2010Blue.Color="#FFFFFAE6"
+                                              cs:Office2010Silver.Color="#FFFFFAE6"
+                                             />
+                                <GradientStop Color="#FFFFFFED"
+                                              cs:Name="GradientStop_0012"
+                                              Offset="1"
+                                              cs:Office2010Blue.Color="#FFFFFFED"
+                                              cs:Office2010Silver.Color="#FFFFFFED"
+                                             />
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <Border x:Name="hover3"
+                                CornerRadius="1"
+                                Margin="1">
+                            <Border.Background>
+                                <LinearGradientBrush cs:Name="LinearGradientBrush_1524"
+                                                     EndPoint="0.5,1"
+                                                     StartPoint="0.5,0"
+                                                    >
+                                    <GradientStop Color="#FFFFEEA8"
+                                                  cs:Name="GradientStop_0013"
+                                                  Offset="0"
+                                                  cs:Office2010Blue.Color="#FFFFEEA8"
+                                                  cs:Office2010Silver.Color="#FFFFEEA8"
+                                                 />
+                                    <GradientStop Color="#FFFFFCE0"
+                                                  cs:Name="GradientStop_0014"
+                                                  Offset="1"
+                                                  cs:Office2010Blue.Color="#FFFFFCE0"
+                                                  cs:Office2010Silver.Color="#FFFFFCE0"
+                                                 />
+                                    <GradientStop Color="#FFFFE277"
+                                                  cs:Name="GradientStop_0015"
+                                                  Offset="0.5"
+                                                  cs:Office2010Blue.Color="#FFFFE277"
+                                                  cs:Office2010Silver.Color="#FFFFE277"
+                                                 />
+                                </LinearGradientBrush>
+                            </Border.Background>
+                        </Border>
+                    </Border>
+                </Border>
+            </Grid>
+            <Grid x:Name="PressedState" Opacity="0">
+                <Border x:Name="pressed1" CornerRadius="2">
+                    <Border.Background>
+                        <LinearGradientBrush cs:Name="LinearGradientBrush_1525"
+                                             EndPoint="0.5,1"
+                                             StartPoint="0.5,0"
+                                            >
+                            <GradientStop Color="#BFA26F16"
+                                          cs:Name="GradientStop_0016"
+                                          Offset="0"
+                                          cs:Office2010Blue.Color="#BFA26F16"
+                                          cs:Office2010Silver.Color="#BFA26F16"
+                                         />
+                            <GradientStop Color="#BFA2832C"
+                                          cs:Name="GradientStop_0017"
+                                          Offset="1"
+                                          cs:Office2010Blue.Color="#BFA2832C"
+                                          cs:Office2010Silver.Color="#BFA2832C"
+                                         />
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    <Border x:Name="pressed2"
+                            CornerRadius="1"
+                            Margin="1">
+                        <Border.Background>
+                            <LinearGradientBrush cs:Name="LinearGradientBrush_1526"
+                                                 EndPoint="0.5,1"
+                                                 StartPoint="0.5,0"
+                                                >
+                                <GradientStop Color="#FFFFE575"
+                                              cs:Name="GradientStop_0018"
+                                              Offset="0"
+                                              cs:Office2010Blue.Color="#FFFFE575"
+                                              cs:Office2010Silver.Color="#FFFFE575"
+                                             />
+                                <GradientStop Color="#FFFFF37F"
+                                              cs:Name="GradientStop_0019"
+                                              Offset="1"
+                                              cs:Office2010Blue.Color="#FFFFF37F"
+                                              cs:Office2010Silver.Color="#FFFFF37F"
+                                             />
+                                <GradientStop Color="#FFFFD86C"
+                                              cs:Name="GradientStop_0020"
+                                              Offset="0.5"
+                                              cs:Office2010Blue.Color="#FFFFD86C"
+                                              cs:Office2010Silver.Color="#FFFFD86C"
+                                             />
+                            </LinearGradientBrush>
+                        </Border.Background>
+                    </Border>
+                </Border>
+            </Grid>
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="HideBorderSide">
+                    <VisualState x:Name="None"/>
+                    <VisualState x:Name="Left">
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames dxcn:ValueSetter.CornerRadius="0,2,2,0"
+                                                           Storyboard.TargetName="hover1"
+                                                           Storyboard.TargetProperty="(Border.CornerRadius)"/>
+                            <ObjectAnimationUsingKeyFrames dxcn:ValueSetter.CornerRadius="0,1,1,0"
+                                                           Storyboard.TargetName="hover2"
+                                                           Storyboard.TargetProperty="(Border.CornerRadius)"/>
+                            <ObjectAnimationUsingKeyFrames dxcn:ValueSetter.Thickness="0,1,1,1"
+                                                           Storyboard.TargetName="hover2"
+                                                           Storyboard.TargetProperty="(Border.Margin)"/>
+                            <ObjectAnimationUsingKeyFrames dxcn:ValueSetter.CornerRadius="0,2,2,0"
+                                                           Storyboard.TargetName="pressed1"
+                                                           Storyboard.TargetProperty="(Border.CornerRadius)"/>
+                            <ObjectAnimationUsingKeyFrames dxcn:ValueSetter.CornerRadius="0,1,1,0"
+                                                           Storyboard.TargetName="pressed2"
+                                                           Storyboard.TargetProperty="(Border.CornerRadius)"/>
+                            <ObjectAnimationUsingKeyFrames dxcn:ValueSetter.Thickness="0,1,1,1"
+                                                           Storyboard.TargetName="pressed2"
+                                                           Storyboard.TargetProperty="(Border.Margin)"/>
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Right">
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames dxcn:ValueSetter.CornerRadius="2,0,0,2"
+                                                           Storyboard.TargetName="hover1"
+                                                           Storyboard.TargetProperty="(Border.CornerRadius)"/>
+                            <ObjectAnimationUsingKeyFrames dxcn:ValueSetter.CornerRadius="1,0,0,1"
+                                                           Storyboard.TargetName="hover2"
+                                                           Storyboard.TargetProperty="(Border.CornerRadius)"/>
+                            <ObjectAnimationUsingKeyFrames dxcn:ValueSetter.CornerRadius="2,0,0,2"
+                                                           Storyboard.TargetName="pressed1"
+                                                           Storyboard.TargetProperty="(Border.CornerRadius)"/>
+                            <ObjectAnimationUsingKeyFrames dxcn:ValueSetter.CornerRadius="1,0,0,1"
+                                                           Storyboard.TargetName="pressed2"
+                                                           Storyboard.TargetProperty="(Border.CornerRadius)"/>
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Top">
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames dxcn:ValueSetter.CornerRadius="0,0,2,2"
+                                                           Storyboard.TargetName="hover1"
+                                                           Storyboard.TargetProperty="(Border.CornerRadius)"/>
+                            <ObjectAnimationUsingKeyFrames dxcn:ValueSetter.CornerRadius="0,0,1,1"
+                                                           Storyboard.TargetName="hover2"
+                                                           Storyboard.TargetProperty="(Border.CornerRadius)"/>
+                            <ObjectAnimationUsingKeyFrames dxcn:ValueSetter.Thickness="1,0,1,1"
+                                                           Storyboard.TargetName="hover2"
+                                                           Storyboard.TargetProperty="(Border.Margin)"/>
+                            <ObjectAnimationUsingKeyFrames dxcn:ValueSetter.CornerRadius="0,0,2,2"
+                                                           Storyboard.TargetName="pressed1"
+                                                           Storyboard.TargetProperty="(Border.CornerRadius)"/>
+                            <ObjectAnimationUsingKeyFrames dxcn:ValueSetter.CornerRadius="0,0,1,1"
+                                                           Storyboard.TargetName="pressed2"
+                                                           Storyboard.TargetProperty="(Border.CornerRadius)"/>
+                            <ObjectAnimationUsingKeyFrames dxcn:ValueSetter.Thickness="1,0,1,1"
+                                                           Storyboard.TargetName="pressed2"
+                                                           Storyboard.TargetProperty="(Border.Margin)"/>
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Bottom">
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames dxcn:ValueSetter.CornerRadius="2,2,0,0"
+                                                           Storyboard.TargetName="hover1"
+                                                           Storyboard.TargetProperty="(Border.CornerRadius)"/>
+                            <ObjectAnimationUsingKeyFrames dxcn:ValueSetter.CornerRadius="1,1,0,0"
+                                                           Storyboard.TargetName="hover2"
+                                                           Storyboard.TargetProperty="(Border.CornerRadius)"/>
+                            <ObjectAnimationUsingKeyFrames dxcn:ValueSetter.CornerRadius="2,2,0,0"
+                                                           Storyboard.TargetName="pressed1"
+                                                           Storyboard.TargetProperty="(Border.CornerRadius)"/>
+                            <ObjectAnimationUsingKeyFrames dxcn:ValueSetter.CornerRadius="1,1,0,0"
+                                                           Storyboard.TargetName="pressed2"
+                                                           Storyboard.TargetProperty="(Border.CornerRadius)"/>
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="All"/>
+                </VisualStateGroup>
+                <VisualStateGroup x:Name="ArrowHideBorderSide">
+                    <VisualState x:Name="ArrowNone"/>
+                    <VisualState x:Name="ArrowLeft"/>
+                    <VisualState x:Name="ArrowTop"/>
+                    <VisualState x:Name="ArrowRight"/>
+                    <VisualState x:Name="ArrowBottom"/>
+                    <VisualState x:Name="ArrowAll"/>
+                </VisualStateGroup>
+                <VisualStateGroup x:Name="ActiveState">
+                    <VisualState x:Name="Active"/>
+                    <VisualState x:Name="Inactive"/>
+                </VisualStateGroup>
+                <VisualStateGroup x:Name="State">
+                    <VisualState x:Name="Normal">
+                        <Storyboard>
+                            <DoubleAnimation Duration="0"
+                                             Storyboard.TargetName="DefaultState"
+                                             Storyboard.TargetProperty="Opacity"
+                                             To="1"/>
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Disabled"/>
+                    <VisualState x:Name="Hover">
+                        <Storyboard>
+                            <DoubleAnimation Duration="0"
+                                             Storyboard.TargetName="HoverState"
+                                             Storyboard.TargetProperty="Opacity"
+                                             To="1"/>
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Pressed">
+                        <Storyboard>
+                            <DoubleAnimation Duration="0"
+                                             Storyboard.TargetName="PressedState"
+                                             Storyboard.TargetProperty="Opacity"
+                                             To="1"/>
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Checked"/>
+                    <VisualState x:Name="HoverChecked"/>
+                    <VisualState x:Name="Focused"/>
+                    <VisualState x:Name="Customization">
+                        <Storyboard>
+                            <DoubleAnimation Duration="0"
+                                             Storyboard.TargetName="CustomizationState"
+                                             Storyboard.TargetProperty="Opacity"
+                                             To="1"/>
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </Grid>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="{dxdv:SearchBarSubItemItemBorderThemeKeyExtension ResourceKey=Normal}" TargetType="{x:Type dxb:ItemBorderControl}">
+        <Grid Margin="0,1,0,1" SnapsToDevicePixels="True">
+            <Grid x:Name="CustomizationState" Opacity="0">
+                <Border Background="#FFFFFFFF"
+                        BorderBrush="#FF000000"
+                        BorderThickness="1"
+                        cs:Name="Border_0018"
+                        cs:Office2010Blue.Background="#FFFFFFFF"
+                        cs:Office2010Blue.BorderBrush="#FF000000"
+                        cs:Office2010Silver.Background="#FFFFFFFF"
+                        cs:Office2010Silver.BorderBrush="#FF000000"
+                       />
+            </Grid>
+            <Grid x:Name="DefaultState" Opacity="0">
+                <Border Background="#BF6A6A6A"
+                        CornerRadius="2"
+                        cs:Name="Border_0019"
+                        Padding="1"
+                        cs:Office2010Blue.Background="#FF94ADCC"
+                        cs:Office2010Silver.Background="#FFC0C4C9"
+                       >
+                    <Border CornerRadius="1" Padding="1">
+                        <Border.Background>
+                            <LinearGradientBrush cs:Name="LinearGradientBrush_1527"
+                                                 EndPoint="0.5,1"
+                                                 StartPoint="0.5,0"
+                                                >
+                                <GradientStop Color="#FFC9C9C9"
+                                              cs:Name="GradientStop_0021"
+                                              Offset="0"
+                                              cs:Office2010Blue.Color="#FFEDF4FD"
+                                              cs:Office2010Silver.Color="#FFFAFAFA"
+                                             />
+                                <GradientStop Color="#FF9F9F9F"
+                                              cs:Name="GradientStop_0022"
+                                              Offset="1"
+                                              cs:Office2010Blue.Color="#FFD9E4F2"
+                                              cs:Office2010Silver.Color="#E9EDF1"
+                                             />
+                            </LinearGradientBrush>
+                        </Border.Background>
+                    </Border>
+                </Border>
+            </Grid>
+            <Grid x:Name="HoverState" Opacity="0">
+                <Border x:Name="hover1" CornerRadius="2">
+                    <Border.Background>
+                        <LinearGradientBrush cs:Name="LinearGradientBrush_1528"
+                                             EndPoint="0.5,1"
+                                             StartPoint="0.5,0"
+                                            >
+                            <GradientStop Color="#BFD7A820"
+                                          cs:Name="GradientStop_0023"
+                                          Offset="0"
+                                          cs:Office2010Blue.Color="#BFD7A820"
+                                          cs:Office2010Silver.Color="#BFD7A820"
+                                         />
+                            <GradientStop Color="#BFB89407"
+                                          cs:Name="GradientStop_0024"
+                                          Offset="1"
+                                          cs:Office2010Blue.Color="#BFB89407"
+                                          cs:Office2010Silver.Color="#BFB89407"
+                                         />
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    <Border x:Name="hover2"
+                            CornerRadius="1"
+                            Margin="1">
+                        <Border.Background>
+                            <LinearGradientBrush cs:Name="LinearGradientBrush_1529"
+                                                 EndPoint="0.5,1"
+                                                 StartPoint="0.5,0"
+                                                >
+                                <GradientStop Color="#FFFFFAE6"
+                                              cs:Name="GradientStop_0025"
+                                              Offset="0"
+                                              cs:Office2010Blue.Color="#FFFFFAE6"
+                                              cs:Office2010Silver.Color="#FFFFFAE6"
+                                             />
+                                <GradientStop Color="#FFFFFFED"
+                                              cs:Name="GradientStop_0026"
+                                              Offset="1"
+                                              cs:Office2010Blue.Color="#FFFFFFED"
+                                              cs:Office2010Silver.Color="#FFFFFFED"
+                                             />
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <Border x:Name="hover3"
+                                CornerRadius="1"
+                                Margin="1">
+                            <Border.Background>
+                                <LinearGradientBrush cs:Name="LinearGradientBrush_1530"
+                                                     EndPoint="0.5,1"
+                                                     StartPoint="0.5,0"
+                                                    >
+                                    <GradientStop Color="#FFFFEEA8"
+                                                  cs:Name="GradientStop_0027"
+                                                  Offset="0"
+                                                  cs:Office2010Blue.Color="#FFFFEEA8"
+                                                  cs:Office2010Silver.Color="#FFFFEEA8"
+                                                 />
+                                    <GradientStop Color="#FFFFFCE0"
+                                                  cs:Name="GradientStop_0028"
+                                                  Offset="1"
+                                                  cs:Office2010Blue.Color="#FFFFFCE0"
+                                                  cs:Office2010Silver.Color="#FFFFFCE0"
+                                                 />
+                                    <GradientStop Color="#FFFFE277"
+                                                  cs:Name="GradientStop_0029"
+                                                  Offset="0.5"
+                                                  cs:Office2010Blue.Color="#FFFFE277"
+                                                  cs:Office2010Silver.Color="#FFFFE277"
+                                                 />
+                                </LinearGradientBrush>
+                            </Border.Background>
+                        </Border>
+                    </Border>
+                </Border>
+            </Grid>
+            <Grid x:Name="PressedState" Opacity="0">
+                <Border x:Name="pressed1" CornerRadius="2">
+                    <Border.Background>
+                        <LinearGradientBrush cs:Name="LinearGradientBrush_1531"
+                                             EndPoint="0.5,1"
+                                             StartPoint="0.5,0"
+                                            >
+                            <GradientStop Color="#BFA26F16"
+                                          cs:Name="GradientStop_0030"
+                                          Offset="0"
+                                          cs:Office2010Blue.Color="#BFA26F16"
+                                          cs:Office2010Silver.Color="#BFA26F16"
+                                         />
+                            <GradientStop Color="#BFA2832C"
+                                          cs:Name="GradientStop_0031"
+                                          Offset="1"
+                                          cs:Office2010Blue.Color="#BFA2832C"
+                                          cs:Office2010Silver.Color="#BFA2832C"
+                                         />
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    <Border x:Name="pressed2"
+                            CornerRadius="1"
+                            Margin="1">
+                        <Border.Background>
+                            <LinearGradientBrush cs:Name="LinearGradientBrush_1532"
+                                                 EndPoint="0.5,1"
+                                                 StartPoint="0.5,0"
+                                                >
+                                <GradientStop Color="#FFFFE575"
+                                              cs:Name="GradientStop_0032"
+                                              Offset="0"
+                                              cs:Office2010Blue.Color="#FFFFE575"
+                                              cs:Office2010Silver.Color="#FFFFE575"
+                                             />
+                                <GradientStop Color="#FFFFF37F"
+                                              cs:Name="GradientStop_0033"
+                                              Offset="1"
+                                              cs:Office2010Blue.Color="#FFFFF37F"
+                                              cs:Office2010Silver.Color="#FFFFF37F"
+                                             />
+                                <GradientStop Color="#FFFFD86C"
+                                              cs:Name="GradientStop_0034"
+                                              Offset="0.5"
+                                              cs:Office2010Blue.Color="#FFFFD86C"
+                                              cs:Office2010Silver.Color="#FFFFD86C"
+                                             />
+                            </LinearGradientBrush>
+                        </Border.Background>
+                    </Border>
+                </Border>
+            </Grid>
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="HideBorderSide">
+                    <VisualState x:Name="None"/>
+                    <VisualState x:Name="Left">
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames dxcn:ValueSetter.CornerRadius="0,2,2,0"
+                                                           Storyboard.TargetName="hover1"
+                                                           Storyboard.TargetProperty="(Border.CornerRadius)"/>
+                            <ObjectAnimationUsingKeyFrames dxcn:ValueSetter.CornerRadius="0,1,1,0"
+                                                           Storyboard.TargetName="hover2"
+                                                           Storyboard.TargetProperty="(Border.CornerRadius)"/>
+                            <ObjectAnimationUsingKeyFrames dxcn:ValueSetter.Thickness="0,1,1,1"
+                                                           Storyboard.TargetName="hover2"
+                                                           Storyboard.TargetProperty="(Border.Margin)"/>
+                            <ObjectAnimationUsingKeyFrames dxcn:ValueSetter.CornerRadius="0,2,2,0"
+                                                           Storyboard.TargetName="pressed1"
+                                                           Storyboard.TargetProperty="(Border.CornerRadius)"/>
+                            <ObjectAnimationUsingKeyFrames dxcn:ValueSetter.CornerRadius="0,1,1,0"
+                                                           Storyboard.TargetName="pressed2"
+                                                           Storyboard.TargetProperty="(Border.CornerRadius)"/>
+                            <ObjectAnimationUsingKeyFrames dxcn:ValueSetter.Thickness="0,1,1,1"
+                                                           Storyboard.TargetName="pressed2"
+                                                           Storyboard.TargetProperty="(Border.Margin)"/>
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Right">
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames dxcn:ValueSetter.CornerRadius="2,0,0,2"
+                                                           Storyboard.TargetName="hover1"
+                                                           Storyboard.TargetProperty="(Border.CornerRadius)"/>
+                            <ObjectAnimationUsingKeyFrames dxcn:ValueSetter.CornerRadius="1,0,0,1"
+                                                           Storyboard.TargetName="hover2"
+                                                           Storyboard.TargetProperty="(Border.CornerRadius)"/>
+                            <ObjectAnimationUsingKeyFrames dxcn:ValueSetter.CornerRadius="2,0,0,2"
+                                                           Storyboard.TargetName="pressed1"
+                                                           Storyboard.TargetProperty="(Border.CornerRadius)"/>
+                            <ObjectAnimationUsingKeyFrames dxcn:ValueSetter.CornerRadius="1,0,0,1"
+                                                           Storyboard.TargetName="pressed2"
+                                                           Storyboard.TargetProperty="(Border.CornerRadius)"/>
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Top">
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames dxcn:ValueSetter.CornerRadius="0,0,2,2"
+                                                           Storyboard.TargetName="hover1"
+                                                           Storyboard.TargetProperty="(Border.CornerRadius)"/>
+                            <ObjectAnimationUsingKeyFrames dxcn:ValueSetter.CornerRadius="0,0,1,1"
+                                                           Storyboard.TargetName="hover2"
+                                                           Storyboard.TargetProperty="(Border.CornerRadius)"/>
+                            <ObjectAnimationUsingKeyFrames dxcn:ValueSetter.Thickness="1,0,1,1"
+                                                           Storyboard.TargetName="hover2"
+                                                           Storyboard.TargetProperty="(Border.Margin)"/>
+                            <ObjectAnimationUsingKeyFrames dxcn:ValueSetter.CornerRadius="0,0,2,2"
+                                                           Storyboard.TargetName="pressed1"
+                                                           Storyboard.TargetProperty="(Border.CornerRadius)"/>
+                            <ObjectAnimationUsingKeyFrames dxcn:ValueSetter.CornerRadius="0,0,1,1"
+                                                           Storyboard.TargetName="pressed2"
+                                                           Storyboard.TargetProperty="(Border.CornerRadius)"/>
+                            <ObjectAnimationUsingKeyFrames dxcn:ValueSetter.Thickness="1,0,1,1"
+                                                           Storyboard.TargetName="pressed2"
+                                                           Storyboard.TargetProperty="(Border.Margin)"/>
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Bottom">
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames dxcn:ValueSetter.CornerRadius="2,2,0,0"
+                                                           Storyboard.TargetName="hover1"
+                                                           Storyboard.TargetProperty="(Border.CornerRadius)"/>
+                            <ObjectAnimationUsingKeyFrames dxcn:ValueSetter.CornerRadius="1,1,0,0"
+                                                           Storyboard.TargetName="hover2"
+                                                           Storyboard.TargetProperty="(Border.CornerRadius)"/>
+                            <ObjectAnimationUsingKeyFrames dxcn:ValueSetter.CornerRadius="2,2,0,0"
+                                                           Storyboard.TargetName="pressed1"
+                                                           Storyboard.TargetProperty="(Border.CornerRadius)"/>
+                            <ObjectAnimationUsingKeyFrames dxcn:ValueSetter.CornerRadius="1,1,0,0"
+                                                           Storyboard.TargetName="pressed2"
+                                                           Storyboard.TargetProperty="(Border.CornerRadius)"/>
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="All"/>
+                </VisualStateGroup>
+                <VisualStateGroup x:Name="ArrowHideBorderSide">
+                    <VisualState x:Name="ArrowNone"/>
+                    <VisualState x:Name="ArrowLeft"/>
+                    <VisualState x:Name="ArrowTop"/>
+                    <VisualState x:Name="ArrowRight"/>
+                    <VisualState x:Name="ArrowBottom"/>
+                    <VisualState x:Name="ArrowAll"/>
+                </VisualStateGroup>
+                <VisualStateGroup x:Name="ActiveState">
+                    <VisualState x:Name="Active"/>
+                    <VisualState x:Name="Inactive"/>
+                </VisualStateGroup>
+                <VisualStateGroup x:Name="State">
+                    <VisualState x:Name="Normal">
+                        <Storyboard>
+                            <DoubleAnimation Duration="0"
+                                             Storyboard.TargetName="DefaultState"
+                                             Storyboard.TargetProperty="Opacity"
+                                             To="1"/>
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Disabled"/>
+                    <VisualState x:Name="Hover">
+                        <Storyboard>
+                            <DoubleAnimation Duration="0"
+                                             Storyboard.TargetName="HoverState"
+                                             Storyboard.TargetProperty="Opacity"
+                                             To="1"/>
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Pressed">
+                        <Storyboard>
+                            <DoubleAnimation Duration="0"
+                                             Storyboard.TargetName="PressedState"
+                                             Storyboard.TargetProperty="Opacity"
+                                             To="1"/>
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Checked"/>
+                    <VisualState x:Name="HoverChecked"/>
+                    <VisualState x:Name="Focused"/>
+                    <VisualState x:Name="Customization">
+                        <Storyboard>
+                            <DoubleAnimation Duration="0"
+                                             Storyboard.TargetName="CustomizationState"
+                                             Storyboard.TargetProperty="Opacity"
+                                             To="1"/>
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </Grid>
+    </ControlTemplate>
+
+    <Style x:Key="{dxdv:SearchBarButtonItemLayoutPanelThemeKey ResourceKey=StyleInBar}" TargetType="{x:Type dxb:BarItemLayoutPanel}">
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="VerticalAlignment" Value="Stretch"/>
+        <Setter Property="MinWidth" Value="64"/>
+        <Setter Property="Margin" Value="4,0,2,0"/>
+        <Setter Property="BorderThemeKey" Value="{dxdv:SearchBarButtonItemItemBorderThemeKeyExtension}"/>
+        <Setter Property="FirstBorderNormalStateIsEmpty" Value="False"/>
+        <Setter Property="FirstBorderUseNormalStateOnly" Value="False"/>
+        <Setter Property="GlyphMargin" Value="0"/>
+        <Setter Property="CommonContentMargin" Value="4,0,4,0"/>
+        <Setter Property="LeftGlyphMargin" Value="0"/>
+        <Setter Property="RightGlyphMargin" Value="0"/>
+        <Setter Property="LeftCommonContentMargin" Value="0"/>
+        <Setter Property="RightCommonContentMargin" Value="0"/>
+    </Style>
+
+    <Style x:Key="{dxdv:SearchBarSubItemLayoutPanelThemeKey ResourceKey=StyleInBar}" TargetType="{x:Type dxb:BarItemLayoutPanel}">
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="VerticalAlignment" Value="Stretch"/>
+        <Setter Property="Margin" Value="0,0,2,0"/>
+        <Setter Property="MinWidth" Value="64"/>
+        <Setter Property="BorderThemeKey" Value="{dxdv:SearchBarSubItemItemBorderThemeKeyExtension}"/>
+        <Setter Property="FirstBorderNormalStateIsEmpty" Value="False"/>
+        <Setter Property="FirstBorderUseNormalStateOnly" Value="False"/>
+        <Setter Property="ContentAndGlyphMargin" Value="4"/>
+        <Setter Property="ArrowMargin" Value="0"/>
+        <Setter Property="LeftContentAndGlyphMargin" Value="4"/>
+        <Setter Property="RightContentAndGlyphMargin" Value="4"/>
+        <Setter Property="LeftArrowMargin" Value="0,1,0,0"/>
+        <Setter Property="RightArrowMargin" Value="0,1,4,0"/>
+        <Setter Property="CommonContentMargin" Value="0"/>
+        <Setter Property="ArrowThemeKey" Value="{dxbt:BarSubItemThemeKey ResourceKey=ArrowTemplate}"/>
+    </Style>
+
+    <Style x:Key="{dxdv:SearchBarStaticItemLayoutPanelThemeKey ResourceKey=StyleInBar}" TargetType="{x:Type dxb:BarItemLayoutPanel}">
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="VerticalAlignment" Value="Stretch"/>
+        <Setter Property="Margin" Value="0"/>
+        <Setter Property="BorderThemeKey" Value="{dxdv:SearchBarStaticItemItemBorderThemeKeyExtension}"/>
+        <Setter Property="FirstBorderNormalStateIsEmpty" Value="False"/>
+        <Setter Property="FirstBorderUseNormalStateOnly" Value="False"/>
+        <Setter Property="ContentAndGlyphMargin" Value="0"/>
+        <Setter Property="CommonContentMargin" Value="0,0,2,0"/>
+    </Style>
+
+</ResourceDictionary>

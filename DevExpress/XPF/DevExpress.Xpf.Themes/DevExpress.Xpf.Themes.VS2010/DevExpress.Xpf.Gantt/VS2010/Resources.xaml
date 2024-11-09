@@ -1,0 +1,204 @@
+﻿<ResourceDictionary mc:Ignorable="cs"
+                    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:cs="colorscheme_ignorable_uri"
+                    xmlns:dxdst="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys"
+                    xmlns:dxgnt="http://schemas.devexpress.com/winfx/2008/xaml/gantt/themekeys"
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.VS2010.v24.1;component/DevExpress.Xpf.Gantt/Generic/Resources.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+    <SolidColorBrush x:Key="{dxgnt:GanttControlThemeKeys ResourceKey=RowBackground}" Color="#FFFFFFFF"/>
+
+    <!-- RowSelection -->
+
+    <SolidColorBrush x:Key="{dxgnt:GanttControlThemeKeys ResourceKey=RowSelectedBackground}" Color="#FFFFE8A6"/>
+
+    <SolidColorBrush x:Key="{dxgnt:GanttControlThemeKeys ResourceKey=RowFadeSelectionBackground}"
+                     Color="#FFFFE8A6"
+                     Opacity="0.5"/>
+
+    <!-- Ruler -->
+
+    <SolidColorBrush x:Key="{dxgnt:TimescaleThemeKeys ResourceKey=TickBrush}" Color="#FFAEB7C9"/>
+
+    <SolidColorBrush x:Key="{dxgnt:TimescaleThemeKeys ResourceKey=BorderBrush}" Color="#FFAEB7C9"/>
+
+    <!-- Task -->
+
+    <SolidColorBrush x:Key="{dxgnt:GanttItemsThemeKeys ResourceKey=TaskBrush}" Color="#FFBCC7D8"/>
+
+    <LinearGradientBrush x:Key="{dxgnt:GanttItemsThemeKeys ResourceKey=TaskProgressBrush}"
+                         EndPoint="0.5,1"
+                         StartPoint="0.5,0">
+        <GradientStop Color="#FF447BC0"
+                      Offset="0"
+                      cs:id="GradientStop_0000"/>
+        <GradientStop Color="#FF2E5890"
+                      Offset="1"
+                      cs:id="GradientStop_0001"/>
+    </LinearGradientBrush>
+
+    <SolidColorBrush x:Key="{dxgnt:GanttItemsThemeKeys ResourceKey=TaskCriticalPathBrush}" Color="#7FCC0000"/>
+
+    <SolidColorBrush x:Key="{dxgnt:GanttItemsThemeKeys ResourceKey=TaskCriticalPathProgressBrush}" Color="#FFCC0000"/>
+
+    <SolidColorBrush x:Key="{dxgnt:GanttItemsThemeKeys ResourceKey=TaskForeground}" Color="#FF201F35"/>
+
+    <!-- SummaryTask -->
+
+    <SolidColorBrush x:Key="{dxgnt:GanttItemsThemeKeys ResourceKey=SummaryTaskBrush}" Color="#FFBCC7D8"/>
+
+    <LinearGradientBrush x:Key="{dxgnt:GanttItemsThemeKeys ResourceKey=SummaryTaskProgressBrush}"
+                         EndPoint="0.5,1"
+                         StartPoint="0.5,0">
+        <GradientStop Color="#FF447BC0"
+                      Offset="0"
+                      cs:id="GradientStop_0000"/>
+        <GradientStop Color="#FF2E5890"
+                      Offset="1"
+                      cs:id="GradientStop_0001"/>
+    </LinearGradientBrush>
+
+    <SolidColorBrush x:Key="{dxgnt:GanttItemsThemeKeys ResourceKey=SummaryTaskForeground}" Color="#FF201F35"/>
+
+    <SolidColorBrush x:Key="{dxgnt:GanttItemsThemeKeys ResourceKey=SummaryTaskBracketBrush}" Color="#FF201F35"/>
+
+    <!-- Milestone -->
+
+    <LinearGradientBrush x:Key="{dxgnt:GanttItemsThemeKeys ResourceKey=MilestoneBrush}"
+                         EndPoint="0.5,1"
+                         StartPoint="0.5,0">
+        <GradientStop Color="#FF447BC0"
+                      Offset="0"
+                      cs:id="GradientStop_0000"/>
+        <GradientStop Color="#FF2E5890"
+                      Offset="1"
+                      cs:id="GradientStop_0001"/>
+    </LinearGradientBrush>
+
+    <SolidColorBrush x:Key="{dxgnt:GanttItemsThemeKeys ResourceKey=MilestoneCriticalPathBrush}" Color="#FFCC0000"/>
+
+    <!-- Task Baseline -->
+
+    <SolidColorBrush x:Key="{dxgnt:GanttItemsThemeKeys ResourceKey=TaskBaselineBrush}" Color="#FFAEB7C9"/>
+
+    <SolidColorBrush x:Key="{dxgnt:GanttItemsThemeKeys ResourceKey=SummaryTaskBaselineBrush}" Color="#FFAEB7C9"/>
+
+    <!-- Milestone Baseline -->
+
+    <SolidColorBrush x:Key="{dxgnt:GanttItemsThemeKeys ResourceKey=MilestoneBaselineBrush}" Color="#FFAEB7C9"/>
+
+    <SolidColorBrush x:Key="{dxgnt:GanttItemsThemeKeys ResourceKey=MilestoneBaselineBorderBrush}" Color="#FFAEB7C9"/>
+
+    <!-- Edit Preview -->
+
+    <LinearGradientBrush x:Key="{dxgnt:GanttItemsThemeKeys ResourceKey=TaskPreviewBrush}"
+                         EndPoint="0.5,1"
+                         Opacity="0.52"
+                         StartPoint="0.5,0">
+        <GradientStop Color="#FF447BC0"
+                      Offset="0"
+                      cs:id="GradientStop_0000"/>
+        <GradientStop Color="#FF2E5890"
+                      Offset="1"
+                      cs:id="GradientStop_0001"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="{dxgnt:GanttItemsThemeKeys ResourceKey=TaskPreviewBorderBrush}"
+                         EndPoint="0.5,1"
+                         StartPoint="0.5,0">
+        <GradientStop Color="#FF447BC0"
+                      Offset="0"
+                      cs:id="GradientStop_0000"/>
+        <GradientStop Color="#FF2E5890"
+                      Offset="1"
+                      cs:id="GradientStop_0001"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="{dxgnt:GanttItemsThemeKeys ResourceKey=SummaryTaskPreviewBrush}"
+                         EndPoint="0.5,1"
+                         Opacity="0.52"
+                         StartPoint="0.5,0">
+        <GradientStop Color="#FF447BC0"
+                      Offset="0"
+                      cs:id="GradientStop_0000"/>
+        <GradientStop Color="#FF2E5890"
+                      Offset="1"
+                      cs:id="GradientStop_0001"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="{dxgnt:GanttItemsThemeKeys ResourceKey=SummaryTaskPreviewBorderBrush}"
+                         EndPoint="0.5,1"
+                         StartPoint="0.5,0">
+        <GradientStop Color="#FF447BC0"
+                      Offset="0"
+                      cs:id="GradientStop_0000"/>
+        <GradientStop Color="#FF2E5890"
+                      Offset="1"
+                      cs:id="GradientStop_0001"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="{dxgnt:GanttItemsThemeKeys ResourceKey=MilestonePreviewBrush}"
+                         EndPoint="0.5,1"
+                         Opacity="0.52"
+                         StartPoint="0.5,0">
+        <GradientStop Color="#FF447BC0"
+                      Offset="0"
+                      cs:id="GradientStop_0000"/>
+        <GradientStop Color="#FF2E5890"
+                      Offset="1"
+                      cs:id="GradientStop_0001"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="{dxgnt:GanttItemsThemeKeys ResourceKey=MilestonePreviewBorderBrush}"
+                         EndPoint="0.5,1"
+                         StartPoint="0.5,0">
+        <GradientStop Color="#FF447BC0"
+                      Offset="0"
+                      cs:id="GradientStop_0000"/>
+        <GradientStop Color="#FF2E5890"
+                      Offset="1"
+                      cs:id="GradientStop_0001"/>
+    </LinearGradientBrush>
+
+    <!-- Splitter -->
+
+    <SolidColorBrush x:Key="{dxgnt:GanttControlThemeKeys ResourceKey=SplitterBorderBrush}" Color="#FFAEB7C9"/>
+
+    <SolidColorBrush x:Key="{dxgnt:GanttControlThemeKeys ResourceKey=SplitterBackground}" Color="#FFEDF0F3"/>
+
+    <!-- Other -->
+
+    <SolidColorBrush x:Key="{dxgnt:GanttItemsThemeKeys ResourceKey=ConnectorStroke}" Color="#FF447BC0"/>
+
+    <SolidColorBrush x:Key="{dxgnt:GanttItemsThemeKeys ResourceKey=ConnectorHighlightedShadowBrush}" Color="#42447BC0"/>
+
+    <SolidColorBrush x:Key="{dxgnt:GanttItemsThemeKeys ResourceKey=InvalidConnectorStroke}" Color="#FFFF0000"/>
+
+    <SolidColorBrush x:Key="{dxgnt:GanttItemsThemeKeys ResourceKey=InvalidConnectorHighlightedShadowBrush}" Color="#30FF0000"/>
+
+    <SolidColorBrush x:Key="{dxgnt:GanttItemsThemeKeys ResourceKey=ConnectorCriticalPathStroke}" Color="#FFCC0000"/>
+
+    <SolidColorBrush x:Key="{dxgnt:GanttItemsThemeKeys ResourceKey=CriticalPathConnectorHighlightedShadowBrush}" Color="#42CC0000"/>
+
+    <SolidColorBrush x:Key="{dxgnt:GanttItemsThemeKeys ResourceKey=NonWorkingTimeBrush}"
+                     Color="#FFAEB7C9"
+                     Opacity="0.25"/>
+
+    <SolidColorBrush x:Key="{dxgnt:GanttItemsThemeKeys ResourceKey=GroupHighlightBrush}"
+                     Color="Transparent"
+                     Opacity="0.16"/>
+
+    <sys:Double x:Key="{dxgnt:GanttControlThemeKeys ResourceKey=RowIndent}">12</sys:Double>
+
+    <SolidColorBrush x:Key="{dxgnt:GanttControlThemeKeys ResourceKey=StripLineBackground}"
+                     Color="#FF6C9D87"
+                     Opacity=".25"/>
+
+    <SolidColorBrush x:Key="{dxgnt:GanttControlThemeKeys ResourceKey=CurrentDateTimeStripLineBackground}" Color="#FFBA7975"/>
+
+</ResourceDictionary>

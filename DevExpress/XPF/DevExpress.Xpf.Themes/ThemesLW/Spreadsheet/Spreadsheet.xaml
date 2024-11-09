@@ -1,0 +1,657 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:dxi="http://schemas.devexpress.com/winfx/2008/xaml/core/internal"
+    xmlns:dxt="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys"
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+    xmlns:dxspst="http://schemas.devexpress.com/winfx/2008/xaml/spreadsheet/themekeys"
+    xmlns:cs="colorscheme_ignorable_uri"
+    xmlns:dxsps="http://schemas.devexpress.com/winfx/2008/xaml/spreadsheet"
+    xmlns:dxspsi="http://schemas.devexpress.com/winfx/2008/xaml/spreadsheet/internal"
+    xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
+    mc:Ignorable="cs">
+
+    <ResourceDictionary.MergedDictionaries>
+        <dxi:ThemeResourceDictionary Path="Spreadsheet/_{ThemeCategory}.xaml" />
+        <dxi:ThemeResourceDictionary Path="Spreadsheet/Generic.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <dx:BoolToVisibilityInverseConverter x:Key="BoolToVisibilityInverseConverter" />
+
+    <!--#region c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Spreadsheet\Base\UICustom.xaml-->
+    <!-- General -->
+    <!--#endregion c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Spreadsheet\Base\UICustom.xaml-->
+
+    <!--#region c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Spreadsheet\Base\UIPreset.xaml-->
+    <Thickness x:Key="{dxspst:LWKey Spreadsheet.SpreadsheetBorderThickness}">1</Thickness>
+    <sys:Double x:Key="{dxspst:LWKey Spreadsheet.FormulaBarControlMinHeight}">22</sys:Double>
+    <sys:Double x:Key="{dxspst:LWKey Spreadsheet.GroupDotThickness}">2</sys:Double>
+    <sys:Double x:Key="{dxspst:LWKey Spreadsheet.GroupLineThickness}">2</sys:Double>
+    <sys:Double x:Key="{dxspst:LWKey Spreadsheet.CommentLineWidth}">1</sys:Double>
+
+
+    <!-- Converters -->
+
+    <!-- General -->
+
+    <!-- FormulaBar -->
+
+    <!-- Group -->
+
+    <!-- Comment -->
+    <!--#endregion c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Spreadsheet\Base\UIPreset.xaml-->
+
+    <!--#region c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Spreadsheet\Base\UICore.xaml-->
+    <sys:Double x:Key="{dxspst:LWKey Spreadsheet.TableStyleGalleryBarItemHeight}">56</sys:Double>
+    <sys:Double x:Key="{dxspst:LWKey Spreadsheet.ChartLayoutGalleryBarItemHeight}">66</sys:Double>
+    <sys:Double x:Key="{dxspst:LWKey Spreadsheet.ChartStyleGalleryBarItemHeight}">66</sys:Double>
+
+
+    <!-- Comment -->
+
+    <!-- General -->
+
+    <!-- FormulaBar -->
+
+    <!-- Group -->
+
+    <!-- ReferenceEdit -->
+    <!--#endregion c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Spreadsheet\Base\UICore.xaml-->
+
+    <!--#region c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Spreadsheet\Base\FormulaBar\FormulaBarControl.xaml-->
+    <!-- General -->
+
+    <!--#endregion c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Spreadsheet\Base\FormulaBar\FormulaBarControl.xaml-->
+
+    <!--#region c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Spreadsheet\Base\FormulaBar\FormulaBarThumb.xaml-->
+    <!-- General -->
+
+    <Style x:Key="{dxspst:LWKey Spreadsheet.FormulaBarHorizontalThumbStyle}" TargetType="{x:Type Thumb}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Thumb}">
+                    <Grid Background="Transparent" Cursor="SizeNS" Height="3" />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="dx:ThemeManager.IsTouchEnabled" Value="True">
+                <Setter Property="MinHeight" Value="44" />
+                <Setter Property="MinWidth" Value="44" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="{dxspst:LWKey Spreadsheet.FormulaBarVerticalThumbStyle}" TargetType="{x:Type Thumb}">
+        <Setter Property="Cursor" Value="SizeWE" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Thumb}">
+                    <Grid Background="Transparent">
+                        <Path Fill="{dx:LWBrush 'Brush.Foreground, Office2019Black=Brush.ControlLight.Foreground, Win11=Brush.Foreground.Primary'}" Style="{StaticResource UIShape.SizeGrip.Vertical}" />
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="dx:ThemeManager.IsTouchEnabled" Value="True">
+                <Setter Property="MinHeight" Value="44" />
+                <Setter Property="MinWidth" Value="44" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <!--#endregion c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Spreadsheet\Base\FormulaBar\FormulaBarThumb.xaml-->
+
+    <!--#region c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Spreadsheet\Base\FormulaBar\FormulaBarButtons.xaml-->
+    <!-- General -->
+
+    <Style x:Key="{dxspst:LWKey Spreadsheet.FormulaBarCancelButtonStyle}" TargetType="{x:Type Button}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid x:Name="Root" MinHeight="22" MinWidth="22">
+                        <dx:DXBorder
+                            x:Name="IsDefault"
+                            Background="Transparent"
+                            CornerRadius="{dx:LWCornerRadius '0, Win11=4'}"
+                            Margin="{dx:LWThickness '0, Win11=1'}" />
+                        <Path x:Name="Content" Style="{StaticResource UIShape.Editor.Cancel}" />
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Fill" TargetName="Content" Value="{dx:LWBrush 'Brush.HoverForeground, Office2019Black=Brush.ControlLight.Foreground, VS2019Dark=Brush.Focused, Win11=Brush.Foreground.Primary'}" />
+                            <Setter Property="Background" TargetName="IsDefault" Value="{dx:LWBrush 'Brush.HoverBackground, Office2019Black=Brush.ControlLight.HoverBackground, Win11=Brush.ListItem.HoverBackground'}" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Fill" TargetName="Content" Value="{dx:LWBrush 'Brush.SelectionForeground, Office2019Black=Brush.ControlLight.Foreground, VS2019Dark=Brush.Backstage.Focused, Win11=Brush.Foreground.Primary'}" />
+                            <Setter Property="Background" TargetName="IsDefault" Value="{dx:LWBrush 'Brush.SelectionBackground, Office2019Black=Brush.ControlLight.SelectionBackground, Win11=Brush.ListItem.SelectionBackground'}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Opacity" TargetName="Root" Value="0.38" />
+                        </Trigger>
+                        <Trigger Property="dx:ThemeManager.IsTouchEnabled" Value="True">
+                            <Setter Property="MinHeight" TargetName="Root" Value="44" />
+                            <Setter Property="MinWidth" TargetName="Root" Value="44" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="{dxspst:LWKey Spreadsheet.FormulaBarOkButtonStyle}" TargetType="{x:Type Button}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid x:Name="Root" MinHeight="22" MinWidth="22">
+                        <dx:DXBorder
+                            x:Name="IsDefault"
+                            Background="Transparent"
+                            CornerRadius="{dx:LWCornerRadius '0, Win11=4'}"
+                            Margin="{dx:LWThickness '0, Win11=1'}" />
+                        <Path x:Name="Content" Style="{StaticResource UIShape.Editor.Apply}" />
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Fill" TargetName="Content" Value="{dx:LWBrush 'Brush.HoverForeground, Office2019Black=Brush.ControlLight.Foreground, VS2019Dark=Brush.Focused, Win11=Brush.Foreground.Primary'}" />
+                            <Setter Property="Background" TargetName="IsDefault" Value="{dx:LWBrush 'Brush.HoverBackground, Office2019Black=Brush.ControlLight.HoverBackground, Win11=Brush.Button.HoverBackground'}" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Fill" TargetName="Content" Value="{dx:LWBrush 'Brush.SelectionForeground, Office2019Black=Brush.ControlLight.Foreground, VS2019Dark=Brush.Backstage.Focused, Win11=Brush.Foreground.Muted'}" />
+                            <Setter Property="Background" TargetName="IsDefault" Value="{dx:LWBrush 'Brush.SelectionBackground, Office2019Black=Brush.ControlLight.SelectionBackground, Win11=Brush.Button.PressedBackground'}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Opacity" TargetName="Root" Value="0.38" />
+                        </Trigger>
+                        <Trigger Property="dx:ThemeManager.IsTouchEnabled" Value="True">
+                            <Setter Property="MinHeight" TargetName="Root" Value="44" />
+                            <Setter Property="MinWidth" TargetName="Root" Value="44" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="{dxspst:LWKey Spreadsheet.FormulaBarFunctionButtonStyle}" TargetType="{x:Type Button}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid x:Name="Root" MinHeight="22" MinWidth="22">
+                        <dx:DXBorder
+                            x:Name="IsDefault"
+                            Background="Transparent"
+                            CornerRadius="{dx:LWCornerRadius '0, Win11=4'}"
+                            Margin="{dx:LWThickness '0, Win11=1'}" />
+                        <Path x:Name="Content" Style="{StaticResource UIShape.Formula}" />
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Fill" TargetName="Content" Value="{dx:LWBrush 'Brush.HoverForeground, Office2019Black=Brush.ControlLight.Foreground, VS2019Dark=Brush.Focused, Win11=Brush.Foreground.Primary'}" />
+                            <Setter Property="Background" TargetName="IsDefault" Value="{dx:LWBrush 'Brush.HoverBackground, Office2019Black=Brush.ControlLight.HoverBackground, Win11=Brush.Button.HoverBackground'}" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Fill" TargetName="Content" Value="{dx:LWBrush 'Brush.SelectionForeground, Office2019Black=Brush.ControlLight.Foreground, VS2019Dark=Brush.Backstage.Focused, Win11=Brush.Foreground.Muted'}" />
+                            <Setter Property="Background" TargetName="IsDefault" Value="{dx:LWBrush 'Brush.SelectionBackground, Office2019Black=Brush.ControlLight.SelectionBackground, Win11=Brush.Button.PressedBackground'}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Opacity" TargetName="Root" Value="0.38" />
+                        </Trigger>
+                        <Trigger Property="dx:ThemeManager.IsTouchEnabled" Value="True">
+                            <Setter Property="MinHeight" TargetName="Root" Value="44" />
+                            <Setter Property="MinWidth" TargetName="Root" Value="44" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--#endregion c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Spreadsheet\Base\FormulaBar\FormulaBarButtons.xaml-->
+
+    <!--#region c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Spreadsheet\Base\FormulaBar\FormulaBarExpandButton.xaml-->
+    <!-- General -->
+
+    <Style x:Key="{dxspst:LWKey Spreadsheet.FormulaBarExpandButtonStyle}" TargetType="{x:Type ToggleButton}">
+        <Setter Property="Focusable" Value="False" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ToggleButton}">
+                    <Grid x:Name="Root" Background="Transparent">
+                        <dx:DXBorder
+                            x:Name="IsDefault"
+                            Background="Transparent"
+                            CornerRadius="{dx:LWCornerRadius '0, Win11=4'}"
+                            Margin="{dx:LWThickness '0, Win11=(1,1,1,2)'}">
+                            <Grid Margin="{dx:LWThickness '(4,7,4,7), Win11=(6,6,6,7)'}">
+                                <Path
+                                    x:Name="Expanded"
+                                    Fill="{dx:LWBrush 'Brush.Foreground, Office2019Black=Brush.ControlLight.Foreground, Win11=Brush.Foreground.Secondary'}"
+                                    Opacity="0"
+                                    Style="{StaticResource UIShape.Up}" />
+                                <Path x:Name="Collapsed" Fill="{dx:LWBrush 'Brush.Foreground, Office2019Black=Brush.ControlLight.Foreground, Win11=Brush.Foreground.Secondary'}" Style="{StaticResource UIShape.Down}" />
+                            </Grid>
+                        </dx:DXBorder>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Fill" TargetName="Collapsed" Value="{dx:LWBrush 'Brush.Foreground, Office2019Black=Brush.ControlLight.Foreground, Win11=Brush.Foreground.Primary'}" />
+                            <Setter Property="Fill" TargetName="Expanded" Value="{dx:LWBrush 'Brush.Foreground, Office2019Black=Brush.ControlLight.Foreground, Win11=Brush.Foreground.Primary'}" />
+                            <Setter Property="Background" TargetName="IsDefault" Value="{dx:LWBrush 'Brush.HoverBackground, Office2019Black=Brush.ControlLight.HoverBackground, Win11=Brush.Button.HoverBackground'}" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Fill" TargetName="Collapsed" Value="{dx:LWBrush 'Brush.Foreground, Office2019Black=Brush.ControlLight.Foreground, Win11=Brush.Foreground.Muted'}" />
+                            <Setter Property="Fill" TargetName="Expanded" Value="{dx:LWBrush 'Brush.Foreground, Office2019Black=Brush.ControlLight.Foreground, Win11=Brush.Foreground.Muted'}" />
+                            <Setter Property="Background" TargetName="IsDefault" Value="{dx:LWBrush 'Brush.SelectionBackground, Office2019Black=Brush.ControlLight.SelectionBackground, Win11=Brush.Button.PressedBackground'}" />
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter Property="Opacity" TargetName="Collapsed" Value="0" />
+                            <Setter Property="Opacity" TargetName="Expanded" Value="1" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="dx:ThemeManager.IsTouchEnabled" Value="True">
+                <Setter Property="MinHeight" Value="44" />
+                <Setter Property="MinWidth" Value="44" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <!--#endregion c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Spreadsheet\Base\FormulaBar\FormulaBarExpandButton.xaml-->
+
+
+    <Style x:Key="{dxspst:LWKey Spreadsheet.WorksheetSelectionControlStyle}" TargetType="{x:Type dxspsi:WorksheetSelectionControl}">
+        <Setter Property="AutoFilterBackgroundBrush" Value="{DynamicResource {dxspst:LWKey Spreadsheet.AutoFilterBackgroundBrush}}" />
+        <Setter Property="Focusable" Value="False" />
+        <Setter Property="SelectionBorderBrush" Value="{dx:LWBrush 'Brush.Focused, VS2019Blue=Brush.Border, Win11=Brush.Accent'}" />
+        <Setter Property="SelectionBrush">
+            <Setter.Value>
+                <SolidColorBrush Color="{StaticResource UIBrush.Color}" Opacity="0.38" />
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- Reference Editor -->
+
+    <DataTemplate x:Key="{dxspst:LWKey Spreadsheet.ReferenceEditCollapseButtonTemplate}">
+        <Image
+            x:Name="collapse"
+            dxb:ImageColorizer.Color="{StaticResource UIColor.Spreadsheet.ReferenceEdit.Foreground}"
+            dxb:ImageColorizer.IsEnabled="True"
+            HorizontalAlignment="Center"
+            Source="/DevExpress.Xpf.Spreadsheet.v24.1;component/Images/ReferenceEdit_Collapse_16x16.png"
+            Stretch="None"
+            VerticalAlignment="Center" />
+        <DataTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="dxb:ImageColorizer.Color" TargetName="collapse" Value="{StaticResource UIColor.Spreadsheet.ReferenceEdit.HoverForeground}" />
+            </Trigger>
+        </DataTemplate.Triggers>
+    </DataTemplate>
+
+    <DataTemplate x:Key="{dxspst:LWKey Spreadsheet.ReferenceEditExpandButtonTemplate}">
+        <Image
+            x:Name="expand"
+            dxb:ImageColorizer.Color="{StaticResource UIColor.Spreadsheet.ReferenceEdit.Foreground}"
+            dxb:ImageColorizer.IsEnabled="True"
+            HorizontalAlignment="Center"
+            Source="/DevExpress.Xpf.Spreadsheet.v24.1;component/Images/ReferenceEdit_Expand_16x16.png"
+            Stretch="None"
+            VerticalAlignment="Center" />
+        <DataTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="dxb:ImageColorizer.Color" TargetName="expand" Value="{StaticResource UIColor.Spreadsheet.ReferenceEdit.HoverForeground}" />
+            </Trigger>
+        </DataTemplate.Triggers>
+    </DataTemplate>
+    <!--#endregion c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Spreadsheet\Base\Spreadsheet\SpreadsheetControl.xaml-->
+
+    <!--#region c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Spreadsheet\Base\TabSelector\TabSelectorElements.xaml-->
+    <!-- General -->
+
+    <Style x:Key="{dxspst:LWKey Spreadsheet.ResizeThumbStyle}" TargetType="{x:Type Thumb}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Thumb}">
+                    <dx:DXBorder
+                        x:Name="Root"
+                        Background="{dx:LWBrush 'Brush.Button.Background, Office2019Black=Brush.Window.Background, Office2019Colorful=Brush.Control.Background, Office2019HighContrast=Brush.Control.Background, Win11=Brush.Button.SimpleButtonBackground'}"
+                        BorderBrush="{StaticResource Brush.Border}"
+                        BorderThickness="0,1,1,0">
+                        <Path x:Name="Content" Fill="{dx:LWBrush 'Brush.Foreground, Office2019Black=Brush.ForegroundDark, Win11=Brush.Foreground.Primary'}" Style="{StaticResource UIShape.SizeGrip.Vertical}" />
+                    </dx:DXBorder>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Fill" TargetName="Content" Value="{dx:LWBrush 'Brush.HoverForeground, Office2019Black=Brush.Backstage.Foreground, VS2019Dark=Brush.Focused, Win11=Brush.Foreground.Primary'}" />
+                            <Setter Property="Background" TargetName="Root" Value="{dx:LWBrush 'Brush.HoverBackground, Win11=Brush.ListItem.HoverBackground'}" />
+                            <Setter Property="Opacity" TargetName="Root" Value="1" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Opacity" TargetName="Root" Value="0.26" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- Scroll Corner -->
+
+    <Style x:Key="{dxspst:LWKey Spreadsheet.BottomRightCornerStyle}" TargetType="{x:Type Border}">
+        <Setter Property="Background" Value="{dx:LWBrush 'Brush.Button.Background, Office2019Black=Brush.Control.Background, Office2019Colorful=Brush.Window.Background, Office2019HighContrast=Brush.Window.Background, Win11=Brush.Button.SimpleButtonBackground'}" />
+    </Style>
+    <!--#endregion c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Spreadsheet\Base\TabSelector\TabSelectorElements.xaml-->
+
+    <!--#region c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Spreadsheet\Base\TabSelector\TabSelectorButtonAdd.xaml-->
+    <!-- General -->
+
+    <Style x:Key="{dxspst:LWKey Spreadsheet.AddButtonStyle}" TargetType="{x:Type Button}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid x:Name="PART_Root" Margin="1,0,0,0">
+                        <dx:DXBorder
+                            x:Name="IsDefault"
+                            Background="{dx:LWBrush 'Brush.Button.Background, Office2019Black=Brush.Window.Background, Office2019Colorful=Brush.Control.Background, Office2019HighContrast=Brush.Control.Background, Win11=Brush.Button.SimpleButtonBackground'}"
+                            BorderBrush="{StaticResource Brush.Border}"
+                            BorderThickness="0,1,0,0">
+                            <Path
+                                x:Name="Shape"
+                                Fill="{dx:LWBrush 'Brush.Foreground, Office2019Black=Brush.ForegroundDark, Win11=Brush.Foreground.Primary'}"
+                                Margin="12,0,12,0"
+                                Style="{StaticResource UIShape.Navigation.Plus}" />
+                        </dx:DXBorder>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" TargetName="IsDefault" Value="{dx:LWBrush 'Brush.HoverBackground, Win11=Brush.ListItem.HoverBackground'}" />
+                            <Setter Property="Fill" TargetName="Shape" Value="{dx:LWBrush 'Brush.HoverForeground, Office2019Black=Brush.Foreground, VS2019Dark=Brush.Focused, Win11=Brush.Foreground.Primary'}" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" TargetName="IsDefault" Value="{dx:LWBrush 'Brush.SelectionBackground, Win11=Brush.ListItem.SelectionBackground'}" />
+                            <Setter Property="Fill" TargetName="Shape" Value="{dx:LWBrush 'Brush.SelectionForeground, Office2019Black=Brush.Foreground, VS2019Dark=Brush.Backstage.Focused, Win11=Brush.Foreground.Primary'}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Opacity" TargetName="Shape" Value="0.38" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="dx:ThemeManager.IsTouchEnabled" Value="True">
+                <Setter Property="MinHeight" Value="44" />
+                <Setter Property="MinWidth" Value="44" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <!--#endregion c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Spreadsheet\Base\TabSelector\TabSelectorButtonAdd.xaml-->
+
+    <!--#region c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Spreadsheet\Base\TabSelector\TabSelectorItem.xaml-->
+    <!-- General -->
+
+    <ControlTemplate x:Key="{dxspst:LWKey Spreadsheet.TabSelectorItemTemplate}" TargetType="{x:Type dxspsi:TabSelectorItem}">
+        <Grid x:Name="PART_Root" Margin="0,0,-1,0">
+            <dx:DXBorder
+                x:Name="IsDefault"
+                Background="{dx:LWBrush 'Brush.Button.Background, Office2019Black=Brush.Window.Background, Office2019Colorful=Brush.Control.Background, Office2019HighContrast=Brush.Control.Background, Win11=Brush.Button.SimpleButtonBackground'}"
+                BorderBrush="{StaticResource Brush.Border}"
+                BorderThickness="0,1,0,0" />
+            <TextBlock
+                x:Name="Content"
+                Focusable="False"
+                Foreground="{dx:LWBrush 'Brush.Foreground, Office2019Black=Brush.ForegroundDark, Win11=Brush.Foreground.Primary'}"
+                Margin="12,0,12,0"
+                Text="{TemplateBinding Text}"
+                TextAlignment="Center"
+                VerticalAlignment="Center" />
+        </Grid>
+        <ControlTemplate.Triggers>
+            <Trigger Property="State" Value="Normal">
+                <Setter Property="Margin" TargetName="IsDefault" Value="1,0,0,0" />
+            </Trigger>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Foreground" TargetName="Content" Value="{dx:LWBrush 'Brush.HoverForeground, Win11=Brush.Foreground.Primary'}" />
+                <Setter Property="Background" TargetName="IsDefault" Value="{dx:LWBrush 'Brush.HoverBackground, Win11=Brush.ListItem.HoverBackground'}" />
+                <Setter Property="BorderBrush" TargetName="IsDefault" Value="{StaticResource Brush.Border}" />
+                <Setter Property="BorderThickness" TargetName="IsDefault" Value="0,1,0,0" />
+                <Setter Property="Margin" TargetName="IsDefault" Value="1,0,0,0" />
+            </Trigger>
+            <Trigger Property="State" Value="Selected">
+                <Setter Property="Foreground" TargetName="Content" Value="{dx:LWBrush 'Brush.SelectionForeground, Win11=Brush.Foreground.Primary'}" />
+                <Setter Property="Background" TargetName="IsDefault" Value="{dx:LWBrush 'Brush.Editor.Background, VS2019Dark=Brush.HoverBackground'}" />
+                <Setter Property="BorderBrush" TargetName="IsDefault" Value="{StaticResource Brush.Border}" />
+                <Setter Property="BorderThickness" TargetName="IsDefault" Value="1,1,1,0" />
+            </Trigger>
+            <Trigger Property="State" Value="Active">
+                <Setter Property="Foreground" TargetName="Content" Value="{dx:LWBrush 'Brush.Foreground, Office2019Black=Brush.ControlLight.Foreground, Office2019Colorful=Brush.Focused, Office2019HighContrast=Brush.Focused, Win11=Brush.Foreground.Primary'}" />
+                <Setter Property="Background" TargetName="IsDefault" Value="{StaticResource Brush.Editor.Background}" />
+                <Setter Property="BorderBrush" TargetName="IsDefault" Value="{StaticResource Brush.Border}" />
+                <Setter Property="BorderThickness" TargetName="IsDefault" Value="1,0,1,0" />
+            </Trigger>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="IsMouseOver" Value="True" />
+                    <Condition Property="State" Value="Selected" />
+                </MultiTrigger.Conditions>
+                <Setter Property="Margin" TargetName="IsDefault" Value="0" />
+            </MultiTrigger>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="IsMouseOver" Value="True" />
+                    <Condition Property="State" Value="Active" />
+                </MultiTrigger.Conditions>
+                <Setter Property="Margin" TargetName="IsDefault" Value="0" />
+            </MultiTrigger>
+            <Trigger Property="dx:ThemeManager.IsTouchEnabled" Value="True">
+                <Setter Property="Margin" TargetName="Content" Value="14" />
+                <Setter Property="MinHeight" TargetName="PART_Root" Value="44" />
+                <Setter Property="MinWidth" TargetName="PART_Root" Value="44" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <!--#endregion c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Spreadsheet\Base\TabSelector\TabSelectorItem.xaml-->
+
+    <!--#region c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Spreadsheet\Base\TabSelector\TabSelectorPanel.xaml-->
+    <!-- General -->
+
+    <Style x:Key="{dxspst:LWKey Spreadsheet.TabSelectorPanelStyle}" TargetType="{x:Type Border}">
+        <Setter Property="Background" Value="{dx:LWBrush 'Brush.Button.Background, Office2019Black=Brush.Window.Background, Office2019Colorful=Brush.Control.Background, Office2019HighContrast=Brush.Control.Background, Win11=Brush.Button.SimpleButtonBackground'}" />
+        <Setter Property="BorderBrush" Value="{StaticResource Brush.Border}" />
+        <Setter Property="BorderThickness" Value="0,1,0,0" />
+        <Style.Triggers>
+            <Trigger Property="dx:ThemeManager.IsTouchEnabled" Value="True">
+                <Setter Property="MinHeight" Value="44" />
+                <Setter Property="MinWidth" Value="44" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <!--#endregion c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Spreadsheet\Base\TabSelector\TabSelectorPanel.xaml-->
+
+    <!--#region c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Spreadsheet\Base\Spreadsheet\SpreadsheetComment.xaml-->
+    <!-- General -->
+
+    <ControlTemplate x:Key="{dxspst:LWKey Spreadsheet.CommentTemplate}" TargetType="{x:Type dxspsi:CommentItem}">
+        <dx:DXBorder Background="{TemplateBinding Background}" BorderBrush="{DynamicResource {dxspst:LWKey Spreadsheet.CommentLineBrush}}" BorderThickness="1">
+            <TextBox
+                x:Name="PART_CommentBox"
+                AcceptsReturn="True"
+                Background="{TemplateBinding Background}"
+                BorderThickness="0"
+                Cursor="{TemplateBinding Cursor}"
+                Focusable="{TemplateBinding Focusable}"
+                FontFamily="{Binding TextSettings.FontFamily, RelativeSource={RelativeSource TemplatedParent}}"
+                FontSize="{Binding TextSettings.FontSize, RelativeSource={RelativeSource TemplatedParent}}"
+                FontStyle="{Binding TextSettings.FontStyle, RelativeSource={RelativeSource TemplatedParent}}"
+                FontWeight="{Binding TextSettings.FontWeight, RelativeSource={RelativeSource TemplatedParent}}"
+                Foreground="{Binding TextSettings.Foreground, RelativeSource={RelativeSource TemplatedParent}}"
+                IsReadOnly="{TemplateBinding IsReadOnly}"
+                Text="{TemplateBinding Text}"
+                TextWrapping="{Binding TextSettings.TextWrapping, RelativeSource={RelativeSource TemplatedParent}}"
+                dx:LightweightThemeManager.AllowStandardControlsTheming="False"/>
+        </dx:DXBorder>
+    </ControlTemplate>
+    <!--#endregion c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Spreadsheet\Base\Spreadsheet\SpreadsheetComment.xaml-->
+
+    <!--#region c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Spreadsheet\Base\FormulaBar.xaml-->
+    <!-- General -->
+    <!--#endregion c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Spreadsheet\Base\FormulaBar.xaml-->
+
+    <!--#region c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Spreadsheet\Base\Spreadsheet\SpreadsheetGroup.xaml-->
+    <!-- General -->
+
+    <ControlTemplate x:Key="{dxspst:LWKey Spreadsheet.GroupButtonTemplate}" TargetType="{x:Type dxspsi:GroupItem}">
+        <dx:DXBorder
+            x:Name="IsDefault"
+            Background="{dx:LWBrush 'Brush.Window.Background, Win11=Brush.WindowBackground'}"
+            BorderBrush="{StaticResource Brush.Border}"
+            BorderThickness="1"
+            Margin="0,0,1,1">
+            <Grid>
+                <Path x:Name="CollapseShape" Style="{StaticResource UIShape.SmallPlus}" Visibility="Hidden" />
+                <Path x:Name="ExpandShape" Style="{StaticResource UIShape.SmallMinus}" Visibility="Hidden" />
+            </Grid>
+        </dx:DXBorder>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" TargetName="IsDefault" Value="{dx:LWBrush 'Brush.HoverBackground, Win11=Brush.ListItem.HoverBackground'}" />
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True">
+                <Setter Property="Background" TargetName="IsDefault" Value="{dx:LWBrush 'Brush.SelectionBackground, Win11=Brush.ListItem.SelectionBackground'}" />
+            </Trigger>
+            <Trigger Property="IsExpanded" Value="True">
+                <Setter Property="Visibility" TargetName="ExpandShape" Value="Visible" />
+            </Trigger>
+            <Trigger Property="IsCollapsed" Value="True">
+                <Setter Property="Visibility" TargetName="CollapseShape" Value="Visible" />
+            </Trigger>
+            <Trigger Property="dx:ThemeManager.IsTouchEnabled" Value="True">
+                <Setter Property="MinHeight" Value="44" />
+                <Setter Property="MinWidth" Value="44" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <!-- Header -->
+
+    <ControlTemplate x:Key="{dxspst:LWKey Spreadsheet.GroupHeaderTemplate}" TargetType="{x:Type dxspsi:GroupItem}">
+        <dx:DXBorder
+            x:Name="IsDefault"
+            Background="{dx:LWBrush 'Brush.Window.Background, Win11=Brush.WindowBackground'}"
+            BorderBrush="{StaticResource Brush.Border}"
+            BorderThickness="1">
+            <TextBlock
+                HorizontalAlignment="Center"
+                Text="{TemplateBinding Text}"
+                FontSize="{TemplateBinding FontHeight}"
+                TextAlignment="Center"
+                VerticalAlignment="Center" />
+        </dx:DXBorder>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" TargetName="IsDefault" Value="{dx:LWBrush 'Brush.HoverBackground, Win11=Brush.ListItem.HoverBackground'}" />
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True">
+                <Setter Property="Background" TargetName="IsDefault" Value="{dx:LWBrush 'Brush.SelectionBackground, Win11=Brush.ListItem.SelectionBackground'}" />
+            </Trigger>
+            <Trigger Property="dx:ThemeManager.IsTouchEnabled" Value="True">
+                <Setter Property="MinHeight" Value="44" />
+                <Setter Property="MinWidth" Value="44" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+    <!--#endregion c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Spreadsheet\Base\Spreadsheet\SpreadsheetGroup.xaml-->
+
+    <!--#region c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Spreadsheet\Base\Spreadsheet\SpreadsheetHeaderItem.xaml-->
+    <!-- General -->
+
+    <ControlTemplate x:Key="{dxspst:LWKey Spreadsheet.HeadersControlTemplate}" TargetType="{x:Type dxspsi:WorksheetHeadersControl}">
+        <dxspsi:HeadersPanel LayoutInfo="{Binding Path=(dxspsi:SpreadsheetViewControl.ActiveSpreadsheetView).LayoutInfo, RelativeSource={RelativeSource Self}}" Orientation="{TemplateBinding Orientation}" />
+    </ControlTemplate>
+
+    <!-- Corner -->
+
+    <Style x:Key="{dxspst:LWKey Spreadsheet.TopLeftCornerStyle}" TargetType="{x:Type Border}">
+        <Setter Property="Background" Value="{dx:LWBrush 'Brush.Button.Background, Office2019Black=Brush.Control.Background, Office2019Colorful=Brush.Control.Background, Office2019HighContrast=Brush.Control.Background, Win11=Brush.Button.SimpleButtonBackground'}" />
+        <Setter Property="BorderBrush" Value="{StaticResource Brush.Border}" />
+        <Setter Property="BorderThickness" Value="0,0,1,1" />
+        <Style.Triggers>
+            <Trigger Property="dx:ThemeManager.IsTouchEnabled" Value="True">
+                <Setter Property="MinHeight" Value="44" />
+                <Setter Property="MinWidth" Value="44" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <!--#endregion c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Spreadsheet\Base\Spreadsheet\SpreadsheetHeaderItem.xaml-->
+
+    <!--#region c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Spreadsheet\Base\Spreadsheet.xaml-->
+    <!-- General -->
+    <!--#endregion c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Spreadsheet\Base\Spreadsheet.xaml-->
+
+    <!--#region c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Spreadsheet\Base\TabSelector.xaml-->
+    <!-- General -->
+    <!--#endregion c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Spreadsheet\Base\TabSelector.xaml-->
+
+    <!--#region c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Spreadsheet\Base.xaml-->
+    <!-- General -->
+    <!--#endregion c:\work\2023.1\XPF\DevExpress.Xpf.Themes\Base\Spreadsheet\Base.xaml-->
+
+    <!--#region DEFAULT STYLES-->
+    <Style x:Key="FormulaBarEditor.DefaultStyle" TargetType="{x:Type dxspsi:FormulaBarEditor}">
+        <Setter Property="Background" Value="{StaticResource Brush.Editor.Background}" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type dxspsi:FormulaBarEditor}">
+                    <Grid x:Name="RootElement" Background="{TemplateBinding Background}" Margin="{TemplateBinding Margin}">
+                        <Grid>
+                            <dx:DXBorder x:Name="Focus" BorderThickness="0" Opacity="0" />
+                            <dx:DXBorder BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                                <ScrollViewer
+                                    x:Name="PART_ContentHost"
+                                    Background="{TemplateBinding Background}"
+                                    Foreground="{TemplateBinding Foreground}"
+                                    IsTabStop="False"
+                                    Padding="{TemplateBinding Padding}"
+                                    VerticalContentAlignment="Center" />
+                            </dx:DXBorder>
+                        </Grid>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="TextWrapping" Value="Wrap" />
+        <Style.Triggers>
+            <Trigger Property="dx:ThemeManager.IsTouchEnabled" Value="True">
+                <Setter Property="Margin" Value="14" />
+                <Setter Property="MinHeight" Value="44" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <Style x:Key="XpfCellInplaceEditor.DefaultStyle" BasedOn="{StaticResource {x:Type TextBox}}" TargetType="{x:Type dxspsi:XpfCellInplaceEditor}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type dxspsi:XpfCellInplaceEditor}">
+                    <Grid x:Name="Root" Background="{TemplateBinding Background}" Margin="{TemplateBinding Margin}">
+                        <dx:DXBorder BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                            <ScrollViewer
+                                x:Name="PART_ContentHost"
+                                Background="{TemplateBinding Background}"
+                                Foreground="{TemplateBinding Foreground}"
+                                IsTabStop="False"
+                                Padding="{TemplateBinding Padding}"
+                                VerticalContentAlignment="Center" />
+                        </dx:DXBorder>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Visibility" Value="Hidden" />
+    </Style>
+    <!--#endregion DEFAULT STYLES-->
+
+</ResourceDictionary>

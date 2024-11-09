@@ -1,0 +1,454 @@
+﻿<ResourceDictionary mc:Ignorable="cs"
+                    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:cs="colorscheme_ignorable_uri"
+                    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+                    xmlns:dxcn="http://schemas.devexpress.com/winfx/2008/xaml/core/internal"
+                    xmlns:dxdst="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys"
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    xmlns:s="clr-namespace:System;assembly=mscorlib"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.MetropolisDark.v24.1;component/DevExpress.Xpf.Core/DevExpress.Xpf.Core/Themes/StandardControls/Brushes.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.MetropolisDark.v24.1;component/DevExpress.Xpf.Core/DevExpress.Xpf.Core/Themes/StandardControls/SharedResources.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+    <s:Double x:Key="{dxdst:DropDownButtonThemeKey ResourceKey=ButtonOpacity}">0.5</s:Double>
+
+    <Visibility x:Key="Visible">Visible</Visibility>
+
+    <Visibility x:Key="Collapsed">Collapsed</Visibility>
+
+    <SolidColorBrush x:Key="buttonFocusBorder"
+                     Color="#FFF78A09"
+                     cs:Name="SolidColorBrush_0001"
+                     cs:MetropolisLight.Color="#FFF78A09"/>
+
+    <SolidColorBrush x:Key="{dxdst:DropDownButtonThemeKey ResourceKey=Foreground}"
+                     Color="#BFFFFFFF"
+                     cs:Name="SolidColorBrush_0002"
+                     cs:MetropolisLight.Color="#FF373A3D"/>
+
+    <SolidColorBrush x:Key="{dxdst:DropDownButtonThemeKey ResourceKey=ArrowForeground}"
+                     Color="#BFFFFFFF"
+                     cs:Name="SolidColorBrush_0003"
+                     cs:MetropolisLight.Color="#FF373A3D"/>
+
+    <SolidColorBrush x:Key="{dxdst:DropDownButtonThemeKey ResourceKey=PressedForeground}"
+                     Color="#BFFFFFFF"
+                     cs:Name="SolidColorBrush_0004"
+                     cs:MetropolisLight.Color="#FFFFFFFF"/>
+
+    <SolidColorBrush x:Key="{dxdst:DropDownButtonThemeKey ResourceKey=CheckedForeground}"
+                     Color="#BFFFFFFF"
+                     cs:Name="SolidColorBrush_0008"
+                     cs:MetropolisLight.Color="#FFFFFFFF"/>
+
+    <SolidColorBrush x:Key="{dxdst:DropDownButtonThemeKey ResourceKey=ArrowPressedForeground}"
+                     Color="#BFFFFFFF"
+                     cs:Name="SolidColorBrush_0005"
+                     cs:MetropolisLight.Color="#FFFFFFFF"/>
+
+    <SolidColorBrush x:Key="{dxdst:DropDownButtonThemeKey ResourceKey=MouseOverForeground}"
+                     Color="#BFFFFFFF"
+                     cs:Name="SolidColorBrush_0006"
+                     cs:MetropolisLight.Color="#FFFFFFFF"/>
+
+    <SolidColorBrush x:Key="{dxdst:DropDownButtonThemeKey ResourceKey=ArrowMouseOverForeground}"
+                     Color="#BFFFFFFF"
+                     cs:Name="SolidColorBrush_0007"
+                     cs:MetropolisLight.Color="#FFFFFFFF"/>
+
+    <!-- General -->
+
+    <dxcn:RenderTemplate x:Key="{dxdst:DropDownButtonThemeKey ResourceKey=BorderTemplate}">
+        <dxcn:RenderPanel>
+            <dxcn:RenderBorder Name="Border"
+                               Background="{StaticResource Button.DefaultState.Border2}"
+                               BorderBrush="{StaticResource Button.DefaultState.Border1}"
+                               BorderThickness="1"/>
+            <dxcn:RenderBorder Name="FocusBorder"
+                               BorderBrush="{StaticResource buttonFocusBorder}"
+                               BorderThickness="1"
+                               Visibility="Collapsed"/>
+            <dxcn:RenderBorder Name="Defaulted"
+                               BorderBrush="{StaticResource buttonFocusBorder}"
+                               BorderThickness="1"
+                               Visibility="Collapsed"/>
+        </dxcn:RenderPanel>
+        <dxcn:RenderTemplate.Triggers>
+            <dxcn:RenderStateGroup Name="FocusStates">
+                <dxcn:RenderStateTrigger Name="Unfocused">
+                    <dxcn:RenderSetter Property="Visibility"
+                                       TargetName="FocusBorder"
+                                       Value="{StaticResource Collapsed}"/>
+                </dxcn:RenderStateTrigger>
+                <dxcn:RenderStateTrigger Name="Focused">
+                    <dxcn:RenderSetter Property="Visibility"
+                                       TargetName="FocusBorder"
+                                       Value="{StaticResource Visible}"/>
+                </dxcn:RenderStateTrigger>
+            </dxcn:RenderStateGroup>
+            <dxcn:RenderStateGroup Name="DefaultStates">
+                <dxcn:RenderStateTrigger Name="NotDefaulted">
+                    <dxcn:RenderSetter Property="Visibility"
+                                       TargetName="Defaulted"
+                                       Value="{StaticResource Collapsed}"/>
+                </dxcn:RenderStateTrigger>
+                <dxcn:RenderStateTrigger Name="IsDefaulted">
+                    <dxcn:RenderSetter Property="Visibility"
+                                       TargetName="Defaulted"
+                                       Value="{StaticResource Visible}"/>
+                </dxcn:RenderStateTrigger>
+            </dxcn:RenderStateGroup>
+            <dxcn:RenderStateGroup Name="VisualStates">
+                <dxcn:RenderStateTrigger Name="Normal"/>
+                <dxcn:RenderStateTrigger Name="MouseOver">
+                    <dxcn:RenderSetter Property="BorderBrush"
+                                       TargetName="Border"
+                                       Value="{StaticResource Button.HoverState.Border1}"/>
+                    <dxcn:RenderSetter Property="Background"
+                                       TargetName="Border"
+                                       Value="{StaticResource Button.HoverState.Border2}"/>
+                </dxcn:RenderStateTrigger>
+                <dxcn:RenderStateTrigger Name="Pressed">
+                    <dxcn:RenderSetter Property="BorderBrush"
+                                       TargetName="Border"
+                                       Value="{StaticResource Button.PressedState.Border1}"/>
+                    <dxcn:RenderSetter Property="Background"
+                                       TargetName="Border"
+                                       Value="{StaticResource Button.PressedState.Border2}"/>
+                </dxcn:RenderStateTrigger>
+                <dxcn:RenderStateTrigger Name="Checked">
+                    <dxcn:RenderSetter Property="BorderBrush"
+                                       TargetName="Border"
+                                       Value="{StaticResource Button.CheckedState.Border1}"/>
+                    <dxcn:RenderSetter Property="Background"
+                                       TargetName="Border"
+                                       Value="{StaticResource Button.CheckedState.Border2}"/>
+                </dxcn:RenderStateTrigger>
+            </dxcn:RenderStateGroup>
+            <dxcn:RenderStateGroup Name="PlacementStates">
+                <dxcn:RenderStateTrigger Name="Default"/>
+                <dxcn:RenderStateTrigger Name="Left">
+                    <dxcn:RenderSetter Property="BorderThickness"
+                                       TargetName="Border"
+                                       Value="1,1,0,1"/>
+                    <dxcn:RenderSetter Property="BorderThickness"
+                                       TargetName="FocusBorder"
+                                       Value="1,1,0,1"/>
+                </dxcn:RenderStateTrigger>
+                <dxcn:RenderStateTrigger Name="Right">
+                    <dxcn:RenderSetter Property="BorderThickness"
+                                       TargetName="FocusBorder"
+                                       Value="0,1,1,1"/>
+                </dxcn:RenderStateTrigger>
+                <dxcn:RenderStateTrigger Name="Top">
+                    <dxcn:RenderSetter Property="BorderThickness"
+                                       TargetName="Border"
+                                       Value="1,1,1,0"/>
+                    <dxcn:RenderSetter Property="BorderThickness"
+                                       TargetName="FocusBorder"
+                                       Value="1,1,1,0"/>
+                </dxcn:RenderStateTrigger>
+                <dxcn:RenderStateTrigger Name="Bottom">
+                    <dxcn:RenderSetter Property="BorderThickness"
+                                       TargetName="FocusBorder"
+                                       Value="1,0,1,1"/>
+                </dxcn:RenderStateTrigger>
+            </dxcn:RenderStateGroup>
+        </dxcn:RenderTemplate.Triggers>
+    </dxcn:RenderTemplate>
+
+    <!-- Content -->
+
+    <dxcn:RenderTemplate x:Key="{dxdst:DropDownButtonThemeKey ResourceKey=ContentBorderTemplate}">
+        <dxcn:RenderPanel>
+            <dxcn:RenderBorder Name="Border"
+                               Background="{StaticResource Button.DefaultState.Border2}"
+                               BorderBrush="{StaticResource Button.DefaultState.Border1}"
+                               BorderThickness="1"/>
+            <dxcn:RenderBorder Name="FocusBorder"
+                               BorderBrush="{StaticResource buttonFocusBorder}"
+                               BorderThickness="1"
+                               Visibility="Collapsed"/>
+            <dxcn:RenderBorder Name="Defaulted"
+                               BorderBrush="{StaticResource buttonFocusBorder}"
+                               BorderThickness="1"
+                               Visibility="Collapsed"/>
+        </dxcn:RenderPanel>
+        <dxcn:RenderTemplate.Triggers>
+            <dxcn:RenderStateGroup Name="FocusStates">
+                <dxcn:RenderStateTrigger Name="Unfocused">
+                    <dxcn:RenderSetter Property="Visibility"
+                                       TargetName="FocusBorder"
+                                       Value="{StaticResource Collapsed}"/>
+                </dxcn:RenderStateTrigger>
+                <dxcn:RenderStateTrigger Name="Focused">
+                    <dxcn:RenderSetter Property="Visibility"
+                                       TargetName="FocusBorder"
+                                       Value="{StaticResource Visible}"/>
+                </dxcn:RenderStateTrigger>
+            </dxcn:RenderStateGroup>
+            <dxcn:RenderStateGroup Name="DefaultStates">
+                <dxcn:RenderStateTrigger Name="NotDefaulted">
+                    <dxcn:RenderSetter Property="Visibility"
+                                       TargetName="Defaulted"
+                                       Value="{StaticResource Collapsed}"/>
+                </dxcn:RenderStateTrigger>
+                <dxcn:RenderStateTrigger Name="IsDefaulted">
+                    <dxcn:RenderSetter Property="Visibility"
+                                       TargetName="Defaulted"
+                                       Value="{StaticResource Visible}"/>
+                </dxcn:RenderStateTrigger>
+            </dxcn:RenderStateGroup>
+            <dxcn:RenderStateGroup Name="VisualStates">
+                <dxcn:RenderStateTrigger Name="Normal"/>
+                <dxcn:RenderStateTrigger Name="MouseOver">
+                    <dxcn:RenderSetter Property="BorderBrush"
+                                       TargetName="Border"
+                                       Value="{StaticResource Button.HoverState.Border1}"/>
+                    <dxcn:RenderSetter Property="Background"
+                                       TargetName="Border"
+                                       Value="{StaticResource Button.HoverState.Border2}"/>
+                </dxcn:RenderStateTrigger>
+                <dxcn:RenderStateTrigger Name="Pressed">
+                    <dxcn:RenderSetter Property="BorderBrush"
+                                       TargetName="Border"
+                                       Value="{StaticResource Button.PressedState.Border1}"/>
+                    <dxcn:RenderSetter Property="Background"
+                                       TargetName="Border"
+                                       Value="{StaticResource Button.PressedState.Border2}"/>
+                </dxcn:RenderStateTrigger>
+                <dxcn:RenderStateTrigger Name="Checked">
+                    <dxcn:RenderSetter Property="BorderBrush"
+                                       TargetName="Border"
+                                       Value="{StaticResource Button.CheckedState.Border1}"/>
+                    <dxcn:RenderSetter Property="Background"
+                                       TargetName="Border"
+                                       Value="{StaticResource Button.CheckedState.Border2}"/>
+                </dxcn:RenderStateTrigger>
+            </dxcn:RenderStateGroup>
+            <dxcn:RenderStateGroup Name="PlacementStates">
+                <dxcn:RenderStateTrigger Name="Default"/>
+                <dxcn:RenderStateTrigger Name="Left">
+                    <dxcn:RenderSetter Property="BorderThickness"
+                                       TargetName="Border"
+                                       Value="1,1,0,1"/>
+                    <dxcn:RenderSetter Property="BorderThickness"
+                                       TargetName="FocusBorder"
+                                       Value="1,1,0,1"/>
+                </dxcn:RenderStateTrigger>
+                <dxcn:RenderStateTrigger Name="Right">
+                    <dxcn:RenderSetter Property="BorderThickness"
+                                       TargetName="FocusBorder"
+                                       Value="0,1,1,1"/>
+                </dxcn:RenderStateTrigger>
+                <dxcn:RenderStateTrigger Name="Top">
+                    <dxcn:RenderSetter Property="BorderThickness"
+                                       TargetName="Border"
+                                       Value="1,1,1,0"/>
+                    <dxcn:RenderSetter Property="BorderThickness"
+                                       TargetName="FocusBorder"
+                                       Value="1,1,1,0"/>
+                </dxcn:RenderStateTrigger>
+                <dxcn:RenderStateTrigger Name="Bottom">
+                    <dxcn:RenderSetter Property="BorderThickness"
+                                       TargetName="FocusBorder"
+                                       Value="1,0,1,1"/>
+                </dxcn:RenderStateTrigger>
+            </dxcn:RenderStateGroup>
+        </dxcn:RenderTemplate.Triggers>
+    </dxcn:RenderTemplate>
+
+    <!-- Arrow -->
+
+    <dxcn:RenderTemplate x:Key="{dxdst:DropDownButtonThemeKey ResourceKey=ArrowBorderTemplate}">
+        <dxcn:RenderPanel>
+            <dxcn:RenderBorder Name="Border"
+                               Background="{StaticResource Button.DefaultState.Border2}"
+                               BorderBrush="{StaticResource Button.DefaultState.Border1}"
+                               BorderThickness="1"/>
+            <dxcn:RenderBorder Name="FocusBorder"
+                               BorderBrush="{StaticResource buttonFocusBorder}"
+                               BorderThickness="1"
+                               Visibility="Collapsed"/>
+            <dxcn:RenderBorder Name="Defaulted"
+                               BorderBrush="{StaticResource buttonFocusBorder}"
+                               BorderThickness="1"
+                               Visibility="Collapsed"/>
+        </dxcn:RenderPanel>
+        <dxcn:RenderTemplate.Triggers>
+            <dxcn:RenderStateGroup Name="FocusStates">
+                <dxcn:RenderStateTrigger Name="Unfocused">
+                    <dxcn:RenderSetter Property="Visibility"
+                                       TargetName="FocusBorder"
+                                       Value="{StaticResource Collapsed}"/>
+                </dxcn:RenderStateTrigger>
+                <dxcn:RenderStateTrigger Name="Focused">
+                    <dxcn:RenderSetter Property="Visibility"
+                                       TargetName="FocusBorder"
+                                       Value="{StaticResource Visible}"/>
+                </dxcn:RenderStateTrigger>
+            </dxcn:RenderStateGroup>
+            <dxcn:RenderStateGroup Name="DefaultStates">
+                <dxcn:RenderStateTrigger Name="NotDefaulted">
+                    <dxcn:RenderSetter Property="Visibility"
+                                       TargetName="Defaulted"
+                                       Value="{StaticResource Collapsed}"/>
+                </dxcn:RenderStateTrigger>
+                <dxcn:RenderStateTrigger Name="IsDefaulted">
+                    <dxcn:RenderSetter Property="Visibility"
+                                       TargetName="Defaulted"
+                                       Value="{StaticResource Visible}"/>
+                </dxcn:RenderStateTrigger>
+            </dxcn:RenderStateGroup>
+            <dxcn:RenderStateGroup Name="VisualStates">
+                <dxcn:RenderStateTrigger Name="Normal"/>
+                <dxcn:RenderStateTrigger Name="MouseOver">
+                    <dxcn:RenderSetter Property="BorderBrush"
+                                       TargetName="Border"
+                                       Value="{StaticResource Button.HoverState.Border1}"/>
+                    <dxcn:RenderSetter Property="Background"
+                                       TargetName="Border"
+                                       Value="{StaticResource Button.HoverState.Border2}"/>
+                </dxcn:RenderStateTrigger>
+                <dxcn:RenderStateTrigger Name="Pressed">
+                    <dxcn:RenderSetter Property="BorderBrush"
+                                       TargetName="Border"
+                                       Value="{StaticResource Button.PressedState.Border1}"/>
+                    <dxcn:RenderSetter Property="Background"
+                                       TargetName="Border"
+                                       Value="{StaticResource Button.PressedState.Border2}"/>
+                </dxcn:RenderStateTrigger>
+                <dxcn:RenderStateTrigger Name="Checked">
+                    <dxcn:RenderSetter Property="BorderBrush"
+                                       TargetName="Border"
+                                       Value="{StaticResource Button.CheckedState.Border1}"/>
+                    <dxcn:RenderSetter Property="Background"
+                                       TargetName="Border"
+                                       Value="{StaticResource Button.CheckedState.Border2}"/>
+                </dxcn:RenderStateTrigger>
+            </dxcn:RenderStateGroup>
+            <dxcn:RenderStateGroup Name="PlacementStates">
+                <dxcn:RenderStateTrigger Name="Default"/>
+                <dxcn:RenderStateTrigger Name="Left">
+                    <dxcn:RenderSetter Property="BorderThickness"
+                                       TargetName="Border"
+                                       Value="1,1,0,1"/>
+                    <dxcn:RenderSetter Property="BorderThickness"
+                                       TargetName="FocusBorder"
+                                       Value="1,1,0,1"/>
+                </dxcn:RenderStateTrigger>
+                <dxcn:RenderStateTrigger Name="Right">
+                    <dxcn:RenderSetter Property="BorderThickness"
+                                       TargetName="FocusBorder"
+                                       Value="0,1,1,1"/>
+                </dxcn:RenderStateTrigger>
+                <dxcn:RenderStateTrigger Name="Top">
+                    <dxcn:RenderSetter Property="BorderThickness"
+                                       TargetName="Border"
+                                       Value="1,1,1,0"/>
+                    <dxcn:RenderSetter Property="BorderThickness"
+                                       TargetName="FocusBorder"
+                                       Value="1,1,1,0"/>
+                </dxcn:RenderStateTrigger>
+                <dxcn:RenderStateTrigger Name="Bottom">
+                    <dxcn:RenderSetter Property="BorderThickness"
+                                       TargetName="FocusBorder"
+                                       Value="1,0,1,1"/>
+                </dxcn:RenderStateTrigger>
+            </dxcn:RenderStateGroup>
+        </dxcn:RenderTemplate.Triggers>
+    </dxcn:RenderTemplate>
+
+    <!-- Separator -->
+
+    <dxcn:RenderTemplate x:Key="{dxdst:DropDownButtonThemeKey ResourceKey=SeparatorBorderTemplate}">
+        <dxcn:RenderPanel/>
+    </dxcn:RenderTemplate>
+
+    <dx:WpfSvgPalette x:Key="{dxdst:BrushesThemeKey ResourceKey=ContrastSvgPalette}"/>
+
+    <dx:WpfSvgPalette x:Key="{dxdst:BrushesThemeKey ResourceKey=SvgPalette}">
+        <SolidColorBrush x:Key="BlackColor"
+                         Color="#FFB2B2B2"
+                         cs:MetropolisLight.Color="#FF333333"
+                        />
+        <SolidColorBrush x:Key="WhiteColor"
+                         Color="#FF333333"
+                         cs:MetropolisLight.Color="#FFFFFFFF"
+                        />
+        <SolidColorBrush x:Key="RedColor"
+                         Color="#FFF8274D"
+                         cs:MetropolisLight.Color="#FFF8274D"
+                        />
+        <SolidColorBrush x:Key="YellowColor"
+                         Color="#FFB3751B"
+                         cs:MetropolisLight.Color="#FFB3751B"
+                        />
+        <SolidColorBrush x:Key="GreenColor"
+                         Color="#FF3F961E"
+                         cs:MetropolisLight.Color="#FF3F961E"
+                        />
+        <SolidColorBrush x:Key="BlueColor"
+                         Color="#FF4C88C9"
+                         cs:MetropolisLight.Color="#FF4C88C9"
+                        />
+        <dx:WpfSvgPalette.States>
+            <dx:WpfSvgPalette x:Key="Hover">
+                <SolidColorBrush x:Key="BlackColor"
+                                 Color="#FFB2B2B2"
+                                 cs:MetropolisLight.Color="#FF333333"
+                                />
+                <SolidColorBrush x:Key="WhiteColor"
+                                 Color="#FF333333"
+                                 cs:MetropolisLight.Color="#FFFFFFFF"
+                                />
+                <SolidColorBrush x:Key="RedColor"
+                                 Color="#FFF8274D"
+                                 cs:MetropolisLight.Color="#FFF8274D"
+                                />
+                <SolidColorBrush x:Key="YellowColor"
+                                 Color="#FFB3751B"
+                                 cs:MetropolisLight.Color="#FFB3751B"
+                                />
+                <SolidColorBrush x:Key="GreenColor"
+                                 Color="#FF3F961E"
+                                 cs:MetropolisLight.Color="#FF3F961E"
+                                />
+                <SolidColorBrush x:Key="BlueColor"
+                                 Color="#FF4C88C9"
+                                 cs:MetropolisLight.Color="#FF4C88C9"
+                                />
+            </dx:WpfSvgPalette>
+            <dx:WpfSvgPalette x:Key="Pressed">
+                <SolidColorBrush x:Key="BlackColor"
+                                 Color="#FFFFFFFF"
+                                 cs:MetropolisLight.Color="#FFFFFFFF"
+                                />
+                <SolidColorBrush x:Key="WhiteColor"
+                                 Color="#FFF78A09"
+                                 cs:MetropolisLight.Color="#FFF78A09"
+                                />
+                <SolidColorBrush x:Key="RedColor"
+                                 Color="#FFF8274D"
+                                 cs:MetropolisLight.Color="#FFFFD0B5"
+                                />
+                <SolidColorBrush x:Key="YellowColor"
+                                 Color="#FFB3751B"
+                                 cs:MetropolisLight.Color="#FFFFEC91"
+                                />
+                <SolidColorBrush x:Key="GreenColor"
+                                 Color="#FF3F961E"
+                                 cs:MetropolisLight.Color="#FFA5FF8A"
+                                />
+                <SolidColorBrush x:Key="BlueColor"
+                                 Color="#FF4C88C9"
+                                 cs:MetropolisLight.Color="#FFA9FFFF"
+                                />
+            </dx:WpfSvgPalette>
+        </dx:WpfSvgPalette.States>
+    </dx:WpfSvgPalette>
+
+</ResourceDictionary>

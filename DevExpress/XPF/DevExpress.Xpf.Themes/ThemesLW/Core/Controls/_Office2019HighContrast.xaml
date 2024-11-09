@@ -1,0 +1,772 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:aero="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero"
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+    xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
+    xmlns:dxbt="http://schemas.devexpress.com/winfx/2008/xaml/bars/themekeys"
+    xmlns:dxt="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys"
+    xmlns:dxi="http://schemas.devexpress.com/winfx/2008/xaml/core/internal"
+    xmlns:dxbi="http://schemas.devexpress.com/winfx/2008/xaml/bars/internal"
+    xmlns:dxet="http://schemas.devexpress.com/winfx/2008/xaml/editors/themekeys"
+    xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+    xmlns:dxei="http://schemas.devexpress.com/winfx/2008/xaml/editors/internal"
+    xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm">
+    <ResourceDictionary.MergedDictionaries>
+        <dxi:ThemeResourceDictionary Path="Common/{ThemeName}/Common.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+    <!--#region Common-->
+    <!--#endregion Common-->
+    <!--#region Controls-->
+    <dxi:RenderTemplate x:Key="{dxt:LWKey DropDownButton.BorderTemplate}">
+        <dxi:RenderPanel>
+            <dxi:RenderBorder
+                Name="IsDefault"
+                Background="{StaticResource Brush.Button.Background}"
+                BorderBrush="{StaticResource Brush.Border}"
+                BorderThickness="1" />
+            <dxi:RenderBorder
+                Name="IsFocused"
+                BorderBrush="{StaticResource Brush.Focused}"
+                BorderThickness="1"
+                Visibility="Collapsed" />
+            <dxi:RenderBorder
+                Name="IsDefaulted"
+                BorderBrush="{StaticResource Brush.Focused}"
+                BorderThickness="1"
+                Visibility="Collapsed" />
+        </dxi:RenderPanel>
+        <dxi:RenderTemplate.Triggers>
+            <dxi:RenderTrigger DependencyProperty="{x:Static dx:ThemeManager.IsTouchEnabledProperty}" Value="True" ValueSource="TemplatedParent">
+                <dxi:RenderSetter Property="MinWidth" TargetName="IsDefault" Value="44" />
+                <dxi:RenderSetter Property="MinHeight" TargetName="IsDefault" Value="44" />
+            </dxi:RenderTrigger>
+            <dxi:RenderStateGroup Name="FocusStates">
+                <dxi:RenderStateTrigger Name="Unfocused">
+                    <dxi:RenderSetter Property="Visibility" TargetName="IsFocused" Value="Collapsed" />
+                </dxi:RenderStateTrigger>
+                <dxi:RenderStateTrigger Name="Focused">
+                    <dxi:RenderSetter Property="Visibility" TargetName="IsFocused" Value="Visible" />
+                </dxi:RenderStateTrigger>
+            </dxi:RenderStateGroup>
+            <dxi:RenderStateGroup Name="DefaultedStates">
+                <dxi:RenderStateTrigger Name="NotDefaulted">
+                    <dxi:RenderSetter Property="Visibility" TargetName="IsDefaulted" Value="Collapsed" />
+                </dxi:RenderStateTrigger>
+                <dxi:RenderStateTrigger Name="IsDefaulted">
+                    <dxi:RenderSetter Property="Visibility" TargetName="IsDefaulted" Value="Visible" />
+                </dxi:RenderStateTrigger>
+            </dxi:RenderStateGroup>
+            <dxi:RenderStateGroup Name="VisualStates">
+                <dxi:RenderStateTrigger Name="Normal">
+                    <dxi:RenderSetter Property="Background" TargetName="IsDefault" Value="{StaticResource Brush.Button.Background}" />
+                    <dxi:RenderSetter Property="BorderBrush" TargetName="IsDefault" Value="{StaticResource Brush.Border}" />
+                </dxi:RenderStateTrigger>
+                <dxi:RenderStateTrigger Name="MouseOver">
+                    <dxi:RenderSetter Property="Background" TargetName="IsDefault" Value="{StaticResource Brush.HoverBackground}" />
+                    <dxi:RenderSetter Property="BorderThickness" TargetName="IsDefault" Value="1" />
+                    <dxi:RenderSetter Property="BorderBrush" TargetName="IsDefault" Value="{StaticResource Brush.Border}" />
+                </dxi:RenderStateTrigger>
+                <dxi:RenderStateTrigger Name="Pressed">
+                    <dxi:RenderSetter Property="Background" TargetName="IsDefault" Value="{StaticResource Brush.SelectionBackground}" />
+                    <dxi:RenderSetter Property="BorderBrush" TargetName="IsDefault" Value="{StaticResource Brush.Border}" />
+                </dxi:RenderStateTrigger>
+                <dxi:RenderStateTrigger Name="Checked">
+                    <dxi:RenderSetter Property="Background" TargetName="IsDefault" Value="{StaticResource Brush.SelectionBackground}" />
+                    <dxi:RenderSetter Property="BorderBrush" TargetName="IsDefault" Value="{StaticResource Brush.Border}" />
+                </dxi:RenderStateTrigger>
+            </dxi:RenderStateGroup>
+            <dxi:ConditionalRenderBinding
+                DependencyProperty="{x:Static dxi:AppearanceOptions.BackgroundProperty}"
+                TargetName="IsDefault"
+                TargetProperty="Background"
+                ValueSource="TemplatedParent">
+                <dxi:RenderCondition DependencyProperty="{x:Static dxi:AppearanceOptions.HasBackgroundProperty}" Value="True" ValueSource="TemplatedParent" />
+                <dxi:RenderCondition DependencyProperty="{x:Static dx:SimpleButton.IsMouseOverProperty}" Value="False" ValueSource="TemplatedParent" />
+            </dxi:ConditionalRenderBinding>
+            <dxi:ConditionalRenderBinding
+                DependencyProperty="{x:Static dxi:AppearanceOptions.BackgroundProperty}"
+                TargetName="IsDefault"
+                TargetProperty="Background"
+                ValueSource="TemplatedParent">
+                <dxi:RenderCondition DependencyProperty="{x:Static dxi:AppearanceOptions.HasBackgroundProperty}" Value="True" ValueSource="TemplatedParent" />
+                <dxi:RenderCondition DependencyProperty="{x:Static dx:SimpleButton.IsMouseOverProperty}" Value="True" ValueSource="TemplatedParent" />
+                <dxi:RenderCondition DependencyProperty="{x:Static dxi:SimpleButtonsAppearanceHelper.IsBackgroundSetStyleTriggerProperty}" Value="True" ValueSource="TemplatedParent" />
+            </dxi:ConditionalRenderBinding>
+            <dxi:ConditionalRenderBinding
+                DependencyProperty="{x:Static dxi:AppearanceOptions.BorderBrushProperty}"
+                TargetName="IsDefault"
+                TargetProperty="BorderBrush"
+                ValueSource="TemplatedParent">
+                <dxi:RenderCondition DependencyProperty="{x:Static dxi:AppearanceOptions.HasBorderBrushProperty}" Value="True" ValueSource="TemplatedParent" />
+            </dxi:ConditionalRenderBinding>
+            <dxi:ConditionalRenderBinding
+                DependencyProperty="{x:Static dxi:AppearanceOptions.BorderThicknessProperty}"
+                TargetName="IsDefault"
+                TargetProperty="BorderThickness"
+                ValueSource="TemplatedParent">
+                <dxi:RenderCondition DependencyProperty="{x:Static dxi:AppearanceOptions.HasBorderThicknessProperty}" Value="True" ValueSource="TemplatedParent" />
+            </dxi:ConditionalRenderBinding>
+            <dxi:ConditionalRenderBinding
+                DependencyProperty="{x:Static dxi:AppearanceOptions.BorderThicknessProperty}"
+                TargetName="IsFocused"
+                TargetProperty="BorderThickness"
+                ValueSource="TemplatedParent">
+                <dxi:RenderCondition DependencyProperty="{x:Static dxi:AppearanceOptions.HasBorderThicknessProperty}" Value="True" ValueSource="TemplatedParent" />
+            </dxi:ConditionalRenderBinding>
+            <dxi:ConditionalRenderBinding
+                DependencyProperty="{x:Static dxi:AppearanceOptions.CornerRadiusProperty}"
+                TargetName="IsDefault"
+                TargetProperty="CornerRadius"
+                ValueSource="TemplatedParent">
+                <dxi:RenderCondition DependencyProperty="{x:Static dxi:AppearanceOptions.HasCornerRadiusProperty}" Value="True" ValueSource="TemplatedParent" />
+            </dxi:ConditionalRenderBinding>
+            <dxi:ConditionalRenderBinding
+                DependencyProperty="{x:Static dxi:AppearanceOptions.CornerRadiusProperty}"
+                TargetName="IsDefaulted"
+                TargetProperty="CornerRadius"
+                ValueSource="TemplatedParent">
+                <dxi:RenderCondition DependencyProperty="{x:Static dxi:AppearanceOptions.HasCornerRadiusProperty}" Value="True" ValueSource="TemplatedParent" />
+            </dxi:ConditionalRenderBinding>
+            <dxi:ConditionalRenderBinding
+                DependencyProperty="{x:Static dxi:AppearanceOptions.CornerRadiusProperty}"
+                TargetName="IsFocused"
+                TargetProperty="CornerRadius"
+                ValueSource="TemplatedParent">
+                <dxi:RenderCondition DependencyProperty="{x:Static dxi:AppearanceOptions.HasCornerRadiusProperty}" Value="True" ValueSource="TemplatedParent" />
+            </dxi:ConditionalRenderBinding>
+        </dxi:RenderTemplate.Triggers>
+    </dxi:RenderTemplate>
+    <dxi:RenderTemplate x:Key="{dxt:LWKey DropDownButton.ArrowBorderTemplate}">
+        <dxi:RenderPanel>
+            <dxi:RenderBorder
+                Name="IsDefault"
+                Background="{StaticResource Brush.Button.Background}"
+                BorderBrush="{StaticResource Brush.Border}"
+                BorderThickness="1" />
+            <dxi:RenderBorder
+                Name="IsFocused"
+                BorderBrush="{StaticResource Brush.Focused}"
+                BorderThickness="1"
+                Visibility="Collapsed" />
+            <dxi:RenderBorder
+                Name="IsDefaulted"
+                BorderBrush="{StaticResource Brush.Focused}"
+                BorderThickness="1"
+                Visibility="Collapsed" />
+        </dxi:RenderPanel>
+        <dxi:RenderTemplate.Triggers>
+            <dxi:RenderTrigger DependencyProperty="{x:Static dx:ThemeManager.IsTouchEnabledProperty}" Value="True" ValueSource="TemplatedParent">
+                <dxi:RenderSetter Property="MinWidth" TargetName="IsDefault" Value="44" />
+                <dxi:RenderSetter Property="MinHeight" TargetName="IsDefault" Value="44" />
+            </dxi:RenderTrigger>
+            <dxi:RenderStateGroup Name="FocusStates">
+                <dxi:RenderStateTrigger Name="Unfocused">
+                    <dxi:RenderSetter Property="Visibility" TargetName="IsFocused" Value="Collapsed" />
+                </dxi:RenderStateTrigger>
+                <dxi:RenderStateTrigger Name="Focused">
+                    <dxi:RenderSetter Property="Visibility" TargetName="IsFocused" Value="Visible" />
+                </dxi:RenderStateTrigger>
+            </dxi:RenderStateGroup>
+            <dxi:RenderStateGroup Name="DefaultedStates">
+                <dxi:RenderStateTrigger Name="NotDefaulted">
+                    <dxi:RenderSetter Property="Visibility" TargetName="IsDefaulted" Value="Collapsed" />
+                </dxi:RenderStateTrigger>
+                <dxi:RenderStateTrigger Name="IsDefaulted">
+                    <dxi:RenderSetter Property="Visibility" TargetName="IsDefaulted" Value="Visible" />
+                </dxi:RenderStateTrigger>
+            </dxi:RenderStateGroup>
+            <dxi:RenderStateGroup Name="VisualStates">
+                <dxi:RenderStateTrigger Name="Normal">
+                    <dxi:RenderSetter Property="Background" TargetName="IsDefault" Value="{StaticResource Brush.Button.Background}" />
+                    <dxi:RenderSetter Property="BorderBrush" TargetName="IsDefault" Value="{StaticResource Brush.Border}" />
+                </dxi:RenderStateTrigger>
+                <dxi:RenderStateTrigger Name="MouseOver">
+                    <dxi:RenderSetter Property="Background" TargetName="IsDefault" Value="{StaticResource Brush.HoverBackground}" />
+                    <dxi:RenderSetter Property="BorderThickness" TargetName="IsDefault" Value="1" />
+                    <dxi:RenderSetter Property="BorderBrush" TargetName="IsDefault" Value="{StaticResource Brush.Border}" />
+                </dxi:RenderStateTrigger>
+                <dxi:RenderStateTrigger Name="Pressed">
+                    <dxi:RenderSetter Property="Background" TargetName="IsDefault" Value="{StaticResource Brush.SelectionBackground}" />
+                    <dxi:RenderSetter Property="BorderBrush" TargetName="IsDefault" Value="{StaticResource Brush.Border}" />
+                </dxi:RenderStateTrigger>
+                <dxi:RenderStateTrigger Name="Checked">
+                    <dxi:RenderSetter Property="Background" TargetName="IsDefault" Value="{StaticResource Brush.SelectionBackground}" />
+                    <dxi:RenderSetter Property="BorderBrush" TargetName="IsDefault" Value="{StaticResource Brush.Border}" />
+                </dxi:RenderStateTrigger>
+            </dxi:RenderStateGroup>
+            <dxi:ConditionalRenderBinding
+                DependencyProperty="{x:Static dxbi:BarItemAppearanceOptions.ArrowBackgroundProperty}"
+                TargetName="IsDefault"
+                TargetProperty="Background"
+                ValueSource="TemplatedParent">
+                <dxi:RenderCondition DependencyProperty="{x:Static dxbi:BarItemAppearanceOptions.HasArrowBackgroundProperty}" Value="True" ValueSource="TemplatedParent" />
+                <dxi:RenderCondition DependencyProperty="{x:Static dx:SplitButton.IsMouseOverArrowProperty}" Value="False" ValueSource="TemplatedParent" />
+            </dxi:ConditionalRenderBinding>
+            <dxi:ConditionalRenderBinding
+                DependencyProperty="{x:Static dxbi:BarItemAppearanceOptions.ArrowBackgroundProperty}"
+                TargetName="IsDefault"
+                TargetProperty="Background"
+                ValueSource="TemplatedParent">
+                <dxi:RenderCondition DependencyProperty="{x:Static dxi:AppearanceOptions.HasBackgroundProperty}" Value="True" ValueSource="TemplatedParent" />
+                <dxi:RenderCondition DependencyProperty="{x:Static dx:SimpleButton.IsMouseOverProperty}" Value="True" ValueSource="TemplatedParent" />
+                <dxi:RenderCondition DependencyProperty="{x:Static dxi:SimpleButtonsAppearanceHelper.IsArrowBackgroundSetStyleTriggerProperty}" Value="True" ValueSource="TemplatedParent" />
+            </dxi:ConditionalRenderBinding>
+            <dxi:ConditionalRenderBinding
+                DependencyProperty="{x:Static dxbi:BarItemAppearanceOptions.ArrowBorderBrushProperty}"
+                TargetName="IsDefault"
+                TargetProperty="BorderBrush"
+                ValueSource="TemplatedParent">
+                <dxi:RenderCondition DependencyProperty="{x:Static dxbi:BarItemAppearanceOptions.HasArrowBorderBrushProperty}" Value="True" ValueSource="TemplatedParent" />
+            </dxi:ConditionalRenderBinding>
+            <dxi:ConditionalRenderBinding
+                DependencyProperty="{x:Static dxbi:BarItemAppearanceOptions.ArrowBorderThicknessProperty}"
+                TargetName="IsDefault"
+                TargetProperty="BorderThickness"
+                ValueSource="TemplatedParent">
+                <dxi:RenderCondition DependencyProperty="{x:Static dxbi:BarItemAppearanceOptions.HasArrowBorderThicknessProperty}" Value="True" ValueSource="TemplatedParent" />
+            </dxi:ConditionalRenderBinding>
+            <dxi:ConditionalRenderBinding
+                DependencyProperty="{x:Static dxbi:BarItemAppearanceOptions.ArrowBorderThicknessProperty}"
+                TargetName="IsFocused"
+                TargetProperty="BorderThickness"
+                ValueSource="TemplatedParent">
+                <dxi:RenderCondition DependencyProperty="{x:Static dxbi:BarItemAppearanceOptions.HasArrowBorderThicknessProperty}" Value="True" ValueSource="TemplatedParent" />
+            </dxi:ConditionalRenderBinding>
+            <dxi:ConditionalRenderBinding
+                DependencyProperty="{x:Static dxbi:BarItemAppearanceOptions.ArrowCornerRadiusProperty}"
+                TargetName="IsDefault"
+                TargetProperty="CornerRadius"
+                ValueSource="TemplatedParent">
+                <dxi:RenderCondition DependencyProperty="{x:Static dxbi:BarItemAppearanceOptions.HasArrowCornerRadiusProperty}" Value="True" ValueSource="TemplatedParent" />
+            </dxi:ConditionalRenderBinding>
+            <dxi:ConditionalRenderBinding
+                DependencyProperty="{x:Static dxbi:BarItemAppearanceOptions.ArrowCornerRadiusProperty}"
+                TargetName="IsDefaulted"
+                TargetProperty="CornerRadius"
+                ValueSource="TemplatedParent">
+                <dxi:RenderCondition DependencyProperty="{x:Static dxbi:BarItemAppearanceOptions.HasArrowCornerRadiusProperty}" Value="True" ValueSource="TemplatedParent" />
+            </dxi:ConditionalRenderBinding>
+            <dxi:ConditionalRenderBinding
+                DependencyProperty="{x:Static dxbi:BarItemAppearanceOptions.ArrowCornerRadiusProperty}"
+                TargetName="IsFocused"
+                TargetProperty="CornerRadius"
+                ValueSource="TemplatedParent">
+                <dxi:RenderCondition DependencyProperty="{x:Static dxbi:BarItemAppearanceOptions.HasArrowCornerRadiusProperty}" Value="True" ValueSource="TemplatedParent" />
+            </dxi:ConditionalRenderBinding>
+        </dxi:RenderTemplate.Triggers>
+    </dxi:RenderTemplate>
+    <dxi:RenderTemplate x:Key="{dxt:LWKey DropDownButton.ContentBorderTemplate}">
+        <dxi:RenderPanel>
+            <dxi:RenderBorder
+                Name="IsDefault"
+                Background="{StaticResource Brush.Button.Background}"
+                BorderBrush="{StaticResource Brush.Border}"
+                BorderThickness="1" />
+            <dxi:RenderBorder
+                Name="IsFocused"
+                BorderBrush="{StaticResource Brush.Focused}"
+                BorderThickness="1"
+                Visibility="Collapsed" />
+            <dxi:RenderBorder
+                Name="IsDefaulted"
+                BorderBrush="{StaticResource Brush.Focused}"
+                BorderThickness="1"
+                Visibility="Collapsed" />
+        </dxi:RenderPanel>
+        <dxi:RenderTemplate.Triggers>
+            <dxi:RenderTrigger DependencyProperty="{x:Static dx:ThemeManager.IsTouchEnabledProperty}" Value="True" ValueSource="TemplatedParent">
+                <dxi:RenderSetter Property="MinWidth" TargetName="IsDefault" Value="44" />
+                <dxi:RenderSetter Property="MinHeight" TargetName="IsDefault" Value="44" />
+            </dxi:RenderTrigger>
+            <dxi:RenderStateGroup Name="FocusStates">
+                <dxi:RenderStateTrigger Name="Unfocused">
+                    <dxi:RenderSetter Property="Visibility" TargetName="IsFocused" Value="Collapsed" />
+                </dxi:RenderStateTrigger>
+                <dxi:RenderStateTrigger Name="Focused">
+                    <dxi:RenderSetter Property="Visibility" TargetName="IsFocused" Value="Visible" />
+                </dxi:RenderStateTrigger>
+            </dxi:RenderStateGroup>
+            <dxi:RenderStateGroup Name="DefaultedStates">
+                <dxi:RenderStateTrigger Name="NotDefaulted">
+                    <dxi:RenderSetter Property="Visibility" TargetName="IsDefaulted" Value="Collapsed" />
+                </dxi:RenderStateTrigger>
+                <dxi:RenderStateTrigger Name="IsDefaulted">
+                    <dxi:RenderSetter Property="Visibility" TargetName="IsDefaulted" Value="Visible" />
+                </dxi:RenderStateTrigger>
+            </dxi:RenderStateGroup>
+            <dxi:RenderStateGroup Name="VisualStates">
+                <dxi:RenderStateTrigger Name="Normal">
+                    <dxi:RenderSetter Property="Background" TargetName="IsDefault" Value="{StaticResource Brush.Button.Background}" />
+                    <dxi:RenderSetter Property="BorderBrush" TargetName="IsDefault" Value="{StaticResource Brush.Border}" />
+                </dxi:RenderStateTrigger>
+                <dxi:RenderStateTrigger Name="MouseOver">
+                    <dxi:RenderSetter Property="Background" TargetName="IsDefault" Value="{StaticResource Brush.HoverBackground}" />
+                    <dxi:RenderSetter Property="BorderThickness" TargetName="IsDefault" Value="1" />
+                    <dxi:RenderSetter Property="BorderBrush" TargetName="IsDefault" Value="{StaticResource Brush.Border}" />
+                </dxi:RenderStateTrigger>
+                <dxi:RenderStateTrigger Name="Pressed">
+                    <dxi:RenderSetter Property="Background" TargetName="IsDefault" Value="{StaticResource Brush.SelectionBackground}" />
+                    <dxi:RenderSetter Property="BorderBrush" TargetName="IsDefault" Value="{StaticResource Brush.Border}" />
+                </dxi:RenderStateTrigger>
+                <dxi:RenderStateTrigger Name="Checked">
+                    <dxi:RenderSetter Property="Background" TargetName="IsDefault" Value="{StaticResource Brush.SelectionBackground}" />
+                    <dxi:RenderSetter Property="BorderBrush" TargetName="IsDefault" Value="{StaticResource Brush.Border}" />
+                </dxi:RenderStateTrigger>
+            </dxi:RenderStateGroup>
+            <dxi:ConditionalRenderBinding
+                DependencyProperty="{x:Static dxi:AppearanceOptions.BackgroundProperty}"
+                TargetName="IsDefault"
+                TargetProperty="Background"
+                ValueSource="TemplatedParent">
+                <dxi:RenderCondition DependencyProperty="{x:Static dxi:AppearanceOptions.HasBackgroundProperty}" Value="True" ValueSource="TemplatedParent" />
+                <dxi:RenderCondition DependencyProperty="{x:Static dx:SimpleButton.IsMouseOverProperty}" Value="False" ValueSource="TemplatedParent" />
+            </dxi:ConditionalRenderBinding>
+            <dxi:ConditionalRenderBinding
+                DependencyProperty="{x:Static dxi:AppearanceOptions.BackgroundProperty}"
+                TargetName="IsDefault"
+                TargetProperty="Background"
+                ValueSource="TemplatedParent">
+                <dxi:RenderCondition DependencyProperty="{x:Static dxi:AppearanceOptions.HasBackgroundProperty}" Value="True" ValueSource="TemplatedParent" />
+                <dxi:RenderCondition DependencyProperty="{x:Static dx:SimpleButton.IsMouseOverProperty}" Value="True" ValueSource="TemplatedParent" />
+                <dxi:RenderCondition DependencyProperty="{x:Static dxi:SimpleButtonsAppearanceHelper.IsBackgroundSetStyleTriggerProperty}" Value="True" ValueSource="TemplatedParent" />
+            </dxi:ConditionalRenderBinding>
+            <dxi:ConditionalRenderBinding
+                DependencyProperty="{x:Static dxi:AppearanceOptions.BackgroundProperty}"
+                TargetName="IsDefault"
+                TargetProperty="Background"
+                ValueSource="TemplatedParent">
+                <dxi:RenderCondition DependencyProperty="{x:Static dxi:AppearanceOptions.HasBackgroundProperty}" Value="True" ValueSource="TemplatedParent" />
+                <dxi:RenderCondition DependencyProperty="{x:Static dx:SplitButton.IsMouseOverArrowProperty}" Value="True" ValueSource="TemplatedParent" />
+            </dxi:ConditionalRenderBinding>
+            <dxi:ConditionalRenderBinding
+                DependencyProperty="{x:Static dxi:AppearanceOptions.BorderBrushProperty}"
+                TargetName="IsDefault"
+                TargetProperty="BorderBrush"
+                ValueSource="TemplatedParent">
+                <dxi:RenderCondition DependencyProperty="{x:Static dxi:AppearanceOptions.HasBorderBrushProperty}" Value="True" ValueSource="TemplatedParent" />
+            </dxi:ConditionalRenderBinding>
+            <dxi:ConditionalRenderBinding
+                DependencyProperty="{x:Static dxi:AppearanceOptions.BorderThicknessProperty}"
+                TargetName="IsDefault"
+                TargetProperty="BorderThickness"
+                ValueSource="TemplatedParent">
+                <dxi:RenderCondition DependencyProperty="{x:Static dxi:AppearanceOptions.HasBorderThicknessProperty}" Value="True" ValueSource="TemplatedParent" />
+            </dxi:ConditionalRenderBinding>
+            <dxi:ConditionalRenderBinding
+                DependencyProperty="{x:Static dxi:AppearanceOptions.BorderThicknessProperty}"
+                TargetName="IsFocused"
+                TargetProperty="BorderThickness"
+                ValueSource="TemplatedParent">
+                <dxi:RenderCondition DependencyProperty="{x:Static dxi:AppearanceOptions.HasBorderThicknessProperty}" Value="True" ValueSource="TemplatedParent" />
+            </dxi:ConditionalRenderBinding>
+            <dxi:ConditionalRenderBinding
+                DependencyProperty="{x:Static dxbi:BarItemAppearanceOptions.ContentCornerRadiusProperty}"
+                TargetName="IsDefault"
+                TargetProperty="CornerRadius"
+                ValueSource="TemplatedParent">
+                <dxi:RenderCondition DependencyProperty="{x:Static dxbi:BarItemAppearanceOptions.HasContentCornerRadiusProperty}" Value="True" ValueSource="TemplatedParent" />
+            </dxi:ConditionalRenderBinding>
+            <dxi:ConditionalRenderBinding
+                DependencyProperty="{x:Static dxbi:BarItemAppearanceOptions.ContentCornerRadiusProperty}"
+                TargetName="IsDefaulted"
+                TargetProperty="CornerRadius"
+                ValueSource="TemplatedParent">
+                <dxi:RenderCondition DependencyProperty="{x:Static dxbi:BarItemAppearanceOptions.HasContentCornerRadiusProperty}" Value="True" ValueSource="TemplatedParent" />
+            </dxi:ConditionalRenderBinding>
+            <dxi:ConditionalRenderBinding
+                DependencyProperty="{x:Static dxbi:BarItemAppearanceOptions.ContentCornerRadiusProperty}"
+                TargetName="IsFocused"
+                TargetProperty="CornerRadius"
+                ValueSource="TemplatedParent">
+                <dxi:RenderCondition DependencyProperty="{x:Static dxbi:BarItemAppearanceOptions.HasContentCornerRadiusProperty}" Value="True" ValueSource="TemplatedParent" />
+            </dxi:ConditionalRenderBinding>
+        </dxi:RenderTemplate.Triggers>
+    </dxi:RenderTemplate>
+
+    <SolidColorBrush x:Key="{dxt:LWKey Badges.ErrorBackground}" Color="Red" />
+    <SolidColorBrush x:Key="{dxt:LWKey Badges.ErrorBorderBrush}" Color="Red" />
+    <SolidColorBrush x:Key="{dxt:LWKey Badges.WarningBackground}" Color="Yellow" />
+    <SolidColorBrush x:Key="{dxt:LWKey Badges.WarningBorderBrush}" Color="Yellow" />
+    <SolidColorBrush x:Key="{dxt:LWKey Badges.SuccessBackground}" Color="Green" />
+    <SolidColorBrush x:Key="{dxt:LWKey Badges.SuccessBorderBrush}" Color="Green" />
+    <Color x:Key="{dxt:LWKey Format.ColorScaleRed}">
+        #FFA14849
+    </Color>
+    <Color x:Key="{dxt:LWKey Format.ColorScaleYellow}">
+        #FFA19450
+    </Color>
+    <Color x:Key="{dxt:LWKey Format.ColorScaleGreen}">
+        #FF488658
+    </Color>
+    <Color x:Key="{dxt:LWKey Format.ColorScaleBlue}">
+        #FF406087
+    </Color>
+    <Color x:Key="{dxt:LWKey Format.DataBarNegativeColor}">
+        #BBFFB5B0
+    </Color>
+    <Color x:Key="{dxt:LWKey Format.DataBarRedColor}">
+        #BBFFB5B0
+    </Color>
+    <Color x:Key="{dxt:LWKey Format.DataBarOrangeColor}">
+        #BBF0BE6E
+    </Color>
+    <Color x:Key="{dxt:LWKey Format.DataBarGreenColor}">
+        #BBB6E0B1
+    </Color>
+    <Color x:Key="{dxt:LWKey Format.DataBarLightBlueColor}">
+        #BB68DBED
+    </Color>
+    <Color x:Key="{dxt:LWKey Format.DataBarBlueColor}">
+        #BBB8C7FF
+    </Color>
+    <Color x:Key="{dxt:LWKey Format.DataBarPurpleColor}">
+        #BBD4A3E3
+    </Color>
+    <Style x:Key="TabControlGlyphDefaultStyle" TargetType="{x:Type dxi:GlyphControl}">
+        <Setter Property="GlyphCloseTemplate">
+            <Setter.Value>
+                <ControlTemplate TargetType="dxi:GlyphControl">
+                    <Path x:Name="PART_Path" Fill="{TemplateBinding TextElement.Foreground}" Style="{StaticResource UIShape.Navigation.Plus}" />
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Opacity" TargetName="PART_Path" Value="1" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="GlyphDownTemplate">
+            <Setter.Value>
+                <ControlTemplate TargetType="dxi:GlyphControl">
+                    <Path x:Name="PART_Path" Fill="{TemplateBinding TextElement.Foreground}" Style="{StaticResource UIShape.Down}" />
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Fill" TargetName="PART_Path" Value="{StaticResource Brush.HoverForeground}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="GlyphLeftTemplate">
+            <Setter.Value>
+                <ControlTemplate TargetType="dxi:GlyphControl">
+                    <Path x:Name="PART_Path" Fill="{TemplateBinding TextElement.Foreground}" Style="{StaticResource UIShape.Left}" />
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Fill" TargetName="PART_Path" Value="{StaticResource Brush.HoverForeground}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="GlyphPlusTemplate">
+            <Setter.Value>
+                <ControlTemplate TargetType="dxi:GlyphControl">
+                    <Path x:Name="PART_Path" Fill="{StaticResource Brush.Foreground}" Style="{StaticResource UIShape.Navigation.Plus}" />
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Fill" TargetName="PART_Path" Value="{StaticResource Brush.HoverForeground}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="GlyphRightTemplate">
+            <Setter.Value>
+                <ControlTemplate TargetType="dxi:GlyphControl">
+                    <Path x:Name="PART_Path" Fill="{TemplateBinding TextElement.Foreground}" Style="{StaticResource UIShape.Right}" />
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Fill" TargetName="PART_Path" Value="{StaticResource Brush.HoverForeground}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="GlyphUpTemplate">
+            <Setter.Value>
+                <ControlTemplate TargetType="dxi:GlyphControl">
+                    <Path x:Name="PART_Path" Fill="{TemplateBinding TextElement.Foreground}" Style="{StaticResource UIShape.Up}" />
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Fill" TargetName="PART_Path" Value="{StaticResource Brush.HoverForeground}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--#endregion Controls-->
+
+    <!--#region Button-->
+    <dxi:RenderTemplate x:Key="{dxt:LWKey DropDownButton.SeparatorBorderTemplate}">
+        <dxi:RenderPanel>
+            <dxi:RenderBorder
+                Name="IsDefault"
+                Background="{StaticResource Brush.Button.Background}"
+                BorderBrush="{StaticResource Brush.Border}"
+                BorderThickness="1,0,0,0" />
+            <dxi:RenderBorder
+                Name="IsFocused"
+                BorderBrush="{StaticResource Brush.Focused}"
+                BorderThickness="1,0,0,0"
+                Visibility="Collapsed" />
+            <dxi:RenderBorder
+                Name="IsDefaulted"
+                BorderBrush="{StaticResource Brush.Focused}"
+                BorderThickness="1,0,0,0"
+                Visibility="Collapsed" />
+        </dxi:RenderPanel>
+        <dxi:RenderTemplate.Triggers>
+            <dxi:RenderStateGroup Name="FocusStates">
+                <dxi:RenderStateTrigger Name="Unfocused">
+                    <dxi:RenderSetter Property="Visibility" TargetName="IsFocused" Value="Collapsed" />
+                </dxi:RenderStateTrigger>
+                <dxi:RenderStateTrigger Name="Focused">
+                    <dxi:RenderSetter Property="Visibility" TargetName="IsFocused" Value="Visible" />
+                </dxi:RenderStateTrigger>
+            </dxi:RenderStateGroup>
+            <dxi:RenderStateGroup Name="DefaultedStates">
+                <dxi:RenderStateTrigger Name="NotDefaulted">
+                    <dxi:RenderSetter Property="Visibility" TargetName="IsDefaulted" Value="Collapsed" />
+                </dxi:RenderStateTrigger>
+                <dxi:RenderStateTrigger Name="IsDefaulted">
+                    <dxi:RenderSetter Property="Visibility" TargetName="IsDefaulted" Value="Visible" />
+                </dxi:RenderStateTrigger>
+            </dxi:RenderStateGroup>
+            <dxi:RenderStateGroup Name="VisualStates">
+                <dxi:RenderStateTrigger Name="Normal">
+                    <dxi:RenderSetter Property="BorderBrush" TargetName="IsDefault" Value="{StaticResource Brush.Border}" />
+                </dxi:RenderStateTrigger>
+                <dxi:RenderStateTrigger Name="MouseOver">
+                    <dxi:RenderSetter Property="BorderBrush" TargetName="IsDefault" Value="{StaticResource Brush.Border}" />
+                </dxi:RenderStateTrigger>
+                <dxi:RenderStateTrigger Name="Pressed">
+                    <dxi:RenderSetter Property="BorderBrush" TargetName="IsDefault" Value="{StaticResource Brush.Border}" />
+                </dxi:RenderStateTrigger>
+                <dxi:RenderStateTrigger Name="Checked">
+                    <dxi:RenderSetter Property="BorderBrush" TargetName="IsDefault" Value="{StaticResource Brush.Border}" />
+                </dxi:RenderStateTrigger>
+            </dxi:RenderStateGroup>
+            <!-- APPEARANCE BEGIN -->
+            <dxi:ConditionalRenderBinding
+                DependencyProperty="{x:Static dxi:AppearanceOptions.BorderBrushProperty}"
+                TargetName="IsDefault"
+                TargetProperty="BorderBrush"
+                ValueSource="TemplatedParent">
+                <dxi:RenderCondition DependencyProperty="{x:Static dxi:AppearanceOptions.HasBorderBrushProperty}" Value="True" ValueSource="TemplatedParent" />
+            </dxi:ConditionalRenderBinding>
+            <dxi:ConditionalRenderBinding
+                DependencyProperty="{x:Static dxi:SplitButtonAppearanceOptions.SeparatorThicknessProperty}"
+                TargetName="IsDefault"
+                TargetProperty="BorderThickness"
+                ValueSource="TemplatedParent">
+                <dxi:RenderCondition DependencyProperty="{x:Static dxi:SplitButtonAppearanceOptions.HasSeparatorThicknessProperty}" Value="True" ValueSource="TemplatedParent" />
+            </dxi:ConditionalRenderBinding>
+            <dxi:ConditionalRenderBinding
+                DependencyProperty="{x:Static dxi:SplitButtonAppearanceOptions.SeparatorThicknessProperty}"
+                TargetName="IsFocused"
+                TargetProperty="BorderThickness"
+                ValueSource="TemplatedParent">
+                <dxi:RenderCondition DependencyProperty="{x:Static dxi:SplitButtonAppearanceOptions.HasSeparatorThicknessProperty}" Value="True" ValueSource="TemplatedParent" />
+            </dxi:ConditionalRenderBinding>
+            <!-- APPEARANCE END -->
+        </dxi:RenderTemplate.Triggers>
+    </dxi:RenderTemplate>
+    <dxi:RenderTemplate x:Key="DropDownGlyph">
+        <dxi:RenderBorder
+            Name="Root"
+            Background="Transparent"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch">
+            <dxi:RenderPath
+                Name="Path"
+                Data="F1 M 0,0 8,0 4,4 0,0 Z "
+                Fill="{StaticResource Brush.Foreground}"
+                Height="4"
+                HorizontalAlignment="Center"
+                Stretch="Fill"
+                VerticalAlignment="Center"
+                Width="8" />
+        </dxi:RenderBorder>
+        <dxi:RenderTemplate.Triggers>
+            <dxi:RenderStateGroup Name="MouseStates">
+                <dxi:RenderStateTrigger Name="Normal" />
+                <dxi:RenderStateTrigger Name="MouseOver">
+                    <dxi:RenderSetter Property="Fill" TargetName="Path" Value="{StaticResource Brush.HoverForeground}" />
+                </dxi:RenderStateTrigger>
+            </dxi:RenderStateGroup>
+            <dxi:RenderTrigger DependencyProperty="{x:Static dx:ThemeManager.IsTouchEnabledProperty}" Value="True">
+                <dxi:RenderSetter Property="MinWidth" TargetName="Root" Value="42" />
+            </dxi:RenderTrigger>
+            <dxi:RenderBinding
+                DependencyProperty="{x:Static dx:DropDownButtonBase.ArrowPaddingProperty}"
+                TargetName="Path"
+                TargetProperty="Margin"
+                ValueSource="TemplatedParent" />
+        </dxi:RenderTemplate.Triggers>
+    </dxi:RenderTemplate>
+    <dxi:RenderTemplate x:Key="{dxt:LWKey DropDownButton.RenderSplitButtonTemplate}">
+        <dxi:RenderPanel Name="GlyphContentAndArrow">
+            <dxi:RenderButtonBorder Name="GlyphContentAndArrowBorder" RenderTemplate="{StaticResource {dxt:LWKey DropDownButton.BorderTemplate}}" Visibility="Collapsed" />
+            <dxi:RenderPanel LayoutProvider="{dxi:DockPanelLayoutProvider LastChildFill=True}">
+                <dxi:RenderPanel Name="PART_Arrow" LayoutProvider="{dxi:CanvasLayoutProvider}">
+                    <dxi:RenderButtonBorder Name="ArrowBorder" RenderTemplate="{StaticResource {dxt:LWKey DropDownButton.ArrowBorderTemplate}}" />
+                    <dxi:RenderImage
+                        Name="ArrowGlyph"
+                        HorizontalAlignment="Center"
+                        ShouldCalcDpiAwareThickness="False"
+                        Stretch="None"
+                        VerticalAlignment="Center"
+                        Visibility="Visible" />
+                    <dxi:RenderContentControl
+                        Name="DefaultArrowGlyph"
+                        HorizontalAlignment="Stretch"
+                        RenderTemplate="{StaticResource DropDownGlyph}"
+                        ShouldCalcDpiAwareThickness="False"
+                        UsePropagatedIsMouseOver="True"
+                        VerticalAlignment="Stretch"
+                        Visibility="Collapsed" />
+                </dxi:RenderPanel>
+                <dxi:RenderPanel Name="PART_GlyphAndContent" HorizontalAlignment="Stretch">
+                    <dxi:RenderButtonBorder Name="GlyphAndContentBorder" RenderTemplate="{StaticResource {dxt:LWKey DropDownButton.ContentBorderTemplate}}" />
+                    <dxi:RenderPanel Name="RenderPanel" HorizontalAlignment="Stretch" ShouldCalcDpiAwareThickness="False">
+                        <dxi:RenderPanel LayoutProvider="{dxi:DockPanelLayoutProvider LastChildFill=True}">
+                            <dxi:RenderImage
+                                Name="Image"
+                                Dock="Left"
+                                HorizontalAlignment="Center"
+                                Stretch="Uniform"
+                                StretchDirection="DownOnly"
+                                VerticalAlignment="Center" />
+                            <dxi:RenderBorder Name="BorderOffset" Dock="Left" />
+                            <dxi:RenderContentPresenter Name="ContentPresenter" />
+                        </dxi:RenderPanel>
+                    </dxi:RenderPanel>
+                </dxi:RenderPanel>
+            </dxi:RenderPanel>
+        </dxi:RenderPanel>
+        <dxi:RenderTemplate.Triggers>
+            <dxi:RenderBinding
+                DependencyProperty="{x:Static dx:DropDownButtonBase.ForegroundProperty}"
+                TargetName="ContentPresenter"
+                TargetProperty="Foreground"
+                ValueSource="TemplatedParent" />
+            <dxi:RenderBinding
+                DependencyProperty="{x:Static dx:DropDownButtonBase.GlyphProperty}"
+                TargetName="Image"
+                TargetProperty="Source"
+                ValueSource="TemplatedParent" />
+            <dxi:RenderBinding
+                DependencyProperty="{x:Static dx:DropDownButtonBase.ArrowGlyphProperty}"
+                TargetName="ArrowGlyph"
+                TargetProperty="Source"
+                ValueSource="TemplatedParent" />
+            <dxi:RenderBinding
+                DependencyProperty="{x:Static dx:DropDownButtonBase.GlyphToContentOffsetProperty}"
+                TargetName="BorderOffset"
+                TargetProperty="Width"
+                ValueSource="TemplatedParent" />
+            <dxi:RenderBinding
+                DependencyProperty="{x:Static dx:DropDownButtonBase.GlyphToContentOffsetProperty}"
+                TargetName="BorderOffset"
+                TargetProperty="Height"
+                ValueSource="TemplatedParent" />
+            <dxi:RenderBinding
+                DependencyProperty="{x:Static dx:DropDownButtonBase.GlyphAlignmentProperty}"
+                TargetName="Image"
+                TargetProperty="Dock"
+                ValueSource="TemplatedParent" />
+            <dxi:RenderBinding
+                DependencyProperty="{x:Static dx:DropDownButtonBase.ArrowAlignmentProperty}"
+                TargetName="PART_Arrow"
+                TargetProperty="Dock"
+                ValueSource="TemplatedParent" />
+            <dxi:RenderBinding DependencyProperty="{x:Static dx:DropDownButtonBase.ContentProperty}" TargetName="ContentPresenter" ValueSource="TemplatedParent" />
+            <dxi:RenderBinding DependencyProperty="{x:Static dx:DropDownButtonBase.ContentTemplateProperty}" TargetName="ContentPresenter" ValueSource="TemplatedParent" />
+            <dxi:RenderBinding
+                DependencyProperty="{x:Static dx:SimpleButton.VerticalContentAlignmentProperty}"
+                TargetName="RenderPanel"
+                TargetProperty="VerticalAlignment"
+                ValueSource="TemplatedParent" />
+            <dxi:RenderBinding
+                DependencyProperty="{x:Static dx:SimpleButton.HorizontalContentAlignmentProperty}"
+                TargetName="RenderPanel"
+                TargetProperty="HorizontalAlignment"
+                ValueSource="TemplatedParent" />
+            <dxi:RenderBinding
+                DependencyProperty="{x:Static dx:DropDownButtonBase.PaddingProperty}"
+                TargetName="RenderPanel"
+                TargetProperty="Margin"
+                ValueSource="TemplatedParent" />
+            <dxi:RenderBinding
+                DependencyProperty="{x:Static dx:DropDownButtonBase.ArrowPaddingProperty}"
+                TargetName="ArrowGlyph"
+                TargetProperty="Margin"
+                ValueSource="TemplatedParent" />
+            <dxi:RenderTrigger DependencyProperty="{x:Static dx:DropDownButtonBase.ArrowGlyphProperty}" Value="{x:Null}" ValueSource="TemplatedParent">
+                <dxi:RenderSetter Property="Visibility" TargetName="ArrowGlyph" Value="Collapsed" />
+                <dxi:RenderSetter Property="Visibility" TargetName="DefaultArrowGlyph" Value="Visible" />
+            </dxi:RenderTrigger>
+            <dxi:RenderTrigger DependencyProperty="{x:Static dx:DropDownButtonBase.GlyphAlignmentProperty}" Value="Left" ValueSource="TemplatedParent">
+                <dxi:RenderSetter Property="Dock" TargetName="Image" Value="Left" />
+                <dxi:RenderSetter Property="Dock" TargetName="BorderOffset" Value="Left" />
+                <dxi:RenderSetter Property="Dock" TargetName="ContentPresenter" Value="Right" />
+            </dxi:RenderTrigger>
+            <dxi:RenderTrigger DependencyProperty="{x:Static dx:DropDownButtonBase.GlyphAlignmentProperty}" Value="Right" ValueSource="TemplatedParent">
+                <dxi:RenderSetter Property="Dock" TargetName="Image" Value="Right" />
+                <dxi:RenderSetter Property="Dock" TargetName="BorderOffset" Value="Right" />
+                <dxi:RenderSetter Property="Dock" TargetName="ContentPresenter" Value="Left" />
+            </dxi:RenderTrigger>
+            <dxi:RenderTrigger DependencyProperty="{x:Static dx:DropDownButtonBase.GlyphAlignmentProperty}" Value="Top" ValueSource="TemplatedParent">
+                <dxi:RenderSetter Property="Dock" TargetName="Image" Value="Top" />
+                <dxi:RenderSetter Property="Dock" TargetName="BorderOffset" Value="Top" />
+                <dxi:RenderSetter Property="Dock" TargetName="ContentPresenter" Value="Bottom" />
+            </dxi:RenderTrigger>
+            <dxi:RenderTrigger DependencyProperty="{x:Static dx:DropDownButtonBase.GlyphAlignmentProperty}" Value="Bottom" ValueSource="TemplatedParent">
+                <dxi:RenderSetter Property="Dock" TargetName="Image" Value="Bottom" />
+                <dxi:RenderSetter Property="Dock" TargetName="BorderOffset" Value="Bottom" />
+                <dxi:RenderSetter Property="Dock" TargetName="ContentPresenter" Value="Top" />
+            </dxi:RenderTrigger>
+            <dxi:RenderTrigger DependencyProperty="{x:Static dx:DropDownButtonBase.ArrowAlignmentProperty}" Value="Left" ValueSource="TemplatedParent">
+                <dxi:RenderSetter Property="Dock" TargetName="PART_GlyphAndContent" Value="Right" />
+                <dxi:RenderSetter Property="Placement" TargetName="GlyphAndContentBorder" Value="Right" />
+                <dxi:RenderSetter Property="Dock" TargetName="PART_Arrow" Value="Left" />
+                <dxi:RenderSetter Property="Placement" TargetName="ArrowBorder" Value="Left" />
+            </dxi:RenderTrigger>
+            <dxi:RenderTrigger DependencyProperty="{x:Static dx:DropDownButtonBase.ArrowAlignmentProperty}" Value="Right" ValueSource="TemplatedParent">
+                <dxi:RenderSetter Property="Dock" TargetName="PART_GlyphAndContent" Value="Left" />
+                <dxi:RenderSetter Property="Placement" TargetName="GlyphAndContentBorder" Value="Left" />
+                <dxi:RenderSetter Property="Dock" TargetName="PART_Arrow" Value="Right" />
+                <dxi:RenderSetter Property="Placement" TargetName="ArrowBorder" Value="Right" />
+            </dxi:RenderTrigger>
+            <dxi:RenderTrigger DependencyProperty="{x:Static dx:DropDownButtonBase.ArrowAlignmentProperty}" Value="Top" ValueSource="TemplatedParent">
+                <dxi:RenderSetter Property="Dock" TargetName="PART_GlyphAndContent" Value="Bottom" />
+                <dxi:RenderSetter Property="Placement" TargetName="GlyphAndContentBorder" Value="Bottom" />
+                <dxi:RenderSetter Property="Dock" TargetName="PART_Arrow" Value="Top" />
+                <dxi:RenderSetter Property="Placement" TargetName="ArrowBorder" Value="Top" />
+            </dxi:RenderTrigger>
+            <dxi:RenderTrigger DependencyProperty="{x:Static dx:DropDownButtonBase.ArrowAlignmentProperty}" Value="Bottom" ValueSource="TemplatedParent">
+                <dxi:RenderSetter Property="Dock" TargetName="PART_GlyphAndContent" Value="Top" />
+                <dxi:RenderSetter Property="Placement" TargetName="GlyphAndContentBorder" Value="Top" />
+                <dxi:RenderSetter Property="Dock" TargetName="PART_Arrow" Value="Bottom" />
+                <dxi:RenderSetter Property="Placement" TargetName="ArrowBorder" Value="Bottom" />
+            </dxi:RenderTrigger>
+        </dxi:RenderTemplate.Triggers>
+    </dxi:RenderTemplate>
+    <ControlTemplate x:Key="{dxt:LWKey DropDownButton.SplitButtonTemplate}" TargetType="{x:Type ButtonBase}">
+        <dxi:DropDownButtonChrome x:Name="PART_Owner" RenderTemplate="{StaticResource {dxt:LWKey DropDownButton.RenderSplitButtonTemplate}}" />
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter TargetName="PART_Owner" Property="Opacity" Value="{StaticResource {dxt:LWKey DropDownButton.ButtonOpacity}}" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+    <!--#endregion Button-->
+    <!--#region Buttons.xaml-->
+    <!--#endregion Buttons.xaml-->
+    <!-- ThemedWindow -->
+</ResourceDictionary>

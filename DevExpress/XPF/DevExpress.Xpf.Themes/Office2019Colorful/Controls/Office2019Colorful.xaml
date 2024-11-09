@@ -1,0 +1,18 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:dxt="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys">
+  <ResourceDictionary.MergedDictionaries>
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2019Colorful.v24.1;component/Controls/WindowsUI/Office2019Colorful/FadingButton.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2019Colorful.v24.1;component/Controls/WindowsUI/Office2019Colorful/FlipView.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2019Colorful.v24.1;component/Controls/WindowsUI/Office2019Colorful/PageView.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2019Colorful.v24.1;component/Controls/WindowsUI/Office2019Colorful/SlideView.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2019Colorful.v24.1;component/Controls/WindowsUI/Office2019Colorful/CommandButton.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2019Colorful.v24.1;component/Controls/WindowsUI/Office2019Colorful/AppBar.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2019Colorful.v24.1;component/Controls/WindowsUI/Office2019Colorful/Flyout.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2019Colorful.v24.1;component/Controls/WindowsUI/Office2019Colorful/TouchNavigator.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2019Colorful.v24.1;component/Controls/WindowsUI/Office2019Colorful/TileNavPane.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2019Colorful.v24.1;component/Controls/WindowsUI/Office2019Colorful/HamburgerMenu.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2019Colorful.v24.1;component/Controls/WindowsUI/Office2019Colorful/BreadcrumbControl.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2019Colorful.v24.1;component/Controls/Wizard/Office2019Colorful/UICore.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2019Colorful.v24.1;component/Controls/Office2019Colorful/StepProgressBar.xaml" />
+  </ResourceDictionary.MergedDictionaries>
+  <!-- General -->
+</ResourceDictionary>

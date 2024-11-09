@@ -1,0 +1,245 @@
+<ResourceDictionary mc:Ignorable="cs"
+                    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:cs="colorscheme_ignorable_uri"
+                    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+                    xmlns:dxcn="http://schemas.devexpress.com/winfx/2008/xaml/core/internal"
+                    xmlns:dxrt="http://schemas.devexpress.com/winfx/2008/xaml/ribbon/themekeys"
+                    xmlns:dxt="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys"
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/DevExpress.Xpf.Themes.LightGray.v24.1;component/DevExpress.Xpf.Core/DevExpress.Xpf.Core/Themes/Generic/ThemedWindow.xaml"/>
+        <ResourceDictionary Source="/DevExpress.Xpf.Themes.LightGray.v24.1;component/DevExpress.Xpf.Core/DevExpress.Xpf.Core/Themes/Generic/DropShadow.xaml"/>
+        <ResourceDictionary Source="/DevExpress.Xpf.Themes.LightGray.v24.1;component/DevExpress.Xpf.Ribbon/Generic/RibbonControlBoxButton.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+    <sys:Boolean x:Key="{dxt:ThemedWindowThemeKey ResourceKey=RoundWindowCorners}">False</sys:Boolean>
+
+    <!--Opacity-->
+
+    <sys:Double x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowInactiveHeaderOpacity}">0.7</sys:Double>
+
+    <!--Header height-->
+
+    <sys:Double x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowHeaderHeight}">32</sys:Double>
+
+    <sys:Double x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowIconHeight}">16</sys:Double>
+
+    <sys:Double x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowIconWidth}">16</sys:Double>
+
+    <!-- SearchBox widths -->
+
+    <sys:Double x:Key="{dxt:ThemedWindowSearchBoxThemeKey ResourceKey=MinWidth}">50</sys:Double>
+
+    <sys:Double x:Key="{dxt:ThemedWindowSearchBoxThemeKey ResourceKey=MaxWidth}">200</sys:Double>
+
+    <!--TitleFont Properties-->
+
+    <sys:Double x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowTitleFontSize}">12</sys:Double>
+
+    <FontWeight x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowTitleFontWeight}">Normal</FontWeight>
+
+    <!--Thickness-->
+
+    <Thickness x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowBorderThickness}">1</Thickness>
+
+    <Thickness x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowContentBorderThickness}">0</Thickness>
+
+    <Thickness x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowRibbonContentBorderThickness}">0</Thickness>
+
+    <Thickness x:Key="{dxt:ThemedWindowThemeKey ResourceKey=HeaderNormalPadding}">5,0,5,0</Thickness>
+
+    <Thickness x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowNormalPadding}">0</Thickness>
+
+    <sys:Double x:Key="{dxt:ThemedWindowThemeKey ResourceKey=TabbedModeDefaultTopMargin}">0</sys:Double>
+
+    <Thickness x:Key="{dxt:ThemedWindowThemeKey ResourceKey=HeaderRibbonPadding}">5,0,5,0</Thickness>
+
+    <Thickness x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowIconMargin}">0,0,5,0</Thickness>
+
+    <Thickness x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowRibbonPadding}">0</Thickness>
+
+    <Thickness x:Key="{dxt:ThemedWindowThemeKey ResourceKey=SizeGripMargin}">0,0,6,6</Thickness>
+
+    <Thickness x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowTitleControlMargin}">0,0,5,0</Thickness>
+
+    <Thickness x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowToolbarMargin}">0,0,5,0</Thickness>
+
+    <Thickness x:Key="{dxt:ThemedWindowThemeKey ResourceKey=HeaderControlBoxBorderThickness}">1,0,1,1</Thickness>
+
+    <!-- Colors -->
+
+    <Color x:Key="{dxt:AcrylicThemedWindowThemeKey ResourceKey=AcrylicColor}">#FF3D3D3D</Color>
+
+    <!--Brushes-->
+
+    <SolidColorBrush x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowActiveBackground}" Color="#FF3D3D3D"/>
+
+    <SolidColorBrush x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowActiveBorderBrush}" Color="#FF3D3D3D"/>
+
+    <SolidColorBrush x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowActiveContentBackground}" Color="#FFF7F7F7"/>
+
+    <SolidColorBrush x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowActiveContentBorderBrush}" Color="#FFF7F7F7"/>
+
+    <SolidColorBrush x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowInactiveBackground}" Color="#FFF7F7F7"/>
+
+    <SolidColorBrush x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowInactiveBorderBrush}" Color="#FF6d6d6d"/>
+
+    <SolidColorBrush x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowInactiveContentBackground}" Color="#FFF7F7F7"/>
+
+    <SolidColorBrush x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowInactiveContentBorderBrush}" Color="#FFF7F7F7"/>
+
+    <SolidColorBrush x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowTitleForeground}" Color="#FFFFFFFF"/>
+
+    <SolidColorBrush x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowRibbonTitleForeground}" Color="#FFFFFFFF"/>
+
+    <SolidColorBrush x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowContentForeground}" Color="#FF000000"/>
+
+    <SolidColorBrush x:Key="{dxt:ThemedWindowThemeKey ResourceKey=HeaderControlBoxBorderBrush}" Color="#FF3D3D3D"/>
+
+    <SolidColorBrush x:Key="{dxt:ThemedWindowThemeKey ResourceKey=BackButtonForegroundNormalState}" Color="#FFFFFFFF"/>
+
+    <SolidColorBrush x:Key="{dxt:ThemedWindowThemeKey ResourceKey=BackButtonForegroundMouseOverState}" Color="#FFFFFFFF"/>
+
+    <SolidColorBrush x:Key="{dxt:ThemedWindowThemeKey ResourceKey=BackButtonForegroundPressedState}" Color="#FFFFFFFF"/>
+
+    <!--GradientBrushes-->
+
+    <LinearGradientBrush x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowActiveHeaderBackground}"
+                         EndPoint="0.5,1"
+                         StartPoint="0.5,0">
+        <GradientStop Color="#FF8A8A8A" cs:id="GradientStop_0000"/>
+        <GradientStop Color="#FF747474"
+                      Offset="1"
+                      cs:id="GradientStop_0001"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowInactiveHeaderBackground}"
+                         EndPoint="0.5,1"
+                         StartPoint="0.5,0">
+        <GradientStop Color="#FFb3b3b3"
+                      Offset="0"
+                      cs:id="GradientStop_0000"/>
+        <GradientStop Color="#FFa5a5a5"
+                      Offset="1"
+                      cs:id="GradientStop_0001"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowRibbonActiveHeaderBackground}"
+                         EndPoint="0.5,1"
+                         StartPoint="0.5,0">
+        <GradientStop Color="#FF8A8A8A" cs:id="GradientStop_0000"/>
+        <GradientStop Color="#FF747474"
+                      Offset="1"
+                      cs:id="GradientStop_0001"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowRibbonInactiveHeaderBackground}"
+                         EndPoint="0.5,1"
+                         StartPoint="0.5,0">
+        <GradientStop Color="#FFb3b3b3"
+                      Offset="0"
+                      cs:id="GradientStop_0000"/>
+        <GradientStop Color="#FFa5a5a5"
+                      Offset="1"
+                      cs:id="GradientStop_0001"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="{dxt:ThemedWindowThemeKey ResourceKey=HeaderControlBoxBackground}"
+                         EndPoint="0.5,1"
+                         StartPoint="0.5,0">
+        <GradientStop Color="#FF676767"
+                      Offset="0"
+                      cs:id="GradientStop_0000"/>
+        <GradientStop Color="#FF555555"
+                      Offset="1"
+                      cs:id="GradientStop_0001"/>
+    </LinearGradientBrush>
+
+    <!--VerticalAlignment-->
+
+    <VerticalAlignment x:Key="{dxt:ThemedWindowThemeKey ResourceKey=HeaderControlBoxVerticalAlignment}">Top</VerticalAlignment>
+
+    <!--TitleAlignment-->
+
+    <dx:WindowTitleAlignment x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowTitleAlignment}">Left</dx:WindowTitleAlignment>
+
+    <!--____Back Button Slyte & Template____-->
+
+    <!--BackButton Glyph Template-->
+
+    <DataTemplate x:Key="{dxt:ThemedWindowThemeKey ResourceKey=BackButtonBackgroundGlyph}">
+        <Grid>
+            <Path Data="F1 M 0,4L 4,0L 4,3L 9,3L 9,5L 4,5L 4,8L 0,4 Z "
+                  Fill="{Binding Path=(TextElement.Foreground), RelativeSource={RelativeSource Self}}"
+                  Height="8"
+                  Stretch="Fill"
+                  Width="9"/>
+        </Grid>
+    </DataTemplate>
+
+    <!--BackButton Normal Background-->
+
+    <ControlTemplate x:Key="{dxt:ThemedWindowThemeKey ResourceKey=BackButtonBackgroundNormalState}"/>
+
+    <!--BackButton MouseOver Background-->
+
+    <ControlTemplate x:Key="{dxt:ThemedWindowThemeKey ResourceKey=BackButtonBackgroundMouseoverState}">
+        <Border x:Name="border">
+            <Border.Background>
+                <LinearGradientBrush EndPoint="0.5,1"
+                                     StartPoint="0.5,0"
+                                     cs:id="LinearGradientBrush_0000">
+                    <GradientStop Color="#FF999999"
+                                  Offset="0"
+                                  cs:id="GradientStop_0000"/>
+                    <GradientStop Color="#FF909090"
+                                  Offset="1"
+                                  cs:id="GradientStop_0001"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+    </ControlTemplate>
+
+    <!--BackButton Pressed Background-->
+
+    <ControlTemplate x:Key="{dxt:ThemedWindowThemeKey ResourceKey=BackButtonBackgroundPressedState}">
+        <Border x:Name="border" Opacity="1">
+            <Border.Background>
+                <LinearGradientBrush EndPoint="0.5,1"
+                                     StartPoint="0.5,0"
+                                     cs:id="LinearGradientBrush_0000">
+                    <GradientStop Color="#FF666666"
+                                  Offset="0"
+                                  cs:id="GradientStop_0000"/>
+                    <GradientStop Color="#FF606060"
+                                  Offset="1"
+                                  cs:id="GradientStop_0001"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+    </ControlTemplate>
+
+    <!--BackButtonStyle-->
+
+    <Style x:Key="{dxt:ThemedWindowThemeKey ResourceKey=BackButtonStyle}" TargetType="{x:Type dx:ThemedWindowBackButton}">
+        <Setter Property="Visibility" Value="Collapsed"/>
+        <Setter Property="Width" Value="21"/>
+        <Setter Property="Height" Value="16"/>
+        <Setter Property="IsTabStop" Value="False"/>
+        <Setter Property="Template" Value="{DynamicResource {dxt:ThemedWindowThemeKey ResourceKey=BackButtonTemplate}}"/>
+        <Setter Property="dxcn:WindowChrome.IsHitTestVisibleInChrome" Value="True"/>
+    </Style>
+
+    <!--WindowStyle-->
+
+    <Style x:Key="{dxt:DefaultStyleThemeKey FullName=DevExpress.Xpf.Core.ThemedWindow}"
+           BasedOn="{StaticResource ResourceKey={dxt:ThemedWindowThemeKey ResourceKey=WindowStyle}}"
+           TargetType="{x:Type dx:ThemedWindow}">
+        <Setter Property="dx:HeaderItemControl.ExtendedCommonTemplateProvider" Value="{DynamicResource {dxt:RibbonHeaderItemsThemeKey ResourceKey=RibbonHeaderItemControlCommonTemplateProvider}}"/>
+        <Setter Property="dx:HeaderItemControl.ExtendedCloseTemplateProvider" Value="{DynamicResource {dxt:RibbonHeaderItemsThemeKey ResourceKey=RibbonHeaderItemControlCloseTemplateProvider}}"/>
+    </Style>
+
+</ResourceDictionary>

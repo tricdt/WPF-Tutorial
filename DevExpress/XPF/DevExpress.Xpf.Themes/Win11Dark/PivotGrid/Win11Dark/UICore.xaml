@@ -1,0 +1,60 @@
+<ResourceDictionary mc:Ignorable="cs" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:cs="colorscheme_ignorable_uri" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxi="http://schemas.devexpress.com/winfx/2008/xaml/core/internal" xmlns:dxpg="http://schemas.devexpress.com/winfx/2008/xaml/pivotgrid" xmlns:dxpgi="http://schemas.devexpress.com/winfx/2008/xaml/pivotgrid/internal" xmlns:dxt="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sys="clr-namespace:System;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ResourceDictionary.MergedDictionaries>
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win11Dark.v24.1;component/UICore/UIData.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win11Dark.v24.1;component/PivotGrid/Win11Dark/UICustom.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Win11Dark.v24.1;component/PivotGrid/Win11Dark/UIPreset.xaml" />
+  </ResourceDictionary.MergedDictionaries>
+  <!-- Resources -->
+  <SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=FilterPanelForeground}" Color="#FFFFFFFF" x:Uid="@Color=Foreground.Primary" />
+  <SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=PivotBackground}" Color="#FF292929" x:Uid="@Color=Editor.Background" />
+  <SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=PivotBorderBrush}" Color="#FF404040" x:Uid="@Color=PanelBorder" />
+  <!-- Header -->
+  <SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=HeaderForeground}" Color="#FFFFFFFF" x:Uid="@Color=Foreground.Primary" />
+  <SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=HeaderMouseOverForeground}" Color="#FFFFFFFF" x:Uid="@Color=Foreground.Primary" />
+  <SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=HeaderNormalGradient}" Color="#FF292929" x:Uid="@Color=Editor.Background" />
+  <SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=HeaderActiveGradient}" Color="#FF2F2F2F" x:Uid="@Color=Editor.HoverBackground" />
+  <SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=HeaderEmptyTextForeground}" Color="#FFFFFFFF" Opacity="0.62" x:Uid="@Color=Foreground.Primary" />
+  <!-- Indicator -->
+  <SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=ResizingIndicatorBrush}" Color="#FFFFFFFF" x:Uid="@Color=Foreground.Primary" />
+  <SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=DataAreaCuttedTextForeground}" Color="#FFFFFFFF" x:Uid="@Color=Foreground.Primary" />
+  <!-- Filter -->
+  <SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=FilterColor}" Color="#FFB8B8B8" x:Uid="@Color=Foreground.Secondary" />
+  <SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=FilterMouseOverColor}" Color="#FFFFFFFF" Opacity="1" x:Uid="@Color=Foreground.Primary" />
+  <!-- Cell -->
+  <SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=CellValueBrush}" Color="#FF292929" x:Uid="@Color=Editor.Background" />
+  <SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=CellValueBorderBrush}" Color="#FF7D7D7D" x:Uid="@Color=Border" />
+  <SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=CellForegroundBrush}" Color="#FFFFFFFF" x:Uid="@Color=Foreground.Primary" />
+  <SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=CellSelectedBrush}" Color="#FF325B6D" x:Uid="@Color=ListItem.SelectionAlt" />
+  <SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=CellSelectedForegroundBrush}" Color="#FFFFFFFF" x:Uid="@Color=Foreground.Primary" />
+  <!-- Total Cell -->
+  <SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=CellTotalBrush}" Color="#0AFFFFFF" Opacity="0.55" x:Uid="@Color=ListItem.SelectionBackground" />
+  <SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=CellTotalForegroundBrush}" Color="#FFFFFFFF" x:Uid="@Color=Foreground.Primary" />
+  <SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=CellTotalSelectedBrush}" Color="#FF325B6D" x:Uid="@Color=ListItem.SelectionAlt" />
+  <SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=CellTotalSelectedForegroundBrush}" Color="#FFFFFFFF" x:Uid="@Color=Foreground.Primary" />
+  <!-- Field -->
+  <SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=FieldValueBorderBrush}" Color="#FF7D7D7D" x:Uid="@Color=Border" />
+  <SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=FieldValueOuterBorderBrush}" Color="#FF7D7D7D" x:Uid="@Color=Border" />
+  <SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=FieldValueBackground}" Color="#FF292929" x:Uid="@Color=Editor.Background" />
+  <SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=ValueForegroundBrush}" Color="#FFFFFFFF" x:Uid="@Color=Foreground.Primary" />
+  <SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=FieldTotalBrush}" Color="#0FFFFFFF" x:Uid="@Color=ListItem.HoverBackground" />
+  <SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=ValueTotalForegroundBrush}" Color="#FFFFFFFF" x:Uid="@Color=Foreground.Primary" />
+  <SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=FieldValueSelectedBrush}" Color="#FF325B6D" x:Uid="@Color=ListItem.SelectionAlt" />
+  <SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=ValueTotalSelectedBrush}" Color="#0AFFFFFF" x:Uid="@Color=ListItem.SelectionBackground" />
+  <SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=ValueSelectedForegroundBrush}" Color="#FFFFFFFF" x:Uid="@Color=Foreground.Primary" />
+  <SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=ValueTotalSelectedForegroundBrush}" Color="#FFFFFFFF" x:Uid="@Color=Foreground.Primary" />
+  <!-- Group -->
+  <SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=GroupButtonFill}" Color="#FFFFFFFF" x:Uid="@Color=Foreground.Primary" />
+  <SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=GroupBorderBrush}" Color="Transparent" />
+  <SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=ScrollingCornerGradient}" Color="Transparent" />
+  <!-- Focus -->
+  <SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=FocusedDataItemStroke}" Color="#FFFFFFFF" x:Uid="@Color=Foreground.Primary" />
+  <!-- Area -->
+  <SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=AreaSeparatorBrush}" Color="#FF7D7D7D" x:Uid="@Color=Border" />
+  <!-- Field List -->
+  <SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=HeaderControlsColor}" Color="#FFFFFFFF" x:Uid="@Color=Foreground.Primary" />
+  <SolidColorBrush x:Key="{dxpgi:PivotGridThemeKey ResourceKey=FieldListBackgroundBrush}" Color="#FF292929" x:Uid="@Color=Editor.Background" />
+  <SolidColorBrush x:Key="{dxpgi:AppearanceThemeKey ResourceKey=FieldListDragTextForeground}" Color="#FFFFFFFF" x:Uid="@Color=Foreground.Primary" />
+  <sys:Double x:Key="{dxpgi:AppearanceThemeKey ResourceKey=FieldListHiddenFieldsShowGridMinHeight}">16</sys:Double>
+  <sys:Double x:Key="{dxpgi:AppearanceThemeKey ResourceKey=FieldListUpdateButtonMinHeight}">24</sys:Double>
+  <sys:Double x:Key="{dxpgi:AppearanceThemeKey ResourceKey=FieldListUpdateButtonMinWidth}">78</sys:Double>
+</ResourceDictionary>

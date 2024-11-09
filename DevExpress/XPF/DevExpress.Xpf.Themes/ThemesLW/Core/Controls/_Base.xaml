@@ -1,0 +1,98 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:dxi="http://schemas.devexpress.com/winfx/2008/xaml/core/internal"
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+    xmlns:dxt="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys">
+    <ResourceDictionary.MergedDictionaries>
+        <dxi:ThemeResourceDictionary Path="Common/{ThemeName}/Common.xaml" />
+        <dxi:ThemeResourceDictionary Path="Core/Controls/_{ThemeName}.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <DataTemplate x:Key="{dxt:LWKey DXTabItem.FocusedBackground}">
+        <dxi:TabBorder
+            x:Name="IsDefault"
+            BackgroundMode="None"
+            BorderBackground="Transparent"
+            BorderBrush="{dx:LWBrush 'Brush.Focused, Office2019Black=Brush.Foreground, VS2019Blue=Brush.Backstage.Delimiter'}"
+            BorderMargin="0,-2,1,0"
+            BorderMode="BorderBrush"
+            BorderThickness="0,2,0,0"
+            HoldBorderMargin="0,0,1,1"
+            HoldBorderThickness="1"
+            ViewInfo="{Binding}" />
+    </DataTemplate>
+
+    <ControlTemplate x:Key="{dxt:LWKey SuperTip.BorderTemplate}" TargetType="ContentControl">
+        <ContentPresenter />
+    </ControlTemplate>
+    <ControlTemplate x:Key="{dxt:LWKey SuperTip.Template}" TargetType="dx:SuperTipControl">
+        <ContentControl Template="{StaticResource {dxt:LWKey SuperTip.BorderTemplate}}" Foreground="{TemplateBinding Foreground}">
+            <ItemsPresenter />
+        </ContentControl>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="DefaultWaitIndicator" TargetType="{x:Type ProgressBar}">
+        <Grid x:Name="Root">
+            <Path
+                x:Name="Content"
+                Height="{TemplateBinding Height}"
+                Margin="{TemplateBinding Margin}"
+                RenderTransformOrigin="0.5,0.5"
+                Style="{StaticResource UIShape.WaitIndicator}"
+                Width="{TemplateBinding Width}">
+                <Path.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform />
+                        <SkewTransform />
+                        <RotateTransform Angle="0" />
+                        <TranslateTransform />
+                    </TransformGroup>
+                </Path.RenderTransform>
+            </Path>
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Determinate" />
+                    <VisualState x:Name="Indeterminate">
+                        <Storyboard Timeline.DesiredFrameRate="{x:Static dx:WaitIndicator.DesiredFrameRate}">
+                            <DoubleAnimationUsingKeyFrames RepeatBehavior="Forever" Storyboard.TargetName="Content" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
+                                <EasingDoubleKeyFrame KeyTime="0" Value="0" />
+                                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="359" />
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </Grid>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="{dxt:LWKey WaitIndicator.WaitIndicatorContainerTemplate}" TargetType="{x:Type dx:WaitIndicatorContainer}">
+        <dx:DXBorder Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+            <ContentPresenter />
+        </dx:DXBorder>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="{dxt:LWKey RibbonHeaderItems.RibbonCloseButtonBackgroundMouseOverState}">
+        <dx:DXBorder x:Name="CloseButtonMouseOverState" Background="{dx:LWBrush 'Brush.Backstage.HoverBackground, Office2019Black=Brush.Window.CloseButton.HoverBackground, Office2019Colorful=Brush.Window.CloseButton.HoverBackground, Office2019HighContrast=Brush.Window.CloseButton.HoverBackground, Win10Dark=Brush.Window.CloseButton.HoverBackground, Win10Light=Brush.Window.CloseButton.HoverBackground'}" />
+        <ControlTemplate.Triggers>
+            <DataTrigger Binding="{Binding Path=ActualRoundCorners, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type dx:ThemedWindow}}, FallbackValue=False}" Value="true">
+                <Setter Property="CornerRadius" TargetName="CloseButtonMouseOverState" Value="0,7,0,0" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding WindowState, RelativeSource={RelativeSource AncestorType=Window}}" Value="Maximized">
+                <Setter Property="CornerRadius" TargetName="CloseButtonMouseOverState" Value="0,0,0,0" />
+            </DataTrigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="{dxt:LWKey RibbonHeaderItems.RibbonCloseButtonBackgroundPressedState}">
+        <dx:DXBorder x:Name="CloseButtonPressedState" Background="{dx:LWBrush 'Brush.Backstage.SelectionBackground, Office2019Black=Brush.Window.CloseButton.SelectionBackground, Office2019Colorful=Brush.Window.CloseButton.SelectionBackground, Office2019HighContrast=Brush.Window.CloseButton.SelectionBackground, Win10Dark=Brush.Window.HeaderButton.SelectionBackground, Win10Light=Brush.Window.HeaderButton.SelectionBackground'}" />
+        <ControlTemplate.Triggers>
+            <DataTrigger Binding="{Binding Path=ActualRoundCorners, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type dx:ThemedWindow}}, FallbackValue=False}" Value="true">
+                <Setter Property="CornerRadius" TargetName="CloseButtonPressedState" Value="0,7,0,0" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding WindowState, RelativeSource={RelativeSource AncestorType=Window}}" Value="Maximized">
+                <Setter Property="CornerRadius" TargetName="CloseButtonPressedState" Value="0,0,0,0" />
+            </DataTrigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+</ResourceDictionary>

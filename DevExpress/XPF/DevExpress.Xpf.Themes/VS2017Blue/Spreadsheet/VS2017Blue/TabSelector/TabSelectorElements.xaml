@@ -1,0 +1,31 @@
+<ResourceDictionary mc:Ignorable="cs" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:cs="colorscheme_ignorable_uri" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxi="http://schemas.devexpress.com/winfx/2008/xaml/core/internal" xmlns:dxsps="http://schemas.devexpress.com/winfx/2008/xaml/spreadsheet" xmlns:dxspsi="http://schemas.devexpress.com/winfx/2008/xaml/spreadsheet/internal" xmlns:dxspst="http://schemas.devexpress.com/winfx/2008/xaml/spreadsheet/themekeys" xmlns:dxt="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sys="clr-namespace:System;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ResourceDictionary.MergedDictionaries>
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.VS2017Blue.v24.1;component/Spreadsheet/VS2017Blue/UICore.xaml" />
+  </ResourceDictionary.MergedDictionaries>
+  <!-- General -->
+  <Style x:Key="{dxspst:SpreadsheetThemeKey ResourceKey=ResizeThumbStyle}" TargetType="{x:Type Thumb}">
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type Thumb}">
+          <Border x:Name="Root" Background="#FFDCE0EC" BorderBrush="#FF8E9BBC" BorderThickness="0,1,1,0" cs:id="Border_0001" x:Uid="@Background=Button.Background;BorderBrush=Border">
+            <Path x:Name="Content" Fill="#FF1E1E1E" Style="{StaticResource UIShape.SizeGrip.Vertical}" cs:id="Path_0000" x:Uid="@Fill=Foreground" />
+          </Border>
+          <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+              <Setter Property="Fill" TargetName="Content" Value="#FF1E1E1E" cs:id="Setter_0001" x:Uid="@Value=HoverForeground" />
+              <Setter Property="Background" TargetName="Root" Value="#FFFDF4BF" cs:id="Setter_0000" x:Uid="@Value=HoverBackground" />
+              <Setter Property="Opacity" TargetName="Root" Value="1" />
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+              <Setter Property="Opacity" TargetName="Root" Value="0.26" />
+            </Trigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <!-- Scroll Corner -->
+  <Style x:Key="{dxspst:SpreadsheetThemeKey ResourceKey=BottomRightCornerStyle}" TargetType="{x:Type Border}">
+    <Setter Property="Background" Value="#FFDCE0EC" cs:id="Setter_0000" x:Uid="@Value=Button.Background" />
+  </Style>
+</ResourceDictionary>

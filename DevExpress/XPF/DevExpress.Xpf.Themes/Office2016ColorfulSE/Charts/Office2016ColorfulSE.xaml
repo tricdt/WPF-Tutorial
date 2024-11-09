@@ -1,0 +1,20 @@
+<ResourceDictionary mc:Ignorable="cs" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:cs="colorscheme_ignorable_uri" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/charts" xmlns:dxct="http://schemas.devexpress.com/winfx/2008/xaml/charts/themekeys" xmlns:dxi="http://schemas.devexpress.com/winfx/2008/xaml/core/internal" xmlns:dxt="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sys="clr-namespace:System;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ResourceDictionary.MergedDictionaries>
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016ColorfulSE.v24.1;component/Charts/Office2016ColorfulSE/UICore.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016ColorfulSE.v24.1;component/Charts/Office2016ColorfulSE/Axis.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016ColorfulSE.v24.1;component/Charts/Office2016ColorfulSE/AxisScrollBar.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016ColorfulSE.v24.1;component/Charts/Office2016ColorfulSE/Legend.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016ColorfulSE.v24.1;component/Charts/Office2016ColorfulSE/Diagram2D.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016ColorfulSE.v24.1;component/Charts/Office2016ColorfulSE/Diagram3D.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016ColorfulSE.v24.1;component/Charts/Office2016ColorfulSE/DropTarget.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016ColorfulSE.v24.1;component/Charts/Office2016ColorfulSE/SeriesLabel.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016ColorfulSE.v24.1;component/Charts/Office2016ColorfulSE/ChartControl.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016ColorfulSE.v24.1;component/Charts/Office2016ColorfulSE/Annotation.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016ColorfulSE.v24.1;component/Charts/Office2016ColorfulSE/Titles.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016ColorfulSE.v24.1;component/Charts/Office2016ColorfulSE/ToolTip.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016ColorfulSE.v24.1;component/Charts/Office2016ColorfulSE/Crosshair.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016ColorfulSE.v24.1;component/Charts/Office2016ColorfulSE/SankeyDiagramControl.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Office2016ColorfulSE.v24.1;component/Charts/Office2016ColorfulSE/HeatmapControl.xaml" />
+  </ResourceDictionary.MergedDictionaries>
+  <!-- General -->
+</ResourceDictionary>

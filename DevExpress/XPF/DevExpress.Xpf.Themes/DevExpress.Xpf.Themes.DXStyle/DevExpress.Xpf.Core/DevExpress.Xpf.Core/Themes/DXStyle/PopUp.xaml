@@ -1,0 +1,119 @@
+<ResourceDictionary mc:Ignorable="cs"
+                    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:cs="colorscheme_ignorable_uri"
+                    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+                    xmlns:dxt="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys"
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Visibility x:Key="Visibility.Collapsed">Collapsed</Visibility>
+
+    <Thickness x:Key="ZeroMargin">0</Thickness>
+
+    <CornerRadius x:Key="ZeroCornerRadius">0</CornerRadius>
+
+    <ControlTemplate x:Key="{dxt:PopupBaseThemeKey ResourceKey=BorderTemplate}" TargetType="{x:Type dx:PopupBorderControl}">
+        <Grid Name="Root" ClipToBounds="False">
+            <Border x:Name="Border"
+                    Background="#FFFFFFFF"
+                    BorderBrush="#FF9DA0AA"
+                    BorderThickness="1"
+                    Height="{TemplateBinding ContentHeight}"
+                    Margin="0,0,8,8"
+                    MaxHeight="{TemplateBinding ContentMaxHeight}"
+                    MaxWidth="{TemplateBinding ContentMaxWidth}"
+                    MinHeight="{TemplateBinding ContentMinHeight}"
+                    MinWidth="{TemplateBinding ContentMinWidth}"
+                    Width="{TemplateBinding ContentWidth}"
+                    cs:id="Border_0005">
+                <Grid x:Name="Shadow">
+                    <Border BorderBrush="#BB000000"
+                            BorderThickness="4"
+                            CornerRadius="4"
+                            Margin="-4"
+                            Opacity="0.01"
+                            cs:id="Border_0003"/>
+                    <Border BorderBrush="#BB000000"
+                            BorderThickness="3"
+                            CornerRadius="3"
+                            Margin="-3"
+                            Opacity="0.02"
+                            cs:id="Border_0004"/>
+                    <Border BorderBrush="#BB000000"
+                            BorderThickness="2"
+                            CornerRadius="2"
+                            Margin="-2"
+                            Opacity="0.03"
+                            cs:id="Border_0000"/>
+                    <Border BorderBrush="#BB000000"
+                            BorderThickness="1"
+                            CornerRadius="1"
+                            Margin="-1"
+                            Opacity="0.05"
+                            cs:id="Border_0006"/>
+                    <ContentPresenter/>
+                </Grid>
+            </Border>
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="AppType">
+                    <VisualState x:Name="Standalone"/>
+                    <VisualState x:Name="BrowserHosted"/>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </Grid>
+        <ControlTemplate.Triggers>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="IsLeft" Value="False"/>
+                    <Condition Property="DropOpposite" Value="True"/>
+                </MultiTrigger.Conditions>
+                <Setter Property="Margin"
+                        TargetName="Border"
+                        Value="0,8,8,0"/>
+                <Setter Property="Effect" TargetName="Border">
+                    <Setter.Value>
+                        <DropShadowEffect BlurRadius="5"
+                                          Direction="45"
+                                          Opacity="0.15"
+                                          ShadowDepth="3"/>
+                    </Setter.Value>
+                </Setter>
+            </MultiTrigger>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="IsLeft" Value="True"/>
+                    <Condition Property="DropOpposite" Value="True"/>
+                </MultiTrigger.Conditions>
+                <Setter Property="Effect" TargetName="Border">
+                    <Setter.Value>
+                        <DropShadowEffect BlurRadius="5"
+                                          Direction="135"
+                                          Opacity="0.15"
+                                          ShadowDepth="3"/>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="Margin"
+                        TargetName="Border"
+                        Value="8,8,0,0"/>
+            </MultiTrigger>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="IsLeft" Value="True"/>
+                    <Condition Property="DropOpposite" Value="False"/>
+                </MultiTrigger.Conditions>
+                <Setter Property="Effect" TargetName="Border">
+                    <Setter.Value>
+                        <DropShadowEffect BlurRadius="5"
+                                          Direction="225"
+                                          Opacity="0.15"
+                                          ShadowDepth="3"/>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="Margin"
+                        TargetName="Border"
+                        Value="8,0,0,8"/>
+            </MultiTrigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+</ResourceDictionary>

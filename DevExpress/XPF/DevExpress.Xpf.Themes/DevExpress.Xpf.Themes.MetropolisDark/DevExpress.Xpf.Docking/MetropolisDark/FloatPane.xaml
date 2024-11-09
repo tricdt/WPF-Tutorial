@@ -1,0 +1,252 @@
+﻿<ResourceDictionary mc:Ignorable="cs"
+                    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:cs="colorscheme_ignorable_uri"
+                    xmlns:dxcn="http://schemas.devexpress.com/winfx/2008/xaml/core/internal"
+                    xmlns:dxdo="http://schemas.devexpress.com/winfx/2008/xaml/docking"
+                    xmlns:dxt="http://schemas.devexpress.com/winfx/2008/xaml/docking/themekeys"
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib"
+                    xmlns:ve="http://schemas.devexpress.com/winfx/2008/xaml/docking/visualelements"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Thickness x:Key="{dxt:FloatPaneElementsThemeKey ResourceKey=BorderMargin}">0</Thickness>
+
+    <Thickness x:Key="{dxt:FloatPaneElementsThemeKey ResourceKey=ShadowMargin}">8,8,3,3</Thickness>
+
+    <Thickness x:Key="{dxt:FloatPaneElementsThemeKey ResourceKey=FormBorderMargin}">3,3,3,3</Thickness>
+
+    <Thickness x:Key="{dxt:FloatPaneElementsThemeKey ResourceKey=SingleBorderMargin}">0</Thickness>
+
+    <Thickness x:Key="{dxt:FloatPaneElementsThemeKey ResourceKey=MaximizedBorderMargin}">0</Thickness>
+
+    <system:Double x:Key="{dxt:FloatPaneElementsThemeKey ResourceKey=ResizingSideLength}">6</system:Double>
+
+    <system:Double x:Key="{dxt:FloatPaneElementsThemeKey ResourceKey=ResizingCornerLength}">10</system:Double>
+
+    <system:Double x:Key="{dxt:FloatPaneElementsThemeKey ResourceKey=MinHeight}">84</system:Double>
+
+    <system:Double x:Key="{dxt:FloatPaneElementsThemeKey ResourceKey=MinWidth}">84</system:Double>
+
+    <Point x:Key="{dxt:FloatPaneElementsThemeKey ResourceKey=WindowDraggingOffset}"
+           X="3"
+           Y="3"/>
+
+    <ControlTemplate x:Key="{dxt:FloatPaneElementsThemeKey ResourceKey=SingleBorderTemplate}" TargetType="ve:FormBorderControl">
+        <Grid>
+            <Border x:Name="background"
+                    Background="{DynamicResource {dxt:BrushElementsThemeKey ResourceKey=PanelBackground}}"
+                    Margin="2"
+                    ve:DockPane.HitTestType="Border"/>
+            <Grid x:Name="PART_Content" Margin="{TemplateBinding ActualContentMargin}">
+                <ve:LayoutItemsControl x:Name="layoutItemsControl"
+                                       ItemsSource="{Binding Path=ItemsInternal}"
+                                       Margin="{Binding Path=ActualMargin}"
+                                       Orientation="{Binding Path=Orientation}"
+                                       ve:DockPane.HitTestType="Content"/>
+            </Grid>
+            <ve:ResizeBoundsControl x:Name="PART_ResizeBorders"/>
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="SizeStates">
+                    <VisualState x:Name="EmptySizeState"/>
+                    <VisualState x:Name="Maximized">
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames dxcn:ValueSetter.Visibility="Collapsed"
+                                                           Storyboard.TargetName="PART_ResizeBorders"
+                                                           Storyboard.TargetProperty="Visibility"/>
+                            <ObjectAnimationUsingKeyFrames dxcn:ValueSetter.Thickness="0"
+                                                           Storyboard.TargetName="background"
+                                                           Storyboard.TargetProperty="Margin"/>
+                            <ObjectAnimationUsingKeyFrames dxcn:ValueSetter.Thickness="0"
+                                                           Storyboard.TargetName="layoutItemsControl"
+                                                           Storyboard.TargetProperty="Margin"/>
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </Grid>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="{dxt:FloatPaneElementsThemeKey ResourceKey=EmptyBorderTemplate}" TargetType="ve:FormBorderControl">
+        <Grid>
+            <Grid>
+                <Border Background="#FF000000"
+                        CornerRadius="2"
+                        cs:Name="Border_0002"
+                        IsHitTestVisible="False"
+                        Margin="{TemplateBinding ActualShadowMargin}"
+                        Opacity="0.15"
+                        cs:MetropolisLight.Background="#CF000000"
+                       />
+                <Border Background="#00000000"
+                        cs:Name="Border_0003"
+                        Margin="{TemplateBinding ActualBorderMargin}"
+                        ve:DockPane.HitTestType="Border"
+                        cs:MetropolisLight.Background="#00000000"
+                       >
+                </Border>
+            </Grid>
+            <Grid x:Name="PART_Content" Margin="{TemplateBinding ActualContentMargin}">
+                <ve:LayoutItemsControl ItemsSource="{Binding Path=ItemsInternal}"
+                                       Margin="{Binding Path=ActualMargin}"
+                                       Orientation="{Binding Path=Orientation}"
+                                       ve:DockPane.HitTestType="Content"/>
+            </Grid>
+            <ve:ResizeBoundsControl x:Name="PART_ResizeBorders"/>
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="SizeStates">
+                    <VisualState x:Name="EmptySizeState"/>
+                    <VisualState x:Name="Maximized">
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames dxcn:ValueSetter.Visibility="Collapsed"
+                                                           Storyboard.TargetName="PART_ResizeBorders"
+                                                           Storyboard.TargetProperty="Visibility"/>
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </Grid>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="{dxt:FloatPaneElementsThemeKey ResourceKey=FormBorderTemplate}" TargetType="ve:FormBorderControl">
+        <Grid>
+            <ve:FormBorderContentControl Padding="{TemplateBinding ActualBorderMargin}">
+                <ve:LayoutItemsControl ItemsSource="{Binding Path=ItemsInternal}"
+                                       Margin="{Binding Path=ActualMargin}"
+                                       Orientation="{Binding Path=Orientation}"
+                                       ve:DockPane.HitTestType="Content"/>
+            </ve:FormBorderContentControl>
+            <ve:ResizeBoundsControl x:Name="PART_ResizeBorders"/>
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="SizeStates">
+                    <VisualState x:Name="EmptySizeState"/>
+                    <VisualState x:Name="Maximized">
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames dxcn:ValueSetter.Visibility="Collapsed"
+                                                           Storyboard.TargetName="PART_ResizeBorders"
+                                                           Storyboard.TargetProperty="Visibility"/>
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </Grid>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="{dxt:FloatPaneElementsThemeKey ResourceKey=FormBorderContentTemplate}" TargetType="ve:FormBorderContentControl">
+        <Border Background="{DynamicResource {dxt:DockPaneElementsThemeKey ResourceKey=BorderBrush}}" ve:DockPane.HitTestType="Border">
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="ActiveStates">
+                    <VisualState x:Name="Active"/>
+                    <VisualState x:Name="Inactive">
+                        <Storyboard>
+                            <DoubleAnimation Duration="0"
+                                             Storyboard.TargetName="PART_CaptionControlPresenter"
+                                             Storyboard.TargetProperty="(Control.Opacity)"
+                                             To="0.35"/>
+                            <DoubleAnimation Duration="0"
+                                             Storyboard.TargetName="PART_ControlBox"
+                                             Storyboard.TargetProperty="(Control.Opacity)"
+                                             To="0.5"/>
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+            <Border Background="{DynamicResource {dxt:BrushElementsThemeKey ResourceKey=PanelBackground}}" Margin="2">
+                <Grid MinHeight="22">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <ve:FloatingDragWidget x:Name="GroupHeader"
+                                           Background="Transparent"
+                                           cs:Name="Border_0001"
+                                           Grid.Row="0"
+                                           ve:DockPane.HitTestType="Header"
+                                           cs:MetropolisLight.Background="#00000000"
+                                          >
+                        <Grid Margin="4,1,1,2">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <ve:TemplatedCaptionControl x:Name="PART_CaptionControlPresenter"
+                                                        cs:Name="TemplatedCaptionControl_0001"
+                                                        Foreground="#BFFFFFFF"
+                                                        LayoutItem="{Binding}"
+                                                        cs:MetropolisLight.Foreground="#FF373A3D"
+                                                       />
+                            <ve:WindowControlBoxControl x:Name="PART_ControlBox"
+                                                        ButtonHeight="17"
+                                                        ButtonStyle="{DynamicResource {dxt:FloatPaneElementsThemeKey ResourceKey=FloatPaneButtonStyle}}"
+                                                        ButtonWidth="17"
+                                                        CloseButtonTemplate="{DynamicResource {dxt:FloatPaneElementsThemeKey ResourceKey=CloseButton}}"
+                                                        Grid.Column="1"
+                                                        LayoutItem="{Binding}"
+                                                        MaximizeButtonTemplate="{DynamicResource {dxt:FloatPaneElementsThemeKey ResourceKey=MaximizeButton}}"
+                                                        MinimizeButtonTemplate="{DynamicResource {dxt:FloatPaneElementsThemeKey ResourceKey=MinimizeButton}}"
+                                                        RestoreButtonTemplate="{DynamicResource {dxt:FloatPaneElementsThemeKey ResourceKey=RestoreButton}}"/>
+                        </Grid>
+                    </ve:FloatingDragWidget>
+                    <Border x:Name="PART_Content"
+                            BorderBrush="{DynamicResource {dxt:DockPaneElementsThemeKey ResourceKey=BorderBrush}}"
+                            Grid.Row="1"
+                            ve:DockPane.HitTestType="Content">
+                        <ContentPresenter/>
+                    </Border>
+                </Grid>
+            </Border>
+        </Border>
+        <ControlTemplate.Triggers>
+            <DataTrigger Binding="{Binding Path=(dxdo:DockLayoutManager.DockLayoutManager).ViewStyle, RelativeSource={RelativeSource Self}}" Value="Light">
+                <Setter Property="BorderThickness"
+                        TargetName="PART_Content"
+                        Value="0,1,0,0"/>
+            </DataTrigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="{dxt:MinimizedFloatGroupsItemElementsThemeKey ResourceKey=Template}" TargetType="{x:Type ve:MinimizedFloatGroupsItem}">
+        <Border x:Name="PART_CaptionBackground"
+                Background="#FF515151"
+                BorderBrush="#FF333333"
+                BorderThickness="1"
+                cs:Name="Border_0005"
+                Margin="0,1,1,0"
+                UseLayoutRounding="True"
+                ve:DockPane.HitTestType="Header"
+                cs:MetropolisLight.Background="#FFB9B9B9"
+                cs:MetropolisLight.BorderBrush="#FFB9B9B9"
+               >
+            <Grid UseLayoutRounding="True">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Border Background="#FF515151"
+                        BorderBrush="#FF515151"
+                        BorderThickness="1"
+                        cs:Name="Border_0007"
+                        Grid.ColumnSpan="2"
+                        cs:MetropolisLight.Background="#FFB9B9B9"
+                        cs:MetropolisLight.BorderBrush="#FFB9B9B9"
+                       />
+                <ve:TemplatedCaptionControl cs:Name="TemplatedCaptionControl_0002"
+                                            DataContext="{TemplateBinding ActualLayoutItem}"
+                                            Foreground="#FF929292"
+                                            LayoutItem="{Binding}"
+                                            Padding="5,3"
+                                            cs:MetropolisLight.Foreground="#FF373A3D"
+                                           />
+                <ve:MinimizedItemControlBoxControl x:Name="PART_ControlBox"
+                                                   ButtonHeight="17"
+                                                   ButtonWidth="17"
+                                                   CloseButtonTemplate="{DynamicResource {dxt:DockPaneElementsThemeKey ResourceKey=CloseButton}}"
+                                                   Grid.Column="1"
+                                                   LayoutItem="{TemplateBinding ActualLayoutItem}"
+                                                   Margin="0,0,1,0"
+                                                   MaximizeButtonTemplate="{DynamicResource {dxt:DockPaneElementsThemeKey ResourceKey=MaximizeButton}}"
+                                                   RestoreButtonTemplate="{DynamicResource {dxt:DockPaneElementsThemeKey ResourceKey=RestoreButton}}"/>
+            </Grid>
+        </Border>
+    </ControlTemplate>
+
+</ResourceDictionary>

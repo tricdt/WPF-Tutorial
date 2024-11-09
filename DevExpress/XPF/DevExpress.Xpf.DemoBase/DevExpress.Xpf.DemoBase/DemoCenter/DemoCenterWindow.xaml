@@ -1,0 +1,217 @@
+﻿<dx:ThemedWindow x:Class="DevExpress.Xpf.DemoCenter.DemoCenterWindow"
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+                 xmlns:internal="clr-namespace:DevExpress.Xpf.DemoCenter.Internal"
+                 xmlns:dxt="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys"
+                 xmlns:sys="clr-namespace:System;assembly=mscorlib"
+                 xmlns:democenter="clr-namespace:DevExpress.Xpf.DemoCenter"
+                 xmlns:dbhelpers="clr-namespace:DevExpress.Xpf.DemoCenterBase.Helpers"
+                 xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
+                 xmlns:helpers="clr-namespace:DevExpress.Xpf.DemoBase.Helpers"
+                 xmlns:dxdb="clr-namespace:DevExpress.Xpf.DemoBase"
+                 MinHeight="700"
+                 MinWidth="800"
+                 Width="1244"
+                 Height="820"
+                 Focusable="False"
+                 UseLayoutRounding="True"
+                 Background="White"
+                 ResizeMode="CanMinimize"
+                 WindowStartupLocation="CenterScreen"
+                 ControlBoxButtonSet="Close"
+                 Title="Demo Center"
+                 Padding="0"
+                 ShowTitle="False"
+                 ShowIcon="False">
+    <dx:ThemedWindow.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/DevExpress.Xpf.DemoBase.v24.1;component/DemoCenterBase/DemoWindow/DemoScrollBar.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <sys:Double x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowHeaderHeight, ThemeName=Office2019Colorful}">70</sys:Double>
+            <SolidColorBrush x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowInactiveHeaderBackground, ThemeName=Office2019Colorful}">#FF26A4DD</SolidColorBrush>
+            <SolidColorBrush x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowActiveHeaderBackground, ThemeName=Office2019Colorful}">#FF26A4DD</SolidColorBrush>
+            <sys:Double x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowInactiveHeaderOpacity, ThemeName=Office2019Colorful}">1</sys:Double>
+            <SolidColorBrush x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowActiveBorderBrush, ThemeName=Office2019Colorful}" Color="#FF7E7E7E" />
+            <SolidColorBrush x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowInactiveBorderBrush, ThemeName=Office2019Colorful}" Color="#FF7E7E7E" />
+            <Style x:Key="UIShape.WindowClose" TargetType="{x:Type Path}">
+                <Setter Property="Data" Value="F1 M 0,1L 1,0L 6,5L 11,0L 12,1L 7,6L 12,11L 11,12L 6,7L 1,12L 0,11L 5,6L 0,1 Z"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="SnapsToDevicePixels" Value="True"/>
+                <Setter Property="Stretch" Value="Fill"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+            </Style>
+            <Style x:Key="HeaderCloseButtonStyle" TargetType="{x:Type dx:HeaderItemControl}">
+                <Setter Property="Width" Value="70" />
+                <Setter Property="Height" Value="70" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type dx:HeaderItemControl}">
+                            <Image x:Name="icon" Width="36" Height="36"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   SnapsToDevicePixels="True"
+                                   Stretch="None"
+                                   Source="{dx:SvgImageSource AutoSize=False, Size=36\,36, Uri='pack://application:,,,/DevExpress.Xpf.DemoBase.v24.1;component/DemoCenterBase/Images/Close.svg'}">
+                            </Image>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="Opacity" Value="0.5" />
+                <Style.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter Property="Opacity" Value="1" />
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+            <dx:CloseHeaderItemControlTemplateProvider x:Key="{dxt:ThemedWindowThemeKey ResourceKey=HeaderItemControlCloseTemplateProvider, ThemeName=Office2019Colorful}"
+                                                       HeaderItemControlStyle="{StaticResource HeaderCloseButtonStyle}"
+            />
+            <Style TargetType="Button" x:Key="platformButtonStyle">
+                <Setter Property="AutomationProperties.AutomationId" Value="{Binding Content.Name, RelativeSource={RelativeSource Self}}" />
+                <Setter Property="Margin" Value="0,0,6,0" />
+                <Setter Property="Foreground" Value="#FF33A3DC"/>
+                <Setter Property="Command" Value="{Binding Content.StartDemoLauncherCommand, RelativeSource={RelativeSource Self}}" />
+                <Setter Property="IsEnabled" Value="{Binding Content.IsInstalled, RelativeSource={RelativeSource Self}}" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border Margin="6,5,3,5" Cursor="Hand" Background="Transparent" HorizontalAlignment="Left">
+                                <StackPanel Orientation="Horizontal" Margin="0,0,3,0">
+                                    <Image x:Name="image">
+                                        <dx:WpfSvgPalette.Palette>
+                                            <dx:WpfSvgPalette>
+                                                <SolidColorBrush x:Key="GreenColor" Color="#FF33A3DC" />
+                                            </dx:WpfSvgPalette>
+                                        </dx:WpfSvgPalette.Palette>
+                                        <dxmvvm:Interaction.Behaviors>
+                                            <helpers:SvgImageBehavior UriString="{DXBinding '`pack://application:,,,/DevExpress.Xpf.DemoBase.v24.1;component/DemoCenter/Images/Platforms/` + @p.Content.ImageName + `.svg`'}"
+                                                                                              AutoSize="False"
+                                                                                              Size="30,30"
+                                                                                              Target="{x:Static Image.SourceProperty}" />
+                                        </dxmvvm:Interaction.Behaviors>
+                                    </Image>
+                                    <TextBlock Text="{DXBinding '$democenter:PlatformTitles.GetTitle(@p.Content)'}"
+                                                   FontFamily="Segoe UI, Tahoma" FontWeight="Bold"
+                                                   FontSize="13" Margin="8,0,0,1" VerticalAlignment="Center" x:Name="text" />
+                                </StackPanel>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter TargetName="text" Property="TextDecorations" Value="Underline" />
+                                </Trigger>
+                                <Trigger Property="IsEnabled" Value="False">
+                                    <Setter TargetName="image" Property="dx:WpfSvgPalette.Palette">
+                                        <Setter.Value>
+                                            <dx:WpfSvgPalette>
+                                                <SolidColorBrush x:Key="GreenColor" Color="#FFCDCDCD" />
+                                            </dx:WpfSvgPalette>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+                <Style.Triggers>
+                    <Trigger Property="IsEnabled" Value="False">
+                        <Setter Property="Foreground" Value="#FFCDCDCD"/>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+        </ResourceDictionary>
+    </dx:ThemedWindow.Resources>
+    <dx:ThemedWindow.ToolbarItems>
+        <StackPanel Orientation="Horizontal" IsHitTestVisible="False">
+            <Image Width="146" Height="24" Stretch="None" Margin="46,0,0,0" Source="{dx:SvgImageSource Uri='pack://application:,,,/DevExpress.Xpf.DemoBase.v24.1;component/DemoCenter/Images/LogoWhite.svg', AutoSize=False, Size=146\,24}" VerticalAlignment="Center" />
+            <Border Margin="24,17,23,13" Background="White" BorderBrush="White" BorderThickness="1,0,0,0" Width="1" Opacity="0.5"
+                    Visibility="{Binding Source={x:Static internal:PlatformViewModel.IsNetCore3}, Converter={dxmvvm:BooleanToVisibilityConverter}}"/>
+            <TextBlock Text=".NET Core 3 and .NET 5 Desktop Libraries" Foreground="White" Margin="0,0,0,2" FontSize="22" Focusable="False" FontFamily="{x:Static dxdb:CustomFonts.OpenSansCondensed}" VerticalAlignment="Center"
+                    Visibility="{Binding Source={x:Static internal:PlatformViewModel.IsNetCore3}, Converter={dxmvvm:BooleanToVisibilityConverter}}"/>
+        </StackPanel>
+    </dx:ThemedWindow.ToolbarItems>
+    <Grid>
+        <Image Source="pack://application:,,,/DevExpress.Xpf.DemoBase.v24.1;component/DemoCenter/Images/Awards.png" Width="489" Height="256" Stretch="Uniform" HorizontalAlignment="Right" VerticalAlignment="Top"
+               Margin="0,30,0,0" />
+        <DockPanel VerticalAlignment="Stretch" LastChildFill="False">
+            <TextBlock DockPanel.Dock="Top" Foreground="#FF26A4DD" FontSize="20" FontWeight="Bold" Focusable="False" Margin="51,40,51,5"  FontFamily="Segoe UI, Tahoma" LineHeight="24" LineStackingStrategy="BlockLineHeight">
+                <Run Text="Thanks for considering DevExpress for your"/>
+                <LineBreak/>
+                <Run Text="software development needs."/>
+            </TextBlock>
+            <TextBlock DockPanel.Dock="Top" Text="Let's Get Started..." FontSize="48" Foreground="#404040" FontFamily="{x:Static dxdb:CustomFonts.OpenSansCondensed}" FontWeight="Bold" Focusable="False" Margin="51,92,0,0" />
+            <TextBlock DockPanel.Dock="Top" Text="Select your favorite platform from the list below to explore our demo applications." FontSize="16" Foreground="#6D6D6D" FontFamily="Segoe UI, Tahoma" Focusable="False" Margin="51,0" />
+            <Grid DockPanel.Dock="Top" Margin="45,30,45,45" Focusable="False" VerticalAlignment="Bottom">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" MinWidth="220" />
+                    <ColumnDefinition Width="*" MinWidth="220" />
+                    <ColumnDefinition Width="*" MinWidth="220" />
+                    <ColumnDefinition Width="*" MinWidth="220" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid Margin="6,20,0,10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="DESKTOP" FontSize="11" FontFamily="Segoe UI, Tahoma" FontWeight="Bold" Foreground="#A0A0A0" />
+                    <Border Grid.Column="1" BorderBrush="#E5E5E5" BorderThickness="0,0,0,1" Margin="10,0,14,3" />
+                </Grid>
+                <StackPanel Grid.Row="1">
+                    <Button Content="{x:Static internal:PlatformViewModel.Win}" Style="{StaticResource platformButtonStyle}" />
+                    <Button Content="{x:Static internal:PlatformViewModel.Wpf}" Style="{StaticResource platformButtonStyle}" />
+                </StackPanel>
+                <Grid Grid.Column="1" Margin="6,20,0,10"
+                                Visibility="{Binding Source={x:Static internal:PlatformViewModel.IsNetCore3}, Converter={dxmvvm:BooleanToVisibilityConverter Inverse=True}}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="WEB" FontSize="11" FontFamily="Segoe UI, Tahoma" FontWeight="Bold" Foreground="#A0A0A0" />
+                    <Border Grid.Column="1" BorderBrush="#E5E5E5" BorderThickness="0,0,0,1" Margin="10,0,14,3" />
+                </Grid>
+                <StackPanel Grid.Row="1" Grid.Column="1"
+                                Visibility="{Binding Source={x:Static internal:PlatformViewModel.IsNetCore3}, Converter={dxmvvm:BooleanToVisibilityConverter Inverse=True}}">
+                    <Button Content="{x:Static internal:PlatformViewModel.Asp}" Style="{StaticResource platformButtonStyle}" />
+                    <Button Content="{x:Static internal:PlatformViewModel.Mvc}" Style="{StaticResource platformButtonStyle}" />
+                    <Button Content="{x:Static internal:PlatformViewModel.Blazor}" Style="{StaticResource platformButtonStyle}" />
+                    <Button Content="{x:Static internal:PlatformViewModel.Bootstrap}" Style="{StaticResource platformButtonStyle}" />
+                    <Button Content="{x:Static internal:PlatformViewModel.DevExtreme}" Style="{StaticResource platformButtonStyle}" />
+                    <Button Content="{x:Static internal:PlatformViewModel.AspNetCore}" Style="{StaticResource platformButtonStyle}" />
+                </StackPanel>
+                <Grid Grid.Row="0" Grid.Column="{DXBinding '$internal:PlatformViewModel.IsNetCore3 ? 1 : 2'}" Margin="6,20,0,10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="REPORTING AND ANALYTICS" FontSize="11" FontFamily="Segoe UI, Tahoma" FontWeight="Bold" Foreground="#A0A0A0" />
+                    <Border Grid.Column="1" BorderBrush="#E5E5E5" BorderThickness="0,0,0,1" Margin="10,0,14,3" />
+                </Grid>
+                <StackPanel Grid.Row="1" Grid.Column="{DXBinding '$internal:PlatformViewModel.IsNetCore3 ? 1 : 2'}">
+                    <Button Content="{x:Static internal:PlatformViewModel.Reporting}" Style="{StaticResource platformButtonStyle}" />
+                    <Button Content="{x:Static internal:PlatformViewModel.Dashboards}" Style="{StaticResource platformButtonStyle}" />
+                    <Button Content="{x:Static internal:PlatformViewModel.Docs}" Style="{StaticResource platformButtonStyle}"/>
+                </StackPanel>
+                <Grid Grid.Row="0" Grid.Column="{DXBinding '$internal:PlatformViewModel.IsNetCore3 ? 2 : 3'}" Margin="6,20,0,10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="FRAMEWORKS" FontSize="11" FontFamily="Segoe UI, Tahoma" FontWeight="Bold" Foreground="#A0A0A0" />
+                    <Border Grid.Column="1" BorderBrush="#E5E5E5" BorderThickness="0,0,0,1" Margin="10,0,14,3" />
+                </Grid>
+                <StackPanel Grid.Row="1" Grid.Column="{DXBinding '$internal:PlatformViewModel.IsNetCore3 ? 2 : 3'}">
+                    <Button Content="{x:Static internal:PlatformViewModel.Frameworks}" Style="{StaticResource platformButtonStyle}"/>
+                    <Button Content="{x:Static internal:PlatformViewModel.XAFSecurity}" Style="{StaticResource platformButtonStyle}"/>
+                </StackPanel>
+            </Grid>
+            <dbhelpers:DemoScreenFooterControl x:Name="footer" DockPanel.Dock="Bottom" Margin="-1" />
+        </DockPanel>
+    </Grid>
+</dx:ThemedWindow>

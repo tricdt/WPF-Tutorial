@@ -1,0 +1,276 @@
+﻿<ResourceDictionary mc:Ignorable="cs"
+                    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:cs="colorscheme_ignorable_uri"
+                    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+                    xmlns:dxn="http://schemas.devexpress.com/winfx/2008/xaml/core/internal"
+                    xmlns:dxt="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys"
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <dx:WpfSvgPalette x:Key="ThemedSplashScreen.LogoPalette">
+        <SolidColorBrush x:Key="BlackColor"
+                         Color="#FF7FADE1"
+                         cs:id="SolidColorBrush_0000"/>
+        <SolidColorBrush x:Key="WhiteColor"
+                         Color="#60000000"
+                         cs:id="SolidColorBrush_0001"/>
+    </dx:WpfSvgPalette>
+
+    <SolidColorBrush x:Key="ProgressBarIndicatorBrush" Color="#FF668CC4"/>
+
+    <LinearGradientBrush x:Key="ProgressBarBackgroundBrush"
+                         EndPoint="0.5,1"
+                         StartPoint="0.5,0">
+        <GradientStop Color="#FFE7E7E7"
+                      Offset="0"
+                      cs:id="GradientStop_0000"/>
+        <GradientStop Color="#FFFFFFFF"
+                      Offset="1"
+                      cs:id="GradientStop_0001"/>
+        <GradientStop Color="#FFF7F7F7"
+                      Offset="0.2"
+                      cs:id="GradientStop_0002"/>
+    </LinearGradientBrush>
+
+    <SolidColorBrush x:Key="ProgressBarBorderBrush" Color="Gray"/>
+
+    <Style x:Key="{dxt:SplashScreenThemeKey ResourceKey=TopRegionStyle}" TargetType="Border">
+        <Setter Property="Background"
+                Value="#FFE8E9E8"
+                cs:id="Setter_0000"/>
+        <Setter Property="TextBlock.Foreground"
+                Value="#FF000000"
+                cs:id="Setter_0001"/>
+        <Setter Property="BorderBrush"
+                Value="#FFB3B3B3"
+                cs:id="Setter_0002"/>
+        <Setter Property="BorderThickness" Value="1,1,1,0"/>
+    </Style>
+
+    <Style x:Key="{dxt:SplashScreenThemeKey ResourceKey=BottomRegionStyle}" TargetType="Border">
+        <Setter Property="Background"
+                Value="White"
+                cs:id="Setter_0000"/>
+        <Setter Property="TextBlock.Foreground"
+                Value="Black"
+                cs:id="Setter_0001"/>
+        <Setter Property="BorderBrush"
+                Value="#FFB3B3B3"
+                cs:id="Setter_0002"/>
+        <Setter Property="CornerRadius" Value="2"/>
+        <Setter Property="BorderThickness" Value="1,0,1,1"/>
+        <Setter Property="Height" Value="148"/>
+    </Style>
+
+    <Style x:Key="{dxt:SplashScreenThemeKey ResourceKey=ProgressBarStyle}" TargetType="ProgressBar">
+        <Setter Property="Foreground" Value="{StaticResource ProgressBarIndicatorBrush}"/>
+        <Setter Property="Background" Value="{StaticResource ProgressBarBackgroundBrush}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource ProgressBarBorderBrush}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Width" Value="350"/>
+        <Setter Property="Height" Value="16"/>
+        <Setter Property="Margin" Value="0,0,0,6"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ProgressBar}">
+                    <Grid x:Name="Root">
+                        <dxn:SplashScreenBorder Background="{TemplateBinding Background}"
+                                                BorderBrush="{TemplateBinding BorderBrush}"
+                                                BorderThickness="{TemplateBinding BorderThickness}"
+                                                CornerRadius="2">
+                            <Grid x:Name="PART_Track" Margin="1">
+                                <Grid x:Name="PART_Indicator"
+                                      ClipToBounds="True"
+                                      HorizontalAlignment="Left">
+                                    <Rectangle x:Name="Indicator" Fill="{TemplateBinding Foreground}"/>
+                                    <Grid x:Name="Animation">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="0.5*"/>
+                                            <RowDefinition Height="0.5*"/>
+                                        </Grid.RowDefinitions>
+                                        <Rectangle x:Name="IndeterminateGradientFill"
+                                                   Grid.RowSpan="2"
+                                                   RadiusX="1"
+                                                   RadiusY="1"
+                                                   StrokeThickness="1">
+                                            <Rectangle.Fill>
+                                                <LinearGradientBrush EndPoint="0,1"
+                                                                     MappingMode="Absolute"
+                                                                     SpreadMethod="Repeat"
+                                                                     StartPoint="20,1"
+                                                                     cs:id="LinearGradientBrush_0000">
+                                                    <LinearGradientBrush.Transform>
+                                                        <TransformGroup>
+                                                            <TranslateTransform X="0"/>
+                                                            <SkewTransform AngleX="45"/>
+                                                        </TransformGroup>
+                                                    </LinearGradientBrush.Transform>
+                                                    <GradientStop Color="#FFA2B9D9" cs:id="GradientStop_0000"/>
+                                                    <GradientStop Color="#FFA2B9D9"
+                                                                  Offset="0.5"
+                                                                  cs:id="GradientStop_0001"/>
+                                                    <GradientStop Color="#FFE3EDFB"
+                                                                  Offset="0.5"
+                                                                  cs:id="GradientStop_0002"/>
+                                                    <GradientStop Color="#FFE3EDFB"
+                                                                  Offset="1"
+                                                                  cs:id="GradientStop_0003"/>
+                                                </LinearGradientBrush>
+                                            </Rectangle.Fill>
+                                            <Rectangle.Triggers>
+                                                <EventTrigger RoutedEvent="Rectangle.Loaded">
+                                                    <EventTrigger.Actions>
+                                                        <BeginStoryboard>
+                                                            <Storyboard RepeatBehavior="Forever">
+                                                                <DoubleAnimation Duration="00:00:0.25"
+                                                                                 From="0"
+                                                                                 Storyboard.TargetName="IndeterminateGradientFill"
+                                                                                 Storyboard.TargetProperty="(Shape.Fill).(LinearGradientBrush.Transform).(TransformGroup.Children)[0].X"
+                                                                                 To="20"/>
+                                                            </Storyboard>
+                                                        </BeginStoryboard>
+                                                    </EventTrigger.Actions>
+                                                </EventTrigger>
+                                            </Rectangle.Triggers>
+                                        </Rectangle>
+                                    </Grid>
+                                </Grid>
+                            </Grid>
+                        </dxn:SplashScreenBorder>
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Determinate"/>
+                                <VisualState x:Name="Indeterminate">
+                                    <Storyboard RepeatBehavior="Forever">
+                                        <PointAnimationUsingKeyFrames Storyboard.TargetName="Animation" Storyboard.TargetProperty="(UIElement.RenderTransformOrigin)">
+                                            <EasingPointKeyFrame KeyTime="0" Value="-0.5,0.5"/>
+                                            <EasingPointKeyFrame KeyTime="0:0:1" Value="0.5,0.5"/>
+                                            <EasingPointKeyFrame KeyTime="0:0:2" Value="1.5,0.5"/>
+                                        </PointAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="Orientation" Value="Vertical">
+                            <Setter Property="LayoutTransform" TargetName="Root">
+                                <Setter.Value>
+                                    <RotateTransform Angle="-90"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsIndeterminate" Value="true">
+                            <Setter Property="Visibility"
+                                    TargetName="Indicator"
+                                    Value="Collapsed"/>
+                            <Setter Property="Visibility"
+                                    TargetName="Animation"
+                                    Value="Visible"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <ControlTemplate x:Key="WaitIndicatorProgressBarTemplate" TargetType="{x:Type ProgressBar}">
+        <Grid>
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Determinate"/>
+                    <VisualState x:Name="Indeterminate">
+                        <Storyboard RepeatBehavior="Forever" Timeline.DesiredFrameRate="{x:Static dx:WaitIndicator.DesiredFrameRate}">
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="path" Storyboard.TargetProperty="(Shape.Fill).(Brush.RelativeTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
+                                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                                <EasingDoubleKeyFrame KeyTime="00:00:01" Value="360"/>
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+            <Path x:Name="path"
+                  Data="F1 M 94.5,284C 94.7762,284 95,284.224 95,284.5L 95,287.5C 95,287.776 94.7762,288 94.5,288C 94.2239,288 94,287.776 94,287.5L 94,284.5C 94,284.224 94.2239,284 94.5,284 Z M 96.1919,283.341C 96.3952,283.154 96.7115,283.167 96.8984,283.37L 98.9287,285.579C 99.1156,285.782 99.1023,286.099 98.899,286.286C 98.6957,286.472 98.3794,286.459 98.1925,286.256L 96.1622,284.047C 95.9753,283.844 95.9886,283.528 96.1919,283.341 Z M 94.5,275C 94.7761,275 95,275.224 95,275.5L 95,278.5C 95,278.776 94.7761,279 94.5,279C 94.2238,279 94,278.776 94,278.5L 94,275.5C 94,275.224 94.2238,275 94.5,275 Z M 90.101,276.715C 90.3043,276.528 90.6206,276.541 90.8075,276.745L 92.8378,278.953C 93.0247,279.157 93.0114,279.473 92.8081,279.66C 92.6048,279.847 92.2885,279.833 92.1016,279.63L 90.0713,277.421C 89.8844,277.218 89.8978,276.902 90.101,276.715 Z M 92,281.513C 92,281.789 91.7762,282.013 91.5,282.013L 88.5,282.013C 88.2238,282.013 88,281.789 88,281.513C 88,281.236 88.2238,281.013 88.5,281.013L 91.5,281.013C 91.7762,281.013 92,281.236 92,281.513 Z M 92.668,283.201C 92.8549,283.405 92.8416,283.721 92.6383,283.908L 90.4297,285.938C 90.2264,286.125 89.9101,286.112 89.7232,285.908C 89.5363,285.705 89.5496,285.389 89.7529,285.202L 91.9615,283.171C 92.1648,282.985 92.4811,282.998 92.668,283.201 Z M 101,281.45C 101,281.698 100.799,281.9 100.55,281.9L 97.45,281.9C 97.2015,281.9 97,281.698 97,281.45C 97,281.201 97.2015,281 97.45,281L 100.55,281C 100.799,281 101,281.201 101,281.45 Z M 99.2514,277.064C 99.4195,277.247 99.4076,277.532 99.2246,277.7L 96.9424,279.798C 96.7595,279.966 96.4748,279.954 96.3066,279.771C 96.1384,279.588 96.1504,279.304 96.3333,279.135L 98.6155,277.037C 98.7985,276.869 99.0832,276.881 99.2514,277.064 Z "
+                  Fill="{TemplateBinding Background}"
+                  Stretch="Fill"
+                  Stroke="{x:Null}"
+                  StrokeLineJoin="Round"
+                  StrokeThickness="1"
+                  VerticalAlignment="Stretch">
+            </Path>
+        </Grid>
+    </ControlTemplate>
+
+    <Style x:Key="{dxt:SplashScreenThemeKey ResourceKey=WaitIndicatorProgressBarStyle}" TargetType="ProgressBar">
+        <Setter Property="Template" Value="{StaticResource WaitIndicatorProgressBarTemplate}"/>
+        <Setter Property="IsIndeterminate" Value="True"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Height" Value="31"/>
+        <Setter Property="Width" Value="31"/>
+        <Setter Property="MinHeight" Value="8"/>
+        <Setter Property="MinWidth" Value="8"/>
+        <Setter Property="Margin" Value="12,12,12,12"/>
+        <Setter Property="Padding" Value="4"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <LinearGradientBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterX="0.5" CenterY="0.5"/>
+                            <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                            <RotateTransform CenterX="0.5" CenterY="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </LinearGradientBrush.RelativeTransform>
+                    <GradientStop Color="#FFFFFFFF" Offset="0.25"/>
+                    <GradientStop Color="#19FFFFFF" Offset="0.6"/>
+                    <GradientStop Color="#19FFFFFF" Offset="1"/>
+                    <GradientStop Color="#FFFFFFFF"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <ControlTemplate x:Key="WaitIndicatorContainerTemplate" TargetType="ContentControl">
+        <Grid Margin="5">
+            <dxn:SplashScreenBorder Background="Black"
+                                    BorderThickness="0"
+                                    CornerRadius="4"
+                                    Margin="3,3,-3,-3"
+                                    Opacity="0.25"/>
+            <dxn:SplashScreenBorder Background="#FF474747"
+                                    CornerRadius="4"
+                                    Margin="1">
+                <dxn:SplashScreenBorder Background="#FF6E6E6E"
+                                        CornerRadius="3"
+                                        Margin="1">
+                    <ContentPresenter/>
+                </dxn:SplashScreenBorder>
+            </dxn:SplashScreenBorder>
+        </Grid>
+    </ControlTemplate>
+
+    <Style x:Key="{dxt:SplashScreenThemeKey ResourceKey=WaitIndicatorContainerStyle}" TargetType="ContentControl">
+        <Setter Property="UseLayoutRounding" Value="True"/>
+        <Setter Property="Template" Value="{StaticResource WaitIndicatorContainerTemplate}"/>
+        <Setter Property="Opacity" Value="0.9"/>
+    </Style>
+
+    <Style x:Key="{dxt:SplashScreenThemeKey ResourceKey=WaitIndicatorStatusTextBoxStyle}" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="Margin" Value="-4,0,12,0"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="TextWrapping" Value="Wrap"/>
+        <Style.Triggers>
+            <Trigger Property="Text" Value="{x:Static sys:String.Empty}">
+                <Setter Property="Visibility" Value="Collapsed"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+</ResourceDictionary>

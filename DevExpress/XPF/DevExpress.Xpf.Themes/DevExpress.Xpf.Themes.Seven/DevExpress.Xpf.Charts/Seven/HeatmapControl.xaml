@@ -1,0 +1,24 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:dxh="http://schemas.devexpress.com/winfx/2008/xaml/heatmap/themekeys"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Thickness x:Key="{dxh:HeatmapThemeKey ResourceKey=PaddingValue}">16</Thickness>
+
+    <Thickness x:Key="{dxh:HeatmapThemeKey ResourceKey=BorderThickness}">1</Thickness>
+
+    <SolidColorBrush x:Key="{dxh:HeatmapBrushesThemeKey ResourceKey=BackgroundBrush}" Color="#FFFFFFFF"/>
+
+    <SolidColorBrush x:Key="{dxh:HeatmapBrushesThemeKey ResourceKey=BorderBrush}" Color="#FF979797"/>
+
+    <SolidColorBrush x:Key="{dxh:HeatmapBrushesThemeKey ResourceKey=ToolTipForeground}" Color="#FF000000"/>
+
+    <SolidColorBrush x:Key="{dxh:HeatmapBrushesThemeKey ResourceKey=ToolTipBackground}" Color="#FFFFFFFF"/>
+
+    <SolidColorBrush x:Key="{dxh:HeatmapBrushesThemeKey ResourceKey=ToolTipBorder}" Color="#5AFFFFFF"/>
+
+    <SolidColorBrush x:Key="{dxh:HeatmapBrushesThemeKey ResourceKey=LabelForeground}" Color="Black"/>
+
+    <SolidColorBrush x:Key="{dxh:HeatmapBrushesThemeKey ResourceKey=HighlightBrush}" Color="#FFFFFFFF"/>
+
+</ResourceDictionary>

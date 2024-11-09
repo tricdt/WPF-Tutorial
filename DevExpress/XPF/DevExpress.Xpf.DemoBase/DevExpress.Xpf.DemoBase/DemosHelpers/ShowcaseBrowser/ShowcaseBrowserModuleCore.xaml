@@ -1,0 +1,79 @@
+<dxbd:DemoModule x:Class="DevExpress.Xpf.DemoBase.ShowcaseBrowserModuleCore"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      xmlns:dxbd="clr-namespace:DevExpress.Xpf.DemoBase"
+                      xmlns:dxdbhelpers="clr-namespace:DevExpress.Xpf.DemoBase.Helpers.Internal"
+                      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                      xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+                      xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol"
+                      xmlns:dxr="http://schemas.devexpress.com/winfx/2008/xaml/ribbon"
+                      xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
+                      xmlns:sys="clr-namespace:System;assembly=mscorlib"
+                      mc:Ignorable="d" x:Name="root"
+                      d:DesignWidth="800"
+                      d:DesignHeight="600">
+    <dxlc:LayoutControl Orientation="Vertical">
+        <dxlc:LayoutControl.ItemSizerStyle>
+            <Style TargetType="dxlc:ElementSizer">
+                <Setter Property="ShowResizingHandle" Value="False" />
+            </Style>
+        </dxlc:LayoutControl.ItemSizerStyle>
+        <dxr:RibbonControl>
+            <dxr:RibbonPage Caption="Demo" MergeOrder="10">
+                <dxr:RibbonPageGroup Caption="Code" MergeOrder="10">
+                    <dxr:RibbonPageGroup.Resources>
+                        <dxbd:LanguageToImageConverter x:Key="languageToImage"/>
+                    </dxr:RibbonPageGroup.Resources>
+                    <dxb:BarSplitButtonItem Content="Switch Language" RibbonStyle="Large"
+                                            LargeGlyph="{Binding ElementName=root, Path=IsCS, Converter={StaticResource languageToImage}}"
+                                            MediumGlyph="{Binding ElementName=root, Path=IsCS, Converter={StaticResource languageToImage}}">
+                        <dxb:PopupMenu>
+                            <dxb:BarCheckItem GroupIndex="1" Content="C#" IsChecked="{DXBinding '@e(root).IsCS'}" />
+                            <dxb:BarCheckItem GroupIndex="1" Content="VB" IsChecked="{DXBinding '!@e(root).IsCS', BackExpr='@e(root).IsCS=!@v'}" />
+                        </dxb:PopupMenu>
+                    </dxb:BarSplitButtonItem>
+                </dxr:RibbonPageGroup>
+            </dxr:RibbonPage>
+        </dxr:RibbonControl>
+        <dxlc:LayoutGroup Orientation="Horizontal" dxlc:LayoutControl.AllowVerticalSizing="True" MinHeight="150">
+            <TreeView x:Name="showcasesList" dxlc:LayoutControl.AllowHorizontalSizing="True" Width="350" MinWidth="150" ClipToBounds="True" VirtualizingPanel.IsVirtualizing="False">
+                <TreeView.ItemContainerStyle>
+                    <Style TargetType="TreeViewItem">
+                        <Setter Property="IsExpanded" Value="True" />
+                        <Setter Property="IsSelected" Value="{Binding IsSelected}" />
+                        <EventSetter Event="Selected" Handler="TreeViewItem_Selected"/>
+                    </Style>
+                </TreeView.ItemContainerStyle>
+                <TreeView.Resources>
+                    <HierarchicalDataTemplate DataType="{x:Type dxbd:ShowcaseNode}" ItemsSource="{Binding Children}">
+                        <TextBlock Text="{Binding Name}"/>
+                    </HierarchicalDataTemplate>
+                    <HierarchicalDataTemplate DataType="{x:Type dxbd:ShowcaseInfo}">
+                        <TextBlock Text="{Binding Name}"/>
+                    </HierarchicalDataTemplate>
+                </TreeView.Resources>
+            </TreeView>
+            <ContentPresenter x:Name="viewPresenter" MinWidth="150"/>
+        </dxlc:LayoutGroup>
+        <Grid MinHeight="150">
+            <dx:DXTabControl x:Name="tabControl" Padding="0">
+                <dx:DXTabControl.ItemHeaderTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Name}" />
+                    </DataTemplate>
+                </dx:DXTabControl.ItemHeaderTemplate>
+                <dx:DXTabControl.ItemTemplate>
+                    <DataTemplate>
+                        <dxdbhelpers:CodeViewPresenter BorderThickness="0" CodeText="{Binding CodeText}" />
+                    </DataTemplate>
+                </dx:DXTabControl.ItemTemplate>
+            </dx:DXTabControl>
+            <TextBlock Visibility="{DXBinding '@e(showcasesList).SelectedItem.HelpUri != null', Converter={dx:BooleanToVisibilityConverter}}"
+                       HorizontalAlignment="Right"
+                       VerticalAlignment="Top">
+                <Hyperlink x:Name="learnMoreLink" Click="Hyperlink_Click" NavigateUri="{DXBinding '@e(showcasesList).SelectedItem.HelpUri'}">Learn more</Hyperlink>
+            </TextBlock>
+        </Grid>
+    </dxlc:LayoutControl>
+</dxbd:DemoModule>

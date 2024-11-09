@@ -1,0 +1,31 @@
+﻿<ResourceDictionary mc:Ignorable="cs"
+                    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:cs="colorscheme_ignorable_uri"
+                    xmlns:dxdst="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys"
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.TouchlineDark.v24.1;component/DevExpress.Xpf.Dashboard/Generic/Generic.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.TouchlineDark.v24.1;component/DevExpress.Xpf.Dashboard/TouchlineDark/Templates.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.TouchlineDark.v24.1;component/DevExpress.Xpf.Dashboard/TouchlineDark/UICore.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.TouchlineDark.v24.1;component/DevExpress.Xpf.Dashboard/TouchlineDark/DeltaValuePresenter.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.TouchlineDark.v24.1;component/DevExpress.Xpf.Dashboard/TouchlineDark/CardItem.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.TouchlineDark.v24.1;component/DevExpress.Xpf.Dashboard/TouchlineDark/MapItem.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.TouchlineDark.v24.1;component/DevExpress.Xpf.Dashboard/TouchlineDark/BoundImageItem.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.TouchlineDark.v24.1;component/DevExpress.Xpf.Dashboard/TouchlineDark/ChartItem.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.TouchlineDark.v24.1;component/DevExpress.Xpf.Dashboard/TouchlineDark/ComboBoxItem.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.TouchlineDark.v24.1;component/DevExpress.Xpf.Dashboard/TouchlineDark/GaugeItem.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.TouchlineDark.v24.1;component/DevExpress.Xpf.Dashboard/TouchlineDark/GridItem.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.TouchlineDark.v24.1;component/DevExpress.Xpf.Dashboard/TouchlineDark/ImageItem.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.TouchlineDark.v24.1;component/DevExpress.Xpf.Dashboard/TouchlineDark/ListBoxItem.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.TouchlineDark.v24.1;component/DevExpress.Xpf.Dashboard/TouchlineDark/PieItem.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.TouchlineDark.v24.1;component/DevExpress.Xpf.Dashboard/TouchlineDark/PivotItem.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.TouchlineDark.v24.1;component/DevExpress.Xpf.Dashboard/TouchlineDark/RangeItem.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.TouchlineDark.v24.1;component/DevExpress.Xpf.Dashboard/TouchlineDark/TextBoxItem.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.TouchlineDark.v24.1;component/DevExpress.Xpf.Dashboard/TouchlineDark/TreemapItem.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.TouchlineDark.v24.1;component/DevExpress.Xpf.Dashboard/TouchlineDark/TreeViewItem.xaml"/>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.TouchlineDark.v24.1;component/DevExpress.Xpf.Dashboard/TouchlineDark/DateFilterItem.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+</ResourceDictionary>

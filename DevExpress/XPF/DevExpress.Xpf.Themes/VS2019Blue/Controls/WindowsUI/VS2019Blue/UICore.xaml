@@ -1,0 +1,123 @@
+<ResourceDictionary mc:Ignorable="cs" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:cs="colorscheme_ignorable_uri" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxi="http://schemas.devexpress.com/winfx/2008/xaml/core/internal" xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm" xmlns:dxnav="http://schemas.devexpress.com/winfx/2008/xaml/navigation" xmlns:dxnavi="clr-namespace:DevExpress.Xpf.Navigation.Internal;assembly=DevExpress.Xpf.Controls.v24.1" xmlns:dxt="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys" xmlns:dxwui="http://schemas.devexpress.com/winfx/2008/xaml/windowsui" xmlns:dxwuii="http://schemas.devexpress.com/winfx/2008/xaml/windowsui/internal" xmlns:dxwuit="http://schemas.devexpress.com/winfx/2008/xaml/windowsui/themekeys" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sys="clr-namespace:System;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ResourceDictionary.MergedDictionaries>
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.VS2019Blue.v24.1;component/UICore/UIData.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.VS2019Blue.v24.1;component/Controls/WindowsUI/VS2019Blue/UICustom.xaml" />
+    <dxt:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.VS2019Blue.v24.1;component/Controls/WindowsUI/VS2019Blue/UIPreset.xaml" />
+  </ResourceDictionary.MergedDictionaries>
+  <!-- AppBar -->
+  <SolidColorBrush x:Key="{dxwuit:AppBarElementsThemeKey ResourceKey=Background}" Color="#FF5D6B99" x:Uid="@Color=Backstage.Window.Background" />
+  <Color x:Key="{dxwuit:AppBarElementsThemeKey ResourceKey=AppBarButtonForegroundColor}" x:Uid="@Content_Property=Backstage.Foreground">#FFFFFFFF</Color>
+  <dxwuii:DoubleToThicknessConverter x:Key="doubleToThicknessConverter" />
+  <SolidColorBrush x:Key="{dxwuit:AppBarElementsThemeKey ResourceKey=AppBarButtonForeground}" Color="{DynamicResource {dxwuit:AppBarElementsThemeKey ResourceKey=AppBarButtonForegroundColor}}" />
+  <SolidColorBrush x:Key="{dxwuit:AppBarElementsThemeKey ResourceKey=AppBarTileButtonBackground}" Color="#FF5D6B99" x:Uid="@Color=Backstage.Window.Background" />
+  <!-- CommandButton -->
+  <Color x:Key="{dxwuit:CommandButtonElementsThemeKey ResourceKey=NormalForeColor}" x:Uid="@Content_Property=Foreground">#FF1E1E1E</Color>
+  <SolidColorBrush x:Key="{dxwuit:CommandButtonElementsThemeKey ResourceKey=NormalBorderBrush}" Color="#FFF2F5FC" x:Uid="@Color=Button.Background" />
+  <SolidColorBrush x:Key="{dxwuit:CommandButtonElementsThemeKey ResourceKey=NormalBackBrush}" Color="#FFF2F5FC" x:Uid="@Color=Button.Background" />
+  <Color x:Key="{dxwuit:CommandButtonElementsThemeKey ResourceKey=HoverForeColor}" x:Uid="@Content_Property=Foreground">#FF1E1E1E</Color>
+  <SolidColorBrush x:Key="{dxwuit:CommandButtonElementsThemeKey ResourceKey=HoverBorderBrush}" Color="#FFFBE0B3" x:Uid="@Color=HoverBackground" />
+  <SolidColorBrush x:Key="{dxwuit:CommandButtonElementsThemeKey ResourceKey=HoverBackBrush}" Color="#FFFBE0B3" x:Uid="@Color=HoverBackground" />
+  <Color x:Key="{dxwuit:CommandButtonElementsThemeKey ResourceKey=PressedForeColor}" x:Uid="@Content_Property=Foreground">#FF1E1E1E</Color>
+  <SolidColorBrush x:Key="{dxwuit:CommandButtonElementsThemeKey ResourceKey=PressedBorderBrush}" Color="#FFFCD89F" x:Uid="@Color=SelectionBackground" />
+  <SolidColorBrush x:Key="{dxwuit:CommandButtonElementsThemeKey ResourceKey=PressedBackBrush}" Color="#FFFCD89F" x:Uid="@Color=SelectionBackground" />
+  <!-- Flyout -->
+  <SolidColorBrush x:Key="{dxwuit:MenuFlyoutElementsThemeKey ResourceKey=Background}" Color="#FFFFFFFF" x:Uid="@Color=Editor.Background" />
+  <SolidColorBrush x:Key="{dxwuit:MenuFlyoutElementsThemeKey ResourceKey=Foreground}" Color="#FF1E1E1E" x:Uid="@Color=Foreground" />
+  <SolidColorBrush x:Key="{dxwuit:MenuFlyoutElementsThemeKey ResourceKey=MenuFlyoutSeparatorForeground}" Color="#FFBFC3D9" x:Uid="@Color=Delimiter" />
+  <SolidColorBrush x:Key="{dxwuit:MenuFlyoutElementsThemeKey ResourceKey=PressedBackground}" Color="#FFFCD89F" x:Uid="@Color=SelectionBackground" />
+  <SolidColorBrush x:Key="{dxwuit:MenuFlyoutElementsThemeKey ResourceKey=PressedForeground}" Color="#FF1E1E1E" x:Uid="@Color=Foreground" />
+  <SolidColorBrush x:Key="{dxwuit:MenuFlyoutElementsThemeKey ResourceKey=SelectedBackground}" Color="#FFFCD89F" x:Uid="@Color=SelectionBackground" />
+  <SolidColorBrush x:Key="{dxwuit:MenuFlyoutElementsThemeKey ResourceKey=SelectedForeground}" Color="#FF1E1E1E" x:Uid="@Color=Foreground" />
+  <!-- MessageBox -->
+  <SolidColorBrush x:Key="{dxwuit:MessageBoxElementsThemeKey ResourceKey=WindowBackground}" Color="#FFE9EEFF" x:Uid="@Color=Window.Background" />
+  <SolidColorBrush x:Key="{dxwuit:MessageBoxElementsThemeKey ResourceKey=Background}" Color="#FF8E9BBC" Opacity="0.62" x:Uid="@Color=Border" />
+  <SolidColorBrush x:Key="{dxwuit:MessageBoxElementsThemeKey ResourceKey=Foreground}" Color="#FF1E1E1E" x:Uid="@Color=Foreground" />
+  <SolidColorBrush x:Key="{dxwuit:MessageBoxElementsThemeKey ResourceKey=TitleForeground}" Color="#FF1E1E1E" x:Uid="@Color=Foreground" />
+  <!-- PageView -->
+  <SolidColorBrush x:Key="{dxwuit:PageViewElementsThemeKey ResourceKey=Background}" Color="Transparent" />
+  <!-- TileNavPane -->
+  <Color x:Key="{dxwuit:TileNavPaneElementsThemeKey ResourceKey=TileNavButtonForegroundColor}" x:Uid="@Content_Property=Backstage.Foreground">#FFFFFFFF</Color>
+  <Color x:Key="{dxwuit:TileNavPaneElementsThemeKey ResourceKey=TileSelectorItemForegroundColor}" x:Uid="@Content_Property=Backstage.Foreground">#FFFFFFFF</Color>
+  <SolidColorBrush x:Key="{dxwuit:TileNavPaneElementsThemeKey ResourceKey=TileNavPaneBackground}" Color="#FF5D6B99" x:Uid="@Color=Backstage.Window.Background" />
+  <SolidColorBrush x:Key="{dxwuit:TileNavPaneElementsThemeKey ResourceKey=TileNavPaneFlyoutBackground}" Color="#FFE9EEFF" x:Uid="@Color=Window.Background" />
+  <SolidColorBrush x:Key="{dxwuit:TileNavPaneElementsThemeKey ResourceKey=TileNavButtonForeground}" Color="#FFFFFFFF" x:Uid="@Color=Backstage.Foreground" />
+  <SolidColorBrush x:Key="{dxwuit:TileNavPaneElementsThemeKey ResourceKey=TileSelectorItemBackground}" Color="#FF5D6B99" x:Uid="@Color=Backstage.Window.Background" />
+  <SolidColorBrush x:Key="{dxwuit:TileNavPaneElementsThemeKey ResourceKey=TileSelectorItemForeground}" Color="#FFFFFFFF" x:Uid="@Color=Backstage.Foreground" />
+  <SolidColorBrush x:Key="{dxwuit:TileNavPaneElementsThemeKey ResourceKey=TileSelectorItemSelection}" Color="#FF5D6B99" x:Uid="@Color=Backstage.Window.Background" />
+  <!-- TouchNavigator -->
+  <Color x:Key="{dxwuit:NavigationBarElementsThemeKey ResourceKey=ItemHoverForegroundColor}" x:Uid="@Content_Property=Backstage.Window.Background">#FF5D6B99</Color>
+  <Color x:Key="{dxwuit:NavigationBarElementsThemeKey ResourceKey=ItemSelectedForegroundColor}" x:Uid="@Content_Property=Backstage.Window.Background">#FF5D6B99</Color>
+  <SolidColorBrush x:Key="{dxwuit:NavigationBarElementsThemeKey ResourceKey=Background}" Color="#FF8E9BBC" Opacity="0.26" x:Uid="@Color=Border" />
+  <!-- Hamburger -->
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=HeaderForegroundBrush}" Color="#FFFFFFFF" x:Uid="@Color=Backstage.Foreground" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=HorizontalHeaderBackgroundBrush}" Color="#FF5D6B99" x:Uid="@Color=Backstage.Window.Background" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=BackgroundBrush}" Color="Transparent" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=PaneBackgroundBrush}" Color="#FF5D6B99" x:Uid="@Color=Backstage.Window.Background" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=BottomBarBackgroundBrush}" Color="#FF5D6B99" x:Uid="@Color=Backstage.Window.Background" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=BottomBarSeparatorBrush}" Color="#FF5B7199" x:Uid="@Color=Backstage.Delimiter" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=ItemSeparatorBrush}" Color="#FF5B7199" x:Uid="@Color=Backstage.Delimiter" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=SubMenuPaneBackgroundBrush}" Color="#FFE9EEFF" x:Uid="@Color=Control.Background" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=SubMenuPaneForegroundBrush}" Color="#FF1E1E1E" x:Uid="@Color=Foreground" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=ToggleStateButtonInlineBackgroundBrush}" Color="Transparent" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=ToggleStateButtonInlineForegroundBrush}" Color="#FFFFFFFF" x:Uid="@Color=Backstage.Foreground" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=ToggleStateButtonInlineHoverBackgroundBrush}" Color="#FFBBC6F1" x:Uid="@Color=Backstage.HoverBackground" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=ToggleStateButtonInlineHoverForegroundBrush}" Color="#FF1E1E1E" x:Uid="@Color=HoverForeground" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=ToggleStateButtonInlinePressedBackgroundBrush}" Color="#FFF5CC84" x:Uid="@Color=Backstage.SelectionBackground" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=ToggleStateButtonInlinePressedForegroundBrush}" Color="#FF1E1E1E" x:Uid="@Color=SelectionForeground" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=ToggleStateButtonFlyoutBackgroundBrush}" Color="Transparent" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=ToggleStateButtonFlyoutForegroundBrush}" Color="#FFFFFFFF" x:Uid="@Color=Backstage.Foreground" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=ToggleStateButtonFlyoutHoverBackgroundBrush}" Color="#FFBBC6F1" x:Uid="@Color=Backstage.HoverBackground" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=ToggleStateButtonFlyoutHoverForegroundBrush}" Color="#FF1E1E1E" x:Uid="@Color=HoverForeground" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=ToggleStateButtonFlyoutPressedBackgroundBrush}" Color="#FFF5CC84" x:Uid="@Color=Backstage.SelectionBackground" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=ToggleStateButtonFlyoutPressedForegroundBrush}" Color="#FF1E1E1E" x:Uid="@Color=SelectionForeground" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=ItemBackgroundBrush}" Color="Transparent" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=ItemForegroundBrush}" Color="#FFFFFFFF" x:Uid="@Color=Backstage.Foreground" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=ItemRightForegroundBrush}" Color="#FFFFFFFF" x:Uid="@Color=Backstage.Foreground" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=ItemHoverBackgroundBrush}" Color="#FFBBC6F1" x:Uid="@Color=Backstage.HoverBackground" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=ItemHoverForegroundBrush}" Color="#FF1E1E1E" x:Uid="@Color=HoverForeground" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=ItemHoverRightForegroundBrush}" Color="#FF1E1E1E" x:Uid="@Color=HoverForeground" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=ItemPressedBackgroundBrush}" Color="#FFF5CC84" x:Uid="@Color=Backstage.SelectionBackground" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=ItemPressedForegroundBrush}" Color="#FF1E1E1E" x:Uid="@Color=SelectionForeground" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=ItemPressedRightForegroundBrush}" Color="#FF1E1E1E" x:Uid="@Color=SelectionForeground" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=ItemSelectedBackgroundBrush}" Color="#FFF5CC84" x:Uid="@Color=Backstage.SelectionBackground" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=ItemSelectedForegroundBrush}" Color="#FF1E1E1E" x:Uid="@Color=SelectionForeground" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=ItemSelectedRightForegroundBrush}" Color="#FF1E1E1E" x:Uid="@Color=SelectionForeground" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=ItemSelectedHoverBackgroundBrush}" Color="#FFF5CC84" x:Uid="@Color=Backstage.SelectionBackground" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=ItemSelectedHoverForegroundBrush}" Color="#FF1E1E1E" x:Uid="@Color=HoverForeground" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=ItemSelectedHoverRightForegroundBrush}" Color="#FF1E1E1E" x:Uid="@Color=HoverForeground" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=ItemSelectedPressedBackgroundBrush}" Color="#FFF5CC84" x:Uid="@Color=Backstage.SelectionBackground" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=ItemSelectedPressedForegroundBrush}" Color="#FF1E1E1E" x:Uid="@Color=SelectionForeground" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=ItemSelectedPressedRightForegroundBrush}" Color="#FF1E1E1E" x:Uid="@Color=SelectionForeground" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=ItemIndeterminateBackgroundBrush}" Color="#FF5D6B99" x:Uid="@Color=Backstage.Window.Background" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=ItemIndeterminateForegroundBrush}" Color="#FFFFFFFF" x:Uid="@Color=Backstage.Foreground" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=ItemIndeterminateHoverBackgroundBrush}" Color="#FFF5CC84" x:Uid="@Color=Backstage.SelectionBackground" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=ItemIndeterminateHoverForegroundBrush}" Color="#FFFFFFFF" x:Uid="@Color=Backstage.Foreground" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=ItemIndeterminatePressedBackgroundBrush}" Color="#FFF5CC84" x:Uid="@Color=Backstage.SelectionBackground" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=ItemIndeterminatePressedForegroundBrush}" Color="#FFFFFFFF" x:Uid="@Color=Backstage.Foreground" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=FlyoutItemBackgroundBrush}" Color="Transparent" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=FlyoutItemForegroundBrush}" Color="#FF1E1E1E" x:Uid="@Color=Foreground" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=FlyoutItemRightForegroundBrush}" Color="#FF1E1E1E" x:Uid="@Color=Foreground" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=FlyoutItemHoverBackgroundBrush}" Color="#FFC4D5FF" x:Uid="@Color=ControlLight.HoverBackground" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=FlyoutItemHoverForegroundBrush}" Color="#FF1E1E1E" x:Uid="@Color=Foreground" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=FlyoutItemHoverRightForegroundBrush}" Color="#FF1E1E1E" x:Uid="@Color=Foreground" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=FlyoutItemPressedBackgroundBrush}" Color="#FFC4D5FF" x:Uid="@Color=ControlLight.SelectionBackground" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=FlyoutItemPressedForegroundBrush}" Color="#FF1E1E1E" x:Uid="@Color=Foreground" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=FlyoutItemPressedRightForegroundBrush}" Color="#FF1E1E1E" x:Uid="@Color=Foreground" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=FlyoutItemSelectedBackgroundBrush}" Color="#FFC4D5FF" x:Uid="@Color=ControlLight.SelectionBackground" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=FlyoutItemSelectedForegroundBrush}" Color="#FF1E1E1E" x:Uid="@Color=Foreground" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=FlyoutItemSelectedRightForegroundBrush}" Color="#FF1E1E1E" x:Uid="@Color=Foreground" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=FlyoutItemSelectedHoverBackgroundBrush}" Color="#FFC4D5FF" x:Uid="@Color=ControlLight.SelectionBackground" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=FlyoutItemSelectedHoverForegroundBrush}" Color="#FF1E1E1E" x:Uid="@Color=Foreground" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=FlyoutItemSelectedHoverRightForegroundBrush}" Color="#FF1E1E1E" x:Uid="@Color=Foreground" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=FlyoutItemSelectedPressedBackgroundBrush}" Color="#FFC4D5FF" x:Uid="@Color=ControlLight.SelectionBackground" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=FlyoutItemSelectedPressedForegroundBrush}" Color="#FF1E1E1E" x:Uid="@Color=Foreground" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=FlyoutItemSelectedPressedRightForegroundBrush}" Color="#FF1E1E1E" x:Uid="@Color=Foreground" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=FlyoutBackButtonBackgroundBrush}" Color="Transparent" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=FlyoutBackButtonForegroundBrush}" Color="#FF1E1E1E" x:Uid="@Color=Foreground" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=FlyoutBackButtonHoverBackgroundBrush}" Color="#FFC4D5FF" x:Uid="@Color=ControlLight.HoverBackground" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=FlyoutBackButtonHoverForegroundBrush}" Color="#FF1E1E1E" x:Uid="@Color=HoverForeground" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=FlyoutBackButtonPressedBackgroundBrush}" Color="#FFC4D5FF" x:Uid="@Color=ControlLight.SelectionBackground" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=FlyoutBackButtonPressedForegroundBrush}" Color="#FF1E1E1E" x:Uid="@Color=SelectionForeground" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=ItemSelectionIndicatorBackgroundBrush}" Color="#FFFFFFFF" x:Uid="@Color=Backstage.Foreground" />
+  <SolidColorBrush x:Key="{dxwuit:HamburgerMenuBrushesThemeKey ResourceKey=FlyoutItemSelectionIndicatorBackgroundBrush}" Color="#FF1E1E1E" x:Uid="@Color=Foreground" />
+</ResourceDictionary>

@@ -1,0 +1,38 @@
+<ResourceDictionary mc:Ignorable="cs" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:cs="colorscheme_ignorable_uri" xmlns:dxcot="http://schemas.devexpress.com/winfx/2008/xaml/controls/themekeys" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sys="clr-namespace:System;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <Duration x:Key="{dxcot:StepProgressBarThemeKey ResourceKey=ProgressAnimationDuration}">0:0:0.5</Duration>
+  <sys:Boolean x:Key="{dxcot:StepProgressBarThemeKey ResourceKey=ShowOuterBorder}">False</sys:Boolean>
+  <SolidColorBrush x:Key="{dxcot:StepProgressBarThemeKey ResourceKey=OuterBorderBrush}" Color="Transparent" />
+  <SolidColorBrush x:Key="{dxcot:StepProgressBarThemeKey ResourceKey=OuterIndentBrush}" Color="Transparent" />
+  <sys:Double x:Key="{dxcot:StepProgressBarThemeKey ResourceKey=OuterBorderIndent}">4.0</sys:Double>
+  <sys:Double x:Key="{dxcot:StepProgressBarThemeKey ResourceKey=OuterBorderSize}">2.0</sys:Double>
+  <sys:Double x:Key="{dxcot:StepProgressBarThemeKey ResourceKey=ProgressBarThickness}">4</sys:Double>
+  <Thickness x:Key="{dxcot:StepProgressBarThemeKey ResourceKey=ProgressBorderThickness}">1</Thickness>
+  <SolidColorBrush x:Key="{dxcot:StepProgressBarThemeKey ResourceKey=ProgressBackground}" Color="#FF898785" x:Uid="@Color=ControlLight.SelectionBackground" />
+  <SolidColorBrush x:Key="{dxcot:StepProgressBarThemeKey ResourceKey=ProgressForeground}" Color="#FFD4D4D4" x:Uid="@Color=Button.Background" />
+  <SolidColorBrush x:Key="{dxcot:StepProgressBarThemeKey ResourceKey=ProgressAccentBorderBrush}" Color="#FFD4D4D4" x:Uid="@Color=Button.Background" />
+  <SolidColorBrush x:Key="{dxcot:StepProgressBarThemeKey ResourceKey=ProgressNeutralBorderBrush}" Color="#FF898785" x:Uid="@Color=ControlLight.SelectionBackground" />
+  <sys:Double x:Key="{dxcot:StepProgressBarThemeKey ResourceKey=IndicatorBorderSize}">1</sys:Double>
+  <Thickness x:Key="{dxcot:StepProgressBarThemeKey ResourceKey=IndicatorPanelMargin}">3</Thickness>
+  <EllipseGeometry x:Key="{dxcot:StepProgressBarThemeKey ResourceKey=IndicatorGeometry}" Center="20,20" RadiusX="20" RadiusY="20" />
+  <SolidColorBrush x:Key="{dxcot:StepProgressBarThemeKey ResourceKey=NotStartedItemForeground}" Color="#FFEFEFEF" x:Uid="@Color=Foreground" />
+  <SolidColorBrush x:Key="{dxcot:StepProgressBarThemeKey ResourceKey=NotStartedIndicatorFill}" Color="#FF898785" x:Uid="@Color=ControlLight.SelectionBackground" />
+  <SolidColorBrush x:Key="{dxcot:StepProgressBarThemeKey ResourceKey=NotStartedIndicatorStroke}" Color="#FF898785" x:Uid="@Color=ControlLight.SelectionBackground" />
+  <SolidColorBrush x:Key="{dxcot:StepProgressBarThemeKey ResourceKey=NotStartedMouseOverFill}" Color="#FF989694" x:Uid="@Color=ControlLight.HoverBackground" />
+  <SolidColorBrush x:Key="{dxcot:StepProgressBarThemeKey ResourceKey=NotStartedMouseOverStroke}" Color="#FF989694" x:Uid="@Color=ControlLight.HoverBackground" />
+  <SolidColorBrush x:Key="{dxcot:StepProgressBarThemeKey ResourceKey=CompletedItemForeground}" Color="#FF262626" x:Uid="@Color=ControlLight.Foreground" />
+  <SolidColorBrush x:Key="{dxcot:StepProgressBarThemeKey ResourceKey=CompletedIndicatorFill}" Color="#FFD4D4D4" x:Uid="@Color=Button.Background" />
+  <SolidColorBrush x:Key="{dxcot:StepProgressBarThemeKey ResourceKey=CompletedIndicatorStroke}" Color="#FFD4D4D4" x:Uid="@Color=Button.Background" />
+  <SolidColorBrush x:Key="{dxcot:StepProgressBarThemeKey ResourceKey=CompletedMouseOverFill}" Color="#FF989694" x:Uid="@Color=ControlLight.HoverBackground" />
+  <SolidColorBrush x:Key="{dxcot:StepProgressBarThemeKey ResourceKey=CompletedMouseOverStroke}" Color="#FF989694" x:Uid="@Color=ControlLight.HoverBackground" />
+  <SolidColorBrush x:Key="{dxcot:StepProgressBarThemeKey ResourceKey=IndeterminateItemForeground}" Color="#FF262626" x:Uid="@Color=ControlLight.Foreground" />
+  <SolidColorBrush x:Key="{dxcot:StepProgressBarThemeKey ResourceKey=IndeterminateIndicatorFill}" Color="#FFD4D4D4" x:Uid="@Color=Button.Background" />
+  <SolidColorBrush x:Key="{dxcot:StepProgressBarThemeKey ResourceKey=IndeterminateIndicatorStroke}" Color="#FFD4D4D4" x:Uid="@Color=Button.Background" />
+  <SolidColorBrush x:Key="{dxcot:StepProgressBarThemeKey ResourceKey=IndeterminateMouseOverFill}" Color="#FF989694" x:Uid="@Color=ControlLight.HoverBackground" />
+  <SolidColorBrush x:Key="{dxcot:StepProgressBarThemeKey ResourceKey=IndeterminateMouseOverStroke}" Color="#FF989694" x:Uid="@Color=ControlLight.HoverBackground" />
+  <SolidColorBrush x:Key="{dxcot:StepProgressBarThemeKey ResourceKey=DisabledNotStartedIndicatorFill}" Color="#797979" />
+  <SolidColorBrush x:Key="{dxcot:StepProgressBarThemeKey ResourceKey=DisabledNotStartedIndicatorStroke}" Color="#797979" />
+  <SolidColorBrush x:Key="{dxcot:StepProgressBarThemeKey ResourceKey=DisabledIndeterminateIndicatorFill}" Color="#929292" />
+  <SolidColorBrush x:Key="{dxcot:StepProgressBarThemeKey ResourceKey=DisabledIndeterminateIndicatorStroke}" Color="#929292" />
+  <SolidColorBrush x:Key="{dxcot:StepProgressBarThemeKey ResourceKey=DisabledCompletedIndicatorFill}" Color="#929292" />
+  <SolidColorBrush x:Key="{dxcot:StepProgressBarThemeKey ResourceKey=DisabledCompletedIndicatorStroke}" Color="#929292" />
+</ResourceDictionary>
