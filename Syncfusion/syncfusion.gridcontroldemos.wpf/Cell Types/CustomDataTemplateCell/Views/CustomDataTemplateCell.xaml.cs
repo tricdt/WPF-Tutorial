@@ -20,6 +20,8 @@ namespace syncfusion.gridcontroldemos.wpf
             grid.Model.ColumnWidths[2] = 250;
         }
 
+
+
         public CustomDataTemplateCell(string themename) : base(themename)
         {
             InitializeComponent();
@@ -36,8 +38,7 @@ namespace syncfusion.gridcontroldemos.wpf
             if (e.Cell.RowIndex > 1 && e.Cell.ColumnIndex == 2)
             {
                 e.Style.CellType = "DataTemplate";
-                e.Style.CellItemTemplateKey = "editableEmployee";
-                e.Style.CellValue = employeesSource.Employees[e.Cell.RowIndex % employeesSource.Employees.Count];
+                e.Style.CellItemTemplateKey = "integerEdit";
                 e.Style.Background = Brushes.Linen;
 
             }
@@ -52,5 +53,9 @@ namespace syncfusion.gridcontroldemos.wpf
             }
             base.Dispose(disposing);
         }
+    }
+    public class Led
+    {
+        public int pwm { get; set; }
     }
 }

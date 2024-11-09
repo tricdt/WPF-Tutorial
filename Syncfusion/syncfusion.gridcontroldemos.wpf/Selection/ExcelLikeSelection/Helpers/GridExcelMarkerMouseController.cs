@@ -5,7 +5,6 @@ using Syncfusion.Windows.Controls.Scroll;
 using System.IO;
 using System.Windows;
 using System.Windows.Input;
-using System.Windows.Media;
 
 namespace syncfusion.gridcontroldemos.wpf
 {
@@ -343,7 +342,7 @@ namespace syncfusion.gridcontroldemos.wpf
                 r.Width = 4;
                 r.Y = r.Bottom - 2;
                 r.Height = 4;
-                dc.DrawRectangle(Brushes.Black, null, r);
+                //dc.DrawRectangle(Brushes.Black, null, r);
             }
         }
     }

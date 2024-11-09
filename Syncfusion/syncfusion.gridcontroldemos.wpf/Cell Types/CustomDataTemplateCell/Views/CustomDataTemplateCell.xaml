@@ -22,6 +22,12 @@
                          x:Name="tb"/>
             </StackPanel>
         </DataTemplate>
+        <DataTemplate x:Key="integerEdit">
+            <syncfusion:IntegerTextBox CornerRadius="10,10,10,10" 
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center" MaxValue="15" MinValue="0" Background="Red"
+                                       Value="{Binding pwm}"/>
+        </DataTemplate>
         <DataTemplate x:Key="nonEditableEmployee">
             <StackPanel Orientation="Horizontal" syncfusion:VisualContainer.WantsMouseInput="False" >
                 <TextBlock FontWeight="Bold" 
