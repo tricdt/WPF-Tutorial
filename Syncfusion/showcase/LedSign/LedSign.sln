@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35303.130
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LedSign", "LedSign.csproj", "{3A2BE940-6DEA-47E1-80B2-9499FA1BA037}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LedSign", "LedSign.csproj", "{3A2BE940-6DEA-47E1-80B2-9499FA1BA037}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LedSignWinform", "..\LedSignWinform\LedSignWinform.csproj", "{D4D15324-F8D5-46AE-8867-0FC937632B1F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LedSignControl", "..\LedSignControl\LedSignControl.csproj", "{AB7E989E-604E-47E1-B57F-C2DB5C10F7A9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{3A2BE940-6DEA-47E1-80B2-9499FA1BA037}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A2BE940-6DEA-47E1-80B2-9499FA1BA037}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A2BE940-6DEA-47E1-80B2-9499FA1BA037}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4D15324-F8D5-46AE-8867-0FC937632B1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4D15324-F8D5-46AE-8867-0FC937632B1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4D15324-F8D5-46AE-8867-0FC937632B1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4D15324-F8D5-46AE-8867-0FC937632B1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB7E989E-604E-47E1-B57F-C2DB5C10F7A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB7E989E-604E-47E1-B57F-C2DB5C10F7A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB7E989E-604E-47E1-B57F-C2DB5C10F7A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB7E989E-604E-47E1-B57F-C2DB5C10F7A9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

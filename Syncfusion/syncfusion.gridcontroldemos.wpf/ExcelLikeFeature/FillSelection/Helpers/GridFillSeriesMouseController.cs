@@ -153,10 +153,10 @@ namespace syncfusion.gridcontroldemos.wpf
             return result;
         }
 
-
+        int flag = 0;
         public void MouseDown(MouseControllerEventArgs e)
         {
-            //flag = 0;
+            flag = 0;
             Buttonside = e.Button;
             this.IsMouseDown = true;
             MoveDir = MovingDirection.None;
@@ -243,7 +243,7 @@ namespace syncfusion.gridcontroldemos.wpf
 #if !SILVERLIGHT
             if (Buttonside == MouseButton.Left)
 #else
-            if (Buttonside == MouseButtons.Left)
+                        if (Buttonside == MouseButtons.Left)
 #endif
             {
                 OpenFilterDropDown();

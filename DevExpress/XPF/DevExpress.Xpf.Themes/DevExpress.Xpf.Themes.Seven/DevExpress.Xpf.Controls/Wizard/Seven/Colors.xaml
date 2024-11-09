@@ -1,7 +1,0 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:dxcot="http://schemas.devexpress.com/winfx/2008/xaml/controls/themekeys"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-
-    <SolidColorBrush x:Key="{dxcot:WizardThemeKey ResourceKey=BorderBrush}" Color="#FF979797"/>
-
-</ResourceDictionary>

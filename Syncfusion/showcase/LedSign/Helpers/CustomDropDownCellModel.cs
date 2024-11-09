@@ -21,6 +21,7 @@ namespace LedSign
     //{
     //}
 
+
     public class CustomIntegerEditCellModel : GridCellNumericEditCellModel<CustomIntegerEditCellRenderer>
     {
         protected string GetNumber(string text, NumberFormatInfo numberFormat)
@@ -62,46 +63,46 @@ namespace LedSign
         //
         // Returns:
         //     The formatted text for the given value.
-        protected override string GetFormattedText(string text, NumberFormatInfo numberFormatInfo)
-        {
-            NumberFormatInfo numberFormatInfo2 = numberFormatInfo.Clone() as NumberFormatInfo;
-            numberFormatInfo2.NumberDecimalDigits = 0;
-            text = GetNumber(text, numberFormatInfo2);
-            _ = string.Empty;
-            if (long.TryParse(text, out var result))
-            {
-                return result.ToString("N", numberFormatInfo2);
-            }
+        //protected override string GetFormattedText(string text, NumberFormatInfo numberFormatInfo)
+        //{
+        //    NumberFormatInfo numberFormatInfo2 = numberFormatInfo.Clone() as NumberFormatInfo;
+        //    numberFormatInfo2.NumberDecimalDigits = 0;
+        //    text = GetNumber(text, numberFormatInfo2);
+        //    _ = string.Empty;
+        //    if (long.TryParse(text, out var result))
+        //    {
+        //        return result.ToString("N", numberFormatInfo2);
+        //    }
 
-            return "0";
-        }
+        //    return "0";
+        //}
 
-        public override string GetFormattedText(GridStyleInfo style, object value, int textInfo)
-        {
-            string text = GetText(style, value);
-            NumberFormatInfo numberFormatInfo = (style.HasNumberFormat ? style.NumberFormat : style.GetCulture(useCurrentCultureIfNull: false).NumberFormat);
-            numberFormatInfo = ((style.NumberFormat == null || style.NumberFormat == style.GetCulture(useCurrentCultureIfNull: false).NumberFormat) ? style.GetCulture(useCurrentCultureIfNull: false).NumberFormat : style.NumberFormat);
-            NumberFormatInfo numberFormatInfo2 = numberFormatInfo.Clone() as NumberFormatInfo;
-            numberFormatInfo2.NumberDecimalDigits = 0;
-            if (style.IntegerEdit != null)
-            {
-                numberFormatInfo2.NumberGroupSeparator = ((!style.IntegerEdit.HasGroupSeperatorEnabled) ? numberFormatInfo.NumberGroupSeparator : (style.IntegerEdit.GroupSeperatorEnabled ? numberFormatInfo.NumberGroupSeparator : string.Empty));
-            }
+        //public override string GetFormattedText(GridStyleInfo style, object value, int textInfo)
+        //{
+        //    string text = GetText(style, value);
+        //    NumberFormatInfo numberFormatInfo = (style.HasNumberFormat ? style.NumberFormat : style.GetCulture(useCurrentCultureIfNull: false).NumberFormat);
+        //    numberFormatInfo = ((style.NumberFormat == null || style.NumberFormat == style.GetCulture(useCurrentCultureIfNull: false).NumberFormat) ? style.GetCulture(useCurrentCultureIfNull: false).NumberFormat : style.NumberFormat);
+        //    NumberFormatInfo numberFormatInfo2 = numberFormatInfo.Clone() as NumberFormatInfo;
+        //    numberFormatInfo2.NumberDecimalDigits = 0;
+        //    if (style.IntegerEdit != null)
+        //    {
+        //        numberFormatInfo2.NumberGroupSeparator = ((!style.IntegerEdit.HasGroupSeperatorEnabled) ? numberFormatInfo.NumberGroupSeparator : (style.IntegerEdit.GroupSeperatorEnabled ? numberFormatInfo.NumberGroupSeparator : string.Empty));
+        //    }
 
-            text = GetNumber(text, numberFormatInfo2);
-            string empty = string.Empty;
-            if (long.TryParse(text, out var result))
-            {
-                return empty = result.ToString("N", numberFormatInfo2);
-            }
+        //    text = GetNumber(text, numberFormatInfo2);
+        //    string empty = string.Empty;
+        //    if (long.TryParse(text, out var result))
+        //    {
+        //        return empty = result.ToString("N", numberFormatInfo2);
+        //    }
 
-            if (style.IntegerEdit.UseNullOption)
-            {
-                return empty;
-            }
+        //    if (style.IntegerEdit.UseNullOption)
+        //    {
+        //        return empty;
+        //    }
 
-            return "0";
-        }
+        //    return "0";
+        //}
 
         //
         // Summary:
@@ -118,27 +119,26 @@ namespace LedSign
         // Returns:
         //     True if value was parsed correctly and saved in style object as Syncfusion.Windows.Controls.Grid.GridStyleInfo.CellValue;
         //     False otherwise.
-        protected override object ApplyFormattedValue(GridStyleInfo style, string text)
-        {
-            if (style.NumberFormat != null)
-            {
-                style.NumberFormat.NumberDecimalDigits = 0;
-            }
+        //protected override object ApplyFormattedValue(GridStyleInfo style, string text)
+        //{
+        //    if (style.NumberFormat != null)
+        //    {
+        //        style.NumberFormat.NumberDecimalDigits = 0;
+        //    }
 
-            text = GetNumber(text, style.NumberFormat);
-            long result = long.MinValue;
-            if (long.TryParse(text, out result))
-            {
-                return result;
-            }
+        //    text = GetNumber(text, style.NumberFormat);
+        //    long result = long.MinValue;
+        //    if (long.TryParse(text, out result))
+        //    {
+        //        return result;
+        //    }
 
-            return base.ApplyFormattedValue(style, text);
-        }
+        //    return base.ApplyFormattedValue(style, text);
+        //}
     }
 
 
-
-    public class CustomIntegerEditCellRenderer : GridVirtualizingCellRenderer<IntegerTextBox>
+    public class CustomIntegerEditCellRenderer : GridVirtualizingCellRenderer<CustomIntegerTextBox>
     {
         private int ccSelectionStart;
 
@@ -163,7 +163,7 @@ namespace LedSign
             {
                 return;
             }
-
+            dc.DrawLine(new Pen(Brushes.Red, 10), new Point(0, 0), new Point(10, 10));
             Thickness defaultMargin = style.TextMargins.ToThickness();
             defaultMargin = ((!style.HasImageIndex) ? style.ErrorInfo.AdjustErrorInfoMargin(defaultMargin, rca.CellRect.Size) : style.AdjustImageWidthAndHeightToMargin(defaultMargin, rca.CellRect.Size));
             Rect rect = rca.SubtractBorderMargins(rca.CellRect, defaultMargin);
@@ -178,7 +178,12 @@ namespace LedSign
                 {
                     style.Foreground = (style.HasNegativeForeground ? style.NegativeForeground : style.Foreground);
                 }
-
+                //dc.DrawRectangle(Brushes.Red, new Pen(), rect);
+                //dc.DrawLine(new Pen(Brushes.Red, 20), new Point(0, 0), new Point(100, 100));
+                //GridTextBoxPaint.DrawText(dc, rect, empty, style);
+                Int16 pwm16 = Convert.ToInt16(style.CellValue.ToString());
+                Byte pwm = Convert.ToByte(pwm16 * 16);
+                dc.DrawEllipse(new SolidColorBrush(Color.FromArgb(pwm, 255, 0, 0)), new Pen(), new Point((rect.Left + rect.Right) / 2, (rect.Top + rect.Bottom) / 2), rect.Width / 2, rect.Width / 2);
                 GridTextBoxPaint.DrawText(dc, rect, empty, style);
             }
         }
@@ -194,7 +199,7 @@ namespace LedSign
             return false;
         }
 
-        public override void OnInitializeContent(IntegerTextBox uiElement, GridRenderStyleInfo style)
+        public override void OnInitializeContent(CustomIntegerTextBox uiElement, GridRenderStyleInfo style)
         {
             base.OnInitializeContent(uiElement, style);
             OnUnwireUIElement(uiElement);
@@ -210,8 +215,8 @@ namespace LedSign
             uiElement.GroupSeperatorEnabled = (integerEdit.HasGroupSeperatorEnabled ? integerEdit.GroupSeperatorEnabled : uiElement.GroupSeperatorEnabled);
             uiElement.NumberGroupSeparator = ((!integerEdit.HasGroupSeperatorEnabled) ? numberFormatInfo.NumberGroupSeparator : (integerEdit.GroupSeperatorEnabled ? numberFormatInfo.NumberGroupSeparator : string.Empty));
             uiElement.NumberGroupSizes = new Int32Collection(numberFormatInfo.NumberGroupSizes.ToList());
-            uiElement.Background = Brushes.White;
-            uiElement.Foreground = Brushes.Black;
+            uiElement.Background = Brushes.Red;
+            uiElement.Foreground = Brushes.WhiteSmoke;
             uiElement.PositiveForeground = Brushes.Black;
             uiElement.MaxLength = style.MaxLength;
             GridIntegerEditStyleInfo integerEdit2 = style.IntegerEdit;
@@ -253,7 +258,7 @@ namespace LedSign
             OnWireUIElement(uiElement);
         }
 
-        protected override void ArrangeUIElement(ArrangeCellArgs aca, IntegerTextBox uiElement, GridRenderStyleInfo style)
+        protected override void ArrangeUIElement(ArrangeCellArgs aca, CustomIntegerTextBox uiElement, GridRenderStyleInfo style)
         {
             Thickness defaultMargin = style.TextMargins.ToThickness();
             defaultMargin = style.ErrorInfo.AdjustErrorInfoMarginOnEditing(defaultMargin, style.GridControl, style.CellRowColumnIndex);
@@ -265,7 +270,9 @@ namespace LedSign
             uiElement.NumberGroupSizes = new Int32Collection(numberFormatInfo.NumberGroupSizes.ToList());
             uiElement.EnableFocusColors = false;
             uiElement.IsScrollingOnCircle = (integerEdit.HasIsScrollingOnCircle ? integerEdit.IsScrollingOnCircle : uiElement.IsScrollingOnCircle);
+            uiElement.CornerRadius = new CornerRadius() { BottomLeft = 10, BottomRight = 10, TopLeft = 10, TopRight = 10 };
         }
+
 
         protected override void OnInitialize()
         {
@@ -323,10 +330,10 @@ namespace LedSign
             }
         }
 
-        protected override void OnDeactivated()
-        {
-            base.GridControl.InvalidateCell(base.CellRowColumnIndex);
-        }
+        //protected override void OnDeactivated()
+        //{
+        //    base.GridControl.InvalidateCell(base.CellRowColumnIndex);
+        //}
 
         private long GetIntegerValue(GridStyleInfo style)
         {
@@ -340,25 +347,30 @@ namespace LedSign
             return result;
         }
 
-        protected override string GetControlTextFromEditorCore(IntegerTextBox uiElement)
-        {
-            return uiElement.Value.ToString();
-        }
+        //protected override string GetControlTextFromEditorCore(CustomIntegerTextBox uiElement)
+        //{
+        //    return uiElement.Value.ToString();
+        //}
 
+        public override void CreateRendererElement(CustomIntegerTextBox uiElement, GridRenderStyleInfo style)
+        {
+            base.CreateRendererElement(uiElement, style);
+            uiElement.Background = Brushes.Red;
+        }
         //
         // Summary:
         //     Refreshes the current cell content.
-        public override void RefreshContent()
-        {
-            base.RefreshContent();
-            if (textSelectionStart != -1 && base.CurrentCellUIElement != null)
-            {
-                base.CurrentCellUIElement.SelectionStart = textSelectionStart;
-                base.CurrentCellUIElement.SelectionLength = textSelectionLength;
-            }
-        }
+        //public override void RefreshContent()
+        //{
+        //    base.RefreshContent();
+        //    if (textSelectionStart != -1 && base.CurrentCellUIElement != null)
+        //    {
+        //        base.CurrentCellUIElement.SelectionStart = textSelectionStart;
+        //        base.CurrentCellUIElement.SelectionLength = textSelectionLength;
+        //    }
+        //}
 
-        protected override void OnWireUIElement(IntegerTextBox uiElement)
+        protected override void OnWireUIElement(CustomIntegerTextBox uiElement)
         {
             base.OnWireUIElement(uiElement);
             uiElement.ValueChanged += uiElement_ValueChanged;
@@ -390,7 +402,10 @@ namespace LedSign
 
         private void uiElement_ValueChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
-            IntegerTextBox integerTextBox = (IntegerTextBox)d;
+            CustomIntegerTextBox integerTextBox = (CustomIntegerTextBox)d;
+            integerTextBox.CornerRadius = new CornerRadius() { BottomLeft = 10, BottomRight = 10 };
+
+            integerTextBox.Background = Brushes.Red;
             if (!base.IsInArrange && IsCurrentCell(integerTextBox) && !base.CurrentCell.IsInEndEdit)
             {
                 if (!integerTextBox.Value.HasValue && integerTextBox.UseNullOption)
@@ -409,7 +424,7 @@ namespace LedSign
             }
         }
 
-        protected override void OnUnwireUIElement(IntegerTextBox uiElement)
+        protected override void OnUnwireUIElement(CustomIntegerTextBox uiElement)
         {
             base.OnUnwireUIElement(uiElement);
             uiElement.ValueChanged -= uiElement_ValueChanged;
@@ -444,7 +459,7 @@ namespace LedSign
 
         private void OnKeyDown(object sender, KeyEventArgs args)
         {
-            IntegerTextBox integerTextBox = (IntegerTextBox)sender;
+            CustomIntegerTextBox integerTextBox = (CustomIntegerTextBox)sender;
             bool flag = (args.KeyboardDevice.Modifiers & ModifierKeys.Shift) != 0;
             Key key = args.Key;
             if ((uint)(key - 23) <= 3u && !flag && ccSelectionStart == integerTextBox.SelectionStart && ccSelectionLength == integerTextBox.SelectionLength)
@@ -688,5 +703,12 @@ namespace LedSign
             uiElement.ClearValue(IntegerTextBox.MaxValueProperty);
         }
 
+    }
+
+    public class CustomIntegerTextBox : IntegerTextBox
+    {
+        public CustomIntegerTextBox() : base()
+        {
+        }
     }
 }

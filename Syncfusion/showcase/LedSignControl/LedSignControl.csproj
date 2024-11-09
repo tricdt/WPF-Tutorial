@@ -1,0 +1,61 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Helpers\Cross.cur" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Helpers\Cross.cur" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Syncfusion.Data.WPF">
+      <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\WPF\27.1.48\precompiledassemblies\net8.0\Syncfusion.Data.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Grid.Wpf">
+      <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\WPF\27.1.48\precompiledassemblies\net8.0\Syncfusion.Grid.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.GridCommon.WPF">
+      <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\WPF\27.1.48\precompiledassemblies\net8.0\Syncfusion.GridCommon.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Linq.Base">
+      <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\WPF\27.1.48\precompiledassemblies\net8.0\Syncfusion.Linq.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfGrid.WPF">
+      <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\WPF\27.1.48\precompiledassemblies\net8.0\Syncfusion.SfGrid.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfInput.Wpf">
+      <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\WPF\27.1.48\precompiledassemblies\net8.0\Syncfusion.SfInput.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfShared.Wpf">
+      <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\WPF\27.1.48\precompiledassemblies\net8.0\Syncfusion.SfShared.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfSkinManager.WPF">
+      <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\WPF\27.1.48\precompiledassemblies\net8.0\Syncfusion.SfSkinManager.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Shared.WPF">
+      <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\WPF\27.1.48\precompiledassemblies\net8.0\Syncfusion.Shared.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Themes.FluentLight.WPF">
+      <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\WPF\27.1.48\precompiledassemblies\net8.0\Syncfusion.Themes.FluentLight.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Themes.Windows11Dark.WPF">
+      <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\WPF\27.1.48\precompiledassemblies\net8.0\Syncfusion.Themes.Windows11Dark.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Themes.Windows11Light.WPF">
+      <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\WPF\27.1.48\precompiledassemblies\net8.0\Syncfusion.Themes.Windows11Light.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Tools.Wpf">
+      <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\WPF\27.1.48\precompiledassemblies\net8.0\Syncfusion.Tools.WPF.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

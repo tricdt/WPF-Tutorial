@@ -1,0 +1,42 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:LedSignControl"
+                    xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+                    xmlns:Microsoft_Windows_Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Luna">
+    <local:FillTypeConverter x:Key="FillTypeConverter"/>
+    <Style x:Key="DropdownStyle" TargetType="local:FillDropdownItem">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:FillDropdownItem">
+                    <Microsoft_Windows_Themes:SystemDropShadowChrome x:Name="PART_Shadow" SnapsToDevicePixels="true">
+                        <syncfusion:CheckListBox IsSelectAllEnabled="False"
+                                                 Background="WhiteSmoke"
+                                                 ItemsSource="{TemplateBinding ItemsSource}">
+                        </syncfusion:CheckListBox>
+                        <!--<ItemsControl Background="WhiteSmoke" ItemsSource="{TemplateBinding ItemsSource}">
+                           
+                        </ItemsControl>-->
+                        <!--<syncfusion:RibbonListBox >
+                            <syncfusion:RibbonListBox.ItemTemplate>
+                              
+                            </syncfusion:RibbonListBox.ItemTemplate>
+                            <ListBoxItem Content="Office2003Theme"/>
+                            <ListBoxItem Content="Office2007Theme"/>
+                            <ListBoxItem Content="Office2010Theme"/>-->
+                            <!--<syncfusion:RibbonRadioButton Content="CopySeries" GroupName="Mode"/>
+                            <syncfusion:RibbonRadioButton Content="FillSeries" GroupName="Mode"/>
+                            <syncfusion:RibbonRadioButton Content="FillFormatOnly" GroupName="Mode"/>
+                            <syncfusion:RibbonRadioButton Content="FillWithoutFormat" GroupName="Mode"/>-->
+                            <!--<syncfusion:CheckListBoxItem Content="CopySeries" IsChecked="{Binding SelectedItem, RelativeSource={RelativeSource AncestorType=local:FillDropdownItem}, Mode=TwoWay, Converter={StaticResource FillTypeConverter}, ConverterParameter=CopySeries}" />
+                            <syncfusion:CheckListBoxItem Content="FillSeries" IsChecked="{Binding SelectedItem, RelativeSource={RelativeSource AncestorType=local:FillDropdownItem}, Mode=TwoWay, Converter={StaticResource FillTypeConverter}, ConverterParameter=FillSeries}" />
+                            <syncfusion:CheckListBoxItem Content="FillFormatOnly" IsChecked="{Binding SelectedItem, RelativeSource={RelativeSource AncestorType=local:FillDropdownItem}, Mode=TwoWay, Converter={StaticResource FillTypeConverter}, ConverterParameter=FillFormatOnly}" />
+                            <syncfusion:CheckListBoxItem Content="FillWithoutFormat" IsChecked="{Binding SelectedItem, RelativeSource={RelativeSource AncestorType=local:FillDropdownItem}, Mode=TwoWay, Converter={StaticResource FillTypeConverter}, ConverterParameter=FillWithoutFormat}" />-->
+                        <!--</syncfusion:RibbonListBox>-->
+                    </Microsoft_Windows_Themes:SystemDropShadowChrome>
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style BasedOn="{StaticResource DropdownStyle}" TargetType="local:FillDropdownItem"/>
+</ResourceDictionary>
