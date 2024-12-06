@@ -13,7 +13,6 @@
         <StackPanel Orientation="Horizontal">
 
             <local:LedGroup/>
-            <local:LedGroup/>
         </StackPanel>
     </ScrollViewer>
 </syncfusion:ChromelessWindow>
