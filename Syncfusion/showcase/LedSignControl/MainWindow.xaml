@@ -5,9 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LedSignControl"
         xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
-        syncfusion:SfSkinManager.Theme="{syncfusion:SkinManagerExtension ThemeName=FluentLight}"
         mc:Ignorable="d"
-        Title="LedSignControl" Height="450" Width="800">
+        Title="LedSignControl" 
+        Width="1200"
+        Height="800"
+        AllowsTransparency="True"
+        CloseButtonTemplate="{DynamicResource ProductsWindowCloseButtonTemplate}"
+        MaximizeButtonTemplate="{DynamicResource ProductsWindowMaximizeButtonTemplate}"
+        MinimizeButtonTemplate="{DynamicResource ProductsWindowMinimizeButtonTemplate}"
+        MinWidth="800"
+        MinHeight="500"
+        BorderThickness="0"
+        ShowIcon="False">
+    <syncfusion:ChromelessWindow.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/LedSignControl;component/Views/DemoWindowStyle.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </syncfusion:ChromelessWindow.Resources>
     <ScrollViewer HorizontalScrollBarVisibility="Auto"
                   VerticalScrollBarVisibility="Disabled">
         <StackPanel Orientation="Horizontal">
