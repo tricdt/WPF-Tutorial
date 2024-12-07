@@ -7,6 +7,13 @@
         xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
         syncfusion:SfSkinManager.Theme="{syncfusion:SkinManagerExtension ThemeName=FluentLight}"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <local:LedGroup/>
+        Title="LedSignControl" Height="450" Width="800">
+    <ScrollViewer HorizontalScrollBarVisibility="Auto"
+                  VerticalScrollBarVisibility="Disabled">
+        <StackPanel Orientation="Horizontal">
+
+            <local:LedGroup/>
+            <local:LedGroup/>
+        </StackPanel>
+    </ScrollViewer>
 </syncfusion:ChromelessWindow>
