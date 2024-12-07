@@ -5,6 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LedSignControl"
         xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+        xmlns:syncfusionskin ="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
+        syncfusionskin:SfSkinManager.Theme="{syncfusionskin:SkinManagerExtension ThemeName=Windows11Light}"
         mc:Ignorable="d"
         Title="LedSignControl" 
         Width="1200"
@@ -16,7 +18,9 @@
         MinWidth="800"
         MinHeight="500"
         BorderThickness="0"
-        ShowIcon="False">
+        ShowIcon="False"
+        TitleBarHeight="48"
+        TitleFontSize="24">
     <syncfusion:ChromelessWindow.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
