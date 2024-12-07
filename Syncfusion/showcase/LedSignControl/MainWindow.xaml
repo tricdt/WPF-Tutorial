@@ -7,5 +7,6 @@
         xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
         syncfusion:SfSkinManager.Theme="{syncfusion:SkinManagerExtension ThemeName=FluentLight}"
         mc:Ignorable="d"
-        Title="LedSign" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800">
+    <local:LedGroup/>
 </syncfusion:ChromelessWindow>
