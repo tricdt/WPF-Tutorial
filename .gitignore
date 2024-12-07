@@ -9,7 +9,7 @@
 *.user
 *.userosscache
 *.sln.docstates
-
+.gitignore
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
@@ -34,6 +34,8 @@ bld/
 
 **/**/bin/
 **/**/obj/
+**/**/*.csproj
+**/**/*.csproj.user
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
