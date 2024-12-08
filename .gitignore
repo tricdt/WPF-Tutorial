@@ -32,10 +32,10 @@ bld/
 [Ll]og/
 [Ll]ogs/
 
-**/**/bin/
-**/**/obj/
-**/**/*.csproj
-**/**/*.csproj.user
+**/bin/
+**/obj/
+**/*.csproj
+**/*.csproj.user
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
