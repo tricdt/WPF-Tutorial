@@ -31,6 +31,7 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="/syncfusion.ledsign.wpf;component/Views/DemoWindowStyle.xaml" />
             </ResourceDictionary.MergedDictionaries>
+            <local:ViewModelLocator x:Key="ViewModelLocator"/>
         </ResourceDictionary>
     </syncfusion:ChromelessWindow.Resources>
     <syncfusion:ChromelessWindow.LeftHeaderItemsSource>
