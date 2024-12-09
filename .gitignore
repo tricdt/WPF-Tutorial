@@ -2,3 +2,7 @@
 **/bin/
 **/obj/
 *.user
+**/*.csproj
+**/*.sln
+*.csproj
+*.sln
