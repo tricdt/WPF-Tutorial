@@ -1,0 +1,73 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+	<OutputType>WinExe</OutputType>
+	<TargetFramework>net8.0-windows</TargetFramework>
+	<UseWindowsForms>true</UseWindowsForms>
+	<UseWPF>true</UseWPF>
+	<EnableDefaultEmbeddedResourceItems>False</EnableDefaultEmbeddedResourceItems>
+	<EnableDefaultItems>false</EnableDefaultItems>
+	<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+	<AssemblyName>syncfusion.ledsign.wpfapplication</AssemblyName>
+	<RootNamespace>syncfusion.ledsign.wpf</RootNamespace>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+	<DefineConstants>TRACE;NET50</DefineConstants>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+	<DefineConstants>TRACE;NET50</DefineConstants>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release-Xml|AnyCPU'">
+	<DefineConstants>TRACE;NET50</DefineConstants>
+	</PropertyGroup>
+	<ItemGroup>
+	    <ApplicationDefinition Include="App.xaml" />
+		<Compile Include="App.xaml.cs" />
+		<Compile Include="MainWindow.xaml.cs" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Page Include="MainWindow.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </Page>
+	</ItemGroup>
+	<ItemGroup>
+	  <Reference Include="Syncfusion.Data.WPF">
+	    <HintPath>E:\Soft\Program\Syncfusion\WPF\27.1.48\precompiledassemblies\net8.0\Syncfusion.Data.WPF.dll</HintPath>
+	  </Reference>
+	  <Reference Include="Syncfusion.Grid.Wpf">
+	    <HintPath>E:\Soft\Program\Syncfusion\WPF\27.1.48\precompiledassemblies\net8.0\Syncfusion.Grid.WPF.dll</HintPath>
+	  </Reference>
+	  <Reference Include="Syncfusion.GridCommon.WPF">
+	    <HintPath>E:\Soft\Program\Syncfusion\WPF\27.1.48\precompiledassemblies\net8.0\Syncfusion.GridCommon.WPF.dll</HintPath>
+	  </Reference>
+	  <Reference Include="Syncfusion.Linq.Base">
+	    <HintPath>E:\Soft\Program\Syncfusion\WPF\27.1.48\precompiledassemblies\net8.0\Syncfusion.Linq.Base.dll</HintPath>
+	  </Reference>
+	  <Reference Include="Syncfusion.SfChromelessWindow.Wpf">
+	    <HintPath>E:\Soft\Program\Syncfusion\WPF\27.1.48\precompiledassemblies\net8.0\Syncfusion.SfChromelessWindow.WPF.dll</HintPath>
+	  </Reference>
+	  <Reference Include="Syncfusion.SfGrid.WPF">
+	    <HintPath>E:\Soft\Program\Syncfusion\WPF\27.1.48\precompiledassemblies\net8.0\Syncfusion.SfGrid.WPF.dll</HintPath>
+	  </Reference>
+	  <Reference Include="Syncfusion.SfInput.Wpf">
+	    <HintPath>E:\Soft\Program\Syncfusion\WPF\27.1.48\precompiledassemblies\net8.0\Syncfusion.SfInput.WPF.dll</HintPath>
+	  </Reference>
+	  <Reference Include="Syncfusion.SfShared.Wpf">
+	    <HintPath>E:\Soft\Program\Syncfusion\WPF\27.1.48\precompiledassemblies\net8.0\Syncfusion.SfShared.WPF.dll</HintPath>
+	  </Reference>
+	  <Reference Include="Syncfusion.SfSkinManager.WPF">
+	    <HintPath>E:\Soft\Program\Syncfusion\WPF\27.1.48\precompiledassemblies\net8.0\Syncfusion.SfSkinManager.WPF.dll</HintPath>
+	  </Reference>
+	  <Reference Include="Syncfusion.Shared.WPF">
+	    <HintPath>E:\Soft\Program\Syncfusion\WPF\27.1.48\precompiledassemblies\net8.0\Syncfusion.Shared.WPF.dll</HintPath>
+	  </Reference>
+	  <Reference Include="Syncfusion.Themes.Windows11Dark.WPF">
+	    <HintPath>E:\Soft\Program\Syncfusion\WPF\27.1.48\precompiledassemblies\net8.0\Syncfusion.Themes.Windows11Dark.WPF.dll</HintPath>
+	  </Reference>
+	  <Reference Include="Syncfusion.Themes.Windows11Light.WPF">
+	    <HintPath>E:\Soft\Program\Syncfusion\WPF\27.1.48\precompiledassemblies\net8.0\Syncfusion.Themes.Windows11Light.WPF.dll</HintPath>
+	  </Reference>
+	  <Reference Include="Syncfusion.Tools.Wpf">
+	    <HintPath>E:\Soft\Program\Syncfusion\WPF\27.1.48\precompiledassemblies\net8.0\Syncfusion.Tools.WPF.dll</HintPath>
+	  </Reference>
+	</ItemGroup>
+</Project>
