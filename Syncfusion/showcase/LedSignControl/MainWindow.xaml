@@ -20,7 +20,10 @@
         BorderThickness="0"
         ShowIcon="False"
         TitleBarHeight="48"
-        TitleFontSize="24">
+        TitleFontSize="24"
+        TitleBarBackground="#F3F6FC"
+        TitleBarForeground="#000000"
+        >
     <syncfusion:ChromelessWindow.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
