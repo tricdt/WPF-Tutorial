@@ -23,6 +23,7 @@ namespace syncfusion.ledsign.wpf
     {
         public MainWindow()
         {
+            WindowHelper.MainWindow = this;
             InitializeComponent();
         }
     }

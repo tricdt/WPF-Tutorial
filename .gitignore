@@ -1,8 +1,5 @@
 **/.vs/
 **/bin/
 **/obj/
-*.user
+**/*.csproj.user
 **/*.csproj
-**/*.sln
-*.csproj
-*.sln
