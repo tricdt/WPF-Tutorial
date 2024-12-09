@@ -1,0 +1,56 @@
+﻿<syncfusion:ChromelessWindow x:Class="syncfusion.ledsign.wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:syncfusion.ledsign.wpf"
+        xmlns:listCollection="clr-namespace:System.Collections;assembly=mscorlib"
+        xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+        xmlns:syncfusionskin ="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
+        syncfusionskin:SfSkinManager.Theme="{syncfusionskin:SkinManagerExtension ThemeName=Windows11Light}"
+        mc:Ignorable="d"
+        Height="450" Width="800"
+        AllowsTransparency="True"
+        CloseButtonTemplate="{DynamicResource ProductsWindowCloseButtonTemplate}"
+        MaximizeButtonTemplate="{DynamicResource ProductsWindowMaximizeButtonTemplate}"
+        MinimizeButtonTemplate="{DynamicResource ProductsWindowMinimizeButtonTemplate}"
+        MinWidth="800"
+        MinHeight="500"
+        BorderThickness="0"
+        ResizeBorderThickness="0"
+        Title="Phần mềm điều khiển LED Sign"
+        Icon="/syncfusion.ledsign.wpf;component/Assets/App.ico"
+        TitleBarHeight="48"
+        TitleFontSize="20"
+        TitleBarBackground="#F3F6FC"
+        TitleBarForeground="#000000"
+        ShowIcon="False"
+        ShowTitle="False">
+    <syncfusion:ChromelessWindow.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/syncfusion.ledsign.wpf;component/Views/DemoWindowStyle.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </syncfusion:ChromelessWindow.Resources>
+    <syncfusion:ChromelessWindow.LeftHeaderItemsSource>
+        <listCollection:ArrayList>
+            <Image
+                Width="21"
+                Height="20"
+                Margin="12,14,0,14"
+                FocusVisualStyle="{x:Null}"
+                Source="/syncfusion.ledsign.wpf;component/Assets/App.ico" />
+            <TextBlock Margin="8,15,0,14">
+                <Span FontSize="14"
+                    FontWeight="SemiBold"
+                    Foreground="#000000">
+                    Phần mềm điều khiển Led Sign
+                </Span>
+            </TextBlock>
+        </listCollection:ArrayList>
+    </syncfusion:ChromelessWindow.LeftHeaderItemsSource>
+    <Grid>
+        
+    </Grid>
+</syncfusion:ChromelessWindow>

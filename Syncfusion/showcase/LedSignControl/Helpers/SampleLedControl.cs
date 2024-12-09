@@ -17,10 +17,6 @@ namespace LedSignControl
         public static readonly DependencyProperty LedStartProperty = DependencyProperty.Register("LedStart", typeof(int), typeof(SampleLedControl), new PropertyMetadata(1, OnLedStartChangedCallback));
         public static readonly DependencyProperty LedThemeProperty = DependencyProperty.Register("LedTheme", typeof(LEDTHEME), typeof(SampleLedControl), new PropertyMetadata(LEDTHEME.LIGHT, OnLedThemeChangedCallback));
 
-
-
-
-
         public int LedCount
         {
             get { return (int)GetValue(LedCountProperty); }
