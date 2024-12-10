@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace syncfusion.ledsign.wpf
 {
@@ -14,8 +15,20 @@ namespace syncfusion.ledsign.wpf
         {
             ThemeName = lightTheme;
         }
-        private string themeName;
+        private ICommand themeChanged;
+        public ICommand ThemeChanged
+        {
+            get
+            {
+                if (themeChanged == null)
+                {
+                    themeChanged = new RelayCommand(ThemeChangedExecute, CanThemeChanged);
+                }
 
+                return themeChanged;
+            }
+        }
+        private string themeName;
         public string ThemeName
         {
             get
@@ -34,7 +47,16 @@ namespace syncfusion.ledsign.wpf
         }
         string lightTheme = "Windows11Light";
         string darkTheme = "Windows11Dark";
+        private bool CanThemeChanged(object parameter)
+        {
+            return true;
+        }
 
+        private void ThemeChangedExecute(object parameter)
+        {
+            ThemeName = ThemeName == lightTheme ? darkTheme : lightTheme;
+            UpdateTheme();
+        }
         void UpdateTheme()
         {
             if (ThemeName == darkTheme)
