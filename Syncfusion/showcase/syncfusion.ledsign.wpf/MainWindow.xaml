@@ -22,8 +22,7 @@
         Icon="/syncfusion.ledsign.wpf;component/Assets/App.ico"
         TitleBarHeight="48"
         TitleFontSize="20"
-        TitleBarBackground="#F3F6FC"
-        TitleBarForeground="#000000"
+   
         ShowIcon="False"
         ShowTitle="False">
     <syncfusion:ChromelessWindow.Resources>
@@ -49,7 +48,7 @@
             <TextBlock Margin="8,15,0,14">
                 <Span FontSize="14"
                     FontWeight="SemiBold"
-                    Foreground="#000000">
+                    Foreground="{DynamicResource ContentForeground}">
                     Phần mềm điều khiển Led Sign
                 </Span>
             </TextBlock>
