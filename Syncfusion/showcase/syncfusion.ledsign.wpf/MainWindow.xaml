@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:syncfusion.ledsign.wpf"
+        xmlns:behaviors="http://schemas.microsoft.com/xaml/behaviors"
         xmlns:listCollection="clr-namespace:System.Collections;assembly=mscorlib"
         xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
         xmlns:syncfusionskin ="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
@@ -78,6 +79,20 @@
         </listCollection:ArrayList>
     </syncfusion:ChromelessWindow.RightHeaderItemsSource>
     <Grid>
-        
+        <ItemsControl ItemsSource="{Binding GridLed}">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel Orientation="Horizontal"/>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemContainerStyle>
+                <Style>
+                    <Setter Property="FrameworkElement.Margin" Value="0,0,5,0"/>
+                </Style>
+            </ItemsControl.ItemContainerStyle>
+        </ItemsControl>
     </Grid>
+    <!--<behaviors:Interaction.Behaviors>
+        <local:AddMainViewToViewModelBehavior/>
+    </behaviors:Interaction.Behaviors>-->
 </syncfusion:ChromelessWindow>

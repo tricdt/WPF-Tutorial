@@ -1,4 +1,5 @@
 ﻿using Syncfusion.SfSkinManager;
+using Syncfusion.Windows.Controls.Grid;
 using Syncfusion.Windows.Shared;
 using System;
 using System.Collections.Generic;
@@ -6,14 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 namespace syncfusion.ledsign.wpf
 {
     public class LocationViewModel : NotificationObject
     {
+        public MainWindow MainWindow { get; set; }
         public LocationViewModel()
         {
             ThemeName = lightTheme;
+            GridLed = new ObservableCollection<GridControl>();
+            GridLed.Add(new SampleGrid());
+            GridLed.Add(new SampleGrid());
         }
         private ICommand themeChanged;
         public ICommand ThemeChanged
@@ -59,6 +66,7 @@ namespace syncfusion.ledsign.wpf
         }
         void UpdateTheme()
         {
+          
             if (ThemeName == darkTheme)
             {
                 SfSkinManager.SetTheme(WindowHelper.MainWindow, new Theme() { ThemeName = darkTheme });
@@ -69,6 +77,7 @@ namespace syncfusion.ledsign.wpf
                 SfSkinManager.SetTheme(WindowHelper.MainWindow, new Theme() { ThemeName = lightTheme });
                 PathData = "M1 7.88484C1 11.8144 4.18557 15 8.11516 15C11.422 15 14.2019 12.7442 15 9.68742C14.4243 9.83773 13.8202 9.91774 13.1974 9.91774C9.26783 9.91774 6.08226 6.73217 6.08226 2.80258C6.08226 2.17979 6.16227 1.57569 6.31258 1C3.25584 1.7981 1 4.57803 1 7.88484Z";
             }
+
         }
 
         private string pathData;
@@ -78,5 +87,14 @@ namespace syncfusion.ledsign.wpf
             get { return pathData; }
             set { pathData = value; RaisePropertyChanged(nameof(PathData)); }
         }
+
+        private ObservableCollection<GridControl> _gridLed;
+
+        public ObservableCollection<GridControl> GridLed
+        {
+            get { return _gridLed; }
+            set { _gridLed = value; }
+        }
+
     }
 }
