@@ -15,12 +15,17 @@ namespace syncfusion.ledsign.wpf
     public class LocationViewModel : NotificationObject
     {
         public MainWindow MainWindow { get; set; }
-        public LocationViewModel()
+        ViewModelLocator _viewModelLocator;
+        public LocationViewModel(ViewModelLocator viewModel)
         {
+            _viewModelLocator = viewModel;
             ThemeName = lightTheme;
             GridLed = new ObservableCollection<GridControl>();
             GridLed.Add(new SampleGrid());
             GridLed.Add(new SampleGrid());
+
+            GroupLed = new ObservableCollection<GroupLed>();
+            GroupLed.Add(new GroupLed() { UpDown = new UpDown(), GridLed = new GridControl()});
         }
         private ICommand themeChanged;
         public ICommand ThemeChanged
@@ -63,6 +68,10 @@ namespace syncfusion.ledsign.wpf
         {
             ThemeName = ThemeName == lightTheme ? darkTheme : lightTheme;
             UpdateTheme();
+            foreach (SampleGrid item in GridLed)
+            {
+                item.InvalidateCells();
+            }
         }
         void UpdateTheme()
         {
@@ -95,6 +104,16 @@ namespace syncfusion.ledsign.wpf
             get { return _gridLed; }
             set { _gridLed = value; }
         }
-
+        private ObservableCollection<GroupLed> _groupLed;
+        public ObservableCollection<GroupLed> GroupLed
+        {
+            get { return _groupLed; }
+            set { _groupLed = value; }
+        }
+    }
+    public class GroupLed
+    {
+        public GridControl GridLed { get; set; }
+        public UpDown UpDown { get; set; }
     }
 }

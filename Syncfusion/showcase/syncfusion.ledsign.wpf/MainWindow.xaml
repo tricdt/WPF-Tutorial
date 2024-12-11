@@ -79,7 +79,7 @@
         </listCollection:ArrayList>
     </syncfusion:ChromelessWindow.RightHeaderItemsSource>
     <Grid>
-        <ItemsControl ItemsSource="{Binding GridLed}">
+        <ItemsControl ItemsSource="{Binding GroupLed}">
             <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>
                     <StackPanel Orientation="Horizontal"/>
@@ -90,6 +90,14 @@
                     <Setter Property="FrameworkElement.Margin" Value="0,0,5,0"/>
                 </Style>
             </ItemsControl.ItemContainerStyle>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <ContentControl Content="{Binding GridLed}"/>
+                        <ContentControl Content="{Binding UpDown}"/>
+                    </Grid>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
         </ItemsControl>
     </Grid>
     <!--<behaviors:Interaction.Behaviors>

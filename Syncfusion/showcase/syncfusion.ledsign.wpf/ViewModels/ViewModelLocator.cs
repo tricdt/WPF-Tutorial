@@ -13,7 +13,7 @@ namespace syncfusion.ledsign.wpf
         public LocationViewModel LocationViewModel
         {
             get {
-                if (locationViewModel == null) locationViewModel = new LocationViewModel();
+                if (locationViewModel == null) locationViewModel = new LocationViewModel(this);
                 return locationViewModel;
             }
             set { locationViewModel = value; }

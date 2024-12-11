@@ -14,7 +14,7 @@ namespace syncfusion.ledsign.wpf
     {
         public SampleGrid()
         {
-            Model.RowCount = 10;
+            Model.RowCount = 60;
             Model.ColumnCount = 7;
             Model.ColumnWidths.DefaultLineSize = 25;
             Model.RowHeights.DefaultLineSize = 25;
@@ -50,9 +50,16 @@ namespace syncfusion.ledsign.wpf
                 }
             }
         }
-        protected override void OnRender(DrawingContext dc)
+        protected override void OnResizingRows(GridResizingRowsEventArgs args)
         {
-            base.OnRender(dc);
+            base.OnResizingRows(args);
+            args.AllowResize = false;
+        }
+
+        protected override void OnResizingColumns(GridResizingColumnsEventArgs args)
+        {
+            base.OnResizingColumns(args);
+            args.AllowResize = false;
         }
     }
 
