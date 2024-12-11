@@ -50,6 +50,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Xaml.Behaviors, Version=1.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Xaml.Behaviors.Wpf.1.1.135\lib\net462\Microsoft.Xaml.Behaviors.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Syncfusion.Data.WPF, Version=27.1462.48.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>E:\Soft\Program\Syncfusion\Essential Studio\WPF\27.1.48\precompiledassemblies\4.6.2\Syncfusion.Data.WPF.dll</HintPath>
@@ -122,7 +126,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AddMainViewToViewModelBehavior.cs" />
     <Compile Include="Commands\RelayCommand.cs" />
+    <Compile Include="Helpers\SampleGrid.cs" />
     <Compile Include="Helpers\WindowHelper.cs" />
     <Compile Include="ViewModels\LedSign\LocationViewModel.cs" />
     <Compile Include="ViewModels\ViewModelLocator.cs" />
@@ -165,6 +171,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
