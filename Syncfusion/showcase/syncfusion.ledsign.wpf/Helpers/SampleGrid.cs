@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Windows.Media;
 using System.Windows;
 using Syncfusion.Windows.Controls.Cells;
+using Syncfusion.Windows.Shared;
 
 namespace syncfusion.ledsign.wpf
 {
@@ -74,6 +75,26 @@ namespace syncfusion.ledsign.wpf
         {
             SampleGrid grid = GridControl as SampleGrid;
             base.OnRender(dc, rca, style);
+        }
+    }
+
+    public class GroupLed
+    {
+        public GridControl GridLed { get; set; }
+        public UpDown UpDown { get; set; }
+        public GroupLed()
+        {
+            GridLed = new SampleGrid();
+            UpDown = new UpDown();
+            UpDown.Height = 25;
+            UpDown.Width = 95;
+            UpDown.HorizontalAlignment = HorizontalAlignment.Left;
+            UpDown.VerticalAlignment = VerticalAlignment.Top;
+            UpDown.TextAlignment = TextAlignment.Center;
+            UpDown.MinValue = 1;
+            UpDown.Value = 4;
+            UpDown.NumberDecimalDigits = 0;
+            UpDown.BorderThickness = new Thickness(0);
         }
     }
 }

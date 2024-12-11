@@ -25,7 +25,7 @@ namespace syncfusion.ledsign.wpf
             GridLed.Add(new SampleGrid());
 
             GroupLed = new ObservableCollection<GroupLed>();
-            GroupLed.Add(new GroupLed() { UpDown = new UpDown(), GridLed = new GridControl()});
+            GroupLed.Add(new GroupLed());
         }
         private ICommand themeChanged;
         public ICommand ThemeChanged
@@ -111,9 +111,5 @@ namespace syncfusion.ledsign.wpf
             set { _groupLed = value; }
         }
     }
-    public class GroupLed
-    {
-        public GridControl GridLed { get; set; }
-        public UpDown UpDown { get; set; }
-    }
+
 }
