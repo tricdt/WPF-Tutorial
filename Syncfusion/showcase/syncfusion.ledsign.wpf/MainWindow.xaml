@@ -92,10 +92,20 @@
             </ItemsControl.ItemContainerStyle>
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
-                    <Grid>
-                        <ContentControl Content="{Binding GridLed}"/>
-                        <ContentControl Content="{Binding UpDown}"/>
-                    </Grid>
+                    <Border BorderThickness="1" BorderBrush="{DynamicResource PrimaryBackground}" CornerRadius="10">
+                        <Grid>
+                            <Grid.OpacityMask>
+                                <VisualBrush Visual="{Binding ElementName=clipMask}" Stretch="None" />
+                            </Grid.OpacityMask>
+                            <Border x:Name="clipMask" Background="White" CornerRadius="10" />
+                            <ContentControl Content="{Binding GridLed}" />
+                            <ContentControl Content="{Binding UpDown}"
+                                        HorizontalAlignment="Left"
+                                        VerticalAlignment="Top"
+                                        Height="25"
+                                        Width="95"/>
+                        </Grid>
+                    </Border>
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
         </ItemsControl>

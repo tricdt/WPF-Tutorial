@@ -26,6 +26,7 @@ namespace syncfusion.ledsign.wpf
 
             GroupLed = new ObservableCollection<GroupLed>();
             GroupLed.Add(new GroupLed());
+            GroupLed.Add(new GroupLed());
         }
         private ICommand themeChanged;
         public ICommand ThemeChanged

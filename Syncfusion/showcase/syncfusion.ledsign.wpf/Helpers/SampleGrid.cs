@@ -22,6 +22,8 @@ namespace syncfusion.ledsign.wpf
             Model.ColumnWidths[0] = 30d;
             Model.ColumnWidths[1] = 40d;
 
+            
+
             Model.CellModels.Add("LedEdit", new LedEditCellModel());
             Model.TableStyle.HorizontalAlignment = HorizontalAlignment.Center;
             Model.TableStyle.VerticalAlignment = VerticalAlignment.Center;
@@ -30,7 +32,6 @@ namespace syncfusion.ledsign.wpf
             {
                 All = new Pen(Brushes.Gray, 0.05d)
             };
-
             Model.CoveredRanges.Add(new CoveredCellInfo(0, 0, 0, 2));
 
             for (int i = 1; i < Model.RowCount; i++)
@@ -62,7 +63,9 @@ namespace syncfusion.ledsign.wpf
             base.OnResizingColumns(args);
             args.AllowResize = false;
         }
+
     }
+
 
     public class LedEditCellModel : GridCellModel<LedEditCellRenderer>
     {
@@ -78,23 +81,23 @@ namespace syncfusion.ledsign.wpf
         }
     }
 
+
     public class GroupLed
     {
-        public GridControl GridLed { get; set; }
+        public SampleGrid GridLed { get; set; }
         public UpDown UpDown { get; set; }
         public GroupLed()
         {
             GridLed = new SampleGrid();
             UpDown = new UpDown();
-            UpDown.Height = 25;
-            UpDown.Width = 95;
-            UpDown.HorizontalAlignment = HorizontalAlignment.Left;
-            UpDown.VerticalAlignment = VerticalAlignment.Top;
             UpDown.TextAlignment = TextAlignment.Center;
             UpDown.MinValue = 1;
             UpDown.Value = 4;
             UpDown.NumberDecimalDigits = 0;
             UpDown.BorderThickness = new Thickness(0);
+            UpDown.Focusable = false;
+            UpDown.SetResourceReference(UpDown.BackgroundProperty, "PrimaryForeground");
         }
+
     }
 }
