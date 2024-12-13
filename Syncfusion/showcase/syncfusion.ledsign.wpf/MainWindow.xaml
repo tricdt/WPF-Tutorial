@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:syncfusion.ledsign.wpf"
+        xmlns:behaviors="http://schemas.microsoft.com/xaml/behaviors"
         xmlns:listCollection="clr-namespace:System.Collections;assembly=mscorlib"
         xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
         xmlns:syncfusionskin ="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
@@ -78,7 +79,38 @@
         </listCollection:ArrayList>
     </syncfusion:ChromelessWindow.RightHeaderItemsSource>
     <Grid>
-        <ContentControl Content="{Binding GridLed}"/>
-        <ContentControl Content="{Binding UpDown}" Height="25" Width="95" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <ItemsControl ItemsSource="{Binding GroupLed}">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel Orientation="Horizontal"/>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemContainerStyle>
+                <Style>
+                    <Setter Property="FrameworkElement.Margin" Value="0,0,5,0"/>
+                </Style>
+            </ItemsControl.ItemContainerStyle>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Border BorderThickness="1" BorderBrush="{DynamicResource PrimaryBackground}" CornerRadius="10">
+                        <Grid>
+                            <Grid.OpacityMask>
+                                <VisualBrush Visual="{Binding ElementName=clipMask}" Stretch="None" />
+                            </Grid.OpacityMask>
+                            <Border x:Name="clipMask" Background="White" CornerRadius="10" />
+                            <ContentControl Content="{Binding GridLed}" />
+                            <ContentControl Content="{Binding UpDown}"
+                                        HorizontalAlignment="Left"
+                                        VerticalAlignment="Top"
+                                        Height="25"
+                                        Width="95"/>
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
     </Grid>
+    <!--<behaviors:Interaction.Behaviors>
+        <local:AddMainViewToViewModelBehavior/>
+    </behaviors:Interaction.Behaviors>-->
 </syncfusion:ChromelessWindow>

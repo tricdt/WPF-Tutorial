@@ -50,57 +50,61 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Xaml.Behaviors, Version=1.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Xaml.Behaviors.Wpf.1.1.135\lib\net462\Microsoft.Xaml.Behaviors.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Syncfusion.Data.WPF, Version=27.1462.48.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>E:\Soft\Program\Syncfusion\Essential Studio\WPF\27.1.48\precompiledassemblies\4.6.2\Syncfusion.Data.WPF.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\WPF\27.1.48\precompiledassemblies\4.6.2\Syncfusion.Data.WPF.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.Grid.WPF, Version=27.1462.48.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>E:\Soft\Program\Syncfusion\Essential Studio\WPF\27.1.48\precompiledassemblies\4.6.2\Syncfusion.Grid.WPF.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\WPF\27.1.48\precompiledassemblies\4.6.2\Syncfusion.Grid.WPF.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.GridCommon.WPF, Version=27.1462.48.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>E:\Soft\Program\Syncfusion\Essential Studio\WPF\27.1.48\precompiledassemblies\4.6.2\Syncfusion.GridCommon.WPF.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\WPF\27.1.48\precompiledassemblies\4.6.2\Syncfusion.GridCommon.WPF.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.Linq.Base, Version=27.1462.48.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>E:\Soft\Program\Syncfusion\Essential Studio\WPF\27.1.48\precompiledassemblies\4.6.2\Syncfusion.Linq.Base.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\WPF\27.1.48\precompiledassemblies\4.6.2\Syncfusion.Linq.Base.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.SfChromelessWindow.WPF, Version=27.1462.48.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>E:\Soft\Program\Syncfusion\Essential Studio\WPF\27.1.48\precompiledassemblies\4.6.2\Syncfusion.SfChromelessWindow.WPF.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\WPF\27.1.48\precompiledassemblies\4.6.2\Syncfusion.SfChromelessWindow.WPF.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.SfGrid.WPF, Version=27.1462.48.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>E:\Soft\Program\Syncfusion\Syncfusion\Essential Studio\WPF\27.1.48\precompiledassemblies\4.6.2\Syncfusion.SfGrid.WPF.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Syncfusion\Syncfusion\Essential Studio\WPF\27.1.48\precompiledassemblies\4.6.2\Syncfusion.SfGrid.WPF.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.SfInput.WPF, Version=27.1462.48.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>E:\Soft\Program\Syncfusion\Syncfusion\Essential Studio\WPF\27.1.48\precompiledassemblies\4.6.2\Syncfusion.SfInput.WPF.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Syncfusion\Syncfusion\Essential Studio\WPF\27.1.48\precompiledassemblies\4.6.2\Syncfusion.SfInput.WPF.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.SfShared.WPF, Version=27.1462.48.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>E:\Soft\Program\Syncfusion\Syncfusion\Essential Studio\WPF\27.1.48\precompiledassemblies\4.6.2\Syncfusion.SfShared.WPF.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Syncfusion\Syncfusion\Essential Studio\WPF\27.1.48\precompiledassemblies\4.6.2\Syncfusion.SfShared.WPF.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.SfSkinManager.WPF, Version=27.1462.48.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>E:\Soft\Program\Syncfusion\Syncfusion\Essential Studio\WPF\27.1.48\precompiledassemblies\4.6.2\Syncfusion.SfSkinManager.WPF.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Syncfusion\Syncfusion\Essential Studio\WPF\27.1.48\precompiledassemblies\4.6.2\Syncfusion.SfSkinManager.WPF.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.Shared.WPF, Version=27.1462.48.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>E:\Soft\Program\Syncfusion\Syncfusion\Essential Studio\WPF\27.1.48\precompiledassemblies\4.6.2\Syncfusion.Shared.WPF.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Syncfusion\Syncfusion\Essential Studio\WPF\27.1.48\precompiledassemblies\4.6.2\Syncfusion.Shared.WPF.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.Themes.Windows11Dark.WPF, Version=27.1462.48.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>E:\Soft\Program\Syncfusion\Syncfusion\Essential Studio\WPF\27.1.48\precompiledassemblies\4.6.2\Syncfusion.Themes.Windows11Dark.WPF.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Syncfusion\Syncfusion\Essential Studio\WPF\27.1.48\precompiledassemblies\4.6.2\Syncfusion.Themes.Windows11Dark.WPF.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.Themes.Windows11Light.WPF, Version=27.1462.48.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>E:\Soft\Program\Syncfusion\Syncfusion\Essential Studio\WPF\27.1.48\precompiledassemblies\4.6.2\Syncfusion.Themes.Windows11Light.WPF.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Syncfusion\Syncfusion\Essential Studio\WPF\27.1.48\precompiledassemblies\4.6.2\Syncfusion.Themes.Windows11Light.WPF.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.Tools.WPF, Version=27.1462.48.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>E:\Soft\Program\Syncfusion\Syncfusion\Essential Studio\WPF\27.1.48\precompiledassemblies\4.6.2\Syncfusion.Tools.WPF.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Syncfusion\Syncfusion\Essential Studio\WPF\27.1.48\precompiledassemblies\4.6.2\Syncfusion.Tools.WPF.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -122,8 +126,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AddMainViewToViewModelBehavior.cs" />
     <Compile Include="Commands\RelayCommand.cs" />
-    <Compile Include="Helpers\SimpleGridLed.cs" />
+    <Compile Include="Helpers\SampleGrid.cs" />
     <Compile Include="Helpers\WindowHelper.cs" />
     <Compile Include="ViewModels\LedSign\LocationViewModel.cs" />
     <Compile Include="ViewModels\ViewModelLocator.cs" />
@@ -166,6 +171,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -1,19 +1,19 @@
-﻿using Syncfusion.Windows.Controls.Cells;
-using Syncfusion.Windows.Controls.Grid;
-using Syncfusion.Windows.Shared;
+﻿using Syncfusion.Windows.Controls.Grid;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows;
 using System.Windows.Media;
+using System.Windows;
+using Syncfusion.Windows.Controls.Cells;
+using Syncfusion.Windows.Shared;
 
 namespace syncfusion.ledsign.wpf
 {
-    public class SimpleGridLed : GridControl
+    public class SampleGrid : GridControl
     {
-        public SimpleGridLed()
+        public SampleGrid()
         {
             Model.RowCount = 60;
             Model.ColumnCount = 7;
@@ -21,6 +21,8 @@ namespace syncfusion.ledsign.wpf
             Model.RowHeights.DefaultLineSize = 25;
             Model.ColumnWidths[0] = 30d;
             Model.ColumnWidths[1] = 40d;
+
+            
 
             Model.CellModels.Add("LedEdit", new LedEditCellModel());
             Model.TableStyle.HorizontalAlignment = HorizontalAlignment.Center;
@@ -30,8 +32,6 @@ namespace syncfusion.ledsign.wpf
             {
                 All = new Pen(Brushes.Gray, 0.05d)
             };
-
-
             Model.CoveredRanges.Add(new CoveredCellInfo(0, 0, 0, 2));
 
             for (int i = 1; i < Model.RowCount; i++)
@@ -52,7 +52,20 @@ namespace syncfusion.ledsign.wpf
                 }
             }
         }
+        protected override void OnResizingRows(GridResizingRowsEventArgs args)
+        {
+            base.OnResizingRows(args);
+            args.AllowResize = false;
+        }
+
+        protected override void OnResizingColumns(GridResizingColumnsEventArgs args)
+        {
+            base.OnResizingColumns(args);
+            args.AllowResize = false;
+        }
+
     }
+
 
     public class LedEditCellModel : GridCellModel<LedEditCellRenderer>
     {
@@ -63,39 +76,27 @@ namespace syncfusion.ledsign.wpf
     {
         protected override void OnRender(DrawingContext dc, RenderCellArgs rca, GridRenderStyleInfo style)
         {
-            base.OnRender(dc, rca, style); 
-        }
-        public override void OnInitializeContent(IntegerTextBox uiElement, GridRenderStyleInfo style)
-        {
-            base.OnInitializeContent(uiElement, style);
-            uiElement.MaxValue = 15;
-            uiElement.MinValue = 0;
+            SampleGrid grid = GridControl as SampleGrid;
+            base.OnRender(dc, rca, style);
         }
     }
 
+
     public class GroupLed
     {
-        private SimpleGridLed _GridLed;
-
-        public SimpleGridLed GridLed
-        {
-            get { return _GridLed; }
-            set { _GridLed = value; }
-        }
-
-
-        private UpDown _UpDown;
-
-        public UpDown UpDown
-        {
-            get { return _UpDown; }
-            set { _UpDown = value; }
-        }
-
+        public SampleGrid GridLed { get; set; }
+        public UpDown UpDown { get; set; }
         public GroupLed()
         {
-            GridLed = new SimpleGridLed();
+            GridLed = new SampleGrid();
             UpDown = new UpDown();
+            UpDown.TextAlignment = TextAlignment.Center;
+            UpDown.MinValue = 1;
+            UpDown.Value = 4;
+            UpDown.NumberDecimalDigits = 0;
+            UpDown.BorderThickness = new Thickness(0);
+            UpDown.Focusable = false;
+            UpDown.SetResourceReference(UpDown.BackgroundProperty, "PrimaryForeground");
         }
 
     }
