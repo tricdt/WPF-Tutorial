@@ -78,6 +78,7 @@
         </listCollection:ArrayList>
     </syncfusion:ChromelessWindow.RightHeaderItemsSource>
     <Grid>
-        
+        <ContentControl Content="{Binding GridLed}"/>
+        <ContentControl Content="{Binding UpDown}" Height="25" Width="95" HorizontalAlignment="Left" VerticalAlignment="Top"/>
     </Grid>
 </syncfusion:ChromelessWindow>

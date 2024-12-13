@@ -13,6 +13,9 @@ namespace syncfusion.ledsign.wpf
     {
         public LocationViewModel()
         {
+            UpDown = new UpDown() { Height = 25, Width = 95};
+            UpDown.SetResourceReference(UpDown.BackgroundProperty, "IconColor");
+            GridLed = new SimpleGridLed();
             ThemeName = lightTheme;
         }
         private ICommand themeChanged;
@@ -78,5 +81,24 @@ namespace syncfusion.ledsign.wpf
             get { return pathData; }
             set { pathData = value; RaisePropertyChanged(nameof(PathData)); }
         }
+
+        private UpDown _UpDown;
+
+        public UpDown UpDown
+        {
+            get { return _UpDown; }
+            set { _UpDown = value; RaisePropertyChanged(nameof(UpDown)); }
+        }
+
+        private SimpleGridLed _gridLed;
+
+        public SimpleGridLed GridLed
+        {
+            get { return _gridLed; }
+            set { _gridLed = value; RaisePropertyChanged(nameof(GridLed)); }
+        }
+
     }
+
+
 }
