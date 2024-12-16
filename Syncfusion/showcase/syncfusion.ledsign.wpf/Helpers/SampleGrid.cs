@@ -22,16 +22,14 @@ namespace syncfusion.ledsign.wpf
             Model.ColumnWidths[0] = 30d;
             Model.ColumnWidths[1] = 40d;
 
-            
-
             Model.CellModels.Add("LedEdit", new LedEditCellModel());
             Model.TableStyle.HorizontalAlignment = HorizontalAlignment.Center;
             Model.TableStyle.VerticalAlignment = VerticalAlignment.Center;
             AllowDragDrop = false;
-            Model.TableStyle.Borders = new CellBordersInfo()
-            {
-                All = new Pen(Brushes.Gray, 0.05d)
-            };
+            //Model.TableStyle.Borders = new CellBordersInfo()
+            //{
+            //    All = new Pen(Brushes.Gray, 0.05d)
+            //};
             Model.CoveredRanges.Add(new CoveredCellInfo(0, 0, 0, 2));
 
             for (int i = 1; i < Model.RowCount; i++)
@@ -64,6 +62,42 @@ namespace syncfusion.ledsign.wpf
             args.AllowResize = false;
         }
 
+        private int _LedCount;
+
+        public int LedCount
+        {
+            get { return _LedCount; }
+            set {
+                _LedCount = value;
+                OnLedCountChange(value);
+            }
+        }
+
+        private void OnLedCountChange(int value)
+        {
+            if(Model.ColumnCount < value + 3)
+            {
+                for(int i = Model.ColumnCount; i<value + 3; i++)
+                {
+                    Model.InsertColumns(Model.ColumnCount, 1);
+                    GridStyleInfo style = Model[0, Model.ColumnCount - 1];
+                    style.CellValue = 1 + i - 3;
+                    style.CellType = "Header";
+
+                    for (int j = 1; j < Model.RowCount; j++)
+                    {
+                        style = Model[j, Model.ColumnCount - 1];
+                        style.CellType = "LedEdit";
+                        style.CellValue = (Model.ColumnCount - 4) % 16;
+                    }
+                }
+            }else
+            {
+                Model.ColumnCount = Convert.ToInt32(value) + 3;
+            }
+            Width = (Model.ColumnCount - 3) * 25 + 100;
+            InvalidateCells();
+        }
     }
 
 
@@ -97,7 +131,12 @@ namespace syncfusion.ledsign.wpf
             UpDown.BorderThickness = new Thickness(0);
             UpDown.Focusable = false;
             UpDown.SetResourceReference(UpDown.BackgroundProperty, "PrimaryForeground");
+            UpDown.ValueChanged += UpDown_ValueChanged;
         }
 
+        private void UpDown_ValueChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            GridLed.LedCount = Convert.ToInt32(e.NewValue);
+        }
     }
 }

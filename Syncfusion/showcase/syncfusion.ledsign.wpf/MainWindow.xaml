@@ -92,7 +92,8 @@
             </ItemsControl.ItemContainerStyle>
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
-                    <Border BorderThickness="1" BorderBrush="{DynamicResource PrimaryBackground}" CornerRadius="10">
+                    <Border BorderThickness="1" BorderBrush="{DynamicResource PrimaryBackground}" CornerRadius="10"
+                            Padding="5">
                         <Grid>
                             <Grid.OpacityMask>
                                 <VisualBrush Visual="{Binding ElementName=clipMask}" Stretch="None" />
