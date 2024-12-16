@@ -26,12 +26,7 @@ namespace syncfusion.ledsign.wpf
             Model.TableStyle.HorizontalAlignment = HorizontalAlignment.Center;
             Model.TableStyle.VerticalAlignment = VerticalAlignment.Center;
             AllowDragDrop = false;
-            //Model.TableStyle.Borders = new CellBordersInfo()
-            //{
-            //    All = new Pen(Brushes.Red, 0.05d)
-            //};
             Model.CoveredRanges.Add(new CoveredCellInfo(0, 0, 0, 2));
-
             for (int i = 1; i < Model.RowCount; i++)
             {
                 Model[i, 0].CellType = "Header";
@@ -49,13 +44,7 @@ namespace syncfusion.ledsign.wpf
                     Model[j, i].CellValue = (i - 3) % 16;
                 }
             }
-
-            ////Using ShowCurrentCell property.
-            //Model.Options.ShowCurrentCell = false;
-
-            ////Using ExcelLikeCurrentCell property.
-            //Model.Options.ExcelLikeCurrentCell = false;
-
+            Model.Options.ShowCurrentCell = false;
             Width = 205;
         }
         protected override void OnResizingRows(GridResizingRowsEventArgs args)
@@ -73,26 +62,37 @@ namespace syncfusion.ledsign.wpf
         protected override void OnQueryCellInfo(GridQueryCellInfoEventArgs e)
         {
             base.OnQueryCellInfo(e);
+            //show border for current cell while selecting the set of cells
             if (Model.SelectedRanges.ActiveRange.Contains(GridRangeInfo.Cell(e.Cell.RowIndex, e.Cell.ColumnIndex)))
             {
-                if (e.Cell.RowIndex == CurrentCell.RowIndex && e.Cell.ColumnIndex == CurrentCell.ColumnIndex)
+                if (e.Cell.RowIndex == CurrentCell.RowIndex && e.Cell.ColumnIndex == CurrentCell.ColumnIndex && e.Cell.RowIndex !=0 && e.Cell.ColumnIndex !=0)
                 {
-                    e.Style.Borders.All = new Pen(Brushes.Black, 2);
+                    e.Style.Borders.All = new Pen(Brushes.Red, 2);
                 }
             }
-            if (e.Cell.RowIndex == CurrentCell.RowIndex && e.Cell.ColumnIndex == CurrentCell.ColumnIndex)
-                e.Style.Borders.All = new Pen(Brushes.Black, 2);
-            else
-                e.Style.Borders.All = new Pen(Brushes.Transparent, 0);
+            //show border for select the single cell or current cell
+            if (e.Cell.RowIndex == CurrentCell.RowIndex && e.Cell.ColumnIndex == CurrentCell.ColumnIndex && e.Cell.RowIndex != 0 && e.Cell.ColumnIndex != 0 && LedTheme == LEDTHEME.DARK)
+                e.Style.Borders.All = new Pen(Brushes.Red, 2);
+            else if(e.Cell.RowIndex == CurrentCell.RowIndex && e.Cell.ColumnIndex == CurrentCell.ColumnIndex && e.Cell.RowIndex != 0 && e.Cell.ColumnIndex != 0 && LedTheme == LEDTHEME.LIGHT)
+                e.Style.Borders.All = new Pen(Brushes.Green, 2);
+
         }
         private GridRangeInfo oldRange { get; set; }
         protected override void OnSelectionChanged(GridSelectionChangedEventArgs e)
         {
             base.OnSelectionChanged(e);
+            //if (e.Reason == GridSelectionReason.MouseDown || e.Reason == GridSelectionReason.MouseUp)
+            //{
+            //    InvalidateCells();
+            //}
             if (e.Reason == GridSelectionReason.MouseDown || e.Reason == GridSelectionReason.SetCurrentCell || e.Reason == GridSelectionReason.MouseMove || e.Reason == GridSelectionReason.SelectRange || e.Reason == GridSelectionReason.MouseUp)
             {
-                InvalidateCell(GridRangeInfo.Row(0));
                 InvalidateCell(GridRangeInfo.Col(0));
+                InvalidateCell(GridRangeInfo.Row(0));
+                if (Model.SelectedRanges.ActiveRange.Contains(GridRangeInfo.Cell(CurrentCell.RowIndex, CurrentCell.ColumnIndex)))
+                {
+                    InvalidateCell(GridRangeInfo.Cell(CurrentCell.RowIndex, CurrentCell.ColumnIndex));
+                }
                 if (oldRange != null)
                 {
                     for (int row = oldRange.Top; row <= oldRange.Bottom; row++)
@@ -125,6 +125,7 @@ namespace syncfusion.ledsign.wpf
             }
 
             oldRange = e.Range;
+            InvalidateVisual();
         }
 
 
@@ -133,6 +134,8 @@ namespace syncfusion.ledsign.wpf
             base.OnPrepareRenderCell(e);
             if (LedTheme == LEDTHEME.LIGHT)
             {
+                e.Style.Foreground = Brushes.Black;
+                e.Style.Background = Brushes.White;
                 if (e.Cell.RowIndex == 0 && Model.SelectedRanges.AnyRangeIntersects(GridRangeInfo.Col(e.Cell.ColumnIndex)))
                 {
                     e.Style.Background = Brushes.LightGray;
@@ -143,13 +146,17 @@ namespace syncfusion.ledsign.wpf
                     e.Style.Background = Brushes.LightGray;
                     e.Style.Font.FontWeight = FontWeights.Bold;
                 }
+
             }
             else
             {
+                e.Style.Foreground = Brushes.White;
+                e.Style.Background = Brushes.Black;
                 if (e.Cell.RowIndex == 0 && Model.SelectedRanges.AnyRangeIntersects(GridRangeInfo.Col(e.Cell.ColumnIndex)))
                 {
                     e.Style.Background = Brushes.BlueViolet;
                     e.Style.Font.FontWeight = FontWeights.Bold;
+                    
                 }
                 else if (e.Cell.ColumnIndex == 0 && Model.SelectedRanges.AnyRangeIntersects(GridRangeInfo.Row(e.Cell.RowIndex)))
                 {
@@ -175,11 +182,15 @@ namespace syncfusion.ledsign.wpf
             get { return _LedTheme; }
             set {
                 _LedTheme = value;
+                UpDateGridLed(value);
                 InvalidateCells();
+                InvalidateVisual();
             }
         }
 
-
+        private void UpDateGridLed(LEDTHEME value)
+        {
+        }
 
         private void OnLedCountChanged(int value)
         {
