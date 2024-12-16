@@ -28,7 +28,7 @@ namespace syncfusion.ledsign.wpf
             AllowDragDrop = false;
             //Model.TableStyle.Borders = new CellBordersInfo()
             //{
-            //    All = new Pen(Brushes.Gray, 0.05d)
+            //    All = new Pen(Brushes.Red, 0.05d)
             //};
             Model.CoveredRanges.Add(new CoveredCellInfo(0, 0, 0, 2));
 
@@ -49,6 +49,14 @@ namespace syncfusion.ledsign.wpf
                     Model[j, i].CellValue = (i - 3) % 16;
                 }
             }
+
+            ////Using ShowCurrentCell property.
+            //Model.Options.ShowCurrentCell = false;
+
+            ////Using ExcelLikeCurrentCell property.
+            //Model.Options.ExcelLikeCurrentCell = false;
+
+            Width = 205;
         }
         protected override void OnResizingRows(GridResizingRowsEventArgs args)
         {
@@ -62,6 +70,94 @@ namespace syncfusion.ledsign.wpf
             args.AllowResize = false;
         }
 
+        protected override void OnQueryCellInfo(GridQueryCellInfoEventArgs e)
+        {
+            base.OnQueryCellInfo(e);
+            if (Model.SelectedRanges.ActiveRange.Contains(GridRangeInfo.Cell(e.Cell.RowIndex, e.Cell.ColumnIndex)))
+            {
+                if (e.Cell.RowIndex == CurrentCell.RowIndex && e.Cell.ColumnIndex == CurrentCell.ColumnIndex)
+                {
+                    e.Style.Borders.All = new Pen(Brushes.Black, 2);
+                }
+            }
+            if (e.Cell.RowIndex == CurrentCell.RowIndex && e.Cell.ColumnIndex == CurrentCell.ColumnIndex)
+                e.Style.Borders.All = new Pen(Brushes.Black, 2);
+            else
+                e.Style.Borders.All = new Pen(Brushes.Transparent, 0);
+        }
+        private GridRangeInfo oldRange { get; set; }
+        protected override void OnSelectionChanged(GridSelectionChangedEventArgs e)
+        {
+            base.OnSelectionChanged(e);
+            if (e.Reason == GridSelectionReason.MouseDown || e.Reason == GridSelectionReason.SetCurrentCell || e.Reason == GridSelectionReason.MouseMove || e.Reason == GridSelectionReason.SelectRange || e.Reason == GridSelectionReason.MouseUp)
+            {
+                InvalidateCell(GridRangeInfo.Row(0));
+                InvalidateCell(GridRangeInfo.Col(0));
+                if (oldRange != null)
+                {
+                    for (int row = oldRange.Top; row <= oldRange.Bottom; row++)
+                    {
+                        for (int col = oldRange.Left; col <= oldRange.Right; col++)
+                        {
+                            if (!Model.SelectedRanges.Contains(GridRangeInfo.Cell(row, col)))
+                            {
+                                InvalidateCell(GridRangeInfo.Cell(row, col));
+                            }
+                        }
+                    }
+                }
+                if (oldRange != null)
+                {
+                    foreach (GridRangeInfo range in Model.SelectedRanges)
+                    {
+                        for (int row = range.Top; row <= range.Bottom; row++)
+                        {
+                            for (int col = range.Left; col <= range.Right; col++)
+                            {
+                                if (!oldRange.Contains(GridRangeInfo.Cell(row, col)))
+                                {
+                                    InvalidateCell(GridRangeInfo.Cell(row, col));
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            oldRange = e.Range;
+        }
+
+
+        protected override void OnPrepareRenderCell(GridPrepareRenderCellEventArgs e)
+        {
+            base.OnPrepareRenderCell(e);
+            if (LedTheme == LEDTHEME.LIGHT)
+            {
+                if (e.Cell.RowIndex == 0 && Model.SelectedRanges.AnyRangeIntersects(GridRangeInfo.Col(e.Cell.ColumnIndex)))
+                {
+                    e.Style.Background = Brushes.LightGray;
+                    e.Style.Font.FontWeight = FontWeights.Bold;
+                }
+                else if (e.Cell.ColumnIndex == 0 && Model.SelectedRanges.AnyRangeIntersects(GridRangeInfo.Row(e.Cell.RowIndex)))
+                {
+                    e.Style.Background = Brushes.LightGray;
+                    e.Style.Font.FontWeight = FontWeights.Bold;
+                }
+            }
+            else
+            {
+                if (e.Cell.RowIndex == 0 && Model.SelectedRanges.AnyRangeIntersects(GridRangeInfo.Col(e.Cell.ColumnIndex)))
+                {
+                    e.Style.Background = Brushes.BlueViolet;
+                    e.Style.Font.FontWeight = FontWeights.Bold;
+                }
+                else if (e.Cell.ColumnIndex == 0 && Model.SelectedRanges.AnyRangeIntersects(GridRangeInfo.Row(e.Cell.RowIndex)))
+                {
+                    e.Style.Background = Brushes.BlueViolet;
+                    e.Style.Font.FontWeight = FontWeights.Bold;
+                }
+            }
+        }
         private int _LedCount;
 
         public int LedCount
@@ -69,21 +165,33 @@ namespace syncfusion.ledsign.wpf
             get { return _LedCount; }
             set {
                 _LedCount = value;
-                OnLedCountChange(value);
+                OnLedCountChanged(value);
+            }
+        }
+        private LEDTHEME _LedTheme;
+
+        public LEDTHEME LedTheme
+        {
+            get { return _LedTheme; }
+            set {
+                _LedTheme = value;
+                InvalidateCells();
             }
         }
 
-        private void OnLedCountChange(int value)
+
+
+        private void OnLedCountChanged(int value)
         {
-            if(Model.ColumnCount < value + 3)
+            if (Model.ColumnCount < value + 3)
             {
-                for(int i = Model.ColumnCount; i<value + 3; i++)
+                for (int i = Model.ColumnCount; i < value + 3; i++)
                 {
                     Model.InsertColumns(Model.ColumnCount, 1);
                     GridStyleInfo style = Model[0, Model.ColumnCount - 1];
                     style.CellValue = 1 + i - 3;
                     style.CellType = "Header";
-
+                   
                     for (int j = 1; j < Model.RowCount; j++)
                     {
                         style = Model[j, Model.ColumnCount - 1];
@@ -91,13 +199,19 @@ namespace syncfusion.ledsign.wpf
                         style.CellValue = (Model.ColumnCount - 4) % 16;
                     }
                 }
-            }else
-            {
-                Model.ColumnCount = Convert.ToInt32(value) + 3;
             }
-            Width = (Model.ColumnCount - 3) * 25 + 100;
-            InvalidateCells();
+            else
+            {
+                Model.ColumnCount = value + 3;
+            }
+            Width = (Model.ColumnCount - 3) * 25 + 105;
+            //InvalidateCells();
         }
+    }
+
+    public enum LEDTHEME
+    {
+        LIGHT, DARK
     }
 
 
@@ -112,6 +226,12 @@ namespace syncfusion.ledsign.wpf
         {
             SampleGrid grid = GridControl as SampleGrid;
             base.OnRender(dc, rca, style);
+        }
+        public override void OnInitializeContent(IntegerTextBox uiElement, GridRenderStyleInfo style)
+        {
+            base.OnInitializeContent(uiElement, style);
+            uiElement.MaxValue = 15;
+            uiElement.MinValue = 0;
         }
     }
 

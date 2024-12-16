@@ -99,7 +99,11 @@
                                 <VisualBrush Visual="{Binding ElementName=clipMask}" Stretch="None" />
                             </Grid.OpacityMask>
                             <Border x:Name="clipMask" Background="White" CornerRadius="10" />
-                            <ContentControl Content="{Binding GridLed}" />
+                            <ScrollViewer CanContentScroll="True"
+                                          HorizontalScrollBarVisibility="Auto"
+                                          VerticalScrollBarVisibility="Auto"
+                                          Content="{Binding GridLed}">
+                            </ScrollViewer>
                             <ContentControl Content="{Binding UpDown}"
                                         HorizontalAlignment="Left"
                                         VerticalAlignment="Top"
