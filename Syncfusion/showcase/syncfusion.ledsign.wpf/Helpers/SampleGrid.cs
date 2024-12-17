@@ -44,7 +44,16 @@ namespace syncfusion.ledsign.wpf
                     Model[j, i].CellValue = (i - 3) % 16;
                 }
             }
+
             Model.Options.ShowCurrentCell = false;
+            Model.Options.ExcelLikeSelectionFrame = true;
+            Model.Options.HighlightSelectionBorderWidth = 2;
+            Model.TableStyle.Borders.Right = null;
+            Model.TableStyle.Borders.Bottom = null;
+
+            Model.Options.DrawSelectionOptions = GridDrawSelectionOptions.ReplaceBackground | GridDrawSelectionOptions.ReplaceTextColor;
+            Model.Options.HighlightSelectionBackground = Brushes.CadetBlue;
+            Model.Options.HighlightSelectionForeground = Brushes.YellowGreen;
             Width = 205;
         }
         protected override void OnResizingRows(GridResizingRowsEventArgs args)
@@ -62,29 +71,29 @@ namespace syncfusion.ledsign.wpf
         protected override void OnQueryCellInfo(GridQueryCellInfoEventArgs e)
         {
             base.OnQueryCellInfo(e);
-            //show border for current cell while selecting the set of cells
-            if (Model.SelectedRanges.ActiveRange.Contains(GridRangeInfo.Cell(e.Cell.RowIndex, e.Cell.ColumnIndex)))
-            {
-                if (e.Cell.RowIndex == CurrentCell.RowIndex && e.Cell.ColumnIndex == CurrentCell.ColumnIndex && e.Cell.RowIndex !=0 && e.Cell.ColumnIndex !=0)
-                {
-                    e.Style.Borders.All = new Pen(Brushes.Red, 2);
-                }
-            }
-            //show border for select the single cell or current cell
-            if (e.Cell.RowIndex == CurrentCell.RowIndex && e.Cell.ColumnIndex == CurrentCell.ColumnIndex && e.Cell.RowIndex != 0 && e.Cell.ColumnIndex != 0 && LedTheme == LEDTHEME.DARK)
-                e.Style.Borders.All = new Pen(Brushes.Red, 2);
-            else if(e.Cell.RowIndex == CurrentCell.RowIndex && e.Cell.ColumnIndex == CurrentCell.ColumnIndex && e.Cell.RowIndex != 0 && e.Cell.ColumnIndex != 0 && LedTheme == LEDTHEME.LIGHT)
-                e.Style.Borders.All = new Pen(Brushes.Green, 2);
+            ////show border for current cell while selecting the set of cells
+            //if (Model.SelectedRanges.ActiveRange.Contains(GridRangeInfo.Cell(e.Cell.RowIndex, e.Cell.ColumnIndex)))
+            //{
+            //    if (e.Cell.RowIndex == CurrentCell.RowIndex && e.Cell.ColumnIndex == CurrentCell.ColumnIndex && e.Cell.RowIndex !=0 && e.Cell.ColumnIndex !=0)
+            //    {
+            //        e.Style.Borders.All = new Pen(Brushes.Red, 2);
+            //    }
+            //}
+            ////show border for select the single cell or current cell
+            //if (e.Cell.RowIndex == CurrentCell.RowIndex && e.Cell.ColumnIndex == CurrentCell.ColumnIndex && e.Cell.RowIndex != 0 && e.Cell.ColumnIndex != 0 && LedTheme == LEDTHEME.DARK)
+            //    e.Style.Borders.All = new Pen(Brushes.BlueViolet, 2);
+            //else if(e.Cell.RowIndex == CurrentCell.RowIndex && e.Cell.ColumnIndex == CurrentCell.ColumnIndex && e.Cell.RowIndex != 0 && e.Cell.ColumnIndex != 0 && LedTheme == LEDTHEME.LIGHT)
+            //    e.Style.Borders.All = new Pen(Brushes.Green, 2);
 
         }
         private GridRangeInfo oldRange { get; set; }
         protected override void OnSelectionChanged(GridSelectionChangedEventArgs e)
         {
             base.OnSelectionChanged(e);
-            //if (e.Reason == GridSelectionReason.MouseDown || e.Reason == GridSelectionReason.MouseUp)
-            //{
-            //    InvalidateCells();
-            //}
+            if (e.Reason == GridSelectionReason.MouseDown || e.Reason == GridSelectionReason.MouseUp)
+            {
+                InvalidateCells();
+            }
             if (e.Reason == GridSelectionReason.MouseDown || e.Reason == GridSelectionReason.SetCurrentCell || e.Reason == GridSelectionReason.MouseMove || e.Reason == GridSelectionReason.SelectRange || e.Reason == GridSelectionReason.MouseUp)
             {
                 InvalidateCell(GridRangeInfo.Col(0));
@@ -125,44 +134,27 @@ namespace syncfusion.ledsign.wpf
             }
 
             oldRange = e.Range;
-            InvalidateVisual();
         }
 
 
         protected override void OnPrepareRenderCell(GridPrepareRenderCellEventArgs e)
         {
             base.OnPrepareRenderCell(e);
-            if (LedTheme == LEDTHEME.LIGHT)
+            if (e.Cell.RowIndex == 0 || e.Cell.ColumnIndex == 0)
             {
-                e.Style.Foreground = Brushes.Black;
-                e.Style.Background = Brushes.White;
-                if (e.Cell.RowIndex == 0 && Model.SelectedRanges.AnyRangeIntersects(GridRangeInfo.Col(e.Cell.ColumnIndex)))
-                {
-                    e.Style.Background = Brushes.LightGray;
-                    e.Style.Font.FontWeight = FontWeights.Bold;
-                }
-                else if (e.Cell.ColumnIndex == 0 && Model.SelectedRanges.AnyRangeIntersects(GridRangeInfo.Row(e.Cell.RowIndex)))
-                {
-                    e.Style.Background = Brushes.LightGray;
-                    e.Style.Font.FontWeight = FontWeights.Bold;
-                }
-
+                e.Style.Background = LedTheme == LEDTHEME.LIGHT ? Brushes.WhiteSmoke : new SolidColorBrush(Color.FromRgb(40, 40, 40));
+                e.Style.Foreground = LedTheme == LEDTHEME.LIGHT ? Brushes.Black : Brushes.White;
             }
-            else
+            if ((e.Cell.RowIndex == 0 && Model.SelectedRanges.AnyRangeIntersects(GridRangeInfo.Col(e.Cell.ColumnIndex))) || (e.Cell.ColumnIndex == 0 && Model.SelectedRanges.AnyRangeIntersects(GridRangeInfo.Row(e.Cell.RowIndex))))
             {
-                e.Style.Foreground = Brushes.White;
-                e.Style.Background = Brushes.Black;
-                if (e.Cell.RowIndex == 0 && Model.SelectedRanges.AnyRangeIntersects(GridRangeInfo.Col(e.Cell.ColumnIndex)))
-                {
-                    e.Style.Background = Brushes.BlueViolet;
-                    e.Style.Font.FontWeight = FontWeights.Bold;
-                    
-                }
-                else if (e.Cell.ColumnIndex == 0 && Model.SelectedRanges.AnyRangeIntersects(GridRangeInfo.Row(e.Cell.RowIndex)))
-                {
-                    e.Style.Background = Brushes.BlueViolet;
-                    e.Style.Font.FontWeight = FontWeights.Bold;
-                }
+                e.Style.Font.FontWeight = FontWeights.Bold;
+                e.Style.Font.FontStyle = FontStyles.Italic;
+                e.Style.Background = LedTheme == LEDTHEME.LIGHT ? Brushes.YellowGreen : Brushes.Tomato;
+            }
+            if (e.Cell.RowIndex != 0 && e.Cell.ColumnIndex != 0 && !Model.SelectedRanges.AnyRangeIntersects(GridRangeInfo.Cell(e.Cell.RowIndex, e.Cell.ColumnIndex)))
+            {
+                e.Style.Background = LedTheme == LEDTHEME.LIGHT ? Brushes.White : Brushes.Black;
+                e.Style.Foreground = LedTheme == LEDTHEME.LIGHT ? Brushes.Black : Brushes.White;
             }
         }
         private int _LedCount;
@@ -190,6 +182,14 @@ namespace syncfusion.ledsign.wpf
 
         private void UpDateGridLed(LEDTHEME value)
         {
+            if(value == LEDTHEME.LIGHT)
+            {
+                Model.Options.HighlightSelectionBackground = Brushes.CadetBlue;
+            }
+            else
+            {
+                Model.Options.HighlightSelectionBackground = Brushes.BlueViolet;
+            }
         }
 
         private void OnLedCountChanged(int value)
@@ -241,8 +241,19 @@ namespace syncfusion.ledsign.wpf
         public override void OnInitializeContent(IntegerTextBox uiElement, GridRenderStyleInfo style)
         {
             base.OnInitializeContent(uiElement, style);
+            SampleGrid grid = GridControl as SampleGrid;
             uiElement.MaxValue = 15;
             uiElement.MinValue = 0;
+            //if (grid.LedTheme == LEDTHEME.LIGHT)
+            //{
+            //    uiElement.Foreground = Brushes.BlueViolet;
+            //    uiElement.Background = Brushes.Red;
+            //}
+            //else
+            //{
+            //    uiElement.Foreground = Brushes.Brown;
+            //    uiElement.Background = Brushes.Salmon;
+            //}
         }
     }
 
