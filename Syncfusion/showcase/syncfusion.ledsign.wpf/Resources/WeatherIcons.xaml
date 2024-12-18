@@ -1,6 +1,6 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:local="clr-namespace:syncfusion.ledsign.wpf.Resources">
+                    xmlns:local="clr-namespace:syncfusion.ledsign.wpf">
     <Geometry x:Key="Mostly_CloudyGeometry">F0 M16,16z M0,0z M11.9193,8.44435L12.8889,8.44435C14.6071,8.44435 16,9.83724 16,11.5555 16,13.2737 14.6071,14.6666 12.8889,14.6666L3.11111,14.6666C1.39289,14.6666 0,13.2737 0,11.5555 0,10.1237 0.9671,8.91791 2.28367,8.55558 2.65617,6.22511 4.67565,4.44434 7.11106,4.44434 9.50757,4.44434 11.5013,6.16868 11.9193,8.44435z</Geometry>
     <DrawingGroup x:Key="Mostly_CloudyDrawingGroup" ClipGeometry="M0,0 V16 H16 V0 H0 Z">
         <DrawingGroup Opacity="1">

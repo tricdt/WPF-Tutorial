@@ -90,6 +90,18 @@
                     <Setter Property="FrameworkElement.Margin" Value="0,0,5,0"/>
                 </Style>
             </ItemsControl.ItemContainerStyle>
+        </ItemsControl>
+        <!--<ItemsControl ItemsSource="{Binding GroupLed}">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel Orientation="Horizontal"/>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemContainerStyle>
+                <Style>
+                    <Setter Property="FrameworkElement.Margin" Value="0,0,5,0"/>
+                </Style>
+            </ItemsControl.ItemContainerStyle>
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
                     <Border BorderThickness="1" BorderBrush="{DynamicResource PrimaryBackground}" CornerRadius="10"
@@ -113,7 +125,7 @@
                     </Border>
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
-        </ItemsControl>
+        </ItemsControl>-->
     </Grid>
     <!--<behaviors:Interaction.Behaviors>
         <local:AddMainViewToViewModelBehavior/>

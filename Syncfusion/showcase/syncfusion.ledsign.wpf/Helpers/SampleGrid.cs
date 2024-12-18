@@ -13,6 +13,46 @@ namespace syncfusion.ledsign.wpf
 {
     public class SampleGrid : GridControl
     {
+
+
+        public int LedCount
+        {
+            get { return (int)GetValue(LedCountProperty); }
+            set { SetValue(LedCountProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for LedCount.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty LedCountProperty =
+            DependencyProperty.Register("LedCount", typeof(int), typeof(SampleGrid), new PropertyMetadata(4, OnLedCountChanedCallback));
+
+        private static void OnLedCountChanedCallback(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            SampleGrid grid = (SampleGrid)d;
+            int value = (int)e.NewValue;
+            if (grid.Model.ColumnCount < value + 3)
+            {
+                for (int i = grid.Model.ColumnCount; i < value + 3; i++)
+                {
+                    grid.Model.InsertColumns(grid.Model.ColumnCount, 1);
+                    GridStyleInfo style = grid.Model[0, grid.Model.ColumnCount - 1];
+                    style.CellValue = 1 + i - 3;
+                    style.CellType = "Header";
+
+                    for (int j = 1; j < grid.Model.RowCount; j++)
+                    {
+                        style = grid.Model[j, grid.Model.ColumnCount - 1];
+                        style.CellType = "LedEdit";
+                        style.CellValue = (grid.Model.ColumnCount - 4) % 16;
+                    }
+                }
+            }
+            else
+            {
+                grid.Model.ColumnCount = value + 3;
+            }
+            grid.Width = (grid.Model.ColumnCount - 3) * 25 + 105;
+        }
+
         public SampleGrid()
         {
             Model.RowCount = 60;
@@ -157,16 +197,7 @@ namespace syncfusion.ledsign.wpf
                 e.Style.Foreground = LedTheme == LEDTHEME.LIGHT ? Brushes.Black : Brushes.White;
             }
         }
-        private int _LedCount;
 
-        public int LedCount
-        {
-            get { return _LedCount; }
-            set {
-                _LedCount = value;
-                OnLedCountChanged(value);
-            }
-        }
         private LEDTHEME _LedTheme;
 
         public LEDTHEME LedTheme

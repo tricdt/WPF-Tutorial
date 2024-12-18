@@ -21,9 +21,9 @@ namespace syncfusion.ledsign.wpf
             _viewModelLocator = viewModel;
             ThemeName = lightTheme;
 
-            GroupLed = new ObservableCollection<GroupLed>();
-            GroupLed.Add(new GroupLed());
-            GroupLed.Add(new GroupLed());
+            GroupLed = new ObservableCollection<LedGroupPanel>();
+            GroupLed.Add(new LedGroupPanel());
+            GroupLed.Add(new LedGroupPanel());
         }
         private ICommand themeChanged;
         public ICommand ThemeChanged
@@ -75,25 +75,24 @@ namespace syncfusion.ledsign.wpf
                 PathData = "M8.33203 1V2.33333M8.33203 14.334V15.6673M3.14453 3.14648L4.0912 4.09315M12.5703 12.5742L13.517 13.5209M1 8.33398H2.33333M14.332 8.33398H15.6654M3.14453 13.5209L4.0912 12.5742M12.5703 4.09315L13.517 3.14648M11.6667 8.33333C11.6667 10.1743 10.1743 11.6667 8.33333 11.6667C6.49238 11.6667 5 10.1743 5 8.33333C5 6.49238 6.49238 5 8.33333 5C10.1743 5 11.6667 6.49238 11.6667 8.33333Z";
                 if(GroupLed != null)
                 {
-                    foreach (GroupLed item in GroupLed)
+                    foreach (LedGroupPanel item in GroupLed)
                     {
-                        item.GridLed.LedTheme = LEDTHEME.DARK;
+                        item.LedPanelTheme = LEDTHEME.DARK;
                     }
                 }
-   
             }
             else
             {
                 SfSkinManager.SetTheme(WindowHelper.MainWindow, new Theme() { ThemeName = lightTheme });
                 PathData = "M1 7.88484C1 11.8144 4.18557 15 8.11516 15C11.422 15 14.2019 12.7442 15 9.68742C14.4243 9.83773 13.8202 9.91774 13.1974 9.91774C9.26783 9.91774 6.08226 6.73217 6.08226 2.80258C6.08226 2.17979 6.16227 1.57569 6.31258 1C3.25584 1.7981 1 4.57803 1 7.88484Z";
-                if(GroupLed != null)
+                if (GroupLed != null)
                 {
-                    foreach (GroupLed item in GroupLed)
+                    foreach (LedGroupPanel item in GroupLed)
                     {
-                        item.GridLed.LedTheme = LEDTHEME.LIGHT;
+                        item.LedPanelTheme = LEDTHEME.LIGHT;
                     }
                 }
-        
+
             }
 
         }
@@ -106,8 +105,8 @@ namespace syncfusion.ledsign.wpf
             set { pathData = value; RaisePropertyChanged(nameof(PathData)); }
         }
 
-        private ObservableCollection<GroupLed> _groupLed;
-        public ObservableCollection<GroupLed> GroupLed
+        private ObservableCollection<LedGroupPanel> _groupLed;
+        public ObservableCollection<LedGroupPanel> GroupLed
         {
             get { return _groupLed; }
             set { _groupLed = value; }
