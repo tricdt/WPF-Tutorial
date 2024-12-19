@@ -79,18 +79,23 @@
         </listCollection:ArrayList>
     </syncfusion:ChromelessWindow.RightHeaderItemsSource>
     <Grid>
-        <ItemsControl ItemsSource="{Binding GroupLed}">
-            <ItemsControl.ItemsPanel>
-                <ItemsPanelTemplate>
-                    <StackPanel Orientation="Horizontal"/>
-                </ItemsPanelTemplate>
-            </ItemsControl.ItemsPanel>
-            <ItemsControl.ItemContainerStyle>
-                <Style>
-                    <Setter Property="FrameworkElement.Margin" Value="0,0,5,0"/>
-                </Style>
-            </ItemsControl.ItemContainerStyle>
-        </ItemsControl>
+        <ScrollViewer CanContentScroll="True"
+                      HorizontalScrollBarVisibility="Auto"
+                      VerticalScrollBarVisibility="Disabled">
+            <ItemsControl ItemsSource="{Binding GroupLed}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Horizontal"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemContainerStyle>
+                    <Style>
+                        <Setter Property="FrameworkElement.Margin" Value="0,0,5,0"/>
+                    </Style>
+                </ItemsControl.ItemContainerStyle>
+            </ItemsControl>
+        </ScrollViewer>
+   
         <!--<ItemsControl ItemsSource="{Binding GroupLed}">
             <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>
@@ -127,7 +132,4 @@
             </ItemsControl.ItemTemplate>
         </ItemsControl>-->
     </Grid>
-    <!--<behaviors:Interaction.Behaviors>
-        <local:AddMainViewToViewModelBehavior/>
-    </behaviors:Interaction.Behaviors>-->
 </syncfusion:ChromelessWindow>

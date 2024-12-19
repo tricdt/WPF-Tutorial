@@ -128,14 +128,14 @@
     </ApplicationDefinition>
     <Compile Include="AddMainViewToViewModelBehavior.cs" />
     <Compile Include="Commands\RelayCommand.cs" />
-    <Compile Include="Controls\LedGroupPanel.xaml.cs">
+    <Compile Include="UCControls\LedGroupPanel.xaml.cs">
       <DependentUpon>LedGroupPanel.xaml</DependentUpon>
     </Compile>
     <Compile Include="Helpers\SampleGrid.cs" />
     <Compile Include="Helpers\WindowHelper.cs" />
     <Compile Include="ViewModels\LedSign\LocationViewModel.cs" />
     <Compile Include="ViewModels\ViewModelLocator.cs" />
-    <Page Include="Controls\LedGroupPanel.xaml">
+    <Page Include="UCControls\LedGroupPanel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -201,5 +201,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

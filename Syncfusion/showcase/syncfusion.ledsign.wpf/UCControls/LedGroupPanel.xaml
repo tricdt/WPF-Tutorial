@@ -15,7 +15,8 @@
             <Border x:Name="clipMask" Background="White" CornerRadius="10" />
             <ScrollViewer CanContentScroll="True"
                           HorizontalScrollBarVisibility="Auto"
-                          VerticalScrollBarVisibility="Auto">
+                          VerticalScrollBarVisibility="Auto"
+                          Background="{DynamicResource PrimaryForeground}">
                 <local:SampleGrid LedCount="{Binding Path=Value, ElementName=updown}" x:Name="grid"/>
             </ScrollViewer>
             <syncfusion:UpDown HorizontalAlignment="Left" VerticalAlignment="Top" Height="25" Width="95"

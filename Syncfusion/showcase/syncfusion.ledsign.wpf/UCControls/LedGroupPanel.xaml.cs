@@ -24,17 +24,5 @@ namespace syncfusion.ledsign.wpf
         {
             InitializeComponent();
         }
-        private LEDTHEME _LedPanelTheme;
-
-        public LEDTHEME LedPanelTheme
-        {
-            get { return _LedPanelTheme; }
-            set {
-                _LedPanelTheme = value;
-                grid.LedTheme = value;
-            }
-        }
-
-
     }
 }

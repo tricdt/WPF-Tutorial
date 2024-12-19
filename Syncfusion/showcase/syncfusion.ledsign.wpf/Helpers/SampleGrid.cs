@@ -8,6 +8,7 @@ using System.Windows.Media;
 using System.Windows;
 using Syncfusion.Windows.Controls.Cells;
 using Syncfusion.Windows.Shared;
+using Syncfusion.SfSkinManager;
 
 namespace syncfusion.ledsign.wpf
 {
@@ -180,40 +181,29 @@ namespace syncfusion.ledsign.wpf
         protected override void OnPrepareRenderCell(GridPrepareRenderCellEventArgs e)
         {
             base.OnPrepareRenderCell(e);
+            string theme = SfSkinManager.GetTheme(this).ThemeName;
             if (e.Cell.RowIndex == 0 || e.Cell.ColumnIndex == 0)
             {
-                e.Style.Background = LedTheme == LEDTHEME.LIGHT ? Brushes.WhiteSmoke : new SolidColorBrush(Color.FromRgb(40, 40, 40));
-                e.Style.Foreground = LedTheme == LEDTHEME.LIGHT ? Brushes.Black : Brushes.White;
+                e.Style.Background = theme == "Windows11Light" ? Brushes.WhiteSmoke : new SolidColorBrush(Color.FromRgb(40, 40, 40));
+                e.Style.Foreground = theme == "Windows11Light" ? Brushes.Black : Brushes.White;
             }
             if ((e.Cell.RowIndex == 0 && Model.SelectedRanges.AnyRangeIntersects(GridRangeInfo.Col(e.Cell.ColumnIndex))) || (e.Cell.ColumnIndex == 0 && Model.SelectedRanges.AnyRangeIntersects(GridRangeInfo.Row(e.Cell.RowIndex))))
             {
                 e.Style.Font.FontWeight = FontWeights.Bold;
                 e.Style.Font.FontStyle = FontStyles.Italic;
-                e.Style.Background = LedTheme == LEDTHEME.LIGHT ? Brushes.YellowGreen : Brushes.Tomato;
+                e.Style.Background = theme == "Windows11Light" ? Brushes.YellowGreen : Brushes.Tomato;
             }
             if (e.Cell.RowIndex != 0 && e.Cell.ColumnIndex != 0 && !Model.SelectedRanges.AnyRangeIntersects(GridRangeInfo.Cell(e.Cell.RowIndex, e.Cell.ColumnIndex)))
             {
-                e.Style.Background = LedTheme == LEDTHEME.LIGHT ? Brushes.White : Brushes.Black;
-                e.Style.Foreground = LedTheme == LEDTHEME.LIGHT ? Brushes.Black : Brushes.White;
+                e.Style.Background = theme == "Windows11Light" ? Brushes.White : Brushes.Black;
+                e.Style.Foreground = theme == "Windows11Light" ? Brushes.Black : Brushes.White;
             }
         }
 
-        private LEDTHEME _LedTheme;
 
-        public LEDTHEME LedTheme
+        public void UpDateThemeGridLed(string themeName)
         {
-            get { return _LedTheme; }
-            set {
-                _LedTheme = value;
-                UpDateGridLed(value);
-                InvalidateCells();
-                InvalidateVisual();
-            }
-        }
-
-        private void UpDateGridLed(LEDTHEME value)
-        {
-            if(value == LEDTHEME.LIGHT)
+            if (themeName == "Windows11Light")
             {
                 Model.Options.HighlightSelectionBackground = Brushes.CadetBlue;
             }
