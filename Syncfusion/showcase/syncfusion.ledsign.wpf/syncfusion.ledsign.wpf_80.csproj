@@ -22,8 +22,12 @@
 	<ItemGroup>
 	    <ApplicationDefinition Include="App.xaml" />
 		<Compile Include="App.xaml.cs" />
+		<Compile Include="Commands\RelayCommand.cs" />
+		<Compile Include="Converters\StringToImageConverter.cs" />
+		<Compile Include="Helpers\SampleGrid.cs" />
 		<Compile Include="Helpers\WindowHelper.cs" />
 		<Compile Include="MainWindow.xaml.cs" />
+		<Compile Include="UCControls\LedGroupPanel.xaml.cs" />
 		<Compile Include="ViewModels\LedSign\LocationViewModel.cs" />
 		<Compile Include="ViewModels\ViewModelLocator.cs" />
 	</ItemGroup>
@@ -210,7 +214,13 @@
 	  <Page Include="MainWindow.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </Page>
+	  <Page Include="Resources\LedPaint.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </Page>
 	  <Page Include="Resources\WeatherIcons.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </Page>
+	  <Page Include="UCControls\LedGroupPanel.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </Page>
 	  <Page Include="Views\DemoWindowStyle.xaml">

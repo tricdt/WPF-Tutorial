@@ -15,6 +15,13 @@ namespace syncfusion.ledsign.wpf
     public class SampleGrid : GridControl
     {
 
+        private Geometry _ledGeometry;
+
+        public Geometry LedGeometry
+        {
+            get { return _ledGeometry; }
+            set { _ledGeometry = value; }
+        }
 
         public int LedCount
         {
@@ -96,6 +103,8 @@ namespace syncfusion.ledsign.wpf
             Model.Options.HighlightSelectionBackground = Brushes.CadetBlue;
             Model.Options.HighlightSelectionForeground = Brushes.YellowGreen;
             Width = 205;
+
+            LedGeometry = (Geometry)WindowHelper.MainWindow.TryFindResource("LedShapeCircle");
         }
         protected override void OnResizingRows(GridResizingRowsEventArgs args)
         {
@@ -257,24 +266,32 @@ namespace syncfusion.ledsign.wpf
         protected override void OnRender(DrawingContext dc, RenderCellArgs rca, GridRenderStyleInfo style)
         {
             SampleGrid grid = GridControl as SampleGrid;
-            base.OnRender(dc, rca, style);
+            Geometry ledShape = grid.LedGeometry;
+            ledShape.Transform = new TranslateTransform(rca.CellRect.X, rca.CellRect.Y);
+            dc.DrawGeometry(Brushes.Red, new Pen(Brushes.Green, 3), PathGeometry.CreateFromGeometry(ledShape));
+            //base.OnRender(dc, rca, style);
         }
         public override void OnInitializeContent(IntegerTextBox uiElement, GridRenderStyleInfo style)
         {
+            string theme = SfSkinManager.GetTheme(GridControl).ThemeName;
             base.OnInitializeContent(uiElement, style);
             SampleGrid grid = GridControl as SampleGrid;
             uiElement.MaxValue = 15;
             uiElement.MinValue = 0;
-            //if (grid.LedTheme == LEDTHEME.LIGHT)
-            //{
-            //    uiElement.Foreground = Brushes.BlueViolet;
-            //    uiElement.Background = Brushes.Red;
-            //}
-            //else
-            //{
-            //    uiElement.Foreground = Brushes.Brown;
-            //    uiElement.Background = Brushes.Salmon;
-            //}
+            if(theme == "Windows11Light")
+            {
+                uiElement.Foreground = Brushes.White;
+                uiElement.Background = Brushes.Black;
+            }else
+            {
+                uiElement.Foreground = Brushes.Black;
+                uiElement.Background = Brushes.White;
+            }
+        }
+        protected override void OnArrange(ArrangeCellArgs aca, GridRenderStyleInfo style)
+        {
+            base.OnArrange(aca, style);
+            string theme = SfSkinManager.GetTheme(GridControl).ThemeName;
         }
     }
 

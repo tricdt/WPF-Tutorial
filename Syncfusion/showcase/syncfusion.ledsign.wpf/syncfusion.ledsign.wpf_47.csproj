@@ -128,6 +128,7 @@
     </ApplicationDefinition>
     <Compile Include="AddMainViewToViewModelBehavior.cs" />
     <Compile Include="Commands\RelayCommand.cs" />
+    <Compile Include="Converters\StringToImageConverter.cs" />
     <Compile Include="UCControls\LedGroupPanel.xaml.cs">
       <DependentUpon>LedGroupPanel.xaml</DependentUpon>
     </Compile>
@@ -135,6 +136,10 @@
     <Compile Include="Helpers\WindowHelper.cs" />
     <Compile Include="ViewModels\LedSign\LocationViewModel.cs" />
     <Compile Include="ViewModels\ViewModelLocator.cs" />
+    <Page Include="Resources\LedPaint.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UCControls\LedGroupPanel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
