@@ -14,7 +14,8 @@ namespace syncfusion.ledsign.wpf
 {
     public class SampleGrid : GridControl
     {
-        private int _ledCount;
+
+
         public int LedCount
         {
             get { return _ledCount; }
@@ -125,9 +126,6 @@ namespace syncfusion.ledsign.wpf
             Model.Options.HighlightSelectionBackground = Brushes.CadetBlue;
             Model.Options.HighlightSelectionForeground = Brushes.YellowGreen;
             Width = 205;
-
-            LedShape = LEDSHAPE.TriAngle;
-            LedColor = new SolidColorBrush(Color.FromRgb(255, 0, 0));
         }
         protected override void OnResizingRows(GridResizingRowsEventArgs args)
         {
@@ -301,73 +299,24 @@ namespace syncfusion.ledsign.wpf
         protected override void OnRender(DrawingContext dc, RenderCellArgs rca, GridRenderStyleInfo style)
         {
             SampleGrid grid = GridControl as SampleGrid;
-            LEDSHAPE ledShape = grid.LedShape;
-            SolidColorBrush ledColor = grid.LedColor;
-            string themeName = SfSkinManager.GetTheme(grid).ThemeName;
-            int light = int.Parse(style.CellValue.ToString());
-            GridRangeInfo range = grid.Model.SelectedCells;
-
-            if ((rca.ColumnIndex < range.Left || rca.ColumnIndex > range.Right || rca.RowIndex < range.Top || rca.RowIndex > range.Bottom))
-            {
-                if(themeName == "Windows11Light")
-                {
-                    Byte lightR = Convert.ToByte(255 - (255 - ledColor.Color.R) * light / 16);
-                    Byte lightG = Convert.ToByte(255 - (255 - ledColor.Color.G) * light / 16);
-                    Byte lightB = Convert.ToByte(255 - (255 - ledColor.Color.B) * light / 16);
-                    switch (ledShape)
-                    {
-                        case LEDSHAPE.Circle:
-                            dc.DrawEllipse(new SolidColorBrush(Color.FromRgb(lightR, lightG, lightB)), new Pen(), new Point((rca.CellRect.Left + rca.CellRect.Right) / 2, (rca.CellRect.Top + rca.CellRect.Bottom) / 2), (rca.CellRect.Right - rca.CellRect.Left) / 2, (rca.CellRect.Bottom - rca.CellRect.Top) / 2);
-                            break;
-                        case LEDSHAPE.Led:
-                            LedPaint.DrawLed(dc, rca.SubtractBorderMargins(rca.CellRect, new Thickness(1, 0, 1, 2)), new SolidColorBrush(Color.FromRgb(lightR, lightG, lightB)));
-                            break;
-                        case LEDSHAPE.Polygon:
-                            LedPaint.DrawLedPolygon(dc, rca.SubtractBorderMargins(rca.CellRect, new Thickness(1, 1, 0, 1)), new SolidColorBrush(Color.FromRgb(lightR, lightG, lightB)));
-                            break;
-                        case LEDSHAPE.Rectangle:
-                            dc.DrawRoundedRectangle(new SolidColorBrush(Color.FromRgb(lightR, lightG, lightB)), new Pen(), rca.CellRect, 5, 5);
-                            break;
-                    }
-                }else
-                {
-                    Byte lightR = Convert.ToByte(ledColor.Color.R * light / 16);
-                    Byte lightG = Convert.ToByte(ledColor.Color.G * light / 16);
-                    Byte lightB = Convert.ToByte(ledColor.Color.B * light / 16);
-                    switch (ledShape)
-                    {
-                        case LEDSHAPE.Circle:
-                            dc.DrawEllipse(new SolidColorBrush(Color.FromRgb(lightR, lightG, lightB)), new Pen(), new Point((rca.CellRect.Left + rca.CellRect.Right) / 2, (rca.CellRect.Top + rca.CellRect.Bottom) / 2), (rca.CellRect.Right - rca.CellRect.Left) / 2, (rca.CellRect.Bottom - rca.CellRect.Top) / 2);
-                            break;
-                        case LEDSHAPE.Led:
-                            LedPaint.DrawLed(dc, rca.SubtractBorderMargins(rca.CellRect, new Thickness(1, 0, 1, 2)), new SolidColorBrush(Color.FromRgb(lightR, lightG, lightB)));
-                            break;
-                        case LEDSHAPE.Polygon:
-                            LedPaint.DrawLedPolygon(dc, rca.SubtractBorderMargins(rca.CellRect, new Thickness(1, 1, 0, 1)), new SolidColorBrush(Color.FromRgb(lightR, lightG, lightB)));
-                            break;
-                        case LEDSHAPE.Rectangle:
-                            dc.DrawRoundedRectangle(new SolidColorBrush(Color.FromRgb(lightR, lightG, lightB)), new Pen(), rca.CellRect, 5, 5);
-                            break;
-                    }
-                }
-            }
             base.OnRender(dc, rca, style);
         }
         public override void OnInitializeContent(IntegerTextBox uiElement, GridRenderStyleInfo style)
         {
+            string theme = SfSkinManager.GetTheme(GridControl).ThemeName;
             base.OnInitializeContent(uiElement, style);
             uiElement.MaxValue = 15;
             uiElement.MinValue = 0;
-            string theme = SfSkinManager.GetTheme(GridControl).ThemeName;
-            if(theme == "Windows11Light")
-            {
-                uiElement.Background = Brushes.Black;
-                uiElement.Foreground = Brushes.White;
-            }else
-            {
-                uiElement.Background = Brushes.White;
-                uiElement.Foreground = Brushes.Black;
-            }
+            //if (grid.LedTheme == LEDTHEME.LIGHT)
+            //{
+            //    uiElement.Foreground = Brushes.BlueViolet;
+            //    uiElement.Background = Brushes.Red;
+            //}
+            //else
+            //{
+            //    uiElement.Foreground = Brushes.Brown;
+            //    uiElement.Background = Brushes.Salmon;
+            //}
         }
     }
 
