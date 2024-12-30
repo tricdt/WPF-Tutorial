@@ -14,45 +14,74 @@ namespace syncfusion.ledsign.wpf
 {
     public class SampleGrid : GridControl
     {
-
-
+        private int _ledCount;
         public int LedCount
         {
-            get { return (int)GetValue(LedCountProperty); }
-            set { SetValue(LedCountProperty, value); }
+            get { return _ledCount; }
+            set {
+                _ledCount = value;
+                OnLedCountChanged(value);
+            }
         }
 
-        // Using a DependencyProperty as the backing store for LedCount.  This enables animation, styling, binding, etc...
-        public static readonly DependencyProperty LedCountProperty =
-            DependencyProperty.Register("LedCount", typeof(int), typeof(SampleGrid), new PropertyMetadata(4, OnLedCountChanedCallback));
-
-        private static void OnLedCountChanedCallback(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        private LEDSHAPE _ledShape;
+        public LEDSHAPE LedShape
         {
-            SampleGrid grid = (SampleGrid)d;
-            int value = (int)e.NewValue;
-            if (grid.Model.ColumnCount < value + 3)
-            {
-                for (int i = grid.Model.ColumnCount; i < value + 3; i++)
-                {
-                    grid.Model.InsertColumns(grid.Model.ColumnCount, 1);
-                    GridStyleInfo style = grid.Model[0, grid.Model.ColumnCount - 1];
-                    style.CellValue = 1 + i - 3;
-                    style.CellType = "Header";
-
-                    for (int j = 1; j < grid.Model.RowCount; j++)
-                    {
-                        style = grid.Model[j, grid.Model.ColumnCount - 1];
-                        style.CellType = "LedEdit";
-                        style.CellValue = (grid.Model.ColumnCount - 4) % 16;
-                    }
-                }
+            get { return _ledShape; }
+            set {
+                _ledShape = value;
+                OnLedShapeChanged();
             }
-            else
-            {
-                grid.Model.ColumnCount = value + 3;
-            }
-            grid.Width = (grid.Model.ColumnCount - 3) * 25 + 105;
         }
+
+        private SolidColorBrush _ledColor;
+        public SolidColorBrush LedColor
+        {
+            get { return _ledColor; }
+            set {
+                _ledColor = value;
+                OnLedColorChanged();
+            }
+        }
+
+
+
+
+        //public int LedCount
+        //{
+        //    get { return (int)GetValue(LedCountProperty); }
+        //    set { SetValue(LedCountProperty, value); }
+        //}
+        //public static readonly DependencyProperty LedCountProperty =
+        //    DependencyProperty.Register("LedCount", typeof(int), typeof(SampleGrid), new PropertyMetadata(4, OnLedCountChanedCallback));
+
+        //private static void OnLedCountChanedCallback(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        //{
+        //    SampleGrid grid = (SampleGrid)d;
+        //    int value = (int)e.NewValue;
+        //    if (grid.Model.ColumnCount < value + 3)
+        //    {
+        //        for (int i = grid.Model.ColumnCount; i < value + 3; i++)
+        //        {
+        //            grid.Model.InsertColumns(grid.Model.ColumnCount, 1);
+        //            GridStyleInfo style = grid.Model[0, grid.Model.ColumnCount - 1];
+        //            style.CellValue = 1 + i - 3;
+        //            style.CellType = "Header";
+
+        //            for (int j = 1; j < grid.Model.RowCount; j++)
+        //            {
+        //                style = grid.Model[j, grid.Model.ColumnCount - 1];
+        //                style.CellType = "LedEdit";
+        //                style.CellValue = (grid.Model.ColumnCount - 4) % 16;
+        //            }
+        //        }
+        //    }
+        //    else
+        //    {
+        //        grid.Model.ColumnCount = value + 3;
+        //    }
+        //    grid.Width = (grid.Model.ColumnCount - 3) * 25 + 105;
+        //}
 
         public SampleGrid()
         {
@@ -96,6 +125,9 @@ namespace syncfusion.ledsign.wpf
             Model.Options.HighlightSelectionBackground = Brushes.CadetBlue;
             Model.Options.HighlightSelectionForeground = Brushes.YellowGreen;
             Width = 205;
+
+            LedShape = LEDSHAPE.TriAngle;
+            LedColor = new SolidColorBrush(Color.FromRgb(255, 0, 0));
         }
         protected override void OnResizingRows(GridResizingRowsEventArgs args)
         {
@@ -239,13 +271,25 @@ namespace syncfusion.ledsign.wpf
             Width = (Model.ColumnCount - 3) * 25 + 105;
             //InvalidateCells();
         }
+        private void OnLedShapeChanged()
+        {
+            InvalidateCells();
+        }
+        private void OnLedColorChanged()
+        {
+            InvalidateCells();
+        }
     }
 
-    public enum LEDTHEME
+    public enum LEDSHAPE
     {
-        LIGHT, DARK
+        Rectangle, Circle, TriAngle, Polygon, Led
     }
 
+    public enum LEDCOLOR
+    {
+        RED, GREEN, BLUE
+    }
 
     public class LedEditCellModel : GridCellModel<LedEditCellRenderer>
     {
@@ -257,49 +301,98 @@ namespace syncfusion.ledsign.wpf
         protected override void OnRender(DrawingContext dc, RenderCellArgs rca, GridRenderStyleInfo style)
         {
             SampleGrid grid = GridControl as SampleGrid;
+            LEDSHAPE ledShape = grid.LedShape;
+            SolidColorBrush ledColor = grid.LedColor;
+            string themeName = SfSkinManager.GetTheme(grid).ThemeName;
+            int light = int.Parse(style.CellValue.ToString());
+            GridRangeInfo range = grid.Model.SelectedCells;
+
+            if ((rca.ColumnIndex < range.Left || rca.ColumnIndex > range.Right || rca.RowIndex < range.Top || rca.RowIndex > range.Bottom))
+            {
+                if(themeName == "Windows11Light")
+                {
+                    Byte lightR = Convert.ToByte(255 - (255 - ledColor.Color.R) * light / 16);
+                    Byte lightG = Convert.ToByte(255 - (255 - ledColor.Color.G) * light / 16);
+                    Byte lightB = Convert.ToByte(255 - (255 - ledColor.Color.B) * light / 16);
+                    switch (ledShape)
+                    {
+                        case LEDSHAPE.Circle:
+                            dc.DrawEllipse(new SolidColorBrush(Color.FromRgb(lightR, lightG, lightB)), new Pen(), new Point((rca.CellRect.Left + rca.CellRect.Right) / 2, (rca.CellRect.Top + rca.CellRect.Bottom) / 2), (rca.CellRect.Right - rca.CellRect.Left) / 2, (rca.CellRect.Bottom - rca.CellRect.Top) / 2);
+                            break;
+                        case LEDSHAPE.Led:
+                            LedPaint.DrawLed(dc, rca.SubtractBorderMargins(rca.CellRect, new Thickness(1, 0, 1, 2)), new SolidColorBrush(Color.FromRgb(lightR, lightG, lightB)));
+                            break;
+                        case LEDSHAPE.Polygon:
+                            LedPaint.DrawLedPolygon(dc, rca.SubtractBorderMargins(rca.CellRect, new Thickness(1, 1, 0, 1)), new SolidColorBrush(Color.FromRgb(lightR, lightG, lightB)));
+                            break;
+                        case LEDSHAPE.Rectangle:
+                            dc.DrawRoundedRectangle(new SolidColorBrush(Color.FromRgb(lightR, lightG, lightB)), new Pen(), rca.CellRect, 5, 5);
+                            break;
+                    }
+                }else
+                {
+                    Byte lightR = Convert.ToByte(ledColor.Color.R * light / 16);
+                    Byte lightG = Convert.ToByte(ledColor.Color.G * light / 16);
+                    Byte lightB = Convert.ToByte(ledColor.Color.B * light / 16);
+                    switch (ledShape)
+                    {
+                        case LEDSHAPE.Circle:
+                            dc.DrawEllipse(new SolidColorBrush(Color.FromRgb(lightR, lightG, lightB)), new Pen(), new Point((rca.CellRect.Left + rca.CellRect.Right) / 2, (rca.CellRect.Top + rca.CellRect.Bottom) / 2), (rca.CellRect.Right - rca.CellRect.Left) / 2, (rca.CellRect.Bottom - rca.CellRect.Top) / 2);
+                            break;
+                        case LEDSHAPE.Led:
+                            LedPaint.DrawLed(dc, rca.SubtractBorderMargins(rca.CellRect, new Thickness(1, 0, 1, 2)), new SolidColorBrush(Color.FromRgb(lightR, lightG, lightB)));
+                            break;
+                        case LEDSHAPE.Polygon:
+                            LedPaint.DrawLedPolygon(dc, rca.SubtractBorderMargins(rca.CellRect, new Thickness(1, 1, 0, 1)), new SolidColorBrush(Color.FromRgb(lightR, lightG, lightB)));
+                            break;
+                        case LEDSHAPE.Rectangle:
+                            dc.DrawRoundedRectangle(new SolidColorBrush(Color.FromRgb(lightR, lightG, lightB)), new Pen(), rca.CellRect, 5, 5);
+                            break;
+                    }
+                }
+            }
             base.OnRender(dc, rca, style);
         }
         public override void OnInitializeContent(IntegerTextBox uiElement, GridRenderStyleInfo style)
         {
             base.OnInitializeContent(uiElement, style);
-            SampleGrid grid = GridControl as SampleGrid;
             uiElement.MaxValue = 15;
             uiElement.MinValue = 0;
-            //if (grid.LedTheme == LEDTHEME.LIGHT)
-            //{
-            //    uiElement.Foreground = Brushes.BlueViolet;
-            //    uiElement.Background = Brushes.Red;
-            //}
-            //else
-            //{
-            //    uiElement.Foreground = Brushes.Brown;
-            //    uiElement.Background = Brushes.Salmon;
-            //}
+            string theme = SfSkinManager.GetTheme(GridControl).ThemeName;
+            if(theme == "Windows11Light")
+            {
+                uiElement.Background = Brushes.Black;
+                uiElement.Foreground = Brushes.White;
+            }else
+            {
+                uiElement.Background = Brushes.White;
+                uiElement.Foreground = Brushes.Black;
+            }
         }
     }
 
 
-    public class GroupLed
-    {
-        public SampleGrid GridLed { get; set; }
-        public UpDown UpDown { get; set; }
-        public GroupLed()
-        {
-            GridLed = new SampleGrid();
-            UpDown = new UpDown();
-            UpDown.TextAlignment = TextAlignment.Center;
-            UpDown.MinValue = 1;
-            UpDown.Value = 4;
-            UpDown.NumberDecimalDigits = 0;
-            UpDown.BorderThickness = new Thickness(0);
-            UpDown.Focusable = false;
-            UpDown.SetResourceReference(UpDown.BackgroundProperty, "PrimaryForeground");
-            UpDown.ValueChanged += UpDown_ValueChanged;
-        }
+    //public class GroupLed
+    //{
+    //    public SampleGrid GridLed { get; set; }
+    //    public UpDown UpDown { get; set; }
+    //    public GroupLed()
+    //    {
+    //        GridLed = new SampleGrid();
+    //        UpDown = new UpDown();
+    //        UpDown.TextAlignment = TextAlignment.Center;
+    //        UpDown.MinValue = 1;
+    //        UpDown.Value = 4;
+    //        UpDown.NumberDecimalDigits = 0;
+    //        UpDown.BorderThickness = new Thickness(0);
+    //        UpDown.Focusable = false;
+    //        UpDown.SetResourceReference(UpDown.BackgroundProperty, "PrimaryForeground");
+    //        UpDown.ValueChanged += UpDown_ValueChanged;
+    //    }
 
-        private void UpDown_ValueChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
-        {
-            GridLed.LedCount = Convert.ToInt32(e.NewValue);
-        }
-    }
+    //    private void UpDown_ValueChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+    //    {
+    //        GridLed.LedCount = Convert.ToInt32(e.NewValue);
+    //    }
+    //}
 }

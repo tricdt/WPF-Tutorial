@@ -17,7 +17,7 @@
                           HorizontalScrollBarVisibility="Auto"
                           VerticalScrollBarVisibility="Auto"
                           Background="{DynamicResource PrimaryForeground}">
-                <local:SampleGrid LedCount="{Binding Path=Value, ElementName=updown}" x:Name="grid"/>
+                <local:SampleGrid  x:Name="grid"/>
             </ScrollViewer>
             <syncfusion:UpDown HorizontalAlignment="Left" VerticalAlignment="Top" Height="25" Width="95"
                                TextAlignment="Center" MinValue="1" Value="4" NumberDecimalDigits="0" BorderThickness="0"

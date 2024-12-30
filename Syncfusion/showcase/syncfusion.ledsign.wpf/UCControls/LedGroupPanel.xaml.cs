@@ -23,6 +23,12 @@ namespace syncfusion.ledsign.wpf
         public LedGroupPanel()
         {
             InitializeComponent();
+            updown.ValueChanged += Updown_ValueChanged;
+        }
+
+        private void Updown_ValueChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            grid.LedCount = int.Parse(e.NewValue.ToString());
         }
     }
 }
