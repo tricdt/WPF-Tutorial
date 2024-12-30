@@ -15,18 +15,17 @@ namespace syncfusion.ledsign.wpf
     public class SampleGrid : GridControl
     {
         private Geometry _ledGeometry;
-
         public Geometry LedGeometry
         {
-            get { return _ledGeometry; }
-            set { _ledGeometry = value; }
+            get { return (Geometry)WindowHelper.MainWindow.TryFindResource("LedShape" + LedShape); }
         }
 
         private int _ledCount;
         public int LedCount
         {
             get { return _ledCount; }
-            set {
+            set
+            {
                 _ledCount = value;
                 OnLedCountChanged(value);
             }
@@ -36,7 +35,8 @@ namespace syncfusion.ledsign.wpf
         public LEDSHAPE LedShape
         {
             get { return _ledShape; }
-            set {
+            set
+            {
                 _ledShape = value;
                 OnLedShapeChanged();
             }
@@ -46,12 +46,12 @@ namespace syncfusion.ledsign.wpf
         public SolidColorBrush LedColor
         {
             get { return _ledColor; }
-            set {
+            set
+            {
                 _ledColor = value;
                 OnLedColorChanged();
             }
         }
-
 
 
 
@@ -133,6 +133,7 @@ namespace syncfusion.ledsign.wpf
             Model.Options.HighlightSelectionBackground = Brushes.CadetBlue;
             Model.Options.HighlightSelectionForeground = Brushes.YellowGreen;
             Width = 205;
+            LedColor = new SolidColorBrush(Color.FromRgb(255, 0, 0));
             LedShape = LEDSHAPE.Rectangle;
         }
         protected override void OnResizingRows(GridResizingRowsEventArgs args)
@@ -261,7 +262,7 @@ namespace syncfusion.ledsign.wpf
                     GridStyleInfo style = Model[0, Model.ColumnCount - 1];
                     style.CellValue = 1 + i - 3;
                     style.CellType = "Header";
-                   
+
                     for (int j = 1; j < Model.RowCount; j++)
                     {
                         style = Model[j, Model.ColumnCount - 1];
@@ -279,10 +280,6 @@ namespace syncfusion.ledsign.wpf
         }
         private void OnLedShapeChanged()
         {
-            if(LedShape == LEDSHAPE.Rectangle)
-            {
-                LedGeometry = (Geometry)WindowHelper.MainWindow.TryFindResource("LedShapeRectangle");
-            }
             InvalidateCells();
         }
         private void OnLedColorChanged()
@@ -301,39 +298,7 @@ namespace syncfusion.ledsign.wpf
         RED, GREEN, BLUE
     }
 
-    public class LedEditCellModel : GridCellModel<LedEditCellRenderer>
-    {
 
-    }
-
-    public class LedEditCellRenderer : GridCellIntegerEditCellRenderer
-    {
-        protected override void OnRender(DrawingContext dc, RenderCellArgs rca, GridRenderStyleInfo style)
-        {
-            SampleGrid grid = GridControl as SampleGrid;
-            Geometry ledGeometry = grid.LedGeometry;
-            ledGeometry.Transform = new TranslateTransform(rca.CellRect.X, rca.CellRect.Y);
-            dc.DrawGeometry(Brushes.Red, new Pen(Brushes.Green, 2), PathGeometry.CreateFromGeometry(ledGeometry));
-            //base.OnRender(dc, rca, style);
-        }
-        public override void OnInitializeContent(IntegerTextBox uiElement, GridRenderStyleInfo style)
-        {
-            string theme = SfSkinManager.GetTheme(GridControl).ThemeName;
-            base.OnInitializeContent(uiElement, style);
-            uiElement.MaxValue = 15;
-            uiElement.MinValue = 0;
-            //if (grid.LedTheme == LEDTHEME.LIGHT)
-            //{
-            //    uiElement.Foreground = Brushes.BlueViolet;
-            //    uiElement.Background = Brushes.Red;
-            //}
-            //else
-            //{
-            //    uiElement.Foreground = Brushes.Brown;
-            //    uiElement.Background = Brushes.Salmon;
-            //}
-        }
-    }
 
 
     //public class GroupLed

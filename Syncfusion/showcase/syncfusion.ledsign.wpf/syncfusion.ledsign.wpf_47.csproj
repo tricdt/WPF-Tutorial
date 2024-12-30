@@ -128,6 +128,7 @@
     </ApplicationDefinition>
     <Compile Include="AddMainViewToViewModelBehavior.cs" />
     <Compile Include="Commands\RelayCommand.cs" />
+    <Compile Include="Helpers\LedEditCellModel.cs" />
     <Compile Include="Helpers\LedPaint.cs" />
     <Compile Include="UCControls\LedGroupPanel.xaml.cs">
       <DependentUpon>LedGroupPanel.xaml</DependentUpon>
