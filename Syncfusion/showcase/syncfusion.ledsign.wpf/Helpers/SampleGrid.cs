@@ -15,7 +15,7 @@ namespace syncfusion.ledsign.wpf
     public class SampleGrid : GridControl
     {
 
-
+        private int _ledCount;
         public int LedCount
         {
             get { return _ledCount; }

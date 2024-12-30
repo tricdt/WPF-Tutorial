@@ -31,7 +31,7 @@
             <local:ViewModelLocator x:Key="ViewModelLocator"/>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="/syncfusion.ledsign.wpf;component/Resources/WeatherIcons.xaml" />
-                <ResourceDictionary Source="/syncfusion.ledsign.wpf;component/Resources/LedPaint.xaml" />
+                <ResourceDictionary Source="/syncfusion.ledsign.wpf;component/Resources/LedShapes.xaml" />
                 <ResourceDictionary Source="/syncfusion.ledsign.wpf;component/Views/DemoWindowStyle.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
