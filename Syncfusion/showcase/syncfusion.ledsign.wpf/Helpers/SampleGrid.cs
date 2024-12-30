@@ -133,6 +133,7 @@ namespace syncfusion.ledsign.wpf
             Model.Options.HighlightSelectionBackground = Brushes.CadetBlue;
             Model.Options.HighlightSelectionForeground = Brushes.YellowGreen;
             Width = 205;
+            LedShape = LEDSHAPE.Rectangle;
         }
         protected override void OnResizingRows(GridResizingRowsEventArgs args)
         {
@@ -278,8 +279,9 @@ namespace syncfusion.ledsign.wpf
         }
         private void OnLedShapeChanged()
         {
-            if(LedShape == LEDSHAPE.Polygon)
+            if(LedShape == LEDSHAPE.Rectangle)
             {
+                LedGeometry = (Geometry)WindowHelper.MainWindow.TryFindResource("LedShapeRectangle");
             }
             InvalidateCells();
         }
@@ -309,7 +311,10 @@ namespace syncfusion.ledsign.wpf
         protected override void OnRender(DrawingContext dc, RenderCellArgs rca, GridRenderStyleInfo style)
         {
             SampleGrid grid = GridControl as SampleGrid;
-            base.OnRender(dc, rca, style);
+            Geometry ledGeometry = grid.LedGeometry;
+            ledGeometry.Transform = new TranslateTransform(rca.CellRect.X, rca.CellRect.Y);
+            dc.DrawGeometry(Brushes.Red, new Pen(Brushes.Green, 2), PathGeometry.CreateFromGeometry(ledGeometry));
+            //base.OnRender(dc, rca, style);
         }
         public override void OnInitializeContent(IntegerTextBox uiElement, GridRenderStyleInfo style)
         {
