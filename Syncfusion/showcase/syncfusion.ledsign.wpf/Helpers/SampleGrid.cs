@@ -14,6 +14,13 @@ namespace syncfusion.ledsign.wpf
 {
     public class SampleGrid : GridControl
     {
+        private Geometry _ledGeometry;
+
+        public Geometry LedGeometry
+        {
+            get { return _ledGeometry; }
+            set { _ledGeometry = value; }
+        }
 
         private int _ledCount;
         public int LedCount
@@ -271,6 +278,9 @@ namespace syncfusion.ledsign.wpf
         }
         private void OnLedShapeChanged()
         {
+            if(LedShape == LEDSHAPE.Polygon)
+            {
+            }
             InvalidateCells();
         }
         private void OnLedColorChanged()
