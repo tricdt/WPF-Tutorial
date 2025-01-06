@@ -17,7 +17,7 @@ namespace syncfusion.ledsign.wpf
         private Geometry _ledGeometry;
         public Geometry LedGeometry
         {
-            get { return (Geometry)WindowHelper.MainWindow.TryFindResource("LedShape" + LedShape); }
+            get { return (Geometry)WindowHelper.MainWindow.TryFindResource(LedShape + "Geometry"); }
         }
 
         private int _ledCount;
@@ -123,8 +123,12 @@ namespace syncfusion.ledsign.wpf
                 }
             }
 
+            LedEditMarkerMouseController ledEditController = new LedEditMarkerMouseController(this);
+            Model.CommandStack.Enabled = true;
+            MouseControllerDispatcher.Add(ledEditController);
+
             Model.Options.ShowCurrentCell = false;
-            Model.Options.ExcelLikeSelectionFrame = true;
+            //Model.Options.ExcelLikeSelectionFrame = true;
             Model.Options.HighlightSelectionBorderWidth = 2;
             Model.TableStyle.Borders.Right = null;
             Model.TableStyle.Borders.Bottom = null;
@@ -134,7 +138,7 @@ namespace syncfusion.ledsign.wpf
             Model.Options.HighlightSelectionForeground = Brushes.YellowGreen;
             Width = 205;
             LedColor = new SolidColorBrush(Color.FromRgb(255, 0, 0));
-            LedShape = LEDSHAPE.Rectangle;
+            LedShape = LEDSHAPE.Polygon;
         }
         protected override void OnResizingRows(GridResizingRowsEventArgs args)
         {
@@ -216,6 +220,25 @@ namespace syncfusion.ledsign.wpf
             oldRange = e.Range;
         }
 
+        protected override void OnSelectionChanging(GridSelectionChangingEventArgs e)
+        {
+            base.OnSelectionChanging(e);
+            if (e.Range.Left == 1)
+            {
+                if (e.Range.Contains(GridRangeInfo.Cells(e.Range.Top, 2, e.Range.Bottom, 2)))
+                {
+                    e.Cancel = true;
+                }
+            }
+            if (e.Range.Left == 2)
+            {
+                if (e.Range.Contains(GridRangeInfo.Cells(e.Range.Top, 3, e.Range.Bottom, 3)))
+                {
+                    e.Cancel = true;
+                }
+            }
+        }
+
 
         protected override void OnPrepareRenderCell(GridPrepareRenderCellEventArgs e)
         {
@@ -290,7 +313,7 @@ namespace syncfusion.ledsign.wpf
 
     public enum LEDSHAPE
     {
-        Rectangle, Circle, TriAngle, Polygon, Led
+        Rectangle, Circle, Polygon, Led, Diamond
     }
 
     public enum LEDCOLOR

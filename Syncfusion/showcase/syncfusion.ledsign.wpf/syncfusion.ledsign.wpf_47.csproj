@@ -54,6 +54,7 @@
       <HintPath>packages\Microsoft.Xaml.Behaviors.Wpf.1.1.135\lib\net462\Microsoft.Xaml.Behaviors.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="PresentationFramework.Luna" />
     <Reference Include="Syncfusion.Data.WPF, Version=27.1462.48.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>E:\Soft\Program\Syncfusion\Essential Studio\WPF\27.1.48\precompiledassemblies\4.6.2\Syncfusion.Data.WPF.dll</HintPath>
@@ -128,7 +129,9 @@
     </ApplicationDefinition>
     <Compile Include="AddMainViewToViewModelBehavior.cs" />
     <Compile Include="Commands\RelayCommand.cs" />
+    <Compile Include="Controls\FillDropdownItem.cs" />
     <Compile Include="Helpers\LedEditCellModel.cs" />
+    <Compile Include="Helpers\LedEditMarkerMouseController.cs" />
     <Compile Include="Helpers\LedPaint.cs" />
     <Compile Include="UCControls\LedGroupPanel.xaml.cs">
       <DependentUpon>LedGroupPanel.xaml</DependentUpon>
@@ -138,6 +141,10 @@
     <Compile Include="ViewModels\LedSign\LocationViewModel.cs" />
     <Compile Include="ViewModels\ViewModelLocator.cs" />
     <Page Include="Resources\LedShapes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Generic.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -206,6 +213,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Helpers\Cross.cur" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

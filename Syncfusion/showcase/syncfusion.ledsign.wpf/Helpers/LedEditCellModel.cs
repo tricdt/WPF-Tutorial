@@ -21,7 +21,7 @@ namespace syncfusion.ledsign.wpf
     {
         protected override void OnRender(DrawingContext dc, RenderCellArgs rca, GridRenderStyleInfo style)
         {
-            Rect rect = rca.SubtractBorderMargins(rca.CellRect, new Thickness(1, 0, 1, 2));
+            Rect rect = rca.SubtractBorderMargins(rca.CellRect, new Thickness(1, 1, 1, 1));
             SampleGrid grid = GridControl as SampleGrid;
             string themeName = SfSkinManager.GetTheme(grid).ThemeName;
             SolidColorBrush ledColor = grid.LedColor;
@@ -64,6 +64,10 @@ namespace syncfusion.ledsign.wpf
                 uiElement.Foreground = Brushes.Black;
                 uiElement.Background = Brushes.White;
             }
+        }
+        protected override void OnArrange(ArrangeCellArgs aca, GridRenderStyleInfo style)
+        {
+            base.OnArrange(aca, style);
         }
     }
 }
