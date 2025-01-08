@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Resources.ResourceLib.wpf_8
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Resources.XamlResourceLib.wpf_80", "Resources.XamlResourceLib\Resources.XamlResourceLib.wpf_80.csproj", "{61A653C5-E0A2-4F63-857C-9837BE6896E4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Resources.AppWideResource.wpf_80", "Resources.AppWideResource\Resources.AppWideResource.wpf_80.csproj", "{17DD5C1E-9074-4F04-8A1B-D09E5F1FBE3B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{61A653C5-E0A2-4F63-857C-9837BE6896E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{61A653C5-E0A2-4F63-857C-9837BE6896E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{61A653C5-E0A2-4F63-857C-9837BE6896E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17DD5C1E-9074-4F04-8A1B-D09E5F1FBE3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17DD5C1E-9074-4F04-8A1B-D09E5F1FBE3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17DD5C1E-9074-4F04-8A1B-D09E5F1FBE3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17DD5C1E-9074-4F04-8A1B-D09E5F1FBE3B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
