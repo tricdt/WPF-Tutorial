@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bindings.wpf_80", "Bindings\Bindings.wpf_80.csproj", "{7412BF28-A19C-4A25-BC46-7CFFE6F7EE14}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bindings.ItemsControl.wpf_80", "Bindings.ItemsControl\Bindings.ItemsControl.wpf_80.csproj", "{80D38A25-1808-41B1-A278-859E8D8B52D2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7412BF28-A19C-4A25-BC46-7CFFE6F7EE14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7412BF28-A19C-4A25-BC46-7CFFE6F7EE14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7412BF28-A19C-4A25-BC46-7CFFE6F7EE14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7412BF28-A19C-4A25-BC46-7CFFE6F7EE14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80D38A25-1808-41B1-A278-859E8D8B52D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80D38A25-1808-41B1-A278-859E8D8B52D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80D38A25-1808-41B1-A278-859E8D8B52D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80D38A25-1808-41B1-A278-859E8D8B52D2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

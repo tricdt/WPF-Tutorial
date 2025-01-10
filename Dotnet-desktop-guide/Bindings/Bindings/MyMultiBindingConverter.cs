@@ -1,0 +1,54 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Globalization;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Data;
+
+namespace Bindings
+{
+    class MyMultiBindingConverter : IMultiValueConverter
+    {
+        static string[] stringSeparators = new string[] { "_" };
+
+        bool m_allowConvertBack = true;
+
+        public string InstanceId { get; set; }
+        public object Convert(object[] values, Type targetType, object parameter, CultureInfo culture)
+        {
+            Debug.WriteLine("MyMultiBindingConverter.Convert[" + (string.IsNullOrEmpty(InstanceId) ? "Global" : InstanceId) + "]");
+            string one = values[0] as string;
+            string two = values[1] as string;
+            string three = values[2] as string;
+            Debug.WriteLine("MyMultiBindingConverter.Convert[" + (string.IsNullOrEmpty(InstanceId) ? "Global" : InstanceId) + "]"
+                + "[1:" + (string.IsNullOrEmpty(one) ? "NULL" : one) + "]"
+                + "[2:" + (string.IsNullOrEmpty(two) ? "NULL" : two) + "]"
+                + "[3:" + (string.IsNullOrEmpty(three) ? "NULL" : three) + "]"
+            );
+            return (string.IsNullOrEmpty(one) ? "NULL" : one)
+                + "_" + (string.IsNullOrEmpty(two) ? "NULL" : two)
+                + "_" + (string.IsNullOrEmpty(three) ? "NULL" : three);
+        }
+
+        public object[] ConvertBack(object value, Type[] targetTypes, object parameter, CultureInfo culture)
+        {
+            string valueToConvert = value as string;
+            Debug.WriteLine("MyMultiBindingConverter.ConvertBack[" + (string.IsNullOrEmpty(InstanceId) ? "Global" : InstanceId) + "]");
+            Debug.WriteLine("MyMultiBindingConverter.ConvertBack[" + (string.IsNullOrEmpty(InstanceId) ? "Global" : InstanceId) + "]"
+                + "[in:" + (string.IsNullOrEmpty(valueToConvert) ? "NULL" : valueToConvert) + "]"
+            );
+            if (m_allowConvertBack)
+            {
+                object[] result = valueToConvert.Split(stringSeparators, StringSplitOptions.None).Select(x => (x == "NULL" ? null : x)).ToArray();
+                Debug.WriteLine("MyMultiBindingConverter.ConvertBack[" + (string.IsNullOrEmpty(InstanceId) ? "Global" : InstanceId) + "]Object[" + result.Count() + "]");
+                return result;
+            }
+            else
+            {
+                throw new NotImplementedException();
+            }
+        }
+    }
+}

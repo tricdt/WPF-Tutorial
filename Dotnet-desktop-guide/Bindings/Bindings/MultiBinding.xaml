@@ -1,0 +1,195 @@
+﻿<Window x:Class="Bindings.MultiBinding"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Bindings"
+        mc:Ignorable="d"
+        Title="MultiBinding" Height="865.229" Width="300">
+    <Window.Resources>
+        <local:MyMultiBindingConverter x:Key="myConverter"/>
+        <local:MyMultiBindingConverter x:Key="oneWayToSourceOnInnerBinding2Converter" InstanceId="OneWayToSourceOnInnerBinding2"/>
+        <local:MyMultiBindingConverter x:Key="oneWayToSourceOnInnerBinding1Converter" InstanceId="OneWayToSourceOnInnerBinding1"/>
+        <local:MyMultiBindingConverter x:Key="oneWayToSourceOnMultiBindingConverter" InstanceId="OneWayToSourceOnMultiBinding"/>
+        <local:IntelligentMultiBindingConverter x:Key="intelligentConverter"/>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <GroupBox Grid.Row="0" Header="Straightforward usage">
+            <StackPanel>
+                <TextBox Name="TB1" Text="Text1"/>
+                <TextBox Name="TB2" Text="Text2" />
+                <TextBox Name="TB3" Text="Text3" />
+                <TextBox>
+                    <TextBox.Text>
+                        <MultiBinding Converter="{StaticResource myConverter}">
+                            <Binding ElementName="TB1" Path="Text" />
+                            <Binding ElementName="TB2" Path="Text" />
+                            <Binding ElementName="TB3" Path="Text" />
+                        </MultiBinding>
+                    </TextBox.Text>
+                </TextBox>
+                <TextBlock>
+                    <TextBlock.Text>
+                        <!-- http://stackoverflow.com/questions/9001974/strange-multibinding-stringformat-issue -->
+                        <MultiBinding StringFormat="{}{0}, {1}, {2}">
+                            <Binding ElementName="TB1" Path="Text" />
+                            <Binding ElementName="TB2" Path="Text" />
+                            <Binding ElementName="TB3" Path="Text" />
+                        </MultiBinding>
+                    </TextBlock.Text>
+                </TextBlock>
+                <TextBlock>
+                    <TextBlock.Text>
+                        <MultiBinding Converter="{StaticResource intelligentConverter}">
+                            <Binding ElementName="TB1" Path="Text" />
+                            <Binding ElementName="TB2" Path="Text" />
+                            <Binding ElementName="TB3" Path="Text" />
+                        </MultiBinding>
+                    </TextBlock.Text>
+                </TextBlock>
+            </StackPanel>
+
+        </GroupBox>
+        <GroupBox Grid.Row="1" Header="Using UpdateSourceTrigger">
+            <StackPanel>
+                <TextBox Name="USTTB1" Text="Text1"/>
+                <TextBox Name="USTTB2" Text="Text2" />
+                <TextBox Name="USTTB3" Text="Text3" />
+                <!-- Following will throw an exception at runtime:
+                    you cannot use the UpdateSourceTriger on an inner binding-->
+                <!--<TextBox>
+                    <TextBox.Text>
+                        <MultiBinding Converter="{StaticResource myConverter}">
+                            <Binding ElementName="USTTB1" Path="Text" />
+                            <Binding ElementName="USTTB2" Path="Text" UpdateSourceTrigger="LostFocus"/>
+                            <Binding ElementName="USTTB3" Path="Text" />
+                        </MultiBinding>
+                    </TextBox.Text>
+                </TextBox>-->
+                <TextBox>
+                    <TextBox.Text>
+                        <MultiBinding Converter="{StaticResource myConverter}" UpdateSourceTrigger="LostFocus">
+                            <Binding ElementName="USTTB1" Path="Text" />
+                            <Binding ElementName="USTTB2" Path="Text"/>
+                            <Binding ElementName="USTTB3" Path="Text" />
+                        </MultiBinding>
+                    </TextBox.Text>
+                </TextBox>
+                <TextBox>
+                    <TextBox.Text>
+                        <MultiBinding Converter="{StaticResource myConverter}" UpdateSourceTrigger="PropertyChanged">
+                            <Binding ElementName="USTTB1" Path="Text" />
+                            <Binding ElementName="USTTB2" Path="Text"/>
+                            <Binding ElementName="USTTB3" Path="Text" />
+                        </MultiBinding>
+                    </TextBox.Text>
+                </TextBox>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Grid.Row="2" Header="Using Mode">
+            <StackPanel>
+                <GroupBox Header="Nothing specified, thus TwoWay">
+                    <StackPanel>
+                        <TextBox Name="MD2WTB1" Text="Text1"/>
+                        <TextBox Name="MD2WTB2" Text="Text2" />
+                        <TextBox Name="MD2WTB3" Text="Text3" />
+                        <TextBox>
+                            <TextBox.Text>
+                                <MultiBinding Converter="{StaticResource myConverter}" UpdateSourceTrigger="PropertyChanged">
+                                    <Binding ElementName="MD2WTB1" Path="Text" />
+                                    <Binding ElementName="MD2WTB2" Path="Text" />
+                                    <Binding ElementName="MD2WTB3" Path="Text" />
+                                </MultiBinding>
+                            </TextBox.Text>
+                        </TextBox>
+                    </StackPanel>
+                </GroupBox>
+                <GroupBox Header="OneWay on inner Binding">
+                    <StackPanel>
+                        <TextBox Name="MD1WITB1" Text="Text1"/>
+                        <TextBox Name="MD1WITB2" Text="Text2" />
+                        <TextBox Name="MD1WITB3" Text="Text3" />
+                        <TextBox>
+                            <TextBox.Text>
+                                <MultiBinding Converter="{StaticResource myConverter}">
+                                    <Binding ElementName="MD1WITB1" Path="Text" />
+                                    <Binding ElementName="MD1WITB2" Path="Text" Mode="OneWay"/>
+                                    <Binding ElementName="MD1WITB3" Path="Text" />
+                                </MultiBinding>
+                            </TextBox.Text>
+                        </TextBox>
+                    </StackPanel>
+                </GroupBox>
+                <GroupBox Header="OneWay on MultiBinding">
+                    <StackPanel>
+                        <TextBox Name="MD1WMTB1" Text="Text1"/>
+                        <TextBox Name="MD1WMTB2" Text="Text2" />
+                        <TextBox Name="MD1WMTB3" Text="Text3" />
+                        <TextBox>
+                            <TextBox.Text>
+                                <MultiBinding Converter="{StaticResource myConverter}" Mode="OneWay">
+                                    <Binding ElementName="MD1WMTB1" Path="Text" />
+                                    <Binding ElementName="MD1WMTB2" Path="Text"/>
+                                    <Binding ElementName="MD1WMTB3" Path="Text" />
+                                </MultiBinding>
+                            </TextBox.Text>
+                        </TextBox>
+                    </StackPanel>
+                </GroupBox>
+                <GroupBox Header="OneWayToSource on second inner Binding">
+                    <StackPanel>
+                        <TextBox Name="MD1SITB21" Text="MD1SITB21"/>
+                        <TextBox Name="MD1SITB22" Text="MD1SITB22" />
+                        <TextBox Name="MD1SITB23" Text="MD1SITB23" />
+                        <TextBox>
+                            <TextBox.Text>
+                                <MultiBinding Converter="{StaticResource oneWayToSourceOnInnerBinding2Converter}">
+                                    <Binding ElementName="MD1SITB21" Path="Text" />
+                                    <Binding ElementName="MD1SITB22" Path="Text" Mode="OneWayToSource" />
+                                    <Binding ElementName="MD1SITB23" Path="Text" />
+                                </MultiBinding>
+                            </TextBox.Text>
+                        </TextBox>
+                    </StackPanel>
+                </GroupBox>
+                <GroupBox Header="OneWayToSource on first inner Binding">
+                    <StackPanel>
+                        <TextBox Name="MD1SITB11" Text="MD1SITB11"/>
+                        <TextBox Name="MD1SITB12" Text="MD1SITB12" />
+                        <TextBox Name="MD1SITB13" Text="MD1SITB13" />
+                        <TextBox>
+                            <TextBox.Text>
+                                <MultiBinding Converter="{StaticResource oneWayToSourceOnInnerBinding1Converter}">
+                                    <Binding ElementName="MD1SITB11" Path="Text" Mode="OneWayToSource" />
+                                    <Binding ElementName="MD1SITB12" Path="Text" />
+                                    <Binding ElementName="MD1SITB13" Path="Text" />
+                                </MultiBinding>
+                            </TextBox.Text>
+                        </TextBox>
+                    </StackPanel>
+                </GroupBox>
+                <GroupBox Header="OneWayToSource on MultiBinding">
+                    <StackPanel>
+                        <TextBox Name="MD1SMTB1" Text="Text1"/>
+                        <TextBox Name="MD1SMTB2" Text="Text2" />
+                        <TextBox Name="MD1SMTB3" Text="Text3" />
+                        <TextBox>
+                            <TextBox.Text>
+                                <MultiBinding Converter="{StaticResource oneWayToSourceOnMultiBindingConverter}" Mode="OneWayToSource">
+                                    <Binding ElementName="MD1SMTB1" Path="Text" />
+                                    <Binding ElementName="MD1SMTB2" Path="Text" />
+                                    <Binding ElementName="MD1SMTB3" Path="Text" />
+                                </MultiBinding>
+                            </TextBox.Text>
+                        </TextBox>
+                    </StackPanel>
+                </GroupBox>
+            </StackPanel>
+        </GroupBox>
+    </Grid>
+</Window>
