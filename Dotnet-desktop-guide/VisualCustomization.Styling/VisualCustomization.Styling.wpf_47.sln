@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfVisualCustomization.Styling", "WpfVisualCustomization.Styling\WpfVisualCustomization.Styling.csproj", "{ACDC1172-2BA1-467F-8CEE-131864017B57}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfVisualCustomization.Styling.StyleLib", "WpfVisualCustomization.Styling.StyleLib\WpfVisualCustomization.Styling.StyleLib.csproj", "{CD5FD2F0-4881-44FA-A544-16CFCCAB2FB0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfVisualCustomization.UserControlLib", "WpfVisualCustomization.UserControlLib\WpfVisualCustomization.UserControlLib.csproj", "{F998940E-CE1B-42CD-BF64-FF7B9DAAE08B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfVisualCustomization.CustomControlLib", "WpfVisualCustomization.CustomControlLib\WpfVisualCustomization.CustomControlLib.csproj", "{81812701-4633-477A-82DF-C7B5E822FE50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfVisualCustomization.Styling.ItemsControl", "WpfVisualCustomization.Styling.ItemsControl\WpfVisualCustomization.Styling.ItemsControl.csproj", "{9B1A9F90-2610-4222-8FD3-AA396B08C1BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfVisualCustomization.Styling.AppWideStyle", "WpfVisualCustomization.Styling.AppWideStyle\WpfVisualCustomization.Styling.AppWideStyle.csproj", "{40E84FBC-2213-4028-8AB5-BB705BFC670D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ACDC1172-2BA1-467F-8CEE-131864017B57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACDC1172-2BA1-467F-8CEE-131864017B57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACDC1172-2BA1-467F-8CEE-131864017B57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACDC1172-2BA1-467F-8CEE-131864017B57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD5FD2F0-4881-44FA-A544-16CFCCAB2FB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD5FD2F0-4881-44FA-A544-16CFCCAB2FB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD5FD2F0-4881-44FA-A544-16CFCCAB2FB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD5FD2F0-4881-44FA-A544-16CFCCAB2FB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F998940E-CE1B-42CD-BF64-FF7B9DAAE08B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F998940E-CE1B-42CD-BF64-FF7B9DAAE08B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F998940E-CE1B-42CD-BF64-FF7B9DAAE08B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F998940E-CE1B-42CD-BF64-FF7B9DAAE08B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81812701-4633-477A-82DF-C7B5E822FE50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81812701-4633-477A-82DF-C7B5E822FE50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81812701-4633-477A-82DF-C7B5E822FE50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81812701-4633-477A-82DF-C7B5E822FE50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B1A9F90-2610-4222-8FD3-AA396B08C1BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B1A9F90-2610-4222-8FD3-AA396B08C1BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B1A9F90-2610-4222-8FD3-AA396B08C1BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B1A9F90-2610-4222-8FD3-AA396B08C1BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40E84FBC-2213-4028-8AB5-BB705BFC670D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40E84FBC-2213-4028-8AB5-BB705BFC670D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40E84FBC-2213-4028-8AB5-BB705BFC670D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40E84FBC-2213-4028-8AB5-BB705BFC670D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
