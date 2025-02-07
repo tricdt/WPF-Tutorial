@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35303.130
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VisualCustomization.Triggers.wpf_80", "VisualCustomization.Triggers\VisualCustomization.Triggers.wpf_80.csproj", "{7C8D91D2-F353-472F-9927-5E4D4F67F70D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfApp1", "WpfApp1\WpfApp1.csproj", "{00A21932-76AC-4863-BAFA-81B84F106438}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfVisualCustomization.Triggers.ItemsControl.wpf_80", "WpfVisualCustomization.Triggers.ItemsControl\WpfVisualCustomization.Triggers.ItemsControl.wpf_80.csproj", "{F01ECEF5-9A07-48B4-B7DD-1699FB756480}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7C8D91D2-F353-472F-9927-5E4D4F67F70D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C8D91D2-F353-472F-9927-5E4D4F67F70D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C8D91D2-F353-472F-9927-5E4D4F67F70D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C8D91D2-F353-472F-9927-5E4D4F67F70D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00A21932-76AC-4863-BAFA-81B84F106438}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00A21932-76AC-4863-BAFA-81B84F106438}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00A21932-76AC-4863-BAFA-81B84F106438}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00A21932-76AC-4863-BAFA-81B84F106438}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F01ECEF5-9A07-48B4-B7DD-1699FB756480}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F01ECEF5-9A07-48B4-B7DD-1699FB756480}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F01ECEF5-9A07-48B4-B7DD-1699FB756480}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F01ECEF5-9A07-48B4-B7DD-1699FB756480}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {85DD9C37-3671-46AE-BD9C-FDDE530BAEF0}
+	EndGlobalSection
+EndGlobal
