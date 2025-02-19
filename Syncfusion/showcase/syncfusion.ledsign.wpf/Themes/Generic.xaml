@@ -2,45 +2,34 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:syncfusion.ledsign.wpf"
                     xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+                    xmlns:skin="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
+                    xmlns:shared="clr-namespace:Syncfusion.Windows.Tools.Controls;assembly=Syncfusion.Shared.Wpf"
                     xmlns:Microsoft_Windows_Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Luna">
+    <ImageSource x:Key="FillIcon">/syncfusion.ledsign.wpf;component/Assets/DropDownIcon.png</ImageSource>
     <Style x:Key="DropdownStyle" TargetType="local:FillDropdownItem">
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="local:FillDropdownItem">
-                    <Microsoft_Windows_Themes:SystemDropShadowChrome x:Name="PART_Shadow" SnapsToDevicePixels="true">
-                        <!--<syncfusion:RibbonListBox >
-                            <syncfusion:RibbonRadioButton Content="CopySeries" GroupName="Mode"/>
-                            <syncfusion:RibbonRadioButton Content="FillSeries" GroupName="Mode"/>
-                            <syncfusion:RibbonRadioButton Content="FillFormatOnly" GroupName="Mode"/>
-                            <syncfusion:RibbonRadioButton Content="FillWithoutFormat" GroupName="Mode"/>
-                        </syncfusion:RibbonListBox>-->
-
-                        <ItemsControl ItemsSource="{TemplateBinding ItemsSource}" >
-                            <!--<syncfusion:RibbonRadioButton Content="CopySeries" GroupName="Mode" Cursor="Hand"/>
-                            <syncfusion:RibbonRadioButton Content="FillSeries" GroupName="Mode"/>
-                            <syncfusion:RibbonRadioButton Content="FillFormatOnly" GroupName="Mode"/>
-                            <syncfusion:RibbonRadioButton Content="FillWithoutFormat" GroupName="Mode"/>-->
-                            <ItemsControl.ItemTemplate>
-                                <DataTemplate>
-                                    <Border x:Name="border" Cursor="Hand" Background="Red" Width="150">
-                                        <Grid >
-                                            <Grid.ColumnDefinitions>
-                                                <ColumnDefinition Width="Auto"/>
-                                                <ColumnDefinition Width="*"/>
-                                            </Grid.ColumnDefinitions>
-                                            <syncfusion:RibbonRadioButton Grid.Column="0" Content=""/>
-                                            <TextBlock Grid.Column ="1" Text="{Binding}" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                                        </Grid>
-                                    </Border>
-                                    <DataTemplate.Triggers>
-                                        <Trigger Property="IsMouseOver" Value="True">
-                                            <Setter TargetName="border" Property="Background" Value="Green"/>
-                                        </Trigger>
-                                    </DataTemplate.Triggers>
-                                </DataTemplate>
-                            </ItemsControl.ItemTemplate>
-                        </ItemsControl>
-                    </Microsoft_Windows_Themes:SystemDropShadowChrome>
+                    <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}">
+                        <shared:SplitButtonAdv x:Name="dropdownSplitter"
+                                               BorderThickness="1"
+                                               Label=""
+                                               SmallIcon="{StaticResource FillIcon}">
+                            <syncfusion:RibbonListBox x:Name="FillList"
+                                     HorizontalAlignment="Left"
+                                     VerticalAlignment="Center"
+                                     HorizontalContentAlignment="Left"
+                                     VerticalContentAlignment="Center"
+                                     BorderBrush="White"
+                                     BorderThickness="0"
+                                     SelectionMode="Single"
+                                     ItemsSource="{TemplateBinding ItemsSource}"
+                                     SelectedItem="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=SelectedItem}">
+                            </syncfusion:RibbonListBox>
+                        </shared:SplitButtonAdv>
+                    </Border>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>

@@ -50,7 +50,7 @@
             <TextBlock Margin="8,15,0,14">
                 <Span FontSize="14"
                     FontWeight="SemiBold"
-                    Foreground="{DynamicResource ContentForeground}">
+                    >
                     Phần mềm điều khiển Led Sign
                 </Span>
             </TextBlock>
